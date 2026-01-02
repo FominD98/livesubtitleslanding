@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830">
+    </script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'AW-17344614830');
+    </script>
+    
+    <!-- Dynamic canonical URL based on current page -->
+    <script>
+        // Set correct canonical URL and Open Graph URL based on current path
+        const currentPath = window.location.pathname;
+        const canonicalUrl = currentPath === '/' ? 'https://2sub.ru/' : `https://2sub.ru${currentPath}`;
+        document.write('<link rel="canonical" href="' + canonicalUrl + '" />');
+        
+        // Update Open Graph URL dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const ogUrl = document.querySelector('meta[property="og:url"]');
+            if (ogUrl) {
+                ogUrl.setAttribute('content', canonicalUrl);
+            }
+        });
+    </script>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Live Subtitles — an application with dual subtitles, speech recognition and real-time translation. Learn languages, watch movies and understand foreign speech effortlessly.">
+    <meta name="keywords" content="dual subtitles, language learning subtitles, speech translation, speech recognition, online subtitles, Live Subtitles, English learning, language learning, real-time subtitles, speech understanding, movie translator">
+    <meta name="author" content="Live Subtitles">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="theme-color" content="#00ff9d">
+    <meta name="application-name" content="Live Subtitles">
+    <meta name="apple-mobile-web-app-title" content="Live Subtitles">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="msapplication-TileColor" content="#00ff9d">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="format-detection" content="telephone=no">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Live Subtitles",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Windows",
+        "url": "https://2sub.ru",
+        "downloadUrl": "https://apps.microsoft.com/store/detail/9PH1R9DJG47S",
+        "offers": {
+            "@type": "Offer",
+            "price": "7.00",
+            "priceCurrency": "USD"
+        },
+        "description": "Application with dual subtitles, speech recognition and real-time translation for language learning",
+        "featureList": [
+            "Dual subtitles",
+            "Speech recognition",
+            "Real-time translation",
+            "Support for all applications"
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1000"
+        },
+        "screenshot": "https://2sub.ru/preview.png",
+        "softwareVersion": "1.0",
+        "datePublished": "2024-01-01",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://2sub.ru"
+        }
+    }
+    </script>
+
+    <!-- Open Graph Meta Tags (Telegram, LinkedIn, Facebook) -->
+    <meta property="og:title" content="Live Subtitles — dual subtitles and real-time translation">
+    <meta property="og:description" content="Understand live speech the first time. Watch movies, communicate with foreigners and learn languages with dual subtitles and real-time speech translation.">
+    <meta property="og:image" content="https://2sub.ru/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Live Subtitles - Dual Subtitles Application">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://2sub.ru">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Live Subtitles">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Live Subtitles — dual subtitles and real-time speech translation">
+    <meta name="twitter:description" content="Learn languages and understand live speech effortlessly. Movies, communication, videos — everything with dual subtitles.">
+    <meta name="twitter:image" content="https://2sub.ru/preview.png">
+        <meta name="twitter:image:alt" content="Live Subtitles - Dual Subtitles Application">
+    <meta name="twitter:site" content="@livesubtitles">
+    <meta name="twitter:creator" content="@livesubtitles">
+    <!-- End SEO Meta Tags -->
+
+    <title>Live Subtitles - Dual Subtitles for Language Learning</title>
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/x-icon" href="2sub.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <!-- End Favicon -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();
+            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(101009280, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true
+        });
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <style>
+        :root {
+            --primary: #00ff9d;
+            --secondary: #00b8ff;
+            --accent: #ff006e;
+            --background: #0a0a0a;
+            --text: #ffffff;
+        }
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            background: var(--background);
+            color: var(--text);
+            font-family: 'Inter', 'Fira Code', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
+            font-weight: 700;
+        }
+
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 25%, #0a1a1a 50%, #1a1a0a 75%, #0a0a0a 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            z-index: -2;
+        }
+
+        .gradient-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(0, 184, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(255, 0, 110, 0.08) 0%, transparent 50%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(2deg); }
+            66% { transform: translate(-20px, 20px) rotate(-2deg); }
+        }
+
+        .title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientTitle 8s ease infinite;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 80px rgba(0, 255, 157, 0.5);
+        }
+
+        @keyframes gradientTitle {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .demo-window {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 0;
+            margin: 2rem 0;
+            box-shadow:
+                0 8px 32px 0 rgba(0, 255, 157, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.05),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .demo-window:hover {
+            box-shadow:
+                0 12px 48px 0 rgba(0, 255, 157, 0.25),
+                0 0 0 1px rgba(0, 255, 157, 0.1),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+            transform: translateY(-4px);
+        }
+
+        .window-header {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 0.5rem;
+            color: white;
+        }
+
+        .window-controls {
+            display: flex;
+            gap: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .control-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .close { background: #ff5f56; }
+        .minimize { background: #ffbd2e; }
+        .maximize { background: #27c93f; }
+
+        .window-title {
+            margin-left: 0.5rem;
+            color: white;
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        .demo-content {
+            background: transparent;
+            padding: 1rem;
+            min-height: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subtitle-line {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 1.3rem;
+            opacity: 0;
+            transform: translateY(30px) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 500;
+            backdrop-filter: blur(10px);
+        }
+
+        #subtitle1 {
+            top: 30%;
+            left: 0;
+            right: 0;
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #subtitle2 {
+            top: 52%;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.15), rgba(255, 0, 110, 0.15));
+            color: #ffaa33;
+            text-shadow: 0 2px 20px rgba(255, 140, 0, 0.5);
+            border: 1px solid rgba(255, 140, 0, 0.2);
+        }
+
+        .subtitle-line.active {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+
+        .feature {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px) saturate(180%);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .feature:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow:
+                0 20px 60px rgba(0, 255, 157, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.1),
+                inset 0 0 20px rgba(255, 255, 255, 0.02);
+        }
+
+        .feature:hover::before {
+            opacity: 1;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 157, 0.5));
+            transition: all 0.4s ease;
+            display: inline-block;
+        }
+
+        .feature:hover .feature-icon {
+            transform: scale(1.15) rotate(5deg);
+            filter: drop-shadow(0 0 30px rgba(0, 255, 157, 0.8))
+                    drop-shadow(0 0 15px rgba(0, 184, 255, 0.5));
+        }
+
+        .comparison-item {
+            text-align: center;
+            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 16px;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .comparison-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0, 255, 157, 0.15);
+            border-color: rgba(0, 255, 157, 0.2);
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--background);
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 600;
+            margin: 2rem 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            position: relative;
+            overflow: hidden;
+            box-shadow:
+                0 4px 20px rgba(0, 255, 157, 0.4),
+                0 0 0 1px rgba(0, 255, 157, 0.1);
+            font-size: 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .download-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .download-btn:hover::before {
+            left: 100%;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            color: var(--background);
+            box-shadow:
+                0 8px 30px rgba(0, 255, 157, 0.6),
+                0 0 0 1px rgba(0, 255, 157, 0.3),
+                0 0 40px rgba(0, 255, 157, 0.3);
+        }
+
+        .download-btn:active {
+            transform: translateY(-1px) scale(1.02);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 30px rgba(0, 255, 157, 0.1);
+        }
+
+        .navbar-brand {
+            color: var(--primary) !important;
+            font-weight: 600;
+        }
+
+        .nav-link {
+            color: var(--text) !important;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+        }
+
+        .platforms {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px) saturate(180%);
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .platforms::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 157, 0.03) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .platforms-title {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .platform-icon {
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 10px;
+            position: relative;
+            z-index: 1;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .platform-icon:hover {
+            transform: translateY(-8px) rotate(5deg) scale(1.1);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow:
+                0 10px 30px rgba(0, 255, 157, 0.3),
+                0 0 20px rgba(0, 255, 157, 0.2);
+            border-color: rgba(0, 255, 157, 0.3);
+        }
+
+        .platform-icon:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+
+        .platform-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Добавляем стили для лоадера */
+        .modal-content {
+            backdrop-filter: blur(30px) saturate(180%);
+            border: 1px solid rgba(0, 255, 157, 0.2) !important;
+            box-shadow:
+                0 20px 80px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(0, 255, 157, 0.2);
+        }
+
+        .modal-header, .modal-footer {
+            border-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(0, 255, 157, 0.3) !important;
+            color: white !important;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: rgba(0, 255, 157, 0.5) !important;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border: none;
+            transition: all 0.4s ease;
+            font-weight: 600;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 255, 157, 0.4);
+        }
+
+        .loader {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s ease-in-out infinite;
+            display: none;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .form-loading .loader {
+            display: inline-block;
+        }
+
+        .form-loading .submit-text {
+            display: none;
+        }
+
+        .submit-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .mac-btn {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mac-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .mac-btn:hover::before {
+            left: 100%;
+        }
+
+        .mac-btn:hover {
+            background: rgba(255, 255, 255, 0.4) !important;
+            border-color: rgba(255, 255, 255, 0.7) !important;
+            box-shadow:
+                0 8px 30px rgba(255, 255, 255, 0.3),
+                0 0 40px rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        .lead {
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 2vw, 1.5rem);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Language selector styles */
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        
+        .language-selector select {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: var(--text);
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .language-selector select:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .language-selector select option {
+            background: var(--background);
+            color: var(--text);
+        }
+
+        /* FAQ Accordion styles */
+        .accordion-item {
+            backdrop-filter: blur(20px) saturate(180%);
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            box-shadow: 0 4px 20px rgba(0, 255, 157, 0.15);
+        }
+
+        .accordion-button {
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(0, 255, 157, 0.3);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: rgba(0, 255, 157, 0.1) !important;
+            color: var(--text) !important;
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+        }
+        
+        .accordion-button::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        
+        .accordion-button:not(.collapsed)::after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300ff9d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+
+        /* Testimonials styles */
+        .testimonial-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08) !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow:
+                0 20px 60px rgba(0, 255, 157, 0.2),
+                0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .testimonial-card:hover::before {
+            opacity: 1;
+        }
+
+        .stars {
+            font-size: 1.2rem;
+            letter-spacing: 0.2rem;
+            filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+        }
+
+        /* Media Examples styles */
+        .media-examples {
+            padding: 3rem 0;
+            position: relative;
+        }
+
+        .mediaSwiper {
+            width: 100%;
+            padding: 2rem 0 4rem;
+        }
+
+        .swiper-slide {
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .media-card {
+            height: 100%;
+            width: 100%;
+        }
+
+        .media-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .media-wrapper:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 20px 60px rgba(0, 255, 157, 0.2),
+                0 0 0 1px rgba(0, 255, 157, 0.2);
+            border-color: rgba(0, 255, 157, 0.3);
+        }
+
+        .media-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .video-wrapper {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+        }
+
+        .video-wrapper:hover {
+            transform: translateY(-8px);
+            box-shadow:
+                0 20px 60px rgba(0, 255, 157, 0.2),
+                0 0 0 1px rgba(0, 255, 157, 0.2);
+            border-color: rgba(0, 255, 157, 0.3);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+        }
+
+        /* Swiper Navigation Buttons */
+        .mediaSwiper .swiper-button-next,
+        .mediaSwiper .swiper-button-prev {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 255, 157, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            border: 1px solid rgba(0, 255, 157, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .mediaSwiper .swiper-button-next:after,
+        .mediaSwiper .swiper-button-prev:after {
+            font-size: 20px;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .mediaSwiper .swiper-button-next:hover,
+        .mediaSwiper .swiper-button-prev:hover {
+            background: rgba(0, 255, 157, 0.2);
+            border-color: rgba(0, 255, 157, 0.5);
+            box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
+            transform: scale(1.1);
+        }
+
+        /* Swiper Pagination */
+        .mediaSwiper .swiper-pagination {
+            bottom: 0;
+        }
+
+        .mediaSwiper .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: rgba(255, 255, 255, 0.3);
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .mediaSwiper .swiper-pagination-bullet-active {
+            background: var(--primary);
+            box-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            /* Исправляем футер для мобильных */
+            footer .d-flex {
+                flex-direction: column !important;
+                gap: 0.5rem;
+            }
+            
+            footer .position-absolute {
+                position: static !important;
+                transform: none !important;
+            }
+            
+            footer .ms-auto {
+                margin: 0 !important;
+            }
+            
+            /* Стили для бургер-меню - делаем его светлым */
+            .navbar-toggler {
+                border: 1px solid rgba(255, 255, 255, 0.3);
+                background: rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(5px);
+            }
+            
+            .navbar-toggler:focus {
+                box-shadow: 0 0 0 0.25rem rgba(0, 255, 157, 0.25);
+                border-color: var(--primary);
+            }
+            
+            .navbar-toggler-icon {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+            }
+            
+            /* Селектор языка на мобильных */
+            .language-selector {
+                top: 10px;
+                right: 10px;
+            }
+            
+            .language-selector select {
+                font-size: 0.9rem;
+                padding: 3px 6px;
+            }
+            
+            /* Меньше отступы для мобильных */
+            .section {
+                padding: 2rem 0;
+            }
+            
+            .title {
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+            }
+            
+            .demo-window {
+                margin: 1rem 0;
+            }
+            
+            .platforms {
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .platform-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .media-examples .row.g-4 {
+                gap: 1rem !important;
+            }
+
+            .media-examples .col-lg-4,
+            .media-examples .col-lg-3 {
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Дополнительные стили для очень маленьких экранов */
+        @media (max-width: 576px) {
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            
+            footer {
+                padding: 1rem 0 !important;
+                font-size: 0.85rem;
+            }
+            
+            .download-btn {
+                padding: 0.75rem 1.5rem;
+                font-size: 0.9rem;
+            }
+            
+            .feature, .comparison-item {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <!-- SEO: alternate language versions -->
+    <link rel="alternate" hreflang="x-default" href="https://2sub.ru/" />
+    <link rel="alternate" hreflang="en" href="https://2sub.ru/" />
+    <link rel="alternate" hreflang="ru" href="https://2sub.ru/ru/" />
+    <link rel="alternate" hreflang="fr" href="https://2sub.ru/fr/" />
+    <link rel="alternate" hreflang="es" href="https://2sub.ru/es/" />
+    <link rel="alternate" hreflang="de" href="https://2sub.ru/de/" />
+    <link rel="alternate" hreflang="it" href="https://2sub.ru/it/" />
+    <link rel="alternate" hreflang="ja" href="https://2sub.ru/ja/" />
+    <link rel="alternate" hreflang="ko" href="https://2sub.ru/ko/" />
+    <link rel="alternate" hreflang="zh" href="https://2sub.ru/zh/" />
+    <link rel="alternate" hreflang="ar" href="https://2sub.ru/ar/" />
+    <link rel="alternate" hreflang="hi" href="https://2sub.ru/hi/" />
+    <link rel="alternate" hreflang="pt" href="https://2sub.ru/pt/" />
+    <link rel="alternate" hreflang="pl" href="https://2sub.ru/pl/" />
+    <link rel="alternate" hreflang="nl" href="https://2sub.ru/nl/" />
+    <link rel="alternate" hreflang="tr" href="https://2sub.ru/tr/" />
+    <link rel="alternate" hreflang="uk" href="https://2sub.ru/uk/" />
+</head>
+<body>
+    <div class="gradient-bg"></div>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#" data-translate="navbar.brand">Live Subtitles</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features" data-translate="navbar.features">Возможности</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#comparison" data-translate="navbar.comparison">Сравнение</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#faq" data-translate="navbar.faq">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS" target="_blank" data-translate="navbar.download">Скачать</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <select id="languageSelector" class="form-select form-select-sm" style="width:auto;display:inline-block;min-width:110px;">
+                        <option value="en-US">English</option>
+                        <option value="ru-RU">Русский</option>
+                        <option value="fr-FR">Français</option>
+                        <option value="es-ES">Español</option>
+                        <option value="de-DE">Deutsch</option>
+                        <option value="it-IT">Italiano</option>
+                        <option value="ja-JP">日本語</option>
+                        <option value="ko-KR">한국어</option>
+                        <option value="zh-CN">中文</option>
+                        <option value="ar-SA">العربية</option>
+                        <option value="hi-IN">हिन्दी</option>
+                        <option value="pt-BR">Português</option>
+                        <option value="pl-PL">Polski</option>
+                        <option value="nl-NL">Nederlands</option>
+                        <option value="tr-TR">Türkçe</option>
+                        <option value="uk-UA">Українська</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="section text-center">
+            <h1 class="title text-center" data-translate="header.title">Смотрите фильмы, учите языки — легко понимайте живую речь</h1>
+            <p class="lead" data-translate="header.lead">Live Subtitles - ваш помощник с двойными субтитрами, распознаванием и переводом речи в реальном времени</p>
+            <div>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS" class="download-btn" target="_blank" data-translate="downloadBtn" onclick="return gtag_report_conversion('https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS');">Скачать из Microsoft Store</a>
+                <button class="download-btn ms-3 mac-btn" style="background: rgba(255, 255, 255, 0.3); border: 1px solid rgba(255, 255, 255, 0.5);" data-bs-toggle="modal" data-bs-target="#macModal" data-translate="macBtn">Хочу версию для Mac</button>
+            </div>
+        </header>
+
+        <section class="demo-window">
+            <div class="window-header">
+                <div class="window-controls">
+                    <div class="control-btn close"></div>
+                    <div class="control-btn minimize"></div>
+                    <div class="control-btn maximize"></div>
+                </div>
+                <div class="window-title">Live Subtitles</div>
+            </div>
+            <div class="demo-content">
+                <div class="subtitle-line" id="subtitle1">Welcome to the world of dual subtitles</div>
+                <div class="subtitle-line" id="subtitle2">Добро пожаловать в мир двойных субтитров</div>
+            </div>
+        </section>
+
+        <section class="media-examples section">
+            <h2 class="text-center mb-5" style="color: var(--primary);">Screenshots & Videos</h2>
+
+            <div class="swiper mediaSwiper">
+                <div class="swiper-wrapper">
+                    <!-- Screenshots -->
+                    <div class="swiper-slide">
+                        <div class="media-card">
+                            <div class="media-wrapper">
+                                <img src="img/example/1homeger.png" alt="Live Subtitles Home Interface" class="media-image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="media-card">
+                            <div class="media-wrapper">
+                                <img src="img/example/newsettings.png" alt="Live Subtitles Settings" class="media-image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="media-card">
+                            <div class="media-wrapper">
+                                <img src="img/example/ForestDe.png" alt="Live Subtitles in Action" class="media-image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="media-card">
+                            <div class="media-wrapper">
+                                <img src="https://store-images.s-microsoft.com/image/apps.43511.14244971140863405.8ce7b03a-b958-4d10-bbe6-57a57775d704.8bf7b870-5bc7-4ce8-ab4c-ffa4253e0a6f" alt="Live Subtitles Microsoft Store Screenshot" class="media-image" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Videos -->
+                    <div class="swiper-slide">
+                        <div class="media-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/0Ev_SSzYkfc" title="Live Subtitles Demo Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="media-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/l1m7qFZ6jKM" title="Live Subtitles Demo Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="media-card">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/TjCLyHechm4" title="Live Subtitles Demo Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+        <section class="platforms">
+            <h3 class="platforms-title" data-translate="platforms.title">Работает вообще с любым приложением — без ограничений</h3>
+            <div class="platform-icon" data-tooltip="YouTube">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube - Watch videos with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Instagram">
+                <img src="https://cdn-icons-png.flaticon.com/512/15713/15713420.png" alt="Instagram - Social media with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Twitch">
+                <img src="https://cdn-icons-png.flaticon.com/512/3291/3291659.png" alt="Twitch - Live streaming with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Google Meet">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968552.png" alt="Google Meet - Video calls with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Telegram">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" alt="Telegram - Messaging with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="WhatsApp">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp - Voice calls with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Microsoft Teams">
+                <img src="https://cdn-icons-png.flaticon.com/512/15047/15047490.png" alt="Microsoft Teams - Business calls with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Zoom">
+                <img src="https://cdn-icons-png.flaticon.com/512/5969/5969238.png" alt="Zoom - Online meetings with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Skype">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384058.png" alt="Skype - Video calls with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Discord">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord - Gaming voice chat with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Viber">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670059.png" alt="Viber - Voice messages with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="VK">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="VK - Social network with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="Slack">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968929.png" alt="Slack - Team communication with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="LinkedIn">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn - Professional networking with dual subtitles" loading="lazy">
+            </div>
+            <div class="platform-icon" data-tooltip="WeChat">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670101.png" alt="WeChat - Chinese messaging with dual subtitles" loading="lazy">
+            </div>
+        </section>
+
+        <section id="features" class="section">
+            <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="features.title">Возможности</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h3 data-translate="features.dualSubtitles">Двойные субтитры</h3>
+                        <p data-translate="features.dualSubtitlesDesc">На компьютере, в любом браузере и проигрывателе.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <div class="feature-icon">🎤</div>
+                        <h3 data-translate="features.speechRecognition">Распознавание речи</h3>
+                        <p data-translate="features.speechRecognitionDesc">Без ограничений по платформам и приложениям.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature">
+                        <div class="feature-icon">🔄</div>
+                        <h3 data-translate="features.realTimeTranslation">Перевод в реальном времени</h3>
+                        <p data-translate="features.realTimeTranslationDesc">Смотрите фильмы и участвуйте в звонках, понимая сразу, без переспрашиваний.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison" class="section">
+            <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="comparison.title">Сравнение способов</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="comparison-item">
+                        <div style="font-size: 48px; margin-bottom: 20px;">🔇</div>
+                        <h3 data-translate="comparison.noSubtitles.title">Без субтитров</h3>
+                        <p class="mb-2" data-translate="comparison.noSubtitles.desc">Только звук</p>
+                        <ul class="list-unstyled text-start" style="opacity: 0.8;">
+                            <li data-translate="comparison.noSubtitles.point1">❌ Сложно уловить незнакомые слова</li>
+                            <li data-translate="comparison.noSubtitles.point2">❌ Частые переспрашивания</li>
+                            <li data-translate="comparison.noSubtitles.point3">❌ Много пропущенной информации</li>
+                            <li data-translate="comparison.noSubtitles.point4">❌ Сложно понять акцент говорящего</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="comparison-item">
+                        <div style="font-size: 48px; margin-bottom: 20px;">📝</div>
+                        <h3 data-translate="comparison.oneLanguage.title">Один язык</h3>
+                        <p class="mb-2" data-translate="comparison.oneLanguage.desc">Обычные субтитры</p>
+                        <ul class="list-unstyled text-start" style="opacity: 0.8;">
+                            <li data-translate="comparison.oneLanguage.point1">✅ Видно текст</li>
+                            <li data-translate="comparison.oneLanguage.point2">✅ Помогает понять акцент</li>
+                            <li data-translate="comparison.oneLanguage.point3">❌ Субтитров может не быть в приложении</li>
+                            <li data-translate="comparison.oneLanguage.point4">❌ Нет перевода</li>
+                            <li data-translate="comparison.oneLanguage.point5">❌ Сложно учить новые слова</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="comparison-item" style="border: 1px solid var(--primary);">
+                        <div style="font-size: 48px; margin-bottom: 20px;">🎯</div>
+                        <h3 data-translate="comparison.twoLanguages.title">Два языка</h3>
+                        <p class="mb-2" data-translate="comparison.twoLanguages.desc">Двойные субтитры с Live Subtitles</p>
+                        <ul class="list-unstyled text-start" style="opacity: 0.8;">
+                            <li data-translate="comparison.twoLanguages.point1">✅ Мгновенный перевод</li>
+                            <li data-translate="comparison.twoLanguages.point2">✅ Легко понимать любой акцент</li>
+                            <li data-translate="comparison.twoLanguages.point3">✅ Работает со всеми приложениями</li>
+                            <li data-translate="comparison.twoLanguages.point4">✅ Понимание с первого раза - не нужно переспрашивать</li>
+                            <li data-translate="comparison.twoLanguages.point5">✅ Быстрое изучение новых слов</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section">
+            <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="faq.title">Часто задаваемые вопросы</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="background: transparent; color: var(--text); border: none;">
+                                    <span data-translate="faq.q1">Сколько стоит приложение?</span>
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
+                                    <span data-translate="faq.a1">Live Subtitles работает по подписке от $7 в месяц. Доступен бесплатный пробный период, чтобы вы могли протестировать все функции приложения.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="background: transparent; color: var(--text); border: none;">
+                                    <span data-translate="faq.q2">Работает ли с любыми приложениями?</span>
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
+                                    <span data-translate="faq.a2">Да! Live Subtitles работает с абсолютно любыми приложениями: YouTube, Netflix, Zoom, Teams, Discord, браузерами и даже играми. Приложение захватывает звук на системном уровне.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="background: transparent; color: var(--text); border: none;">
+                                    <span data-translate="faq.q3">Какие языки поддерживаются?</span>
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
+                                    <span data-translate="faq.a3">Поддерживается более 50 языков включая: английский, русский, испанский, французский, немецкий, китайский, японский, корейский, арабский, хинди и многие другие.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="background: transparent; color: var(--text); border: none;">
+                                    <span data-translate="faq.q4">Нужно ли подключение к интернету?</span>
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
+                                    <span data-translate="faq.a4">Да, для работы распознавания и перевода речи требуется стабильное подключение к интернету. Приложение использует облачные сервисы для обеспечения высокой точности.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" style="background: transparent; color: var(--text); border: none;">
+                                    <span data-translate="faq.q5">Можно ли настроить внешний вид субтитров?</span>
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
+                                    <span data-translate="faq.a5">Конечно! Вы можете настроить размер шрифта, цвет, позицию субтитров на экране, прозрачность фона и выбрать, какие языки отображать.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" style="background: transparent; color: var(--text); border: none;">
+                                    <span data-translate="faq.q6">Есть ли версия для Mac или мобильных устройств?</span>
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
+                                    <span data-translate="faq.a6">Сейчас доступна только версия для Windows. Мы активно работаем над версиями для Mac, iOS и Android. Оставьте свой email, и мы сообщим о выходе.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section">
+            <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="testimonials.title">Отзывы пользователей</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review1">"Наконец-то могу смотреть корейские дорамы без постоянных пауз! Приложение точно переводит даже быструю речь."</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonials.author1">Анна К.</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role1">Изучает корейский язык</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review2">"Революция для международных встреч! Больше не нужно переспрашивать коллег из Индии и Китая."</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonials.author2">Михаил Р.</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role2">IT-менеджер</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review3">"Использую для изучения английского через YouTube. За месяц словарный запас вырос в разы!"</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonials.author3">Елена С.</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role3">Студентка</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 mt-4">
+                <div class="col-md-6">
+                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review4">"Отлично работает с играми! Понимаю команду в CS:GO и Valorant. Очень помогает с акцентами европейских игроков."</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonials.author4">Дмитрий Л.</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role4">Геймер</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review5">"Простое в настройке и работает идеально. Подписка $7/месяц окупилась уже на первой рабочей встрече."</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonials.author5">Сергей П.</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role5">Переводчик</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="section text-center">
+            <h2 class="mb-4" style="color: var(--primary);" data-translate="download.title">Попробуйте бесплатно прямо сейчас</h2>
+            <p class="mb-4" style="color: rgba(255, 255, 255, 0.8);" data-translate="download.subtitle">Бесплатный пробный период, затем от $7/месяц</p>
+            <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS" class="download-btn" target="_blank" data-translate="downloadBtn">Скачать из Microsoft Store</a>
+            <button class="download-btn ms-3 mac-btn" style="background: rgba(255, 255, 255, 0.3); border: 1px solid rgba(255, 255, 255, 0.5);" data-bs-toggle="modal" data-bs-target="#macModal" data-translate="macBtn">Хочу версию для Mac</button>
+        </section>
+
+        <!-- Модальное окно для Mac -->
+        <div class="modal fade" id="macModal" tabindex="-1" aria-labelledby="macModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background: rgba(0, 0, 0, 0.8); color: white; border: 1px solid var(--primary);">
+                    <div class="modal-header border-bottom border-secondary">
+                        <h5 class="modal-title" id="macModalLabel" data-translate="macModal.title">Версия для Mac</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p data-translate="macModal.desc">Мы работаем над версией для Mac. Оставьте свой email, и мы сообщим вам, когда она будет готова.</p>
+                        <form id="macEmailForm">
+                            <div class="mb-3">
+                                <input type="email" class="form-control" id="macEmail" placeholder="Ваш email" required style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--primary); color: white;">
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                <div class="loader"></div>
+                                <span class="submit-text" data-translate="macModal.send">Отправить</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Модальное окно успешной отправки -->
+        <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" style="background: rgba(0, 0, 0, 0.8); color: white; border: 1px solid var(--primary);">
+                    <div class="modal-header border-bottom border-secondary">
+                        <h5 class="modal-title" id="successModalLabel" data-translate="successModal.title">Спасибо!</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p data-translate="successModal.desc">Мы сообщим вам, когда версия для Mac будет готова.</p>
+                    </div>
+                    <div class="modal-footer border-top border-secondary">
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-translate="successModal.close">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="text-center py-4">
+            <div class="d-flex justify-content-between align-items-center position-relative">
+                <div class="ms-2">
+                    <a id="footer-articles-link" href="/articles/ru/" class="text-decoration-none" style="color: var(--primary);" data-translate="footer.articles">Статьи</a>
+                </div>
+                <p class="mb-0 position-absolute start-50 translate-middle-x" data-translate="footer.copyright">© 2024 Live Subtitles. Все права защищены.</p>
+                <p class="mb-0 ms-auto">
+                    <span data-translate="footer.contact">По всем вопросам: </span><a href="mailto:help@2sub.ru" class="text-decoration-none" style="color: var(--primary);" data-translate="footer.email">help@2sub.ru</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="translations.js"></script>
+    <script>
+        let currentIndex = 0;
+        let subtitles = translations[getUserLanguage()].examples;
+        const subtitle1 = document.getElementById('subtitle1');
+        const subtitle2 = document.getElementById('subtitle2');
+        let subtitleInterval;
+
+        function updateSubtitles() {
+            subtitle1.classList.remove('active');
+            subtitle2.classList.remove('active');
+
+            setTimeout(() => {
+                const lang = localStorage.getItem('preferredLanguage') || getUserLanguage();
+                const code = lang.split('-')[0];
+                if (lang === 'en-US') {
+                    subtitle1.textContent = subtitles[currentIndex].fr;
+                    subtitle2.textContent = subtitles[currentIndex].en;
+                } else {
+                    subtitle1.textContent = subtitles[currentIndex].en;
+                    subtitle2.textContent = subtitles[currentIndex][code] || subtitles[currentIndex].en;
+                }
+
+                subtitle1.classList.add('active');
+                subtitle2.classList.add('active');
+
+                currentIndex = (currentIndex + 1) % subtitles.length;
+            }, 500);
+        }
+
+        function startSubtitles(lang) {
+            subtitles = translations[lang].examples;
+            currentIndex = 0;
+            updateSubtitles();
+            if (subtitleInterval) clearInterval(subtitleInterval);
+            subtitleInterval = setInterval(updateSubtitles, 3000);
+        }
+
+        // Navbar scroll effect
+        let lastScroll = 0;
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Fade in elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Initialize Swiper
+        const mediaSwiper = new Swiper('.mediaSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+            effect: 'coverflow',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+        });
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = getUserLanguage();
+            startSubtitles(lang);
+
+            // Add fade-in animation to sections
+            const sections = document.querySelectorAll('.section, .feature, .comparison-item, .testimonial-card');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(section);
+            });
+        });
+
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Обработка формы для Mac
+        document.getElementById('macEmailForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('macEmail').value;
+            const macModal = bootstrap.Modal.getInstance(document.getElementById('macModal'));
+            const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+            const form = this;
+            
+            // Показываем лоадер и блокируем форму
+            form.classList.add('form-loading');
+            form.querySelector('button[type="submit"]').disabled = true;
+            
+            try {
+                const response = await fetch('https://formspree.io/f/mjkylqjd', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        subject: 'Новый запрос на версию для Mac',
+                        message: `Пользователь ${email} хочет получить версию для Mac`
+                    })
+                });
+
+                if (response.ok) {
+                    macModal.hide();
+                    document.getElementById('macEmail').value = '';
+                    successModal.show();
+                } else {
+                    throw new Error('Ошибка отправки');
+                }
+            } catch (error) {
+                alert('Произошла ошибка при отправке. Пожалуйста, попробуйте позже или напишите нам на help@2sub.ru');
+            } finally {
+                // Скрываем лоадер и разблокируем форму
+                form.classList.remove('form-loading');
+                form.querySelector('button[type="submit"]').disabled = false;
+            }
+        });
+
+        // Language selector functionality
+        document.getElementById('languageSelector').addEventListener('change', function(e) {
+            const lang = e.target.value;
+            localStorage.setItem('preferredLanguage', lang);
+            applyTranslations(lang);
+            startSubtitles(lang);
+            // Modals will be updated automatically when opened due to the event listener below
+        });
+
+        // Set initial language in selector
+        document.addEventListener('DOMContentLoaded', () => {
+            const lang = getUserLanguage();
+            const selector = document.getElementById('languageSelector');
+            if (selector) {
+                selector.value = lang;
+            }
+        });
+
+        // Обновлять перевод при каждом открытии любого модального окна
+        const currentLang = () => localStorage.getItem('preferredLanguage') || getUserLanguage();
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.addEventListener('show.bs.modal', function () {
+                applyTranslations(currentLang());
+            });
+        });
+
+        // Автоматический выбор языка по URL
+        (function() {
+            const pathLangMap = {
+                'en': 'en-US',
+                'fr': 'fr-FR',
+                'es': 'es-ES',
+                'de': 'de-DE',
+                'it': 'it-IT',
+                'ja': 'ja-JP',
+                'ko': 'ko-KR',
+                'zh': 'zh-CN',
+                'ar': 'ar-SA',
+                'hi': 'hi-IN',
+                'pt': 'pt-BR',
+                'pl': 'pl-PL',
+                'nl': 'nl-NL',
+                'tr': 'tr-TR',
+                'ru': 'ru-RU',
+                'uk': 'uk-UA'
+            };
+            const path = window.location.pathname.split('/').filter(Boolean);
+            if (path.length > 0 && pathLangMap[path[0]]) {
+                const lang = pathLangMap[path[0]];
+                localStorage.setItem('preferredLanguage', lang);
+                document.documentElement.lang = lang;
+                document.addEventListener('DOMContentLoaded', () => {
+                    const selector = document.getElementById('languageSelector');
+                    if (selector) selector.value = lang;
+                });
+            }
+        })();
+
+        // Динамическая ссылка на статьи в футере
+        function updateFooterArticlesLink() {
+            const lang = localStorage.getItem('preferredLanguage') || getUserLanguage();
+            const code = lang.split('-')[0];
+            const link = document.getElementById('footer-articles-link');
+            if (!link) return;
+            
+            // Поддерживаемые языки для статей
+            const supportedLangs = ['en', 'ru', 'fr', 'es', 'de', 'it', 'ja', 'ko', 'zh', 'ar', 'hi', 'pt', 'pl', 'nl', 'tr', 'uk'];
+            const articleLang = supportedLangs.includes(code) ? code : 'en';
+            const url = `/articles/${articleLang}/`;
+            
+            link.href = url;
+            link.textContent = translations[lang]?.footer?.articles || translations['ru-RU'].footer.articles;
+        }
+        document.addEventListener('DOMContentLoaded', updateFooterArticlesLink);
+        document.getElementById('languageSelector').addEventListener('change', updateFooterArticlesLink);
+    </script>
+</body>
+</html>

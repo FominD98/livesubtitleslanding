@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://2sub.ru/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Main articles index -->
+    <url>
+        <loc>https://2sub.ru/articles/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>    <url>
+        <loc>https://2sub.ru/articles/ar/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/de/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/en/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/es/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/fr/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/hi/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/it/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/ja/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/ko/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/nl/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/pl/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/pt/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/ru/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/tr/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/uk/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>    <url>
+        <loc>https://2sub.ru/articles/zh/</loc>
+        <lastmod>2025-06-10</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+    </url>
+    <!-- article-1.html -->
+    <!-- article-2.html -->
+    <!-- article-3.html -->
+    <!-- index.html -->
+    <!-- article-10.html -->
+    <!-- article-4.html -->
+    <!-- article-5.html -->
+    <!-- article-6.html -->
+    <!-- article-7.html -->
+    <!-- article-8.html -->
+    <!-- article-9.html -->
+</urlset>
