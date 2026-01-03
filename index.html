@@ -40,7 +40,7 @@
     <meta name="revisit-after" content="7 days">
     
     <!-- Sitemap -->
-    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#00ff9d">
@@ -1489,7 +1489,7 @@
         <footer class="text-center py-4">
             <div class="d-flex justify-content-between align-items-center position-relative">
                 <div class="ms-2">
-                    <a id="footer-articles-link" href="/articles/ru/" class="text-decoration-none" style="color: var(--primary);" data-translate="footer.articles">Статьи</a>
+                    <a id="footer-articles-link" href="articles/ru/" class="text-decoration-none" style="color: var(--primary);" data-translate="footer.articles">Статьи</a>
                 </div>
                 <p class="mb-0 position-absolute start-50 translate-middle-x" data-translate="footer.copyright">© 2024 Live Subtitles. Все права защищены.</p>
                 <p class="mb-0 ms-auto">
@@ -1503,6 +1503,9 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="translations.js"></script>
     <script>
+        // Base path configuration for GitHub Pages
+        const BASE_PATH = window.location.hostname === 'fomind98.github.io' ? '/livesubtitleslanding' : '';
+
         let currentIndex = 0;
         let subtitles = translations[getUserLanguage()].examples;
         const subtitle1 = document.getElementById('subtitle1');
@@ -1742,12 +1745,12 @@
             const code = lang.split('-')[0];
             const link = document.getElementById('footer-articles-link');
             if (!link) return;
-            
+
             // Поддерживаемые языки для статей
             const supportedLangs = ['en', 'ru', 'fr', 'es', 'de', 'it', 'ja', 'ko', 'zh', 'ar', 'hi', 'pt', 'pl', 'nl', 'tr', 'uk'];
             const articleLang = supportedLangs.includes(code) ? code : 'en';
-            const url = `/articles/${articleLang}/`;
-            
+            const url = `${BASE_PATH}/articles/${articleLang}/`;
+
             link.href = url;
             link.textContent = translations[lang]?.footer?.articles || translations['ru-RU'].footer.articles;
         }
