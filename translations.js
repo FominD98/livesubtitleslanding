@@ -64,7 +64,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. All rights reserved.',
             contact: 'For all questions: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Articles'
         },
         title: 'Live Subtitles - Dual Subtitles for Language Learning',
@@ -207,7 +207,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Все права защищены.',
             contact: 'По всем вопросам: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Статьи'
         },
         title: 'Live Subtitles - Двойные субтитры для изучения языков',
@@ -343,7 +343,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Tous droits réservés.',
             contact: 'Pour toute question : ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Articles'
         },
         title: 'Live Subtitles - Sous-titres doubles pour l\'apprentissage des langues',
@@ -479,7 +479,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Todos los derechos reservados.',
             contact: 'Para cualquier consulta: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Artículos'
         },
         title: 'Live Subtitles - Subtítulos dobles para el aprendizaje de idiomas',
@@ -615,7 +615,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Alle Rechte vorbehalten.',
             contact: 'Für alle Fragen: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Artikel'
         },
         title: 'Live Subtitles - Doppelte Untertitel für das Lernen von Sprachen',
@@ -751,7 +751,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Tutti i diritti riservati.',
             contact: 'Per qualsiasi domanda: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Articoli'
         },
         title: 'Live Subtitles - Sottotitoli doppi per l\'apprendimento dei linguaggi',
@@ -887,7 +887,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. 無断転載禁止。',
             contact: 'お問い合わせ: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: '記事'
         },
         title: 'Live Subtitles - 語学学習のための二重字幕',
@@ -1023,7 +1023,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. 모든 권리 보유.',
             contact: '모든 질문: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: '기사'
         },
         title: 'Live Subtitles - 언어 학습을 위한 이중 자막',
@@ -1159,7 +1159,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. 保留所有权利。',
             contact: '有任何问题：',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: '文章'
         },
         title: 'Live Subtitles - 语言学习双字幕',
@@ -1295,7 +1295,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. جميع الحقوق محفوظة.',
             contact: 'لأي أسئلة: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'مقالات'
         },
         title: 'Live Subtitles - ترجمة مزدوجة لتعلم اللغات',
@@ -1431,7 +1431,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. सभी अधिकार सुरक्षित।',
             contact: 'किसी भी प्रश्न के लिए: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'लेख'
         },
         title: 'Live Subtitles - भाषा सीखने के लिए दोहरे सबटाइटल',
@@ -1567,7 +1567,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Todos os direitos reservados.',
             contact: 'Para qualquer dúvida: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Artigos'
         },
         title: 'Live Subtitles - duplas legendas para aprendizado de idiomas',
@@ -1703,7 +1703,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Wszystkie prawa zastrzeżone.',
             contact: 'W przypadku pytań: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Artykuły'
         },
         title: 'Live Subtitles - podwójne napisy do nauki języków',
@@ -1839,7 +1839,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Alle rechten voorbehouden.',
             contact: 'Voor vragen: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Artikelen'
         },
         title: 'Live Subtitles - dubbele ondertitels voor taal leren',
@@ -1975,7 +1975,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Tüm hakları saklıdır.',
             contact: 'Herhangi bir soru için: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Makaleler'
         },
         title: 'Live Subtitles - dil öğrenimi için çift altyazı',
@@ -2111,7 +2111,7 @@ const translations = {
         footer: {
             copyright: '© 2024 Live Subtitles. Усі права захищені.',
             contact: 'З будь-яких питань: ',
-            email: 'help@2sub.ru',
+            email: 'help@live-subtitles.com',
             articles: 'Статті'
         },
         title: 'Live Subtitles - подвійні субтитри для вивчення мов',

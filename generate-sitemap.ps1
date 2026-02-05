@@ -5,7 +5,7 @@
 # ========================================
 
 param(
-    [string]$Domain = "https://2sub.ru",
+    [string]$Domain = "https://live-subtitles.com",
     [string]$ArticlesPath = "articles",
     [string]$OutputFile = "sitemap.xml"
 )
