@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://2sub.ru/</loc>
+        <loc>https://live-subtitles.com/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -10,346 +10,346 @@
     
     <!-- Main articles index -->
     <url>
-        <loc>https://2sub.ru/articles/</loc>
+        <loc>https://live-subtitles.com/articles/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>    <url>
-        <loc>https://2sub.ru/articles/ar/</loc>
+        <loc>https://live-subtitles.com/articles/ar/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/de/</loc>
+        <loc>https://live-subtitles.com/articles/de/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/en/</loc>
+        <loc>https://live-subtitles.com/articles/en/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/es/</loc>
+        <loc>https://live-subtitles.com/articles/es/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/fr/</loc>
+        <loc>https://live-subtitles.com/articles/fr/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/hi/</loc>
+        <loc>https://live-subtitles.com/articles/hi/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/it/</loc>
+        <loc>https://live-subtitles.com/articles/it/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/ja/</loc>
+        <loc>https://live-subtitles.com/articles/ja/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/ko/</loc>
+        <loc>https://live-subtitles.com/articles/ko/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/nl/</loc>
+        <loc>https://live-subtitles.com/articles/nl/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/pl/</loc>
+        <loc>https://live-subtitles.com/articles/pl/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/pt/</loc>
+        <loc>https://live-subtitles.com/articles/pt/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/ru/</loc>
+        <loc>https://live-subtitles.com/articles/ru/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/tr/</loc>
+        <loc>https://live-subtitles.com/articles/tr/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/uk/</loc>
+        <loc>https://live-subtitles.com/articles/uk/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>    <url>
-        <loc>https://2sub.ru/articles/zh/</loc>
+        <loc>https://live-subtitles.com/articles/zh/</loc>
         <lastmod>2025-06-10</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://2sub.ru/articles/ar/" />
-        <xhtml:link rel="alternate" hreflang="de" href="https://2sub.ru/articles/de/" />
-        <xhtml:link rel="alternate" hreflang="en" href="https://2sub.ru/articles/en/" />
-        <xhtml:link rel="alternate" hreflang="es" href="https://2sub.ru/articles/es/" />
-        <xhtml:link rel="alternate" hreflang="fr" href="https://2sub.ru/articles/fr/" />
-        <xhtml:link rel="alternate" hreflang="hi" href="https://2sub.ru/articles/hi/" />
-        <xhtml:link rel="alternate" hreflang="it" href="https://2sub.ru/articles/it/" />
-        <xhtml:link rel="alternate" hreflang="ja" href="https://2sub.ru/articles/ja/" />
-        <xhtml:link rel="alternate" hreflang="ko" href="https://2sub.ru/articles/ko/" />
-        <xhtml:link rel="alternate" hreflang="nl" href="https://2sub.ru/articles/nl/" />
-        <xhtml:link rel="alternate" hreflang="pl" href="https://2sub.ru/articles/pl/" />
-        <xhtml:link rel="alternate" hreflang="pt" href="https://2sub.ru/articles/pt/" />
-        <xhtml:link rel="alternate" hreflang="ru" href="https://2sub.ru/articles/ru/" />
-        <xhtml:link rel="alternate" hreflang="tr" href="https://2sub.ru/articles/tr/" />
-        <xhtml:link rel="alternate" hreflang="uk" href="https://2sub.ru/articles/uk/" />
-        <xhtml:link rel="alternate" hreflang="zh" href="https://2sub.ru/articles/zh/" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/" />
     </url>
     <!-- article-1.html -->
     <!-- article-2.html -->

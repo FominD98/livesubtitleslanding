@@ -1,6 +1,6 @@
 # Скрипт для генерации sitemap.xml для всех статей
 param(
-    [string]$Domain = "https://2sub.ru"
+    [string]$Domain = "https://live-subtitles.com"
 )
 
 $currentDate = Get-Date -Format "yyyy-MM-dd"
