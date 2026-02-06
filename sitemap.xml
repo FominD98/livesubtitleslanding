@@ -2076,4 +2076,67 @@
         <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-9.html" />
         <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-9.html" />
     </url>
+    <url>
+        <loc>https://live-subtitles.com/articles/zh/article-4.html</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-4.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-4.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-4.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/articles/zh/article-5.html</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-5.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-5.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-5.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/articles/zh/article-6.html</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-6.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-6.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-6.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/articles/zh/article-7.html</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-7.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-7.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-7.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/articles/zh/article-8.html</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-8.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-8.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-8.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/articles/zh/article-9.html</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-9.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-9.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-9.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/articles/zh/article-10.html</loc>
+        <lastmod>2026-02-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-10.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-10.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-10.html" />
+    </url>
 </urlset>
