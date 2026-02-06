@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(for f in C:petlivesubtitleslandingarticleszharticle-{4,5,6,7,8,9,10}.html)",
+      "Bash(done)"
+    ]
+  }
+}

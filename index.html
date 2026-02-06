@@ -15,22 +15,9 @@
         gtag('config', 'AW-17344614830');
     </script>
     
-    <!-- Dynamic canonical URL based on current page -->
-    <script>
-        // Set correct canonical URL and Open Graph URL based on current path
-        const currentPath = window.location.pathname;
-        const canonicalUrl = currentPath === '/' ? 'https://live-subtitles.com/' : `https://live-subtitles.com${currentPath}`;
-        document.write('<link rel="canonical" href="' + canonicalUrl + '" />');
-        
-        // Update Open Graph URL dynamically
-        document.addEventListener('DOMContentLoaded', function() {
-            const ogUrl = document.querySelector('meta[property="og:url"]');
-            if (ogUrl) {
-                ogUrl.setAttribute('content', canonicalUrl);
-            }
-        });
-    </script>
-    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://live-subtitles.com/" />
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Live Subtitles — an application with dual subtitles, speech recognition and real-time translation. Learn languages, watch movies and understand foreign speech effortlessly.">
     <meta name="keywords" content="dual subtitles, language learning subtitles, speech translation, speech recognition, online subtitles, Live Subtitles, English learning, language learning, real-time subtitles, speech understanding, movie translator">
@@ -88,6 +75,116 @@
             "url": "https://live-subtitles.com"
         }
     }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Live Subtitles",
+        "url": "https://live-subtitles.com",
+        "logo": "https://live-subtitles.com/preview.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "help@live-subtitles.com",
+            "contactType": "customer support"
+        },
+        "sameAs": [
+            "https://twitter.com/livesubtitles"
+        ]
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much does the app cost?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Live Subtitles works on a subscription from $7 per month. A free trial is available so you can test all the app features."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it work with any application?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Live Subtitles works with absolutely any application: YouTube, Netflix, Zoom, Teams, Discord, browsers and even games. The app captures audio at the system level."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What languages are supported?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Over 50 languages are supported including: English, Russian, Spanish, French, German, Chinese, Japanese, Korean, Arabic, Hindi and many others."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is an internet connection required?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, a stable internet connection is required for speech recognition and translation. The app uses cloud services to ensure high accuracy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I customize the subtitle appearance?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Of course! You can customize font size, color, subtitle position on screen, background transparency, and choose which languages to display."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is there a version for Mac or mobile devices?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Currently only the Windows version is available. We are actively working on versions for Mac, iOS and Android. Leave your email and we will notify you when they are released."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- VideoObject Schema -->
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Live Subtitles Demo Video 1",
+            "description": "Demo of Live Subtitles application with dual subtitles and real-time translation",
+            "thumbnailUrl": "https://img.youtube.com/vi/0Ev_SSzYkfc/maxresdefault.jpg",
+            "uploadDate": "2024-01-01",
+            "embedUrl": "https://www.youtube.com/embed/0Ev_SSzYkfc"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Live Subtitles Demo Video 2",
+            "description": "Live Subtitles in action - speech recognition and real-time translation",
+            "thumbnailUrl": "https://img.youtube.com/vi/l1m7qFZ6jKM/maxresdefault.jpg",
+            "uploadDate": "2024-01-01",
+            "embedUrl": "https://www.youtube.com/embed/l1m7qFZ6jKM"
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            "name": "Live Subtitles Demo Video 3",
+            "description": "Using Live Subtitles for language learning with dual subtitles",
+            "thumbnailUrl": "https://img.youtube.com/vi/TjCLyHechm4/maxresdefault.jpg",
+            "uploadDate": "2024-01-01",
+            "embedUrl": "https://www.youtube.com/embed/TjCLyHechm4"
+        }
+    ]
     </script>
 
     <!-- Open Graph Meta Tags (Telegram, LinkedIn, Facebook) -->
@@ -1033,7 +1130,7 @@
     
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#" data-translate="navbar.brand">Live Subtitles</a>
+            <a class="navbar-brand" href="/" data-translate="navbar.brand">Live Subtitles</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -1632,10 +1729,11 @@
         // Плавная прокрутка для навигации
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href.length < 2) return;
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
             });
         });
 
