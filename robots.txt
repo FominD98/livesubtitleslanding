@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /*.json$
+
+Sitemap: https://live-subtitles.com/sitemap.xml
