@@ -62,6 +62,19 @@ $xml = @"
     </url>
 "@
 
+# Add localized landing pages (except English root)
+$landingLanguages = $allLanguages | Where-Object { $_ -ne 'en' }
+foreach ($lang in $landingLanguages) {
+    $xml += @"
+    <url>
+        <loc>$Domain/$lang/</loc>
+        <lastmod>$currentDate</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+"@
+}
+
 # Create hreflang links for all languages
 function Create-HreflangLinks {
     param([string]$ArticleName = "")

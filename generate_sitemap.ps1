@@ -30,6 +30,20 @@ $xmlContent = @"
 
 "@
 
+# Добавляем языковые страницы лендинга (кроме английского корня)
+$landingLanguages = $languages | Where-Object { $_ -ne "en" }
+foreach ($lang in $landingLanguages) {
+    $xmlContent += @"
+    <url>
+        <loc>$Domain/$lang/</loc>
+        <lastmod>$currentDate</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+"@
+}
+
 # Функция для создания hreflang ссылок
 function Get-HrefLangLinks {
     param([string]$PagePath)
