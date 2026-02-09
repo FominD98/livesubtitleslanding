@@ -52,14 +52,6 @@ $xml = @"
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- Main articles index -->
-    <url>
-        <loc>$Domain/$ArticlesPath/</loc>
-        <lastmod>$currentDate</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
 "@
 
 # Add localized landing pages (except English root)

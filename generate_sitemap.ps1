@@ -19,14 +19,6 @@ $xmlContent = @"
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
-    
-    <!-- Main articles index -->
-    <url>
-        <loc>$Domain/articles/</loc>
-        <lastmod>$currentDate</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.9</priority>
-    </url>
 
 "@
 
