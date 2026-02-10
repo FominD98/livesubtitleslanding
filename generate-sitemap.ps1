@@ -1,61 +1,82 @@
 # ========================================
 # SITEMAP AUTO-GENERATION SCRIPT
-# Created: 10.06.2025
-# Purpose: Automatic sitemap.xml generation with multi-language support
+# Purpose: Generate sitemap.xml with localized pages and articles
 # ========================================
 
 param(
     [string]$Domain = "https://live-subtitles.com",
     [string]$ArticlesPath = "articles",
-    [string]$OutputFile = "sitemap.xml"
+    [string]$OutputFile = "sitemap.xml",
+    [string[]]$StaticPages = @(
+        "netflix-subtitles.html",
+        "google-meet-live-captions.html",
+        "zoom-live-captions.html",
+        "youtube-dual-subtitles.html",
+        "teams-live-captions.html",
+        "discord-twitch-subtitles.html",
+        "privacy.html"
+    )
 )
 
 Write-Host "=== SITEMAP GENERATOR ===" -ForegroundColor Green
 Write-Host "Domain: $Domain" -ForegroundColor Cyan
-Write-Host "Articles Path: $ArticlesPath" -ForegroundColor Cyan
-Write-Host "Output File: $OutputFile" -ForegroundColor Cyan
-Write-Host ""
+Write-Host "Articles path: $ArticlesPath" -ForegroundColor Cyan
+Write-Host "Output file: $OutputFile" -ForegroundColor Cyan
 
-# Get current date in ISO format
 $currentDate = (Get-Date).ToString("yyyy-MM-dd")
 
-# Find all language folders
 $languageFolders = Get-ChildItem -Path $ArticlesPath -Directory | Where-Object { $_.Name -match '^[a-z]{2}$' }
-Write-Host "Languages found: $($languageFolders.Count)" -ForegroundColor Yellow
+$allLanguages = @($languageFolders | ForEach-Object { $_.Name } | Sort-Object)
 
-# Create list of all languages for hreflang
-$allLanguages = $languageFolders | ForEach-Object { $_.Name } | Sort-Object
-
-# Find all unique articles
-$allArticles = @()
-foreach ($langFolder in $languageFolders) {
-    $articles = Get-ChildItem -Path $langFolder.FullName -Filter "*.html"
-    foreach ($article in $articles) {
-        if ($allArticles -notcontains $article.Name) {
-            $allArticles += $article.Name
-        }
-    }
+if ($allLanguages.Count -eq 0) {
+    throw "No language folders found in '$ArticlesPath'."
 }
 
-Write-Host "Unique articles found: $($allArticles.Count)" -ForegroundColor Yellow
-Write-Host "Languages: $($allLanguages -join ', ')" -ForegroundColor Yellow
-Write-Host ""
+$landingLanguages = @($allLanguages | Where-Object { $_ -ne 'en' })
 
-# Start creating XML
+function New-HreflangLinks {
+    param(
+        [hashtable]$LanguageToHref,
+        [string]$XDefaultHref = ""
+    )
+
+    $links = ""
+
+    if ($XDefaultHref) {
+        $links += "        <xhtml:link rel=`"alternate`" hreflang=`"x-default`" href=`"$XDefaultHref`" />`r`n"
+    }
+
+    foreach ($lang in ($LanguageToHref.Keys | Sort-Object)) {
+        $href = $LanguageToHref[$lang]
+        $links += "        <xhtml:link rel=`"alternate`" hreflang=`"$lang`" href=`"$href`" />`r`n"
+    }
+
+    return $links
+}
+
 $xml = @"
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+"@
+
+# Landing pages with hreflang
+$landingHrefMap = @{}
+$landingHrefMap['en'] = "$Domain/"
+foreach ($lang in $landingLanguages) {
+    $landingHrefMap[$lang] = "$Domain/$lang/"
+}
+$landingHreflang = New-HreflangLinks -LanguageToHref $landingHrefMap -XDefaultHref "$Domain/"
+
+$xml += @"
     <url>
         <loc>$Domain/</loc>
         <lastmod>$currentDate</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-    </url>
+$landingHreflang    </url>
 "@
 
-# Add localized landing pages (except English root)
-$landingLanguages = $allLanguages | Where-Object { $_ -ne 'en' }
 foreach ($lang in $landingLanguages) {
     $xml += @"
     <url>
@@ -63,79 +84,126 @@ foreach ($lang in $landingLanguages) {
         <lastmod>$currentDate</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-    </url>
+$landingHreflang    </url>
 "@
 }
 
-# Create hreflang links for all languages
-function Create-HreflangLinks {
-    param([string]$ArticleName = "")
-    
-    $links = ""
-    foreach ($lang in $allLanguages) {
-        if ($ArticleName) {
-            $links += "        <xhtml:link rel=`"alternate`" hreflang=`"$lang`" href=`"$Domain/$ArticlesPath/$lang/$ArticleName`" />`r`n"
-        } else {
-            $links += "        <xhtml:link rel=`"alternate`" hreflang=`"$lang`" href=`"$Domain/$ArticlesPath/$lang/`" />`r`n"
+# Static SEO pages (root + localized variants when available)
+foreach ($page in $StaticPages) {
+    if (Test-Path $page) {
+        $cleanPage = $page.TrimStart('/')
+        $staticHrefMap = @{}
+        $staticHrefMap['en'] = "$Domain/$cleanPage"
+
+        foreach ($lang in $landingLanguages) {
+            $localizedPath = Join-Path -Path $lang -ChildPath $cleanPage
+            if (Test-Path $localizedPath) {
+                $staticHrefMap[$lang] = "$Domain/$lang/$cleanPage"
+            }
+        }
+
+        $staticHreflang = New-HreflangLinks -LanguageToHref $staticHrefMap -XDefaultHref "$Domain/$cleanPage"
+
+        foreach ($lang in ($staticHrefMap.Keys | Sort-Object)) {
+            $loc = $staticHrefMap[$lang]
+            $priority = if ($lang -eq 'en') { '0.85' } else { '0.75' }
+            $xml += @"
+    <url>
+        <loc>$loc</loc>
+        <lastmod>$currentDate</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>$priority</priority>
+$staticHreflang    </url>
+"@
         }
     }
-    return $links
 }
 
-# Add language indexes
-foreach ($lang in $allLanguages) {
-    $hreflangLinks = Create-HreflangLinks
+# Article index pages by language
+$indexLanguages = @($allLanguages | Where-Object { Test-Path (Join-Path -Path (Join-Path $ArticlesPath $_) -ChildPath "index.html") })
+$indexHrefMap = @{}
+foreach ($lang in $indexLanguages) {
+    $indexHrefMap[$lang] = "$Domain/$ArticlesPath/$lang/"
+}
+$indexXDefaultHref = if ($indexHrefMap.ContainsKey('en')) { $indexHrefMap['en'] } else { '' }
+$indexHreflang = New-HreflangLinks -LanguageToHref $indexHrefMap -XDefaultHref $indexXDefaultHref
+
+foreach ($lang in $indexLanguages) {
     $xml += @"
     <url>
         <loc>$Domain/$ArticlesPath/$lang/</loc>
         <lastmod>$currentDate</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
-$hreflangLinks    </url>
+$indexHreflang    </url>
 "@
 }
 
-# Add all articles
-foreach ($article in $allArticles) {
-    $xml += "`r`n    <!-- $article -->"
-    
+# Collect unique article files (article-*.html)
+$allArticles = New-Object System.Collections.Generic.HashSet[string]
+foreach ($lang in $allLanguages) {
+    $langPath = Join-Path -Path $ArticlesPath -ChildPath $lang
+    if (-not (Test-Path $langPath)) { continue }
+
+    Get-ChildItem -Path $langPath -Filter "article-*.html" | ForEach-Object {
+        [void]$allArticles.Add($_.Name)
+    }
+}
+
+$sortedArticles = @($allArticles | Sort-Object)
+
+foreach ($article in $sortedArticles) {
+    $availableArticleLanguages = @()
     foreach ($lang in $allLanguages) {
-        $articlePath = "$ArticlesPath\$lang\$article"
+        $articlePath = Join-Path -Path (Join-Path $ArticlesPath $lang) -ChildPath $article
         if (Test-Path $articlePath) {
-            $hreflangLinks = Create-HreflangLinks -ArticleName $article
-            $xml += @"
-`r`n    <url>
+            $availableArticleLanguages += $lang
+        }
+    }
+
+    if ($availableArticleLanguages.Count -eq 0) { continue }
+
+    $articleHrefMap = @{}
+    foreach ($lang in $availableArticleLanguages) {
+        $articleHrefMap[$lang] = "$Domain/$ArticlesPath/$lang/$article"
+    }
+
+    $articleXDefaultHref = if ($articleHrefMap.ContainsKey('en')) { $articleHrefMap['en'] } else { '' }
+    $articleHreflang = New-HreflangLinks -LanguageToHref $articleHrefMap -XDefaultHref $articleXDefaultHref
+    $xml += "`r`n    <!-- $article -->"
+
+    foreach ($lang in $availableArticleLanguages) {
+        $xml += @"
+
+    <url>
         <loc>$Domain/$ArticlesPath/$lang/$article</loc>
         <lastmod>$currentDate</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-$hreflangLinks    </url>
+$articleHreflang    </url>
 "@
-        }
     }
 }
 
-# Close XML
 $xml += @"
-`r`n</urlset>
+
+</urlset>
 "@
 
-# Save file
-$xml | Out-File -FilePath $OutputFile -Encoding UTF8
+$utf8NoBom = New-Object System.Text.UTF8Encoding($false)
+$outputPath = if ([System.IO.Path]::IsPathRooted($OutputFile)) {
+    $OutputFile
+} else {
+    Join-Path -Path (Get-Location) -ChildPath $OutputFile
+}
+[System.IO.File]::WriteAllText($outputPath, $xml, $utf8NoBom)
 
-# Statistics
-$urlCount = ($xml | Select-String "<loc>").Count
-$hreflangCount = ($xml | Select-String "hreflang=").Count
+$urlCount = ([regex]::Matches($xml, "<loc>")).Count
+$hreflangCount = ([regex]::Matches($xml, "hreflang=")).Count
 
 Write-Host "=== RESULT ===" -ForegroundColor Green
 Write-Host "File created: $OutputFile" -ForegroundColor Yellow
 Write-Host "Total URLs: $urlCount" -ForegroundColor Yellow
 Write-Host "Total hreflang links: $hreflangCount" -ForegroundColor Yellow
 Write-Host "Last updated: $currentDate" -ForegroundColor Yellow
-Write-Host ""
-Write-Host "Sitemap successfully created!" -ForegroundColor Green
-
-# Check file size
-$fileSize = (Get-Item $OutputFile).Length
-$fileSizeKB = [math]::Round($fileSize / 1024, 2)
-Write-Host "File size: $fileSizeKB KB" -ForegroundColor Cyan 
+Write-Host "Sitemap generated successfully." -ForegroundColor Green

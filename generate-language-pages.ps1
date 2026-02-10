@@ -24,6 +24,14 @@ foreach ($lang in $Languages) {
     $content = $content.Replace('src="img/', 'src="../img/')
     $content = $content.Replace('href="articles/ru/"', 'href="../articles/ru/"')
 
+    # Keep platform solution links language-consistent.
+    $content = $content.Replace('href="/netflix-subtitles.html"', 'href="/' + $lang + '/netflix-subtitles.html"')
+    $content = $content.Replace('href="/google-meet-live-captions.html"', 'href="/' + $lang + '/google-meet-live-captions.html"')
+    $content = $content.Replace('href="/zoom-live-captions.html"', 'href="/' + $lang + '/zoom-live-captions.html"')
+    $content = $content.Replace('href="/youtube-dual-subtitles.html"', 'href="/' + $lang + '/youtube-dual-subtitles.html"')
+    $content = $content.Replace('href="/teams-live-captions.html"', 'href="/' + $lang + '/teams-live-captions.html"')
+    $content = $content.Replace('href="/discord-twitch-subtitles.html"', 'href="/' + $lang + '/discord-twitch-subtitles.html"')
+
     $langDir = Join-Path (Get-Location) $lang
     if (-not (Test-Path $langDir)) {
         New-Item -Path $langDir -ItemType Directory | Out-Null

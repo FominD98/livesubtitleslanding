@@ -3,7 +3,10 @@
     "allow": [
       "Bash(python:*)",
       "Bash(for f in C:petlivesubtitleslandingarticleszharticle-{4,5,6,7,8,9,10}.html)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(for lang in ar de es fr it ja ko pt ru uk zh)",
+      "Bash(do echo \"=== $lang/netflix-subtitles.html ===\")",
+      "Bash(grep:*)"
     ]
   }
 }

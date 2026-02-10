@@ -7,8 +7,8 @@ const translations = {
             download: 'Download'
         },
         header: {
-            title: 'Watch movies, learn languages — easily understand live speech',
-            lead: 'Live Subtitles is your assistant with dual subtitles, speech recognition and real-time translation'
+            title: 'Live captions and dual subtitles for meetings, movies, and language learning',
+            lead: 'Live Subtitles helps you understand speech faster with dual subtitles and real-time translation for calls, meetings, and videos.'
         },
         downloadBtn: 'Download from Microsoft Store',
         macBtn: 'Want a Mac version',
@@ -67,12 +67,12 @@ const translations = {
             email: 'help@live-subtitles.com',
             articles: 'Articles'
         },
-        title: 'Live Subtitles - Dual Subtitles for Language Learning',
-        description: 'Live Subtitles — an application with dual subtitles, speech recognition and real-time translation. Learn languages, watch movies and understand foreign speech effortlessly.',
+        title: 'Live Subtitles App: Live Captions, Dual Subtitles, Netflix and Zoom',
+        description: 'Live Subtitles is a live captions and dual subtitles app for meetings, movies, and language learning. Understand speech faster across Zoom, Teams, YouTube, and Netflix.',
         download: 'Download Now',
         meta: {
-            description: 'Live Subtitles — an application with dual subtitles, speech recognition and real-time translation. Learn languages, watch movies and understand foreign speech effortlessly.',
-            keywords: 'dual subtitles, language learning subtitles, speech translation, speech recognition, online subtitles, Live Subtitles, English learning, language learning, real-time subtitles, speech understanding, movie translator'
+            description: 'Live Subtitles is a live captions and dual subtitles app for meetings, movies, and language learning. Understand speech faster across Zoom, Teams, YouTube, and Netflix.',
+            keywords: 'live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, language learning subtitles'
         },
         downloadModal: {
             title: 'Download Notice',
