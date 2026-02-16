@@ -54,6 +54,19 @@ function New-HreflangLinks {
     return $links
 }
 
+function Get-IsoLastMod {
+    param(
+        [string]$Path,
+        [string]$FallbackDate
+    )
+
+    if ([string]::IsNullOrWhiteSpace($Path)) { return $FallbackDate }
+    if (Test-Path $Path) {
+        return (Get-Item $Path).LastWriteTime.ToString("yyyy-MM-dd")
+    }
+    return $FallbackDate
+}
+
 $xml = @"
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -67,21 +80,24 @@ foreach ($lang in $landingLanguages) {
     $landingHrefMap[$lang] = "$Domain/$lang/"
 }
 $landingHreflang = New-HreflangLinks -LanguageToHref $landingHrefMap -XDefaultHref "$Domain/"
+$rootLastMod = Get-IsoLastMod -Path "index.html" -FallbackDate $currentDate
 
 $xml += @"
     <url>
         <loc>$Domain/</loc>
-        <lastmod>$currentDate</lastmod>
+        <lastmod>$rootLastMod</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
 $landingHreflang    </url>
 "@
 
 foreach ($lang in $landingLanguages) {
+    $landingPath = Join-Path -Path $lang -ChildPath "index.html"
+    $landingLastMod = Get-IsoLastMod -Path $landingPath -FallbackDate $currentDate
     $xml += @"
     <url>
         <loc>$Domain/$lang/</loc>
-        <lastmod>$currentDate</lastmod>
+        <lastmod>$landingLastMod</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
 $landingHreflang    </url>
@@ -107,10 +123,12 @@ foreach ($page in $StaticPages) {
         foreach ($lang in ($staticHrefMap.Keys | Sort-Object)) {
             $loc = $staticHrefMap[$lang]
             $priority = if ($lang -eq 'en') { '0.85' } else { '0.75' }
+            $pagePath = if ($lang -eq 'en') { $cleanPage } else { Join-Path -Path $lang -ChildPath $cleanPage }
+            $staticLastMod = Get-IsoLastMod -Path $pagePath -FallbackDate $currentDate
             $xml += @"
     <url>
         <loc>$loc</loc>
-        <lastmod>$currentDate</lastmod>
+        <lastmod>$staticLastMod</lastmod>
         <changefreq>weekly</changefreq>
         <priority>$priority</priority>
 $staticHreflang    </url>
@@ -129,10 +147,12 @@ $indexXDefaultHref = if ($indexHrefMap.ContainsKey('en')) { $indexHrefMap['en'] 
 $indexHreflang = New-HreflangLinks -LanguageToHref $indexHrefMap -XDefaultHref $indexXDefaultHref
 
 foreach ($lang in $indexLanguages) {
+    $indexPath = Join-Path -Path (Join-Path $ArticlesPath $lang) -ChildPath "index.html"
+    $indexLastMod = Get-IsoLastMod -Path $indexPath -FallbackDate $currentDate
     $xml += @"
     <url>
         <loc>$Domain/$ArticlesPath/$lang/</loc>
-        <lastmod>$currentDate</lastmod>
+        <lastmod>$indexLastMod</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
 $indexHreflang    </url>
@@ -173,11 +193,13 @@ foreach ($article in $sortedArticles) {
     $xml += "`r`n    <!-- $article -->"
 
     foreach ($lang in $availableArticleLanguages) {
+        $articlePath = Join-Path -Path (Join-Path $ArticlesPath $lang) -ChildPath $article
+        $articleLastMod = Get-IsoLastMod -Path $articlePath -FallbackDate $currentDate
         $xml += @"
 
     <url>
         <loc>$Domain/$ArticlesPath/$lang/$article</loc>
-        <lastmod>$currentDate</lastmod>
+        <lastmod>$articleLastMod</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
 $articleHreflang    </url>
