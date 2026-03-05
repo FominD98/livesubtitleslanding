@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico do overlay de legendas em tela cheia para jogos | Live Subtitles</title>
+    <meta name="description" content="Checklist de diagnóstico para overlays de legendas em jogos: visibilidade fullscreen, configuração borderless, problemas de foco, comportamento de hotkeys e passos práticos de recuperação.">
+    <meta name="keywords" content="fullscreen subtitle overlay, subtitle overlay troubleshooting, borderless fullscreen subtitles, game subtitles not visible, lock game mode hotkey">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://live-subtitles.com/articles/pt/article-20.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Diagnóstico do overlay de legendas em tela cheia para jogos">
+    <meta property="og:description" content="Checklist operacional para restaurar a estabilidade do overlay de legendas em cenários de jogo.">
+    <meta property="og:url" content="https://live-subtitles.com/articles/pt/article-20.html">
+    <meta property="og:image" content="https://live-subtitles.com/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Diagnóstico do overlay de legendas em tela cheia para jogos">
+    <meta name="twitter:description" content="Fluxo rápido de diagnóstico para problemas de visibilidade e interação em overlays de legendas de jogos.">
+    <meta name="twitter:image" content="https://live-subtitles.com/preview.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        .back-link:hover { text-decoration: underline; }
+        h2, h3 { color: #00ff9d; margin-top: 2rem; }
+        p, li { color: #eee; line-height: 1.7; }
+        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Diagnóstico do overlay de legendas em tela cheia para jogos",
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "author": { "@type": "Person", "name": "Editorial Team" },
+      "publisher": { "@type": "Organization", "name": "Live Subtitles" },
+      "description": "Checklist de diagnóstico para overlays de legendas em jogos: visibilidade fullscreen, configuração borderless, problemas de foco, comportamento de hotkeys e passos práticos de recuperação.",
+      "mainEntityOfPage": "https://live-subtitles.com/articles/pt/article-20.html"
+    }
+    </script>
+</head>
+<body>
+    <div class="container article-container" itemscope itemtype="https://schema.org/Article">
+        <a href="index.html" class="back-link">&larr; Voltar aos artigos</a>
+        <h1 class="article-title" itemprop="headline">Diagnóstico do overlay de legendas em tela cheia para jogos</h1>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 de março de 2026</div>
+
+        <div itemprop="articleBody">
+            <p>Se o comportamento do overlay ficar instável durante o jogo, correções aleatórias normalmente desperdiçam tempo. Este playbook traz uma ordem rápida de diagnóstico para isolar a causa: modo de renderização, modo de interação ou incompatibilidade de fluxo.</p>
+
+            <h2>Etapa 1: verifique primeiro o modo de renderização</h2>
+            <p>Antes de alterar as configurações de legenda, verifique o modo de exibição do jogo. Se estiver em fullscreen exclusivo e as legendas sumirem, mude para <strong>Borderless Fullscreen</strong>. Isso resolve a maioria das falhas de visibilidade de overlays de desktop.</p>
+
+            <h2>Etapa 2: valide o comportamento do Lock/Game Mode</h2>
+            <ul>
+                <li>Ative Lock/Game Mode com <strong>Ctrl+Shift+L</strong>.</li>
+                <li>Confirme que cliques acidentais na janela de legendas deixam de acontecer.</li>
+                <li>Confirme que o jogo mantém o foco durante movimento do mouse e combate.</li>
+            </ul>
+
+            <h2>Etapa 3: verifique layout e densidade das legendas</h2>
+            <p>Não sobrecarregue a área de texto. Alta densidade de legendas com posicionamento ruim parece bug de visibilidade, mesmo com renderização correta. Use menos linhas, maior contraste e posição inferior estável.</p>
+
+            <h2>Etapa 4: alinhe o formato de comunicação da equipe</h2>
+            <p>Muitos problemas de legenda são, na verdade, problemas de qualidade de callout. Se o time usa frases longas e termos inconsistentes, a utilidade das legendas cai. Padronize callouts curtos e vocabulário comum de mapa.</p>
+
+            <h2>Checklist de recuperação rápida</h2>
+            <div class="checklist">
+                <ul>
+                    <li>Mude o jogo para Borderless Fullscreen.</li>
+                    <li>Ative Lock/Game Mode e teste Ctrl+Shift+L.</li>
+                    <li>Mova as legendas para uma zona inferior estável.</li>
+                    <li>Reduza o tamanho do bloco de legendas na tela.</li>
+                    <li>Teste novamente em um canal de voz ao vivo por 3 a 5 minutos.</li>
+                </ul>
+            </div>
+
+            <h2>Quando é necessário escalar</h2>
+            <p>Se o overlay continuar oculto em títulos específicos, documente jogo exato, modo de API e caminho de exibição. Isso ajuda a separar limitações de renderização do título de problemas genéricos de configuração.</p>
+
+            <h2>Recursos relacionados</h2>
+            <ul>
+                <li><a href="/pt/game-mode-subtitles.html" style="color:#00b8ff;">Página de legendas Game Mode</a></li>
+                <li><a href="article-19.html" style="color:#00b8ff;">Guia de Game Mode para jogos competitivos</a></li>
+                <li><a href="/pt/discord-twitch-subtitles.html" style="color:#00b8ff;">Legendas do Discord e Twitch em tempo real</a></li>
+            </ul>
+
+            <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
+                <h3 style="color: #00ff9d; margin-top: 0;">Estabilize seu fluxo de overlay</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">Use uma configuração previsível de legendas para jogos, chat e streams.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Baixar na Microsoft Store</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

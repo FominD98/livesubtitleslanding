@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnostic de l'overlay de sous-titres fullscreen pour jeux | Live Subtitles</title>
+    <meta name="description" content="Checklist de diagnostic des overlays de sous-titres en jeu : visibilité fullscreen, setup borderless, problèmes de focus, comportement des hotkeys et étapes de récupération.">
+    <meta name="keywords" content="fullscreen subtitle overlay, subtitle overlay troubleshooting, borderless fullscreen subtitles, game subtitles not visible, lock game mode hotkey">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://live-subtitles.com/articles/fr/article-20.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Diagnostic de l'overlay de sous-titres fullscreen pour jeux">
+    <meta property="og:description" content="Checklist opérationnelle pour restaurer la stabilité de l'overlay de sous-titres en contexte gaming.">
+    <meta property="og:url" content="https://live-subtitles.com/articles/fr/article-20.html">
+    <meta property="og:image" content="https://live-subtitles.com/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Diagnostic de l'overlay de sous-titres fullscreen pour jeux">
+    <meta name="twitter:description" content="Parcours rapide de diagnostic des problèmes de visibilité et d'interaction des overlays de sous-titres en jeu.">
+    <meta name="twitter:image" content="https://live-subtitles.com/preview.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        .back-link:hover { text-decoration: underline; }
+        h2, h3 { color: #00ff9d; margin-top: 2rem; }
+        p, li { color: #eee; line-height: 1.7; }
+        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Diagnostic de l'overlay de sous-titres fullscreen pour jeux",
+      "datePublished": "2026-03-05",
+      "dateModified": "2026-03-05",
+      "author": { "@type": "Person", "name": "Editorial Team" },
+      "publisher": { "@type": "Organization", "name": "Live Subtitles" },
+      "description": "Checklist de diagnostic des overlays de sous-titres en jeu : visibilité fullscreen, setup borderless, problèmes de focus, comportement des hotkeys et étapes de récupération.",
+      "mainEntityOfPage": "https://live-subtitles.com/articles/fr/article-20.html"
+    }
+    </script>
+</head>
+<body>
+    <div class="container article-container" itemscope itemtype="https://schema.org/Article">
+        <a href="index.html" class="back-link">&larr; Retour aux articles</a>
+        <h1 class="article-title" itemprop="headline">Diagnostic de l'overlay de sous-titres fullscreen pour jeux</h1>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 mars 2026</div>
+
+        <div itemprop="articleBody">
+            <p>Si le comportement de l'overlay devient instable en jeu, les correctifs aléatoires font perdre du temps. Ce playbook donne un ordre de diagnostic rapide pour isoler la cause : mode de rendu, mode d'interaction ou décalage de workflow.</p>
+
+            <h2>Étape 1 : vérifier d'abord le mode de rendu</h2>
+            <p>Avant de modifier les réglages, vérifiez le mode d'affichage du jeu. Si vous êtes en fullscreen exclusif et que les sous-titres manquent, passez en <strong>Borderless Fullscreen</strong>. Cela résout la majorité des problèmes de visibilité d'overlay desktop.</p>
+
+            <h2>Étape 2 : valider le comportement Lock/Game Mode</h2>
+            <ul>
+                <li>Activez Lock/Game Mode avec <strong>Ctrl+Shift+L</strong>.</li>
+                <li>Vérifiez que les clics accidentels sur la fenêtre de sous-titres cessent.</li>
+                <li>Vérifiez que le jeu garde le focus pendant les mouvements de souris et le combat.</li>
+            </ul>
+
+            <h2>Étape 3 : vérifier la disposition et la densité des sous-titres</h2>
+            <p>N'encombrez pas la zone de texte. Une densité élevée de sous-titres avec un mauvais placement ressemble à un bug de visibilité même si le rendu est correct. Utilisez moins de lignes, plus de contraste et une position basse stable.</p>
+
+            <h2>Étape 4 : aligner le format de communication d'équipe</h2>
+            <p>Beaucoup de  problèmes de sous-titres  sont en réalité des problèmes de qualité de callouts. Si les coéquipiers utilisent de longues phrases et des termes incohérents, l'utilité des sous-titres baisse. Standardisez des callouts courts et un vocabulaire map commun.</p>
+
+            <h2>Checklist de récupération rapide</h2>
+            <div class="checklist">
+                <ul>
+                    <li>Passez le jeu en Borderless Fullscreen.</li>
+                    <li>Activez Lock/Game Mode et testez Ctrl+Shift+L.</li>
+                    <li>Déplacez les sous-titres vers une zone basse stable.</li>
+                    <li>Réduisez la taille du bloc de sous-titres à l'écran.</li>
+                    <li>Retestez dans un canal vocal live pendant 3 à 5 minutes.</li>
+                </ul>
+            </div>
+
+            <h2>Quand une escalade est nécessaire</h2>
+            <p>Si l'overlay reste masqué sur certains jeux, documentez le jeu exact, le mode API et le chemin d'affichage. Cela aide à distinguer les contraintes de rendu propres au titre des problèmes de configuration génériques.</p>
+
+            <h2>Ressources associées</h2>
+            <ul>
+                <li><a href="/fr/game-mode-subtitles.html" style="color:#00b8ff;">Page des sous-titres Game Mode</a></li>
+                <li><a href="article-19.html" style="color:#00b8ff;">Guide Game Mode pour jeux compétitifs</a></li>
+                <li><a href="/fr/discord-twitch-subtitles.html" style="color:#00b8ff;">Sous-titres Discord et Twitch en temps réel</a></li>
+            </ul>
+
+            <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
+                <h3 style="color: #00ff9d; margin-top: 0;">Stabilisez votre workflow d'overlay</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">Utilisez un seul setup de sous-titres prévisible pour les jeux, le chat et les streams.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Télécharger depuis Microsoft Store</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

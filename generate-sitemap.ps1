@@ -14,6 +14,7 @@ param(
         "youtube-dual-subtitles.html",
         "teams-live-captions.html",
         "discord-twitch-subtitles.html",
+        "game-mode-subtitles.html",
         "privacy.html"
     )
 )
@@ -67,6 +68,24 @@ function Get-IsoLastMod {
     return $FallbackDate
 }
 
+function Test-IsIndexable {
+    param(
+        [string]$Path
+    )
+
+    if ([string]::IsNullOrWhiteSpace($Path)) { return $false }
+    if (-not (Test-Path $Path)) { return $false }
+
+    $fullPath = (Resolve-Path $Path).Path
+    $content = [System.IO.File]::ReadAllText($fullPath, [System.Text.Encoding]::UTF8)
+    $hasNoIndex = [regex]::IsMatch(
+        $content,
+        '(?is)<meta\s+name=["'']robots["'']\s+content=["''][^"''>]*\bnoindex\b'
+    )
+
+    return (-not $hasNoIndex)
+}
+
 $xml = @"
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -106,26 +125,36 @@ $landingHreflang    </url>
 
 # Static SEO pages (root + localized variants when available)
 foreach ($page in $StaticPages) {
-    if (Test-Path $page) {
-        $cleanPage = $page.TrimStart('/')
-        $staticHrefMap = @{}
+    $cleanPage = $page.TrimStart('/')
+    $staticHrefMap = @{}
+
+    if (Test-IsIndexable -Path $cleanPage) {
         $staticHrefMap['en'] = "$Domain/$cleanPage"
+    }
 
-        foreach ($lang in $landingLanguages) {
-            $localizedPath = Join-Path -Path $lang -ChildPath $cleanPage
-            if (Test-Path $localizedPath) {
-                $staticHrefMap[$lang] = "$Domain/$lang/$cleanPage"
-            }
+    foreach ($lang in $landingLanguages) {
+        $localizedPath = Join-Path -Path $lang -ChildPath $cleanPage
+        if (Test-IsIndexable -Path $localizedPath) {
+            $staticHrefMap[$lang] = "$Domain/$lang/$cleanPage"
         }
+    }
 
-        $staticHreflang = New-HreflangLinks -LanguageToHref $staticHrefMap -XDefaultHref "$Domain/$cleanPage"
+    if ($staticHrefMap.Count -eq 0) { continue }
 
-        foreach ($lang in ($staticHrefMap.Keys | Sort-Object)) {
-            $loc = $staticHrefMap[$lang]
-            $priority = if ($lang -eq 'en') { '0.85' } else { '0.75' }
-            $pagePath = if ($lang -eq 'en') { $cleanPage } else { Join-Path -Path $lang -ChildPath $cleanPage }
-            $staticLastMod = Get-IsoLastMod -Path $pagePath -FallbackDate $currentDate
-            $xml += @"
+    $staticXDefaultHref = if ($staticHrefMap.ContainsKey('en')) {
+        $staticHrefMap['en']
+    } else {
+        $firstLang = ($staticHrefMap.Keys | Sort-Object | Select-Object -First 1)
+        $staticHrefMap[$firstLang]
+    }
+    $staticHreflang = New-HreflangLinks -LanguageToHref $staticHrefMap -XDefaultHref $staticXDefaultHref
+
+    foreach ($lang in ($staticHrefMap.Keys | Sort-Object)) {
+        $loc = $staticHrefMap[$lang]
+        $priority = if ($lang -eq 'en') { '0.85' } else { '0.75' }
+        $pagePath = if ($lang -eq 'en') { $cleanPage } else { Join-Path -Path $lang -ChildPath $cleanPage }
+        $staticLastMod = Get-IsoLastMod -Path $pagePath -FallbackDate $currentDate
+        $xml += @"
     <url>
         <loc>$loc</loc>
         <lastmod>$staticLastMod</lastmod>
@@ -133,18 +162,30 @@ foreach ($page in $StaticPages) {
         <priority>$priority</priority>
 $staticHreflang    </url>
 "@
-        }
     }
 }
 
 # Article index pages by language
-$indexLanguages = @($allLanguages | Where-Object { Test-Path (Join-Path -Path (Join-Path $ArticlesPath $_) -ChildPath "index.html") })
+$indexLanguages = @($allLanguages | Where-Object {
+    Test-IsIndexable -Path (Join-Path -Path (Join-Path $ArticlesPath $_) -ChildPath "index.html")
+})
 $indexHrefMap = @{}
 foreach ($lang in $indexLanguages) {
     $indexHrefMap[$lang] = "$Domain/$ArticlesPath/$lang/"
 }
-$indexXDefaultHref = if ($indexHrefMap.ContainsKey('en')) { $indexHrefMap['en'] } else { '' }
-$indexHreflang = New-HreflangLinks -LanguageToHref $indexHrefMap -XDefaultHref $indexXDefaultHref
+$indexXDefaultHref = if ($indexHrefMap.ContainsKey('en')) {
+    $indexHrefMap['en']
+} elseif ($indexHrefMap.Count -gt 0) {
+    $firstIndexLang = ($indexHrefMap.Keys | Sort-Object | Select-Object -First 1)
+    $indexHrefMap[$firstIndexLang]
+} else {
+    ''
+}
+$indexHreflang = if ($indexHrefMap.Count -gt 0) {
+    New-HreflangLinks -LanguageToHref $indexHrefMap -XDefaultHref $indexXDefaultHref
+} else {
+    ''
+}
 
 foreach ($lang in $indexLanguages) {
     $indexPath = Join-Path -Path (Join-Path $ArticlesPath $lang) -ChildPath "index.html"
@@ -176,7 +217,7 @@ foreach ($article in $sortedArticles) {
     $availableArticleLanguages = @()
     foreach ($lang in $allLanguages) {
         $articlePath = Join-Path -Path (Join-Path $ArticlesPath $lang) -ChildPath $article
-        if (Test-Path $articlePath) {
+        if (Test-IsIndexable -Path $articlePath) {
             $availableArticleLanguages += $lang
         }
     }
@@ -188,7 +229,12 @@ foreach ($article in $sortedArticles) {
         $articleHrefMap[$lang] = "$Domain/$ArticlesPath/$lang/$article"
     }
 
-    $articleXDefaultHref = if ($articleHrefMap.ContainsKey('en')) { $articleHrefMap['en'] } else { '' }
+    $articleXDefaultHref = if ($articleHrefMap.ContainsKey('en')) {
+        $articleHrefMap['en']
+    } else {
+        $firstArticleLang = ($articleHrefMap.Keys | Sort-Object | Select-Object -First 1)
+        $articleHrefMap[$firstArticleLang]
+    }
     $articleHreflang = New-HreflangLinks -LanguageToHref $articleHrefMap -XDefaultHref $articleXDefaultHref
     $xml += "`r`n    <!-- $article -->"
 

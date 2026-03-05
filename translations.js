@@ -2266,17 +2266,56 @@ function applyTranslations(lang) {
     const t = translations[lang];
     if (!t) return;
 
-    // Обновляем язык HTML документа
+    const seoOverrides = {
+        'en-US': {
+            title: 'Live Subtitles App: Live Captions, Dual Subtitles, and Game Mode',
+            metaDescription: 'Live Subtitles is a live captions and dual subtitles app for meetings, movies, language learning, and games. Understand speech faster across Zoom, Teams, YouTube, Netflix, Discord, Twitch, and gaming voice chat with Lock/Game Mode.',
+            metaKeywords: 'live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, game mode subtitles, gaming subtitles, fullscreen subtitle overlay, language learning subtitles',
+            faqA2: 'Yes! Live Subtitles works with absolutely any application: YouTube, Netflix, Zoom, Teams, Discord, browsers and games. For gaming sessions, use Lock/Game Mode (Ctrl+Shift+L) to reduce accidental overlay interaction.',
+            ogTitle: 'Live Subtitles - Live Captions and Dual Subtitles App',
+            ogDescription: 'Live captions and dual subtitles for meetings, media, and games across Zoom, Teams, YouTube, Netflix, Discord, and Twitch. Lock/Game Mode helps keep gaming overlays stable.'
+        },
+        'ru-RU': {
+            title: '\u0416\u0438\u0432\u044b\u0435 \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b | Live Subtitles \u0434\u043b\u044f \u0438\u0433\u0440, \u0432\u0441\u0442\u0440\u0435\u0447 \u0438 \u0438\u0437\u0443\u0447\u0435\u043d\u0438\u044f \u044f\u0437\u044b\u043a\u043e\u0432',
+            metaDescription: 'Live Subtitles \u2014 \u0436\u0438\u0432\u044b\u0435 \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b \u0438 \u0434\u0432\u043e\u0439\u043d\u044b\u0435 \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b \u0434\u043b\u044f \u0432\u0441\u0442\u0440\u0435\u0447, \u0444\u0438\u043b\u044c\u043c\u043e\u0432, \u0438\u0437\u0443\u0447\u0435\u043d\u0438\u044f \u044f\u0437\u044b\u043a\u043e\u0432 \u0438 \u0438\u0433\u0440. \u0412\u043a\u043b\u044e\u0447\u0430\u0439\u0442\u0435 Lock/Game Mode \u0434\u043b\u044f \u0441\u0442\u0430\u0431\u0438\u043b\u044c\u043d\u044b\u0445 \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u043e\u0432 \u0432 \u0433\u043e\u043b\u043e\u0441\u043e\u0432\u043e\u043c \u0447\u0430\u0442\u0435 \u0438 fullscreen-\u0441\u0446\u0435\u043d\u0430\u0440\u0438\u044f\u0445.',
+            metaKeywords: '\u0436\u0438\u0432\u044b\u0435 \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b, \u0434\u0432\u043e\u0439\u043d\u044b\u0435 \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b, \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b \u0434\u043b\u044f \u0438\u0433\u0440, game mode \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b, fullscreen \u043e\u0432\u0435\u0440\u043b\u0435\u0439, borderless fullscreen, discord \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b, twitch \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b, \u043f\u0435\u0440\u0435\u0432\u043e\u0434 \u0440\u0435\u0447\u0438 \u0432 \u0440\u0435\u0430\u043b\u044c\u043d\u043e\u043c \u0432\u0440\u0435\u043c\u0435\u043d\u0438',
+            faqA2: '\u0414\u0430! Live Subtitles \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u0442 \u0441 \u0430\u0431\u0441\u043e\u043b\u044e\u0442\u043d\u043e \u043b\u044e\u0431\u044b\u043c\u0438 \u043f\u0440\u0438\u043b\u043e\u0436\u0435\u043d\u0438\u044f\u043c\u0438: YouTube, Netflix, Zoom, Teams, Discord, \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0430\u043c\u0438 \u0438 \u0438\u0433\u0440\u0430\u043c\u0438. \u0414\u043b\u044f \u0438\u0433\u0440\u043e\u0432\u044b\u0445 \u0441\u0435\u0441\u0441\u0438\u0439 \u0432\u043a\u043b\u044e\u0447\u0430\u0439\u0442\u0435 Lock/Game Mode (Ctrl+Shift+L), \u0447\u0442\u043e\u0431\u044b \u0441\u043d\u0438\u0437\u0438\u0442\u044c \u0441\u043b\u0443\u0447\u0430\u0439\u043d\u044b\u0435 \u043a\u043b\u0438\u043a\u0438 \u043f\u043e \u043e\u0432\u0435\u0440\u043b\u0435\u044e.',
+            ogDescription: '\u0416\u0438\u0432\u044b\u0435 \u0438 \u0434\u0432\u043e\u0439\u043d\u044b\u0435 \u0441\u0443\u0431\u0442\u0438\u0442\u0440\u044b \u0434\u043b\u044f \u0432\u0441\u0442\u0440\u0435\u0447, \u043c\u0435\u0434\u0438\u0430 \u0438 \u0438\u0433\u0440. Lock/Game Mode \u0443\u043b\u0443\u0447\u0448\u0430\u0435\u0442 \u0441\u0442\u0430\u0431\u0438\u043b\u044c\u043d\u043e\u0441\u0442\u044c \u043e\u0432\u0435\u0440\u043b\u0435\u044f \u0432 \u0433\u0435\u0439\u043c\u043f\u043b\u0435\u0435.'
+        }
+    };
+    const seo = seoOverrides[lang] || {};
+
     document.documentElement.lang = lang.split('-')[0];
-    
-    // Обновляем мета-теги
-    document.querySelector('meta[name="description"]').content = t.meta.description;
-    document.querySelector('meta[name="keywords"]').content = t.meta.keywords;
-    
-    // Обновляем заголовок
-    document.title = t.title;
-    
-    // Обновляем контент
+
+    const descriptionMeta = document.querySelector('meta[name="description"]');
+    const keywordsMeta = document.querySelector('meta[name="keywords"]');
+    if (descriptionMeta) {
+        descriptionMeta.content = seo.metaDescription || t.meta.description;
+    }
+    if (keywordsMeta) {
+        keywordsMeta.content = seo.metaKeywords || t.meta.keywords;
+    }
+
+    document.title = seo.title || t.title;
+
+    const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+    const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
+    const twitterTitleMeta = document.querySelector('meta[name="twitter:title"]');
+    const twitterDescriptionMeta = document.querySelector('meta[name="twitter:description"]');
+
+    if (ogTitleMeta) {
+        ogTitleMeta.content = seo.ogTitle || seo.title || t.title;
+    }
+    if (ogDescriptionMeta) {
+        ogDescriptionMeta.content = seo.ogDescription || seo.metaDescription || t.meta.description;
+    }
+    if (twitterTitleMeta) {
+        twitterTitleMeta.content = seo.ogTitle || seo.title || t.title;
+    }
+    if (twitterDescriptionMeta) {
+        twitterDescriptionMeta.content = seo.ogDescription || seo.metaDescription || t.meta.description;
+    }
+
     document.querySelectorAll('[data-translate]').forEach(element => {
         const key = element.getAttribute('data-translate');
         const keys = key.split('.');
@@ -2284,12 +2323,15 @@ function applyTranslations(lang) {
         for (const k of keys) {
             value = value[k];
         }
+
+        if (key === 'faq.a2' && seo.faqA2) {
+            value = seo.faqA2;
+        }
+
         if (value) {
-            // Если элемент содержит только текст, заменяем textContent
             if (element.childNodes.length === 1 && element.childNodes[0].nodeType === Node.TEXT_NODE) {
                 element.textContent = value;
             } else {
-                // Если есть вложенные элементы, ищем первый текстовый узел и заменяем его
                 let replaced = false;
                 for (let node of element.childNodes) {
                     if (node.nodeType === Node.TEXT_NODE && node.nodeValue.trim() !== '') {
@@ -2298,7 +2340,6 @@ function applyTranslations(lang) {
                         break;
                     }
                 }
-                // Если не нашли текстовый узел, добавим новый
                 if (!replaced) {
                     element.appendChild(document.createTextNode(value));
                 }
@@ -2306,8 +2347,6 @@ function applyTranslations(lang) {
         }
     });
 }
-
-// Функция для переключения языка
 function switchLanguage(langCode) {
     const langMapping = {
         'ru': 'ru-RU',

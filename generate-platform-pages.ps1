@@ -5,7 +5,8 @@ param(
         "zoom-live-captions.html",
         "youtube-dual-subtitles.html",
         "teams-live-captions.html",
-        "discord-twitch-subtitles.html"
+        "discord-twitch-subtitles.html",
+        "game-mode-subtitles.html"
     ),
     [string[]]$Languages = @("ru", "fr", "es", "de", "it", "ja", "ko", "zh", "ar", "hi", "pt", "pl", "nl", "tr", "uk")
 )
