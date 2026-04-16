@@ -11,7 +11,7 @@ const translations = {
             lead: 'Live Subtitles helps you understand speech faster with dual subtitles and real-time translation for calls, meetings, and videos.'
         },
         downloadBtn: 'Download from Microsoft Store',
-        macBtn: 'Want a Mac version',
+        androidBtn: 'Want an Android version',
         platforms: {
             title: 'Works with any app — no limits'
         },
@@ -86,14 +86,14 @@ const translations = {
             download: 'Download',
             cancel: 'Cancel'
         },
-        macModal: {
-            title: 'Mac Version',
-            desc: 'We are working on a Mac version. Leave your email and we will notify you when it is ready.',
+        androidModal: {
+            title: 'Android Version',
+            desc: 'We are working on an Android version. Leave your email and we will notify you when it is ready.',
             send: 'Send'
         },
         successModal: {
             title: 'Thank you!',
-            desc: 'We will notify you when the Mac version is ready.',
+            desc: 'We will notify you when the Android version is ready.',
             close: 'Close'
         },
         faq: {
@@ -108,8 +108,8 @@ const translations = {
             a4: 'Yes, a stable internet connection is required for speech recognition and translation. The app uses cloud services to ensure high accuracy.',
             q5: 'Can I customize the appearance of subtitles?',
             a5: 'Of course! You can adjust font size, color, subtitle position on screen, background transparency and choose which languages to display.',
-            q6: 'Is there a version for Mac or mobile devices?',
-            a6: 'Currently only the Windows version is available. We are actively working on versions for Mac, iOS and Android. Leave your email and we will notify you of the release.'
+            q6: 'Which platforms is Live Subtitles available on?',
+            a6: 'Live Subtitles is available on Windows, macOS, and iOS. An Android version is currently in development. Leave your email and we will notify you when it is ready.'
         },
         testimonials: {
             title: 'User Reviews',
@@ -154,7 +154,7 @@ const translations = {
             lead: 'Live Subtitles - ваш помощник с двойными субтитрами, распознаванием и переводом речи в реальном времени'
         },
         downloadBtn: 'Скачать в Microsoft Store',
-        macBtn: 'Хочу версию для Mac',
+        androidBtn: 'Хочу версию для Android',
         platforms: {
             title: 'Работает вообще с любым приложением — без ограничений'
         },
@@ -229,14 +229,14 @@ const translations = {
             download: 'Скачать',
             cancel: 'Отмена'
         },
-        macModal: {
-            title: 'Версия для Mac',
-            desc: 'Мы работаем над версией для Mac. Оставьте свой email, и мы сообщим вам, когда она будет готова.',
+        androidModal: {
+            title: 'Версия для Android',
+            desc: 'Мы работаем над версией для Android. Оставьте свой email, и мы сообщим вам, когда она будет готова.',
             send: 'Отправить'
         },
         successModal: {
             title: 'Спасибо!',
-            desc: 'Мы сообщим вам, когда версия для Mac будет готова.',
+            desc: 'Мы сообщим вам, когда версия для Android будет готова.',
             close: 'Закрыть'
         },
         faq: {
@@ -251,8 +251,8 @@ const translations = {
             a4: 'Да, для работы распознавания и перевода речи требуется стабильное подключение к интернету. Приложение использует облачные сервисы для обеспечения высокой точности.',
             q5: 'Можно ли настроить внешний вид субтитров?',
             a5: 'Конечно! Вы можете настроить размер шрифта, цвет, позицию субтитров на экране, прозрачность фона и выбрать, какие языки отображать.',
-            q6: 'Есть ли версия для Mac или мобильных устройств?',
-            a6: 'Сейчас доступна только версия для Windows. Мы активно работаем над версиями для Mac, iOS и Android. Оставьте свой email, и мы сообщим о выходе.'
+            q6: 'На каких платформах доступен Live Subtitles?',
+            a6: 'Live Subtitles доступен на Windows, macOS и iOS. Версия для Android находится в активной разработке. Оставьте свой email, и мы сообщим о выходе.'
         },
         testimonials: {
             title: 'Отзывы пользователей',
@@ -297,7 +297,7 @@ const translations = {
             lead: 'Live Subtitles - votre assistant avec sous-titres doubles, reconnaissance et traduction de la parole en temps réel'
         },
         downloadBtn: 'Télécharger depuis Microsoft Store',
-        macBtn: 'Je veux la version Mac',
+        androidBtn: 'Je veux la version Android',
         platforms: {
             title: 'Fonctionne avec n\'importe quelle application — sans limites'
         },
@@ -365,14 +365,14 @@ const translations = {
             download: 'Télécharger',
             cancel: 'Annuler'
         },
-        macModal: {
-            title: 'Version Mac',
-            desc: 'Nous travaillons sur une version Mac. Laissez votre email et nous vous informerons lorsqu\'elle sera prête.',
+        androidModal: {
+            title: 'Version Android',
+            desc: 'Nous travaillons sur une version Android. Laissez votre email et nous vous informerons lorsqu\'elle sera prête.',
             send: 'Envoyer'
         },
         successModal: {
             title: 'Merci !',
-            desc: 'Nous vous informerons lorsque la version Mac sera prête.',
+            desc: 'Nous vous informerons lorsque la version Android sera prête.',
             close: 'Fermer'
         },
         faq: {
@@ -387,8 +387,8 @@ const translations = {
             a4: 'Oui, une connexion Internet stable est requise pour la reconnaissance et la traduction vocales. L\'application utilise des services cloud pour assurer une haute précision.',
             q5: 'Puis-je personnaliser l\'apparence des sous-titres ?',
             a5: 'Bien sûr ! Vous pouvez ajuster la taille de police, la couleur, la position des sous-titres à l\'écran, la transparence de l\'arrière-plan et choisir les langues à afficher.',
-            q6: 'Y a-t-il une version pour Mac ou appareils mobiles ?',
-            a6: 'Actuellement, seule la version Windows est disponible. Nous travaillons activement sur les versions pour Mac, iOS et Android. Laissez votre email et nous vous informerons de la sortie.'
+            q6: 'Sur quelles plateformes Live Subtitles est-il disponible ?',
+            a6: 'Live Subtitles est disponible sur Windows, macOS et iOS. Une version Android est en cours de développement. Laissez votre email et nous vous informerons de sa sortie.'
         },
         testimonials: {
             title: 'Avis des utilisateurs',
@@ -433,7 +433,7 @@ const translations = {
             lead: 'Live Subtitles: tu asistente con subtítulos dobles, reconocimiento y traducción de voz en tiempo real'
         },
         downloadBtn: 'Descargar desde Microsoft Store',
-        macBtn: 'Quiero la versión para Mac',
+        androidBtn: 'Quiero la versión para Android',
         platforms: {
             title: 'Funciona con cualquier aplicación — sin límites'
         },
@@ -501,14 +501,14 @@ const translations = {
             download: 'Descargar',
             cancel: 'Cancelar'
         },
-        macModal: {
-            title: 'Versión para Mac',
-            desc: 'Estamos trabajando en una versión para Mac. Deja tu correo electrónico y te avisaremos cuando esté lista.',
+        androidModal: {
+            title: 'Versión para Android',
+            desc: 'Estamos trabajando en una versión para Android. Deja tu correo electrónico y te avisaremos cuando esté lista.',
             send: 'Enviar'
         },
         successModal: {
             title: '¡Gracias!',
-            desc: 'Te avisaremos cuando la versión para Mac esté lista.',
+            desc: 'Te avisaremos cuando la versión para Android esté lista.',
             close: 'Cerrar'
         },
         faq: {
@@ -523,8 +523,8 @@ const translations = {
             a4: 'Sí, se requiere una conexión estable a Internet para el reconocimiento y traducción de voz. La aplicación utiliza servicios en la nube para garantizar alta precisión.',
             q5: '¿Puedo personalizar la apariencia de los subtítulos?',
             a5: '¡Por supuesto! Puedes ajustar el tamaño de fuente, color, posición de subtítulos en pantalla, transparencia del fondo y elegir qué idiomas mostrar.',
-            q6: '¿Hay versión para Mac o dispositivos móviles?',
-            a6: 'Actualmente solo está disponible la versión para Windows. Estamos trabajando activamente en versiones para Mac, iOS y Android. Deja tu email y te notificaremos del lanzamiento.'
+            q6: '¿En qué plataformas está disponible Live Subtitles?',
+            a6: 'Live Subtitles está disponible en Windows, macOS e iOS. La versión para Android está en desarrollo. Deja tu email y te notificaremos cuando esté lista.'
         },
         testimonials: {
             title: 'Reseñas de usuarios',
@@ -569,7 +569,7 @@ const translations = {
             lead: 'Live Subtitles: Ihr Assistent mit Doppel-Untertiteln, Spracherkennung und Real-Time-Übersetzung'
         },
         downloadBtn: 'Aus dem Microsoft Store herunterladen',
-        macBtn: 'Ich möchte die Mac-Version',
+        androidBtn: 'Ich möchte die Android-Version',
         platforms: {
             title: 'Funktioniert mit jeder Anwendung — ohne Grenzen'
         },
@@ -637,14 +637,14 @@ const translations = {
             download: 'Herunterladen',
             cancel: 'Abbrechen'
         },
-        macModal: {
-            title: 'Mac-Version',
-            desc: 'Wir arbeiten an einer Mac-Version. Lassen Sie Ihre E-Mail und wir werden Sie informieren, wenn sie fertig ist.',
+        androidModal: {
+            title: 'Android-Version',
+            desc: 'Wir arbeiten an einer Android-Version. Lassen Sie Ihre E-Mail und wir werden Sie informieren, wenn sie fertig ist.',
             send: 'Senden'
         },
         successModal: {
             title: 'Danke!',
-            desc: 'Wir werden Sie informieren, wenn die Mac-Version fertig ist.',
+            desc: 'Wir werden Sie informieren, wenn die Android-Version fertig ist.',
             close: 'Schließen'
         },
         faq: {
@@ -659,8 +659,8 @@ const translations = {
             a4: 'Ja, eine stabile Internetverbindung ist für Spracherkennung und -übersetzung erforderlich. Die Anwendung verwendet Cloud-Services, um hohe Genauigkeit zu gewährleisten.',
             q5: 'Kann ich das Aussehen der Untertitel anpassen?',
             a5: 'Natürlich! Sie können Schriftgröße, Farbe, Untertitel-Position auf dem Bildschirm, Hintergrund-Transparenz anpassen und wählen, welche Sprachen angezeigt werden sollen.',
-            q6: 'Gibt es eine Version für Mac oder mobile Geräte?',
-            a6: 'Derzeit ist nur die Windows-Version verfügbar. Wir arbeiten aktiv an Versionen für Mac, iOS und Android. Hinterlassen Sie Ihre E-Mail und wir werden Sie über die Veröffentlichung informieren.'
+            q6: 'Auf welchen Plattformen ist Live Subtitles verfügbar?',
+            a6: 'Live Subtitles ist auf Windows, macOS und iOS verfügbar. Eine Android-Version ist derzeit in Entwicklung. Hinterlassen Sie Ihre E-Mail und wir informieren Sie, wenn sie fertig ist.'
         },
         testimonials: {
             title: 'Nutzerbewertungen',
@@ -705,7 +705,7 @@ const translations = {
             lead: 'Live Subtitles: il tuo assistente con sottotitoli doppi, riconoscimento e traduzione vocale in tempo reale'
         },
         downloadBtn: 'Scarica da Microsoft Store',
-        macBtn: 'Voglio la versione per Mac',
+        androidBtn: 'Voglio la versione per Android',
         platforms: {
             title: 'Funziona con qualsiasi applicazione — senza limiti'
         },
@@ -773,14 +773,14 @@ const translations = {
             download: 'Scaricare',
             cancel: 'Annullare'
         },
-        macModal: {
-            title: 'Versione per Mac',
-            desc: 'Stiamo lavorando su una versione per Mac. Lascia il tuo indirizzo email e ti informeremo quando sarà pronta.',
+        androidModal: {
+            title: 'Versione per Android',
+            desc: 'Stiamo lavorando su una versione per Android. Lascia il tuo indirizzo email e ti informeremo quando sarà pronta.',
             send: 'Invia'
         },
         successModal: {
             title: 'Grazie!',
-            desc: 'Ti informeremo quando la versione per Mac sarà pronta.',
+            desc: 'Ti informeremo quando la versione per Android sarà pronta.',
             close: 'Chiudere'
         },
         faq: {
@@ -795,8 +795,8 @@ const translations = {
             a4: 'Sì, è richiesta una connessione Internet stabile per il riconoscimento e la traduzione vocale. L\'applicazione utilizza servizi cloud per garantire alta precisione.',
             q5: 'Posso personalizzare l\'aspetto dei sottotitoli?',
             a5: 'Certo! Puoi regolare la dimensione del carattere, il colore, la posizione dei sottotitoli sullo schermo, la trasparenza dello sfondo e scegliere quali lingue visualizzare.',
-            q6: 'C\'è una versione per Mac o dispositivi mobili?',
-            a6: 'Attualmente è disponibile solo la versione per Windows. Stiamo lavorando attivamente su versioni per Mac, iOS e Android. Lascia la tua email e ti avviseremo del rilascio.'
+            q6: 'Su quali piattaforme è disponibile Live Subtitles?',
+            a6: 'Live Subtitles è disponibile su Windows, macOS e iOS. La versione Android è attualmente in fase di sviluppo. Lascia la tua email e ti avviseremo quando sarà pronta.'
         },
         testimonials: {
             title: 'Recensioni degli utenti',
@@ -841,7 +841,7 @@ const translations = {
             lead: 'Live Subtitles - 二重字幕、音声認識、リアルタイム翻訳のアシスタント'
         },
         downloadBtn: 'Microsoft Storeからダウンロード',
-        macBtn: 'Mac版が欲しい',
+        androidBtn: 'Android版が欲しい',
         platforms: {
             title: 'あらゆるアプリで動作 — 制限なし'
         },
@@ -909,14 +909,14 @@ const translations = {
             download: 'ダウンロード',
             cancel: 'キャンセル'
         },
-        macModal: {
-            title: 'Mac版',
-            desc: 'Mac版を開発中です。メールアドレスを残していただければ、準備ができ次第お知らせします。',
+        androidModal: {
+            title: 'Android版',
+            desc: 'Android版を開発中です。メールアドレスを残していただければ、準備ができ次第お知らせします。',
             send: '送信'
         },
         successModal: {
             title: 'ありがとうございます！',
-            desc: 'Mac版の準備ができ次第お知らせします。',
+            desc: 'Android版の準備ができ次第お知らせします。',
             close: '閉じる'
         },
         faq: {
@@ -931,8 +931,8 @@ const translations = {
             a4: 'はい、音声認識と翻訳には安定したインターネット接続が必要です。アプリは高精度を保証するためにクラウドサービスを使用します。',
             q5: '字幕の外観をカスタマイズできますか？',
             a5: 'もちろんです！フォントサイズ、色、画面上の字幕位置、背景の透明度を調整し、表示する言語を選択できます。',
-            q6: 'Macやモバイルデバイス版はありますか？',
-            a6: '現在はWindows版のみ利用可能です。Mac、iOS、Android版を積極的に開発中です。メールアドレスを残していただければ、リリース時にお知らせします。'
+            q6: 'Live Subtitlesはどのプラットフォームで利用できますか？',
+            a6: 'Live SubtitlesはWindows、macOS、iOSで利用可能です。Android版は現在開発中です。メールアドレスを残していただければ、準備ができ次第お知らせします。'
         },
         testimonials: {
             title: 'ユーザーレビュー',
@@ -977,7 +977,7 @@ const translations = {
             lead: 'Live Subtitles - 이중 자막, 음성 인식 및 실시간 번역 어시스턴트'
         },
         downloadBtn: 'Microsoft Store에서 다운로드',
-        macBtn: 'Mac 버전 원함',
+        androidBtn: 'Android 버전 원함',
         platforms: {
             title: '모든 앱에서 작동 — 제한 없음'
         },
@@ -1045,14 +1045,14 @@ const translations = {
             download: '다운로드',
             cancel: '취소'
         },
-        macModal: {
-            title: 'Mac 버전',
-            desc: 'Mac 버전을 작업 중입니다. 이메일을 남겨주시면 준비되면 알려드리겠습니다.',
+        androidModal: {
+            title: 'Android 버전',
+            desc: 'Android 버전을 작업 중입니다. 이메일을 남겨주시면 준비되면 알려드리겠습니다.',
             send: '보내기'
         },
         successModal: {
             title: '감사합니다!',
-            desc: 'Mac 버전이 준비되면 알려드리겠습니다.',
+            desc: 'Android 버전이 준비되면 알려드리겠습니다.',
             close: '닫기'
         },
         faq: {
@@ -1067,8 +1067,8 @@ const translations = {
             a4: '예, 음성 인식 및 번역을 위해 안정적인 인터넷 연결이 필요합니다. 앱은 높은 정확도를 보장하기 위해 클라우드 서비스를 사용합니다.',
             q5: '자막 모양을 사용자 정의할 수 있나요?',
             a5: '물론입니다! 글꼴 크기, 색상, 화면의 자막 위치, 배경 투명도를 조정하고 표시할 언어를 선택할 수 있습니다.',
-            q6: 'Mac이나 모바일 기기용 버전이 있나요?',
-            a6: '현재 Windows 버전만 사용할 수 있습니다. Mac, iOS 및 Android 버전을 적극적으로 작업하고 있습니다. 이메일을 남겨주시면 출시를 알려드리겠습니다.'
+            q6: 'Live Subtitles는 어떤 플랫폼에서 사용할 수 있나요?',
+            a6: 'Live Subtitles는 Windows, macOS, iOS에서 사용할 수 있습니다. Android 버전은 현재 개발 중입니다. 이메일을 남겨주시면 준비되면 알려드리겠습니다.'
         },
         testimonials: {
             title: '사용자 리뷰',
@@ -1113,7 +1113,7 @@ const translations = {
             lead: 'Live Subtitles - 您的双字幕、语音识别和实时翻译助手'
         },
         downloadBtn: '从微软商店下载',
-        macBtn: '需要Mac版本',
+        androidBtn: '需要Android版本',
         platforms: {
             title: '适用于任何应用 — 无限制'
         },
@@ -1181,14 +1181,14 @@ const translations = {
             download: '下载',
             cancel: '取消'
         },
-        macModal: {
-            title: 'Mac版本',
-            desc: '我们正在开发Mac版本。请留下您的邮箱，准备好后我们会通知您。',
+        androidModal: {
+            title: 'Android版本',
+            desc: '我们正在开发Android版本。请留下您的邮箱，准备好后我们会通知您。',
             send: '发送'
         },
         successModal: {
             title: '谢谢！',
-            desc: 'Mac版本准备好后我们会通知您。',
+            desc: 'Android版本准备好后我们会通知您。',
             close: '关闭'
         },
         faq: {
@@ -1203,8 +1203,8 @@ const translations = {
             a4: '是的，语音识别和翻译需要稳定的互联网连接。应用程序使用云服务确保高准确性。',
             q5: '我可以自定义字幕外观吗？',
             a5: '当然可以！您可以调整字体大小、颜色、屏幕上的字幕位置、背景透明度并选择要显示的语言。',
-            q6: '有Mac或移动设备版本吗？',
-            a6: '目前仅提供Windows版本。我们正在积极开发Mac、iOS和Android版本。请留下您的邮箱，我们会通知您发布消息。'
+            q6: 'Live Subtitles支持哪些平台？',
+            a6: 'Live Subtitles目前支持Windows、macOS和iOS。Android版本正在开发中。请留下您的邮箱，准备好后我们会通知您。'
         },
         testimonials: {
             title: '用户评价',
@@ -1249,7 +1249,7 @@ const translations = {
             lead: 'Live Subtitles - مساعدك مع الترجمة المزدوجة، التعرف على الكلام والترجمة الفورية'
         },
         downloadBtn: 'تحميل من متجر مايكروسوفت',
-        macBtn: 'أريد إصدار Mac',
+        androidBtn: 'أريد إصدار Android',
         platforms: {
             title: 'يعمل مع أي تطبيق — بلا حدود'
         },
@@ -1317,14 +1317,14 @@ const translations = {
             download: 'تحميل',
             cancel: 'إلغاء'
         },
-        macModal: {
-            title: 'إصدار Mac',
-            desc: 'نحن نعمل على إصدار Mac. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً.',
+        androidModal: {
+            title: 'إصدار Android',
+            desc: 'نحن نعمل على إصدار Android. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً.',
             send: 'إرسال'
         },
         successModal: {
             title: 'شكراً لك!',
-            desc: 'سنخبرك عندما يصبح إصدار Mac جاهزاً.',
+            desc: 'سنخبرك عندما يصبح إصدار Android جاهزاً.',
             close: 'إغلاق'
         },
         faq: {
@@ -1339,8 +1339,8 @@ const translations = {
             a4: 'نعم، يتطلب اتصال مستقر بالإنترنت للتعرف على الكلام والترجمة. التطبيق يستخدم خدمات سحابية لضمان الدقة العالية.',
             q5: 'هل يمكنني تخصيص مظهر الترجمة؟',
             a5: 'بالطبع! يمكنك ضبط حجم الخط، اللون، موضع الترجمة على الشاشة، شفافية الخلفية واختيار اللغات المراد عرضها.',
-            q6: 'هل يوجد إصدار لـ Mac أو الأجهزة المحمولة؟',
-            a6: 'حالياً متوفر إصدار Windows فقط. نحن نعمل بنشاط على إصدارات Mac و iOS و Android. اترك بريدك الإلكتروني وسنخبرك بالإطلاق.'
+            q6: 'على أي منصات يتوفر Live Subtitles؟',
+            a6: 'Live Subtitles متوفر على Windows و macOS و iOS. إصدار Android قيد التطوير حالياً. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً.'
         },
         testimonials: {
             title: 'تقييمات المستخدمين',
@@ -1385,7 +1385,7 @@ const translations = {
             lead: 'Live Subtitles - दोहरे सबटाइटल, स्पीच रिकग्निशन और रियल-टाइम ट्रांसलेशन के साथ आपका सहायक'
         },
         downloadBtn: 'Microsoft Store से डाउनलोड करें',
-        macBtn: 'Mac संस्करण चाहिए',
+        androidBtn: 'Android संस्करण चाहिए',
         platforms: {
             title: 'किसी भी ऐप के साथ काम करता है — कोई सीमा नहीं'
         },
@@ -1453,14 +1453,14 @@ const translations = {
             download: 'डाउनलोड',
             cancel: 'रद्द करें'
         },
-        macModal: {
-            title: 'Mac संस्करण',
-            desc: 'हम Mac संस्करण पर काम कर रहे हैं। अपना ईमेल छोड़ें और जब तैयार हो जाएगा तो हम आपको बताएंगे।',
+        androidModal: {
+            title: 'Android संस्करण',
+            desc: 'हम Android संस्करण पर काम कर रहे हैं। अपना ईमेल छोड़ें और जब तैयार हो जाएगा तो हम आपको बताएंगे।',
             send: 'भेजें'
         },
         successModal: {
             title: 'धन्यवाद!',
-            desc: 'Mac संस्करण तैयार होने पर हम आपको बताएंगे।',
+            desc: 'Android संस्करण तैयार होने पर हम आपको बताएंगे।',
             close: 'बंद करें'
         },
         faq: {
@@ -1475,8 +1475,8 @@ const translations = {
             a4: 'हां, स्पीच रिकग्निशन और ट्रांसलेशन के लिए स्थिर इंटरनेट कनेक्शन आवश्यक है। ऐप उच्च सटीकता सुनिश्चित करने के लिए क्लाउड सेवाओं का उपयोग करता है।',
             q5: 'क्या मैं सबटाइटल की उपस्थिति को कस्टमाइज़ कर सकता हूं?',
             a5: 'बिल्कुल! आप फ़ॉन्ट साइज़, रंग, स्क्रीन पर सबटाइटल की स्थिति, बैकग्राउंड पारदर्शिता समायोजित कर सकते हैं और प्रदर्शित करने के लिए भाषाएं चुन सकते हैं।',
-            q6: 'क्या Mac या मोबाइल डिवाइस के लिए संस्करण है?',
-            a6: 'वर्तमान में केवल Windows संस्करण उपलब्ध है। हम Mac, iOS और Android संस्करणों पर सक्रिय रूप से काम कर रहे हैं। अपना ईमेल छोड़ें और हम रिलीज़ की सूचना देंगे।'
+            q6: 'Live Subtitles किन प्लेटफ़ॉर्म पर उपलब्ध है?',
+            a6: 'Live Subtitles Windows, macOS और iOS पर उपलब्ध है। Android संस्करण वर्तमान में विकास में है। अपना ईमेल छोड़ें और तैयार होने पर हम आपको सूचित करेंगे।'
         },
         testimonials: {
             title: 'उपयोगकर्ता समीक्षाएं',
@@ -1521,7 +1521,7 @@ const translations = {
             lead: 'Live Subtitles - seu assistente com duplas legendas, reconhecimento de fala e tradução em tempo real'
         },
         downloadBtn: 'Baixar da Microsoft Store',
-        macBtn: 'Quero versão Mac',
+        androidBtn: 'Quero versão Android',
         platforms: {
             title: 'Funciona com qualquer app — sem limitações'
         },
@@ -1589,14 +1589,14 @@ const translations = {
             download: 'Download',
             cancel: 'Cancelar'
         },
-        macModal: {
-            title: 'Versão Mac',
-            desc: 'Estamos trabalhando na versão Mac. Deixe seu email e avisaremos quando estiver pronta.',
+        androidModal: {
+            title: 'Versão Android',
+            desc: 'Estamos trabalhando na versão Android. Deixe seu email e avisaremos quando estiver pronta.',
             send: 'Enviar'
         },
         successModal: {
             title: 'Obrigado!',
-            desc: 'Avisaremos quando a versão Mac estiver pronta.',
+            desc: 'Avisaremos quando a versão Android estiver pronta.',
             close: 'Fechar'
         },
         faq: {
@@ -1611,8 +1611,8 @@ const translations = {
             a4: 'Sim, é necessária uma conexão estável com a internet para reconhecimento de fala e tradução. O app usa serviços na nuvem para garantir alta precisão.',
             q5: 'Posso personalizar a aparência das legendas?',
             a5: 'Claro! Você pode ajustar o tamanho da fonte, cor, posição das legendas na tela, transparência do fundo e escolher quais idiomas exibir.',
-            q6: 'Há versão para Mac ou dispositivos móveis?',
-            a6: 'Atualmente apenas a versão Windows está disponível. Estamos trabalhando ativamente nas versões Mac, iOS e Android. Deixe seu email e avisaremos sobre o lançamento.'
+            q6: 'Em quais plataformas o Live Subtitles está disponível?',
+            a6: 'O Live Subtitles está disponível no Windows, macOS e iOS. A versão para Android está em desenvolvimento. Deixe seu email e avisaremos quando estiver pronta.'
         },
         testimonials: {
             title: 'Avaliações dos Usuários',
@@ -1657,7 +1657,7 @@ const translations = {
             lead: 'Live Subtitles - twój asystent z podwójnymi napisami, rozpoznawaniem mowy i tłumaczeniem w czasie rzeczywistym'
         },
         downloadBtn: 'Pobierz z Microsoft Store',
-        macBtn: 'Chcę wersję na Mac',
+        androidBtn: 'Chcę wersję na Android',
         platforms: {
             title: 'Działa z każdą aplikacją — bez ograniczeń'
         },
@@ -1725,14 +1725,14 @@ const translations = {
             download: 'Pobierz',
             cancel: 'Anuluj'
         },
-        macModal: {
-            title: 'Wersja Mac',
-            desc: 'Pracujemy nad wersją Mac. Zostaw swój email, a powiadomimy, gdy będzie gotowa.',
+        androidModal: {
+            title: 'Wersja Android',
+            desc: 'Pracujemy nad wersją Android. Zostaw swój email, a powiadomimy, gdy będzie gotowa.',
             send: 'Wyślij'
         },
         successModal: {
             title: 'Dziękujemy!',
-            desc: 'Powiadomimy, gdy wersja Mac będzie gotowa.',
+            desc: 'Powiadomimy, gdy wersja Android będzie gotowa.',
             close: 'Zamknij'
         },
         faq: {
@@ -1747,8 +1747,8 @@ const translations = {
             a4: 'Tak, stabilne połączenie internetowe jest potrzebne do rozpoznawania mowy i tłumaczenia. Aplikacja używa usług chmurowych, aby zapewnić wysoką dokładność.',
             q5: 'Czy mogę dostosować wygląd napisów?',
             a5: 'Oczywiście! Możesz dostosować rozmiar czcionki, kolor, pozycję napisów na ekranie, przezroczystość tła i wybrać języki do wyświetlania.',
-            q6: 'Czy jest wersja na Mac lub urządzenia mobilne?',
-            a6: 'Obecnie dostępna jest tylko wersja na Windows. Aktywnie pracujemy nad wersjami na Mac, iOS i Android. Zostaw swój email, a powiadomimy o wydaniu.'
+            q6: 'Na jakich platformach dostępny jest Live Subtitles?',
+            a6: 'Live Subtitles jest dostępny na Windows, macOS i iOS. Wersja na Android jest obecnie w fazie rozwoju. Zostaw swój email, a powiadomimy, gdy będzie gotowa.'
         },
         testimonials: {
             title: 'Opinie użytkowników',
@@ -1793,7 +1793,7 @@ const translations = {
             lead: 'Live Subtitles - je assistent met dubbele ondertitels, spraakherkenning en realtime vertaling'
         },
         downloadBtn: 'Download van Microsoft Store',
-        macBtn: 'Wil Mac versie',
+        androidBtn: 'Wil Android versie',
         platforms: {
             title: 'Werkt met elke app — geen beperkingen'
         },
@@ -1861,14 +1861,14 @@ const translations = {
             download: 'Download',
             cancel: 'Annuleren'
         },
-        macModal: {
-            title: 'Mac versie',
-            desc: 'We werken aan de Mac versie. Laat je email achter en we informeren je wanneer het klaar is.',
+        androidModal: {
+            title: 'Android versie',
+            desc: 'We werken aan de Android versie. Laat je email achter en we informeren je wanneer het klaar is.',
             send: 'Versturen'
         },
         successModal: {
             title: 'Bedankt!',
-            desc: 'We informeren je wanneer de Mac versie klaar is.',
+            desc: 'We informeren je wanneer de Android versie klaar is.',
             close: 'Sluiten'
         },
         faq: {
@@ -1883,8 +1883,8 @@ const translations = {
             a4: 'Ja, stabiele internetverbinding is vereist voor spraakherkenning en vertaling. De app gebruikt cloudservices om hoge nauwkeurigheid te garanderen.',
             q5: 'Kan ik het uiterlijk van ondertitels aanpassen?',
             a5: 'Natuurlijk! Je kunt lettergrootte, kleur, positie van ondertitels op scherm, achtergrond transparantie aanpassen en talen kiezen om weer te geven.',
-            q6: 'Is er een versie voor Mac of mobiele apparaten?',
-            a6: 'Momenteel is alleen Windows versie beschikbaar. We werken actief aan Mac, iOS en Android versies. Laat je email achter en we informeren over de release.'
+            q6: 'Op welke platformen is Live Subtitles beschikbaar?',
+            a6: 'Live Subtitles is beschikbaar op Windows, macOS en iOS. Een Android-versie is momenteel in ontwikkeling. Laat je email achter en we informeren je wanneer het klaar is.'
         },
         testimonials: {
             title: 'Gebruikersbeoordelingen',
@@ -1929,7 +1929,7 @@ const translations = {
             lead: 'Live Subtitles - çift altyazı, konuşma tanıma ve gerçek zamanlı çeviri asistanınız'
         },
         downloadBtn: 'Microsoft Store\'dan İndir',
-        macBtn: 'Mac sürümü istiyorum',
+        androidBtn: 'Android sürümü istiyorum',
         platforms: {
             title: 'Her uygulamayla çalışır — sınır yok'
         },
@@ -1997,14 +1997,14 @@ const translations = {
             download: 'İndir',
             cancel: 'İptal'
         },
-        macModal: {
-            title: 'Mac sürümü',
-            desc: 'Mac sürümü üzerinde çalışıyoruz. E-postanızı bırakın, hazır olduğunda size haber verelim.',
+        androidModal: {
+            title: 'Android sürümü',
+            desc: 'Android sürümü üzerinde çalışıyoruz. E-postanızı bırakın, hazır olduğunda size haber verelim.',
             send: 'Gönder'
         },
         successModal: {
             title: 'Teşekkürler!',
-            desc: 'Mac sürümü hazır olduğunda size haber vereceğiz.',
+            desc: 'Android sürümü hazır olduğunda size haber vereceğiz.',
             close: 'Kapat'
         },
         faq: {
@@ -2019,8 +2019,8 @@ const translations = {
             a4: 'Evet, konuşma tanıma ve çeviri için kararlı internet bağlantısı gerekli. Uygulama yüksek doğruluk sağlamak için bulut hizmetleri kullanır.',
             q5: 'Altyazı görünümünü özelleştirebilir miyim?',
             a5: 'Elbette! Yazı tipi boyutu, renk, ekrandaki altyazı pozisyonu, arka plan saydamlığını ayarlayabilir ve gösterilecek dilleri seçebilirsiniz.',
-            q6: 'Mac veya mobil cihazlar için sürüm var mı?',
-            a6: 'Şu anda sadece Windows sürümü mevcut. Mac, iOS ve Android sürümleri üzerinde aktif olarak çalışıyoruz. E-postanızı bırakın, çıkışı haber verelim.'
+            q6: 'Live Subtitles hangi platformlarda kullanılabilir?',
+            a6: 'Live Subtitles Windows, macOS ve iOS\'ta kullanılabilir. Android sürümü şu anda geliştirme aşamasındadır. E-postanızı bırakın, hazır olduğunda size haber verelim.'
         },
         testimonials: {
             title: 'Kullanıcı Değerlendirmeleri',
@@ -2065,7 +2065,7 @@ const translations = {
             lead: 'Live Subtitles - ваш помічник з подвійними субтитрами, розпізнаванням мовлення та перекладом у реальному часі'
         },
         downloadBtn: 'Завантажити з Microsoft Store',
-        macBtn: 'Хочу версію для Mac',
+        androidBtn: 'Хочу версію для Android',
         platforms: {
             title: 'Працює з будь-яким додатком — без обмежень'
         },
@@ -2133,14 +2133,14 @@ const translations = {
             download: 'Завантажити',
             cancel: 'Скасувати'
         },
-        macModal: {
-            title: 'Версія для Mac',
-            desc: 'Ми працюємо над версією для Mac. Залиште свою електронну адресу, і ми повідомимо, коли буде готово.',
+        androidModal: {
+            title: 'Версія для Android',
+            desc: 'Ми працюємо над версією для Android. Залиште свою електронну адресу, і ми повідомимо, коли буде готово.',
             send: 'Надіслати'
         },
         successModal: {
             title: 'Дякуємо!',
-            desc: 'Ми повідомимо, коли версія для Mac буде готова.',
+            desc: 'Ми повідомимо, коли версія для Android буде готова.',
             close: 'Закрити'
         },
         faq: {
@@ -2155,8 +2155,8 @@ const translations = {
             a4: 'Так, стабільне підключення до інтернету потрібне для розпізнавання мовлення та перекладу. Додаток використовує хмарні сервіси для забезпечення високої точності.',
             q5: 'Чи можу я налаштувати зовнішній вигляд субтитрів?',
             a5: 'Звичайно! Ви можете налаштувати розмір шрифту, колір, позицію субтитрів на екрані, прозорість фону та вибрати мови для відображення.',
-            q6: 'Чи є версія для Mac або мобільних пристроїв?',
-            a6: 'Наразі доступна тільки версія для Windows. Ми активно працюємо над версіями для Mac, iOS та Android. Залиште свою електронну адресу, і ми повідомимо про випуск.'
+            q6: 'На яких платформах доступний Live Subtitles?',
+            a6: 'Live Subtitles доступний на Windows, macOS та iOS. Версія для Android наразі в розробці. Залиште свою електронну адресу, і ми повідомимо, коли буде готово.'
         },
         testimonials: {
             title: 'Відгуки користувачів',
