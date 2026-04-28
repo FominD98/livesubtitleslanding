@@ -15,6 +15,19 @@ param(
         "teams-live-captions.html",
         "discord-twitch-subtitles.html",
         "game-mode-subtitles.html",
+        "slack-live-captions.html",
+        "whatsapp-live-translation.html",
+        "twitch-live-captions.html",
+        "webex-live-captions.html",
+        "skype-live-captions.html",
+        "obs-subtitles.html",
+        "tiktok-live-captions.html",
+        "linkedin-live-captions.html",
+        "spanish-to-english-live-subtitles.html",
+        "chinese-to-english-live-captions.html",
+        "japanese-to-english-live-subtitles.html",
+        "korean-to-english-live-captions.html",
+        "french-to-english-live-translation.html",
         "privacy.html"
     )
 )
