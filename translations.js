@@ -7,7 +7,7 @@ const translations = {
             download: 'Download'
         },
         header: {
-            title: 'Live captions and dual subtitles for meetings, movies, and language learning',
+            title: 'AI Live Captions & Dual Subtitles for Windows — Meetings, Videos, and Language Learning',
             lead: 'Live Subtitles helps you understand speech faster with dual subtitles and real-time translation for calls, meetings, and videos.'
         },
         downloadBtn: 'Download from Microsoft Store',
