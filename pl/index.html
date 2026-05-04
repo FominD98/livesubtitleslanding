@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,41 @@
     </script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'AW-17344614830');
+
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.open(url, '_blank');
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-17344614830/S1iQCJL32KMcEK6jx85A',
+                'event_callback': callback
+            });
+            return false;
+        }
     </script>
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://live-subtitles.com/pl/" />
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Live Subtitles — aplikacja z napisami na żywo i podwójnymi napisami do spotkań, filmów i nauki języków. Rozumiej mowę szybciej w Zoom, Teams, YouTube i Netflix.">
-    <meta name="keywords" content="aplikacja napisy na żywo, napisy w czasie rzeczywistym, podwójne napisy, tłumacz napisów, napisy Zoom, napisy Teams, napisy YouTube, napisy Netflix, napisy Discord, napisy Twitch, nauka języków">
+    <meta name="description"
+        content="AI live captions & dual subtitles for Windows. Real-time translation in 50+ languages for Zoom, Teams, Netflix, YouTube & any app. Free trial — no microphone needed.">
+    <meta name="keywords"
+        content="live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, game mode subtitles, gaming subtitles, fullscreen subtitle overlay, language learning subtitles">
     <meta name="author" content="Live Subtitles">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="language" content="Polish">
+    <meta name="language" content="English">
     <meta name="revisit-after" content="7 days">
-    
+
     <!-- Sitemap -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="../sitemap.xml">
-    
+
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#00ff9d">
     <meta name="application-name" content="Live Subtitles">
@@ -38,18 +54,23 @@
     <meta name="msapplication-TileColor" content="#00ff9d">
     <meta name="msapplication-config" content="/browserconfig.xml">
     <meta name="format-detection" content="telephone=no">
-    
+
     <!-- Schema.org markup -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Live Subtitles",
-        "applicationCategory": "EducationalApplication",
+        "applicationCategory": "UtilitiesApplication",
         "applicationSubCategory": "Live Captioning and Translation",
-        "operatingSystem": "Windows, macOS, iOS",
+        "operatingSystem": "Windows 10, Windows 11, macOS, iOS",
         "url": "https://live-subtitles.com",
         "downloadUrl": "https://apps.microsoft.com/store/detail/9PH1R9DJG47S",
+        "sameAs": [
+            "https://apps.microsoft.com/store/detail/9PH1R9DJG47S",
+            "https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",
+            "https://apps.apple.com/app/live-captions-translator/id6760197210"
+        ],
         "offers": {
             "@type": "AggregateOffer",
             "priceCurrency": "USD",
@@ -57,15 +78,22 @@
             "highPrice": "14.99",
             "offerCount": "2"
         },
-        "description": "Aplikacja z napisami na żywo i podwójnymi napisami do spotkań, filmów i nauki języków",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.4",
+            "ratingCount": "312",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "description": "Live captions and dual subtitles app for meetings, videos, and language learning",
         "featureList": [
-            "Podwójne napisy",
-            "Napisy na żywo do spotkań i rozmów",
-            "Tłumaczenie w czasie rzeczywistym",
-            "Działa z aplikacjami wideo, streamingowymi i komunikacyjnymi"
+            "Dual subtitles",
+            "Live captions for meetings and calls",
+            "Real-time translation",
+            "Works across video, streaming, and communication apps"
         ],
         "screenshot": "https://live-subtitles.com/preview.png",
-        "inLanguage": "pl",
+        "inLanguage": "en",
         "publisher": {
             "@type": "Organization",
             "name": "Live Subtitles",
@@ -93,6 +121,25 @@
     }
     </script>
 
+    <!-- WebSite Schema with SearchAction (sitelinks search box) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Live Subtitles",
+        "alternateName": "Live Subtitles — AI Live Captions for Windows",
+        "url": "https://live-subtitles.com/",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://live-subtitles.com/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+
     <!-- FAQPage Schema -->
     <script type="application/ld+json">
     {
@@ -112,7 +159,7 @@
                 "name": "Does it work with any application?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! Live Subtitles works with absolutely any application: YouTube, Netflix, Zoom, Teams, Discord, browsers and even games. The app captures audio at the system level."
+                    "text": "Yes! Live Subtitles works with absolutely any application: YouTube, Netflix, Zoom, Teams, Discord, browsers and games. For gaming sessions, use Lock/Game Mode (Ctrl+Shift+L) to reduce accidental overlay interaction."
                 }
             },
             {
@@ -144,7 +191,7 @@
                 "name": "Is there a version for Mac or mobile devices?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Live Subtitles is available for Windows, macOS, and iOS devices. An Android version is currently in development."
+                    "text": "Live Subtitles is available for Windows, Mac, and iOS devices. An Android version is currently in development."
                 }
             }
         ]
@@ -185,8 +232,9 @@
     </script>
 
     <!-- Open Graph Meta Tags (Telegram, LinkedIn, Facebook) -->
-    <meta property="og:title" content="Live Subtitles | Napisy na żywo i podwójne napisy do spotkań, filmów i nauki języków">
-    <meta property="og:description" content="Live captions and dual subtitles for meetings, movies, and language learning across Zoom, Teams, YouTube, and Netflix.">
+    <meta property="og:title" content="Live Subtitles — Live Captions and Dual Subtitles App">
+    <meta property="og:description"
+        content="Live captions and dual subtitles for meetings, media, and games across Zoom, Teams, YouTube, Netflix, Discord, and Twitch. Lock/Game Mode helps keep gaming overlays stable.">
     <meta property="og:image" content="https://live-subtitles.com/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -202,15 +250,16 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Live Subtitles | Napisy na żywo i podwójne napisy do spotkań, filmów i nauki języków">
-    <meta name="twitter:description" content="Live captions and dual subtitles for meetings, movies, and language learning across Zoom, Teams, YouTube, and Netflix.">
+    <meta name="twitter:title" content="Live Subtitles — Live Captions and Dual Subtitles App">
+    <meta name="twitter:description"
+        content="Live captions and dual subtitles for meetings, media, and games. Lock/Game Mode helps keep subtitle overlays stable in gaming sessions.">
     <meta name="twitter:image" content="https://live-subtitles.com/preview.png">
-        <meta name="twitter:image:alt" content="Live Subtitles - Dual Subtitles Application">
+    <meta name="twitter:image:alt" content="Live Subtitles - Dual Subtitles Application">
     <meta name="twitter:site" content="@livesubtitles">
     <meta name="twitter:creator" content="@livesubtitles">
     <!-- End SEO Meta Tags -->
 
-    <title>Live Subtitles | Napisy na żywo i podwójne napisy do spotkań, filmów i nauki języków</title>
+    <title>Live Subtitles — AI Live Captions & Dual Subtitles App for Windows</title>
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/x-icon" href="../2sub.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/2sub.png">
@@ -221,23 +270,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript" >
-        (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
         ym(101009280, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
         });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
     <!-- /Yandex.Metrika counter -->
     <style>
         :root {
@@ -260,7 +315,12 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Space Grotesk', 'Inter', sans-serif;
             font-weight: 700;
         }
@@ -292,14 +352,31 @@
         }
 
         @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(30px, -30px) rotate(2deg); }
-            66% { transform: translate(-20px, 20px) rotate(-2deg); }
+
+            0%,
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(30px, -30px) rotate(2deg);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) rotate(-2deg);
+            }
         }
 
         .title {
@@ -318,8 +395,15 @@
         }
 
         @keyframes gradientTitle {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
         }
 
         .demo-window {
@@ -366,9 +450,17 @@
             cursor: pointer;
         }
 
-        .close { background: #ff5f56; }
-        .minimize { background: #ffbd2e; }
-        .maximize { background: #27c93f; }
+        .close {
+            background: #ff5f56;
+        }
+
+        .minimize {
+            background: #ffbd2e;
+        }
+
+        .maximize {
+            background: #27c93f;
+        }
 
         .window-title {
             margin-left: 0.5rem;
@@ -471,8 +563,7 @@
 
         .feature:hover .feature-icon {
             transform: scale(1.15) rotate(5deg);
-            filter: drop-shadow(0 0 30px rgba(0, 255, 157, 0.8))
-                    drop-shadow(0 0 15px rgba(0, 184, 255, 0.5));
+            filter: drop-shadow(0 0 30px rgba(0, 255, 157, 0.8)) drop-shadow(0 0 15px rgba(0, 184, 255, 0.5));
         }
 
         .solution-card {
@@ -635,8 +726,13 @@
         }
 
         @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .platforms-title {
@@ -708,7 +804,8 @@
                 0 0 40px rgba(0, 255, 157, 0.2);
         }
 
-        .modal-header, .modal-footer {
+        .modal-header,
+        .modal-footer {
             border-color: rgba(255, 255, 255, 0.1) !important;
         }
 
@@ -748,7 +845,9 @@
         }
 
         @keyframes spin {
-            to { transform: rotate(360deg); }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         #androidEmail::placeholder {
@@ -827,7 +926,7 @@
             right: 20px;
             z-index: 1000;
         }
-        
+
         .language-selector select {
             background: rgba(255, 255, 255, 0.1);
             border: 1px solid rgba(255, 255, 255, 0.2);
@@ -836,11 +935,11 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        
+
         .language-selector select:hover {
             background: rgba(255, 255, 255, 0.2);
         }
-        
+
         .language-selector select option {
             background: var(--background);
             color: var(--text);
@@ -872,11 +971,11 @@
             color: var(--text) !important;
             box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
         }
-        
+
         .accordion-button::after {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
         }
-        
+
         .accordion-button:not(.collapsed)::after {
             background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%2300ff9d'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
         }
@@ -978,7 +1077,8 @@
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
+            /* 16:9 aspect ratio */
             height: 0;
         }
 
@@ -1048,66 +1148,67 @@
 
         /* Mobile responsive styles */
         @media (max-width: 768px) {
+
             /* Исправляем футер для мобильных */
             footer .d-flex {
                 flex-direction: column !important;
                 gap: 0.5rem;
             }
-            
+
             footer .position-absolute {
                 position: static !important;
                 transform: none !important;
             }
-            
+
             footer .ms-auto {
                 margin: 0 !important;
             }
-            
+
             /* Стили для бургер-меню - делаем его светлым */
             .navbar-toggler {
                 border: 1px solid rgba(255, 255, 255, 0.3);
                 background: rgba(255, 255, 255, 0.1);
                 backdrop-filter: blur(5px);
             }
-            
+
             .navbar-toggler:focus {
                 box-shadow: 0 0 0 0.25rem rgba(0, 255, 157, 0.25);
                 border-color: var(--primary);
             }
-            
+
             .navbar-toggler-icon {
                 background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
             }
-            
+
             /* Селектор языка на мобильных */
             .language-selector {
                 top: 10px;
                 right: 10px;
             }
-            
+
             .language-selector select {
                 font-size: 0.9rem;
                 padding: 3px 6px;
             }
-            
+
             /* Меньше отступы для мобильных */
             .section {
                 padding: 2rem 0;
             }
-            
+
             .title {
                 font-size: clamp(1.5rem, 4vw, 2.5rem);
             }
-            
+
             .demo-window {
                 margin: 1rem 0;
             }
-            
+
             .platforms {
                 gap: 1rem;
                 padding: 1rem;
             }
-            
+
             .platform-icon {
                 width: 40px;
                 height: 40px;
@@ -1129,18 +1230,19 @@
                 padding-left: 0.5rem;
                 padding-right: 0.5rem;
             }
-            
+
             footer {
                 padding: 1rem 0 !important;
                 font-size: 0.85rem;
             }
-            
+
             .download-btn {
                 padding: 0.75rem 1.5rem;
                 font-size: 0.9rem;
             }
-            
-            .feature, .comparison-item {
+
+            .feature,
+            .comparison-item {
                 padding: 1.5rem;
             }
         }
@@ -1164,9 +1266,10 @@
     <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/" />
     <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/" />
 </head>
+
 <body>
     <div class="gradient-bg"></div>
-    
+
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="/" data-translate="navbar.brand">Live Subtitles</a>
@@ -1186,7 +1289,8 @@
                     </li>
                 </ul>
                 <div class="ms-3">
-                    <select id="languageSelector" class="form-select form-select-sm" style="width:auto;display:inline-block;min-width:110px;">
+                    <select id="languageSelector" class="form-select form-select-sm"
+                        style="width:auto;display:inline-block;min-width:110px;">
                         <option value="en-US">English</option>
                         <option value="zh-CN">中文</option>
                         <option value="es-ES">Español</option>
@@ -1222,6 +1326,7 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Windows</h5>
                         <a href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
+                            onclick="return gtag_report_conversion('https://apps.microsoft.com/detail/9ph1r9djg47s');"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1239,7 +1344,9 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">macOS</h5>
                         <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac"
-                            target="_blank" class="mt-auto d-flex align-items-center justify-content-center w-100"
+                            target="_blank"
+                            onclick="return gtag_report_conversion('https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac');"
+                            class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
                             onmouseout="this.style.transform='scale(1)'">
@@ -1311,28 +1418,32 @@
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="../img/example/1homeger.png" alt="Live Subtitles Home Interface" class="media-image" loading="lazy">
+                                <img src="../img/example/1homeger.png" alt="Live Subtitles Home Interface"
+                                    class="media-image" loading="lazy">
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="../img/example/newsettings.png" alt="Live Subtitles Settings" class="media-image" loading="lazy">
+                                <img src="../img/example/newsettings.png" alt="Live Subtitles Settings" class="media-image"
+                                    loading="lazy">
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="../img/example/ForestDe.png" alt="Live Subtitles in Action" class="media-image" loading="lazy">
+                                <img src="../img/example/ForestDe.png" alt="Live Subtitles in Action" class="media-image"
+                                    loading="lazy">
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="https://store-images.s-microsoft.com/image/apps.43511.14244971140863405.8ce7b03a-b958-4d10-bbe6-57a57775d704.8bf7b870-5bc7-4ce8-ab4c-ffa4253e0a6f" alt="Live Subtitles Microsoft Store Screenshot" class="media-image" loading="lazy">
+                                <img src="https://store-images.s-microsoft.com/image/apps.43511.14244971140863405.8ce7b03a-b958-4d10-bbe6-57a57775d704.8bf7b870-5bc7-4ce8-ab4c-ffa4253e0a6f"
+                                    alt="Live Subtitles Microsoft Store Screenshot" class="media-image" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -1341,21 +1452,30 @@
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/0Ev_SSzYkfc" title="Live Subtitles Demo Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                                <iframe src="https://www.youtube.com/embed/0Ev_SSzYkfc"
+                                    title="Live Subtitles Demo Video 1" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/l1m7qFZ6jKM" title="Live Subtitles Demo Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                                <iframe src="https://www.youtube.com/embed/l1m7qFZ6jKM"
+                                    title="Live Subtitles Demo Video 2" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="video-wrapper">
-                                <iframe src="https://www.youtube.com/embed/TjCLyHechm4" title="Live Subtitles Demo Video 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+                                <iframe src="https://www.youtube.com/embed/TjCLyHechm4"
+                                    title="Live Subtitles Demo Video 3" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen loading="lazy"></iframe>
                             </div>
                         </div>
                     </div>
@@ -1373,92 +1493,65 @@
         <section class="platforms">
             <h3 class="platforms-title" data-translate="platforms.title">Działa z każdą aplikacją — bez ograniczeń</h3>
             <div class="platform-icon" data-tooltip="YouTube">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube - Watch videos with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
+                    alt="YouTube - Watch videos with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Instagram">
-                <img src="https://cdn-icons-png.flaticon.com/512/15713/15713420.png" alt="Instagram - Social media with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/15713/15713420.png"
+                    alt="Instagram - Social media with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Twitch">
-                <img src="https://cdn-icons-png.flaticon.com/512/3291/3291659.png" alt="Twitch - Live streaming with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/3291/3291659.png"
+                    alt="Twitch - Live streaming with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Google Meet">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968552.png" alt="Google Meet - Video calls with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968552.png"
+                    alt="Google Meet - Video calls with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Telegram">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png" alt="Telegram - Messaging with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png"
+                    alt="Telegram - Messaging with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="WhatsApp">
-                <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp - Voice calls with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
+                    alt="WhatsApp - Voice calls with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Microsoft Teams">
-                <img src="https://cdn-icons-png.flaticon.com/512/15047/15047490.png" alt="Microsoft Teams - Business calls with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/15047/15047490.png"
+                    alt="Microsoft Teams - Business calls with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Zoom">
-                <img src="https://cdn-icons-png.flaticon.com/512/5969/5969238.png" alt="Zoom - Online meetings with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/5969/5969238.png"
+                    alt="Zoom - Online meetings with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Skype">
-                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384058.png" alt="Skype - Video calls with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/1384/1384058.png"
+                    alt="Skype - Video calls with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Discord">
-                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord - Gaming voice chat with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png"
+                    alt="Discord - Gaming voice chat with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Viber">
-                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670059.png" alt="Viber - Voice messages with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670059.png"
+                    alt="Viber - Voice messages with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="VK">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png" alt="VK - Social network with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png"
+                    alt="VK - Social network with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Slack">
-                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968929.png" alt="Slack - Team communication with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968929.png"
+                    alt="Slack - Team communication with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="LinkedIn">
-                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn - Professional networking with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"
+                    alt="LinkedIn - Professional networking with dual subtitles" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="WeChat">
-                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670101.png" alt="WeChat - Chinese messaging with dual subtitles" loading="lazy">
+                <img src="https://cdn-icons-png.flaticon.com/512/3670/3670101.png"
+                    alt="WeChat - Chinese messaging with dual subtitles" loading="lazy">
             </div>
-        </section>
-
-        <section class="section" id="solutions">
-            <h2 class="text-center mb-5" style="color: var(--primary);">Popular Solutions</h2>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <a class="solution-card" href="/pl/zoom-live-captions.html">
-                        <h3>Live Captions for Meetings</h3>
-                        <p>Improve understanding in Zoom, Teams, and client calls. Cut repetition and keep decisions aligned in multilingual conversations.</p>
-                        <span class="solution-cta">Explore meeting solution</span>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <a class="solution-card" href="/pl/google-meet-live-captions.html">
-                        <h3>Google Meet Live Captions</h3>
-                        <p>Support cross-border meetings with clear captions for global teams. Reduce confusion and keep momentum in fast discussions.</p>
-                        <span class="solution-cta">Explore Meet solution</span>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <a class="solution-card" href="/pl/netflix-subtitles.html">
-                        <h3>Subtitle Translator for Movies</h3>
-                        <p>Watch YouTube, Netflix, and online courses with dual subtitles. Learn faster and keep up with fast speech without pauses.</p>
-                        <span class="solution-cta">Explore movie solution</span>
-                    </a>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <a class="solution-card" href="/pl/discord-twitch-subtitles.html">
-                        <h3>Subtitles for Discord and Twitch</h3>
-                        <p>Follow fast voice chat and streams with less effort. Keep up with slang, accents, and multilingual conversations in real time.</p>
-                        <span class="solution-cta">Explore streaming solution</span>
-                    </a>
-                </div>
-            </div>
-            <p class="text-center mt-4" style="color: rgba(255,255,255,0.75);">
-                More guides:
-                <a href="/pl/teams-live-captions.html" style="color: var(--secondary); text-decoration: none;">Microsoft Teams captions</a>
-                |
-                <a href="/pl/google-meet-live-captions.html" style="color: var(--secondary); text-decoration: none;">Google Meet live captions</a>
-                |
-                <a href="/pl/youtube-dual-subtitles.html" style="color: var(--secondary); text-decoration: none;">YouTube dual subtitles</a>
-            </p>
         </section>
 
         <section id="features" class="section">
@@ -1468,14 +1561,16 @@
                     <div class="feature">
                         <div class="feature-icon">🎯</div>
                         <h3 data-translate="features.dualSubtitles">Podwójne napisy</h3>
-                        <p data-translate="features.dualSubtitlesDesc">Na komputerze, w każdej przeglądarce i odtwarzaczu.</p>
+                        <p data-translate="features.dualSubtitlesDesc">Na komputerze, w każdej przeglądarce i odtwarzaczu.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="feature">
                         <div class="feature-icon">🎤</div>
                         <h3 data-translate="features.speechRecognition">Rozpoznawanie mowy</h3>
-                        <p data-translate="features.speechRecognitionDesc">Bez ograniczeń platformy czy aplikacji.</p>
+                        <p data-translate="features.speechRecognitionDesc">Bez ograniczeń platformy czy aplikacji.
+                        </p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -1512,7 +1607,8 @@
                         <ul class="list-unstyled text-start" style="opacity: 0.8;">
                             <li data-translate="comparison.oneLanguage.point1">✅ Tekst jest widoczny</li>
                             <li data-translate="comparison.oneLanguage.point2">✅ Pomaga zrozumieć akcent</li>
-                            <li data-translate="comparison.oneLanguage.point3">❌ Napisy mogą być niedostępne w aplikacji</li>
+                            <li data-translate="comparison.oneLanguage.point3">❌ Napisy mogą być niedostępne w aplikacji
+                            </li>
                             <li data-translate="comparison.oneLanguage.point4">❌ Brak tłumaczenia</li>
                             <li data-translate="comparison.oneLanguage.point5">❌ Trudno uczyć się nowych słów</li>
                         </ul>
@@ -1522,7 +1618,8 @@
                     <div class="comparison-item" style="border: 1px solid var(--primary);">
                         <div style="font-size: 48px; margin-bottom: 20px;">🎯</div>
                         <h3 data-translate="comparison.twoLanguages.title">Dwa języki</h3>
-                        <p class="mb-2" data-translate="comparison.twoLanguages.desc">Podwójne napisy z Live Subtitles</p>
+                        <p class="mb-2" data-translate="comparison.twoLanguages.desc">Podwójne napisy z Live Subtitles
+                        </p>
                         <ul class="list-unstyled text-start" style="opacity: 0.8;">
                             <li data-translate="comparison.twoLanguages.point1">✅ Natychmiastowe tłumaczenie</li>
                             <li data-translate="comparison.twoLanguages.point2">✅ Łatwo zrozumieć każdy akcent</li>
@@ -1540,9 +1637,12 @@
             <div class="row">
                 <div class="col-lg-8 mx-auto">
                     <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="accordion-item mb-3"
+                            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" style="background: transparent; color: var(--text); border: none;">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq1"
+                                    style="background: transparent; color: var(--text); border: none;">
                                     <span data-translate="faq.q1">Ile kosztuje aplikacja?</span>
                                 </button>
                             </h2>
@@ -1553,9 +1653,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="accordion-item mb-3"
+                            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" style="background: transparent; color: var(--text); border: none;">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq2"
+                                    style="background: transparent; color: var(--text); border: none;">
                                     <span data-translate="faq.q2">Czy działa ze wszystkimi aplikacjami?</span>
                                 </button>
                             </h2>
@@ -1566,9 +1669,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="accordion-item mb-3"
+                            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" style="background: transparent; color: var(--text); border: none;">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq3"
+                                    style="background: transparent; color: var(--text); border: none;">
                                     <span data-translate="faq.q3">Jakie języki są obsługiwane?</span>
                                 </button>
                             </h2>
@@ -1579,9 +1685,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="accordion-item mb-3"
+                            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" style="background: transparent; color: var(--text); border: none;">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq4"
+                                    style="background: transparent; color: var(--text); border: none;">
                                     <span data-translate="faq.q4">Czy potrzebne jest połączenie internetowe?</span>
                                 </button>
                             </h2>
@@ -1592,9 +1701,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="accordion-item mb-3"
+                            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" style="background: transparent; color: var(--text); border: none;">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq5"
+                                    style="background: transparent; color: var(--text); border: none;">
                                     <span data-translate="faq.q5">Czy mogę dostosować wygląd napisów?</span>
                                 </button>
                             </h2>
@@ -1605,9 +1717,12 @@
                             </div>
                         </div>
 
-                        <div class="accordion-item mb-3" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div class="accordion-item mb-3"
+                            style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1);">
                             <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" style="background: transparent; color: var(--text); border: none;">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#faq6"
+                                    style="background: transparent; color: var(--text); border: none;">
                                     <span data-translate="faq.q6">Na jakich platformach dostępny jest Live Subtitles?</span>
                                 </button>
                             </h2>
@@ -1626,9 +1741,11 @@
             <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="testimonials.title">Opinie użytkowników</h2>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
                         <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review1">"W końcu mogę oglądać koreańskie dramaty bez ciągłego pauzowania! Aplikacja dokładnie tłumaczy nawet szybkie rozmowy."</p>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review1">"W końcu mogę oglądać koreańskie dramaty bez ciągłego pauzowania! Aplikacja dokładnie tłumaczy nawet szybkie rozmowy."</p>
                         <div class="testimonial-author">
                             <strong data-translate="testimonials.author1">Anna K.</strong>
                             <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role1">Uczy się koreańskiego</small>
@@ -1636,44 +1753,56 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
                         <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review2">"Rewolucja w międzynarodowych spotkaniach! Nie muszę już prosić kolegów z Indii i Chin o powtórzenie."</p>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review2">"Rewolucja w międzynarodowych spotkaniach! Nie muszę już prosić kolegów z Indii i Chin o powtórzenie."</p>
                         <div class="testimonial-author">
                             <strong data-translate="testimonials.author2">Michael R.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role2">Menedżer IT</small>
+                            <small style="color: rgba(255, 255, 255, 0.6);"
+                                data-translate="testimonials.role2">Menedżer IT</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
                         <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review3">"Używam do nauki angielskiego przez YouTube. Moje słownictwo wzrosło ogromnie w ciągu miesiąca!"</p>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review3">"Używam do nauki angielskiego przez YouTube. Moje słownictwo wzrosło ogromnie w ciągu miesiąca!"</p>
                         <div class="testimonial-author">
                             <strong data-translate="testimonials.author3">Elena S.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role3">Studentka</small>
+                            <small style="color: rgba(255, 255, 255, 0.6);"
+                                data-translate="testimonials.role3">Studentka</small>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row g-4 mt-4">
                 <div class="col-md-6">
-                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
                         <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review4">"Uczę się angielskiego, gdzie chcę - na każdej platformie! Oglądam Netflix w przeglądarce, słucham podcastów na telefonie, uczestniczę w spotkaniach w Teams. Aplikacja naprawdę działa wszędzie!"</p>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review4">"Uczę się angielskiego, gdzie chcę - na każdej platformie! Oglądam Netflix w przeglądarce, słucham podcastów na telefonie, uczestniczę w spotkaniach w Teams. Aplikacja naprawdę działa wszędzie!"</p>
                         <div class="testimonial-author">
                             <strong data-translate="testimonials.author4">Alex M.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role4">Uczy się angielskiego</small>
+                            <small style="color: rgba(255, 255, 255, 0.6);"
+                                data-translate="testimonials.role4">Uczy się angielskiego</small>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="testimonial-card" style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
                         <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);" data-translate="testimonials.review5">"Łatwa konfiguracja i działa perfekcyjnie. Subskrypcja od $7 zwróciła się po pierwszym spotkaniu roboczym."</p>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review5">"Łatwa konfiguracja i działa perfekcyjnie. Subskrypcja od $7 zwróciła się po pierwszym spotkaniu roboczym."</p>
                         <div class="testimonial-author">
                             <strong data-translate="testimonials.author5">David P.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role5">Tłumacz</small>
+                            <small style="color: rgba(255, 255, 255, 0.6);"
+                                data-translate="testimonials.role5">Tłumacz</small>
                         </div>
                     </div>
                 </div>
@@ -1692,6 +1821,7 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Windows</h5>
                         <a href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
+                            onclick="return gtag_report_conversion('https://apps.microsoft.com/detail/9ph1r9djg47s');"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1709,7 +1839,9 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">macOS</h5>
                         <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac"
-                            target="_blank" class="mt-auto d-flex align-items-center justify-content-center w-100"
+                            target="_blank"
+                            onclick="return gtag_report_conversion('https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac');"
+                            class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
                             onmouseout="this.style.transform='scale(1)'">
@@ -1760,16 +1892,21 @@
         <!-- Модальное окно для Android -->
         <div class="modal fade" id="androidModal" tabindex="-1" aria-labelledby="androidModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content" style="background: rgba(0, 0, 0, 0.8); color: white; border: 1px solid var(--primary);">
+                <div class="modal-content"
+                    style="background: rgba(0, 0, 0, 0.8); color: white; border: 1px solid var(--primary);">
                     <div class="modal-header border-bottom border-secondary">
                         <h5 class="modal-title" id="androidModalLabel" data-translate="androidModal.title">Wersja Android</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <p data-translate="androidModal.desc">Pracujemy nad wersją Android. Zostaw swój email, a powiadomimy, gdy będzie gotowa.</p>
                         <form id="androidEmailForm">
                             <div class="mb-3">
-                                <input type="email" class="form-control" id="androidEmail" placeholder="Your email" required style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--primary); color: white;">
+                                <input type="email" class="form-control" id="androidEmail" placeholder="Your email"
+                                    required
+                                    style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--primary); color: white;"
+                                    >
                             </div>
                             <button type="submit" class="btn btn-primary submit-btn">
                                 <div class="loader"></div>
@@ -1784,66 +1921,102 @@
         <!-- Модальное окно успешной отправки -->
         <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content" style="background: rgba(0, 0, 0, 0.8); color: white; border: 1px solid var(--primary);">
+                <div class="modal-content"
+                    style="background: rgba(0, 0, 0, 0.8); color: white; border: 1px solid var(--primary);">
                     <div class="modal-header border-bottom border-secondary">
                         <h5 class="modal-title" id="successModalLabel" data-translate="successModal.title">Dziękujemy!</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <p data-translate="successModal.desc">Powiadomimy, gdy wersja Android będzie gotowa.</p>
                     </div>
                     <div class="modal-footer border-top border-secondary">
-                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-translate="successModal.close">Zamknij</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                            data-translate="successModal.close">Zamknij</button>
                     </div>
                 </div>
             </div>
         </div>
 
-                <section class="py-5" style="border-top: 1px solid rgba(255,255,255,0.08);">
+        <section class="py-5" style="border-top: 1px solid rgba(255,255,255,0.08);">
             <div class="container">
-                <h2 class="text-center mb-4" style="color: #00ff9d;">Live Subtitles dla każdej platformy</h2>
+                <h2 class="text-center mb-4" style="color: #00ff9d;">Live Subtitles for Every Platform</h2>
                 <div class="row g-3" style="font-size: 0.9rem;">
                     <div class="col-6 col-md-3">
-                        <h6 style="color: #00b8ff;">Spotkania i połączenia</h6>
-                        <a href="/pl/zoom-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Zoom</a>
-                        <a href="/pl/teams-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Microsoft Teams</a>
-                        <a href="/pl/google-meet-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Google Meet</a>
-                        <a href="/pl/webex-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Webex</a>
-                        <a href="/pl/skype-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Skype</a>
-                        <a href="/pl/slack-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Slack</a>
-                        <a href="/pl/whatsapp-live-translation.html" class="d-block text-decoration-none" style="color: #bbb;">WhatsApp</a>
-                        <a href="/pl/viber-live-translation.html" class="d-block text-decoration-none" style="color: #bbb;">Viber</a>
-                        <a href="/pl/telegram-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Telegram</a>
+                        <h6 style="color: #00b8ff;">Meetings & Calls</h6>
+                        <a href="/pl/zoom-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Zoom Live Captions</a>
+                        <a href="/pl/teams-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Microsoft Teams Captions</a>
+                        <a href="/pl/google-meet-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Google Meet Captions</a>
+                        <a href="/webex-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Webex Live Captions</a>
+                        <a href="/skype-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Skype Live Captions</a>
+                        <a href="/slack-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Slack Live Captions</a>
+                        <a href="/whatsapp-live-translation.html" class="d-block text-decoration-none" style="color: #bbb;">WhatsApp Live Translation</a>
+                        <a href="/viber-live-translation.html" class="d-block text-decoration-none" style="color: #bbb;">Viber Live Translation</a>
+                        <a href="/telegram-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Telegram Live Translation</a>
                     </div>
                     <div class="col-6 col-md-3">
-                        <h6 style="color: #00b8ff;">Streaming i social media</h6>
+                        <h6 style="color: #00b8ff;">Streaming & Social</h6>
                         <a href="/pl/youtube-dual-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">YouTube Dual Subtitles</a>
-                        <a href="/pl/netflix-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Netflix</a>
-                        <a href="/pl/twitch-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Twitch</a>
-                        <a href="/pl/discord-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Discord</a>
-                        <a href="/pl/tiktok-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">TikTok</a>
-                        <a href="/pl/instagram-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Instagram</a>
-                        <a href="/pl/facebook-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Facebook</a>
-                        <a href="/pl/linkedin-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">LinkedIn</a>
-                        <a href="/pl/spotify-podcast-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Spotify</a>
+                        <a href="/pl/netflix-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Netflix Dual Subtitles</a>
+                        <a href="/twitch-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Twitch Live Captions</a>
+                        <a href="/discord-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Discord Live Captions</a>
+                        <a href="/tiktok-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">TikTok Live Captions</a>
+                        <a href="/instagram-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Instagram Live Captions</a>
+                        <a href="/facebook-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Facebook Live Subtitles</a>
+                        <a href="/linkedin-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">LinkedIn Live Captions</a>
+                        <a href="/spotify-podcast-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Spotify Podcast Captions</a>
                     </div>
                     <div class="col-6 col-md-3">
-                        <h6 style="color: #00b8ff;">Gaming i twórcy</h6>
-                        <a href="/pl/obs-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">OBS</a>
-                        <a href="/pl/game-mode-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Game Mode</a>
-                        <a href="/pl/steam-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Steam</a>
-                        <a href="/pl/discord-twitch-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Discord & Twitch</a>
-                        <a href="/pl/restream-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Restream</a>
-                        <a href="/pl/vimeo-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Vimeo</a>
-                        <a href="/pl/vlc-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">VLC</a>
-                        <a href="/pl/microsoft-edge-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Microsoft Edge</a>
-                        <a href="/pl/any-app-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Any App</a>
+                        <h6 style="color: #00b8ff;">Gaming & Creators</h6>
+                        <a href="/obs-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">OBS Live Captions</a>
+                        <a href="/game-mode-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Game Mode Subtitles</a>
+                        <a href="/steam-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Steam Game Subtitles</a>
+                        <a href="/pl/discord-twitch-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Discord & Twitch Captions</a>
+                        <a href="/restream-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Restream Live Captions</a>
+                        <a href="/vimeo-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Vimeo Live Captions</a>
+                        <a href="/vlc-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">VLC Live Captions</a>
+                        <a href="/microsoft-edge-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Microsoft Edge Captions</a>
+                        <a href="/any-app-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Any Windows App</a>
                     </div>
                     <div class="col-6 col-md-3">
-                        <h6 style="color: #00b8ff;">Edukacja i nauka</h6>
-                        <a href="/pl/coursera-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Coursera</a>
-                        <a href="/pl/udemy-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Udemy</a>
-                        <a href="/pl/google-classroom-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Google Classroom</a>
+                        <h6 style="color: #00b8ff;">Education & Learning</h6>
+                        <a href="/coursera-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Coursera Live Captions</a>
+                        <a href="/udemy-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Udemy Live Captions</a>
+                        <a href="/google-classroom-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Google Classroom Captions</a>
+                        <h6 style="color: #00b8ff; margin-top: 1rem;">Translation Pairs</h6>
+                        <a href="/spanish-to-english-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Spanish → English</a>
+                        <a href="/chinese-to-english-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Chinese → English</a>
+                        <a href="/japanese-to-english-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Japanese → English</a>
+                        <a href="/korean-to-english-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Korean → English</a>
+                        <a href="/french-to-english-live-translation.html" class="d-block text-decoration-none" style="color: #bbb;">French → English</a>
+                        <a href="/german-to-english-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">German → English</a>
+                    </div>
+                </div>
+                <div class="row mt-4 g-3" style="font-size: 0.9rem;">
+                    <div class="col-12 col-md-6">
+                        <h6 style="color: #00b8ff;">Comparisons & Reviews</h6>
+                        <a href="/best-live-caption-apps-windows.html" class="d-block text-decoration-none" style="color: #bbb;">Best Live Caption Apps for Windows</a>
+                        <a href="/language-reactor-alternative.html" class="d-block text-decoration-none" style="color: #bbb;">Language Reactor Alternative</a>
+                        <a href="/otter-ai-alternative.html" class="d-block text-decoration-none" style="color: #bbb;">Otter AI Alternative</a>
+                        <a href="/windows-live-captions-alternative.html" class="d-block text-decoration-none" style="color: #bbb;">Windows Live Captions Alternative</a>
+                        <a href="/best-dual-subtitle-app.html" class="d-block text-decoration-none" style="color: #bbb;">Best Dual Subtitle App</a>
+                        <a href="/real-time-transcription-software.html" class="d-block text-decoration-none" style="color: #bbb;">Real-Time Transcription Software</a>
+                        <a href="/live-translation-software-comparison.html" class="d-block text-decoration-none" style="color: #bbb;">Live Translation Software Comparison</a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <h6 style="color: #00b8ff;">More Translation Pairs</h6>
+                        <a href="/portuguese-to-english-translation.html" class="d-block text-decoration-none" style="color: #bbb;">Portuguese → English</a>
+                        <a href="/russian-to-english-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Russian → English</a>
+                        <a href="/arabic-to-english-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Arabic → English</a>
+                        <a href="/hindi-to-english-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Hindi → English</a>
+                        <a href="/italian-to-english-live-translation.html" class="d-block text-decoration-none" style="color: #bbb;">Italian → English</a>
+                        <a href="/dutch-to-english-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Dutch → English</a>
+                        <a href="/polish-to-english-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Polish → English</a>
+                        <a href="/turkish-to-english-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">Turkish → English</a>
+                        <a href="/ukrainian-to-english-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">Ukrainian → English</a>
+                        <a href="/english-to-spanish-live-subtitles.html" class="d-block text-decoration-none" style="color: #bbb;">English → Spanish</a>
+                        <a href="/english-to-chinese-live-captions.html" class="d-block text-decoration-none" style="color: #bbb;">English → Chinese</a>
                     </div>
                 </div>
             </div>
@@ -1852,11 +2025,14 @@
         <footer class="text-center py-4">
             <div class="d-flex justify-content-between align-items-center position-relative">
                 <div class="ms-2">
-                    <a id="footer-articles-link" href="../articles/pl/" class="text-decoration-none" style="color: var(--primary);" data-translate="footer.articles">Artykuły</a>
+                    <a id="footer-articles-link" href="articles/en/" class="text-decoration-none"
+                        style="color: var(--primary);" data-translate="footer.articles">Artykuły</a>
                 </div>
                 <p class="mb-0 position-absolute start-50 translate-middle-x" data-translate="footer.copyright">© 2024 Live Subtitles. Wszystkie prawa zastrzeżone.</p>
                 <p class="mb-0 ms-auto">
-                    <span data-translate="footer.contact">W przypadku pytań:      </span><a href="mailto:help@live-subtitles.com" class="text-decoration-none" style="color: var(--primary);" data-translate="footer.email">help@live-subtitles.com</a>
+                    <span data-translate="footer.contact">W przypadku pytań:      </span><a
+                        href="mailto:help@live-subtitles.com" class="text-decoration-none"
+                        style="color: var(--primary);" data-translate="footer.email">help@live-subtitles.com</a>
                 </p>
             </div>
         </footer>
@@ -2083,18 +2259,18 @@
         });
 
         // Обработка формы для Android
-        document.getElementById('androidEmailForm').addEventListener('submit', async function(e) {
+        document.getElementById('androidEmailForm').addEventListener('submit', async function (e) {
             e.preventDefault();
-            
+
             const email = document.getElementById('androidEmail').value;
             const androidModal = bootstrap.Modal.getInstance(document.getElementById('androidModal'));
             const successModal = new bootstrap.Modal(document.getElementById('successModal'));
             const form = this;
-            
+
             // Показываем лоадер и блокируем форму
             form.classList.add('form-loading');
             form.querySelector('button[type="submit"]').disabled = true;
-            
+
             try {
                 const response = await fetch('https://formspree.io/f/mjkylqjd', {
                     method: 'POST',
@@ -2125,7 +2301,7 @@
         });
 
         // Language selector functionality
-        document.getElementById('languageSelector').addEventListener('change', function(e) {
+        document.getElementById('languageSelector').addEventListener('change', function (e) {
             const lang = e.target.value;
             localStorage.setItem('preferredLanguage', lang);
             window.location.href = buildLocalizedLandingUrl(lang);
@@ -2149,7 +2325,7 @@
         });
 
         // Автоматический выбор языка по URL
-        (function() {
+        (function () {
             const lang = getPathLanguageCode();
             if (lang) {
                 localStorage.setItem('preferredLanguage', lang);
@@ -2181,4 +2357,5 @@
         document.getElementById('languageSelector').addEventListener('change', updateFooterArticlesLink);
     </script>
 </body>
+
 </html>

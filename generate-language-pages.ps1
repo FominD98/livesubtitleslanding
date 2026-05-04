@@ -43,3 +43,20 @@ foreach ($lang in $Languages) {
 }
 
 Write-Host "Done. Generated $($Languages.Count) localized landing pages from $SourceFile."
+
+# SEO rule R1: locale shells just generated above contain whatever
+# language the source HTML happens to use as fallback (typically a mix of
+# EN and RU). Bake the proper per-locale defaults from translations.js
+# now so Googlebot never sees a /xx/ page in the wrong language.
+Write-Host ""
+Write-Host "Baking i18n defaults (R1)..." -ForegroundColor Cyan
+$bakeScript = Join-Path (Get-Location) "bake-i18n-defaults.js"
+if (Test-Path $bakeScript) {
+    & node $bakeScript
+    if ($LASTEXITCODE -ne 0) {
+        throw "bake-i18n-defaults.js failed with exit code $LASTEXITCODE"
+    }
+} else {
+    Write-Warning "bake-i18n-defaults.js not found - locale defaults left in source language."
+    Write-Warning "Locale pages will fail SEO rule R1 until this is fixed."
+}

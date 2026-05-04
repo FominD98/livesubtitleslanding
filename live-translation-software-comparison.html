@@ -137,6 +137,62 @@
                 <li>You run <strong>large hosted multilingual events</strong> → <strong>KUDO</strong>.</li>
             </ul>
 
+            <h2>The architectural split — overlay vs platform vs phone</h2>
+            <h3>Overlay tools (Live Subtitles)</h3>
+            <p>Overlay tools run as a desktop layer that sits above any application's window. They capture system audio and produce captions independently of whatever app is playing the audio. The architectural advantage: they work everywhere, including platforms you don't control. The trade-off: they don't integrate with platform features like recording, calendar, or admin controls.</p>
+
+            <h3>Platform-integrated tools (Microsoft Translator in Teams, Google Meet captions, Zoom captions)</h3>
+            <p>These are translation features baked into a specific meeting platform. They benefit from full audio access (no system-loopback hack needed), integrate with the platform's recording and admin policies, and can be enabled centrally. They fail when you're on a meeting hosted by someone else who hasn't enabled the feature.</p>
+
+            <h3>Meeting bot tools (Otter, Felo, Read.ai)</h3>
+            <p>These join your meeting as a separate participant — a bot avatar that listens, transcribes, and (sometimes) translates. They work across multiple meeting platforms because they connect via calendar integration, but they're visible to other participants and trigger compliance review in regulated industries. Their trade-off is a richer post-meeting experience (transcripts, summaries, action items) than overlay tools provide.</p>
+
+            <h3>Phone tools (Google Translate, DeepL, Pixel Live Translate)</h3>
+            <p>These are the right shape for face-to-face conversations and quick translations of short audio. They're not designed to drop a caption layer on top of a laptop meeting or a streaming video. Best for in-person travel, talking with a non-English-speaking shop owner, or transcribing a short voice memo.</p>
+
+            <h3>Hosted conferencing platforms (KUDO, Interprefy, Wordly)</h3>
+            <p>Built around enterprise events with large multilingual audiences. The event runs <em>on</em> the platform; participants join via a custom URL with language-track selection. Best for company all-hands with 1000+ attendees, conferences with simultaneous interpretation, and government/UN-style events. Overkill for daily use.</p>
+
+            <h2>Use cases by team type</h2>
+            <h3>Sales teams with international accounts</h3>
+            <p>AEs running calls with EMEA, LATAM, or APAC clients on whatever platform the client picked (Zoom, Teams, Webex, vendor-specific tools) need an overlay solution that works everywhere. Live Subtitles' system-audio approach means the rep doesn't need to ask the client to install anything or change their meeting settings.</p>
+
+            <h3>Customer success on cross-language portfolios</h3>
+            <p>CS reps managing accounts in 10+ languages benefit from per-rep tooling. Each rep picks their target language, the customer sees nothing different on their side. Bot-based tools (Felo, Otter) often confuse customers when they see "Otter Notetaker" as a participant.</p>
+
+            <h3>Marketing and creative agencies with global clients</h3>
+            <p>Agency teams reviewing creative work with international clients (luxury brands, fashion houses, consumer-goods companies) need translation that surfaces nuance — color names, brand terminology, regional preferences. Live Subtitles' dual-subtitle view shows original phrasing so creative directors can verify subjective terms aren't smoothed away.</p>
+
+            <h3>Microsoft 365 enterprises with global operations</h3>
+            <p>If your company is all-in on Teams + E5 license, Microsoft Translator handles translated captions natively. The catch: only on Teams, only for hosts that enabled it, only for the supported language matrix. Live Subtitles fills the gaps for non-Teams meetings, lower-tier license users, and language pairs Microsoft doesn't cover.</p>
+
+            <h3>Enterprise events and conferences</h3>
+            <p>Annual conferences with 500+ attendees in multiple languages typically use KUDO, Interprefy, or similar hosted platforms with professional interpreters. Day-to-day team meetings of the same company use Live Subtitles for casual translation. Different scales of event need different tools.</p>
+
+            <h3>Solo professionals: consultants, journalists, researchers</h3>
+            <p>Independent consultants on calls with clients in different countries, journalists monitoring foreign-language press conferences, academic researchers reviewing foreign-language source material — all benefit from a per-user desktop tool that doesn't need IT setup or per-event configuration.</p>
+
+            <h2>Pricing reality check</h2>
+            <p>Pricing models vary widely:</p>
+            <ul>
+                <li><strong>Live Subtitles:</strong> $7/mo or $69/yr flat, no minute caps, all languages, all features. Works out to ~$84/year.</li>
+                <li><strong>Google Translate Live:</strong> Free for personal use; cloud Translation API for business is usage-priced.</li>
+                <li><strong>Felo:</strong> Free tier with limits; paid tiers from ~$15/mo with usage caps.</li>
+                <li><strong>Microsoft Translator:</strong> Free for individuals; enterprise translation features bundled with Microsoft 365 E3/E5 / Business Standard licenses.</li>
+                <li><strong>KUDO:</strong> Per-event pricing typically $$$$ for enterprise multilingual events with interpreters.</li>
+                <li><strong>Otter:</strong> Pro $16.99/mo or $8.33/mo annual — but English-focused, not built for translation.</li>
+            </ul>
+            <p>For per-user multilingual translation needs, Live Subtitles is the lowest flat-rate option. For enterprise event translation, KUDO is purpose-built but expensive. For Microsoft-centric teams, the bundled Microsoft Translator is "free" inside the existing license but limited to Teams.</p>
+
+            <h2>Tips for picking the right tool</h2>
+            <ul>
+                <li><strong>Map where translation actually needs to happen.</strong> If 80% of your translation needs are during Zoom calls with external partners, you need an overlay tool — platform-integrated solutions won't help on calls you don't host.</li>
+                <li><strong>Check whether you can install software.</strong> Some corporate IT policies block desktop app installs but allow Microsoft Store apps; others allow neither and force you toward web/extension tools.</li>
+                <li><strong>Consider participant visibility.</strong> Bot-based tools are fine internally but awkward in client-facing or candidate-facing contexts. Overlay tools stay invisible.</li>
+                <li><strong>Verify your language pairs.</strong> Most tools heavily favor English ↔ major languages. For pairs like Korean ↔ Japanese, Hindi ↔ Arabic, or Polish ↔ Ukrainian, only some tools support direct (non-relay) translation.</li>
+                <li><strong>Test on real content for a week.</strong> Free trials matter — translation accuracy varies sharply by audio quality, speaker accent, and topical vocabulary. The "best" tool depends on your specific content mix.</li>
+            </ul>
+
             <h2>Three steps to live translation on Windows</h2>
             <ol class="steps">
                 <li><strong>Install Live Subtitles</strong> from the Microsoft Store.</li>

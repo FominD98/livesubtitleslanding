@@ -6,7 +6,18 @@
       "Bash(done)",
       "Bash(for lang in ar de es fr it ja ko pt ru uk zh)",
       "Bash(do echo \"=== $lang/netflix-subtitles.html ===\")",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(cp index.html /tmp/index.html.backup)",
+      "Bash(node bake-i18n-defaults.js)",
+      "Bash(node -e ' *)",
+      "Bash(node _check_missing.js)",
+      "Bash(cp index.html /tmp/idx1.html)",
+      "Read(//tmp/**)",
+      "Bash(powershell -ExecutionPolicy Bypass -File ./generate-sitemap.ps1)",
+      "Bash(git restore *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(powershell -ExecutionPolicy Bypass -File ./generate-language-pages.ps1)"
     ]
   }
 }

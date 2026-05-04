@@ -145,6 +145,56 @@
             <h2>Who should still use the built-in feature</h2>
             <p>If your only use case is English-only captions on Windows 11 and you do not need translation, dual-language layout, custom overlay positioning, or Windows 10 support — stay with the free built-in tool. It is a perfectly good answer to that specific need. The reason most readers reach this page is that their needs have outgrown it.</p>
 
+            <h2>The five biggest gaps in Windows Live Captions, in detail</h2>
+            <h3>1. No real-time translation between languages</h3>
+            <p>This is the structural gap that pushes most multilingual users to alternatives. Windows Live Captions transcribes the language being spoken — period. If your Teams call has a Japanese speaker, you'll see Japanese characters; if German, German text. The tool never produces English output for non-English audio, no matter how the audio is captured. Live Subtitles solves this with dual subtitle mode (original + translation) across 50+ language pairs.</p>
+
+            <h3>2. Single line, no dual-language display</h3>
+            <p>Even within a single language, language learners benefit from dual-script display (Japanese kanji + romaji, Mandarin Chinese + Pinyin). Windows Live Captions renders one stream of text in one language. Live Subtitles' overlay shows two lines simultaneously — original on top, translation on bottom — which is the canonical setup for serious language acquisition.</p>
+
+            <h3>3. Limited non-English language support</h3>
+            <p>Microsoft's roadmap has expanded supported languages, but several languages remain in preview, partial, or unsupported state. Common gaps include Hindi (limited script handling), Cantonese (folded under generic Chinese), Vietnamese (preview), Polish (partial), and many smaller languages. Live Subtitles supports 50+ languages with mature recognition for each.</p>
+
+            <h3>4. Fixed system caption bar — not movable</h3>
+            <p>Windows' built-in caption bar appears at the top, middle, or bottom of the screen with limited size options. You can't drag it to a second monitor, can't shrink it to a single line, can't customize the font, and can't anchor it to a specific application window. Live Subtitles' overlay is fully draggable, resizable, and remembers position per user preference.</p>
+
+            <h3>5. Inconsistent fullscreen behavior</h3>
+            <p>The system caption bar can disappear, flicker, or appear in the wrong z-order with fullscreen exclusive applications — particularly games and some video players. Live Subtitles' Game Mode is built specifically to keep the caption overlay visible during fullscreen content, with a dedicated render path that doesn't conflict with most graphics APIs.</p>
+
+            <h2>Use cases where you'll want the alternative</h2>
+            <h3>Multilingual teams and international meetings</h3>
+            <p>Sales, customer success, support, and engineering teams with colleagues or clients in non-English regions hit the translation gap immediately. Real-time English captions of incoming Spanish, German, French, Japanese, Korean, or Mandarin speech is what unlocks productive cross-language meetings.</p>
+
+            <h3>Language learners</h3>
+            <p>Built-in Windows captions transcribe Japanese as Japanese, Korean as Korean. For learners that's exactly half the picture — you also need translation while you build comprehension. Dual subtitle mode is the canonical study setup, available in Live Subtitles but not in the built-in tool.</p>
+
+            <h3>Streamers and content creators</h3>
+            <p>Streamers translating their own content for international viewers, or captioning incoming guest audio in a multi-language stream, need a customizable overlay that integrates with OBS scenes. Live Subtitles' floating overlay can be captured by OBS as a window source; built-in Windows captions can't be reliably captured.</p>
+
+            <h3>Gamers</h3>
+            <p>Captions during cutscenes (especially in foreign-language games), Discord voice chat with international squads, and Twitch streams of foreign streamers — all benefit from a Game Mode overlay that survives fullscreen apps. Built-in Windows captions can flicker out in fullscreen games.</p>
+
+            <h3>Windows 10 users</h3>
+            <p>Built-in Live Captions is Windows 11 only. Enterprises and home users still on Windows 10 (a substantial population) don't get the feature at all. Live Subtitles is the only practical option for Windows 10.</p>
+
+            <h2>Migration in 5 minutes</h2>
+            <ol class="steps">
+                <li><strong>Disable built-in Live Captions</strong> if it's currently on (Settings → Accessibility → Captions → Live captions toggle off). Two captioning systems on screen creates visual noise.</li>
+                <li><strong>Install Live Subtitles</strong> from the Microsoft Store. Free trial, no credit card.</li>
+                <li><strong>Choose System Audio</strong> as the source. Same audio target as the built-in feature, no microphone permission needed.</li>
+                <li><strong>Pick your language pair.</strong> English-only for accessibility (replace built-in directly), or English source + your translation target for international content.</li>
+                <li><strong>Drag the overlay where you want it</strong> — bottom of the screen for cinema-style subtitles, second monitor for hands-free meetings, anchored above a specific app for fullscreen content. Position is remembered between sessions.</li>
+            </ol>
+
+            <h2>Tips for getting the most out of Live Subtitles</h2>
+            <ul>
+                <li><strong>Lock the overlay</strong> (Ctrl+Shift+L on Windows) before high-stakes meetings to prevent accidental drag.</li>
+                <li><strong>Save profiles for recurring scenarios.</strong> One profile for English-only accessibility (matching the built-in feature), another for international meetings (EN source, target = your team's language), one for language study (foreign source + English).</li>
+                <li><strong>For fullscreen games</strong>, enable Game Mode in settings before launching the game.</li>
+                <li><strong>Customize font size for your screen.</strong> Larger captions for client-facing meetings where you'll be looking at the camera; smaller for solo work where the overlay shouldn't dominate the screen.</li>
+                <li><strong>Use the export-transcript feature</strong> when you need to refer back to spoken content — interviews, lectures, language-tutoring sessions.</li>
+            </ul>
+
             <a class="cta" href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS" target="_blank">Download Live Subtitles — Free Trial</a>
 
             <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">

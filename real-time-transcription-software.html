@@ -155,6 +155,66 @@
                 <li>Need <strong>human-level transcript accuracy</strong> → <strong>Rev</strong>.</li>
             </ul>
 
+            <h2>Accuracy benchmarks</h2>
+            <h3>What "accuracy" actually means</h3>
+            <p>Accuracy in transcription is usually measured as Word Error Rate (WER) — the percentage of words wrong relative to a reference transcript. WER varies dramatically based on audio quality, speaker accent, topical vocabulary, and microphone quality. A "97% accurate" tool on clean studio English may drop to 80% on accented speech in a noisy meeting.</p>
+
+            <h3>Real-time vs batch</h3>
+            <p>Live transcription tools (Live Subtitles, Otter, Microsoft Teams captions) typically run 90–95% WER on clear English. Batch tools run a hair higher because they can use future-context for ambiguous words. Human-reviewed transcripts (Rev's premium tier) hit 99%+ at substantially higher cost.</p>
+
+            <h3>Where accuracy degrades</h3>
+            <ul>
+                <li><strong>Heavy accents:</strong> 5–15% WER drop on non-native speakers compared to native baseline.</li>
+                <li><strong>Domain vocabulary:</strong> medical, legal, and technical jargon hits all tools — specialty AI training helps marginally.</li>
+                <li><strong>Cross-talk:</strong> all tools struggle when 2+ people speak simultaneously.</li>
+                <li><strong>Bluetooth audio:</strong> 5–10% WER drop vs wired due to compression artifacts.</li>
+                <li><strong>Background noise:</strong> open offices and cafes degrade accuracy noticeably.</li>
+            </ul>
+
+            <h3>Speaker diarization</h3>
+            <p>"Who said what" matters for meeting transcripts. Otter and Trint identify multiple speakers reliably; Rev's human transcripts include speaker labels by default. Live captions (Live Subtitles, Teams) show running text without speaker labels, since the live moment doesn't need attribution as urgently.</p>
+
+            <h2>Pricing landscape</h2>
+            <ul>
+                <li><strong>Live Subtitles:</strong> $7/mo flat or $69/yr. Unlimited minutes, all languages, all features.</li>
+                <li><strong>Otter:</strong> Free with caps; Pro $16.99/mo (1,200 min); Business $30/seat/mo (6,000 min/seat).</li>
+                <li><strong>Rev (AI):</strong> $9.99/mo for 5 hours; $20.99/mo for 20 hours.</li>
+                <li><strong>Rev (human):</strong> ~$1.50 per minute of audio. Premium accuracy at premium price.</li>
+                <li><strong>Trint:</strong> $80/seat/mo for 7 hours; team and enterprise tiers available.</li>
+                <li><strong>Descript:</strong> Creator $24/mo; Pro $40/mo. Sold as a video/podcast editor with transcription as a feature.</li>
+                <li><strong>Microsoft Stream:</strong> Bundled with Microsoft 365 E1/E3/E5 (no extra charge if you already have it).</li>
+            </ul>
+            <p>For pure live captions and translation needs, Live Subtitles' flat rate with no minute caps is the most predictable. For batch transcription with editing workflows (podcasting, video editing, journalism), Descript or Trint earn their higher prices through specialized tooling.</p>
+
+            <h2>Use cases by team type</h2>
+            <h3>Sales and customer-facing teams</h3>
+            <p>Reps need live captions during calls (translation for non-English clients, accent comprehension support) and post-call summaries (CRM notes, follow-up tasks). The right setup is often Live Subtitles for live + Otter or Gong for post-call AI summary. Otter alone covers post-call but lacks the in-the-moment translation.</p>
+
+            <h3>Engineering and product teams</h3>
+            <p>Daily standups, sprint reviews, and design critiques benefit from live captions for accent accessibility on globally distributed teams. Recordings are usually less important — the discussion in the moment is what matters. Live Subtitles is sufficient; Otter is overkill if no one reviews recordings.</p>
+
+            <h3>Legal, healthcare, finance (regulated industries)</h3>
+            <p>Stored cloud transcripts trigger compliance review (HIPAA, attorney-client privilege, financial regulation). Live-only captions (Live Subtitles' default) often clear compliance where bot-based recording tools don't. For specific transcripts that need to exist (depositions, recorded patient consultations), Rev's on-prem or HIPAA-compliant options are the gold standard.</p>
+
+            <h3>Journalists and researchers</h3>
+            <p>Interview transcripts are the work product. Trint, Otter, or Descript are purpose-built. Live Subtitles plays a supporting role — live captions during the interview as a comprehension aid for fast or accented speakers — but the primary tool is the batch transcription editor.</p>
+
+            <h3>Podcasters and video creators</h3>
+            <p>Descript's edit-by-text workflow is unique and changes how creators work. For podcast / video production specifically, it's the right tool. Live Subtitles plays no role in this workflow.</p>
+
+            <h3>Universities and L&D teams</h3>
+            <p>Lectures need both live captions (for hearing-impaired students and non-native English speakers attending in real time) and stored transcripts (for review and asynchronous study). Live Subtitles for live + Microsoft Stream or Trint for the recording covers both.</p>
+
+            <h2>Tips for maximizing transcription accuracy</h2>
+            <ul>
+                <li><strong>Use wired audio over Bluetooth.</strong> Bluetooth's audio compression knocks 5–10% off accuracy.</li>
+                <li><strong>Use a good microphone for participants.</strong> Headset mics outperform laptop built-in mics dramatically; for meetings, encourage participants to use proper mics.</li>
+                <li><strong>Set the language explicitly.</strong> Auto-detect costs latency and occasionally misclassifies similar languages. Tell the tool what language is being spoken.</li>
+                <li><strong>For multiple speakers, ask each to speak from the same input device.</strong> Cross-talk degrades all tools.</li>
+                <li><strong>Pre-load custom vocabulary</strong> when the tool supports it — especially company names, product names, and technical terms.</li>
+                <li><strong>For high-stakes transcripts, do a human review pass.</strong> Even at 95% accuracy, a 1-hour recording has hundreds of word errors. Rev's human tier or a manual edit cycle is worth the cost when the transcript matters legally.</li>
+            </ul>
+
             <h2>Three steps to add live captions to any Windows meeting</h2>
             <ol class="steps">
                 <li><strong>Install Live Subtitles</strong> from the Microsoft Store.</li>
