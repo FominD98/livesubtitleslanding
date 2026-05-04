@@ -4,11 +4,12 @@ const translations = {
             brand: 'Live Subtitles',
             features: 'Features',
             comparison: 'Comparison',
+            faq: 'FAQ',
             download: 'Download'
         },
         header: {
-            title: 'AI Live Captions & Dual Subtitles for Windows — Meetings, Videos, and Language Learning',
-            lead: 'Live Subtitles helps you understand speech faster with dual subtitles and real-time translation for calls, meetings, and videos.'
+            title: 'Live Subtitles — AI Live Captions & Dual Subtitles for Windows',
+            lead: 'Live Subtitles is the live captions and dual subtitles app for Zoom, Teams, YouTube, Netflix, and any Windows or macOS app. Real-time translation in 50+ languages — no microphone needed.'
         },
         downloadBtn: 'Download from Microsoft Store',
         androidBtn: 'Want an Android version',
