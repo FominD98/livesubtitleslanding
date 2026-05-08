@@ -166,6 +166,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why English-to-Spanish live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live English-to-Spanish translation routinely garbles three things:</p>
+            <ul>
+                <li>English uses heavy phrasal verbs ("look up", "put off", "carry out") that map to single, register-specific Spanish verbs — picking the wrong one shifts tone from casual to formal.</li>
+<li>Spanish has formal/informal "you" (tú/usted) plus regional vosotros — direction of conversation has to inform pronoun choice, which generic translators usually skip.</li>
+<li>Numbers, dates, and units use different conventions: 1,000.50 in English equals 1.000,50 in Spanish — live translators that miss this generate confusing financial captions.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural English speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or Español, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 English idioms even Google Translate gets wrong in Spanish</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common English expressions and what they should become in real Spanish — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">Español expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>It is raining cats and dogs</strong></td><td>Está lloviendo gatos y perros</td><td>Está lloviendo a cántaros</td></tr>
+<tr><td><strong>Break a leg</strong></td><td>Rómpete una pierna</td><td>Mucha mierda / Mucha suerte</td></tr>
+<tr><td><strong>Spill the beans</strong></td><td>Derramar los frijoles</td><td>Soltar la sopa / Irse de la lengua</td></tr>
+<tr><td><strong>Cost an arm and a leg</strong></td><td>Costar un brazo y una pierna</td><td>Costar un ojo de la cara</td></tr>
+<tr><td><strong>Hit the nail on the head</strong></td><td>Golpear el clavo en la cabeza</td><td>Dar en el clavo</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Spanish learners</h2>
+            <p>Showing the original English subtitle next to the Spanish translation is the fastest way for Spanish learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the Español subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the Español line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the Español text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in Español content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that Español learners use this way: US-LATAM business calls, Spanish-language Netflix dubs, US Hispanic market podcasts, Spanish university lecture content.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Spanish</h2>
+            <p>Three differences matter when picking a tool for live English-to-Spanish:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the Español line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>Español dialect coverage.</strong> Out of the box: Castilian (Spain), Mexican, Rioplatense (Argentina/Uruguay), Caribbean (Cuba/PR/DR), Andean, and Chilean Spanish — vocabulary and verb conjugation differ enough to warrant region selection.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in Español — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

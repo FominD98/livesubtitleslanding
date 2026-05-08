@@ -169,6 +169,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why Arabic-to-English live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live Arabic-to-English captions routinely garble three things:</p>
+            <ul>
+                <li>Modern Standard Arabic (MSA) is rarely spoken outside news and formal contexts; everyday speech is dialectal — the gap forces models to support Egyptian, Gulf, Levantine, and Maghrebi separately.</li>
+<li>Arabic lacks vowels in standard text but they are essential in speech, so live transcription has to predict vowels from context.</li>
+<li>Right-to-left script and the broken-plural noun system mean live captions need careful rendering and lemmatization to align with English subtitles.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural Arabic speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or العربية, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 Arabic idioms even Google Translate gets wrong</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common Arabic expressions and what they should become in real English — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">العربية expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>على عيني</strong></td><td>On my eye</td><td>Gladly / I will gladly do it</td></tr>
+<tr><td><strong>يضرب عصفورين بحجر واحد</strong></td><td>To hit two birds with one stone</td><td>Kill two birds with one stone</td></tr>
+<tr><td><strong>من قلبه أبيض</strong></td><td>His heart is white</td><td>He is genuinely kind-hearted</td></tr>
+<tr><td><strong>إن غاب القط العب يا فأر</strong></td><td>If the cat is gone, play, mouse</td><td>When the cat's away, the mice will play</td></tr>
+<tr><td><strong>الجار قبل الدار</strong></td><td>The neighbor before the house</td><td>Choose your neighbor before choosing your home</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Arabic learners</h2>
+            <p>Showing the original Arabic subtitle next to the English translation is the fastest way for Arabic learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the العربية subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the العربية line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the العربية text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in العربية content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that العربية learners use this way: Al Jazeera and Al Arabiya broadcasts, MENA business calls, Khaleeji drama and Egyptian films, Arabic-language YouTube tech and finance.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Arabic</h2>
+            <p>Three differences matter when picking a tool for live Arabic-to-English:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the العربية line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>العربية dialect coverage.</strong> Out of the box: Modern Standard Arabic (MSA), Egyptian, Gulf (Saudi/UAE/Qatar), Levantine (Syria/Lebanon/Jordan/Palestine), Maghrebi (Morocco/Algeria/Tunisia), Iraqi, Sudanese, Yemeni.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in العربية — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

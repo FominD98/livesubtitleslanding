@@ -175,6 +175,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why Hindi-to-English live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live Hindi-to-English captions routinely garble three things:</p>
+            <ul>
+                <li>Real-world Hindi is hybrid — Hinglish code-switches between Hindi and English mid-sentence in business, media, and casual speech.</li>
+<li>Devanagari has aspirated/unaspirated consonant pairs (क/ख, त/थ) that generic ASR models built on English audio merge.</li>
+<li>Hindi shares many Persian and Sanskrit-derived synonyms; tone and register changes which one is correct in the English translation.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural Hindi speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or हिन्दी, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 Hindi idioms even Google Translate gets wrong</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common Hindi expressions and what they should become in real English — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">हिन्दी expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>नाक में दम करना</strong></td><td>To put life in someone's nose</td><td>To irritate someone severely</td></tr>
+<tr><td><strong>आसमान सिर पर उठाना</strong></td><td>To lift the sky onto your head</td><td>To make a huge fuss</td></tr>
+<tr><td><strong>दाल में काला होना</strong></td><td>There is something black in the lentils</td><td>Something is suspicious</td></tr>
+<tr><td><strong>ऊंट के मुंह में जीरा</strong></td><td>A cumin seed in a camel's mouth</td><td>Far too little for the need</td></tr>
+<tr><td><strong>अपने मुंह मियाँ मिट्ठू बनना</strong></td><td>To call yourself a sweet parrot</td><td>To brag about oneself</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Hindi learners</h2>
+            <p>Showing the original Hindi subtitle next to the English translation is the fastest way for Hindi learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the हिन्दी subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the हिन्दी line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the हिन्दी text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in हिन्दी content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that हिन्दी learners use this way: Indian SaaS and IT services calls, Bollywood films and OTT (Netflix India, Hotstar, Sony LIV), Hindi YouTube finance and tech, NDTV/Aaj Tak broadcasts.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Hindi</h2>
+            <p>Three differences matter when picking a tool for live Hindi-to-English:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the हिन्दी line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>हिन्दी dialect coverage.</strong> Out of the box: Standard Hindi (Khariboli), Awadhi, Bhojpuri, Braj Bhasha, Haryanvi, plus Hinglish (Hindi-English code mixing) in urban India.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in हिन्दी — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

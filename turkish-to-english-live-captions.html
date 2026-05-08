@@ -166,6 +166,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why Turkish-to-English live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live Turkish-to-English captions routinely garble three things:</p>
+            <ul>
+                <li>Turkish is agglutinative — a single word like "evlerimizden" packs five English words ("from our houses") into seven suffixes that translators often mis-segment.</li>
+<li>Vowel harmony shifts the same suffix between four phonetic forms, which acoustic models can confuse with separate words.</li>
+<li>Subject-Object-Verb word order means the verb arrives last, so naive sentence-level translation often produces a partial English caption with the action missing.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural Turkish speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or Türkçe, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 Turkish idioms even Google Translate gets wrong</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common Turkish expressions and what they should become in real English — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">Türkçe expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Kafayı yemek</strong></td><td>To eat the head</td><td>To go crazy / lose it</td></tr>
+<tr><td><strong>Etekleri zil çalmak</strong></td><td>Skirts ringing like bells</td><td>To be over the moon with joy</td></tr>
+<tr><td><strong>Pabucu dama atılmak</strong></td><td>Shoe thrown onto the roof</td><td>To be replaced or fall out of favor</td></tr>
+<tr><td><strong>Kulak misafiri olmak</strong></td><td>To be the guest of an ear</td><td>To accidentally overhear a conversation</td></tr>
+<tr><td><strong>Ağzından bal damlamak</strong></td><td>Honey dripping from the mouth</td><td>To speak very sweetly</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Turkish learners</h2>
+            <p>Showing the original Turkish subtitle next to the English translation is the fastest way for Turkish learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the Türkçe subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the Türkçe line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the Türkçe text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in Türkçe content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that Türkçe learners use this way: Istanbul SaaS and e-commerce, Turkish drama on Netflix and Disney+, Bosphorus tourism content, Turkish-language YouTube finance and gaming channels.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Turkish</h2>
+            <p>Three differences matter when picking a tool for live Turkish-to-English:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the Türkçe line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>Türkçe dialect coverage.</strong> Out of the box: Istanbul standard, Anatolian Turkish, Cypriot Turkish, and Azerbaijani-influenced Eastern Anatolian variants.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in Türkçe — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

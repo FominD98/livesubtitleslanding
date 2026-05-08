@@ -166,6 +166,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why Ukrainian-to-English live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live Ukrainian-to-English captions routinely garble three things:</p>
+            <ul>
+                <li>Ukrainian has a distinct phoneme inventory from Russian (the soft "ї", "є", and "ґ") — engines built around Russian audio routinely mistranscribe it as Russian.</li>
+<li>Code-switching between Ukrainian and Russian (surzhyk) inside the same sentence is common in everyday speech and trips up monolingual recognizers.</li>
+<li>Cyrillic homographs across Ukrainian and Russian look identical but pronounce differently, which forces the model to disambiguate from acoustic context.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural Ukrainian speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or Українська, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 Ukrainian idioms even Google Translate gets wrong</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common Ukrainian expressions and what they should become in real English — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">Українська expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Як корова язиком злизала</strong></td><td>As if a cow licked it off with its tongue</td><td>Disappeared without a trace</td></tr>
+<tr><td><strong>Брати бика за роги</strong></td><td>To take the bull by the horns</td><td>To deal with a problem head-on</td></tr>
+<tr><td><strong>На городі бузина, а в Києві дядько</strong></td><td>Elder in the garden, an uncle in Kyiv</td><td>Two completely unrelated things</td></tr>
+<tr><td><strong>Не мала баба клопоту, купила порося</strong></td><td>Granny had no troubles, so she bought a piglet</td><td>Asked for trouble unnecessarily</td></tr>
+<tr><td><strong>Тримати язика за зубами</strong></td><td>To keep your tongue behind your teeth</td><td>To stay silent / keep a secret</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Ukrainian learners</h2>
+            <p>Showing the original Ukrainian subtitle next to the English translation is the fastest way for Ukrainian learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the Українська subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the Українська line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the Українська text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in Українська content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that Українська learners use this way: Ukrainian war reporting, Kyiv tech sector calls, Ukrainian-language YouTube journalism, Suspilne and 1+1 broadcasts.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Ukrainian</h2>
+            <p>Three differences matter when picking a tool for live Ukrainian-to-English:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the Українська line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>Українська dialect coverage.</strong> Out of the box: Standard Ukrainian (literary), Western (Galician/Bukovynian), Central, and Southeastern dialects, plus surzhyk mixed speech.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in Українська — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

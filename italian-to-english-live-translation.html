@@ -168,6 +168,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why Italian-to-English live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live Italian-to-English captions routinely garble three things:</p>
+            <ul>
+                <li>Italian elision ("d'accordo", "l'amico") joins words at vowel boundaries, and weaker recognizers treat the result as one undefined token.</li>
+<li>Doubled consonants ("anno" vs "ano") completely change meaning but are barely audible to non-native ears or generic models.</li>
+<li>Regional dialects (Sicilian, Neapolitan, Venetian) carry vocabulary and grammar so different from standard Italian that they need separate language profiles.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural Italian speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or Italiano, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 Italian idioms even Google Translate gets wrong</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common Italian expressions and what they should become in real English — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">Italiano expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>In bocca al lupo</strong></td><td>In the mouth of the wolf</td><td>Good luck (theatrical use)</td></tr>
+<tr><td><strong>Non avere peli sulla lingua</strong></td><td>To not have hair on your tongue</td><td>To speak bluntly</td></tr>
+<tr><td><strong>Avere le mani in pasta</strong></td><td>To have hands in the dough</td><td>To be deeply involved in something</td></tr>
+<tr><td><strong>Stare con le mani in mano</strong></td><td>To stand with hands in hand</td><td>To do nothing / stand idle</td></tr>
+<tr><td><strong>Prendere due piccioni con una fava</strong></td><td>To take two pigeons with one bean</td><td>Kill two birds with one stone</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Italian learners</h2>
+            <p>Showing the original Italian subtitle next to the English translation is the fastest way for Italian learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the Italiano subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the Italiano line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the Italiano text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in Italiano content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that Italiano learners use this way: Milan fashion and finance, Italian football broadcasts, RAI documentaries, Italian YouTube cooking and travel.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Italian</h2>
+            <p>Three differences matter when picking a tool for live Italian-to-English:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the Italiano line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>Italiano dialect coverage.</strong> Out of the box: Standard Italian, Tuscan, Roman, Milanese, Neapolitan, Sicilian, Venetian — many are partly mutually unintelligible.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in Italiano — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

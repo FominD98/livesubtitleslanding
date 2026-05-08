@@ -8,6 +8,7 @@ param(
     [string]$ArticlesPath = "articles",
     [string]$OutputFile = "sitemap.xml",
     [string[]]$StaticPages = @(
+        # Cluster A: platform pages (have 16 locales each)
         "netflix-subtitles.html",
         "google-meet-live-captions.html",
         "zoom-live-captions.html",
@@ -23,11 +24,48 @@ param(
         "obs-subtitles.html",
         "tiktok-live-captions.html",
         "linkedin-live-captions.html",
+        "facebook-live-subtitles.html",
+        "instagram-live-captions.html",
+        "coursera-subtitles.html",
+        "udemy-live-captions.html",
+        "steam-subtitles.html",
+        "vlc-subtitles.html",
+        "spotify-podcast-subtitles.html",
+        "google-classroom-subtitles.html",
+        "microsoft-edge-subtitles.html",
+        "restream-subtitles.html",
+        "vimeo-subtitles.html",
+        "viber-live-translation.html",
+        "telegram-subtitles.html",
+        "discord-live-captions.html",
+        "any-app-live-captions.html",
+        # Cluster B: language-pair pages (EN-only, no locale copies)
         "spanish-to-english-live-subtitles.html",
         "chinese-to-english-live-captions.html",
         "japanese-to-english-live-subtitles.html",
         "korean-to-english-live-captions.html",
         "french-to-english-live-translation.html",
+        "german-to-english-live-captions.html",
+        "portuguese-to-english-translation.html",
+        "russian-to-english-live-captions.html",
+        "arabic-to-english-live-subtitles.html",
+        "hindi-to-english-live-captions.html",
+        "italian-to-english-live-translation.html",
+        "dutch-to-english-live-captions.html",
+        "polish-to-english-live-subtitles.html",
+        "turkish-to-english-live-captions.html",
+        "ukrainian-to-english-live-subtitles.html",
+        "english-to-spanish-live-subtitles.html",
+        "english-to-chinese-live-captions.html",
+        # Cluster C: comparison / listicle (EN-only)
+        "best-live-caption-apps-windows.html",
+        "windows-live-captions-alternative.html",
+        "language-reactor-alternative.html",
+        "otter-ai-alternative.html",
+        "best-dual-subtitle-app.html",
+        "real-time-transcription-software.html",
+        "live-translation-software-comparison.html",
+        # Legal
         "privacy.html"
     )
 )
@@ -198,6 +236,20 @@ $indexHreflang = if ($indexHrefMap.Count -gt 0) {
     New-HreflangLinks -LanguageToHref $indexHrefMap -XDefaultHref $indexXDefaultHref
 } else {
     ''
+}
+
+# Articles hub at /articles/ (single EN page, no hreflang cluster)
+$articlesHubPath = Join-Path -Path $ArticlesPath -ChildPath "index.html"
+if (Test-IsIndexable -Path $articlesHubPath) {
+    $articlesHubLastMod = Get-IsoLastMod -Path $articlesHubPath -FallbackDate $currentDate
+    $xml += @"
+    <url>
+        <loc>$Domain/$ArticlesPath/</loc>
+        <lastmod>$articlesHubLastMod</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+"@
 }
 
 foreach ($lang in $indexLanguages) {

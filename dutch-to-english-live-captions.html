@@ -166,6 +166,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why Dutch-to-English live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live Dutch-to-English captions routinely garble three things:</p>
+            <ul>
+                <li>The guttural G sound (zacht/hard) varies between Hollandic and Flemish speech, and many transcription tools confuse it with H or even silence.</li>
+<li>Dutch packs words together: contractions like "kheb" (ik heb) and "kweet" (ik weet) are pervasive in casual speech.</li>
+<li>Word order in subordinate clauses moves the verb to the end, which generic translators often re-order incorrectly when translating live audio.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural Dutch speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or Nederlands, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 Dutch idioms even Google Translate gets wrong</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common Dutch expressions and what they should become in real English — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">Nederlands expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Het regent pijpenstelen</strong></td><td>It rains pipe stems</td><td>It is pouring (raining cats and dogs)</td></tr>
+<tr><td><strong>Niet op zijn mondje gevallen</strong></td><td>Not fallen on his little mouth</td><td>Quick-witted, never short on words</td></tr>
+<tr><td><strong>De kat uit de boom kijken</strong></td><td>To watch the cat from the tree</td><td>To wait and see how things develop</td></tr>
+<tr><td><strong>Iets onder de knie hebben</strong></td><td>To have something under the knee</td><td>To have mastered something</td></tr>
+<tr><td><strong>Met de deur in huis vallen</strong></td><td>To fall with the door into the house</td><td>To get straight to the point</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Dutch learners</h2>
+            <p>Showing the original Dutch subtitle next to the English translation is the fastest way for Dutch learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the Nederlands subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the Nederlands line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the Nederlands text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in Nederlands content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that Nederlands learners use this way: Amsterdam fintech startups, Eindhoven hardware engineering teams, NPO and VRT broadcasts, Belgian-Dutch business meetings.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Dutch</h2>
+            <p>Three differences matter when picking a tool for live Dutch-to-English:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the Nederlands line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>Nederlands dialect coverage.</strong> Out of the box: Standard Netherlands Dutch (ABN), Hollandic (Randstad), Brabantian, Limburgish, and Belgian Flemish (Vlaams) including West-Flemish.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in Nederlands — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

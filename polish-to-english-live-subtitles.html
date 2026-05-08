@@ -166,6 +166,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why Polish-to-English live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live Polish-to-English captions routinely garble three things:</p>
+            <ul>
+                <li>Polish has consonant clusters like "bezwzględny" or "źdźbło" that often confuse generic speech-to-text engines built primarily on English data.</li>
+<li>Seven grammatical cases mean the same noun appears in many different surface forms — without case-aware translation, English output drifts.</li>
+<li>Free word order is grammatically valid in Polish, so the right English structure depends on prosody and context, not just on word sequence.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural Polish speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or Polski, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 Polish idioms even Google Translate gets wrong</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common Polish expressions and what they should become in real English — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">Polski expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Nie mój cyrk, nie moje małpy</strong></td><td>Not my circus, not my monkeys</td><td>Not my problem</td></tr>
+<tr><td><strong>Bułka z masłem</strong></td><td>A bun with butter</td><td>A piece of cake / very easy</td></tr>
+<tr><td><strong>Mieć muchy w nosie</strong></td><td>To have flies in your nose</td><td>To be in a bad mood</td></tr>
+<tr><td><strong>Rzucać grochem o ścianę</strong></td><td>To throw peas at a wall</td><td>To talk to someone who is not listening</td></tr>
+<tr><td><strong>Z deszczu pod rynnę</strong></td><td>From the rain under the gutter</td><td>Out of the frying pan into the fire</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Polish learners</h2>
+            <p>Showing the original Polish subtitle next to the English translation is the fastest way for Polish learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the Polski subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the Polski line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the Polski text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in Polski content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that Polski learners use this way: Polish IT outsourcing meetings, Warsaw fintech earnings, Polish gaming and esports streams, TVP and Netflix Polska originals.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Polish</h2>
+            <p>Three differences matter when picking a tool for live Polish-to-English:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the Polski line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>Polski dialect coverage.</strong> Out of the box: Standard Polish (Warsaw/Cracow), Silesian, Greater Polish, Lesser Polish, and Mazovian regional accents.</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in Polski — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>

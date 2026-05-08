@@ -175,6 +175,57 @@
                 </a>
             </div>
 
+            
+            <h2>Why English-to-Chinese live translation is harder than it looks</h2>
+            <p>Generic translators were trained on news text, not on conference calls, podcasts, and movies. That is why live English-to-Chinese translation routinely garbles three things:</p>
+            <ul>
+                <li>Mandarin is tonal — the same syllable "ma" carries four totally different meanings depending on tone, and English-trained translators routinely pick the wrong character.</li>
+<li>Chinese has no inflection: tense, plurality, and gender are inferred from context, so an English source has to be parsed for those clues before generating a clean Mandarin caption.</li>
+<li>Simplified versus Traditional script is a hard switch: a learner in Taipei needs Traditional, a colleague in Shanghai needs Simplified, and getting it wrong looks unprofessional.</li>
+
+            </ul>
+            <p>Live Subtitles handles all three by combining a recognizer trained on natural English speech with translation that uses sentence context, not raw token sequences. The result is captions that read like English (or 中文, when going the other way), not like a literal cipher.</p>
+
+            <h2>5 English idioms even Google Translate gets wrong in Chinese</h2>
+            <p>Idioms are the single biggest source of awkward AI translation. Below are five common English expressions and what they should become in real Chinese — versus the literal output you usually get.</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">中文 expression</th>
+                        <th style="text-align:left; padding:8px;">Literal translation</th>
+                        <th style="text-align:left; padding:8px;">What it really means</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>It is raining cats and dogs</strong></td><td>It is raining cats and dogs (literal)</td><td>倾盆大雨 (qīng pén dà yǔ) — pouring like an upturned basin</td></tr>
+<tr><td><strong>Break a leg</strong></td><td>Break a leg (literal)</td><td>祝你好运 (zhù nǐ hǎo yùn) — wishing you luck</td></tr>
+<tr><td><strong>Hit the nail on the head</strong></td><td>Hit the nail on the head (literal)</td><td>一针见血 (yī zhēn jiàn xiě) — one needle draws blood</td></tr>
+<tr><td><strong>When pigs fly</strong></td><td>When pigs fly (literal)</td><td>太阳从西边出来 (tài yáng cóng xī biān chū lái) — when the sun rises in the west</td></tr>
+<tr><td><strong>Spill the beans</strong></td><td>Spill the beans (literal)</td><td>泄露秘密 (xiè lù mì mì) — leak the secret</td></tr>
+
+                </tbody>
+            </table>
+            <p class="muted">Live Subtitles applies idiom-aware AI translation, so phrases like the ones above are mapped to a natural English equivalent rather than rendered word-for-word.</p>
+
+            <h2>Dual-subtitle workflows for Chinese learners</h2>
+            <p>Showing the original English subtitle next to the Chinese translation is the fastest way for Chinese learners to lock in vocabulary and idiomatic phrasing in context.</p>
+            <ul>
+                <li><strong>Shadowing practice</strong> — speak along with the 中文 subtitle while glancing at the English translation only when you stall.</li>
+                <li><strong>Active listening</strong> — hide the 中文 line and only reveal it when comprehension breaks, then study the difference.</li>
+                <li><strong>Vocabulary harvesting</strong> — pause on a phrase, copy the 中文 text and the English equivalent into your spaced-repetition deck (Anki, RemNote).</li>
+                <li><strong>Idiom hunting</strong> — actively look for non-literal expressions in 中文 content and note how the AI handled them.</li>
+            </ul>
+            <p>Common content that 中文 learners use this way: US-China business calls, English-language tech content for Chinese learners, Chinese subtitles for Hollywood film releases, English presentations for Mandarin-speaking audiences.</p>
+
+            <h2>Live Subtitles vs Google Translate, DeepL, and Apple Translate for Chinese</h2>
+            <p>Three differences matter when picking a tool for live English-to-Chinese:</p>
+            <ul>
+                <li><strong>System-wide audio capture.</strong> Google Translate and DeepL want pasted text or a microphone. Live Subtitles taps Windows system audio directly, so any video, call, or stream becomes captionable without copy-paste.</li>
+                <li><strong>Dual-line output.</strong> Apple Translate shows only one language at a time. Live Subtitles renders the 中文 line and the English line simultaneously — the prerequisite for learning, not just translating.</li>
+                <li><strong>中文 dialect coverage.</strong> Out of the box: Mandarin (Putonghua, the standard) plus regional accents from Beijing, Sichuan, and Shanghai; written output in Simplified (mainland China, Singapore) or Traditional (Taiwan, Hong Kong).</li>
+            </ul>
+            <p>For one-off text translation, DeepL is excellent. For continuous live audio in 中文 — meetings, podcasts, drama, YouTube — only a system-audio + dual-subtitle workflow keeps up.</p>
+
             <h2>Related platform guides</h2>
             <div class="links">
                 <p><a href="/zoom-live-captions.html">Zoom Live Captions & AI Translation</a></p>
