@@ -10,30 +10,19 @@
     <link rel="canonical" href="https://live-subtitles.com/articles/en/article-20.html" />
     <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
     <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
-    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
-    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-20.html" />
-    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-20.html" />
-    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-20.html" />
-    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-20.html" />
-    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-20.html" />
-    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-20.html" />
-    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-20.html" />
-    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-20.html" />
-    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-20.html" />
-    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-20.html" />
-    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-20.html" />
-    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-20.html" />
-    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-20.html" />
-    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-20.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="Fullscreen Subtitle Overlay Troubleshooting for Games">
     <meta property="og:description" content="Operational checklist to restore subtitle overlay stability in gaming scenarios.">
     <meta property="og:url" content="https://live-subtitles.com/articles/en/article-20.html">
-    <meta property="og:image" content="https://live-subtitles.com/preview.png">
+    <meta property="og:image" content="https://live-subtitles.com/articles/img/en/games.webp">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="719">
+    <meta property="og:image:alt" content="Live subtitle overlay during a competitive game match">
+    <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fullscreen Subtitle Overlay Troubleshooting for Games">
     <meta name="twitter:description" content="Quick diagnosis path for visibility and interaction issues in game subtitle overlays.">
-    <meta name="twitter:image" content="https://live-subtitles.com/preview.png">
+    <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
@@ -52,19 +41,23 @@
       "@type": "Article",
       "headline": "Fullscreen Subtitle Overlay Troubleshooting for Games",
       "datePublished": "2026-03-05",
-      "dateModified": "2026-03-05",
-      "author": { "@type": "Person", "name": "Editorial Team" },
+      "dateModified": "2026-05-12",
+      "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
       "description": "Troubleshooting checklist for subtitle overlays in games: fullscreen visibility, borderless setup, focus issues, hotkey behavior, and practical recovery steps.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/en/article-20.html"
     }
     </script>
+    <link rel="preload" as="image" href="/articles/img/en/games.webp">
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Fullscreen Subtitle Overlay Troubleshooting for Games</h1>
         <div class="article-date" itemprop="datePublished" content="2026-03-05">March 5, 2026</div>
+        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <img class="article-hero" src="/articles/img/en/games.webp" alt="Live subtitle overlay during a competitive game match" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>If subtitle overlay behavior becomes unstable during gaming, random fixes usually waste time. This playbook gives a quick diagnosis order to isolate root cause: rendering mode, interaction mode, or workflow mismatch.</p>
@@ -98,6 +91,52 @@
 
             <h2>When escalation is required</h2>
             <p>If overlay is still hidden in specific titles, document exact game, API mode, and display path. This helps separate title-specific rendering constraints from generic subtitle configuration issues.</p>
+
+            <h2>Why "subtitles don't show in fullscreen" is rarely a subtitle bug</h2>
+            <p>When a player reports that captions are missing during gameplay, the instinct is to blame the subtitle engine. In practice, more than 80% of the cases we triage trace back to one of three causes that have nothing to do with the caption pipeline: <strong>exclusive swap chain rendering</strong>, <strong>HDR composition path</strong>, or <strong>third-party overlay collisions</strong>. Until those are ruled out, changing subtitle settings makes the problem move, not disappear.</p>
+
+            <h2>Diagnostic order that saves time</h2>
+            <p>Triage in this exact order. Stop at the first layer that reproduces the issue.</p>
+            <ol>
+                <li><strong>Reproduce in a 60-second loop.</strong> Launch the game, trigger a voice line, observe the overlay. If the bug is intermittent, log timestamps.</li>
+                <li><strong>Switch display mode.</strong> Move from exclusive fullscreen to Borderless Fullscreen. If the overlay returns, root cause is the swap chain.</li>
+                <li><strong>Toggle HDR.</strong> If subtitles render but appear washed out or invisible against bright backgrounds, the HDR tone-mapping path is the culprit.</li>
+                <li><strong>Disable secondary overlays.</strong> Steam, Discord, GeForce Experience, and Xbox Game Bar can each register a global overlay. Disable them one by one for 1 match each.</li>
+                <li><strong>Test in a non-game window.</strong> Speak a test phrase while looking at a YouTube video. If the overlay works there, the issue is game-specific.</li>
+            </ol>
+
+            <h2>Per-cause fix recipes</h2>
+
+            <h3>Cause A: Exclusive swap chain</h3>
+            <p>Identified when subtitles work on the desktop and in Borderless Fullscreen but vanish in exclusive fullscreen. Fix: change game to Borderless Fullscreen. Modern GPU drivers compose this nearly identically to exclusive — the performance delta is usually under 2%, often zero on Windows 11.</p>
+
+            <h3>Cause B: HDR composition</h3>
+            <p>Identified when the overlay is visible but unreadable: black-on-black, white-on-white, or color-shifted. Fix: enable Windows HDR Calibration (Settings → System → Display → HDR), set SDR content brightness to 30–40, and switch overlay theme to "high-contrast dark."</p>
+
+            <h3>Cause C: Overlay stack collision</h3>
+            <p>Identified when overlays flicker or alternate visibility. Fix: assign a single "primary overlay" role to the subtitle tool. Disable Steam overlay in-game (Steam → Settings → In-Game), disable Discord overlay (User Settings → Game Overlay), and turn off Xbox Game Bar (Settings → Gaming → Game Bar).</p>
+
+            <h3>Cause D: Multi-monitor focus loss</h3>
+            <p>Identified when subtitles render on the secondary monitor but the game is on the primary. Fix: pin the subtitle window to the primary monitor via the application's "Pin to display" option, then enable Windows "Optimizations for windowed games" (Settings → System → Display → Graphics → Default settings).</p>
+
+            <h2>The 5 questions to ask in every bug report</h2>
+            <ol>
+                <li>Game title and exact version (patch number, not "latest").</li>
+                <li>Display mode used during the bug.</li>
+                <li>HDR enabled? Single or multi-monitor?</li>
+                <li>Other overlays running (Discord, Steam, GeForce, Xbox Bar)?</li>
+                <li>Was the bug present immediately on launch or after a window switch?</li>
+            </ol>
+            <p>Without these answers, you are guessing. With them, root cause is usually obvious in under five minutes.</p>
+
+            <h2>When the fix is "do nothing"</h2>
+            <p>A small subset of titles intentionally block compositor overlays during anti-cheat checks. Examples include certain ranked modes that lock the swap chain to prevent screen-capture cheats. In those games, no subtitle stack will display in exclusive fullscreen. The honest answer is: use Borderless Fullscreen for that specific title and accept the negligible performance trade.</p>
+
+            <h2>Why this matters for ranked performance</h2>
+            <p>A flaky overlay that works 90% of the time is worse than one that fails consistently. With consistent failure, you adapt. With intermittent failure, you keep reaching for a callout that is not there and lose the rhythm. The goal of troubleshooting is not "make it work most of the time" — it is "make it predictable enough that you stop thinking about it."</p>
+
+            <h2>Templates for documenting recurring issues</h2>
+            <p>Keep a short Markdown file in your Discord pinned messages. Two columns: <em>Title</em> and <em>Known constraint</em>. Example rows: "Valorant — overlay requires Borderless," "CS2 — works in both modes after 2026-03 patch." This file is more valuable than any troubleshooting wiki because it is your team's empirical truth.</p>
 
             <h2>Related resources</h2>
             <ul>

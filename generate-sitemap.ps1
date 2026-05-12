@@ -106,6 +106,51 @@ function New-HreflangLinks {
     return $links
 }
 
+# Preload git data once: which files are dirty (uncommitted) and what date
+# each tracked file was last committed. This avoids per-file git calls during
+# sitemap generation (would be ~750 invocations otherwise).
+$script:GitDirty = @{}
+$script:GitLastCommit = @{}
+$script:GitAvailable = $false
+$todayISO = (Get-Date).ToString("yyyy-MM-dd")
+
+try {
+    $null = & git rev-parse --is-inside-work-tree 2>$null
+    if ($LASTEXITCODE -eq 0) {
+        $script:GitAvailable = $true
+
+        # Dirty set: anything in working-tree or staged
+        $statusLines = & git status --porcelain 2>$null
+        foreach ($line in $statusLines) {
+            if ($line.Length -lt 4) { continue }
+            $p = $line.Substring(3).Trim().Trim('"')
+            if ($p -match '^(.*?) -> (.*)$') { $p = $Matches[2] }
+            $p = $p -replace '\\', '/'
+            $script:GitDirty[$p] = $true
+        }
+
+        # Last-commit date per file: walk `git log --name-only` in reverse-chrono order.
+        # First sighting of a path is its newest commit date.
+        $logLines = & git log --name-only --format='@@DATE@@%cs' 2>$null
+        $curDate = ''
+        foreach ($line in $logLines) {
+            if ($line.StartsWith('@@DATE@@')) {
+                $curDate = $line.Substring(8).Trim()
+            }
+            elseif ($curDate -and $line.Trim() -ne '') {
+                $norm = $line.Trim() -replace '\\', '/'
+                if (-not $script:GitLastCommit.ContainsKey($norm)) {
+                    $script:GitLastCommit[$norm] = $curDate
+                }
+            }
+        }
+
+        Write-Host "Git stats: $($script:GitDirty.Count) dirty, $($script:GitLastCommit.Count) tracked" -ForegroundColor DarkGray
+    }
+} catch {
+    Write-Host "Git unavailable, falling back to file mtime" -ForegroundColor DarkYellow
+}
+
 function Get-IsoLastMod {
     param(
         [string]$Path,
@@ -113,10 +158,18 @@ function Get-IsoLastMod {
     )
 
     if ([string]::IsNullOrWhiteSpace($Path)) { return $FallbackDate }
-    if (Test-Path $Path) {
-        return (Get-Item $Path).LastWriteTime.ToString("yyyy-MM-dd")
+    if (-not (Test-Path $Path)) { return $FallbackDate }
+
+    if ($script:GitAvailable) {
+        $norm = $Path -replace '\\', '/'
+        # 1. Dirty (uncommitted) -> today, content has actually just changed
+        if ($script:GitDirty.ContainsKey($norm)) { return $todayISO }
+        # 2. Tracked and clean -> last commit date for this file
+        if ($script:GitLastCommit.ContainsKey($norm)) { return $script:GitLastCommit[$norm] }
     }
-    return $FallbackDate
+
+    # 3. Untracked or git unavailable -> file mtime
+    return (Get-Item $Path).LastWriteTime.ToString("yyyy-MM-dd")
 }
 
 function Test-IsIndexable {
@@ -316,6 +369,32 @@ foreach ($article in $sortedArticles) {
 $articleHreflang    </url>
 "@
     }
+}
+
+# Team / about pages (EN-only, no hreflang cluster)
+$teamPages = @(
+    "about/team/index.html",
+    "about/team/daniel-formind.html",
+    "about/team/sofia-almeida.html",
+    "about/team/mei-lin-chen.html",
+    "about/team/aarav-sharma.html",
+    "about/team/lukas-bergstrom.html",
+    "about/team/hiroshi-tanaka.html"
+)
+foreach ($tp in $teamPages) {
+    if (-not (Test-IsIndexable -Path $tp)) { continue }
+    $tpLastMod = Get-IsoLastMod -Path $tp -FallbackDate $currentDate
+    # URL: keep /about/team/ for the index, full path otherwise
+    $loc = if ($tp -eq "about/team/index.html") { "$Domain/about/team/" } else { "$Domain/$tp" }
+    $xml += @"
+
+    <url>
+        <loc>$loc</loc>
+        <lastmod>$tpLastMod</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+"@
 }
 
 $xml += @"

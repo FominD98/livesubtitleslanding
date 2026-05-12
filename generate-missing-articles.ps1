@@ -2,6 +2,17 @@
     [string]$ArticlesRoot = "articles"
 )
 
+# DEPRECATED 2026-05-12: This legacy generator emits an Organization-author
+# JSON-LD block ("name": "Live Subtitles", "@type": "Organization") which
+# conflicts with the per-article Person authors (Sofia Almeida, Mei Lin Chen,
+# Aarav Sharma, Lukas Bergström, Hiroshi Tanaka, Daniel Formind) that the
+# articles now ship with. Re-running this script will silently downgrade
+# E-E-A-T signals across the locale set.
+#
+# Do not run without first updating the author + publisher hashtables in this
+# file (see line ~433) and re-checking against _assign_article_authors.py.
+throw "generate-missing-articles.ps1 is deprecated. See header comment for the migration to per-article Person authors before re-enabling."
+
 $ErrorActionPreference = "Stop"
 
 if (-not (Test-Path $ArticlesRoot)) {
@@ -430,7 +441,9 @@ foreach ($lang in ($rewritePlan.Keys | Sort-Object)) {
             description = $desc
             datePublished = $date
             inLanguage = $lang
-            author = @{ "@type" = "Organization"; name = "Live Subtitles" }
+            # NOTE: Article-level author must be a Person, not an Organization.
+            # See _assign_article_authors.py for the canonical article-N -> author mapping.
+            author = @{ "@type" = "Person"; name = "Daniel Formind"; url = "https://live-subtitles.com/about/team/daniel-formind.html"; jobTitle = "Founder & Engineer, Live Subtitles" }
             publisher = @{ "@type" = "Organization"; name = "Live Subtitles" }
             mainEntityOfPage = $url
         }

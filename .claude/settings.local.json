@@ -17,7 +17,18 @@
       "Bash(git restore *)",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(powershell -ExecutionPolicy Bypass -File ./generate-language-pages.ps1)"
+      "Bash(powershell -ExecutionPolicy Bypass -File ./generate-language-pages.ps1)",
+      "Bash(unzip *)",
+      "Bash(awk 'NR<=200{print NR\": \"$0}' C:/pet/livesubtitleslanding/index.html)",
+      "Bash(xargs -n1 basename)",
+      "Bash(git -C C:/pet/livesubtitleslanding status --short)",
+      "Bash(git -C C:/pet/livesubtitleslanding ls-files seo/changelog/)",
+      "Bash(git -C C:/pet/livesubtitleslanding check-ignore -v seo/changelog/2026-05-08-coverage-fixes.md)",
+      "Bash(git -C C:/pet/livesubtitleslanding ls-files)",
+      "Bash(git *)",
+      "Bash(pwsh -NoProfile -File ./generate-sitemap.ps1)",
+      "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./generate-sitemap.ps1)",
+      "Bash(awk '{print $1}')"
     ]
   }
 }
