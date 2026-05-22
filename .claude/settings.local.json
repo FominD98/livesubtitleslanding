@@ -28,7 +28,8 @@
       "Bash(git *)",
       "Bash(pwsh -NoProfile -File ./generate-sitemap.ps1)",
       "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./generate-sitemap.ps1)",
-      "Bash(awk '{print $1}')"
+      "Bash(awk '{print $1}')",
+      "WebFetch(domain:alternativeto.net)"
     ]
   }
 }
