@@ -566,8 +566,8 @@ const translations = {
             download: 'Herunterladen'
         },
         header: {
-            title: 'Filme anschauen, Sprachen lernen — leicht verstehen Sie die Live-Sprache',
-            lead: 'Live Subtitles: Ihr Assistent mit Doppel-Untertiteln, Spracherkennung und Real-Time-Übersetzung'
+            title: 'Live-Übersetzer für Meetings, Anrufe und Gespräche auf Ihrem PC',
+            lead: 'Übersetzt Sprache in Echtzeit in 50+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung — ohne Mikrofon.'
         },
         downloadBtn: 'Aus dem Microsoft Store herunterladen',
         androidBtn: 'Ich möchte die Android-Version',

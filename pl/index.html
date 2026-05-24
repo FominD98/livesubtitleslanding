@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cid passthrough + auto conversion onclick on Store links -->
+    <script src="/cid-tracker.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830">
@@ -1326,7 +1328,7 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Windows</h5>
                         <a href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.microsoft.com/detail/9ph1r9djg47s');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1345,7 +1347,7 @@
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">macOS</h5>
                         <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac"
                             target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1821,7 +1823,7 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Windows</h5>
                         <a href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.microsoft.com/detail/9ph1r9djg47s');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1840,7 +1842,7 @@
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">macOS</h5>
                         <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac"
                             target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"

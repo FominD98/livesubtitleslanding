@@ -6,20 +6,36 @@
     }
     var campaign = '';
     try { campaign = sessionStorage.getItem('lsCid') || ''; } catch (e) { campaign = incoming || ''; }
-    if (!campaign) return;
+
+    var cidToSet = campaign || 'site_organic';
 
     function instrument() {
-        var links = document.querySelectorAll('a[href*="apps.microsoft.com"], a[href*="apps.apple.com"]');
-        for (var i = 0; i < links.length; i++) {
-            var a = links[i];
+        var msLinks = document.querySelectorAll('a[href*="apps.microsoft.com"]');
+        for (var i = 0; i < msLinks.length; i++) {
+            var a = msLinks[i];
             try {
                 var u = new URL(a.href, location.origin);
-                if (!u.searchParams.has('cid')) {
-                    u.searchParams.set('cid', campaign);
-                    a.href = u.toString();
-                }
-                if (typeof gtag_report_conversion === 'function') {
+                u.searchParams.set('cid', cidToSet);
+                a.href = u.toString();
+                if (typeof gtag_report_conversion === 'function' && !a.getAttribute('onclick')) {
                     a.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
+                }
+            } catch (e) { /* malformed URL — skip */ }
+        }
+
+        var appleLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
+        for (var j = 0; j < appleLinks.length; j++) {
+            var b = appleLinks[j];
+            try {
+                if (campaign) {
+                    var v = new URL(b.href, location.origin);
+                    if (!v.searchParams.has('ct')) {
+                        v.searchParams.set('ct', campaign);
+                        b.href = v.toString();
+                    }
+                }
+                if (typeof gtag_report_conversion === 'function' && !b.getAttribute('onclick')) {
+                    b.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
                 }
             } catch (e) { /* malformed URL — skip */ }
         }

@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cid passthrough + auto conversion onclick on Store links -->
+    <script src="/cid-tracker.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830">
@@ -34,7 +36,7 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="AI live captions & dual subtitles for Windows. Real-time translation in 50+ languages for Zoom, Teams, Netflix, YouTube & any app. Free trial — no microphone needed.">
+        content="Live-Übersetzer für PC: übersetzt Sprache in Echtzeit in 50+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung. Kostenlose Testversion — ohne Mikrofon.">
     <meta name="keywords"
         content="live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, game mode subtitles, gaming subtitles, fullscreen subtitle overlay, language learning subtitles">
     <meta name="author" content="Live Subtitles">
@@ -232,9 +234,9 @@
     </script>
 
     <!-- Open Graph Meta Tags (Telegram, LinkedIn, Facebook) -->
-    <meta property="og:title" content="Live Subtitles — Live Captions and Dual Subtitles App">
+    <meta property="og:title" content="Live-Übersetzer für PC — Zoom, Teams, Skype | Live Subtitles">
     <meta property="og:description"
-        content="Live captions and dual subtitles for meetings, media, and games across Zoom, Teams, YouTube, Netflix, Discord, and Twitch. Lock/Game Mode helps keep gaming overlays stable.">
+        content="Live-Übersetzer für Meetings, Anrufe und Gespräche. Übersetzt Sprache in Echtzeit in 50+ Sprachen, funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung.">
     <meta property="og:image" content="https://live-subtitles.com/2sub.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -250,16 +252,16 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Live Subtitles — Live Captions and Dual Subtitles App">
+    <meta name="twitter:title" content="Live-Übersetzer für PC — Zoom, Teams, Skype | Live Subtitles">
     <meta name="twitter:description"
-        content="Live captions and dual subtitles for meetings, media, and games. Lock/Game Mode helps keep subtitle overlays stable in gaming sessions.">
+        content="Live-Übersetzer für Meetings und Anrufe. Übersetzt Sprache in Echtzeit in 50+ Sprachen, funktioniert mit Zoom, Teams, Skype und jeder Anwendung.">
     <meta name="twitter:image" content="https://live-subtitles.com/2sub.png">
     <meta name="twitter:image:alt" content="Live Subtitles - Dual Subtitles Application">
     <meta name="twitter:site" content="@livesubtitles">
     <meta name="twitter:creator" content="@livesubtitles">
     <!-- End SEO Meta Tags -->
 
-    <title>Live Subtitles — AI Live Captions & Dual Subtitles App for Windows</title>
+    <title>Live-Übersetzer & Live-Untertitel für PC | Live Subtitles</title>
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/x-icon" href="../2sub.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/2sub.png">
@@ -1315,8 +1317,8 @@
 
     <div class="container">
         <header class="section text-center">
-            <h1 class="title text-center" data-translate="header.title">Filme anschauen, Sprachen lernen — leicht verstehen Sie die Live-Sprache</h1>
-            <p class="lead" data-translate="header.lead">Live Subtitles: Ihr Assistent mit Doppel-Untertiteln, Spracherkennung und Real-Time-Übersetzung</p>
+            <h1 class="title text-center" data-translate="header.title">Live-Übersetzer für Meetings, Anrufe und Gespräche auf Ihrem PC</h1>
+            <p class="lead" data-translate="header.lead">Übersetzt Sprache in Echtzeit in 50+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung — ohne Mikrofon.</p>
             <div class="row w-100 mt-4 mx-auto justify-content-center text-center" style="max-width: 800px;">
                 <!-- Windows -->
                 <div class="col-6 mb-3">
@@ -1326,7 +1328,7 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Windows</h5>
                         <a href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.microsoft.com/detail/9ph1r9djg47s');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1345,7 +1347,7 @@
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">macOS</h5>
                         <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac"
                             target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1821,7 +1823,7 @@
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Windows</h5>
                         <a href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.microsoft.com/detail/9ph1r9djg47s');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
@@ -1840,7 +1842,7 @@
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">macOS</h5>
                         <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac"
                             target="_blank"
-                            onclick="return gtag_report_conversion('https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac');"
+                            onclick="return gtag_report_conversion(this.href);"
                             class="mt-auto d-flex align-items-center justify-content-center w-100"
                             style="min-height: 84px; transition: transform 0.3s ease;"
                             onmouseover="this.style.transform='scale(1.05)'"
