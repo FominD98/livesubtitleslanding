@@ -573,7 +573,7 @@ $relatedHtml
             <div class="cta">
                 <h3>$(Escape-Html $pack.CtaTitle)</h3>
                 <p>$(Escape-Html $pack.CtaText)</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S?cid=DevShareMCLPCS" target="_blank">$(Escape-Html $pack.CtaButton)</a>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank">$(Escape-Html $pack.CtaButton)</a>
             </div>
         </div>
     </div>
