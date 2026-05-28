@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough + auto conversion onclick on Store links -->
+    <script src="/cid-tracker.js" defer></script>
+    <title>音声を文字起こしする 2026年版：リアルタイム vs バッチ徹底比較 | Live Subtitles</title>
+    <meta name="description" content="2026年の音声文字起こしツールをワークフロー別に比較：リアルタイム ライブ字幕 vs バッチアップロード。Otter、Rev、Notta、Live Subtitlesなどを用途で選ぶ実用ガイド。">
+    <meta name="keywords" content="文字起こし, 音声文字起こし, リアルタイム文字起こし, 音声を文字に, 音声をテキストに, 文字起こしアプリ 2026">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://live-subtitles.com/articles/ja/article-24.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-24.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-24.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-24.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-24.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-24.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-24.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-24.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-24.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-24.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-24.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-24.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-24.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-24.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-24.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-24.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-24.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-24.html" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="音声を文字起こしする 2026年版：リアルタイム vs バッチ徹底比較">
+    <meta property="og:description" content="文字起こしツールを機能数ではなく、リアルタイムかバッチかというワークフロー別に選ぶ。">
+    <meta property="og:url" content="https://live-subtitles.com/articles/ja/article-24.html">
+    <meta property="og:image" content="https://live-subtitles.com/articles/img/ja/learning.webp">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="781">
+    <meta property="og:image:alt" content="ノートPC画面上のリアルタイム音声文字起こしとライブ字幕">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="音声を文字起こしする 2026年版：リアルタイム vs バッチ徹底比較">
+    <meta name="twitter:description" content="リアルタイムとバッチ、2つの文字起こしを用途別に比較。">
+    <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ja/learning.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        .back-link:hover { text-decoration: underline; }
+        h2, h3 { color: #00ff9d; margin-top: 2rem; }
+        p, li, td, th { color: #eee; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #fff; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "音声を文字起こしする 2026年版：リアルタイム vs バッチ徹底比較",
+      "datePublished": "2026-05-28",
+      "dateModified": "2026-05-28",
+      "author": { "@type": "Person", "name": "Mei Lin Chen", "url": "https://live-subtitles.com/about/team/mei-lin-chen.html", "jobTitle": "音声認識エンジニア, Live Subtitles" },
+      "publisher": { "@type": "Organization", "name": "Live Subtitles" },
+      "description": "2026年の音声文字起こしツールをワークフロー別に比較：リアルタイム ライブ字幕 vs バッチアップロード。Otter、Rev、Notta、Live Subtitlesなどを用途で選ぶ実用ガイド。",
+      "mainEntityOfPage": "https://live-subtitles.com/articles/ja/article-24.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://live-subtitles.com/ja/" },
+        { "@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://live-subtitles.com/articles/ja/" },
+        { "@type": "ListItem", "position": 3, "name": "音声を文字起こしする 2026年版", "item": "https://live-subtitles.com/articles/ja/article-24.html" }
+      ]
+    }
+    </script>
+    <link rel="preload" as="image" href="/articles/img/ja/learning.webp">
+</head>
+<body>
+    <div class="container article-container" itemscope itemtype="https://schema.org/Article">
+        <a href="index.html" class="back-link">← 記事一覧へ戻る</a>
+        <h1 class="article-title" itemprop="headline">音声を文字起こしする 2026年版：リアルタイム vs バッチ徹底比較</h1>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">2026年5月28日</div>
+        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/mei-lin-chen.html" rel="author" style="color:#00b8ff; text-decoration:none;">Mei Lin Chen</a> &middot; 音声認識エンジニア, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026年5月28日</div>
+        <img class="article-hero" src="/articles/img/ja/learning.webp" alt="ノートPC画面上のリアルタイム音声文字起こしとライブ字幕" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
+
+        <div itemprop="articleBody">
+            <p>検索エンジンは<strong>音声文字起こし</strong>ツールをひとつのカテゴリにまとめますが、そのラベルで出てくる製品は実際には2つの非常に異なるワークフローに分かれます。間違ったワークフローを選ぶことが、1週間で文字起こしツールを手放す最も一般的な理由です。</p>
+
+            <h2>リアルタイム文字起こし vs バッチ文字起こし</h2>
+            <p>どちらも音声をテキストに変換します。共通点はそこまでです。</p>
+            <ul>
+                <li><strong>リアルタイム文字起こし:</strong> 発話から1〜2秒以内にテキストが現れます。聞きながら読みます。出力は字幕ストリームで、編集可能なドキュメントではありません。例：Windowsライブキャプション、Live Subtitles、Google Live Caption。</li>
+                <li><strong>バッチ文字起こし:</strong> 録音ファイルをアップロードし（または会議終了後）、数分〜数時間待ってから、話者ラベルとタイムスタンプ付きの編集可能な文字起こしをダウンロードします。例：Otter、Rev、Notta、Trint、Word Online ディクテーション。</li>
+            </ul>
+            <p>発話に対してリアルタイムで動く必要があるなら、バッチ ツールは役に立ちません。編集可能なアーカイブが必要なら、リアルタイム ツールは役に立ちません。まずワークフローを選び、ブランドはその次です。</p>
+
+            <h2>2026年の比較スナップショット</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ツール</th>
+                        <th>ワークフロー</th>
+                        <th>得意領域</th>
+                        <th>主な制約</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Otter.ai</td>
+                        <td>バッチ + 会議サマリー</td>
+                        <td>会議後の要約、アクションアイテム抽出</td>
+                        <td>発話から検索可能になるまで遅延あり、英語中心の会議向けに設計</td>
+                    </tr>
+                    <tr>
+                        <td>Rev</td>
+                        <td>バッチ（AI + 人手）</td>
+                        <td>人手レビューで法務級・メディア級の精度</td>
+                        <td>人手レビューは$1.50+/分、日々のライブ用途には不向き</td>
+                    </tr>
+                    <tr>
+                        <td>Notta</td>
+                        <td>バッチ + 多言語</td>
+                        <td>長尺録音、講義、ポッドキャスト</td>
+                        <td>リアルタイム字幕ツールではない</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft Word トランスクライブ / 365 ディクテーション</td>
+                        <td>バッチ（音声アップロード）</td>
+                        <td>Microsoft 365内のWordドキュメント形式の最終文字起こし</td>
+                        <td>Microsoftアカウントに紐づく、アップロード後の遅延</td>
+                    </tr>
+                    <tr>
+                        <td>Google レコーダー（Pixel）/ Apple ボイスメモ</td>
+                        <td>端末上バッチ</td>
+                        <td>端末プライバシーで素早い音声メモ</td>
+                        <td>スマートフォン専用、話者分離が限定的</td>
+                    </tr>
+                    <tr>
+                        <td>Live Subtitles</td>
+                        <td>リアルタイム字幕／文字起こし</td>
+                        <td>進行中の会議、講義、配信、デスクトップ音声全般</td>
+                        <td>字幕ストリームはリアルタイムで読むためのもので、整形済みドキュメント出力ではない</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>用途別の選び方</h2>
+            <h3>用途A — いま話されていることをすぐ読みたい</h3>
+            <p>リアルタイム ツールを選びます。Live Subtitles、Windowsライブキャプション、プラットフォーム ネイティブ字幕（Zoom、Teams、Meet）のいずれかが該当します。レイテンシ2秒未満と、実際に使うアプリ全体での一貫した対応が、最終文字起こしの仕上がりよりはるかに重要です。</p>
+
+            <h3>用途B — 録音された会話の検索可能なアーカイブが欲しい</h3>
+            <p>話者ラベルとタイムスタンプ書き出しがあるバッチ ツールを選びます。Otter、Notta、Revが明確な選択肢です。必要のない精度に課金しないこと：人手レビューは法廷証拠やメディア制作のためだけに支払う価値があります。</p>
+
+            <h3>用途C — ライブと会議後の両方</h3>
+            <p>リアルタイム1層とバッチ ツール1つを組み合わせます。会議中はライブ字幕を走らせ、会議自体の録音を後でOtterまたはNottaに流し込みます。1つのツールで両方をこなそうとしないこと——どちらも中途半端になります。</p>
+
+            <h3>用途D — ボイスメモとディクテーション</h3>
+            <p>OS純正ツールを使います。Apple ボイスメモとGoogle レコーダーは端末上で文字起こしを生成します。個人ノート用途ならこれで十分です。複数話者の問題がない限り、ここで止めましょう。</p>
+
+            <h2>14日間の評価プラン</h2>
+            <ol>
+                <li>あなたの主たるワークフロー（リアルタイムまたはバッチ）を選びます。まだ両方を入れないこと。</li>
+                <li>そのワークフローに合う1つのツールを入れ、5営業日、実際の音源（会議、講義、録音）で使います。</li>
+                <li>3つの数字を記録：認識されなかった話者数、レイテンシ不満、文字起こしが使い物になる前に必要な編集量。</li>
+                <li>8日目に、もう一方のワークフローが本当に欠けているときだけ、もう片方のツールを追加します。</li>
+                <li>14日目までにペアを固定。ほとんどのユーザーには最大2つのツールが最適です。</li>
+            </ol>
+
+            <h2>2026年の文字起こしマーケティングで無視してよいもの</h2>
+            <ul>
+                <li><strong>「100以上の言語対応」:</strong> 言語数は、実際に文字起こしする2〜3言語での品質とほとんど相関しません。自分の言語ペアでテストしましょう。</li>
+                <li><strong>「精度99%」:</strong> クリーンなスタジオ音声での測定値です。雑音のある複数話者会議では、ベンダーに関係なく実精度は75〜90%が現実です。</li>
+                <li><strong>「AIサマリー」:</strong> あれば便利ですが、会議担当者による3文の手書きノートに勝るAIサマリーはまだありません。</li>
+            </ul>
+
+            <h2>よくある質問</h2>
+            <p><strong>リアルタイム文字起こしは録音省略できるほど正確？</strong><br>理解用途ならはい。証拠や正確な引用なら、まだ録音＋バッチパスがより安全なアーカイブです。</p>
+            <p><strong>有料ツールは必要？</strong><br>個人用ならOS純正ツールで十分。共有の会議ワークフロー、複数話者ラベル、会議プラットフォームとの連携にお金を払いましょう。</p>
+            <p><strong>リアルタイム ツールも最終文字起こしを書き出せる？</strong><br>一部は可能。出力は通常、整形済みドキュメントではなく字幕ログです。最終成果物がWordドキュメントの体裁である必要があるなら、バッチパスを計画しましょう。</p>
+
+            <h2>参考資料</h2>
+            <ul>
+                <li><a href="https://otter.ai/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Otter.ai — 会議文字起こし</a></li>
+                <li><a href="https://www.rev.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Rev — AIと人手の文字起こし</a></li>
+                <li><a href="https://www.notta.ai/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Notta — 音声・動画の文字起こし</a></li>
+                <li><a href="https://support.microsoft.com/en-us/office/transcribe-your-recordings-7fc2efec-245e-45f0-b053-2a97531ecf57" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft 365 — Wordで文字起こし</a></li>
+                <li><a href="https://support.apple.com/guide/voice-memos/transcribe-recordings-vmaa84d6a3f6/mac" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — ボイスメモの文字起こし</a></li>
+            </ul>
+
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #00b8ff; margin-top: 0;">関連記事</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">音声翻訳アプリ 2026年版：用途別リアルタイム比較</a></li>
+                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet・Zoom・Teams 翻訳字幕 2026年版比較</a></li>
+                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">ライブ字幕 2026年版：AI字幕の仕組みと使いどころ</a></li>
+                </ul>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
+                <h3 style="color: #00ff9d; margin-top: 0;">デスクトップの音声をリアルタイムで文字起こし</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">会議、配信、あらゆる音源でライブ字幕と文字起こし。バッチアップロード不要。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Storeからダウンロード</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

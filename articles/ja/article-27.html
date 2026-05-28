@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough + auto conversion onclick on Store links -->
+    <script src="/cid-tracker.js" defer></script>
+    <title>配信者向けライブ字幕 2026年版：OBS・Twitch・YouTube Live ワークフロー | Live Subtitles</title>
+    <meta name="description" content="Twitch、YouTube Live、Kick、Discord配信にライブ字幕を追加する方法 — OBS オーバーレイ、ネイティブ プラットフォーム CC、AI 字幕ツールを使って、配信レイアウトを崩さずに。">
+    <meta name="keywords" content="配信者 字幕, twitch 字幕, youtube live 字幕, obs 字幕 オーバーレイ, ライブ字幕 配信, 配信 サブタイトル 2026">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://live-subtitles.com/articles/ja/article-27.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-27.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-27.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-27.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-27.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-27.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-27.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-27.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-27.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-27.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-27.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-27.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-27.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-27.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-27.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-27.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-27.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-27.html" />
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="配信者向けライブ字幕 2026年版：OBS・Twitch・YouTube Live ワークフロー">
+    <meta property="og:description" content="レイアウトを崩さず配信に字幕を追加 — OBS オーバーレイ、ネイティブ CC、AI 字幕を比較。">
+    <meta property="og:url" content="https://live-subtitles.com/articles/ja/article-27.html">
+    <meta property="og:image" content="https://live-subtitles.com/articles/img/ja/games.webp">
+    <meta property="og:image:width" content="1280">
+    <meta property="og:image:height" content="781">
+    <meta property="og:image:alt" content="Twitch 配信セットアップに重ねられたライブ字幕">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="配信者向けライブ字幕 2026年版：OBS・Twitch・YouTube Live ワークフロー">
+    <meta name="twitter:description" content="配信者の字幕ワークフロー：OBS、Twitch CC、AI ツールを比較。">
+    <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ja/games.webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        .back-link:hover { text-decoration: underline; }
+        h2, h3 { color: #00ff9d; margin-top: 2rem; }
+        p, li, td, th { color: #eee; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #fff; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "配信者向けライブ字幕 2026年版：OBS・Twitch・YouTube Live ワークフロー",
+      "datePublished": "2026-05-28",
+      "dateModified": "2026-05-28",
+      "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "ゲーミングオーバーレイ エンジニア, Live Subtitles" },
+      "publisher": { "@type": "Organization", "name": "Live Subtitles" },
+      "description": "Twitch、YouTube Live、Kick、Discord配信にライブ字幕を追加する方法 — OBS オーバーレイ、ネイティブ プラットフォーム CC、AI 字幕ツールを使って、配信レイアウトを崩さずに。",
+      "mainEntityOfPage": "https://live-subtitles.com/articles/ja/article-27.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://live-subtitles.com/ja/" },
+        { "@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://live-subtitles.com/articles/ja/" },
+        { "@type": "ListItem", "position": 3, "name": "配信者向けライブ字幕 2026", "item": "https://live-subtitles.com/articles/ja/article-27.html" }
+      ]
+    }
+    </script>
+    <link rel="preload" as="image" href="/articles/img/ja/games.webp">
+</head>
+<body>
+    <div class="container article-container" itemscope itemtype="https://schema.org/Article">
+        <a href="index.html" class="back-link">← 記事一覧へ戻る</a>
+        <h1 class="article-title" itemprop="headline">配信者向けライブ字幕 2026年版：OBS・Twitch・YouTube Live ワークフロー</h1>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">2026年5月28日</div>
+        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ゲーミングオーバーレイ エンジニア, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026年5月28日</div>
+        <img class="article-hero" src="/articles/img/ja/games.webp" alt="Twitch 配信セットアップに重ねられたライブ字幕" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
+
+        <div itemprop="articleBody">
+            <p><strong>配信者向けライブ字幕</strong>は、会議の字幕とは別の問題です。3つの音源(ゲーム・マイク・システム)、3つの字幕出力先(配信内オーバーレイ・プラットフォーム CC・VOD)、そして最悪の失敗パターン:遅延でタイミングを崩す字幕、があります。間違ったワークフローを選ぶと、肝心な瞬間にレイアウトが崩れます。</p>
+
+            <h2>3つの音源、3つの字幕出力先</h2>
+            <p>字幕の質は、読み取る音源の質を超えません。まずそこから:</p>
+            <ul>
+                <li><strong>マイクのみの字幕:</strong> 自分の声をクリアに読み、ゲーム音は無視。トーキングヘッド配信(雑談、IRL、ポッドキャスト)に最適。最低レイテンシ。</li>
+                <li><strong>システム音声の字幕:</strong> ゲーム音とマイクの両方を読みます。ナラティブゲームや視聴会で、画面で起きるすべてを字幕化したいときに最適。</li>
+                <li><strong>トラック別の字幕:</strong> OBS の音声トラックを字幕ツールに個別ルート。コラボ配信で個別の話者を識別できる状態を保ちたいときに最適。</li>
+            </ul>
+
+            <h2>2026年の配信者字幕比較</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ツール</th>
+                        <th>字幕の表示先</th>
+                        <th>強み</th>
+                        <th>制約</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Twitch ネイティブ クローズドキャプション</td><td>Twitch プレイヤーのみ</td><td>Twitch 内蔵、CC をオンにした視聴者が見られる、モバイルプレイヤー対応</td><td>CEA-608/708 字幕ストリームが必要、すべてのエンコーダで対応しない、対応言語が限定的</td></tr>
+                    <tr><td>YouTube Live 自動字幕</td><td>YouTube プレイヤーのみ</td><td>無料、多言語で自動有効、VOD でも持続</td><td>5〜15 秒の遅延、早口でドロップ</td></tr>
+                    <tr><td>OBS オーバーレイ + AI 字幕ソース</td><td>配信出力に焼き込み</td><td>プラットフォームに依存しない、全視聴者が同じ字幕を見る、スタイリングを完全制御</td><td>録画では永続、視聴者がオフにできない</td></tr>
+                    <tr><td>Live Subtitles(デスクトップ オーバーレイ)</td><td>画面上、OBS でキャプチャ可能</td><td>システム音声字幕 + 翻訳、ゲーム + 音声を捕捉、プラットフォーム横断</td><td>OBS で明示的にウィンドウをキャプチャする必要がある</td></tr>
+                </tbody>
+            </table>
+
+            <h2>配信タイプ別の選び方</h2>
+            <h3>雑談/IRL 配信者</h3>
+            <p>OBS オーバーレイでマイクのみ字幕を使います。レイテンシ 1.5 秒未満と、自分の声に対する精度(数セッションのプロファイル準備後)が決定要因です。Twitch ネイティブ CC は問題ないフォールバックですが、スタイリング制御を失います。</p>
+            <h3>多ジャンル ゲーム配信者</h3>
+            <p>システム音声で字幕を実行し、ゲームのセリフも字幕化。字幕ボックスをウェブカム枠と重ならない角に固定。配信前に少なくとも 3 ジャンルでテスト — ゲーム音声ミックスはタイトルによって大きく異なります。</p>
+            <h3>多言語/国際視聴者向け配信者</h3>
+            <p>ソース言語と翻訳の両方をサポートするデスクトップ字幕レイヤを使用。二言語字幕を OBS に焼き込み、CC をオンにせずどの地域の視聴者にも見えるようにします。</p>
+
+            <h2>配信前セットアップ チェックリスト(10 分)</h2>
+            <ol>
+                <li>マイク音源とゲーム音源が別の OBS トラックにあることを確認。</li>
+                <li>字幕ツールをマイクまたはシステム音声どちらかに設定(配信タイプ次第)。</li>
+                <li>字幕オーバーレイを固定の角に配置 — 配信中は絶対に動かさない。</li>
+                <li>通常のリズムで 30 秒テスト発話、レイテンシ、精度、HUD との重なりを確認。</li>
+            </ol>
+
+            <h2>配信者の字幕でよくある落とし穴</h2>
+            <ul>
+                <li><strong>HUD との字幕重なり:</strong> 肝心な瞬間に字幕がキルフィードを隠す。ゲーム HUD の恒久ゾーン外に字幕を置きましょう。</li>
+                <li><strong>長時間配信でのレイテンシ ドリフト:</strong> 3 時間以上経つと、一部の AI 字幕ツールが音声に遅れます。マラソン配信中は 2 時間ごとに字幕ツールを再起動。</li>
+                <li><strong>マイクのみセットアップでゲーム音まで拾う:</strong> オーディオ インターフェースのミックスバックで起きます。OBS の音声設定でマイク ソースが排他的か確認。</li>
+            </ul>
+
+            <h2>よくある質問</h2>
+            <p><strong>Twitch 視聴者は字幕を自動で見られますか？</strong><br>エンコーダが CEA-608/708 字幕を送り、視聴者がプレイヤーで CC をオンにした場合のみ。多くの配信者は字幕を常時表示できる OBS オーバーレイを好みます。</p>
+            <p><strong>字幕は配信パフォーマンスに影響しますか？</strong><br>字幕処理は CPU か GPU を使います。最新システムでは 5% 未満。エンコーダ予算がタイトな場合は、より小さい ASR モデルか別マシンへオフロード。</p>
+            <p><strong>配信を 2 言語で同時に字幕化できますか？</strong><br>はい、ソース + ターゲット対応のデスクトップ字幕レイヤがあれば。OBS に二言語字幕を焼き込んでグローバル視聴者に届けます。</p>
+
+            <h2>参考資料</h2>
+            <ul>
+                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Twitch — クローズドキャプション ドキュメント</a></li>
+                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">OBS Studio 公式</a></li>
+                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">YouTube ヘルプ — 自動字幕</a></li>
+            </ul>
+
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #00b8ff; margin-top: 0;">関連記事</h3>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">ライブ字幕 2026年版：AI字幕の仕組みと使いどころ</a></li>
+                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">音声を文字起こしする 2026年版：リアルタイム vs バッチ徹底比較</a></li>
+                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">音声翻訳アプリ 2026年版：用途別リアルタイム比較</a></li>
+                </ul>
+            </div>
+
+            <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
+                <h3 style="color: #00ff9d; margin-top: 0;">ゲーム音声と自分の声の両方を捉える配信字幕</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">配信者向けシステム音声字幕とリアルタイム翻訳 — OBS でキャプチャして数分で字幕付き配信を開始。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Storeからダウンロード</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
