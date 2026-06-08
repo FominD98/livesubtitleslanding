@@ -135,7 +135,7 @@ const translations = {
         download: {
             title: 'Try it free right now',
             subtitle: 'Free trial period, then from $5/month.',
-            guarantee: '7-day free trial · No credit card required'
+            guarantee: '3-day free trial · No credit card required'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ru: "Давайте начнём сегодняшнюю встречу", es: "Empecemos con la reunión de hoy", de: "Lassen Sie uns mit dem heutigen Meeting beginnen", it: "Iniziamo la riunione di oggi", ja: "それでは、本日のミーティングを始めましょう", ko: "오늘 회의를 시작하겠습니다", zh: "那我们开始今天的会议吧", ar: "لنبدأ اجتماع اليوم", hi: "चलिए आज की मीटिंग शुरू करते हैं", pt: "Vamos começar a reunião de hoje", pl: "Zaczynajmy dzisiejsze spotkanie", nl: "Laten we beginnen met de meeting van vandaag", tr: "Hadi bugünkü toplantımıza başlayalım", uk: "Розпочнімо нашу сьогоднішню зустріч" },
@@ -282,7 +282,7 @@ const translations = {
         download: {
             title: 'Попробуйте бесплатно прямо сейчас',
             subtitle: 'Бесплатный пробный период, затем от $5/месяц.',
-            guarantee: '7 дней бесплатно · Без банковской карты'
+            guarantee: '3 дня бесплатно · Без банковской карты'
         },
         examples: [
             { en: "Let's get started with today's meeting", ru: "Давайте начнём сегодняшнюю встречу" },
@@ -424,7 +424,7 @@ const translations = {
         download: {
             title: 'Essayez gratuitement dès maintenant',
             subtitle: 'Période d\'essai gratuite, puis à partir de 5 $/mois.',
-            guarantee: 'Essai gratuit de 7 jours · Sans carte bancaire'
+            guarantee: 'Essai gratuit de 3 jours · Sans carte bancaire'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", fr: "Commençons la réunion d'aujourd'hui" },
@@ -566,7 +566,7 @@ const translations = {
         download: {
             title: 'Pruébalo gratis ahora mismo',
             subtitle: 'Periodo de prueba gratuito, luego desde 5 $/mes.',
-            guarantee: 'Prueba gratis de 7 días · Sin tarjeta de crédito'
+            guarantee: 'Prueba gratis de 3 días · Sin tarjeta de crédito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", es: "Empecemos con la reunión de hoy" },
@@ -708,7 +708,7 @@ const translations = {
         download: {
             title: 'Probieren Sie es jetzt kostenlos aus',
             subtitle: 'Kostenlose Testphase, danach ab 5 $/Monat.',
-            guarantee: '7 Tage kostenlos testen · Ohne Kreditkarte'
+            guarantee: '3 Tage kostenlos testen · Ohne Kreditkarte'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", de: "Lassen Sie uns mit dem heutigen Meeting beginnen" },
@@ -850,7 +850,7 @@ const translations = {
         download: {
             title: 'Provalo gratis ora',
             subtitle: 'Periodo di prova gratuito, poi da 5 $/mese.',
-            guarantee: 'Prova gratuita di 7 giorni · Senza carta di credito'
+            guarantee: 'Prova gratuita di 3 giorni · Senza carta di credito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", it: "Iniziamo la riunione di oggi" },
@@ -992,7 +992,7 @@ const translations = {
         download: {
             title: '今すぐ無料でお試し',
             subtitle: '無料トライアル期間あり、その後は月額5ドルから。',
-            guarantee: '7日間無料トライアル · クレジットカード不要'
+            guarantee: '3日間無料トライアル · クレジットカード不要'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ja: "それでは、本日のミーティングを始めましょう" },
@@ -1134,7 +1134,7 @@ const translations = {
         download: {
             title: '지금 무료로 사용해보세요',
             subtitle: '무료 체험 기간 제공, 이후 월 $5부터.',
-            guarantee: '7일 무료 체험 · 신용카드 불필요'
+            guarantee: '3일 무료 체험 · 신용카드 불필요'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ko: "오늘 회의를 시작하겠습니다" },
@@ -1276,7 +1276,7 @@ const translations = {
         download: {
             title: '立即免费试用',
             subtitle: '免费试用期，之后每月 $5 起。',
-            guarantee: '7 天免费试用 · 无需信用卡'
+            guarantee: '3 天免费试用 · 无需信用卡'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", zh: "那我们开始今天的会议吧" },
@@ -1418,7 +1418,7 @@ const translations = {
         download: {
             title: 'جرب مجاناً الآن',
             subtitle: 'فترة تجريبية مجانية، ثم من 5 دولارات شهريًا.',
-            guarantee: 'تجربة مجانية لمدة 7 أيام · بدون بطاقة ائتمان'
+            guarantee: 'تجربة مجانية لمدة 3 أيام · بدون بطاقة ائتمان'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ar: "لنبدأ اجتماع اليوم" },
@@ -1560,7 +1560,7 @@ const translations = {
         download: {
             title: 'अभी मुफ्त में आज़माएं',
             subtitle: 'निःशुल्क परीक्षण अवधि, फिर $5/माह से।',
-            guarantee: '7-दिन का मुफ़्त ट्रायल · क्रेडिट कार्ड की ज़रूरत नहीं'
+            guarantee: '3-दिन का मुफ़्त ट्रायल · क्रेडिट कार्ड की ज़रूरत नहीं'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", hi: "चलिए आज की मीटिंग शुरू करते हैं" },
@@ -1702,7 +1702,7 @@ const translations = {
         download: {
             title: 'Experimente grátis agora',
             subtitle: 'Período de teste gratuito, depois a partir de US$ 5/mês.',
-            guarantee: 'Teste grátis de 7 dias · Sem cartão de crédito'
+            guarantee: 'Teste grátis de 3 dias · Sem cartão de crédito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pt: "Vamos começar a reunião de hoje" },
@@ -1844,7 +1844,7 @@ const translations = {
         download: {
             title: 'Wypróbuj za darmo teraz',
             subtitle: 'Bezpłatny okres próbny, potem od 5 $/miesiąc.',
-            guarantee: '7-dniowy bezpłatny okres próbny · Bez karty kredytowej'
+            guarantee: '3-dniowy bezpłatny okres próbny · Bez karty kredytowej'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pl: "Zaczynajmy dzisiejsze spotkanie" },
@@ -1986,7 +1986,7 @@ const translations = {
         download: {
             title: 'Probeer nu gratis',
             subtitle: 'Gratis proefperiode, daarna vanaf $5/maand.',
-            guarantee: '7 dagen gratis proberen · Geen creditcard nodig'
+            guarantee: '3 dagen gratis proberen · Geen creditcard nodig'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", nl: "Laten we beginnen met de meeting van vandaag" },
@@ -2128,7 +2128,7 @@ const translations = {
         download: {
             title: 'Şimdi ücretsiz dene',
             subtitle: 'Ücretsiz deneme süresi, ardından aylık 5 $\'dan başlar.',
-            guarantee: '7 gün ücretsiz deneme · Kredi kartı gerekmez'
+            guarantee: '3 gün ücretsiz deneme · Kredi kartı gerekmez'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", tr: "Hadi bugünkü toplantımıza başlayalım" },
@@ -2270,7 +2270,7 @@ const translations = {
         download: {
             title: 'Спробуйте безкоштовно зараз',
             subtitle: 'Безкоштовний пробний період, потім від $5/місяць.',
-            guarantee: '7 днів безкоштовно · Без банківської картки'
+            guarantee: '3 дні безкоштовно · Без банківської картки'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", uk: "Розпочнімо нашу сьогоднішню зустріч" },
