@@ -1578,6 +1578,16 @@
             #download .col-6 { flex: 0 0 100%; max-width: 100%; }
             .hero-rating { flex-wrap: wrap; row-gap: 0.3rem; }
         }
+    
+        /* kill stray horizontal panning/zoom on mobile (carousel slides can leak a few px) */
+        html, body { overflow-x: hidden; overflow-x: clip; max-width: 100%; }
+        @media (max-width: 991px) {
+            /* hero: top-align + clear the fixed navbar (don't vertically center tall mobile content -> was clipping the H1) */
+            #hero { min-height: auto; display: block; padding-top: 6rem; }
+            /* bigger, more tappable platform icons on phones */
+            .hero-platforms { gap: 1.1rem; }
+            .hero-platforms img { width: 34px; height: 34px; }
+        }
     </style>
     <!-- SEO: alternate language versions -->
     <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/" />
