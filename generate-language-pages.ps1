@@ -32,6 +32,13 @@ foreach ($lang in $Languages) {
     $content = $content.Replace('href="/teams-live-captions.html"', 'href="/' + $lang + '/teams-live-captions.html"')
     $content = $content.Replace('href="/discord-twitch-subtitles.html"', 'href="/' + $lang + '/discord-twitch-subtitles.html"')
 
+    # Asian-audience locales get a region-appropriate video-call hero scene.
+    # Swapped statically (both the <link rel=preload> and the demo-scene <img>)
+    # so the LCP image preloads correctly with no runtime double-fetch (R9/R10).
+    if ($lang -in @('ja', 'ko', 'zh')) {
+        $content = $content.Replace('/img/live-subtitles-video-call-captions.jpg', '/img/live-subtitles-video-call-captions-asia.jpg')
+    }
+
     $langDir = Join-Path (Get-Location) $lang
     if (-not (Test-Path $langDir)) {
         New-Item -Path $langDir -ItemType Directory | Out-Null

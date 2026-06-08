@@ -9,10 +9,11 @@
 //   - ./index.html                  -> en-US
 //   - ./<locale>/index.html         -> <locale>-XX (per LANG_MAP)
 //
-// The script is idempotent: running twice produces the same output. It only
-// rewrites the inner text of <... data-translate="key.path">TEXT</...> nodes;
-// markup, attributes, ordering, and whitespace outside the inner text are
-// preserved.
+// The script is idempotent: running twice produces the same output. It rewrites
+// the inner text of <... data-translate="key.path">TEXT</...> nodes AND the
+// per-locale SEO head (title, meta description, OG/Twitter, og:locale,
+// meta language, schema inLanguage) from translations.js. Markup, attributes,
+// ordering, and whitespace outside those values are preserved.
 
 const fs = require('fs');
 const path = require('path');
@@ -97,6 +98,15 @@ function escapeText(s) {
         .replace(/>/g, '&gt;');
 }
 
+// For values injected into a double-quoted attribute (content="...").
+function escapeAttr(s) {
+    return s
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+}
+
 // Replace inner text of every <ELEM ... data-translate="KEY">CONTENT</ELEM>
 // with the matching translation, preserving the surrounding whitespace.
 function bake(html, dict, fileLabel) {
@@ -150,7 +160,37 @@ function bake(html, dict, fileLabel) {
     return { out, touched, missing };
 }
 
-function processFile(relPath, langCode, translations) {
+// Bake the per-locale SEO head from translations.js into static HTML so crawlers
+// see localized <title>/meta/OG/Twitter pre-JS (SEO rule R1/R4). Idempotent:
+// each rule matches by attribute and rewrites the value regardless of its
+// current content.
+function bakeSeoHead(html, dict, folder, bcp47) {
+    let out = html;
+    const title = typeof dict.title === 'string' ? dict.title.trim() : null;
+    const desc = (dict.meta && typeof dict.meta.description === 'string' ? dict.meta.description
+        : typeof dict.description === 'string' ? dict.description : null);
+
+    if (title) {
+        out = out.replace(/<title>[\s\S]*?<\/title>/, '<title>' + escapeText(title) + '</title>');
+        out = out.replace(/(<meta property="og:title" content=")[^"]*(">)/, '$1' + escapeAttr(title) + '$2');
+        out = out.replace(/(<meta name="twitter:title" content=")[^"]*(">)/, '$1' + escapeAttr(title) + '$2');
+    }
+    if (desc) {
+        const d = desc.trim();
+        out = out.replace(/(<meta name="description"\s+content=")[^"]*(">)/, '$1' + escapeAttr(d) + '$2');
+        out = out.replace(/(<meta property="og:description"\s+content=")[^"]*(">)/, '$1' + escapeAttr(d) + '$2');
+        out = out.replace(/(<meta name="twitter:description"\s+content=")[^"]*(">)/, '$1' + escapeAttr(d) + '$2');
+    }
+    // og:locale (en_US, ru_RU, ...) — not og:locale:alternate
+    out = out.replace(/(<meta property="og:locale" content=")[^"]*(">)/, '$1' + bcp47.replace('-', '_') + '$2');
+    // meta language -> page language code
+    out = out.replace(/(<meta name="language" content=")[^"]*(">)/, '$1' + folder + '$2');
+    // schema.org inLanguage -> page language code (all JSON-LD blocks)
+    out = out.replace(/("inLanguage":\s*")[^"]*(")/g, '$1' + folder + '$2');
+    return out;
+}
+
+function processFile(relPath, folder, langCode, translations) {
     const abs = path.join(ROOT, relPath);
     if (!fs.existsSync(abs)) {
         console.log(`  SKIP  ${relPath} (not found)`);
@@ -162,14 +202,15 @@ function processFile(relPath, langCode, translations) {
         return;
     }
     const before = fs.readFileSync(abs, 'utf8');
-    const { out, touched, missing } = bake(before, dict, relPath);
+    let { out, touched, missing } = bake(before, dict, relPath);
+    out = bakeSeoHead(out, dict, folder, langCode);
     if (out === before) {
         console.log(`  ok    ${relPath}  (${langCode}, ${touched} keys, no changes)`);
         return;
     }
     fs.writeFileSync(abs, out, 'utf8');
     const note = missing ? ` (missing keys: ${missing})` : '';
-    console.log(`  bake  ${relPath}  (${langCode}, ${touched} keys baked${note})`);
+    console.log(`  bake  ${relPath}  (${langCode}, ${touched} keys + SEO head${note})`);
 }
 
 function main() {
@@ -180,8 +221,8 @@ function main() {
         targets.push([path.join(folder, 'index.html'), folder]);
     }
     console.log(`Baking ${targets.length} files...`);
-    for (const [relPath, folderLang] of targets) {
-        processFile(relPath, LANG_MAP[folderLang], translations);
+    for (const [relPath, folder] of targets) {
+        processFile(relPath, folder, LANG_MAP[folder], translations);
     }
     console.log('Done.');
 }

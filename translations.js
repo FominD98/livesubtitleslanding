@@ -2,14 +2,19 @@ const translations = {
     'en-US': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Try Free',
             features: 'Features',
             comparison: 'Comparison',
             faq: 'FAQ',
             download: 'Download'
         },
         header: {
-            title: 'Live Subtitles — AI Live Captions & Dual Subtitles for Windows',
-            lead: 'Live Subtitles is the live captions and dual subtitles app for Zoom, Teams, YouTube, Netflix, and any Windows or macOS app. Real-time translation in 50+ languages — no microphone needed.'
+            worksOn: 'Works on any app — meetings, movies, games & learning',
+            downloadFree: 'Start Free Trial',
+            ratingLabel: '4.7/5 · 351 ratings',
+            watchDemo: 'Watch Demo',
+            title: 'Live Subtitles — AI Live Captions & Dual Subtitles for Any App',
+            lead: 'Live captions and dual subtitles for Zoom, Teams, YouTube, Netflix and any app — on Windows, Mac and iOS. Real-time AI translation in 50+ languages, no microphone needed.'
         },
         downloadBtn: 'Download from Microsoft Store',
         androidBtn: 'Want an Android version',
@@ -17,6 +22,11 @@ const translations = {
             title: 'Works with any app — no limits'
         },
         mediaExamples: {
+            heading: 'Live captions on any app',
+            useMeetings: 'Any meeting, any accent',
+            useMovies: 'Any movie, any language',
+            useGames: 'Any game, no pausing',
+            useLearning: 'Any video, learn as you watch',
             title: 'Examples of the App',
             home: 'Main Interface',
             settings: 'Application Settings',
@@ -31,7 +41,8 @@ const translations = {
             speechRecognitionDesc: 'Without any platform or app limitations.',
             realTimeTranslation: 'Real-time Translation',
             realTimeTranslationDesc: 'Watch movies and participate in calls understanding everything immediately, without asking again.',
-            allApps: 'Works with All Apps'
+            allApps: 'Works with All Apps',
+            allAppsDesc: 'Works on top of any window — video calls, streaming, players and browsers — with nothing to set up for each app.'
         },
         comparison: {
             title: 'Comparison',
@@ -63,16 +74,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. All rights reserved.',
+            copyright: '© 2026 Live Subtitles. All rights reserved.',
             contact: 'For all questions: ',
             email: 'help@live-subtitles.com',
             articles: 'Articles'
         },
-        title: 'Live Subtitles App: Live Captions, Dual Subtitles, Netflix and Zoom',
-        description: 'Live Subtitles is a live captions and dual subtitles app for meetings, movies, and language learning. Understand speech faster across Zoom, Teams, YouTube, and Netflix.',
+        title: 'Live Subtitles — Live Captions & Dual Subtitles for Any App',
+        description: 'Live captions & dual subtitles for any app on Windows, Mac & iOS. Real-time AI translation in 50+ languages for Zoom, Teams & Netflix. Free trial, no mic.',
         download: 'Download Now',
         meta: {
-            description: 'Live Subtitles is a live captions and dual subtitles app for meetings, movies, and language learning. Understand speech faster across Zoom, Teams, YouTube, and Netflix.',
+            description: 'Live captions & dual subtitles for any app on Windows, Mac & iOS. Real-time AI translation in 50+ languages for Zoom, Teams & Netflix. Free trial, no mic.',
             keywords: 'live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, language learning subtitles'
         },
         downloadModal: {
@@ -100,7 +111,7 @@ const translations = {
         faq: {
             title: 'Frequently Asked Questions',
             q1: 'How much does the app cost?',
-            a1: 'Live Subtitles works on a subscription basis starting from $7. A free trial period is available so you can test all the app features.',
+            a1: 'Live Subtitles is a subscription with a free trial, so you can test every feature first. Pricing varies by region — you\'ll see your local price in the store.',
             q2: 'Does it work with all applications?',
             a2: 'Yes! Live Subtitles works with absolutely any applications: YouTube, Netflix, Zoom, Teams, Discord, browsers and even games. The app captures audio at the system level.',
             q3: 'What languages are supported?',
@@ -114,29 +125,20 @@ const translations = {
         },
         testimonials: {
             title: 'User Reviews',
-            review1: '"Finally I can watch Korean dramas without constant pauses! The app accurately translates even fast speech."',
-            author1: 'Anna K.',
-            role1: 'Learning Korean',
-            review2: '"A revolution for international meetings! No more need to ask colleagues from India and China to repeat."',
-            author2: 'Michael R.',
-            role2: 'IT Manager',
-            review3: '"I use it to learn English through YouTube. My vocabulary has grown tremendously in a month!"',
-            author3: 'Elena S.',
-            role3: 'Student',
-            review4: '"I learn English wherever I want - on any platform! I watch Netflix in browser, listen to podcasts on phone, attend work meetings in Teams. The app works absolutely everywhere!"',
-            author4: 'Alex M.',
-            role4: 'Learning English',
-            review5: '"Simple to set up and works perfectly. From $7 subscription paid for itself after the first work meeting."',
-            author5: 'David P.',
-            role5: 'Translator'
+            review1: '"This is the best live caption app for Windows. Really cool!"',
+            review2: '"I didn\'t think it could work this well — compliments to the developers!"',
+            review3: '"I love it. After trying other apps, this one feels just right: lightweight and effective."',
+            review4: '"The English translation is spot-on — it\'s been a huge help for my study group. Thank you to the team!"',
+            review5: '"It really helps you follow the context and keep the conversation going, and the subscription plans are practical."',
+            review6: '"If you\'re a broke K-pop stan, I\'d recommend this for Weverse live streams."'
         },
         download: {
             title: 'Try it free right now',
-            subtitle: 'Free trial period, then from $7'
+            subtitle: 'Free trial period — plans priced for your region.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", ru: "Добро пожаловать в мир двойных субтитров", es: "Bienvenido al mundo de subtítulos duales", de: "Willkommen in der Welt der doppelten Untertitel", it: "Benvenuti nel mondo dei sottotitoli doppi", ja: "二重字幕の世界へようこそ", ko: "이중 자막의 세계에 오신 것을 환영합니다", zh: "欢迎来到双字幕的世界", ar: "مرحباً بك في عالم الترجمة المزدوجة", hi: "दोहरे सबटाइटल की दुनिया में आपका स्वागत है", pt: "Bem-vindo ao mundo das duplas legendas", pl: "Witaj w świecie podwójnych napisów", nl: "Welkom in de wereld van dubbele ondertitels", tr: "Çift altyazı dünyasına hoş geldiniz", uk: "Ласкаво просимо у світ подвійних субтитрів" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", ru: "Два языка, один экран", es: "Dos idiomas, una pantalla", de: "Zwei Sprachen, ein Bildschirm", it: "Due lingue, uno schermo", ja: "二言語、一画面", ko: "두 언어, 하나의 화면", zh: "两种语言，一个屏幕", ar: "لغتان، شاشة واحدة", hi: "दो भाषाएं, एक स्क्रीन", pt: "Dois idiomas, uma tela", pl: "Dwa języki, jeden ekran", nl: "Twee talen, één scherm", tr: "İki dil, bir ekran", uk: "Дві мови, один екран" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ru: "Давайте начнём сегодняшнюю встречу", es: "Empecemos con la reunión de hoy", de: "Lassen Sie uns mit dem heutigen Meeting beginnen", it: "Iniziamo la riunione di oggi", ja: "それでは、本日のミーティングを始めましょう", ko: "오늘 회의를 시작하겠습니다", zh: "那我们开始今天的会议吧", ar: "لنبدأ اجتماع اليوم", hi: "चलिए आज की मीटिंग शुरू करते हैं", pt: "Vamos começar a reunião de hoje", pl: "Zaczynajmy dzisiejsze spotkanie", nl: "Laten we beginnen met de meeting van vandaag", tr: "Hadi bugünkü toplantımıza başlayalım", uk: "Розпочнімо нашу сьогоднішню зустріч" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", ru: "Меня всем хорошо слышно?", es: "¿Me oyen todos con claridad?", de: "Können mich alle gut hören?", it: "Riuscite a sentirmi bene?", ja: "皆さん、声はちゃんと聞こえていますか？", ko: "제 말이 잘 들리시나요?", zh: "大家能听清楚吗？", ar: "هل يسمعني الجميع بوضوح؟", hi: "क्या सभी को मेरी आवाज़ साफ़ सुनाई दे रही है?", pt: "Todos conseguem me ouvir bem?", pl: "Czy wszyscy mnie dobrze słyszą?", nl: "Kan iedereen mij goed verstaan?", tr: "Herkes beni net duyabiliyor mu?", uk: "Усім добре мене чути?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", ru: "Изучайте языки во время просмотра фильмов", es: "Aprende idiomas viendo películas", de: "Sprachen lernen beim Filme schauen", it: "Impara le lingue guardando film", ja: "映画を見ながら言語を学ぶ", ko: "영화를 보며 언어 배우기", zh: "看电影学语言", ar: "تعلم اللغات أثناء مشاهدة الأفلام", hi: "फिल्में देखते हुए भाषाएं सीखें", pt: "Aprenda idiomas assistindo filmes", pl: "Ucz się języków oglądając filmy", nl: "Leer talen terwijl je films kijkt", tr: "Film izlerken dil öğrenin", uk: "Вивчайте мови під час перегляду фільмів" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", ru: "Лучше понимайте иностранную речь", es: "Comprende mejor el habla extranjera", de: "Verstehe fremde Sprache besser", it: "Comprendi meglio il discorso straniero", ja: "外国語をより良く理解する", ko: "외국어를 더 잘 이해하기", zh: "更好地理解外语", ar: "افهم الكلام الأجنبي بشكل أفضل", hi: "विदेशी भाषा को बेहतर समझें", pt: "Entenda melhor o idioma estrangeiro", pl: "Lepiej rozumiej język obcy", nl: "Begrijp vreemde taal beter", tr: "Yabancı dili daha iyi anlayın", uk: "Краще розумійте іноземну мову" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", ru: "Улавливайте каждое слово без переспрашиваний", es: "Capta cada palabra sin preguntar de nuevo", de: "Erfasse jedes Wort ohne nochmal fragen", it: "Cattura ogni parola senza chiedere di nuovo", ja: "再度尋ねることなく全ての単語をキャッチ", ko: "다시 묻지 않고 모든 단어 포착", zh: "无需重复即可捕获每个单词", ar: "التقط كل كلمة دون إعادة السؤال", hi: "दोबारा पूछे बिना हर शब्द पकड़ें", pt: "Capture cada palavra sem perguntar novamente", pl: "Łap każde słowo bez ponownego pytania", nl: "Vang elk woord zonder opnieuw te vragen", tr: "Tekrar sormadan her kelimeyi yakalayın", uk: "Ловіть кожне слово без повторного запитування" },
@@ -146,11 +148,17 @@ const translations = {
     'ru-RU': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Попробовать',
             features: 'Возможности',
             comparison: 'Сравнение',
+            faq: 'Вопросы',
             download: 'Скачать'
         },
         header: {
+            worksOn: 'Работает в любом приложении — встречи, фильмы, игры, обучение',
+            downloadFree: 'Попробовать бесплатно',
+            ratingLabel: '4,7/5 · 351 оценок',
+            watchDemo: 'Смотреть демо',
             title: 'Смотрите фильмы, учите языки — легко понимайте живую речь',
             lead: 'Live Subtitles - ваш помощник с двойными субтитрами, распознаванием и переводом речи в реальном времени'
         },
@@ -160,6 +168,11 @@ const translations = {
             title: 'Работает вообще с любым приложением — без ограничений'
         },
         mediaExamples: {
+            heading: 'Живые субтитры в любом приложении',
+            useMeetings: 'Любая встреча, любой акцент',
+            useMovies: 'Любой фильм, любой язык',
+            useGames: 'Любая игра, без пауз',
+            useLearning: 'Любое видео — учитесь во время просмотра',
             title: 'Примеры работы',
             home: 'Главный интерфейс',
             settings: 'Настройки приложения',
@@ -174,7 +187,8 @@ const translations = {
             speechRecognitionDesc: 'Без ограничений по платформам и приложениям.',
             realTimeTranslation: 'Перевод в реальном времени',
             realTimeTranslationDesc: 'Смотрите фильмы и участвуйте в звонках, понимая сразу, без переспрашиваний.',
-            allApps: 'Работает со всеми приложениями'
+            allApps: 'Работает со всеми приложениями',
+            allAppsDesc: 'Работает поверх любого окна — видеозвонки, стриминг, плееры и браузеры — и ничего не нужно настраивать под каждое приложение.'
         },
         comparison: {
             title: 'Сравнение способов',
@@ -206,16 +220,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Все права защищены.',
+            copyright: '© 2026 Live Subtitles. Все права защищены.',
             contact: 'По всем вопросам: ',
             email: 'help@live-subtitles.com',
             articles: 'Статьи'
         },
-        title: 'Live Subtitles - Двойные субтитры для изучения языков',
-        description: 'Live Subtitles — приложение с двойными субтитрами, распознаванием и переводом речи в реальном времени. Учите языки, смотрите фильмы и понимайте иностранную речь без усилий.',
+        title: 'Live Subtitles — Двойные субтитры для любого приложения',
+        description: 'Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 50+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.',
         download: 'Скачать сейчас',
         meta: {
-            description: 'Live Subtitles — приложение с двойными субтитрами, распознаванием и переводом речи в реальном времени. Учите языки, смотрите фильмы и понимайте иностранную речь без усилий.',
+            description: 'Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 50+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.',
             keywords: 'двойные субтитры, субтитры для изучения языков, перевод речи, распознавание речи, субтитры онлайн, Live Subtitles, изучение английского, изучение языков, субтитры в реальном времени, понимание речи, переводчик для фильмов'
         },
         downloadModal: {
@@ -243,7 +257,7 @@ const translations = {
         faq: {
             title: 'Часто задаваемые вопросы',
             q1: 'Сколько стоит приложение?',
-            a1: 'Live Subtitles работает по подписке от $7. Доступен бесплатный пробный период, чтобы вы могли протестировать все функции приложения.',
+            a1: 'Live Subtitles работает по подписке с бесплатным пробным периодом, чтобы вы могли сначала протестировать все функции. Цена зависит от вашего региона — актуальную стоимость вы увидите в магазине.',
             q2: 'Работает ли с любыми приложениями?',
             a2: 'Да! Live Subtitles работает с абсолютно любыми приложениями: YouTube, Netflix, Zoom, Teams, Discord, браузерами и даже играми. Приложение захватывает звук на системном уровне.',
             q3: 'Какие языки поддерживаются?',
@@ -257,29 +271,20 @@ const translations = {
         },
         testimonials: {
             title: 'Отзывы пользователей',
-            review1: '"Наконец-то могу смотреть корейские дорамы без постоянных пауз! Приложение точно переводит даже быструю речь."',
-            author1: 'Anna K.',
-            role1: 'Изучает корейский язык',
-            review2: '"Революция для международных встреч! Больше не нужно переспрашивать коллег из Индии и Китая."',
-            author2: 'Michael R.',
-            role2: 'IT-менеджер',
-            review3: '"Использую для изучения английского через YouTube. За месяц словарный запас вырос в разы!"',
-            author3: 'Elena S.',
-            role3: 'Студентка',
-            review4: '"Изучаю английский везде где хочу - на любой платформе! В браузере смотрю Netflix, на телефоне слушаю подкасты, в Teams рабочие встречи. Приложение работает абсолютно везде!"',
-            author4: 'Alex M.',
-            role4: 'Изучает английский',
-            review5: '"Простое в настройке и работает идеально. Подписка от $7 окупилась уже на первой рабочей встрече."',
-            author5: 'David P.',
-            role5: 'Переводчик'
+            review1: '"Лучшее приложение для живых субтитров на Windows. Реально классное!"',
+            review2: '"Не думал, что оно будет работать настолько хорошо — респект разработчикам!"',
+            review3: '"Я в восторге. Перепробовал кучу других приложений, а это именно то, что нужно: лёгкое и при этом рабочее."',
+            review4: '"Перевод на английский точный — очень выручает мою учебную группу. Спасибо команде!"',
+            review5: '"Реально помогает не терять нить разговора и поддерживать беседу, да и тарифы подписки удобные."',
+            review6: '"Если ты бедный K-pop фанат, советую его для лайвов на Weverse."'
         },
         download: {
             title: 'Попробуйте бесплатно прямо сейчас',
-            subtitle: 'Бесплатный пробный период, затем от $7'
+            subtitle: 'Бесплатный пробный период — цена подбирается под ваш регион.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", ru: "Добро пожаловать в мир двойных субтитров" },
-            { en: "Two languages, one screen", ru: "Два языка, один экран" },
+            { en: "Let's get started with today's meeting", ru: "Давайте начнём сегодняшнюю встречу" },
+            { en: "Can everyone hear me clearly?", ru: "Меня всем хорошо слышно?" },
             { en: "Learn languages while watching movies", ru: "Изучайте языки во время просмотра фильмов" },
             { en: "Understand foreign speech better", ru: "Лучше понимайте иностранную речь" },
             { en: "Catch every word without asking again", ru: "Улавливайте каждое слово без переспрашиваний" },
@@ -289,16 +294,29 @@ const translations = {
     'fr-FR': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Essai gratuit',
             features: 'Fonctionnalités',
             comparison: 'Comparaison',
+            faq: 'FAQ',
             download: 'Télécharger'
         },
         header: {
+            worksOn: 'Fonctionne dans toute app — réunions, films, jeux, apprentissage',
+            downloadFree: 'Essai gratuit',
+            ratingLabel: '4,7/5 · 351 avis',
+            watchDemo: 'Voir la démo',
             title: 'Regardez des films, apprenez des langues — comprenez facilement la parole en direct',
             lead: 'Live Subtitles - votre assistant avec sous-titres doubles, reconnaissance et traduction de la parole en temps réel'
         },
         downloadBtn: 'Télécharger depuis Microsoft Store',
         androidBtn: 'Je veux la version Android',
+        mediaExamples: {
+            heading: 'Sous-titres en direct dans toute app',
+            useMeetings: 'Toute réunion, tout accent',
+            useMovies: 'Tout film, toute langue',
+            useGames: 'Tout jeu, sans pause',
+            useLearning: 'Toute vidéo — apprenez en regardant'
+        },
         platforms: {
             title: 'Fonctionne avec n\'importe quelle application — sans limites'
         },
@@ -310,7 +328,8 @@ const translations = {
             speechRecognitionDesc: 'Sans aucune limitation de plateforme ou d\'application.',
             realTimeTranslation: 'Traduction en temps réel',
             realTimeTranslationDesc: 'Regardez des films et participez à des appels en comprenant tout de suite, sans avoir à redemander.',
-            allApps: 'Fonctionne avec toutes les applications'
+            allApps: 'Fonctionne avec toutes les applications',
+            allAppsDesc: 'Fonctionne par-dessus n\'importe quelle fenêtre — appels vidéo, streaming, lecteurs et navigateurs — sans rien à configurer pour chaque application.'
         },
         comparison: {
             title: 'Comparaison',
@@ -342,16 +361,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Tous droits réservés.',
+            copyright: '© 2026 Live Subtitles. Tous droits réservés.',
             contact: 'Pour toute question : ',
             email: 'help@live-subtitles.com',
             articles: 'Articles'
         },
-        title: 'Live Subtitles - Sous-titres doubles pour l\'apprentissage des langues',
-        description: 'Live Subtitles — une application avec sous-titres doubles, reconnaissance vocale et traduction en temps réel. Apprenez les langues, regardez des films et comprenez la parole étrangère sans effort.',
+        title: 'Live Subtitles — Sous-titres en direct et doubles, toute app',
+        description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac et iOS. Traduction IA en 50+ langues pour Zoom, Teams et Netflix. Essai gratuit, sans micro.',
         download: 'Télécharger maintenant',
         meta: {
-            description: 'Live Subtitles — une application avec sous-titres doubles, reconnaissance vocale et traduction en temps réel. Apprenez les langues, regardez des films et comprenez la parole étrangère sans effort.',
+            description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac et iOS. Traduction IA en 50+ langues pour Zoom, Teams et Netflix. Essai gratuit, sans micro.',
             keywords: 'sous-titres doubles, sous-titres pour l\'apprentissage des langues, traduction vocale, reconnaissance vocale, sous-titres en ligne, Live Subtitles, apprentissage de l\'anglais, apprentissage des langues, sous-titres en temps réel, compréhension de la parole, traducteur de films'
         },
         downloadModal: {
@@ -379,7 +398,7 @@ const translations = {
         faq: {
             title: 'Questions fréquemment posées',
             q1: 'Combien coûte l\'application ?',
-            a1: 'Live Subtitles fonctionne sur la base d\'un abonnement à partir de 7 $. Une période d\'essai gratuite est disponible pour tester toutes les fonctionnalités de l\'application.',
+            a1: 'Live Subtitles fonctionne par abonnement avec un essai gratuit, ce qui vous permet de tester toutes les fonctionnalités au préalable. Les tarifs varient selon votre région : vous verrez le prix local directement sur le store.',
             q2: 'Fonctionne-t-elle avec toutes les applications ?',
             a2: 'Oui ! Live Subtitles fonctionne avec absolument toutes les applications : YouTube, Netflix, Zoom, Teams, Discord, navigateurs et même jeux. L\'application capture l\'audio au niveau système.',
             q3: 'Quelles langues sont prises en charge ?',
@@ -393,29 +412,20 @@ const translations = {
         },
         testimonials: {
             title: 'Avis des utilisateurs',
-            review1: '"Enfin je peux regarder les dramas coréens sans pauses constantes ! L\'app traduit précisément même la parole rapide."',
-            author1: 'Anna K.',
-            role1: 'Apprend le coréen',
-            review2: '"Une révolution pour les réunions internationales ! Plus besoin de demander aux collègues d\'Inde et de Chine de répéter."',
-            author2: 'Michael R.',
-            role2: 'Gestionnaire IT',
-            review3: '"Je l\'utilise pour apprendre l\'anglais via YouTube. ¡Mi vocabulaire a énormément grandi en un mois !"',
-            author3: 'Elena S.',
-            role3: 'Étudiante',
-            review4: '"J\'apprends l\'anglais où je veux - sur n\'importe quelle plateforme ! Je regarde Netflix dans le navigateur, j\'écoute des podcasts sur téléphone, je participe aux réunions dans Teams. L\'app fonctionne absolument partout !"',
-            author4: 'Alex M.',
-            role4: 'Apprend l\'anglais',
-            review5: '"Simple à configurer et fonctionne parfaitement. Abonnement à partir de 7 $ rentabilisé dès la première réunion de travail."',
-            author5: 'David P.',
-            role5: 'Traducteur'
+            review1: '"La meilleure appli de sous-titres en direct sur Windows. Vraiment top !"',
+            review2: '"Je ne pensais pas que ça marcherait aussi bien — bravo aux développeurs !"',
+            review3: '"J\'adore. Après en avoir testé d\'autres, celle-ci me convient parfaitement : légère et efficace."',
+            review4: '"La traduction en anglais est nickel — ça aide énormément mon groupe d\'étude. Merci à toute l\'équipe !"',
+            review5: '"Ça aide vraiment à suivre le contexte et à garder le fil de la conversation, et les formules d\'abonnement sont bien pratiques."',
+            review6: '"Si t\'es un fan de K-pop fauché, je te recommande ça pour les lives sur Weverse."'
         },
         download: {
             title: 'Essayez gratuitement dès maintenant',
-            subtitle: 'Période d\'essai gratuite, puis à partir de 7 $'
+            subtitle: 'Période d\'essai gratuite — des tarifs adaptés à votre région.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", fr: "Bienvenue dans le monde des sous-titres doubles" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", fr: "Deux langues, un écran" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", fr: "Commençons la réunion d'aujourd'hui" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", fr: "Est-ce que tout le monde m'entend bien ?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", fr: "Apprenez des langues en regardant des films" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", fr: "Comprenez mieux la parole étrangère" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", fr: "Attrapez chaque mot sans avoir à redemander" },
@@ -425,16 +435,29 @@ const translations = {
     'es-ES': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Probar gratis',
             features: 'Características',
             comparison: 'Comparación',
+            faq: 'FAQ',
             download: 'Descargar'
         },
         header: {
+            worksOn: 'Funciona en cualquier app — reuniones, películas, juegos, aprendizaje',
+            downloadFree: 'Prueba gratis',
+            ratingLabel: '4,7/5 · 351 valoraciones',
+            watchDemo: 'Ver demo',
             title: 'Mira películas, aprende idiomas — comprende fácilmente el habla en vivo',
             lead: 'Live Subtitles: tu asistente con subtítulos dobles, reconocimiento y traducción de voz en tiempo real'
         },
         downloadBtn: 'Descargar desde Microsoft Store',
         androidBtn: 'Quiero la versión para Android',
+        mediaExamples: {
+            heading: 'Subtítulos en vivo en cualquier app',
+            useMeetings: 'Cualquier reunión, cualquier acento',
+            useMovies: 'Cualquier película, cualquier idioma',
+            useGames: 'Cualquier juego, sin pausas',
+            useLearning: 'Cualquier video — aprende mientras miras'
+        },
         platforms: {
             title: 'Funciona con cualquier aplicación — sin límites'
         },
@@ -446,7 +469,8 @@ const translations = {
             speechRecognitionDesc: 'Sin ninguna limitación de plataforma o aplicación.',
             realTimeTranslation: 'Traducción en tiempo real',
             realTimeTranslationDesc: 'Mira películas y participa en llamadas entendiendo todo de inmediato, sin tener que preguntar de nuevo.',
-            allApps: 'Funciona con todas las aplicaciones'
+            allApps: 'Funciona con todas las aplicaciones',
+            allAppsDesc: 'Funciona sobre cualquier ventana — videollamadas, streaming, reproductores y navegadores — sin necesidad de configurar nada para cada aplicación.'
         },
         comparison: {
             title: 'Comparación',
@@ -478,16 +502,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Todos los derechos reservados.',
+            copyright: '© 2026 Live Subtitles. Todos los derechos reservados.',
             contact: 'Para cualquier consulta: ',
             email: 'help@live-subtitles.com',
             articles: 'Artículos'
         },
-        title: 'Live Subtitles - Subtítulos dobles para el aprendizaje de idiomas',
-        description: 'Live Subtitles — una aplicación con subtítulos dobles, reconocimiento de voz y traducción en tiempo real. Aprende idiomas, mira películas y comprende el habla extranjera sin esfuerzo.',
+        title: 'Live Subtitles — Subtítulos en vivo y duales, cualquier app',
+        description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac e iOS. Traducción IA en tiempo real a 50+ idiomas en Zoom, Teams y Netflix. Prueba gratis.',
         download: 'Descargar ahora',
         meta: {
-            description: 'Live Subtitles — una aplicación con subtítulos dobles, reconocimiento de voz y traducción en tiempo real. Aprende idiomas, mira películas y comprende el habla extranjera sin esfuerzo.',
+            description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac e iOS. Traducción IA en tiempo real a 50+ idiomas en Zoom, Teams y Netflix. Prueba gratis.',
             keywords: 'subtítulos dobles, subtítulos para aprendizaje de idiomas, traducción de voz, reconocimiento de voz, subtítulos en línea, Live Subtitles, aprender inglés, aprendizaje de idiomas, subtítulos en tiempo real, comprensión del habla, traductor de películas'
         },
         downloadModal: {
@@ -515,7 +539,7 @@ const translations = {
         faq: {
             title: 'Preguntas frecuentes',
             q1: '¿Cuánto cuesta la aplicación?',
-            a1: 'Live Subtitles funciona con suscripción desde $7. Hay un período de prueba gratuito disponible para que puedas probar todas las funciones de la aplicación.',
+            a1: 'Live Subtitles es una suscripción con un periodo de prueba gratuito, así que puedes probar todas las funciones antes de nada. El precio varía según tu región: verás tu precio local en la tienda.',
             q2: '¿Funciona con todas las aplicaciones?',
             a2: '¡Sí! Live Subtitles funciona con absolutamente cualquier aplicación: YouTube, Netflix, Zoom, Teams, Discord, navegadores e incluso juegos. La aplicación captura el audio a nivel del sistema.',
             q3: '¿Qué idiomas son compatibles?',
@@ -529,29 +553,20 @@ const translations = {
         },
         testimonials: {
             title: 'Reseñas de usuarios',
-            review1: '"¡Por fin puedo ver dramas coreanos sin pausas constantes! La app traduce con precisión incluso el habla rápida."',
-            author1: 'Anna K.',
-            role1: 'Aprende coreano',
-            review2: '"¡Una revolución para reuniones internacionales! Ya no necesito pedir a colegas de India y China que repitan."',
-            author2: 'Michael R.',
-            role2: 'Gerente de TI',
-            review3: '"Lo uso para aprender inglés a través de YouTube. ¡Mi vocabulario ha crecido enormemente en un mes!"',
-            author3: 'Elena S.',
-            role3: 'Estudiante',
-            review4: '"¡Aprendo inglés donde quiero - en cualquier plataforma! Veo Netflix en navegador, escucho podcasts en teléfono, asisto a reuniones en Teams. ¡La app funciona absolutamente en todas partes!"',
-            author4: 'Alex M.',
-            role4: 'Aprende inglés',
-            review5: '"Fácil de configurar y funciona perfectamente. Suscripción desde $7 se pagó solo después de la primera reunión de trabajo."',
-            author5: 'David P.',
-            role5: 'Traductor'
+            review1: '"Es la mejor app de subtítulos en directo para Windows. ¡Una pasada!"',
+            review2: '"No pensaba que pudiera funcionar tan bien. ¡Enhorabuena a los desarrolladores!"',
+            review3: '"Me encanta. Tras probar otros programas, con este me siento cómodo: ligero y eficaz."',
+            review4: '"La traducción al inglés es clavada y me ha ayudado muchísimo con mi grupo de estudio. ¡Gracias al equipo!"',
+            review5: '"Ayudan mucho a entender el contexto y es más fácil llevar la charla. ¡Y los planes son funcionales!"',
+            review6: '"Si eres fan del K-pop y andas sin un duro, te la recomiendo para los directos de Weverse."'
         },
         download: {
             title: 'Pruébalo gratis ahora mismo',
-            subtitle: 'Período de prueba gratuito, luego desde $7'
+            subtitle: 'Periodo de prueba gratuito: planes con precios adaptados a tu región.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", es: "Bienvenido al mundo de los subtítulos dobles" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", es: "Dos idiomas, una pantalla" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", es: "Empecemos con la reunión de hoy" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", es: "¿Me oyen todos con claridad?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", es: "Aprende idiomas viendo películas" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", es: "Comprende mejor el habla extranjera" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", es: "Captura cada palabra sin tener que preguntar de nuevo" },
@@ -561,16 +576,29 @@ const translations = {
     'de-DE': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Kostenlos testen',
             features: 'Funktionen',
             comparison: 'Vergleich',
+            faq: 'FAQ',
             download: 'Herunterladen'
         },
         header: {
+            worksOn: 'Funktioniert in jeder App — Meetings, Filme, Spiele, Lernen',
+            downloadFree: 'Kostenlos testen',
+            ratingLabel: '4,7/5 · 351 Bewertungen',
+            watchDemo: 'Demo ansehen',
             title: 'Live-Übersetzer für Meetings, Anrufe und Gespräche auf Ihrem PC',
             lead: 'Übersetzt Sprache in Echtzeit in 50+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung — ohne Mikrofon.'
         },
         downloadBtn: 'Aus dem Microsoft Store herunterladen',
         androidBtn: 'Ich möchte die Android-Version',
+        mediaExamples: {
+            heading: 'Live-Untertitel in jeder App',
+            useMeetings: 'Jedes Meeting, jeder Akzent',
+            useMovies: 'Jeder Film, jede Sprache',
+            useGames: 'Jedes Spiel, ohne Pause',
+            useLearning: 'Jedes Video — lernen beim Zuschauen'
+        },
         platforms: {
             title: 'Funktioniert mit jeder Anwendung — ohne Grenzen'
         },
@@ -582,7 +610,8 @@ const translations = {
             speechRecognitionDesc: 'Ohne Beschränkungen für Plattformen oder Anwendungen.',
             realTimeTranslation: 'Real-Time-Übersetzung',
             realTimeTranslationDesc: 'Filme anschauen und bei Anrufen mitverstehen, ohne jedes Mal nachfragen zu müssen.',
-            allApps: 'Funktioniert mit allen Anwendungen'
+            allApps: 'Funktioniert mit allen Anwendungen',
+            allAppsDesc: 'Funktioniert über jedem beliebigen Fenster — Videoanrufe, Streaming, Player und Browser — ganz ohne Einrichtung für jede einzelne App.'
         },
         comparison: {
             title: 'Vergleich der Methoden',
@@ -614,16 +643,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Alle Rechte vorbehalten.',
+            copyright: '© 2026 Live Subtitles. Alle Rechte vorbehalten.',
             contact: 'Für alle Fragen: ',
             email: 'help@live-subtitles.com',
             articles: 'Artikel'
         },
-        title: 'Live Subtitles - Doppelte Untertitel für das Lernen von Sprachen',
-        description: 'Live Subtitles — eine Anwendung mit Doppel-Untertiteln, Spracherkennung und Real-Time-Übersetzung. Sprachen lernen, Filme anschauen und fremde Sprache verstehen ohne Mühe.',
+        title: 'Live Subtitles — Live- & duale Untertitel für jede App',
+        description: 'Live-Untertitel & duale Untertitel für jede App auf Windows, Mac & iOS. KI-Übersetzung in 50+ Sprachen für Zoom, Teams & Netflix. Kostenlos testen, ohne Mikro.',
         download: 'Jetzt herunterladen',
         meta: {
-            description: 'Live Subtitles — eine Anwendung mit Doppel-Untertiteln, Spracherkennung und Real-Time-Übersetzung. Sprachen lernen, Filme anschauen und fremde Sprache verstehen ohne Mühe.',
+            description: 'Live-Untertitel & duale Untertitel für jede App auf Windows, Mac & iOS. KI-Übersetzung in 50+ Sprachen für Zoom, Teams & Netflix. Kostenlos testen, ohne Mikro.',
             keywords: 'Doppelte Untertitel, Untertitel für das Lernen von Sprachen, Sprachübersetzung, Spracherkennung, Online-Untertitel, Live Subtitles, Englisch lernen, Sprachen lernen, Untertitel im Zeitverlauf, Sprachverständnis, Filmübersetzer'
         },
         downloadModal: {
@@ -651,7 +680,7 @@ const translations = {
         faq: {
             title: 'Häufig gestellte Fragen',
             q1: 'Wie viel kostet die Anwendung?',
-            a1: 'Live Subtitles funktioniert auf Abonnementbasis ab $7. Eine kostenlose Testphase ist verfügbar, damit Sie alle Funktionen der Anwendung testen können.',
+            a1: 'Live Subtitles ist ein Abo mit kostenloser Testphase, sodass Sie zuerst alle Funktionen ausprobieren können. Die Preise richten sich nach Ihrer Region – Ihren lokalen Preis sehen Sie im Store.',
             q2: 'Funktioniert es mit allen Anwendungen?',
             a2: 'Ja! Live Subtitles funktioniert mit absolut allen Anwendungen: YouTube, Netflix, Zoom, Teams, Discord, Browsern und sogar Spielen. Die Anwendung erfasst Audio auf Systemebene.',
             q3: 'Welche Sprachen werden unterstützt?',
@@ -665,29 +694,20 @@ const translations = {
         },
         testimonials: {
             title: 'Nutzerbewertungen',
-            review1: '"Endlich kann ich koreanische Dramen ohne ständige Pausen schauen! Die App übersetzt sogar schnelle Sprache genau."',
-            author1: 'Anna K.',
-            role1: 'Lernt Koreanisch',
-            review2: '"Eine Revolution für internationale Meetings! Ich muss Kollegen aus Indien und China nicht mehr bitten zu wiederholen."',
-            author2: 'Michael R.',
-            role2: 'IT-Manager',
-            review3: '"Ich verwende es, um Englisch über YouTube zu lernen. Mein Wortschatz ist in einem Monat enorm gewachsen!"',
-            author3: 'Elena S.',
-            role3: 'Studentin',
-            review4: '"Ich lerne Englisch, wo ich will - auf jeder Plattform! Ich schaue Netflix im Browser, höre Podcasts am Telefon, nehme an Meetings in Teams teil. Die App funktioniert absolut überall!"',
-            author4: 'Alex M.',
-            role4: 'Lernt Englisch',
-            review5: '"Einfach einzurichten und funktioniert perfekt. Abonnement ab $7 hat sich nach dem ersten Arbeitsmeeting bezahlt gemacht."',
-            author5: 'David P.',
-            role5: 'Übersetzer'
+            review1: '"Die beste App für Live-Untertitel unter Windows. Echt klasse!"',
+            review2: '"Hätte nicht gedacht, dass das so gut funktioniert – Hut ab vor den Entwicklern!"',
+            review3: '"Ich liebe sie. Nachdem ich andere Apps ausprobiert hatte, fühlt sich diese hier einfach richtig an: leichtgewichtig und effektiv."',
+            review4: '"Die englische Übersetzung sitzt einfach perfekt – das war eine riesige Hilfe für meine Lerngruppe. Danke an das Team!"',
+            review5: '"Es hilft echt dabei, dem Zusammenhang zu folgen und das Gespräch am Laufen zu halten, und die Abo-Tarife sind richtig fair."',
+            review6: '"Wenn du ein pleiter K-pop-Stan bist, kann ich es für die Weverse-Livestreams nur empfehlen."'
         },
         download: {
             title: 'Probieren Sie es jetzt kostenlos aus',
-            subtitle: 'Kostenlose Testphase, dann ab $7'
+            subtitle: 'Kostenlose Testphase – Tarife passend zu Ihrer Region.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", de: "Willkommen in der Welt der doppelten Untertitel" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", de: "Zwei Sprachen, ein Bildschirm" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", de: "Lassen Sie uns mit dem heutigen Meeting beginnen" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", de: "Können mich alle gut hören?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", de: "Lernen Sie Sprachen beim Filmeschauen" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", de: "Verstehen Sie fremde Sprache besser" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", de: "Erfassen Sie jedes Wort, ohne nachfragen zu müssen" },
@@ -697,16 +717,29 @@ const translations = {
     'it-IT': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Prova gratis',
             features: 'Funzioni',
             comparison: 'Confronto',
+            faq: 'FAQ',
             download: 'Scaricare'
         },
         header: {
+            worksOn: 'Funziona in qualsiasi app — riunioni, film, giochi, apprendimento',
+            downloadFree: 'Inizia la prova gratuita',
+            ratingLabel: '4,7/5 · 351 recensioni',
+            watchDemo: 'Guarda la demo',
             title: 'Guarda i film, impara i linguaggi — capisci facilmente la parlata in diretta',
             lead: 'Live Subtitles: il tuo assistente con sottotitoli doppi, riconoscimento e traduzione vocale in tempo reale'
         },
         downloadBtn: 'Scarica da Microsoft Store',
         androidBtn: 'Voglio la versione per Android',
+        mediaExamples: {
+            heading: 'Sottotitoli dal vivo in qualsiasi app',
+            useMeetings: 'Ogni riunione, ogni accento',
+            useMovies: 'Ogni film, ogni lingua',
+            useGames: 'Ogni gioco, senza pause',
+            useLearning: 'Ogni video — impara guardando'
+        },
         platforms: {
             title: 'Funziona con qualsiasi applicazione — senza limiti'
         },
@@ -718,7 +751,8 @@ const translations = {
             speechRecognitionDesc: 'Senza alcuna limitazione di piattaforma o applicazione.',
             realTimeTranslation: 'Traduzione in tempo reale',
             realTimeTranslationDesc: 'Guarda i film e partecipa alle chiamate capendo tutto immediatamente, senza dover chiedere di nuovo.',
-            allApps: 'Funziona con tutte le applicazioni'
+            allApps: 'Funziona con tutte le applicazioni',
+            allAppsDesc: 'Funziona sopra qualsiasi finestra — videochiamate, streaming, lettori e browser — senza dover configurare nulla per ogni app.'
         },
         comparison: {
             title: 'Confronto',
@@ -750,16 +784,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Tutti i diritti riservati.',
+            copyright: '© 2026 Live Subtitles. Tutti i diritti riservati.',
             contact: 'Per qualsiasi domanda: ',
             email: 'help@live-subtitles.com',
             articles: 'Articoli'
         },
-        title: 'Live Subtitles - Sottotitoli doppi per l\'apprendimento dei linguaggi',
-        description: 'Live Subtitles — un\'applicazione con sottotitoli doppi, riconoscimento vocale e traduzione in tempo reale. Impara i linguaggi, guarda i film e capisci la parlata straniera senza sforzo.',
+        title: 'Live Subtitles — Sottotitoli doppi e live per ogni app',
+        description: 'Sottotitoli live e doppi per ogni app su Windows, Mac e iOS. Traduzione AI in tempo reale in 50+ lingue per Zoom, Teams e Netflix. Prova gratis senza microfono.',
         download: 'Scaricare adesso',
         meta: {
-            description: 'Live Subtitles — un\'applicazione con sottotitoli doppi, riconoscimento vocale e traduzione in tempo reale. Impara i linguaggi, guarda i film e capisci la parlata straniera senza sforzo.',
+            description: 'Sottotitoli live e doppi per ogni app su Windows, Mac e iOS. Traduzione AI in tempo reale in 50+ lingue per Zoom, Teams e Netflix. Prova gratis senza microfono.',
             keywords: 'sottotitoli doppi, sottotitoli per l\'apprendimento dei linguaggi, traduzione vocale, riconoscimento vocale, sottotitoli online, Live Subtitles, apprendimento dell\'inglese, apprendimento dei linguaggi, sottotitoli nel tempo, comprensione della parlata, traduttore di film'
         },
         downloadModal: {
@@ -787,7 +821,7 @@ const translations = {
         faq: {
             title: 'Domande frequenti',
             q1: 'Quanto costa l\'applicazione?',
-            a1: 'Live Subtitles funziona in abbonamento a partire da $7. È disponibile un periodo di prova gratuito per testare tutte le funzionalità dell\'applicazione.',
+            a1: 'Live Subtitles è un abbonamento con prova gratuita, così puoi provare tutte le funzioni prima di decidere. I prezzi variano in base alla regione: vedrai il prezzo locale direttamente nello store.',
             q2: 'Funziona con tutte le applicazioni?',
             a2: 'Sì! Live Subtitles funziona con assolutamente qualsiasi applicazione: YouTube, Netflix, Zoom, Teams, Discord, browser e persino giochi. L\'applicazione cattura l\'audio a livello di sistema.',
             q3: 'Quali lingue sono supportate?',
@@ -801,29 +835,20 @@ const translations = {
         },
         testimonials: {
             title: 'Recensioni degli utenti',
-            review1: '"Finalmente posso guardare drama coreani senza pause costanti! L\'app traduce accuratamente anche il parlato veloce."',
-            author1: 'Anna K.',
-            role1: 'Impara il coreano',
-            review2: '"Una rivoluzione per le riunioni internazionali! Non devo più chiedere ai colleghi di India e Cina di ripetere."',
-            author2: 'Michael R.',
-            role2: 'Manager IT',
-            review3: '"Lo uso per imparare l\'inglese tramite YouTube. Il mio vocabolario è cresciuto enormemente in un mese!"',
-            author3: 'Elena S.',
-            role3: 'Studentessa',
-            review4: '"Imparo l\'inglese dove voglio - su qualsiasi piattaforma! Guardo Netflix nel browser, ascolto podcast al telefono, partecipo a riunioni su Teams. L\'app funziona assolutamente ovunque!"',
-            author4: 'Alex M.',
-            role4: 'Impara l\'inglese',
-            review5: '"Facile da configurare e funziona perfettamente. Abbonamento da $7 si è ripagato dopo la prima riunione di lavoro."',
-            author5: 'David P.',
-            role5: 'Traduttore'
+            review1: '"La migliore app di sottotitoli in tempo reale per Windows. Davvero fantastica!"',
+            review2: '"Non credevo potesse funzionare così bene. Complimenti agli sviluppatori!"',
+            review3: '"La adoro. Dopo averne provate altre, questa mi sembra perfetta: leggera ed efficace."',
+            review4: '"La traduzione in inglese è impeccabile, mi è stata di grande aiuto per il mio gruppo di studio. Grazie a tutto il team!"',
+            review5: '"Aiuta davvero a seguire il filo del discorso e a far andare avanti la conversazione, e i piani di abbonamento sono comodi."',
+            review6: '"Se sei un fan K-pop al verde, te la consiglio per le live su Weverse."'
         },
         download: {
             title: 'Provalo gratis ora',
-            subtitle: 'Periodo di prova gratuito, poi da $7'
+            subtitle: 'Periodo di prova gratuito — piani con prezzi pensati per la tua regione.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", it: "Benvenuto nel mondo dei sottotitoli doppi" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", it: "Due lingue, uno schermo" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", it: "Iniziamo la riunione di oggi" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", it: "Riuscite a sentirmi bene?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", it: "Impara le lingue guardando film" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", it: "Comprendi meglio la lingua straniera" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", it: "Cattura ogni parola senza dover chiedere di nuovo" },
@@ -833,16 +858,29 @@ const translations = {
     'ja-JP': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: '無料で試す',
             features: '機能',
             comparison: '比較',
+            faq: 'よくある質問',
             download: 'ダウンロード'
         },
         header: {
+            worksOn: 'あらゆるアプリで動作 — 会議、映画、ゲーム、学習',
+            downloadFree: '無料で試す',
+            ratingLabel: '4.7/5 · 351件の評価',
+            watchDemo: 'デモを見る',
             title: '映画を見て、言語を学ぼう — ライブ音声を簡単に理解',
             lead: 'Live Subtitles - 二重字幕、音声認識、リアルタイム翻訳のアシスタント'
         },
         downloadBtn: 'Microsoft Storeからダウンロード',
         androidBtn: 'Android版が欲しい',
+        mediaExamples: {
+            heading: 'あらゆるアプリでライブ字幕',
+            useMeetings: 'どんな会議も、どんな訛りも',
+            useMovies: 'どんな映画も、どんな言語も',
+            useGames: 'どんなゲームも、一時停止なし',
+            useLearning: 'どんな動画でも、見ながら学ぶ'
+        },
         platforms: {
             title: 'あらゆるアプリで動作 — 制限なし'
         },
@@ -854,7 +892,8 @@ const translations = {
             speechRecognitionDesc: 'プラットフォームやアプリケーションの制限なし。',
             realTimeTranslation: 'リアルタイム翻訳',
             realTimeTranslationDesc: '映画を見て通話に参加し、再度尋ねることなくすべてをすぐに理解。',
-            allApps: 'すべてのアプリで動作'
+            allApps: 'すべてのアプリで動作',
+            allAppsDesc: 'あらゆるウィンドウの上で動作 — ビデオ通話、ストリーミング、プレーヤー、ブラウザー — アプリごとの設定は一切不要です。'
         },
         comparison: {
             title: '比較',
@@ -886,16 +925,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. 無断転載禁止。',
+            copyright: '© 2026 Live Subtitles. 無断転載禁止。',
             contact: 'お問い合わせ: ',
             email: 'help@live-subtitles.com',
             articles: '記事'
         },
-        title: 'Live Subtitles - 語学学習のための二重字幕',
-        description: 'Live Subtitles — 二重字幕、音声認識、リアルタイム翻訳を備えたアプリケーション。言語を学び、映画を見て、外国語を簡単に理解。',
+        title: 'Live Subtitles — あらゆるアプリのリアルタイム字幕・二重字幕',
+        description: 'Windows・Mac・iOSのあらゆるアプリの画面に、リアルタイム字幕と二重字幕を重ねて表示します。Zoom・Teams・YouTube・Netflix・ゲームに対応し、50以上の言語をAIでリアルタイムに即時翻訳。マイク不要で、まずは無料トライアルからお気軽にお試しください。',
         download: '今すぐダウンロード',
         meta: {
-            description: 'Live Subtitles — 二重字幕、音声認識、リアルタイム翻訳を備えたアプリケーション。言語を学び、映画を見て、外国語を簡単に理解。',
+            description: 'Windows・Mac・iOSのあらゆるアプリの画面に、リアルタイム字幕と二重字幕を重ねて表示します。Zoom・Teams・YouTube・Netflix・ゲームに対応し、50以上の言語をAIでリアルタイムに即時翻訳。マイク不要で、まずは無料トライアルからお気軽にお試しください。',
             keywords: '二重字幕, 語学学習字幕, 音声翻訳, 音声認識, オンライン字幕, Live Subtitles, 英語学習, 語学学習, リアルタイム字幕, 音声理解, 映画翻訳者'
         },
         downloadModal: {
@@ -923,7 +962,7 @@ const translations = {
         faq: {
             title: 'よくある質問',
             q1: 'アプリの料金はいくらですか？',
-            a1: 'Live Subtitlesはサブスクリプション方式で$7からです。すべての機能をテストできる無料トライアル期間があります。',
+            a1: 'Live Subtitlesは無料トライアル付きのサブスクリプションなので、まずはすべての機能をお試しいただけます。料金は地域によって異なり、お住まいの地域の価格はストアでご確認いただけます。',
             q2: 'すべてのアプリケーションで動作しますか？',
             a2: 'はい！Live Subtitlesは絶対にすべてのアプリケーションで動作します：YouTube、Netflix、Zoom、Teams、Discord、ブラウザー、ゲームまで。アプリはシステムレベルで音声をキャプチャします。',
             q3: 'どの言語がサポートされていますか？',
@@ -937,29 +976,20 @@ const translations = {
         },
         testimonials: {
             title: 'ユーザーレビュー',
-            review1: '"ついに韓国ドラマを一時停止なしで見られます！アプリは高速な会話も正確に翻訳します。"',
-            author1: 'Anna K.',
-            role1: '韓国語学習中',
-            review2: '"国際会議の革命！インドや中国の同僚に繰り返しを求める必要がなくなりました。"',
-            author2: 'Michael R.',
-            role2: 'ITマネージャー',
-            review3: '"YouTubeで英語学習に使用しています。1ヶ月で語彙が大幅に増えました！"',
-            author3: 'Elena S.',
-            role3: '学生',
-            review4: '"どこでも英語学習 - あらゆるプラットフォームで！ブラウザーでNetflix、電話でポッドキャスト、Teamsで会議。アプリは本当にどこでも動作します！"',
-            author4: 'Alex M.',
-            role4: '英語学習中',
-            review5: '"設定が簡単で完璧に動作。$7からのサブスクリプション - 最初の会議で元を取りました。"',
-            author5: 'David P.',
-            role5: '翻訳者'
+            review1: '"Windowsで使えるライブ字幕アプリの中では、これが一番だと思います。マジで最高！"',
+            review2: '"正直、ここまでちゃんと動くとは思ってませんでした。開発者さんに拍手です！"',
+            review3: '"お気に入りです。いろいろ試したけど、これがちょうどいい感じ。軽いのにしっかり使えます。"',
+            review4: '"英語の翻訳がバッチリで、勉強会でめちゃくちゃ助かってます。チームのみなさん、ありがとう！"',
+            review5: '"話の流れをつかんで会話を続けるのに本当に役立つし、サブスクのプランも実用的でいい感じです。"',
+            review6: '"お金のないK-popオタクなら、Weverseのライブにはこれをおすすめしたいです。"'
         },
         download: {
             title: '今すぐ無料でお試し',
-            subtitle: '無料トライアル期間、その後$7から'
+            subtitle: '無料トライアル期間あり — 料金はお住まいの地域に合わせて設定されます。'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", ja: "二重字幕の世界へようこそ" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", ja: "2つの言語、1つの画面" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ja: "それでは、本日のミーティングを始めましょう" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", ja: "皆さん、声はちゃんと聞こえていますか？" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", ja: "映画を見ながら言語を学ぶ" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", ja: "外国語をよりよく理解する" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", ja: "聞き返さずにすべての言葉をキャッチ" },
@@ -969,16 +999,29 @@ const translations = {
     'ko-KR': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: '무료 체험',
             features: '기능',
             comparison: '비교',
+            faq: '자주 묻는 질문',
             download: '다운로드'
         },
         header: {
+            worksOn: '모든 앱에서 작동 — 회의, 영화, 게임, 학습',
+            downloadFree: '무료로 시작하기',
+            ratingLabel: '4.7/5 · 351개',
+            watchDemo: '데모 보기',
             title: '영화 보기, 언어 배우기 — 실시간 음성을 쉽게 이해',
             lead: 'Live Subtitles - 이중 자막, 음성 인식 및 실시간 번역 어시스턴트'
         },
         downloadBtn: 'Microsoft Store에서 다운로드',
         androidBtn: 'Android 버전 원함',
+        mediaExamples: {
+            heading: '모든 앱에서 실시간 자막',
+            useMeetings: '어떤 회의든, 어떤 억양이든',
+            useMovies: '어떤 영화든, 어떤 언어든',
+            useGames: '어떤 게임이든, 일시정지 없이',
+            useLearning: '어떤 영상이든, 보면서 배우기'
+        },
         platforms: {
             title: '모든 앱에서 작동 — 제한 없음'
         },
@@ -990,7 +1033,8 @@ const translations = {
             speechRecognitionDesc: '플랫폼이나 앱 제한 없음.',
             realTimeTranslation: '실시간 번역',
             realTimeTranslationDesc: '영화를 보고 통화에 참여하여 다시 묻지 않고 모든 것을 즉시 이해.',
-            allApps: '모든 앱에서 작동'
+            allApps: '모든 앱에서 작동',
+            allAppsDesc: '화상 회의, 스트리밍, 플레이어, 브라우저 등 어떤 창 위에서도 작동하며, 앱마다 따로 설정할 필요가 없습니다.'
         },
         comparison: {
             title: '비교',
@@ -1022,16 +1066,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. 모든 권리 보유.',
+            copyright: '© 2026 Live Subtitles. 모든 권리 보유.',
             contact: '모든 질문: ',
             email: 'help@live-subtitles.com',
             articles: '기사'
         },
-        title: 'Live Subtitles - 언어 학습을 위한 이중 자막',
-        description: 'Live Subtitles — 이중 자막, 음성 인식 및 실시간 번역이 있는 애플리케이션. 언어를 배우고, 영화를 보고, 외국어를 쉽게 이해하세요.',
+        title: 'Live Subtitles — 모든 앱용 실시간 자막 & 이중 자막',
+        description: 'Windows, Mac, iOS의 모든 앱 위에 실시간 자막과 이중 자막을 표시합니다. Zoom, Teams, Netflix, YouTube, 게임까지 50개 이상 언어로 실시간 AI 번역을 제공합니다. 마이크 불필요, 무료 체험으로 지금 시작하세요.',
         download: '지금 다운로드',
         meta: {
-            description: 'Live Subtitles — 이중 자막, 음성 인식 및 실시간 번역이 있는 애플리케이션. 언어를 배우고, 영화를 보고, 외국어를 쉽게 이해하세요.',
+            description: 'Windows, Mac, iOS의 모든 앱 위에 실시간 자막과 이중 자막을 표시합니다. Zoom, Teams, Netflix, YouTube, 게임까지 50개 이상 언어로 실시간 AI 번역을 제공합니다. 마이크 불필요, 무료 체험으로 지금 시작하세요.',
             keywords: '이중 자막, 언어 학습 자막, 음성 번역, 음성 인식, 온라인 자막, Live Subtitles, 영어 학습, 언어 학습, 실시간 자막, 음성 이해, 영화 번역기'
         },
         downloadModal: {
@@ -1059,7 +1103,7 @@ const translations = {
         faq: {
             title: '자주 묻는 질문',
             q1: '앱 비용은 얼마인가요?',
-            a1: 'Live Subtitles는 구독 방식으로 $7부터 시작합니다. 모든 기능을 테스트할 수 있는 무료 평가판 기간이 있습니다.',
+            a1: 'Live Subtitles는 무료 체험이 제공되는 구독 서비스라 모든 기능을 먼저 자유롭게 사용해볼 수 있습니다. 요금은 지역에 따라 다르며, 스토어에서 내 지역 가격을 확인할 수 있습니다.',
             q2: '모든 애플리케이션에서 작동하나요?',
             a2: '예! Live Subtitles는 절대적으로 모든 애플리케이션에서 작동합니다: YouTube, Netflix, Zoom, Teams, Discord, 브라우저 및 게임까지. 앱은 시스템 수준에서 오디오를 캡처합니다.',
             q3: '어떤 언어가 지원되나요?',
@@ -1073,29 +1117,20 @@ const translations = {
         },
         testimonials: {
             title: '사용자 리뷰',
-            review1: '"드디어 한국 드라마를 일시 정지 없이 볼 수 있습니다! 앱이 빠른 말도 정확하게 번역합니다."',
-            author1: 'Anna K.',
-            role1: '한국어 학습 중',
-            review2: '"국제 회의의 혁명! 인도와 중국 동료들에게 반복을 요청할 필요가 없어졌습니다."',
-            author2: 'Michael R.',
-            role2: 'IT 매니저',
-            review3: '"YouTube를 통해 영어를 배우는 데 사용합니다. 한 달 만에 어휘가 엄청나게 늘었습니다!"',
-            author3: 'Elena S.',
-            role3: '학생',
-            review4: '"원하는 곳 어디서든 영어 학습 - 모든 플랫폼에서! 브라우저에서 Netflix 시청, 휴대폰에서 팟캐스트 청취, Teams에서 회의 참석. 앱이 정말 어디서든 작동합니다!"',
-            author4: 'Alex M.',
-            role4: '영어 학습 중',
-            review5: '"설정이 간단하고 완벽하게 작동합니다. $7부터 구독 - 첫 번째 회의 후 바로 원가 회수했습니다."',
-            author5: 'David P.',
-            role5: '번역가'
+            review1: '"Windows에서 쓸 수 있는 실시간 자막 앱 중에 최고예요. 진짜 멋져요!"',
+            review2: '"이 정도로 잘될 줄은 몰랐어요. 개발자분들 정말 대단하세요!"',
+            review3: '"완전 마음에 들어요. 다른 앱들 써보다가 왔는데, 이게 딱이네요. 가볍고 잘 돌아가요."',
+            review4: '"영어 번역이 정확해서 저희 스터디 모임에 정말 큰 도움이 됐어요. 팀 여러분 감사합니다!"',
+            review5: '"대화 맥락을 잘 따라가서 이어가기 편하고, 구독 요금제도 합리적이에요."',
+            review6: '"돈 없는 K-pop 덕후라면 Weverse 라이브 볼 때 이거 강추예요."'
         },
         download: {
             title: '지금 무료로 사용해보세요',
-            subtitle: '무료 평가판 기간, 그 후 $7부터'
+            subtitle: '무료 체험 기간 제공 — 요금은 지역에 맞게 책정됩니다.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", ko: "이중 자막의 세계에 오신 것을 환영합니다" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", ko: "두 언어, 하나의 화면" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ko: "오늘 회의를 시작하겠습니다" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", ko: "제 말이 잘 들리시나요?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", ko: "영화를 보며 언어를 배우세요" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", ko: "외국어를 더 잘 이해하세요" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", ko: "다시 묻지 않고 모든 단어를 포착하세요" },
@@ -1105,16 +1140,29 @@ const translations = {
     'zh-CN': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: '免费试用',
             features: '功能',
             comparison: '对比',
+            faq: '常见问题',
             download: '下载'
         },
         header: {
+            worksOn: '适用于任何应用 — 会议、电影、游戏、学习',
+            downloadFree: '免费试用',
+            ratingLabel: '4.7/5 · 351 条评价',
+            watchDemo: '观看演示',
             title: '看电影，学语言 — 轻松理解实时语音',
             lead: 'Live Subtitles - 您的双字幕、语音识别和实时翻译助手'
         },
         downloadBtn: '从微软商店下载',
         androidBtn: '需要Android版本',
+        mediaExamples: {
+            heading: '在任何应用中实时字幕',
+            useMeetings: '任何会议，任何口音',
+            useMovies: '任何电影，任何语言',
+            useGames: '任何游戏，无需暂停',
+            useLearning: '任何视频，边看边学'
+        },
         platforms: {
             title: '适用于任何应用 — 无限制'
         },
@@ -1126,7 +1174,8 @@ const translations = {
             speechRecognitionDesc: '无平台或应用限制。',
             realTimeTranslation: '实时翻译',
             realTimeTranslationDesc: '观看电影和参与通话，立即理解一切，无需重复询问。',
-            allApps: '适用于所有应用'
+            allApps: '适用于所有应用',
+            allAppsDesc: '可在任意窗口之上运行——视频通话、流媒体、播放器和浏览器——无需为每个应用单独设置。'
         },
         comparison: {
             title: '对比',
@@ -1158,16 +1207,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. 保留所有权利。',
+            copyright: '© 2026 Live Subtitles. 保留所有权利。',
             contact: '有任何问题：',
             email: 'help@live-subtitles.com',
             articles: '文章'
         },
-        title: 'Live Subtitles - 语言学习双字幕',
-        description: 'Live Subtitles — 配备双字幕、语音识别和实时翻译的应用程序。学习语言，观看电影，轻松理解外语。',
+        title: 'Live Subtitles — 实时字幕与双语字幕，任意应用',
+        description: 'Live Subtitles 在 Windows、Mac 和 iOS 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50+ 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏，无需麦克风。免费试用，立即体验无障碍沟通。',
         download: '立即下载',
         meta: {
-            description: 'Live Subtitles — 配备双字幕、语音识别和实时翻译的应用程序。学习语言，观看电影，轻松理解外语。',
+            description: 'Live Subtitles 在 Windows、Mac 和 iOS 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50+ 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏，无需麦克风。免费试用，立即体验无障碍沟通。',
             keywords: '双字幕, 语言学习字幕, 语音翻译, 语音识别, 在线字幕, Live Subtitles, 英语学习, 语言学习, 实时字幕, 语音理解, 电影翻译器'
         },
         downloadModal: {
@@ -1195,7 +1244,7 @@ const translations = {
         faq: {
             title: '常见问题',
             q1: '应用程序的费用是多少？',
-            a1: 'Live Subtitles订阅制从$7起。提供免费试用期，供您测试所有应用功能。',
+            a1: 'Live Subtitles 采用订阅制，并提供免费试用，您可以先体验所有功能。价格因地区而异，您将在商店中看到当地的价格。',
             q2: '是否适用于所有应用程序？',
             a2: '是的！Live Subtitles绝对适用于所有应用程序：YouTube、Netflix、Zoom、Teams、Discord、浏览器甚至游戏。应用程序在系统级别捕获音频。',
             q3: '支持哪些语言？',
@@ -1209,29 +1258,20 @@ const translations = {
         },
         testimonials: {
             title: '用户评价',
-            review1: '"终于可以不暂停地看韩剧了！应用程序能准确翻译快速对话。"',
-            author1: 'Anna K.',
-            role1: '正在学习韩语',
-            review2: '"国际会议的革命！不再需要要求印度和中国同事重复。"',
-            author2: 'Michael R.',
-            role2: 'IT经理',
-            review3: '"我用它通过YouTube学习英语。一个月内词汇量大幅增长！"',
-            author3: 'Elena S.',
-            role3: '学生',
-            review4: '"我随时随地学习英语 - 在任何平台上！在浏览器看Netflix，手机听播客，Teams参加会议。应用程序真的到处都能用！"',
-            author4: 'Alex M.',
-            role4: '正在学习英语',
-            review5: '"设置简单，运行完美。从$7订阅 - 第一次工作会议后就回本了。"',
-            author5: 'David P.',
-            role5: '翻译员'
+            review1: '"这是 Windows 上最好用的实时字幕 App，真的太赞了！"',
+            review2: '"没想到能做得这么好用，必须给开发者点个赞！"',
+            review3: '"太喜欢了。试了好几个 App 之后，就这个用着最顺手：又轻巧又好用。"',
+            review4: '"英文翻译很到位，对我和组员们的学习帮助很大。感谢作者们！"',
+            review5: '"它真的能帮你跟上对话、让聊天顺顺当当地进行下去，订阅套餐也挺实用的。"',
+            review6: '"如果你是个穷得叮当响的 K-pop 粉，看 Weverse 直播我强烈推荐这个。"'
         },
         download: {
             title: '立即免费试用',
-            subtitle: '免费试用期，然后从$7起'
+            subtitle: '免费试用期，套餐价格按您所在地区计费。'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", zh: "欢迎来到双字幕的世界" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", zh: "两种语言，一块屏幕" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", zh: "那我们开始今天的会议吧" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", zh: "大家能听清楚吗？" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", zh: "通过看电影学习语言" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", zh: "更好地理解外语" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", zh: "无需重复即可捕捉每个单词" },
@@ -1241,16 +1281,29 @@ const translations = {
     'ar-SA': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'جرّب مجانًا',
             features: 'الميزات',
             comparison: 'مقارنة',
+            faq: 'الأسئلة الشائعة',
             download: 'تحميل'
         },
         header: {
+            worksOn: 'يعمل في أي تطبيق — اجتماعات، أفلام، ألعاب، تعلّم',
+            downloadFree: 'ابدأ النسخة التجريبية المجانية',
+            ratingLabel: '4.7/5 · 351 تقييم',
+            watchDemo: 'شاهد العرض',
             title: 'شاهد الأفلام، تعلم اللغات — افهم الكلام المباشر بسهولة',
             lead: 'Live Subtitles - مساعدك مع الترجمة المزدوجة، التعرف على الكلام والترجمة الفورية'
         },
         downloadBtn: 'تحميل من متجر مايكروسوفت',
         androidBtn: 'أريد إصدار Android',
+        mediaExamples: {
+            heading: 'ترجمة حية في أي تطبيق',
+            useMeetings: 'أي اجتماع، أي لهجة',
+            useMovies: 'أي فيلم، أي لغة',
+            useGames: 'أي لعبة، بدون إيقاف',
+            useLearning: 'أي فيديو — تعلّم وأنت تشاهد'
+        },
         platforms: {
             title: 'يعمل مع أي تطبيق — بلا حدود'
         },
@@ -1262,7 +1315,8 @@ const translations = {
             speechRecognitionDesc: 'بدون قيود على النظام أو التطبيق.',
             realTimeTranslation: 'ترجمة فورية',
             realTimeTranslationDesc: 'شاهد الأفلام وشارك في المكالمات مع فهم فوري لكل شيء، بدون إعادة السؤال.',
-            allApps: 'يعمل مع جميع التطبيقات'
+            allApps: 'يعمل مع جميع التطبيقات',
+            allAppsDesc: 'يعمل فوق أي نافذة — مكالمات الفيديو والبث والمشغّلات والمتصفّحات — دون الحاجة إلى أي إعداد لكل تطبيق على حدة.'
         },
         comparison: {
             title: 'مقارنة',
@@ -1294,16 +1348,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. جميع الحقوق محفوظة.',
+            copyright: '© 2026 Live Subtitles. جميع الحقوق محفوظة.',
             contact: 'لأي أسئلة: ',
             email: 'help@live-subtitles.com',
             articles: 'مقالات'
         },
-        title: 'Live Subtitles - ترجمة مزدوجة لتعلم اللغات',
-        description: 'Live Subtitles — تطبيق مع ترجمة مزدوجة، التعرف على الكلام والترجمة الفورية. تعلم اللغات، شاهد الأفلام وافهم اللغات الأجنبية بسهولة.',
+        title: 'Live Subtitles — ترجمة حية ومزدوجة لأي تطبيق',
+        description: 'ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.',
         download: 'حمل الآن',
         meta: {
-            description: 'Live Subtitles — تطبيق مع ترجمة مزدوجة، التعرف على الكلام والترجمة الفورية. تعلم اللغات، شاهد الأفلام وافهم اللغات الأجنبية بسهولة.',
+            description: 'ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.',
             keywords: 'ترجمة مزدوجة, ترجمة لتعلم اللغات, ترجمة الكلام, التعرف على الكلام, ترجمة أونلاين, Live Subtitles, تعلم الإنجليزية, تعلم اللغات, ترجمة فورية, فهم الكلام, مترجم أفلام'
         },
         downloadModal: {
@@ -1331,7 +1385,7 @@ const translations = {
         faq: {
             title: 'الأسئلة الشائعة',
             q1: 'كم تكلفة التطبيق؟',
-            a1: 'Live Subtitles يعمل على أساس الاشتراك من $7. تتوفر فترة تجريبية مجانية حتى تتمكن من اختبار جميع ميزات التطبيق.',
+            a1: 'يعمل Live Subtitles بنظام الاشتراك مع فترة تجريبية مجانية، حتى تتمكّن من تجربة جميع الميزات أولاً. تختلف الأسعار حسب المنطقة، وسترى سعرك المحلي في المتجر.',
             q2: 'هل يعمل مع جميع التطبيقات؟',
             a2: 'نعم! Live Subtitles يعمل مع جميع التطبيقات تماماً: YouTube، Netflix، Zoom، Teams، Discord، المتصفحات وحتى الألعاب. التطبيق يلتقط الصوت على مستوى النظام.',
             q3: 'ما هي اللغات المدعومة؟',
@@ -1345,29 +1399,20 @@ const translations = {
         },
         testimonials: {
             title: 'تقييمات المستخدمين',
-            review1: '"أخيراً يمكنني مشاهدة الدراما الكورية بدون توقف مستمر! التطبيق يترجم حتى الكلام السريع بدقة."',
-            author1: 'Anna K.',
-            role1: 'تتعلم الكورية',
-            review2: '"ثورة في الاجتماعات الدولية! لم أعد بحاجة لطلب الإعادة من زملائي من الهند والصين."',
-            author2: 'Michael R.',
-            role2: 'مدير تقنية المعلومات',
-            review3: '"أستخدمه لتعلم الإنجليزية من خلال YouTube. مفرداتي نمت بشكل هائل في شهر واحد!"',
-            author3: 'Elena S.',
-            role3: 'طالبة',
-            review4: '"أتعلم الإنجليزية حيث أريد - على أي منصة! أشاهد Netflix في المتصفح، أستمع للبودكاست على الهاتف، أحضر اجتماعات في Teams. التطبيق يعمل فعلاً في كل مكان!"',
-            author4: 'Alex M.',
-            role4: 'يتعلم الإنجليزية',
-            review5: '"سهل الإعداد ويعمل بشكل مثالي. الاشتراك من $7 استرد قيمته بعد أول اجتماع عمل."',
-            author5: 'David P.',
-            role5: 'مترجم'
+            review1: '"أفضل تطبيق ترجمة فورية للترجمات الحية على Windows. رائع فعلاً!"',
+            review2: '"لم أتوقع أن يعمل بهذه الكفاءة، كل الشكر للمطوّرين!"',
+            review3: '"أحبه كثيرًا. جرّبت تطبيقات أخرى قبله، لكن هذا هو الأنسب تمامًا: خفيف وفعّال."',
+            review4: '"الترجمة الإنجليزية دقيقة جدًا، وقد ساعدتني كثيرًا في مجموعة الدراسة الخاصة بي. شكرًا للفريق!"',
+            review5: '"يساعدك فعلاً على متابعة سياق الحديث ومواصلة المحادثة، كما أن خطط الاشتراك عملية."',
+            review6: '"إذا كنت من معجبي K-pop ومفلسًا، فأنصحك به لمتابعة البث المباشر على Weverse."'
         },
         download: {
             title: 'جرب مجاناً الآن',
-            subtitle: 'فترة تجريبية مجانية، ثم من $7'
+            subtitle: 'فترة تجريبية مجانية — أسعار الخطط مخصّصة لمنطقتك.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", ar: "مرحبًا بك في عالم الترجمة المزدوجة" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", ar: "لغتان، شاشة واحدة" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ar: "لنبدأ اجتماع اليوم" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", ar: "هل يسمعني الجميع بوضوح؟" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", ar: "تعلم اللغات أثناء مشاهدة الأفلام" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", ar: "افهم الكلام الأجنبي بشكل أفضل" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", ar: "التقط كل كلمة دون الحاجة للسؤال مرة أخرى" },
@@ -1377,16 +1422,29 @@ const translations = {
     'hi-IN': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'मुफ़्त आज़माएं',
             features: 'सुविधाएं',
             comparison: 'तुलना',
+            faq: 'सामान्य प्रश्न',
             download: 'डाउनलोड'
         },
         header: {
+            worksOn: 'किसी भी ऐप में काम करता है — मीटिंग, फ़िल्में, गेम, सीखना',
+            downloadFree: 'मुफ़्त ट्रायल शुरू करें',
+            ratingLabel: '4.7/5 · 351 रेटिंग',
+            watchDemo: 'डेमो देखें',
             title: 'फिल्में देखें, भाषाएं सीखें — लाइव स्पीच को आसानी से समझें',
             lead: 'Live Subtitles - दोहरे सबटाइटल, स्पीच रिकग्निशन और रियल-टाइम ट्रांसलेशन के साथ आपका सहायक'
         },
         downloadBtn: 'Microsoft Store से डाउनलोड करें',
         androidBtn: 'Android संस्करण चाहिए',
+        mediaExamples: {
+            heading: 'किसी भी ऐप में लाइव कैप्शन',
+            useMeetings: 'कोई भी मीटिंग, कोई भी लहजा',
+            useMovies: 'कोई भी फ़िल्म, कोई भी भाषा',
+            useGames: 'कोई भी गेम, बिना रुके',
+            useLearning: 'कोई भी वीडियो — देखते हुए सीखें'
+        },
         platforms: {
             title: 'किसी भी ऐप के साथ काम करता है — कोई सीमा नहीं'
         },
@@ -1398,7 +1456,8 @@ const translations = {
             speechRecognitionDesc: 'प्लेटफॉर्म या ऐप की कोई सीमा नहीं।',
             realTimeTranslation: 'रियल-टाइम ट्रांसलेशन',
             realTimeTranslationDesc: 'फिल्में देखें और कॉल में भाग लें, बिना दोबारा पूछे सब कुछ तुरंत समझें।',
-            allApps: 'सभी ऐप्स के साथ काम करता है'
+            allApps: 'सभी ऐप्स के साथ काम करता है',
+            allAppsDesc: 'किसी भी विंडो के ऊपर काम करता है — वीडियो कॉल, स्ट्रीमिंग, प्लेयर और ब्राउज़र — और हर ऐप के लिए अलग से कुछ भी सेट करने की ज़रूरत नहीं।'
         },
         comparison: {
             title: 'तुलना',
@@ -1430,16 +1489,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. सभी अधिकार सुरक्षित।',
+            copyright: '© 2026 Live Subtitles. सभी अधिकार सुरक्षित।',
             contact: 'किसी भी प्रश्न के लिए: ',
             email: 'help@live-subtitles.com',
             articles: 'लेख'
         },
-        title: 'Live Subtitles - भाषा सीखने के लिए दोहरे सबटाइटल',
-        description: 'Live Subtitles — दोहरे सबटाइटल, स्पीच रिकग्निशन और रियल-टाइम ट्रांसलेशन के साथ एप्लिकेशन। भाषाएं सीखें, फिल्में देखें और विदेशी भाषा को आसानी से समझें।',
+        title: 'Live Subtitles — किसी भी ऐप के लिए लाइव कैप्शन और सबटाइटल',
+        description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac व iOS पर। Zoom, Teams, Netflix के लिए 50+ भाषाओं में रियल-टाइम AI अनुवाद। बिना माइक, फ्री ट्रायल।',
         download: 'अभी डाउनलोड करें',
         meta: {
-            description: 'Live Subtitles — दोहरे सबटाइटल, स्पीच रिकग्निशन और रियल-टाइम ट्रांसलेशन के साथ एप्लिकेशन। भाषाएं सीखें, फिल्में देखें और विदेशी भाषा को आसानी से समझें।',
+            description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac व iOS पर। Zoom, Teams, Netflix के लिए 50+ भाषाओं में रियल-टाइम AI अनुवाद। बिना माइक, फ्री ट्रायल।',
             keywords: 'दोहरे सबटाइटल, भाषा सीखने के लिए सबटाइटल, स्पीच ट्रांसलेशन, स्पीच रिकग्निशन, ऑनलाइन सबटाइटल, Live Subtitles, अंग्रेजी सीखना, भाषा सीखना, रियल-टाइम सबटाइटल, स्पीच समझना, मूवी ट्रांसलेटर'
         },
         downloadModal: {
@@ -1467,7 +1526,7 @@ const translations = {
         faq: {
             title: 'अक्सर पूछे जाने वाले प्रश्न',
             q1: 'ऐप की लागत कितनी है?',
-            a1: 'Live Subtitles सदस्यता आधार पर $7 से काम करता है। सभी ऐप सुविधाओं का परीक्षण करने के लिए एक निःशुल्क परीक्षण अवधि उपलब्ध है।',
+            a1: 'Live Subtitles एक सब्सक्रिप्शन है जिसमें निःशुल्क परीक्षण अवधि शामिल है, ताकि आप पहले हर सुविधा आज़मा सकें। मूल्य क्षेत्र के अनुसार अलग-अलग होता है — आपको अपना स्थानीय मूल्य स्टोर में दिख जाएगा।',
             q2: 'क्या यह सभी एप्लिकेशन के साथ काम करता है?',
             a2: 'हां! Live Subtitles बिल्कुल सभी एप्लिकेशन के साथ काम करता है: YouTube, Netflix, Zoom, Teams, Discord, ब्राउज़र और यहां तक कि गेम भी। ऐप सिस्टम स्तर पर ऑडियो कैप्चर करता है।',
             q3: 'कौन सी भाषाएं समर्थित हैं?',
@@ -1481,29 +1540,20 @@ const translations = {
         },
         testimonials: {
             title: 'उपयोगकर्ता समीक्षाएं',
-            review1: '"आखिरकार मैं कोरियाई ड्रामा बिना रुके देख सकता हूं! ऐप तेज़ बातचीत का भी सटीक अनुवाद करता है।"',
-            author1: 'Anna K.',
-            role1: 'कोरियाई सीख रही है',
-            review2: '"अंतरराष्ट्रीय मीटिंग्स में क्रांति! अब मुझे भारत और चीन के सहयोगियों से दोहराने को नहीं कहना पड़ता।"',
-            author2: 'Michael R.',
-            role2: 'IT मैनेजर',
-            review3: '"मैं YouTube के माध्यम से अंग्रेजी सीखने के लिए इसका उपयोग करता हूं। एक महीने में मेरी शब्दावली बेहद बढ़ गई!"',
-            author3: 'Elena S.',
-            role3: 'छात्रा',
-            review4: '"मैं जहां चाहूं अंग्रेजी सीखता हूं - किसी भी प्लेटफॉर्म पर! ब्राउज़र में Netflix देखता हूं, फोन पर पॉडकास्ट सुनता हूं, Teams में मीटिंग्स अटेंड करता हूं। ऐप वाकई हर जगह काम करता है!"',
-            author4: 'Alex M.',
-            role4: 'अंग्रेजी सीख रहा है',
-            review5: '"सेटअप आसान है और बिल्कुल सही काम करता है। $7 से सदस्यता - पहली कार्य मीटिंग के बाद ही वसूल हो गया।"',
-            author5: 'David P.',
-            role5: 'अनुवादक'
+            review1: '"Windows के लिए यह सबसे बढ़िया live caption ऐप है। वाकई कमाल का है!"',
+            review2: '"सोचा नहीं था कि यह इतना अच्छा चलेगा — डेवलपर्स को सलाम!"',
+            review3: '"मुझे यह बहुत पसंद आया। बाकी कई ऐप्स आज़माने के बाद यही वाला एकदम सही लगा: हल्का और असरदार।"',
+            review4: '"English ट्रांसलेशन बिल्कुल सटीक है — मेरे स्टडी ग्रुप के लिए तो यह बहुत बड़ी मदद रही है। पूरी टीम का शुक्रिया!"',
+            review5: '"यह सचमुच बातचीत का सिलसिला समझने और उसे आगे बढ़ाने में मदद करता है, और सब्सक्रिप्शन प्लान भी काम के हैं।"',
+            review6: '"अगर आप एक कंगाल K-pop स्टैन हो, तो Weverse की live streams के लिए मैं इसे ज़रूर रिकमेंड करूँगा।"'
         },
         download: {
             title: 'अभी मुफ्त में आज़माएं',
-            subtitle: 'निःशुल्क परीक्षण अवधि, फिर $7 से'
+            subtitle: 'निःशुल्क परीक्षण अवधि — आपके क्षेत्र के अनुसार मूल्य वाली योजनाएँ।'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", hi: "ड्यूल सबटाइटल्स की दुनिया में आपका स्वागत है" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", hi: "दो भाषाएँ, एक स्क्रीन" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", hi: "चलिए आज की मीटिंग शुरू करते हैं" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", hi: "क्या सभी को मेरी आवाज़ साफ़ सुनाई दे रही है?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", hi: "फिल्में देखते हुए भाषाएँ सीखें" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", hi: "विदेशी भाषा को बेहतर समझें" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", hi: "बिना दोहराए हर शब्द पकड़ें" },
@@ -1513,16 +1563,29 @@ const translations = {
     'pt-BR': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Testar grátis',
             features: 'Recursos',
             comparison: 'Comparação',
+            faq: 'FAQ',
             download: 'Download'
         },
         header: {
+            worksOn: 'Funciona em qualquer app — reuniões, filmes, jogos, aprendizado',
+            downloadFree: 'Comece o teste grátis',
+            ratingLabel: '4,7/5 · 351 avaliações',
+            watchDemo: 'Ver demo',
             title: 'Assista filmes, aprenda idiomas — entenda a fala ao vivo facilmente',
             lead: 'Live Subtitles - seu assistente com duplas legendas, reconhecimento de fala e tradução em tempo real'
         },
         downloadBtn: 'Baixar da Microsoft Store',
         androidBtn: 'Quero versão Android',
+        mediaExamples: {
+            heading: 'Legendas ao vivo em qualquer app',
+            useMeetings: 'Qualquer reunião, qualquer sotaque',
+            useMovies: 'Qualquer filme, qualquer idioma',
+            useGames: 'Qualquer jogo, sem pausar',
+            useLearning: 'Qualquer vídeo — aprenda assistindo'
+        },
         platforms: {
             title: 'Funciona com qualquer app — sem limitações'
         },
@@ -1534,7 +1597,8 @@ const translations = {
             speechRecognitionDesc: 'Sem limitações de plataforma ou aplicativo.',
             realTimeTranslation: 'Tradução em tempo real',
             realTimeTranslationDesc: 'Assista filmes e participe de chamadas com compreensão instantânea de tudo, sem precisar perguntar novamente.',
-            allApps: 'Funciona com todos os apps'
+            allApps: 'Funciona com todos os apps',
+            allAppsDesc: 'Funciona sobre qualquer janela — chamadas de vídeo, streaming, players e navegadores — sem precisar configurar nada para cada app.'
         },
         comparison: {
             title: 'Comparação',
@@ -1566,16 +1630,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Todos os direitos reservados.',
+            copyright: '© 2026 Live Subtitles. Todos os direitos reservados.',
             contact: 'Para qualquer dúvida: ',
             email: 'help@live-subtitles.com',
             articles: 'Artigos'
         },
-        title: 'Live Subtitles - duplas legendas para aprendizado de idiomas',
-        description: 'Live Subtitles — aplicativo com duplas legendas, reconhecimento de fala e tradução em tempo real. Aprenda idiomas, assista filmes e entenda idiomas estrangeiros facilmente.',
+        title: 'Live Subtitles — Legendas ao Vivo e Duplas em Qualquer App',
+        description: 'Legendas ao vivo e duplas em qualquer app no Windows, Mac e iOS. Tradução por IA em tempo real em mais de 50 idiomas para Zoom, Teams e Netflix. Teste grátis.',
         download: 'Baixar agora',
         meta: {
-            description: 'Live Subtitles — aplicativo com duplas legendas, reconhecimento de fala e tradução em tempo real. Aprenda idiomas, assista filmes e entenda idiomas estrangeiros facilmente.',
+            description: 'Legendas ao vivo e duplas em qualquer app no Windows, Mac e iOS. Tradução por IA em tempo real em mais de 50 idiomas para Zoom, Teams e Netflix. Teste grátis.',
             keywords: 'duplas legendas, legendas para aprendizado de idiomas, tradução de fala, reconhecimento de fala, legendas online, Live Subtitles, aprender inglês, aprendizado de idiomas, legendas em tempo real, compreensão da fala, tradutor de filmes'
         },
         downloadModal: {
@@ -1603,7 +1667,7 @@ const translations = {
         faq: {
             title: 'Perguntas Frequentes',
             q1: 'Quanto custa o app?',
-            a1: 'Live Subtitles funciona em assinatura a partir de $7. Um período de avaliação gratuito está disponível para que você possa testar todos os recursos do app.',
+            a1: 'O Live Subtitles é uma assinatura com teste gratuito, para você experimentar todos os recursos primeiro. Os preços variam conforme a região — você verá o valor local na loja.',
             q2: 'Funciona com todas as aplicações?',
             a2: 'Sim! Live Subtitles funciona absolutamente com todas as aplicações: YouTube, Netflix, Zoom, Teams, Discord, navegadores e até jogos. O app captura áudio no nível do sistema.',
             q3: 'Quais idiomas são suportados?',
@@ -1617,29 +1681,20 @@ const translations = {
         },
         testimonials: {
             title: 'Avaliações dos Usuários',
-            review1: '"Finalmente posso assistir doramas coreanos sem pausar constantemente! O app traduz até falas rápidas com precisão."',
-            author1: 'Anna K.',
-            role1: 'Aprendendo coreano',
-            review2: '"Revolução em reuniões internacionais! Não preciso mais pedir repetição aos colegas da Índia e China."',
-            author2: 'Michael R.',
-            role2: 'Gerente de TI',
-            review3: '"Uso para aprender inglês através do YouTube. Meu vocabulário cresceu enormemente em um mês!"',
-            author3: 'Elena S.',
-            role3: 'Estudante',
-            review4: '"Aprendo inglês onde quero - em qualquer plataforma! Assisto Netflix no navegador, escuto podcasts no telefone, participo de reuniões no Teams. O app realmente funciona em todos os lugares!"',
-            author4: 'Alex M.',
-            role4: 'Aprendendo inglês',
-            review5: '"Configuração simples e funciona perfeitamente. Assinatura a partir de $7 recuperei o valor após a primeira reunião de trabalho."',
-            author5: 'David P.',
-            role5: 'Tradutor'
+            review1: '"Esse é o melhor app de legenda ao vivo pra Windows. Muito massa mesmo!"',
+            review2: '"Não imaginava que ia funcionar tão bem, parabéns aos desenvolvedores!"',
+            review3: '"Amei. Depois de testar vários outros apps, esse aqui é a escolha certa: leve e eficiente."',
+            review4: '"A tradução pro inglês é certeira, ajudou demais o meu grupo de estudos. Obrigado à equipe!"',
+            review5: '"Ajuda muito a acompanhar o contexto e manter a conversa fluindo, e os planos de assinatura são bem práticos."',
+            review6: '"Se você é fã de K-pop e tá sem grana, recomendo esse aqui pras lives no Weverse."'
         },
         download: {
             title: 'Experimente grátis agora',
-            subtitle: 'Período de avaliação gratuito, depois a partir de $7'
+            subtitle: 'Período de teste gratuito — planos com preços para a sua região.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", pt: "Bem-vindo ao mundo das legendas duplas" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", pt: "Dois idiomas, uma tela" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pt: "Vamos começar a reunião de hoje" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", pt: "Todos conseguem me ouvir bem?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", pt: "Aprenda idiomas assistindo a filmes" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", pt: "Compreenda melhor a fala estrangeira" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", pt: "Capte cada palavra sem precisar perguntar novamente" },
@@ -1649,16 +1704,29 @@ const translations = {
     'pl-PL': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Wypróbuj za darmo',
             features: 'Funkcje',
             comparison: 'Porównanie',
+            faq: 'FAQ',
             download: 'Pobierz'
         },
         header: {
+            worksOn: 'Działa w każdej aplikacji — spotkania, filmy, gry, nauka',
+            downloadFree: 'Wypróbuj za darmo',
+            ratingLabel: '4,7/5 · 351 ocen',
+            watchDemo: 'Zobacz demo',
             title: 'Oglądaj filmy, ucz się języków — łatwo rozumiej żywą mowę',
             lead: 'Live Subtitles - twój asystent z podwójnymi napisami, rozpoznawaniem mowy i tłumaczeniem w czasie rzeczywistym'
         },
         downloadBtn: 'Pobierz z Microsoft Store',
         androidBtn: 'Chcę wersję na Android',
+        mediaExamples: {
+            heading: 'Napisy na żywo w każdej aplikacji',
+            useMeetings: 'Każde spotkanie, każdy akcent',
+            useMovies: 'Każdy film, każdy język',
+            useGames: 'Każda gra, bez pauzy',
+            useLearning: 'Każde wideo — ucz się oglądając'
+        },
         platforms: {
             title: 'Działa z każdą aplikacją — bez ograniczeń'
         },
@@ -1670,7 +1738,8 @@ const translations = {
             speechRecognitionDesc: 'Bez ograniczeń platformy czy aplikacji.',
             realTimeTranslation: 'Tłumaczenie w czasie rzeczywistym',
             realTimeTranslationDesc: 'Oglądaj filmy i uczestnicz w rozmowach z natychmiastowym zrozumieniem wszystkiego, bez ponownego pytania.',
-            allApps: 'Działa ze wszystkimi aplikacjami'
+            allApps: 'Działa ze wszystkimi aplikacjami',
+            allAppsDesc: 'Działa na każdym oknie — wideorozmowy, streaming, odtwarzacze i przeglądarki — bez konfiguracji dla poszczególnych aplikacji.'
         },
         comparison: {
             title: 'Porównanie',
@@ -1702,16 +1771,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Wszystkie prawa zastrzeżone.',
+            copyright: '© 2026 Live Subtitles. Wszystkie prawa zastrzeżone.',
             contact: 'W przypadku pytań: ',
             email: 'help@live-subtitles.com',
             articles: 'Artykuły'
         },
-        title: 'Live Subtitles - podwójne napisy do nauki języków',
-        description: 'Live Subtitles — aplikacja z podwójnymi napisami, rozpoznawaniem mowy i tłumaczeniem w czasie rzeczywistym. Ucz się języków, oglądaj filmy i łatwo rozumiej język obcy.',
+        title: 'Live Subtitles — Podwójne napisy na żywo w każdej aplikacji',
+        description: 'Napisy na żywo i podwójne napisy do każdej aplikacji na Windows, Mac, iOS. Tłumaczenie AI w 50+ językach dla Zoom, Teams, Netflix. Bez mikrofonu, darmowy start.',
         download: 'Pobierz teraz',
         meta: {
-            description: 'Live Subtitles — aplikacja z podwójnymi napisami, rozpoznawaniem mowy i tłumaczeniem w czasie rzeczywistym. Ucz się języków, oglądaj filmy i łatwo rozumiej język obcy.',
+            description: 'Napisy na żywo i podwójne napisy do każdej aplikacji na Windows, Mac, iOS. Tłumaczenie AI w 50+ językach dla Zoom, Teams, Netflix. Bez mikrofonu, darmowy start.',
             keywords: 'podwójne napisy, napisy do nauki języków, tłumaczenie mowy, rozpoznawanie mowy, napisy online, Live Subtitles, nauka angielskiego, nauka języków, napisy w czasie rzeczywistym, rozumienie mowy, tłumacz filmów'
         },
         downloadModal: {
@@ -1739,7 +1808,7 @@ const translations = {
         faq: {
             title: 'Często zadawane pytania',
             q1: 'Ile kosztuje aplikacja?',
-            a1: 'Live Subtitles działa na zasadzie subskrypcji od $7. Dostępny jest bezpłatny okres próbny, abyś mógł przetestować wszystkie funkcje aplikacji.',
+            a1: 'Live Subtitles to subskrypcja z bezpłatnym okresem próbnym, dzięki czemu możesz najpierw przetestować wszystkie funkcje. Ceny różnią się w zależności od regionu — swoją lokalną cenę zobaczysz w sklepie.',
             q2: 'Czy działa ze wszystkimi aplikacjami?',
             a2: 'Tak! Live Subtitles działa absolutnie ze wszystkimi aplikacjami: YouTube, Netflix, Zoom, Teams, Discord, przeglądarkami, a nawet grami. Aplikacja przechwytuje dźwięk na poziomie systemu.',
             q3: 'Jakie języki są obsługiwane?',
@@ -1753,29 +1822,20 @@ const translations = {
         },
         testimonials: {
             title: 'Opinie użytkowników',
-            review1: '"W końcu mogę oglądać koreańskie dramaty bez ciągłego pauzowania! Aplikacja dokładnie tłumaczy nawet szybkie rozmowy."',
-            author1: 'Anna K.',
-            role1: 'Uczy się koreańskiego',
-            review2: '"Rewolucja w międzynarodowych spotkaniach! Nie muszę już prosić kolegów z Indii i Chin o powtórzenie."',
-            author2: 'Michael R.',
-            role2: 'Menedżer IT',
-            review3: '"Używam do nauki angielskiego przez YouTube. Moje słownictwo wzrosło ogromnie w ciągu miesiąca!"',
-            author3: 'Elena S.',
-            role3: 'Studentka',
-            review4: '"Uczę się angielskiego, gdzie chcę - na każdej platformie! Oglądam Netflix w przeglądarce, słucham podcastów na telefonie, uczestniczę w spotkaniach w Teams. Aplikacja naprawdę działa wszędzie!"',
-            author4: 'Alex M.',
-            role4: 'Uczy się angielskiego',
-            review5: '"Łatwa konfiguracja i działa perfekcyjnie. Subskrypcja od $7 zwróciła się po pierwszym spotkaniu roboczym."',
-            author5: 'David P.',
-            role5: 'Tłumacz'
+            review1: '"To najlepsza aplikacja do napisów na żywo na Windowsie. Naprawdę super!"',
+            review2: '"Nie sądziłam, że może działać tak dobrze — gratulacje dla twórców!"',
+            review3: '"Uwielbiam ją. Po wypróbowaniu innych aplikacji ta wydaje mi się idealna: lekka i skuteczna."',
+            review4: '"Tłumaczenie na angielski jest na medal — bardzo pomogło mojej grupie naukowej. Dziękuję całemu zespołowi!"',
+            review5: '"Naprawdę pomaga nadążać za kontekstem i podtrzymywać rozmowę, a plany subskrypcji są rozsądne."',
+            review6: '"Jeśli jesteś spłukanym fanem K-popu, polecam to do streamów na żywo na Weverse."'
         },
         download: {
             title: 'Wypróbuj za darmo teraz',
-            subtitle: 'Bezpłatny okres próbny, potem od $7'
+            subtitle: 'Bezpłatny okres próbny — plany z cenami dopasowanymi do Twojego regionu.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", pl: "Witamy w świecie podwójnych napisów" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", pl: "Dwa języki, jeden ekran" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pl: "Zaczynajmy dzisiejsze spotkanie" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", pl: "Czy wszyscy mnie dobrze słyszą?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", pl: "Ucz się języków oglądając filmy" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", pl: "Lepiej rozumiej mowę obcą" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", pl: "Wyłap każde słowo bez konieczności powtarzania" },
@@ -1785,16 +1845,29 @@ const translations = {
     'nl-NL': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Gratis proberen',
             features: 'Functies',
             comparison: 'Vergelijking',
+            faq: 'FAQ',
             download: 'Download'
         },
         header: {
+            worksOn: 'Werkt in elke app — meetings, films, games, leren',
+            downloadFree: 'Gratis proberen',
+            ratingLabel: '4,7/5 · 351 beoordelingen',
+            watchDemo: 'Bekijk demo',
             title: 'Kijk films, leer talen — begrijp live spraak gemakkelijk',
             lead: 'Live Subtitles - je assistent met dubbele ondertitels, spraakherkenning en realtime vertaling'
         },
         downloadBtn: 'Download van Microsoft Store',
         androidBtn: 'Wil Android versie',
+        mediaExamples: {
+            heading: 'Live ondertiteling in elke app',
+            useMeetings: 'Elke meeting, elk accent',
+            useMovies: 'Elke film, elke taal',
+            useGames: 'Elke game, zonder pauze',
+            useLearning: 'Elke video — leer terwijl je kijkt'
+        },
         platforms: {
             title: 'Werkt met elke app — geen beperkingen'
         },
@@ -1806,7 +1879,8 @@ const translations = {
             speechRecognitionDesc: 'Geen platform- of app-beperkingen.',
             realTimeTranslation: 'Realtime vertaling',
             realTimeTranslationDesc: 'Kijk films en neem deel aan gesprekken met onmiddellijk begrip van alles, zonder opnieuw te vragen.',
-            allApps: 'Werkt met alle apps'
+            allApps: 'Werkt met alle apps',
+            allAppsDesc: 'Werkt bovenop elk venster — videogesprekken, streaming, mediaspelers en browsers — zonder dat je per app iets hoeft in te stellen.'
         },
         comparison: {
             title: 'Vergelijking',
@@ -1838,16 +1912,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Alle rechten voorbehouden.',
+            copyright: '© 2026 Live Subtitles. Alle rechten voorbehouden.',
             contact: 'Voor vragen: ',
             email: 'help@live-subtitles.com',
             articles: 'Artikelen'
         },
-        title: 'Live Subtitles - dubbele ondertitels voor taal leren',
-        description: 'Live Subtitles — applicatie met dubbele ondertitels, spraakherkenning en realtime vertaling. Leer talen, kijk films en begrijp gemakkelijk vreemde talen.',
+        title: 'Live Subtitles — Live ondertiteling & duale ondertitels',
+        description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac & iOS. AI-vertaling in 50+ talen voor Zoom, Teams en Netflix. Gratis proef, geen mic.',
         download: 'Nu downloaden',
         meta: {
-            description: 'Live Subtitles — applicatie met dubbele ondertitels, spraakherkenning en realtime vertaling. Leer talen, kijk films en begrijp gemakkelijk vreemde talen.',
+            description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac & iOS. AI-vertaling in 50+ talen voor Zoom, Teams en Netflix. Gratis proef, geen mic.',
             keywords: 'dubbele ondertitels, ondertitels voor taal leren, spraak vertaling, spraakherkenning, online ondertitels, Live Subtitles, Engels leren, taal leren, realtime ondertitels, spraak begrip, film vertaler'
         },
         downloadModal: {
@@ -1875,7 +1949,7 @@ const translations = {
         faq: {
             title: 'Veelgestelde vragen',
             q1: 'Hoeveel kost de app?',
-            a1: 'Live Subtitles werkt op abonnementsbasis vanaf $7. Er is een gratis proefperiode beschikbaar zodat je alle functies van de app kunt testen.',
+            a1: 'Live Subtitles werkt op abonnementsbasis met een gratis proefperiode, zodat je eerst alle functies kunt uitproberen. De prijs verschilt per regio — in de store zie je je lokale prijs.',
             q2: 'Werkt het met alle applicaties?',
             a2: 'Ja! Live Subtitles werkt absoluut met alle applicaties: YouTube, Netflix, Zoom, Teams, Discord, browsers en zelfs games. De app vangt audio op systeemniveau.',
             q3: 'Welke talen worden ondersteund?',
@@ -1889,29 +1963,20 @@ const translations = {
         },
         testimonials: {
             title: 'Gebruikersbeoordelingen',
-            review1: '"Eindelijk kan ik Koreaanse drama\'s kijken zonder constant te pauzeren! De app vertaalt zelfs snelle gesprekken accuraat."',
-            author1: 'Anna K.',
-            role1: 'Leert Koreaans',
-            review2: '"Revolutie in internationale vergaderingen! Ik hoef niet meer om herhaling te vragen aan collega\'s uit India en China."',
-            author2: 'Michael R.',
-            role2: 'IT Manager',
-            review3: '"Ik gebruik het om Engels te leren via YouTube. Mijn woordenschat groeide enorm in een maand!"',
-            author3: 'Elena S.',
-            role3: 'Student',
-            review4: '"Ik leer Engels waar ik wil - op elk platform! Kijk Netflix in browser, luister podcasts op telefoon, volg vergaderingen in Teams. De app werkt echt overal!"',
-            author4: 'Alex M.',
-            role4: 'Leert Engels',
-            review5: '"Eenvoudige setup en werkt perfect. Abonnement vanaf $7 terugverdiend na eerste werkvergadering."',
-            author5: 'David P.',
-            role5: 'Vertaler'
+            review1: '"Dit is de beste live caption-app voor Windows. Echt vet!"',
+            review2: '"Ik had niet gedacht dat het zo goed zou werken. Petje af voor de ontwikkelaars!"',
+            review3: '"Ik vind het geweldig. Na een paar andere apps geprobeerd te hebben voelt deze gewoon precies goed: licht en effectief."',
+            review4: '"De Engelse vertaling klopt precies en het is een enorme hulp geweest voor mijn studiegroep. Bedankt aan het team!"',
+            review5: '"Het helpt je echt om de context te volgen en het gesprek gaande te houden, en de abonnementen zijn lekker handig."',
+            review6: '"Als je een blutte K-pop stan bent, zou ik dit aanraden voor Weverse live streams."'
         },
         download: {
             title: 'Probeer nu gratis',
-            subtitle: 'Gratis proefperiode, daarna vanaf $7'
+            subtitle: 'Gratis proefperiode — abonnementen met een prijs voor jouw regio.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", nl: "Welkom in de wereld van dubbele ondertitels" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", nl: "Twee talen, één scherm" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", nl: "Laten we beginnen met de meeting van vandaag" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", nl: "Kan iedereen mij goed verstaan?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", nl: "Leer talen door naar films te kijken" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", nl: "Begrijp vreemde talen beter" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", nl: "Vang elk woord zonder opnieuw te hoeven vragen" },
@@ -1921,16 +1986,29 @@ const translations = {
     'tr-TR': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Ücretsiz dene',
             features: 'Özellikler',
             comparison: 'Karşılaştırma',
+            faq: 'SSS',
             download: 'İndir'
         },
         header: {
+            worksOn: 'Her uygulamada çalışır — toplantılar, filmler, oyunlar, öğrenme',
+            downloadFree: 'Ücretsiz Deneyin',
+            ratingLabel: '4,7/5 · 351 değerlendirme',
+            watchDemo: 'Demoyu izle',
             title: 'Film izle, dil öğren — canlı konuşmayı kolayca anla',
             lead: 'Live Subtitles - çift altyazı, konuşma tanıma ve gerçek zamanlı çeviri asistanınız'
         },
         downloadBtn: 'Microsoft Store\'dan İndir',
         androidBtn: 'Android sürümü istiyorum',
+        mediaExamples: {
+            heading: 'Her uygulamada canlı altyazı',
+            useMeetings: 'Her toplantı, her aksan',
+            useMovies: 'Her film, her dil',
+            useGames: 'Her oyun, durdurmadan',
+            useLearning: 'Her video — izlerken öğren'
+        },
         platforms: {
             title: 'Her uygulamayla çalışır — sınır yok'
         },
@@ -1942,7 +2020,8 @@ const translations = {
             speechRecognitionDesc: 'Platform veya uygulama sınırı yok.',
             realTimeTranslation: 'Gerçek zamanlı çeviri',
             realTimeTranslationDesc: 'Film izle ve aramalara katıl, tekrar sormadan her şeyi anında anla.',
-            allApps: 'Tüm uygulamalarla çalışır'
+            allApps: 'Tüm uygulamalarla çalışır',
+            allAppsDesc: 'Herhangi bir pencerenin üzerinde çalışır — görüntülü aramalar, yayın platformları, oynatıcılar ve tarayıcılar — her uygulama için ayrı kurulum gerektirmeden.'
         },
         comparison: {
             title: 'Karşılaştırma',
@@ -1974,16 +2053,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Tüm hakları saklıdır.',
+            copyright: '© 2026 Live Subtitles. Tüm hakları saklıdır.',
             contact: 'Herhangi bir soru için: ',
             email: 'help@live-subtitles.com',
             articles: 'Makaleler'
         },
-        title: 'Live Subtitles - dil öğrenimi için çift altyazı',
-        description: 'Live Subtitles — çift altyazı, konuşma tanıma ve gerçek zamanlı çeviri ile uygulama. Dil öğren, film izle ve yabancı dili kolayca anla.',
+        title: 'Live Subtitles — Tüm Uygulamalar İçin Canlı & Çift Altyazı',
+        description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS. Zoom, Teams, Netflix için 50+ dilde gerçek zamanlı AI çeviri. Ücretsiz deneme, mikrofon yok.',
         download: 'Şimdi indir',
         meta: {
-            description: 'Live Subtitles — çift altyazı, konuşma tanıma ve gerçek zamanlı çeviri ile uygulama. Dil öğren, film izle ve yabancı dili kolayca anla.',
+            description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS. Zoom, Teams, Netflix için 50+ dilde gerçek zamanlı AI çeviri. Ücretsiz deneme, mikrofon yok.',
             keywords: 'çift altyazı, dil öğrenme altyazısı, konuşma çevirisi, konuşma tanıma, çevrimiçi altyazı, Live Subtitles, İngilizce öğrenme, dil öğrenimi, gerçek zamanlı altyazı, konuşma anlama, film çevirmen'
         },
         downloadModal: {
@@ -2011,7 +2090,7 @@ const translations = {
         faq: {
             title: 'Sıkça Sorulan Sorular',
             q1: 'Uygulamanın maliyeti nedir?',
-            a1: 'Live Subtitles abonelik esasına göre $7\'den başlar. Uygulamanın tüm özelliklerini test edebilmeniz için ücretsiz deneme süresi mevcuttur.',
+            a1: 'Live Subtitles, ücretsiz deneme sunan bir aboneliktir; böylece önce tüm özellikleri test edebilirsiniz. Fiyatlandırma bölgeye göre değişir — yerel fiyatınızı mağazada görebilirsiniz.',
             q2: 'Tüm uygulamalarla çalışır mı?',
             a2: 'Evet! Live Subtitles kesinlikle tüm uygulamalarla çalışır: YouTube, Netflix, Zoom, Teams, Discord, tarayıcılar ve hatta oyunlar. Uygulama sistem seviyesinde ses yakalar.',
             q3: 'Hangi diller destekleniyor?',
@@ -2025,29 +2104,20 @@ const translations = {
         },
         testimonials: {
             title: 'Kullanıcı Değerlendirmeleri',
-            review1: '"Sonunda Kore dizilerini sürekli duraklatmadan izleyebiliyorum! Uygulama hızlı konuşmaları bile doğru çeviriyor."',
-            author1: 'Anna K.',
-            role1: 'Korece öğreniyor',
-            review2: '"Uluslararası toplantılarda devrim! Artık Hindistan ve Çin\'deki meslektaşlarımdan tekrar etmelerini istemek zorunda değilim."',
-            author2: 'Michael R.',
-            role2: 'BT Müdürü',
-            review3: '"YouTube üzerinden İngilizce öğrenmek için kullanıyorum. Bir ayda kelime dağarcığım muazzam arttı!"',
-            author3: 'Elena S.',
-            role3: 'Öğrenci',
-            review4: '"İstediğim yerde İngilizce öğreniyorum - her platformda! Tarayıcıda Netflix izliyorum, telefonda podcast dinliyorum, Teams\'te toplantılara katılıyorum. Uygulama gerçekten her yerde çalışıyor!"',
-            author4: 'Alex M.',
-            role4: 'İngilizce öğreniyor',
-            review5: '"Kurulumu kolay ve mükemmel çalışıyor. $7\'den başlayan abonelik - ilk iş toplantısından sonra kendini amorti etti."',
-            author5: 'David P.',
-            role5: 'Çevirmen'
+            review1: '"Windows için en iyi canlı altyazı uygulaması bu. Gerçekten harika!"',
+            review2: '"Bu kadar iyi çalışacağını düşünmemiştim, geliştiricilerin eline sağlık!"',
+            review3: '"Bayıldım. Başka uygulamaları denedikten sonra tam aradığım şeymiş bu: hem hafif hem de işini yapıyor."',
+            review4: '"İngilizce çevirisi tam isabet, çalışma grubuma çok yardımcı oldu. Ekibe teşekkürler!"',
+            review5: '"Konuyu takip etmene ve sohbete ayak uydurmana gerçekten yardımcı oluyor, abonelik paketleri de oldukça kullanışlı."',
+            review6: '"Parası kıt bir K-pop hayranıysan, Weverse canlı yayınları için bunu kesinlikle tavsiye ederim."'
         },
         download: {
             title: 'Şimdi ücretsiz dene',
-            subtitle: 'Ücretsiz deneme süresi, sonra $7\'den başlar'
+            subtitle: 'Ücretsiz deneme süresi — bölgenize göre fiyatlandırılan planlar.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", tr: "Çift altyazı dünyasına hoş geldiniz" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", tr: "İki dil, bir ekran" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", tr: "Hadi bugünkü toplantımıza başlayalım" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", tr: "Herkes beni net duyabiliyor mu?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", tr: "Film izlerken dil öğrenin" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", tr: "Yabancı konuşmayı daha iyi anlayın" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", tr: "Tekrar sormadan her kelimeyi yakalayın" },
@@ -2057,16 +2127,29 @@ const translations = {
     'uk-UA': {
         navbar: {
             brand: 'Live Subtitles',
+            tryFree: 'Спробувати',
             features: 'Функції',
             comparison: 'Порівняння',
+            faq: 'Питання',
             download: 'Завантажити'
         },
         header: {
+            worksOn: 'Працює в будь-якому застосунку — зустрічі, фільми, ігри, навчання',
+            downloadFree: 'Почати безкоштовно',
+            ratingLabel: '4,7/5 · 351 оцінок',
+            watchDemo: 'Дивитись демо',
             title: 'Дивіться фільми, вивчайте мови — легко розумійте живе мовлення',
             lead: 'Live Subtitles - ваш помічник з подвійними субтитрами, розпізнаванням мовлення та перекладом у реальному часі'
         },
         downloadBtn: 'Завантажити з Microsoft Store',
         androidBtn: 'Хочу версію для Android',
+        mediaExamples: {
+            heading: 'Живі субтитри в будь-якому застосунку',
+            useMeetings: 'Будь-яка зустріч, будь-який акцент',
+            useMovies: 'Будь-який фільм, будь-яка мова',
+            useGames: 'Будь-яка гра, без пауз',
+            useLearning: 'Будь-яке відео — навчайтесь дивлячись'
+        },
         platforms: {
             title: 'Працює з будь-яким додатком — без обмежень'
         },
@@ -2078,7 +2161,8 @@ const translations = {
             speechRecognitionDesc: 'Без обмежень платформи чи додатку.',
             realTimeTranslation: 'Переклад у реальному часі',
             realTimeTranslationDesc: 'Дивіться фільми та беріть участь у дзвінках з миттєвим розумінням усього, без повторного запитування.',
-            allApps: 'Працює з усіма додатками'
+            allApps: 'Працює з усіма додатками',
+            allAppsDesc: 'Працює поверх будь-якого вікна — відеодзвінки, стримінг, плеєри та браузери — без жодних налаштувань для кожного застосунку.'
         },
         comparison: {
             title: 'Порівняння',
@@ -2110,16 +2194,16 @@ const translations = {
             }
         },
         footer: {
-            copyright: '© 2024 Live Subtitles. Усі права захищені.',
+            copyright: '© 2026 Live Subtitles. Усі права захищені.',
             contact: 'З будь-яких питань: ',
             email: 'help@live-subtitles.com',
             articles: 'Статті'
         },
-        title: 'Live Subtitles - подвійні субтитри для вивчення мов',
-        description: 'Live Subtitles — додаток з подвійними субтитрами, розпізнаванням мовлення та перекладом у реальному часі. Вивчайте мови, дивіться фільми та легко розумійте іноземні мови.',
+        title: 'Live Subtitles — живі та подвійні субтитри для додатків',
+        description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac та iOS. AI-переклад у реальному часі 50+ мовами для Zoom, Teams і Netflix. Пробний доступ.',
         download: 'Завантажити зараз',
         meta: {
-            description: 'Live Subtitles — додаток з подвійними субтитрами, розпізнаванням мовлення та перекладом у реальному часі. Вивчайте мови, дивіться фільми та легко розумійте іноземні мови.',
+            description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac та iOS. AI-переклад у реальному часі 50+ мовами для Zoom, Teams і Netflix. Пробний доступ.',
             keywords: 'подвійні субтитри, субтитри для вивчення мов, переклад мовлення, розпізнавання мовлення, онлайн субтитри, Live Subtitles, вивчення англійської, вивчення мов, субтитри в реальному часі, розуміння мовлення, перекладач фільмів'
         },
         downloadModal: {
@@ -2147,7 +2231,7 @@ const translations = {
         faq: {
             title: 'Часті запитання',
             q1: 'Скільки коштує додаток?',
-            a1: 'Live Subtitles працює за підпискою від $7. Доступний безкоштовний пробний період, щоб ви могли протестувати всі функції додатку.',
+            a1: 'Live Subtitles працює за підпискою з безкоштовним пробним періодом, тож ви можете спершу протестувати всі функції. Ціна залежить від регіону — свій місцевий тариф ви побачите в магазині.',
             q2: 'Чи працює з усіма додатками?',
             a2: 'Так! Live Subtitles абсолютно працює з усіма додатками: YouTube, Netflix, Zoom, Teams, Discord, браузерами та навіть іграми. Додаток захоплює аудіо на системному рівні.',
             q3: 'Які мови підтримуються?',
@@ -2161,29 +2245,20 @@ const translations = {
         },
         testimonials: {
             title: 'Відгуки користувачів',
-            review1: '"Нарешті можу дивитися корейські дорами без постійних зупинок! Додаток точно перекладає навіть швидкі розмови."',
-            author1: 'Anna K.',
-            role1: 'Вивчає корейську',
-            review2: '"Революція в міжнародних зустрічах! Більше не потрібно просити колег з Індії та Китаю повторювати."',
-            author2: 'Michael R.',
-            role2: 'IT-менеджер',
-            review3: '"Використовую для вивчення англійської через YouTube. Мій словниковий запас зріс величезно за місяць!"',
-            author3: 'Elena S.',
-            role3: 'Студентка',
-            review4: '"Вивчаю англійську де хочу - на будь-якій платформі! Дивлюся Netflix в браузері, слухаю подкасти на телефоні, беру участь у зустрічах в Teams. Додаток справді працює скрізь!"',
-            author4: 'Alex M.',
-            role4: 'Вивчає англійську',
-            review5: '"Просте налаштування та ідеальна робота. Підписка від $7 окупилася після першої робочої зустрічі."',
-            author5: 'David P.',
-            role5: 'Перекладач'
+            review1: '"Найкращий застосунок для живих субтитрів на Windows. Реально крутий!"',
+            review2: '"Не думав, що це працюватиме настільки добре — респект розробникам!"',
+            review3: '"Обожнюю його. Спробувавши інші застосунки, можу сказати, що цей — саме те, що треба: легкий і дієвий."',
+            review4: '"Переклад англійською просто в точку — дуже виручає нашу навчальну групу. Дякую команді!"',
+            review5: '"Він реально допомагає вловлювати контекст і підтримувати розмову, а тарифні плани цілком зручні."',
+            review6: '"Якщо ти бідний фанат K-pop, раджу його для лайв-стрімів на Weverse."'
         },
         download: {
             title: 'Спробуйте безкоштовно зараз',
-            subtitle: 'Безкоштовний пробний період, потім від $7'
+            subtitle: 'Безкоштовний пробний період — тарифи розраховані для вашого регіону.'
         },
         examples: [
-            { en: "Welcome to the world of dual subtitles", fr: "Bienvenue dans le monde des sous-titres doubles", uk: "Ласкаво просимо у світ подвійних субтитрів" },
-            { en: "Two languages, one screen", fr: "Deux langues, un écran", uk: "Дві мови, один екран" },
+            { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", uk: "Розпочнімо нашу сьогоднішню зустріч" },
+            { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", uk: "Усім добре мене чути?" },
             { en: "Learn languages while watching movies", fr: "Apprenez des langues en regardant des films", uk: "Вивчайте мови, дивлячись фільми" },
             { en: "Understand foreign speech better", fr: "Comprenez mieux la parole étrangère", uk: "Краще розумійте іноземну мову" },
             { en: "Catch every word without asking again", fr: "Attrapez chaque mot sans avoir à redemander", uk: "Вловлюйте кожне слово без перепитувань" },

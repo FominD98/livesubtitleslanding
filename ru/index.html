@@ -4,8 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- cid passthrough + auto conversion onclick on Store links -->
-    <script src="/cid-tracker.js" defer></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830">
@@ -31,17 +29,20 @@
         }
     </script>
 
+    <!-- cid passthrough: utm_campaign → ?cid= on Store links; also fixes iOS missing onclick -->
+    <script src="/cid-tracker.js" defer></script>
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://live-subtitles.com/ru/" />
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="AI-субтитры и двойные субтитры для Windows. Перевод речи в реальном времени на 50+ языков для Zoom, Teams, Netflix, YouTube и любых приложений. Бесплатный пробный период — микрофон не нужен.">
+        content="Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 50+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.">
     <meta name="keywords"
         content="live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, game mode subtitles, gaming subtitles, fullscreen subtitle overlay, language learning subtitles">
     <meta name="author" content="Live Subtitles">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-    <meta name="language" content="Russian">
+    <meta name="language" content="ru">
     <meta name="revisit-after" content="7 days">
 
     <!-- Sitemap -->
@@ -82,8 +83,8 @@
         },
         "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.4",
-            "ratingCount": "312",
+            "ratingValue": "4.7",
+            "ratingCount": "351",
             "bestRating": "5",
             "worstRating": "1"
         },
@@ -95,7 +96,7 @@
             "Works across video, streaming, and communication apps"
         ],
         "screenshot": "https://live-subtitles.com/2sub.png",
-        "inLanguage": "en",
+        "inLanguage": "ru",
         "publisher": {
             "@type": "Organization",
             "name": "Live Subtitles",
@@ -153,7 +154,7 @@
                 "name": "How much does the app cost?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Live Subtitles works on a subscription from $7 per month. A free trial is available so you can test all the app features."
+                    "text": "Live Subtitles is a subscription with a free trial, so you can test every feature first. Pricing varies by region — you'll see your local price in the store."
                 }
             },
             {
@@ -234,14 +235,14 @@
     </script>
 
     <!-- Open Graph Meta Tags (Telegram, LinkedIn, Facebook) -->
-    <meta property="og:title" content="Live Subtitles — Live Captions and Dual Subtitles App">
+    <meta property="og:title" content="Live Subtitles — Двойные субтитры для любого приложения">
     <meta property="og:description"
-        content="Live captions and dual subtitles for meetings, media, and games across Zoom, Teams, YouTube, Netflix, Discord, and Twitch. Lock/Game Mode helps keep gaming overlays stable.">
+        content="Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 50+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.">
     <meta property="og:image" content="https://live-subtitles.com/2sub.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Live Subtitles - Dual Subtitles Application">
-    <meta property="og:locale" content="en_US">
+    <meta property="og:locale" content="ru_RU">
     <meta property="og:locale:alternate" content="ru_RU">
     <meta property="og:locale:alternate" content="fr_FR">
     <meta property="og:locale:alternate" content="es_ES">
@@ -252,16 +253,16 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Live Subtitles — Live Captions and Dual Subtitles App">
+    <meta name="twitter:title" content="Live Subtitles — Двойные субтитры для любого приложения">
     <meta name="twitter:description"
-        content="Live captions and dual subtitles for meetings, media, and games. Lock/Game Mode helps keep subtitle overlays stable in gaming sessions.">
+        content="Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 50+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.">
     <meta name="twitter:image" content="https://live-subtitles.com/2sub.png">
     <meta name="twitter:image:alt" content="Live Subtitles - Dual Subtitles Application">
     <meta name="twitter:site" content="@livesubtitles">
     <meta name="twitter:creator" content="@livesubtitles">
     <!-- End SEO Meta Tags -->
 
-    <title>Live Subtitles — AI Live Captions & Dual Subtitles App for Windows</title>
+    <title>Live Subtitles — Двойные субтитры для любого приложения</title>
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/x-icon" href="../2sub.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/2sub.png">
@@ -272,30 +273,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="/img/live-subtitles-video-call-captions.jpg" fetchpriority="high">
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
         rel="stylesheet">
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function (m, e, t, r, i, k, a) {
-            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
-            m[i].l = 1 * new Date();
-            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
-            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
-        })
-            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-
-        ym(101009280, "init", {
-            clickmap: true,
-            trackLinks: true,
-            accurateTrackBounce: true,
-            webvisor: true
-        });
-    </script>
-    <noscript>
-        <div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div>
-    </noscript>
-    <!-- /Yandex.Metrika counter -->
     <style>
         :root {
             --primary: #00ff9d;
@@ -317,6 +298,15 @@
             overflow-x: hidden;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* keep anchored sections clear of the fixed navbar */
+        section[id] {
+            scroll-margin-top: 90px;
+        }
+
         h1,
         h2,
         h3,
@@ -333,7 +323,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 25%, #0a1a1a 50%, #1a1a0a 75%, #0a0a0a 100%);
+            background: linear-gradient(135deg, #070707 0%, #0b0710 30%, #07090c 60%, #080808 100%);
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             z-index: -2;
@@ -347,9 +337,9 @@
             right: 0;
             bottom: 0;
             background:
-                radial-gradient(circle at 20% 50%, rgba(0, 255, 157, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(0, 184, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 20%, rgba(255, 0, 110, 0.08) 0%, transparent 50%);
+                radial-gradient(circle at 18% 45%, rgba(0, 255, 157, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 82% 78%, rgba(0, 184, 255, 0.05) 0%, transparent 45%),
+                radial-gradient(circle at 45% 18%, rgba(255, 0, 110, 0.04) 0%, transparent 45%);
             animation: float 20s ease-in-out infinite;
         }
 
@@ -393,7 +383,7 @@
             font-weight: 800;
             line-height: 1.2;
             letter-spacing: -0.02em;
-            text-shadow: 0 0 80px rgba(0, 255, 157, 0.5);
+            text-shadow: 0 2px 24px rgba(0, 255, 157, 0.22);
         }
 
         @keyframes gradientTitle {
@@ -405,6 +395,211 @@
 
             50% {
                 background-position: 100% 50%;
+            }
+        }
+
+        /* ===== 2-column hero (copy left, live demo window right) ===== */
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 1fr;
+            gap: 3.5rem;
+            align-items: center;
+        }
+
+        .hero-copy {
+            text-align: left;
+        }
+
+        .hero-copy .title {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-copy .lead {
+            margin-left: 0;
+            margin-right: 0;
+            text-align: left;
+        }
+
+        .hero-copy .row {
+            margin-left: 0 !important;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        /* soft multi-colour glow behind the window (reference look) */
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            inset: -10% -8%;
+            background:
+                radial-gradient(closest-side at 12% 62%, rgba(0, 255, 157, 0.45), transparent 72%),
+                radial-gradient(closest-side at 88% 30%, rgba(0, 184, 255, 0.42), transparent 72%),
+                radial-gradient(closest-side at 72% 92%, rgba(255, 0, 110, 0.38), transparent 72%);
+            filter: blur(46px);
+            opacity: 0.6;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-visual .demo-window {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+        }
+
+        /* video-call scene behind the subtitles */
+        .demo-scene {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 28%;
+            z-index: 0;
+        }
+
+        .demo-content::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.05) 42%, transparent 60%);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* navbar "Try Free" pill */
+        .btn-try-free {
+            display: inline-block;
+            background: var(--primary);
+            color: #06140d;
+            font-weight: 700;
+            padding: 0.45rem 1.3rem;
+            border-radius: 999px;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 0 22px rgba(0, 255, 157, 0.35);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .btn-try-free:hover {
+            transform: translateY(-2px);
+            color: #06140d;
+            box-shadow: 0 0 30px rgba(0, 255, 157, 0.6);
+        }
+
+        /* "Works on any app" platform strip in the hero */
+        .hero-platforms-label {
+            margin: 1.75rem 0 0.85rem;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.55);
+            text-align: left;
+        }
+
+        .hero-platforms {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-platforms img {
+            width: 28px;
+            height: 28px;
+            opacity: 0.9;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .hero-platforms img.hero-icon-zoom {
+            filter: brightness(0) invert(1);
+        }
+
+        .hero-platforms img:hover {
+            opacity: 1;
+            transform: scale(1.12);
+        }
+
+        /* Hero primary CTAs (clean #6-style) */
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-download-free,
+        .btn-watch-demo {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.95rem 2rem;
+            border-radius: 999px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+        }
+
+        .btn-download-free {
+            background: var(--primary);
+            color: #06140d;
+            box-shadow: 0 0 26px rgba(0, 255, 157, 0.4);
+        }
+
+        .btn-download-free:hover {
+            transform: translateY(-2px);
+            color: #06140d;
+            box-shadow: 0 0 36px rgba(0, 255, 157, 0.65);
+        }
+
+        .btn-watch-demo {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .btn-watch-demo:hover {
+            transform: translateY(-2px);
+            color: #fff;
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(0, 255, 157, 0.5);
+        }
+
+        @media (max-width: 991px) {
+            .hero-cta {
+                justify-content: center;
+            }
+
+            .hero-platforms-label {
+                text-align: center;
+            }
+
+            .hero-platforms {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2.25rem;
+            }
+
+            .hero-copy,
+            .hero-copy .title,
+            .hero-copy .lead {
+                text-align: center;
+            }
+
+            .hero-copy .lead {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-copy .row {
+                margin-left: auto !important;
+                margin-right: auto !important;
             }
         }
 
@@ -472,50 +667,112 @@
         }
 
         .demo-content {
-            background: transparent;
-            padding: 1rem;
-            min-height: 300px;
             position: relative;
+            min-height: 380px;
+            padding: 0;
             overflow: hidden;
+            background:
+                radial-gradient(circle at 28% 25%, rgba(0, 255, 157, 0.10), transparent 55%),
+                radial-gradient(circle at 78% 72%, rgba(0, 184, 255, 0.12), transparent 55%),
+                radial-gradient(circle at 55% 50%, rgba(255, 0, 110, 0.06), transparent 60%),
+                linear-gradient(135deg, #0c1512 0%, #0a0e13 60%, #0d0a12 100%);
+        }
+
+        /* Top badges — mirror the WPF onboarding "REC" + brand pills */
+        .demo-badge {
+            position: absolute;
+            top: 16px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 0, 0, 0.55);
+            border-radius: 4px;
+            padding: 4px 9px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #fff;
+            z-index: 2;
+        }
+
+        .demo-badge.live {
+            left: 16px;
+        }
+
+        .demo-badge.cc {
+            right: 16px;
+            font-weight: 600;
+        }
+
+        .demo-badge.cc img {
+            width: 15px;
+            height: 15px;
+            display: block;
+            border-radius: 3px;
+        }
+
+        .demo-live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #e53935;
+            box-shadow: 0 0 8px rgba(229, 57, 53, 0.8);
+            animation: liveBlink 1.4s ease-in-out infinite;
+        }
+
+        @keyframes liveBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.35; }
+        }
+
+        /* Subtitle bar pinned to the bottom of the "scene" */
+        .demo-subs {
+            position: absolute;
+            left: 50%;
+            bottom: 28px;
+            transform: translateX(-50%);
+            width: min(640px, 86%);
+            z-index: 2;
         }
 
         .subtitle-line {
-            position: absolute;
-            width: 100%;
+            display: block;
+            background: rgba(0, 0, 0, 0.69);
+            border-radius: 6px;
+            padding: 11px 18px;
+            min-height: 30px;
             text-align: center;
-            font-size: 1.3rem;
-            opacity: 0;
-            transform: translateY(30px) scale(0.95);
-            transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 1rem 2rem;
-            border-radius: 12px;
-            font-weight: 500;
-            backdrop-filter: blur(10px);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            font-weight: 700;
+            font-size: clamp(1rem, 2.4vw, 1.25rem);
+            line-height: 1.35;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
         }
 
         #subtitle1 {
-            top: 30%;
-            left: 0;
-            right: 0;
-            color: white;
-            background: rgba(255, 255, 255, 0.05);
-            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ffffff;
         }
 
         #subtitle2 {
-            top: 52%;
-            left: 0;
-            right: 0;
-            background: linear-gradient(135deg, rgba(255, 140, 0, 0.15), rgba(255, 0, 110, 0.15));
-            color: #ffaa33;
-            text-shadow: 0 2px 20px rgba(255, 140, 0, 0.5);
-            border: 1px solid rgba(255, 140, 0, 0.2);
+            color: #ff9500;
+            margin-top: 8px;
         }
 
-        .subtitle-line.active {
-            opacity: 1;
-            transform: translateY(0) scale(1);
+        /* Blinking caret while a line is being "written" */
+        .subtitle-line.typing::after {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 1em;
+            margin-left: 2px;
+            background: currentColor;
+            vertical-align: -0.12em;
+            animation: caretBlink 0.7s steps(1) infinite;
+        }
+
+        @keyframes caretBlink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
         }
 
         .feature {
@@ -1048,6 +1305,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 16px;
+            aspect-ratio: 16 / 9;
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(20px) saturate(180%);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -1068,6 +1326,14 @@
             height: 100%;
             object-fit: cover;
             display: block;
+        }
+
+        .media-caption {
+            margin: 0.85rem 0 0;
+            text-align: center;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .video-wrapper {
@@ -1248,6 +1514,50 @@
                 padding: 1.5rem;
             }
         }
+    
+        /* a11y: visible keyboard focus */
+        .btn-download-free:focus-visible,
+        .btn-watch-demo:focus-visible,
+        .btn-try-free:focus-visible,
+        .navbar-toggler:focus-visible,
+        .nav-link:focus-visible,
+        a:focus-visible {
+            outline: 2px solid var(--primary);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
+        /* hero rating badge */
+        .hero-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            margin-top: 1.1rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .hero-rating { text-decoration: none; }
+        .hero-rating:hover { opacity: 1; }
+        .hero-rating:hover .store-src { color: var(--primary); }
+        .hero-rating .stars { color: #FFB400; letter-spacing: 2px; }
+        .hero-rating .store-src { color: rgba(255, 255, 255, 0.5); font-weight: 500; font-size: 0.82rem; }
+        .hero-rating .store-src::before { content: "· "; }
+        /* a11y: respect reduced-motion */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.001ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+        /* mobile: scale the demo window */
+        @media (max-width: 768px) {
+            .demo-content { min-height: 280px; }
+        }
+        @media (max-width: 480px) {
+            .demo-content { min-height: 220px; }
+        }
     </style>
     <!-- SEO: alternate language versions -->
     <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/" />
@@ -1287,7 +1597,7 @@
                         <a class="nav-link" href="#comparison" data-translate="navbar.comparison">Сравнение</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#faq" data-translate="navbar.faq">FAQ</a>
+                        <a class="nav-link" href="#faq" data-translate="navbar.faq">Вопросы</a>
                     </li>
                 </ul>
                 <div class="ms-3">
@@ -1311,90 +1621,40 @@
                         <option value="uk-UA">Українська</option>
                     </select>
                 </div>
+                <a class="btn-try-free ms-lg-3 mt-2 mt-lg-0"
+                    href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
+                    onclick="return gtag_report_conversion(this.href);"
+                    id="navTryFree" data-translate="navbar.tryFree">Попробовать</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <header class="section text-center">
-            <h1 class="title text-center" data-translate="header.title">Смотрите фильмы, учите языки — легко понимайте живую речь</h1>
+        <header class="section">
+          <div class="hero-grid">
+            <div class="hero-copy">
+            <h1 class="title" data-translate="header.title">Смотрите фильмы, учите языки — легко понимайте живую речь</h1>
             <p class="lead" data-translate="header.lead">Live Subtitles - ваш помощник с двойными субтитрами, распознаванием и переводом речи в реальном времени</p>
-            <div class="row w-100 mt-4 mx-auto justify-content-center text-center" style="max-width: 800px;">
-                <!-- Windows -->
-                <div class="col-6 mb-3">
-                    <div class="p-3 h-100 d-flex flex-column align-items-center justify-content-center platform-card"
-                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: transform 0.3s ease, background 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(-5px)'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
-                        <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Windows</h5>
-                        <a href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank"
-                            onclick="return gtag_report_conversion(this.href);"
-                            class="mt-auto d-flex align-items-center justify-content-center w-100"
-                            style="min-height: 84px; transition: transform 0.3s ease;"
-                            onmouseover="this.style.transform='scale(1.05)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img src="https://get.microsoft.com/images/en-us%20dark.svg"
-                                alt="Download from Microsoft Store" style="height: 80px; width: auto; max-width: 100%;">
-                        </a>
-                    </div>
-                </div>
-                <!-- macOS -->
-                <div class="col-6 mb-3">
-                    <div class="p-3 h-100 d-flex flex-column align-items-center justify-content-center platform-card"
-                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: transform 0.3s ease, background 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(-5px)'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
-                        <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">macOS</h5>
-                        <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac"
-                            target="_blank"
-                            onclick="return gtag_report_conversion(this.href);"
-                            class="mt-auto d-flex align-items-center justify-content-center w-100"
-                            style="min-height: 84px; transition: transform 0.3s ease;"
-                            onmouseover="this.style.transform='scale(1.05)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img src="https://developer.apple.com/app-store/marketing/guidelines/images/badge-download-on-the-mac-app-store.svg"
-                                alt="Download on the Mac App Store" style="height: 80px; width: auto; max-width: 100%;">
-                        </a>
-                    </div>
-                </div>
-                <!-- iOS -->
-                <div class="col-6 mb-3">
-                    <div class="p-3 h-100 d-flex flex-column align-items-center justify-content-center platform-card"
-                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: transform 0.3s ease, background 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(-5px)'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
-                        <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">iOS</h5>
-                        <a href="https://apps.apple.com/app/live-captions-translator/id6760197210" target="_blank"
-                            class="mt-auto d-flex align-items-center justify-content-center w-100"
-                            style="min-height: 84px; transition: transform 0.3s ease;"
-                            onmouseover="this.style.transform='scale(1.05)'"
-                            onmouseout="this.style.transform='scale(1)'">
-                            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-                                alt="Download on the App Store" style="height: 80px; width: auto; max-width: 100%;">
-                        </a>
-                    </div>
-                </div>
-                <!-- Android -->
-                <div class="col-6 mb-3">
-                    <div class="p-3 h-100 d-flex flex-column align-items-center justify-content-center platform-card"
-                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: transform 0.3s ease, background 0.3s ease;"
-                        onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(-5px)'"
-                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
-                        <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Android</h5>
-                        <div class="mt-auto w-100 d-flex align-items-center justify-content-center"
-                            style="min-height: 84px;">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#androidModal"
-                                style="height: 80px; width: 100%; max-width: 240px; border-radius: 12px; border: 1px solid rgba(0,255,157,0.5); color: #00ff9d; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center; background: rgba(0,255,157,0.05); font-size: 1.25rem; transition: all 0.3s ease;"
-                                onmouseover="this.style.background='rgba(0,255,157,0.15)'; this.style.border='1px solid #00ff9d'"
-                                onmouseout="this.style.background='rgba(0,255,157,0.05)'; this.style.border='1px solid rgba(0,255,157,0.5)'"
-                                data-translate="androidBtn">
-                                Хочу версию для Android
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-cta">
+                <a href="#download" class="btn-download-free" data-translate="header.downloadFree">Попробовать бесплатно</a>
+                <a href="#examples" class="btn-watch-demo" data-translate="header.watchDemo">Смотреть демо</a>
             </div>
-        </header>
+            <a class="hero-rating" href="https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding" target="_blank" rel="noopener" aria-label="4.7 out of 5, 351 ratings on the Microsoft Store">
+                <span class="stars" aria-hidden="true">★★★★★</span>
+                <span data-translate="header.ratingLabel">4,7/5 · 351 оценок</span>
+                <span class="store-src">Microsoft Store</span>
+            </a>
+            <p class="hero-platforms-label" data-translate="header.worksOn">Работает в любом приложении — встречи, фильмы, игры, обучение</p>
+            <div class="hero-platforms" aria-hidden="true">
+                <img data-hero-icon class="hero-icon-zoom" src="https://cdn-icons-png.flaticon.com/512/5969/5969238.png" width="28" height="28" loading="lazy" alt="">
+                <img data-hero-icon src="https://cdn-icons-png.flaticon.com/512/15047/15047490.png" width="28" height="28" loading="lazy" alt="">
+                <img data-hero-icon src="https://cdn-icons-png.flaticon.com/512/5968/5968552.png" width="28" height="28" loading="lazy" alt="">
+                <img data-hero-icon src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" width="28" height="28" loading="lazy" alt="">
+                <img data-hero-icon src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width="28" height="28" loading="lazy" alt="">
+                <img data-hero-icon src="https://cdn-icons-png.flaticon.com/512/5968/5968929.png" width="28" height="28" loading="lazy" alt="">
+            </div>
+            </div>
+            <div class="hero-visual">
 
         <section class="demo-window">
             <div class="window-header">
@@ -1406,47 +1666,60 @@
                 <div class="window-title">Live Subtitles</div>
             </div>
             <div class="demo-content">
-                <div class="subtitle-line" id="subtitle1">Welcome to the world of dual subtitles</div>
-                <div class="subtitle-line" id="subtitle2">Добро пожаловать в мир двойных субтитров</div>
+                <img class="demo-scene" src="/img/live-subtitles-video-call-captions.jpg" width="960" height="524"
+                    alt="Live Subtitles adding real-time dual captions to a video call" fetchpriority="high">
+                <span class="demo-badge live"><span class="demo-live-dot"></span>LIVE</span>
+                <span class="demo-badge cc"><img src="/2sub.png" width="15" height="15" alt="Live Subtitles">Live Subtitles</span>
+                <div class="demo-subs">
+                    <div class="subtitle-line" id="subtitle1">Let's get started with today's meeting</div>
+                    <div class="subtitle-line" id="subtitle2">Can everyone hear me clearly?</div>
+                </div>
             </div>
         </section>
+            </div>
+          </div>
+        </header>
 
-        <section class="media-examples section">
-            <h2 class="text-center mb-5" style="color: var(--primary);">Screenshots & Videos</h2>
+        <section id="examples" class="media-examples section">
+            <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="mediaExamples.heading">Живые субтитры в любом приложении</h2>
 
             <div class="swiper mediaSwiper">
                 <div class="swiper-wrapper">
-                    <!-- Screenshots -->
+                    <!-- Use-case examples: one app, every kind of audio (localized at runtime, EN default) -->
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="../img/example/1homeger.png" alt="Live Subtitles Home Interface"
-                                    class="media-image" loading="lazy">
+                                <img src="../img/example/usecase-meetings.jpg" data-usecase="meetings" width="960" height="540"
+                                    alt="Live dual captions on a video meeting in any accent" class="media-image" loading="lazy">
                             </div>
+                            <p class="media-caption" data-translate="mediaExamples.useMeetings">Любая встреча, любой акцент</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="../img/example/newsettings.png" alt="Live Subtitles Settings" class="media-image"
-                                    loading="lazy">
+                                <img src="../img/example/usecase-movies.jpg" data-usecase="movies" width="960" height="540"
+                                    alt="Dual subtitles on a movie in any language" class="media-image" loading="lazy">
                             </div>
+                            <p class="media-caption" data-translate="mediaExamples.useMovies">Любой фильм, любой язык</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="../img/example/ForestDe.png" alt="Live Subtitles in Action" class="media-image"
-                                    loading="lazy">
+                                <img src="../img/example/usecase-games.jpg" data-usecase="games" width="960" height="540"
+                                    alt="Live captions overlay on a game without pausing" class="media-image" loading="lazy">
                             </div>
+                            <p class="media-caption" data-translate="mediaExamples.useGames">Любая игра, без пауз</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="media-card">
                             <div class="media-wrapper">
-                                <img src="https://store-images.s-microsoft.com/image/apps.43511.14244971140863405.8ce7b03a-b958-4d10-bbe6-57a57775d704.8bf7b870-5bc7-4ce8-ab4c-ffa4253e0a6f"
-                                    alt="Live Subtitles Microsoft Store Screenshot" class="media-image" loading="lazy">
+                                <img src="../img/example/usecase-learning.jpg" data-usecase="learning" width="960" height="540"
+                                    alt="Dual subtitles on a YouTube video for language learning" class="media-image" loading="lazy">
                             </div>
+                            <p class="media-caption" data-translate="mediaExamples.useLearning">Любое видео — учитесь во время просмотра</p>
                         </div>
                     </div>
 
@@ -1496,70 +1769,70 @@
             <h3 class="platforms-title" data-translate="platforms.title">Работает вообще с любым приложением — без ограничений</h3>
             <div class="platform-icon" data-tooltip="YouTube">
                 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png"
-                    alt="YouTube - Watch videos with dual subtitles" loading="lazy">
+                    alt="YouTube - Watch videos with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Instagram">
                 <img src="https://cdn-icons-png.flaticon.com/512/15713/15713420.png"
-                    alt="Instagram - Social media with dual subtitles" loading="lazy">
+                    alt="Instagram - Social media with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Twitch">
                 <img src="https://cdn-icons-png.flaticon.com/512/3291/3291659.png"
-                    alt="Twitch - Live streaming with dual subtitles" loading="lazy">
+                    alt="Twitch - Live streaming with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Google Meet">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968552.png"
-                    alt="Google Meet - Video calls with dual subtitles" loading="lazy">
+                    alt="Google Meet - Video calls with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Telegram">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968804.png"
-                    alt="Telegram - Messaging with dual subtitles" loading="lazy">
+                    alt="Telegram - Messaging with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="WhatsApp">
                 <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png"
-                    alt="WhatsApp - Voice calls with dual subtitles" loading="lazy">
+                    alt="WhatsApp - Voice calls with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Microsoft Teams">
                 <img src="https://cdn-icons-png.flaticon.com/512/15047/15047490.png"
-                    alt="Microsoft Teams - Business calls with dual subtitles" loading="lazy">
+                    alt="Microsoft Teams - Business calls with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Zoom">
                 <img src="https://cdn-icons-png.flaticon.com/512/5969/5969238.png"
-                    alt="Zoom - Online meetings with dual subtitles" loading="lazy">
+                    alt="Zoom - Online meetings with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Skype">
                 <img src="https://cdn-icons-png.flaticon.com/512/1384/1384058.png"
-                    alt="Skype - Video calls with dual subtitles" loading="lazy">
+                    alt="Skype - Video calls with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Discord">
                 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png"
-                    alt="Discord - Gaming voice chat with dual subtitles" loading="lazy">
+                    alt="Discord - Gaming voice chat with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Viber">
                 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670059.png"
-                    alt="Viber - Voice messages with dual subtitles" loading="lazy">
+                    alt="Viber - Voice messages with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="VK">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968835.png"
-                    alt="VK - Social network with dual subtitles" loading="lazy">
+                    alt="VK - Social network with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="Slack">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968929.png"
-                    alt="Slack - Team communication with dual subtitles" loading="lazy">
+                    alt="Slack - Team communication with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="LinkedIn">
                 <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png"
-                    alt="LinkedIn - Professional networking with dual subtitles" loading="lazy">
+                    alt="LinkedIn - Professional networking with dual subtitles" width="56" height="56" loading="lazy">
             </div>
             <div class="platform-icon" data-tooltip="WeChat">
                 <img src="https://cdn-icons-png.flaticon.com/512/3670/3670101.png"
-                    alt="WeChat - Chinese messaging with dual subtitles" loading="lazy">
+                    alt="WeChat - Chinese messaging with dual subtitles" width="56" height="56" loading="lazy">
             </div>
         </section>
 
         <section id="features" class="section">
             <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="features.title">Возможности</h2>
             <div class="row g-4">
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature">
                         <div class="feature-icon">🎯</div>
                         <h3 data-translate="features.dualSubtitles">Двойные субтитры</h3>
@@ -1567,7 +1840,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature">
                         <div class="feature-icon">🎤</div>
                         <h3 data-translate="features.speechRecognition">Распознавание речи</h3>
@@ -1575,11 +1848,18 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature">
                         <div class="feature-icon">🔄</div>
                         <h3 data-translate="features.realTimeTranslation">Перевод в реальном времени</h3>
                         <p data-translate="features.realTimeTranslationDesc">Смотрите фильмы и участвуйте в звонках, понимая сразу, без переспрашиваний.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature">
+                        <div class="feature-icon">🪟</div>
+                        <h3 data-translate="features.allApps">Работает со всеми приложениями</h3>
+                        <p data-translate="features.allAppsDesc">Работает поверх любого окна — видеозвонки, стриминг, плееры и браузеры — и ничего не нужно настраивать под каждое приложение.</p>
                     </div>
                 </div>
             </div>
@@ -1650,7 +1930,7 @@
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
-                                    <span data-translate="faq.a1">Live Subtitles работает по подписке от $7. Доступен бесплатный пробный период, чтобы вы могли протестировать все функции приложения.</span>
+                                    <span data-translate="faq.a1">Live Subtitles работает по подписке с бесплатным пробным периодом, чтобы вы могли сначала протестировать все функции. Цена зависит от вашего региона — актуальную стоимость вы увидите в магазине.</span>
                                 </div>
                             </div>
                         </div>
@@ -1741,70 +2021,83 @@
 
         <section id="testimonials" class="section">
             <h2 class="text-center mb-5" style="color: var(--primary);" data-translate="testimonials.title">Отзывы пользователей</h2>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card"
-                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
-                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
-                            data-translate="testimonials.review1">"Наконец-то могу смотреть корейские дорамы без постоянных пауз! Приложение точно переводит даже быструю речь."</p>
-                        <div class="testimonial-author">
-                            <strong data-translate="testimonials.author1">Anna K.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);" data-translate="testimonials.role1">Изучает корейский язык</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card"
-                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
-                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
-                            data-translate="testimonials.review2">"Революция для международных встреч! Больше не нужно переспрашивать коллег из Индии и Китая."</p>
-                        <div class="testimonial-author">
-                            <strong data-translate="testimonials.author2">Michael R.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);"
-                                data-translate="testimonials.role2">IT-менеджер</small>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="testimonial-card"
-                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
-                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
-                            data-translate="testimonials.review3">"Использую для изучения английского через YouTube. За месяц словарный запас вырос в разы!"</p>
-                        <div class="testimonial-author">
-                            <strong data-translate="testimonials.author3">Elena S.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);"
-                                data-translate="testimonials.role3">Студентка</small>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="text-center mb-4">
+                <a href="https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding" target="_blank" rel="noopener"
+                    style="color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 600;">
+                    <span style="color:#ffd700;">★</span> 4.7/5 · 351 · Microsoft Store ↗
+                </a>
             </div>
-            <div class="row g-4 mt-4">
-                <div class="col-md-6">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
                     <div class="testimonial-card"
                         style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
                         <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
-                            data-translate="testimonials.review4">"Изучаю английский везде где хочу - на любой платформе! В браузере смотрю Netflix, на телефоне слушаю подкасты, в Teams рабочие встречи. Приложение работает абсолютно везде!"</p>
+                            data-translate="testimonials.review1">"Лучшее приложение для живых субтитров на Windows. Реально классное!"</p>
                         <div class="testimonial-author">
-                            <strong data-translate="testimonials.author4">Alex M.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);"
-                                data-translate="testimonials.role4">Изучает английский</small>
+                            <strong>🇺🇸 Steven</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6); display: block;">Microsoft Store</small>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-lg-4 col-md-6">
                     <div class="testimonial-card"
                         style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
                         <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
-                            data-translate="testimonials.review5">"Простое в настройке и работает идеально. Подписка от $7 окупилась уже на первой рабочей встрече."</p>
+                            data-translate="testimonials.review2">"Не думал, что оно будет работать настолько хорошо — респект разработчикам!"</p>
                         <div class="testimonial-author">
-                            <strong data-translate="testimonials.author5">David P.</strong>
-                            <small style="color: rgba(255, 255, 255, 0.6);"
-                                data-translate="testimonials.role5">Переводчик</small>
+                            <strong>🇮🇹 Francesco</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6); display: block;">Microsoft Store</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review3">"Я в восторге. Перепробовал кучу других приложений, а это именно то, что нужно: лёгкое и при этом рабочее."</p>
+                        <div class="testimonial-author">
+                            <strong>🇪🇸 Juan</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6); display: block;">Microsoft Store</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review4">"Перевод на английский точный — очень выручает мою учебную группу. Спасибо команде!"</p>
+                        <div class="testimonial-author">
+                            <strong>🇨🇳 敖</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6); display: block;">Microsoft Store</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review5">"Реально помогает не терять нить разговора и поддерживать беседу, да и тарифы подписки удобные."</p>
+                        <div class="testimonial-author">
+                            <strong>🇲🇽 Aline</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6); display: block;">Microsoft Store</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card"
+                        style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px; height: 100%;">
+                        <div class="stars mb-3" style="color: #ffd700;">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text mb-3" style="font-style: italic; color: rgba(255, 255, 255, 0.9);"
+                            data-translate="testimonials.review6">"Если ты бедный K-pop фанат, советую его для лайвов на Weverse."</p>
+                        <div class="testimonial-author">
+                            <strong>🇺🇸 Liliana</strong>
+                            <small style="color: rgba(255, 255, 255, 0.6); display: block;">Microsoft Store</small>
                         </div>
                     </div>
                 </div>
@@ -1813,7 +2106,7 @@
 
         <section id="download" class="section text-center">
             <h2 class="mb-4" style="color: var(--primary);" data-translate="download.title">Попробуйте бесплатно прямо сейчас</h2>
-            <p class="mb-4" style="color: rgba(255, 255, 255, 0.8);" data-translate="download.subtitle">Бесплатный пробный период, затем от $7</p>
+            <p class="mb-4" style="color: rgba(255, 255, 255, 0.8);" data-translate="download.subtitle">Бесплатный пробный период — цена подбирается под ваш регион.</p>
             <div class="row w-100 mt-4 mx-auto justify-content-center text-center" style="max-width: 800px;">
                 <!-- Windows -->
                 <div class="col-6 mb-3">
@@ -2026,11 +2319,19 @@
 
         <footer class="text-center py-4">
             <div class="d-flex justify-content-between align-items-center position-relative">
-                <div class="ms-2">
+                <div class="ms-2 d-flex gap-3">
                     <a id="footer-articles-link" href="/articles/en/" class="text-decoration-none"
                         style="color: var(--primary);" data-translate="footer.articles">Статьи</a>
+                    <a href="/pricing.html" class="text-decoration-none"
+                        style="color: var(--primary);">Pricing</a>
+                    <a href="/privacy.html" class="text-decoration-none"
+                        style="color: var(--primary);">Privacy</a>
+                    <a href="/terms.html" class="text-decoration-none"
+                        style="color: var(--primary);">Terms</a>
+                    <a href="/refund.html" class="text-decoration-none"
+                        style="color: var(--primary);">Refund</a>
                 </div>
-                <p class="mb-0 position-absolute start-50 translate-middle-x" data-translate="footer.copyright">© 2024 Live Subtitles. Все права защищены.</p>
+                <p class="mb-0 position-absolute start-50 translate-middle-x" data-translate="footer.copyright">© 2026 Live Subtitles. Все права защищены.</p>
                 <p class="mb-0 ms-auto">
                     <span data-translate="footer.contact">По всем вопросам:      </span><a
                         href="mailto:help@live-subtitles.com" class="text-decoration-none"
@@ -2126,40 +2427,136 @@
             return targetPath;
         }
 
+        // Live "typing" subtitle demo — mirrors the WPF onboarding hero:
+        // both lines type out in parallel, hold the full phrase, clear, then next.
         let currentIndex = 0;
         let subtitles = translations[getUserLanguage()].examples;
         const subtitle1 = document.getElementById('subtitle1');
         const subtitle2 = document.getElementById('subtitle2');
-        let subtitleInterval;
+        let typingTimer;
 
-        function updateSubtitles() {
-            subtitle1.classList.remove('active');
-            subtitle2.classList.remove('active');
+        const TYPE_MS = 32;     // per character
+        const HOLD_MS = 1400;   // hold the completed phrase
+        const PAUSE_MS = 450;   // gap before the next phrase
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-            setTimeout(() => {
-                const lang = localStorage.getItem('preferredLanguage') || getUserLanguage();
-                const code = lang.split('-')[0];
-                if (lang === 'en-US') {
-                    subtitle1.textContent = subtitles[currentIndex].fr;
-                    subtitle2.textContent = subtitles[currentIndex].en;
-                } else {
-                    subtitle1.textContent = subtitles[currentIndex].en;
-                    subtitle2.textContent = subtitles[currentIndex][code] || subtitles[currentIndex].en;
-                }
+        // EN visitors see a foreign line being translated into English;
+        // everyone else sees English translated into their own language.
+        function currentPair(item) {
+            const lang = localStorage.getItem('preferredLanguage') || getUserLanguage();
+            const code = lang.split('-')[0];
+            if (lang === 'en-US') {
+                return { original: item.fr, translation: item.en };
+            }
+            return { original: item.en, translation: item[code] || item.en };
+        }
 
-                subtitle1.classList.add('active');
-                subtitle2.classList.add('active');
-
+        function scheduleNext() {
+            typingTimer = setTimeout(() => {
                 currentIndex = (currentIndex + 1) % subtitles.length;
-            }, 500);
+                typePhrase();
+            }, HOLD_MS + PAUSE_MS);
+        }
+
+        function typePhrase() {
+            const { original, translation } = currentPair(subtitles[currentIndex]);
+
+            if (prefersReduced) {
+                subtitle1.textContent = original;
+                subtitle2.textContent = translation;
+                scheduleNext();
+                return;
+            }
+
+            const steps = Math.max(original.length, translation.length);
+            let i = 0;
+            subtitle1.classList.add('typing');
+            subtitle2.classList.add('typing');
+
+            (function step() {
+                i++;
+                subtitle1.textContent = original.slice(0, Math.min(i, original.length));
+                subtitle2.textContent = translation.slice(0, Math.min(i, translation.length));
+                if (i < steps) {
+                    typingTimer = setTimeout(step, TYPE_MS);
+                } else {
+                    subtitle1.classList.remove('typing');
+                    subtitle2.classList.remove('typing');
+                    scheduleNext();
+                }
+            })();
         }
 
         function startSubtitles(lang) {
             subtitles = translations[lang].examples;
             currentIndex = 0;
-            updateSubtitles();
-            if (subtitleInterval) clearInterval(subtitleInterval);
-            subtitleInterval = setInterval(updateSubtitles, 3000);
+            if (typingTimer) clearTimeout(typingTimer);
+            subtitle1.textContent = '';
+            subtitle2.textContent = '';
+            typePhrase();
+        }
+
+        // Localized use-case examples (EN default; these locales have their own baked-in captions)
+        const USECASE_LOCALES = ['ru', 'fr', 'es', 'de', 'it', 'ja', 'ko', 'zh', 'ar', 'pt', 'uk'];
+
+        function applyUsecaseImages(lang) {
+            const code = (lang || '').split('-')[0];
+            const dir = USECASE_LOCALES.includes(code) ? `example/${code}/` : 'example/';
+            const root = window.location.protocol === 'file:' ? 'img/' : '/img/';
+            document.querySelectorAll('img[data-usecase]').forEach(img => {
+                img.src = `${root}${dir}usecase-${img.getAttribute('data-usecase')}.jpg`;
+            });
+        }
+
+        // Region-popular app icons for the hero strip (decorative, aria-hidden; swapped at runtime).
+        const HI = {
+            zoom: 'https://cdn-icons-png.flaticon.com/512/5969/5969238.png', teams: 'https://cdn-icons-png.flaticon.com/512/15047/15047490.png', meet: 'https://cdn-icons-png.flaticon.com/512/5968/5968552.png',
+            youtube: 'https://cdn-icons-png.flaticon.com/512/1384/1384060.png', discord: 'https://cdn-icons-png.flaticon.com/512/3670/3670157.png', slack: 'https://cdn-icons-png.flaticon.com/512/5968/5968929.png',
+            whatsapp: 'https://cdn-icons-png.flaticon.com/512/124/124034.png', telegram: 'https://cdn-icons-png.flaticon.com/512/5968/5968804.png', vk: 'https://cdn-icons-png.flaticon.com/512/5968/5968835.png',
+            viber: 'https://cdn-icons-png.flaticon.com/512/3670/3670059.png', wechat: 'https://cdn-icons-png.flaticon.com/512/3670/3670101.png', twitch: 'https://cdn-icons-png.flaticon.com/512/3291/3291659.png'
+        };
+        const HERO_PLATFORM_SETS = {
+            default: [HI.zoom, HI.teams, HI.meet, HI.youtube, HI.discord, HI.slack],
+            de: [HI.zoom, HI.teams, HI.meet, HI.whatsapp, HI.youtube, HI.discord],
+            ru: [HI.telegram, HI.zoom, HI.vk, HI.youtube, HI.whatsapp, HI.discord],
+            uk: [HI.telegram, HI.zoom, HI.viber, HI.youtube, HI.whatsapp, HI.discord],
+            ja: [HI.zoom, HI.youtube, HI.teams, HI.discord, HI.twitch, HI.meet],
+            ko: [HI.zoom, HI.youtube, HI.discord, HI.twitch, HI.meet, HI.teams],
+            zh: [HI.wechat, HI.zoom, HI.youtube, HI.teams, HI.meet, HI.discord],
+            ar: [HI.whatsapp, HI.zoom, HI.youtube, HI.meet, HI.telegram, HI.teams],
+            hi: [HI.whatsapp, HI.youtube, HI.meet, HI.zoom, HI.telegram, HI.teams],
+            tr: [HI.whatsapp, HI.zoom, HI.youtube, HI.teams, HI.telegram, HI.discord]
+        };
+        function applyHeroPlatforms(lang) {
+            const code = (lang || '').split('-')[0];
+            const set = HERO_PLATFORM_SETS[code] || HERO_PLATFORM_SETS.default;
+            document.querySelectorAll('.hero-platforms img').forEach((img, i) => {
+                if (set[i]) { img.src = set[i]; img.style.display = ''; img.classList.toggle('hero-icon-zoom', set[i] === HI.zoom); }
+                else { img.style.display = 'none'; }
+            });
+        }
+
+        // Route the navbar "Try Free" to the visitor's actual platform store (Win/Mac/iOS;
+        // Android has no app yet -> send to the #download section with the notify flow).
+        const TRYFREE_STORES = {
+            win: 'https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding',
+            mac: 'https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac',
+            ios: 'https://apps.apple.com/app/live-captions-translator/id6760197210'
+        };
+        function detectOS() {
+            const ua = navigator.userAgent || '';
+            const p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
+            if (/iPhone|iPad|iPod/.test(ua) || (/Mac/.test(p) && navigator.maxTouchPoints > 1)) return 'ios';
+            if (/Android/.test(ua)) return 'android';
+            if (/Mac/.test(p) || /Macintosh/.test(ua)) return 'mac';
+            return 'win';
+        }
+        function routeTryFree() {
+            const el = document.getElementById('navTryFree');
+            if (!el) return;
+            const os = detectOS();
+            if (os === 'android') { el.setAttribute('href', '#download'); el.removeAttribute('target'); return; }
+            el.setAttribute('href', TRYFREE_STORES[os] || TRYFREE_STORES.win);
         }
 
         // Navbar scroll effect
@@ -2198,9 +2595,11 @@
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
+            grabCursor: true,
             autoplay: {
                 delay: 5000,
                 disableOnInteraction: false,
+                pauseOnMouseEnter: true,
             },
             pagination: {
                 el: '.swiper-pagination',
@@ -2211,26 +2610,10 @@
                 prevEl: '.swiper-button-prev',
             },
             breakpoints: {
-                640: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                },
                 768: {
                     slidesPerView: 2,
-                    spaceBetween: 30,
+                    spaceBetween: 24,
                 },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-            },
-            effect: 'coverflow',
-            coverflowEffect: {
-                rotate: 20,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
             },
         });
 
@@ -2238,6 +2621,9 @@
         document.addEventListener('DOMContentLoaded', () => {
             const lang = getUserLanguage();
             startSubtitles(lang);
+            applyUsecaseImages(lang);
+            applyHeroPlatforms(lang);
+            routeTryFree();
 
             // Add fade-in animation to sections
             const sections = document.querySelectorAll('.section, .feature, .comparison-item, .testimonial-card');
@@ -2358,6 +2744,27 @@
         document.addEventListener('DOMContentLoaded', updateFooterArticlesLink);
         document.getElementById('languageSelector').addEventListener('change', updateFooterArticlesLink);
     </script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function (m, e, t, r, i, k, a) {
+            m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) { if (document.scripts[j].src === r) { return; } }
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(101009280, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 
 </html>
