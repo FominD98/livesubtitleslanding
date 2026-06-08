@@ -2595,7 +2595,7 @@
         function routeTryFree() {
             const os = detectOS();
             const store = TRYFREE_STORES[os];
-            ['navTryFree', 'heroTryFree'].forEach(function (id) {
+            ['navTryFree'].forEach(function (id) {
                 const el = document.getElementById(id);
                 if (!el) return;
                 if (os === 'android' || !store) { el.setAttribute('href', '#download'); el.removeAttribute('target'); }
