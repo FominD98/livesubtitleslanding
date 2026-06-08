@@ -111,7 +111,7 @@ const translations = {
         faq: {
             title: 'Frequently Asked Questions',
             q1: 'How much does the app cost?',
-            a1: 'Live Subtitles is a subscription with a free trial, so you can test every feature first. Pricing varies by region — you\'ll see your local price in the store.',
+            a1: 'Live Subtitles is a subscription from $5/month, with a free trial so you can test every feature first.',
             q2: 'Does it work with all applications?',
             a2: 'Yes! Live Subtitles works with absolutely any applications: YouTube, Netflix, Zoom, Teams, Discord, browsers and even games. The app captures audio at the system level.',
             q3: 'What languages are supported?',
@@ -134,7 +134,8 @@ const translations = {
         },
         download: {
             title: 'Try it free right now',
-            subtitle: 'Free trial period — plans priced for your region.'
+            subtitle: 'Free trial period, then from $5/month.',
+            guarantee: '7-day free trial · No credit card required'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ru: "Давайте начнём сегодняшнюю встречу", es: "Empecemos con la reunión de hoy", de: "Lassen Sie uns mit dem heutigen Meeting beginnen", it: "Iniziamo la riunione di oggi", ja: "それでは、本日のミーティングを始めましょう", ko: "오늘 회의를 시작하겠습니다", zh: "那我们开始今天的会议吧", ar: "لنبدأ اجتماع اليوم", hi: "चलिए आज की मीटिंग शुरू करते हैं", pt: "Vamos começar a reunião de hoje", pl: "Zaczynajmy dzisiejsze spotkanie", nl: "Laten we beginnen met de meeting van vandaag", tr: "Hadi bugünkü toplantımıza başlayalım", uk: "Розпочнімо нашу сьогоднішню зустріч" },
@@ -257,7 +258,7 @@ const translations = {
         faq: {
             title: 'Часто задаваемые вопросы',
             q1: 'Сколько стоит приложение?',
-            a1: 'Live Subtitles работает по подписке с бесплатным пробным периодом, чтобы вы могли сначала протестировать все функции. Цена зависит от вашего региона — актуальную стоимость вы увидите в магазине.',
+            a1: 'Live Subtitles — это подписка от $5/месяц с бесплатным пробным периодом, чтобы вы могли сначала протестировать все функции.',
             q2: 'Работает ли с любыми приложениями?',
             a2: 'Да! Live Subtitles работает с абсолютно любыми приложениями: YouTube, Netflix, Zoom, Teams, Discord, браузерами и даже играми. Приложение захватывает звук на системном уровне.',
             q3: 'Какие языки поддерживаются?',
@@ -280,7 +281,8 @@ const translations = {
         },
         download: {
             title: 'Попробуйте бесплатно прямо сейчас',
-            subtitle: 'Бесплатный пробный период — цена подбирается под ваш регион.'
+            subtitle: 'Бесплатный пробный период, затем от $5/месяц.',
+            guarantee: '7 дней бесплатно · Без банковской карты'
         },
         examples: [
             { en: "Let's get started with today's meeting", ru: "Давайте начнём сегодняшнюю встречу" },
@@ -398,7 +400,7 @@ const translations = {
         faq: {
             title: 'Questions fréquemment posées',
             q1: 'Combien coûte l\'application ?',
-            a1: 'Live Subtitles fonctionne par abonnement avec un essai gratuit, ce qui vous permet de tester toutes les fonctionnalités au préalable. Les tarifs varient selon votre région : vous verrez le prix local directement sur le store.',
+            a1: 'Live Subtitles est un abonnement à partir de 5 $/mois, avec un essai gratuit pour tester toutes les fonctionnalités au préalable.',
             q2: 'Fonctionne-t-elle avec toutes les applications ?',
             a2: 'Oui ! Live Subtitles fonctionne avec absolument toutes les applications : YouTube, Netflix, Zoom, Teams, Discord, navigateurs et même jeux. L\'application capture l\'audio au niveau système.',
             q3: 'Quelles langues sont prises en charge ?',
@@ -421,7 +423,8 @@ const translations = {
         },
         download: {
             title: 'Essayez gratuitement dès maintenant',
-            subtitle: 'Période d\'essai gratuite — des tarifs adaptés à votre région.'
+            subtitle: 'Période d\'essai gratuite, puis à partir de 5 $/mois.',
+            guarantee: 'Essai gratuit de 7 jours · Sans carte bancaire'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", fr: "Commençons la réunion d'aujourd'hui" },
@@ -539,7 +542,7 @@ const translations = {
         faq: {
             title: 'Preguntas frecuentes',
             q1: '¿Cuánto cuesta la aplicación?',
-            a1: 'Live Subtitles es una suscripción con un periodo de prueba gratuito, así que puedes probar todas las funciones antes de nada. El precio varía según tu región: verás tu precio local en la tienda.',
+            a1: 'Live Subtitles es una suscripción desde 5 $/mes, con un periodo de prueba gratuito para que pruebes todas las funciones primero.',
             q2: '¿Funciona con todas las aplicaciones?',
             a2: '¡Sí! Live Subtitles funciona con absolutamente cualquier aplicación: YouTube, Netflix, Zoom, Teams, Discord, navegadores e incluso juegos. La aplicación captura el audio a nivel del sistema.',
             q3: '¿Qué idiomas son compatibles?',
@@ -562,7 +565,8 @@ const translations = {
         },
         download: {
             title: 'Pruébalo gratis ahora mismo',
-            subtitle: 'Periodo de prueba gratuito: planes con precios adaptados a tu región.'
+            subtitle: 'Periodo de prueba gratuito, luego desde 5 $/mes.',
+            guarantee: 'Prueba gratis de 7 días · Sin tarjeta de crédito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", es: "Empecemos con la reunión de hoy" },
@@ -680,7 +684,7 @@ const translations = {
         faq: {
             title: 'Häufig gestellte Fragen',
             q1: 'Wie viel kostet die Anwendung?',
-            a1: 'Live Subtitles ist ein Abo mit kostenloser Testphase, sodass Sie zuerst alle Funktionen ausprobieren können. Die Preise richten sich nach Ihrer Region – Ihren lokalen Preis sehen Sie im Store.',
+            a1: 'Live Subtitles ist ein Abo ab 5 $/Monat mit einer kostenlosen Testphase, damit Sie zuerst alle Funktionen ausprobieren können.',
             q2: 'Funktioniert es mit allen Anwendungen?',
             a2: 'Ja! Live Subtitles funktioniert mit absolut allen Anwendungen: YouTube, Netflix, Zoom, Teams, Discord, Browsern und sogar Spielen. Die Anwendung erfasst Audio auf Systemebene.',
             q3: 'Welche Sprachen werden unterstützt?',
@@ -703,7 +707,8 @@ const translations = {
         },
         download: {
             title: 'Probieren Sie es jetzt kostenlos aus',
-            subtitle: 'Kostenlose Testphase – Tarife passend zu Ihrer Region.'
+            subtitle: 'Kostenlose Testphase, danach ab 5 $/Monat.',
+            guarantee: '7 Tage kostenlos testen · Ohne Kreditkarte'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", de: "Lassen Sie uns mit dem heutigen Meeting beginnen" },
@@ -821,7 +826,7 @@ const translations = {
         faq: {
             title: 'Domande frequenti',
             q1: 'Quanto costa l\'applicazione?',
-            a1: 'Live Subtitles è un abbonamento con prova gratuita, così puoi provare tutte le funzioni prima di decidere. I prezzi variano in base alla regione: vedrai il prezzo locale direttamente nello store.',
+            a1: 'Live Subtitles è un abbonamento da 5 $/mese, con una prova gratuita per provare prima tutte le funzioni.',
             q2: 'Funziona con tutte le applicazioni?',
             a2: 'Sì! Live Subtitles funziona con assolutamente qualsiasi applicazione: YouTube, Netflix, Zoom, Teams, Discord, browser e persino giochi. L\'applicazione cattura l\'audio a livello di sistema.',
             q3: 'Quali lingue sono supportate?',
@@ -844,7 +849,8 @@ const translations = {
         },
         download: {
             title: 'Provalo gratis ora',
-            subtitle: 'Periodo di prova gratuito — piani con prezzi pensati per la tua regione.'
+            subtitle: 'Periodo di prova gratuito, poi da 5 $/mese.',
+            guarantee: 'Prova gratuita di 7 giorni · Senza carta di credito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", it: "Iniziamo la riunione di oggi" },
@@ -962,7 +968,7 @@ const translations = {
         faq: {
             title: 'よくある質問',
             q1: 'アプリの料金はいくらですか？',
-            a1: 'Live Subtitlesは無料トライアル付きのサブスクリプションなので、まずはすべての機能をお試しいただけます。料金は地域によって異なり、お住まいの地域の価格はストアでご確認いただけます。',
+            a1: 'Live Subtitlesは月額5ドルからのサブスクリプションで、無料トライアル付きなので、まずはすべての機能をお試しいただけます。',
             q2: 'すべてのアプリケーションで動作しますか？',
             a2: 'はい！Live Subtitlesは絶対にすべてのアプリケーションで動作します：YouTube、Netflix、Zoom、Teams、Discord、ブラウザー、ゲームまで。アプリはシステムレベルで音声をキャプチャします。',
             q3: 'どの言語がサポートされていますか？',
@@ -985,7 +991,8 @@ const translations = {
         },
         download: {
             title: '今すぐ無料でお試し',
-            subtitle: '無料トライアル期間あり — 料金はお住まいの地域に合わせて設定されます。'
+            subtitle: '無料トライアル期間あり、その後は月額5ドルから。',
+            guarantee: '7日間無料トライアル · クレジットカード不要'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ja: "それでは、本日のミーティングを始めましょう" },
@@ -1103,7 +1110,7 @@ const translations = {
         faq: {
             title: '자주 묻는 질문',
             q1: '앱 비용은 얼마인가요?',
-            a1: 'Live Subtitles는 무료 체험이 제공되는 구독 서비스라 모든 기능을 먼저 자유롭게 사용해볼 수 있습니다. 요금은 지역에 따라 다르며, 스토어에서 내 지역 가격을 확인할 수 있습니다.',
+            a1: 'Live Subtitles는 월 $5부터 시작하는 구독 서비스이며, 무료 체험이 제공되어 모든 기능을 먼저 사용해볼 수 있습니다.',
             q2: '모든 애플리케이션에서 작동하나요?',
             a2: '예! Live Subtitles는 절대적으로 모든 애플리케이션에서 작동합니다: YouTube, Netflix, Zoom, Teams, Discord, 브라우저 및 게임까지. 앱은 시스템 수준에서 오디오를 캡처합니다.',
             q3: '어떤 언어가 지원되나요?',
@@ -1126,7 +1133,8 @@ const translations = {
         },
         download: {
             title: '지금 무료로 사용해보세요',
-            subtitle: '무료 체험 기간 제공 — 요금은 지역에 맞게 책정됩니다.'
+            subtitle: '무료 체험 기간 제공, 이후 월 $5부터.',
+            guarantee: '7일 무료 체험 · 신용카드 불필요'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ko: "오늘 회의를 시작하겠습니다" },
@@ -1244,7 +1252,7 @@ const translations = {
         faq: {
             title: '常见问题',
             q1: '应用程序的费用是多少？',
-            a1: 'Live Subtitles 采用订阅制，并提供免费试用，您可以先体验所有功能。价格因地区而异，您将在商店中看到当地的价格。',
+            a1: 'Live Subtitles 是每月 $5 起的订阅服务，并提供免费试用，您可以先体验所有功能。',
             q2: '是否适用于所有应用程序？',
             a2: '是的！Live Subtitles绝对适用于所有应用程序：YouTube、Netflix、Zoom、Teams、Discord、浏览器甚至游戏。应用程序在系统级别捕获音频。',
             q3: '支持哪些语言？',
@@ -1267,7 +1275,8 @@ const translations = {
         },
         download: {
             title: '立即免费试用',
-            subtitle: '免费试用期，套餐价格按您所在地区计费。'
+            subtitle: '免费试用期，之后每月 $5 起。',
+            guarantee: '7 天免费试用 · 无需信用卡'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", zh: "那我们开始今天的会议吧" },
@@ -1385,7 +1394,7 @@ const translations = {
         faq: {
             title: 'الأسئلة الشائعة',
             q1: 'كم تكلفة التطبيق؟',
-            a1: 'يعمل Live Subtitles بنظام الاشتراك مع فترة تجريبية مجانية، حتى تتمكّن من تجربة جميع الميزات أولاً. تختلف الأسعار حسب المنطقة، وسترى سعرك المحلي في المتجر.',
+            a1: 'Live Subtitles هو اشتراك يبدأ من 5 دولارات شهريًا، مع فترة تجريبية مجانية لتجربة جميع الميزات أولاً.',
             q2: 'هل يعمل مع جميع التطبيقات؟',
             a2: 'نعم! Live Subtitles يعمل مع جميع التطبيقات تماماً: YouTube، Netflix، Zoom، Teams، Discord، المتصفحات وحتى الألعاب. التطبيق يلتقط الصوت على مستوى النظام.',
             q3: 'ما هي اللغات المدعومة؟',
@@ -1408,7 +1417,8 @@ const translations = {
         },
         download: {
             title: 'جرب مجاناً الآن',
-            subtitle: 'فترة تجريبية مجانية — أسعار الخطط مخصّصة لمنطقتك.'
+            subtitle: 'فترة تجريبية مجانية، ثم من 5 دولارات شهريًا.',
+            guarantee: 'تجربة مجانية لمدة 7 أيام · بدون بطاقة ائتمان'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ar: "لنبدأ اجتماع اليوم" },
@@ -1526,7 +1536,7 @@ const translations = {
         faq: {
             title: 'अक्सर पूछे जाने वाले प्रश्न',
             q1: 'ऐप की लागत कितनी है?',
-            a1: 'Live Subtitles एक सब्सक्रिप्शन है जिसमें निःशुल्क परीक्षण अवधि शामिल है, ताकि आप पहले हर सुविधा आज़मा सकें। मूल्य क्षेत्र के अनुसार अलग-अलग होता है — आपको अपना स्थानीय मूल्य स्टोर में दिख जाएगा।',
+            a1: 'Live Subtitles $5/माह से शुरू होने वाला सब्सक्रिप्शन है, जिसमें निःशुल्क परीक्षण अवधि शामिल है ताकि आप पहले सभी सुविधाएँ आज़मा सकें।',
             q2: 'क्या यह सभी एप्लिकेशन के साथ काम करता है?',
             a2: 'हां! Live Subtitles बिल्कुल सभी एप्लिकेशन के साथ काम करता है: YouTube, Netflix, Zoom, Teams, Discord, ब्राउज़र और यहां तक कि गेम भी। ऐप सिस्टम स्तर पर ऑडियो कैप्चर करता है।',
             q3: 'कौन सी भाषाएं समर्थित हैं?',
@@ -1549,7 +1559,8 @@ const translations = {
         },
         download: {
             title: 'अभी मुफ्त में आज़माएं',
-            subtitle: 'निःशुल्क परीक्षण अवधि — आपके क्षेत्र के अनुसार मूल्य वाली योजनाएँ।'
+            subtitle: 'निःशुल्क परीक्षण अवधि, फिर $5/माह से।',
+            guarantee: '7-दिन का मुफ़्त ट्रायल · क्रेडिट कार्ड की ज़रूरत नहीं'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", hi: "चलिए आज की मीटिंग शुरू करते हैं" },
@@ -1667,7 +1678,7 @@ const translations = {
         faq: {
             title: 'Perguntas Frequentes',
             q1: 'Quanto custa o app?',
-            a1: 'O Live Subtitles é uma assinatura com teste gratuito, para você experimentar todos os recursos primeiro. Os preços variam conforme a região — você verá o valor local na loja.',
+            a1: 'O Live Subtitles é uma assinatura a partir de US$ 5/mês, com teste gratuito para você experimentar todos os recursos primeiro.',
             q2: 'Funciona com todas as aplicações?',
             a2: 'Sim! Live Subtitles funciona absolutamente com todas as aplicações: YouTube, Netflix, Zoom, Teams, Discord, navegadores e até jogos. O app captura áudio no nível do sistema.',
             q3: 'Quais idiomas são suportados?',
@@ -1690,7 +1701,8 @@ const translations = {
         },
         download: {
             title: 'Experimente grátis agora',
-            subtitle: 'Período de teste gratuito — planos com preços para a sua região.'
+            subtitle: 'Período de teste gratuito, depois a partir de US$ 5/mês.',
+            guarantee: 'Teste grátis de 7 dias · Sem cartão de crédito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pt: "Vamos começar a reunião de hoje" },
@@ -1808,7 +1820,7 @@ const translations = {
         faq: {
             title: 'Często zadawane pytania',
             q1: 'Ile kosztuje aplikacja?',
-            a1: 'Live Subtitles to subskrypcja z bezpłatnym okresem próbnym, dzięki czemu możesz najpierw przetestować wszystkie funkcje. Ceny różnią się w zależności od regionu — swoją lokalną cenę zobaczysz w sklepie.',
+            a1: 'Live Subtitles to subskrypcja od 5 $/miesiąc z bezpłatnym okresem próbnym, dzięki czemu możesz najpierw przetestować wszystkie funkcje.',
             q2: 'Czy działa ze wszystkimi aplikacjami?',
             a2: 'Tak! Live Subtitles działa absolutnie ze wszystkimi aplikacjami: YouTube, Netflix, Zoom, Teams, Discord, przeglądarkami, a nawet grami. Aplikacja przechwytuje dźwięk na poziomie systemu.',
             q3: 'Jakie języki są obsługiwane?',
@@ -1831,7 +1843,8 @@ const translations = {
         },
         download: {
             title: 'Wypróbuj za darmo teraz',
-            subtitle: 'Bezpłatny okres próbny — plany z cenami dopasowanymi do Twojego regionu.'
+            subtitle: 'Bezpłatny okres próbny, potem od 5 $/miesiąc.',
+            guarantee: '7-dniowy bezpłatny okres próbny · Bez karty kredytowej'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pl: "Zaczynajmy dzisiejsze spotkanie" },
@@ -1949,7 +1962,7 @@ const translations = {
         faq: {
             title: 'Veelgestelde vragen',
             q1: 'Hoeveel kost de app?',
-            a1: 'Live Subtitles werkt op abonnementsbasis met een gratis proefperiode, zodat je eerst alle functies kunt uitproberen. De prijs verschilt per regio — in de store zie je je lokale prijs.',
+            a1: 'Live Subtitles is een abonnement vanaf $5/maand, met een gratis proefperiode zodat je eerst alle functies kunt uitproberen.',
             q2: 'Werkt het met alle applicaties?',
             a2: 'Ja! Live Subtitles werkt absoluut met alle applicaties: YouTube, Netflix, Zoom, Teams, Discord, browsers en zelfs games. De app vangt audio op systeemniveau.',
             q3: 'Welke talen worden ondersteund?',
@@ -1972,7 +1985,8 @@ const translations = {
         },
         download: {
             title: 'Probeer nu gratis',
-            subtitle: 'Gratis proefperiode — abonnementen met een prijs voor jouw regio.'
+            subtitle: 'Gratis proefperiode, daarna vanaf $5/maand.',
+            guarantee: '7 dagen gratis proberen · Geen creditcard nodig'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", nl: "Laten we beginnen met de meeting van vandaag" },
@@ -2090,7 +2104,7 @@ const translations = {
         faq: {
             title: 'Sıkça Sorulan Sorular',
             q1: 'Uygulamanın maliyeti nedir?',
-            a1: 'Live Subtitles, ücretsiz deneme sunan bir aboneliktir; böylece önce tüm özellikleri test edebilirsiniz. Fiyatlandırma bölgeye göre değişir — yerel fiyatınızı mağazada görebilirsiniz.',
+            a1: 'Live Subtitles, aylık 5 $\'dan başlayan bir aboneliktir ve önce tüm özellikleri test edebilmeniz için ücretsiz deneme sunar.',
             q2: 'Tüm uygulamalarla çalışır mı?',
             a2: 'Evet! Live Subtitles kesinlikle tüm uygulamalarla çalışır: YouTube, Netflix, Zoom, Teams, Discord, tarayıcılar ve hatta oyunlar. Uygulama sistem seviyesinde ses yakalar.',
             q3: 'Hangi diller destekleniyor?',
@@ -2113,7 +2127,8 @@ const translations = {
         },
         download: {
             title: 'Şimdi ücretsiz dene',
-            subtitle: 'Ücretsiz deneme süresi — bölgenize göre fiyatlandırılan planlar.'
+            subtitle: 'Ücretsiz deneme süresi, ardından aylık 5 $\'dan başlar.',
+            guarantee: '7 gün ücretsiz deneme · Kredi kartı gerekmez'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", tr: "Hadi bugünkü toplantımıza başlayalım" },
@@ -2231,7 +2246,7 @@ const translations = {
         faq: {
             title: 'Часті запитання',
             q1: 'Скільки коштує додаток?',
-            a1: 'Live Subtitles працює за підпискою з безкоштовним пробним періодом, тож ви можете спершу протестувати всі функції. Ціна залежить від регіону — свій місцевий тариф ви побачите в магазині.',
+            a1: 'Live Subtitles — це підписка від $5/місяць із безкоштовним пробним періодом, щоб ви могли спершу протестувати всі функції.',
             q2: 'Чи працює з усіма додатками?',
             a2: 'Так! Live Subtitles абсолютно працює з усіма додатками: YouTube, Netflix, Zoom, Teams, Discord, браузерами та навіть іграми. Додаток захоплює аудіо на системному рівні.',
             q3: 'Які мови підтримуються?',
@@ -2254,7 +2269,8 @@ const translations = {
         },
         download: {
             title: 'Спробуйте безкоштовно зараз',
-            subtitle: 'Безкоштовний пробний період — тарифи розраховані для вашого регіону.'
+            subtitle: 'Безкоштовний пробний період, потім від $5/місяць.',
+            guarantee: '7 днів безкоштовно · Без банківської картки'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", uk: "Розпочнімо нашу сьогоднішню зустріч" },

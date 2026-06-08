@@ -107,6 +107,11 @@ function escapeAttr(s) {
         .replace(/"/g, '&quot;');
 }
 
+// For values injected into a JSON string inside <script type="application/ld+json">.
+function jsonEscape(s) {
+    return s.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\r?\n/g, '\\n');
+}
+
 // Replace inner text of every <ELEM ... data-translate="KEY">CONTENT</ELEM>
 // with the matching translation, preserving the surrounding whitespace.
 function bake(html, dict, fileLabel) {
@@ -190,6 +195,34 @@ function bakeSeoHead(html, dict, folder, bcp47) {
     return out;
 }
 
+// Localize the FAQPage JSON-LD Q&A from translations.js faq.q1../a1.. (same order
+// as the visible FAQ) so locale pages expose localized FAQ rich results AND the
+// schema text matches the visible FAQ (a Google FAQ rich-results requirement).
+function bakeFaqSchema(html, dict) {
+    if (!dict.faq) return html;
+    let n = 0;
+    return html.replace(
+        /("@type": "Question",\s*"name": ")[^"]*("[\s\S]*?"@type": "Answer",\s*"text": ")[^"]*(")/g,
+        (full, p1, p2, p3) => {
+            n++;
+            const q = dict.faq['q' + n], a = dict.faq['a' + n];
+            if (typeof q !== 'string' || typeof a !== 'string') return full;
+            return p1 + jsonEscape(q.trim()) + p2 + jsonEscape(a.trim()) + p3;
+        }
+    );
+}
+
+// Fail loudly if any baked JSON-LD block is invalid (don't ship broken schema).
+function validateJsonLd(html, label) {
+    const re = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+    let m, idx = 0;
+    while ((m = re.exec(html)) !== null) {
+        idx++;
+        try { JSON.parse(m[1]); }
+        catch (e) { throw new Error(`JSON-LD block #${idx} in ${label} invalid after bake: ${e.message}`); }
+    }
+}
+
 function processFile(relPath, folder, langCode, translations) {
     const abs = path.join(ROOT, relPath);
     if (!fs.existsSync(abs)) {
@@ -204,6 +237,8 @@ function processFile(relPath, folder, langCode, translations) {
     const before = fs.readFileSync(abs, 'utf8');
     let { out, touched, missing } = bake(before, dict, relPath);
     out = bakeSeoHead(out, dict, folder, langCode);
+    out = bakeFaqSchema(out, dict);
+    validateJsonLd(out, relPath);
     if (out === before) {
         console.log(`  ok    ${relPath}  (${langCode}, ${touched} keys, no changes)`);
         return;
