@@ -450,7 +450,7 @@ const translations = {
             ratingLabel: '4,7/5 · 351 valoraciones',
             watchDemo: 'Ver demo',
             title: 'Traductor en vivo para reuniones, llamadas y conversaciones en tu PC',
-            lead: 'Traduce voz en tiempo real a más de 100 idiomas. Funciona con Zoom, Teams, Skype, Google Meet y cualquier app — sin micrófono.'
+            lead: 'Traduce voz en tiempo real a más de 50 idiomas. Funciona con Zoom, Teams, Skype, Google Meet y cualquier app — sin micrófono.'
         },
         downloadBtn: 'Descargar desde Microsoft Store',
         androidBtn: 'Quiero la versión para Android',

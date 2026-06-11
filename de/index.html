@@ -2645,7 +2645,7 @@
             routeTryFree();
 
             // init carousel here so the deferred Swiper lib is loaded
-            new Swiper('.mediaSwiper', {
+            const mediaSwiper = new Swiper('.mediaSwiper', {
             slidesPerView: 1,
             spaceBetween: 30,
             loop: true,
@@ -2670,6 +2670,26 @@
                 },
             },
         });
+            // Hold the media carousel on slide 0 ("Cualquier reunión, cualquier acento")
+            // and only start autoplay once the section scrolls into view, so the first
+            // image users see when they reach it is always the meetings example.
+            (function () {
+                const mediaEl = document.querySelector('.mediaSwiper');
+                if (!mediaEl || !mediaSwiper || !mediaSwiper.autoplay) return;
+                mediaSwiper.autoplay.stop();
+                let started = false;
+                const io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting && !started) {
+                            started = true;
+                            mediaSwiper.slideToLoop(0, 0);
+                            mediaSwiper.autoplay.start();
+                            io.disconnect();
+                        }
+                    });
+                }, { threshold: 0.4 });
+                io.observe(mediaEl);
+            })();
 
             // Add fade-in animation to sections
             const sections = document.querySelectorAll('.section, .feature, .comparison-item, .testimonial-card');
