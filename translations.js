@@ -449,8 +449,8 @@ const translations = {
             downloadFree: 'Prueba gratis',
             ratingLabel: '4,7/5 · 351 valoraciones',
             watchDemo: 'Ver demo',
-            title: 'Mira películas, aprende idiomas — comprende fácilmente el habla en vivo',
-            lead: 'Live Subtitles: tu asistente con subtítulos dobles, reconocimiento y traducción de voz en tiempo real'
+            title: 'Traductor en vivo para reuniones, llamadas y conversaciones en tu PC',
+            lead: 'Traduce voz en tiempo real a más de 100 idiomas. Funciona con Zoom, Teams, Skype, Google Meet y cualquier app — sin micrófono.'
         },
         downloadBtn: 'Descargar desde Microsoft Store',
         androidBtn: 'Quiero la versión para Android',

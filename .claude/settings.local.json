@@ -29,7 +29,19 @@
       "Bash(pwsh -NoProfile -File ./generate-sitemap.ps1)",
       "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File ./generate-sitemap.ps1)",
       "Bash(awk '{print $1}')",
-      "WebFetch(domain:alternativeto.net)"
+      "WebFetch(domain:alternativeto.net)",
+      "Bash(cp /c/pet/livesubs/img/onboarding1.png \"/c/pet/livesubtitleslanding/img/live-subtitles-video-call-captions.png\")",
+      "Bash(cp /c/pet/livesubs/img/onboarding1_asia.png \"/c/pet/livesubtitleslanding/img/live-subtitles-video-call-captions-asia.png\")",
+      "Bash(node -e \"require\\('./translations.js'\\); console.log\\('en', translations['en-US'].navbar.tryFree, '| ru', translations['ru-RU'].navbar.tryFree, '| ja', translations['ja-JP'].navbar.tryFree\\)\")",
+      "Read(//c/Users/skoofy/Desktop/livesubs/листининг/**)",
+      "Read(//c/Users/skoofy/Desktop/livesubs//**)",
+      "Bash(sed -n '1,80p' generate-language-pages.ps1)",
+      "Bash(sed -n '1,60p' bake-i18n-defaults.js)",
+      "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File generate-language-pages.ps1)",
+      "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File generate-sitemap.ps1)",
+      "Bash(command -v pwsh powershell powershell.exe node)",
+      "Bash(node _add_navbar_faq.js)",
+      "Bash(node -e \"const fs=require\\('fs'\\); for \\(const f of ['translations.js','index.html']\\){let s=fs.readFileSync\\(f,'utf8'\\);const b=\\(s.match\\(/© 2024 Live Subtitles/g\\)||[]\\).length;s=s.split\\('© 2024 Live Subtitles'\\).join\\('© 2026 Live Subtitles'\\);fs.writeFileSync\\(f,s,'utf8'\\);console.log\\(f+': replaced '+b+' occurrence\\(s\\)'\\);}\")"
     ]
   }
 }
