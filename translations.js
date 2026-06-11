@@ -13,8 +13,8 @@ const translations = {
             downloadFree: 'Start Free Trial',
             ratingLabel: '4.7/5 · 351 ratings',
             watchDemo: 'Watch Demo',
-            title: 'Live Subtitles — AI Live Captions & Dual Subtitles for Any App',
-            lead: 'Live captions and dual subtitles for Zoom, Teams, YouTube, Netflix and any app — on Windows, Mac and iOS. Real-time AI translation in 50+ languages, no microphone needed.'
+            title: 'Live translator for meetings, calls and conversations on your PC',
+            lead: 'Translates speech in real time into 50+ languages. Works with Zoom, Teams, Skype, Google Meet and any app — no microphone.'
         },
         downloadBtn: 'Download from Microsoft Store',
         androidBtn: 'Want an Android version',
@@ -160,8 +160,8 @@ const translations = {
             downloadFree: 'Попробовать бесплатно',
             ratingLabel: '4,7/5 · 351 оценок',
             watchDemo: 'Смотреть демо',
-            title: 'Смотрите фильмы, учите языки — легко понимайте живую речь',
-            lead: 'Live Subtitles - ваш помощник с двойными субтитрами, распознаванием и переводом речи в реальном времени'
+            title: 'Живой переводчик для встреч, звонков и разговоров на ПК',
+            lead: 'Переводит речь в реальном времени на 50+ языков. Работает с Zoom, Teams, Skype, Google Meet и любым приложением — без микрофона.'
         },
         downloadBtn: 'Скачать в Microsoft Store',
         androidBtn: 'Хочу версию для Android',
@@ -307,8 +307,8 @@ const translations = {
             downloadFree: 'Essai gratuit',
             ratingLabel: '4,7/5 · 351 avis',
             watchDemo: 'Voir la démo',
-            title: 'Regardez des films, apprenez des langues — comprenez facilement la parole en direct',
-            lead: 'Live Subtitles - votre assistant avec sous-titres doubles, reconnaissance et traduction de la parole en temps réel'
+            title: 'Traducteur en direct pour réunions, appels et conversations sur votre PC',
+            lead: 'Traduit la parole en temps réel dans plus de 50 langues. Fonctionne avec Zoom, Teams, Skype, Google Meet et n\'importe quelle application — sans microphone.'
         },
         downloadBtn: 'Télécharger depuis Microsoft Store',
         androidBtn: 'Je veux la version Android',
@@ -733,8 +733,8 @@ const translations = {
             downloadFree: 'Inizia la prova gratuita',
             ratingLabel: '4,7/5 · 351 recensioni',
             watchDemo: 'Guarda la demo',
-            title: 'Guarda i film, impara i linguaggi — capisci facilmente la parlata in diretta',
-            lead: 'Live Subtitles: il tuo assistente con sottotitoli doppi, riconoscimento e traduzione vocale in tempo reale'
+            title: 'Traduttore in tempo reale per riunioni, chiamate e conversazioni sul tuo PC',
+            lead: 'Traduce la voce in tempo reale in oltre 50 lingue. Funziona con Zoom, Teams, Skype, Google Meet e qualsiasi app — senza microfono.'
         },
         downloadBtn: 'Scarica da Microsoft Store',
         androidBtn: 'Voglio la versione per Android',
@@ -875,8 +875,8 @@ const translations = {
             downloadFree: '無料で試す',
             ratingLabel: '4.7/5 · 351件の評価',
             watchDemo: 'デモを見る',
-            title: '映画を見て、言語を学ぼう — ライブ音声を簡単に理解',
-            lead: 'Live Subtitles - 二重字幕、音声認識、リアルタイム翻訳のアシスタント'
+            title: '会議・通話・会話をPCでリアルタイム翻訳',
+            lead: '音声を50以上の言語にリアルタイムで翻訳。Zoom、Teams、Skype、Google Meet などあらゆるアプリに対応 — マイク不要。'
         },
         downloadBtn: 'Microsoft Storeからダウンロード',
         androidBtn: 'Android版が欲しい',
@@ -1017,8 +1017,8 @@ const translations = {
             downloadFree: '무료로 시작하기',
             ratingLabel: '4.7/5 · 351개',
             watchDemo: '데모 보기',
-            title: '영화 보기, 언어 배우기 — 실시간 음성을 쉽게 이해',
-            lead: 'Live Subtitles - 이중 자막, 음성 인식 및 실시간 번역 어시스턴트'
+            title: '회의, 통화, 대화를 PC에서 실시간 번역',
+            lead: '음성을 50개 이상의 언어로 실시간 번역. Zoom, Teams, Skype, Google Meet 등 모든 앱에서 작동 — 마이크 불필요.'
         },
         downloadBtn: 'Microsoft Store에서 다운로드',
         androidBtn: 'Android 버전 원함',
@@ -1159,8 +1159,8 @@ const translations = {
             downloadFree: '免费试用',
             ratingLabel: '4.7/5 · 351 条评价',
             watchDemo: '观看演示',
-            title: '看电影，学语言 — 轻松理解实时语音',
-            lead: 'Live Subtitles - 您的双字幕、语音识别和实时翻译助手'
+            title: '在电脑上实时翻译会议、通话和对话',
+            lead: '将语音实时翻译成 50 多种语言。支持 Zoom、Teams、Skype、Google Meet 等任何应用 — 无需麦克风。'
         },
         downloadBtn: '从微软商店下载',
         androidBtn: '需要Android版本',
@@ -1301,8 +1301,8 @@ const translations = {
             downloadFree: 'ابدأ النسخة التجريبية المجانية',
             ratingLabel: '4.7/5 · 351 تقييم',
             watchDemo: 'شاهد العرض',
-            title: 'شاهد الأفلام، تعلم اللغات — افهم الكلام المباشر بسهولة',
-            lead: 'Live Subtitles - مساعدك مع الترجمة المزدوجة، التعرف على الكلام والترجمة الفورية'
+            title: 'مترجم مباشر للاجتماعات والمكالمات والمحادثات على الكمبيوتر',
+            lead: 'يترجم الكلام فوريًا إلى أكثر من 50 لغة. يعمل مع Zoom وTeams وSkype وGoogle Meet وأي تطبيق — بدون ميكروفون.'
         },
         downloadBtn: 'تحميل من متجر مايكروسوفت',
         androidBtn: 'أريد إصدار Android',
@@ -1443,8 +1443,8 @@ const translations = {
             downloadFree: 'मुफ़्त ट्रायल शुरू करें',
             ratingLabel: '4.7/5 · 351 रेटिंग',
             watchDemo: 'डेमो देखें',
-            title: 'फिल्में देखें, भाषाएं सीखें — लाइव स्पीच को आसानी से समझें',
-            lead: 'Live Subtitles - दोहरे सबटाइटल, स्पीच रिकग्निशन और रियल-टाइम ट्रांसलेशन के साथ आपका सहायक'
+            title: 'मीटिंग, कॉल और बातचीत के लिए आपके पीसी पर लाइव अनुवादक',
+            lead: 'भाषण का 50+ भाषाओं में रियल-टाइम अनुवाद। Zoom, Teams, Skype, Google Meet और किसी भी ऐप के साथ काम करता है — माइक्रोफ़ोन की ज़रूरत नहीं।'
         },
         downloadBtn: 'Microsoft Store से डाउनलोड करें',
         androidBtn: 'Android संस्करण चाहिए',
@@ -1585,8 +1585,8 @@ const translations = {
             downloadFree: 'Comece o teste grátis',
             ratingLabel: '4,7/5 · 351 avaliações',
             watchDemo: 'Ver demo',
-            title: 'Assista filmes, aprenda idiomas — entenda a fala ao vivo facilmente',
-            lead: 'Live Subtitles - seu assistente com duplas legendas, reconhecimento de fala e tradução em tempo real'
+            title: 'Tradutor ao vivo para reuniões, chamadas e conversas no seu PC',
+            lead: 'Traduz a fala em tempo real para mais de 50 idiomas. Funciona com Zoom, Teams, Skype, Google Meet e qualquer app — sem microfone.'
         },
         downloadBtn: 'Baixar da Microsoft Store',
         androidBtn: 'Quero versão Android',
@@ -1727,8 +1727,8 @@ const translations = {
             downloadFree: 'Wypróbuj za darmo',
             ratingLabel: '4,7/5 · 351 ocen',
             watchDemo: 'Zobacz demo',
-            title: 'Oglądaj filmy, ucz się języków — łatwo rozumiej żywą mowę',
-            lead: 'Live Subtitles - twój asystent z podwójnymi napisami, rozpoznawaniem mowy i tłumaczeniem w czasie rzeczywistym'
+            title: 'Tłumacz na żywo do spotkań, rozmów i połączeń na Twoim komputerze',
+            lead: 'Tłumaczy mowę w czasie rzeczywistym na ponad 50 języków. Działa z Zoom, Teams, Skype, Google Meet i każdą aplikacją — bez mikrofonu.'
         },
         downloadBtn: 'Pobierz z Microsoft Store',
         androidBtn: 'Chcę wersję na Android',
@@ -1869,8 +1869,8 @@ const translations = {
             downloadFree: 'Gratis proberen',
             ratingLabel: '4,7/5 · 351 beoordelingen',
             watchDemo: 'Bekijk demo',
-            title: 'Kijk films, leer talen — begrijp live spraak gemakkelijk',
-            lead: 'Live Subtitles - je assistent met dubbele ondertitels, spraakherkenning en realtime vertaling'
+            title: 'Live vertaler voor vergaderingen, gesprekken en oproepen op je pc',
+            lead: 'Vertaalt spraak in realtime naar 50+ talen. Werkt met Zoom, Teams, Skype, Google Meet en elke app — zonder microfoon.'
         },
         downloadBtn: 'Download van Microsoft Store',
         androidBtn: 'Wil Android versie',
@@ -2011,8 +2011,8 @@ const translations = {
             downloadFree: 'Ücretsiz Deneyin',
             ratingLabel: '4,7/5 · 351 değerlendirme',
             watchDemo: 'Demoyu izle',
-            title: 'Film izle, dil öğren — canlı konuşmayı kolayca anla',
-            lead: 'Live Subtitles - çift altyazı, konuşma tanıma ve gerçek zamanlı çeviri asistanınız'
+            title: 'Toplantılar, aramalar ve konuşmalar için bilgisayarınızda canlı çevirmen',
+            lead: 'Konuşmayı gerçek zamanlı olarak 50\'den fazla dile çevirir. Zoom, Teams, Skype, Google Meet ve her uygulamayla çalışır — mikrofon gerekmez.'
         },
         downloadBtn: 'Microsoft Store\'dan İndir',
         androidBtn: 'Android sürümü istiyorum',
@@ -2153,8 +2153,8 @@ const translations = {
             downloadFree: 'Почати безкоштовно',
             ratingLabel: '4,7/5 · 351 оцінок',
             watchDemo: 'Дивитись демо',
-            title: 'Дивіться фільми, вивчайте мови — легко розумійте живе мовлення',
-            lead: 'Live Subtitles - ваш помічник з подвійними субтитрами, розпізнаванням мовлення та перекладом у реальному часі'
+            title: 'Живий перекладач для зустрічей, дзвінків і розмов на ПК',
+            lead: 'Перекладає мовлення в реальному часі на 50+ мов. Працює із Zoom, Teams, Skype, Google Meet і будь-яким додатком — без мікрофона.'
         },
         downloadBtn: 'Завантажити з Microsoft Store',
         androidBtn: 'Хочу версію для Android',
