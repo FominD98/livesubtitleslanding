@@ -13,13 +13,30 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>Sous-titres Discord Voice Chat pour squads internationales | Live Subtitles</title>
-    <meta name="description" content="Configuration pratique des sous-titres Discord voice chat pour squads internationales : mode lock, modèles de callouts et coordination d'équipe plus rapide.">
+    <meta name="description" content="Sous-titres Discord pour squads internationales : configurez un overlay stable, des callouts clairs et gagnez en vitesse de réaction. Guide pratique.">
     <meta name="keywords" content="discord voice chat subtitles, subtitles for squads, multilingual gaming communication, game mode subtitles, discord callout workflow">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/fr/article-21.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-21.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-21.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-21.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-21.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-21.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-21.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-21.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-21.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-21.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-21.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-21.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-21.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-21.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-21.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-21.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-21.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-21.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="Sous-titres Discord Voice Chat pour squads internationales">
-    <meta property="og:description" content="Comment configurer les sous-titres dans Discord voice chat pour une communication d'équipe multilingue et rapide.">
+    <meta property="og:description" content="Sous-titres Discord pour squads internationales : configurez un overlay stable, des callouts clairs et gagnez en vitesse de réaction. Guide pratique.">
     <meta property="og:url" content="https://live-subtitles.com/articles/fr/article-21.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/fr/games.webp">
     <meta property="og:image:width" content="1280">
@@ -28,7 +45,7 @@
     <meta property="og:locale" content="fr_FR">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Sous-titres Discord Voice Chat pour squads internationales">
-    <meta name="twitter:description" content="Workflow de sous-titres Discord stable pour squads multilingues avec callouts rapides.">
+    <meta name="twitter:description" content="Sous-titres Discord pour squads internationales : configurez un overlay stable, des callouts clairs et gagnez en vitesse de réaction. Guide pratique.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/fr/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -51,11 +68,22 @@
       "dateModified": "2026-05-12",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "Configuration pratique des sous-titres Discord voice chat pour squads internationales : mode lock, modèles de callouts et coordination d'équipe plus rapide.",
+      "description": "Sous-titres Discord pour squads internationales : configurez un overlay stable, des callouts clairs et gagnez en vitesse de réaction. Guide pratique.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/fr/article-21.html"
     }
     </script>
     <link rel="preload" as="image" href="/articles/img/fr/games.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://live-subtitles.com/fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Articles", "item": "https://live-subtitles.com/articles/fr/" },
+        { "@type": "ListItem", "position": 3, "name": "Sous-titres Discord Voice Chat pour squads internationales", "item": "https://live-subtitles.com/articles/fr/article-21.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
@@ -67,47 +95,91 @@
         <img class="article-hero" src="/articles/img/fr/games.webp" alt="Sous-titres en direct pendant un match compétitif" width="1280" height="762" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p>Les squads internationales perdent souvent des rounds parce que les callouts ne sont pas compris assez vite. Le problème n'est pas seulement la qualité audio, mais la vitesse et la constance de compréhension. Une couche de sous-titres sur Discord peut réduire les répétitions et le temps de réaction quand chaque seconde compte.</p>
+            <p>Les squads internationales perdent souvent des rounds non pas à cause d'erreurs mécaniques, mais parce que les callouts ne sont pas décodés assez vite. Le problème n'est pas uniquement la qualité de l'audio : c'est la vitesse et la constance de la compréhension. Lorsque deux ou trois langues maternelles cohabitent dans la même équipe, chaque phrase entendue dans une seconde langue ajoute un délai de traitement. Une couche de sous-titres dans Discord réduit les répétitions et raccourcit le temps de réaction quand chaque seconde décide d'un round.</p>
 
             <h2>Configuration de base pour les sessions Discord</h2>
+            <p>Avant de penser aux callouts, il faut un overlay stable et prévisible. Une configuration validée une fois et figée évite les mauvaises surprises en plein match classé.</p>
             <ol>
-                <li>Activez Lock/Game Mode avant de rejoindre le canal vocal.</li>
-                <li>Gardez un hotkey unique pour l'urgence : <strong>Ctrl+Shift+L</strong>.</li>
-                <li>Utilisez le borderless fullscreen en jeu pour la stabilité de l'overlay.</li>
-                <li>Placez les sous-titres en zone basse centrale avec fort contraste.</li>
+                <li>Activez le mode Lock / Game Mode <strong>avant</strong> de rejoindre le canal vocal, pas après.</li>
+                <li>Réservez un raccourci unique pour la coupure d'urgence : <strong>Ctrl+Shift+L</strong>. Un seul hotkey, jamais deux.</li>
+                <li>Lancez le jeu en plein écran sans bordures (<em>borderless fullscreen</em>) pour stabiliser l'overlay.</li>
+                <li>Placez les sous-titres dans la zone basse et centrale, avec un fort contraste pour rester lisibles sur fond clair comme sombre.</li>
             </ol>
-
-            <h2>Structure de callouts qui fonctionne avec les sous-titres</h2>
-            <ul>
-                <li>Utilisez un format court : <strong>action + position + timing</strong>.</li>
-                <li>Conservez un terme par zone de map et évitez les synonymes en plein match.</li>
-                <li>Évitez les longues explications qui se chevauchent pendant les fights.</li>
-                <li>Confirmez les calls critiques avec un accusé en un mot.</li>
-            </ul>
-
-            <h2>Checklist d'onboarding des squads</h2>
             <div class="note">
-                <ul>
-                    <li>Créez un glossaire partagé de 20 à 30 termes de map.</li>
-                    <li>Épinglez le glossaire dans la description du canal Discord.</li>
-                    <li>Faites un scrim court pour calibrer le placement des sous-titres.</li>
-                    <li>Suivez les confusions récurrentes de callouts et retirez les termes faibles.</li>
-                </ul>
+                <p><strong>Conseil :</strong> testez le placement sur la map la plus chargée visuellement de votre rotation, pas sur un menu. Si le texte reste lisible dans un fight, il le restera partout.</p>
             </div>
 
-            <h2>KPI à suivre chaque semaine</h2>
+            <h2>Une structure de callouts qui fonctionne avec les sous-titres</h2>
+            <p>Le sous-titre amplifie ce que dit l'IGL ; il n'invente rien. Si l'appel vocal est confus, le texte le sera aussi. La discipline d'appel compte donc autant que l'outil.</p>
             <ul>
-                <li>Fréquence à laquelle les coéquipiers demandent de répéter les callouts.</li>
-                <li>Délai moyen entre callout et action de l'équipe.</li>
-                <li>Mauvaises rotations causées par des communications vocales mal comprises.</li>
+                <li>Adoptez un format court et constant : <strong>action + position + timing</strong> (« push A connector dans 3 »).</li>
+                <li>Conservez un seul terme par zone de map et bannissez les synonymes en plein match.</li>
+                <li>Évitez les longues explications qui se chevauchent pendant un fight ; gardez-les pour le temps mort.</li>
+                <li>Confirmez chaque call critique par un accusé en un mot (« copy », « ok », « non »).</li>
             </ul>
 
-            <h2>Ressources associées</h2>
+            <h2>Le coût caché de la variance d'accent en classé international</h2>
+            <p>Une squad de six joueurs répartie sur trois fuseaux horaires et deux langues maternelles perd typiquement deux à trois rounds par soirée classée, non pas pour des fautes mécaniques mais à cause de la <strong>latence de décodage des callouts</strong>. L'IGL parle à son rythme naturel ; un coéquipier qui écoute dans sa seconde langue a besoin de 200 à 400 ms de traitement supplémentaire par phrase. Sur un match de 30 rounds, cela représente 6 à 12 secondes de délai de réaction accumulé — et les matchs classés se jouent sur des marges plus serrées que cela.</p>
+
+            <h2>Les quatre modes d'échec de communication que les sous-titres corrigent</h2>
+            <ul>
+                <li><strong>Délai de décodage d'accent.</strong> Lire un callout en l'entendant réduit de 30 à 50 % le temps de décodage pour un auditeur non natif. Le visuel renforce l'audio au lieu de lui faire concurrence.</li>
+                <li><strong>Ambiguïté des acronymes.</strong> « B2 » peut signifier « site B, deux ennemis touchés » sur CS2 ou « rotation vers B dans 2 secondes » sur Valorant. Un callout écrit lève l'ambiguïté auditive, car les acronymes se distinguent visuellement des mots naturels.</li>
+                <li><strong>Interférence du bruit de fond.</strong> Claviers mécaniques, grognements en plein duel, repisse de micro : les sous-titres restituent la phrase voulue même lorsque l'audio est partiellement masqué.</li>
+                <li><strong>Dégradation par fatigue vocale.</strong> À la quatrième heure d'une soirée de stack, les voix s'éraillent. Le texte, lui, reste net.</li>
+            </ul>
+
+            <h2>Le modèle de glossaire partagé au niveau de la squad</h2>
+            <p>Le glossaire est l'artefact à plus fort effet de levier pour une équipe multilingue. Épinglez un seul message Discord contenant un tableau de 20 à 30 lignes et interdisez toute modification en cours de semaine. Exemple de structure :</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">Map / contexte</th>
+                        <th style="text-align:left; padding:8px;">Terme</th>
+                        <th style="text-align:left; padding:8px;">Sens (1 ligne)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Mirage</td><td>« Connector »</td><td>Couloir entre le mid et le site A</td></tr>
+                    <tr><td>Inferno</td><td>« Pit »</td><td>Position basse sur le site A</td></tr>
+                    <tr><td>Overpass</td><td>« Monster »</td><td>Zone surélevée du bas B</td></tr>
+                    <tr><td>Toute map</td><td>« Default »</td><td>Setup d'ouverture standard, sans contact</td></tr>
+                    <tr><td>Toute map</td><td>« Eco »</td><td>Round sans achat, on préserve l'économie</td></tr>
+                </tbody>
+            </table>
+            <p>La discipline importe plus que le contenu. Deux synonymes pour « Connector » — « Mid-hall » et « Connector » — coûtent plus de matchs que l'absence totale de glossaire.</p>
+
+            <h2>Intégrer un nouveau membre en 15 minutes</h2>
+            <ol>
+                <li>Partagez le glossaire épinglé et exigez qu'il soit lu une fois avant le scrim.</li>
+                <li>Lancez un match de scrim. Marquez en temps réel chaque callout que le nouveau membre n'a pas compris (une réaction emoji Discord suffit).</li>
+                <li>Après le scrim, passez en revue les callouts marqués et tranchez : le terme était-il ambigu, ou le nouveau venu n'était-il pas familier ?</li>
+                <li>Modifiez le glossaire ou planifiez un second scrim. Ne montez pas en classé tant que le nouveau membre n'a pas confirmé avoir décodé tous les callouts du second scrim <strong>sans</strong> l'aide des sous-titres.</li>
+            </ol>
+
+            <h2>Pourquoi la précision compte plus en vocal qu'en réunion</h2>
+            <p>Une réunion professionnelle est redondante : il y a les diapositives, l'e-mail de suivi, la transcription enregistrée. Un match classé n'a rien de tout cela. Un callout manqué ne se rembobine pas. Cela relève la barre de la latence acceptable : on passe du « suffisant » des outils de productivité (1,5 à 2 s) à l'« imperceptible » exigé en jeu (moins de 600 ms). Les outils qui regroupent plusieurs secondes d'audio avant de produire du texte sont inutilisables en communication classée, quelle que soit leur précision finale. Si vous comparez aussi des usages hors jeu, voyez nos repères de latence dans le <a href="article-2.html" style="color:#00b8ff;">guide sur les sous-titres en visioconférence</a>.</p>
+
+            <h2>Squad multilingue : le rôle de l'IGL</h2>
+            <p>Dans une squad où 4 joueurs sont natifs EN et 2 natifs ES, l'IGL doit s'engager sur une seule langue d'appel et s'y tenir tout le match. Basculer en plein round (« rotate B, vamos a B ») double la charge cognitive de chaque auditeur. Si l'IGL est bilingue, choisissez avant le match la langue de la majorité et traitez ce choix comme contraignant. Les sous-titres aident, mais ils ne réparent pas un appel incohérent au départ.</p>
+
+            <h2>Mesure : ce qu'il faut consigner après chaque soirée classée</h2>
+            <ul>
+                <li><strong>Taux de répétition :</strong> nombre de « tu répètes ? » ou « quoi ? » par match. Cible &lt; 2.</li>
+                <li><strong>Taux de mauvaise rotation :</strong> rotations exécutées dans le mauvais sens. Cible 0 par soirée.</li>
+                <li><strong>Turnover du glossaire :</strong> nouveaux termes introduits en cours de saison. Plus c'est bas, mieux c'est.</li>
+                <li><strong>Dérive vers la langue maternelle :</strong> moments où un joueur non natif retombe dans sa L1 au milieu d'un call. À suivre, mais sans pénaliser : la fatigue est réelle.</li>
+            </ul>
+
+            <h2>À quoi ressemblent les données après 3 semaines de discipline</h2>
+            <p>Voici un schéma typique observé chez les squads : le taux de répétition est divisé par deux dès la première semaine (le glossaire fait son travail), les mauvaises rotations chutent de moitié la deuxième semaine (le vocabulaire colle désormais aux cartes mentales), et le taux de victoire classé progresse de 5 à 10 points de pourcentage la troisième semaine (la nouvelle base de communication se cumule round après round). La couche de sous-titres accélère cette courbe ; elle ne remplace pas la discipline. L'application <strong>Live Subtitles</strong> ajoute justement cette couche au-dessus de Discord et de votre jeu, avec un overlay verrouillé et une latence basse.</p>
+
+            <h2>Pour aller plus loin</h2>
             <ul>
                 <li><a href="/fr/discord-twitch-subtitles.html" style="color:#00b8ff;">Page des sous-titres Discord et Twitch</a></li>
                 <li><a href="/fr/game-mode-subtitles.html" style="color:#00b8ff;">Page des sous-titres Game Mode</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Guide de configuration Game Mode</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">Diagnostic de l'overlay fullscreen</a></li>
+                <li><a href="article-19.html" style="color:#00b8ff;">Guide de configuration du Game Mode</a></li>
+                <li><a href="article-20.html" style="color:#00b8ff;">Diagnostic de l'overlay plein écran</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">

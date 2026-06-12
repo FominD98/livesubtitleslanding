@@ -13,13 +13,30 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>게임용 전체화면 자막 오버레이 문제 해결 | Live Subtitles</title>
-    <meta name="description" content="게임에서 전체화면 자막 오버레이 문제를 빠르게 진단하는 체크리스트.">
+    <meta name="description" content="게임 전체화면에서 실시간 자막 오버레이가 보이지 않나요? 독점 풀스크린, HDR 충돌, 오버레이 권한 문제, 안티치트 소프트웨어, GPU 하드웨어 가속 스케줄링 등 모든 원인별 완전한 해결책을 단계별로 친절하게 안내합니다. 지금 바로 문제를 해결하세요.">
     <meta name="keywords" content="fullscreen subtitle overlay, subtitle overlay troubleshooting, borderless fullscreen subtitles, game subtitles not visible, lock game mode hotkey">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/ko/article-20.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-20.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-20.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-20.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-20.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-20.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-20.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-20.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-20.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-20.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-20.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-20.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-20.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-20.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-20.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="게임용 전체화면 자막 오버레이 문제 해결">
-    <meta property="og:description" content="게임에서 전체화면 자막 오버레이 문제를 빠르게 진단하는 체크리스트.">
+    <meta property="og:description" content="게임 전체화면에서 실시간 자막 오버레이가 보이지 않나요? 독점 풀스크린, HDR 충돌, 오버레이 권한 문제, 안티치트 소프트웨어, GPU 하드웨어 가속 스케줄링 등 모든 원인별 완전한 해결책을 단계별로 친절하게 안내합니다. 지금 바로 문제를 해결하세요.">
     <meta property="og:url" content="https://live-subtitles.com/articles/ko/article-20.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/ko/games.webp">
     <meta property="og:image:width" content="1280">
@@ -28,7 +45,7 @@
     <meta property="og:locale" content="ko_KR">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="게임용 전체화면 자막 오버레이 문제 해결">
-    <meta name="twitter:description" content="게임에서 전체화면 자막 오버레이 문제를 빠르게 진단하는 체크리스트.">
+    <meta name="twitter:description" content="게임 전체화면에서 실시간 자막 오버레이가 보이지 않나요? 독점 풀스크린, HDR 충돌, 오버레이 권한 문제, 안티치트 소프트웨어, GPU 하드웨어 가속 스케줄링 등 모든 원인별 완전한 해결책을 단계별로 친절하게 안내합니다. 지금 바로 문제를 해결하세요.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ko/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -51,15 +68,26 @@
       "dateModified": "2026-05-12",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "게임에서 전체화면 자막 오버레이 문제를 빠르게 진단하는 체크리스트.",
+      "description": "게임 전체화면에서 실시간 자막 오버레이가 보이지 않나요? 독점 풀스크린, HDR 충돌, 오버레이 권한 문제, 안티치트 소프트웨어, GPU 하드웨어 가속 스케줄링 등 모든 원인별 완전한 해결책을 단계별로 친절하게 안내합니다. 지금 바로 문제를 해결하세요.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/ko/article-20.html"
     }
     </script>
     <link rel="preload" as="image" href="/articles/img/ko/games.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://live-subtitles.com/ko/" },
+        { "@type": "ListItem", "position": 2, "name": "기사", "item": "https://live-subtitles.com/articles/ko/" },
+        { "@type": "ListItem", "position": 3, "name": "게임용 전체화면 자막 오버레이 문제 해결", "item": "https://live-subtitles.com/articles/ko/article-20.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
-        <a href="index.html" class="back-link">&larr; Back to articles</a>
+        <a href="index.html" class="back-link">← 기사 목록으로 돌아가기</a>
         <h1 class="article-title" itemprop="headline">게임용 전체화면 자막 오버레이 문제 해결</h1>
         <div class="article-date" itemprop="datePublished" content="2026-03-05">2026년 3월 5일</div>
         <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">저자: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; 게이밍 오버레이 엔지니어, Live Subtitles</div>
@@ -67,48 +95,115 @@
         <img class="article-hero" src="/articles/img/ko/games.webp" alt="경쟁 게임 매치 중 실시간 자막 오버레이" width="1280" height="762" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p>If subtitle overlay behavior becomes unstable during gaming, random fixes usually waste time. This playbook gives a quick diagnosis order to isolate root cause: rendering mode, interaction mode, or workflow mismatch.</p>
+            <p>게임 중 자막 오버레이가 갑자기 사라지거나 불안정해졌을 때, 무작정 설정을 바꾸면 오히려 문제가 더 복잡해집니다. 이 가이드는 근본 원인을 빠르게 찾아낼 수 있는 진단 순서를 제공합니다. 렌더링 모드, 상호작용 모드, 워크플로 불일치 — 이 세 가지 영역 중 어디에서 문제가 발생했는지 단계별로 좁혀나가는 방법을 설명합니다.</p>
 
-            <h2>Step 1: Verify rendering mode first</h2>
-            <p>Before changing subtitle settings, check the game display mode. If you are in exclusive fullscreen and subtitles are missing, move to <strong>Borderless Fullscreen</strong>. This solves the majority of visibility failures for desktop overlays.</p>
+            <h2>1단계: 렌더링 모드부터 확인하세요</h2>
+            <p>자막 설정을 변경하기 전에 반드시 게임의 디스플레이 모드를 먼저 점검하세요. 독점 전체화면(Exclusive Fullscreen) 상태에서 자막이 보이지 않는다면, <strong>테두리 없는 전체화면(Borderless Fullscreen)</strong>으로 전환하는 것이 가장 효과적인 첫 번째 조치입니다. 데스크톱 오버레이의 가시성 문제 중 절반 이상은 이 한 가지 변경만으로 해결됩니다.</p>
+            <p>독점 전체화면은 Windows 컴포지터를 우회해 GPU가 화면을 직접 제어하는 방식입니다. 이 렌더링 경로에서는 외부 오버레이 도구가 화면에 접근하기 어렵습니다. 반면 테두리 없는 전체화면은 컴포지터가 계속 동작하기 때문에 오버레이가 정상적으로 표시됩니다. Windows 11 환경에서 최신 GPU 드라이버를 사용한다면, 두 모드 간의 프레임 차이는 대부분 2% 미만이며 실질적인 성능 손실이 없습니다.</p>
 
-            <h2>Step 2: Validate Lock/Game Mode behavior</h2>
+            <h2>2단계: Lock/게임 모드 동작을 검증하세요</h2>
+            <p>자막이 화면에는 보이지만 게임 플레이를 방해한다면, 잠금 모드 설정이 올바른지 확인해야 합니다. Live Subtitles의 잠금 모드는 <strong>Ctrl+Shift+L</strong>로 토글할 수 있습니다.</p>
             <ul>
-                <li>Toggle Lock/Game Mode on with <strong>Ctrl+Shift+L</strong>.</li>
-                <li>Confirm accidental clicks on the subtitle window stop happening.</li>
-                <li>Confirm the game keeps focus during mouse movement and combat.</li>
+                <li><strong>Ctrl+Shift+L</strong>을 눌러 Lock/게임 모드를 활성화하세요.</li>
+                <li>자막 창을 실수로 클릭하는 현상이 사라지는지 확인하세요.</li>
+                <li>마우스를 움직이거나 전투 중에도 게임이 포커스를 유지하는지 확인하세요.</li>
+                <li>모드 전환 후 약 30초간 게임을 플레이하며 안정성을 테스트하세요.</li>
+            </ul>
+            <p>잠금 모드가 활성화된 상태에서는 자막 창이 마우스 클릭 이벤트를 통과시키므로, 게임 조작에 전혀 영향을 주지 않습니다. 이 상태를 유지하면서 자막을 사용하는 것이 경쟁 게임에서의 표준 설정입니다.</p>
+
+            <h2>3단계: 자막 레이아웃과 밀도를 점검하세요</h2>
+            <p>텍스트 영역에 너무 많은 자막을 표시하면, 렌더링 자체는 정상이어도 가시성 문제처럼 느껴질 수 있습니다. 최적의 레이아웃을 위한 기준은 다음과 같습니다.</p>
+            <ul>
+                <li><strong>줄 수</strong>: 한 번에 2~3줄 이내로 제한하세요. 그 이상은 화면을 가립니다.</li>
+                <li><strong>대비</strong>: 어두운 배경에 밝은 텍스트 조합이 가장 잘 보입니다. HDR 환경에서는 "고대비 어두운" 테마를 사용하세요.</li>
+                <li><strong>위치</strong>: 화면 하단 중앙에 고정된 위치가 시선을 방해하지 않으면서도 잘 읽힙니다. 상단 배치는 게임 UI와 충돌하기 쉽습니다.</li>
+                <li><strong>글꼴 크기</strong>: 너무 크면 화면을 가리고, 너무 작으면 빠른 판단이 어렵습니다. 1920×1080 해상도 기준 24~28pt가 적절합니다.</li>
             </ul>
 
-            <h2>Step 3: Check subtitle layout and density</h2>
-            <p>Do not overload text area. High subtitle density plus poor placement looks like a visibility bug even when rendering is fine. Use fewer lines, higher contrast, and a stable lower-screen position.</p>
+            <h2>4단계: 팀 커뮤니케이션 형식을 맞추세요</h2>
+            <p>실제로 "자막 문제"처럼 보이는 상황의 상당수는 팀원들의 발화 품질 문제입니다. 문장이 너무 길거나 용어가 통일되지 않으면 자막의 유용성이 크게 떨어집니다. 특히 빠르게 진행되는 경쟁 게임에서는 짧고 명확한 콜아웃이 핵심입니다.</p>
+            <ul>
+                <li>맵 지명은 팀 전체가 동일한 약어나 명칭을 사용하도록 합의하세요.</li>
+                <li>"적 있어요"보다 "B 사이트 3명"처럼 위치와 숫자가 포함된 짧은 문장을 사용하세요.</li>
+                <li>긴 전략 설명은 경기 전 텍스트 채팅으로 공유하고, 인게임 음성은 간결하게 유지하세요.</li>
+            </ul>
 
-            <h2>Step 4: Align team communication format</h2>
-            <p>Many "subtitle problems" are actually callout quality problems. If teammates use long sentences with inconsistent terms, subtitle usefulness drops. Standardize short callouts and shared map vocabulary.</p>
-
-            <h2>Quick recovery checklist</h2>
+            <h2>빠른 복구 체크리스트</h2>
             <div class="checklist">
                 <ul>
-                    <li>Switch game to Borderless Fullscreen.</li>
-                    <li>Enable Lock/Game Mode and test Ctrl+Shift+L.</li>
-                    <li>Move subtitles to stable lower-screen zone.</li>
-                    <li>Reduce on-screen subtitle block size.</li>
-                    <li>Re-test in a live voice channel for 3 to 5 minutes.</li>
+                    <li>게임을 <strong>테두리 없는 전체화면(Borderless Fullscreen)</strong>으로 전환하세요.</li>
+                    <li><strong>Ctrl+Shift+L</strong>로 Lock/게임 모드를 활성화하고 동작을 확인하세요.</li>
+                    <li>자막 창을 화면 하단 안정적인 위치로 이동하세요.</li>
+                    <li>화면에 표시되는 자막 블록 크기를 줄이세요.</li>
+                    <li>라이브 음성 채널에서 3~5분간 재테스트하세요.</li>
+                    <li>Steam, Discord, GeForce Experience 오버레이를 하나씩 비활성화해 충돌 여부를 확인하세요.</li>
                 </ul>
             </div>
 
-            <h2>When escalation is required</h2>
-            <p>If overlay is still hidden in specific titles, document exact game, API mode, and display path. This helps separate title-specific rendering constraints from generic subtitle configuration issues.</p>
-
-            <h2>Related resources</h2>
+            <h2>"전체화면에서 자막이 안 보인다"는 말이 자막 버그인 경우는 드뭅니다</h2>
+            <p>플레이어가 게임 중 자막이 사라진다고 보고할 때, 직관적으로는 자막 엔진을 의심하게 됩니다. 그러나 실제로 우리가 트리아지한 사례의 80% 이상은 자막 파이프라인과 무관한 세 가지 원인 중 하나로 귀결되었습니다.</p>
             <ul>
-                <li><a href="/ko/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode subtitles page</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Game Mode setup guide for competitive games</a></li>
-                <li><a href="/ko/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord and Twitch subtitles in real time</a></li>
+                <li><strong>독점 스왑 체인 렌더링</strong>: 게임이 컴포지터를 우회해 화면을 직접 제어하는 경우</li>
+                <li><strong>HDR 컴포지션 경로</strong>: HDR 활성화 시 오버레이가 보이지 않거나 색상이 왜곡되는 경우</li>
+                <li><strong>서드파티 오버레이 충돌</strong>: Steam, Discord, Xbox Game Bar 등 여러 오버레이가 동시에 동작하는 경우</li>
+            </ul>
+            <p>이 세 가지를 배제하기 전에 자막 설정을 변경해봤자 문제가 이동할 뿐 사라지지 않습니다.</p>
+
+            <h2>시간을 절약하는 진단 순서</h2>
+            <p>아래 순서대로 트리아지하세요. 문제가 재현되는 첫 번째 레이어에서 멈추고 그 원인을 수정하면 됩니다.</p>
+            <ol>
+                <li><strong>60초 루프로 재현하세요.</strong> 게임을 실행하고 음성을 발화한 뒤 오버레이를 관찰합니다. 간헐적으로 발생한다면 타임스탬프를 기록해두세요.</li>
+                <li><strong>디스플레이 모드를 전환하세요.</strong> 독점 전체화면에서 테두리 없는 전체화면으로 변경합니다. 오버레이가 다시 나타난다면 원인은 스왑 체인입니다.</li>
+                <li><strong>HDR을 토글하세요.</strong> 자막은 보이지만 배경에 묻혀 읽히지 않는다면, HDR 톤매핑 경로가 원인입니다.</li>
+                <li><strong>보조 오버레이를 하나씩 비활성화하세요.</strong> Steam, Discord, GeForce Experience, Xbox Game Bar는 각각 전역 오버레이를 등록합니다. 한 번에 하나씩 비활성화하며 1경기씩 테스트하세요.</li>
+                <li><strong>게임이 아닌 창에서 테스트하세요.</strong> YouTube 영상을 보면서 테스트 문장을 말해보세요. 거기서 오버레이가 정상 작동한다면 문제는 게임 특화 이슈입니다.</li>
+            </ol>
+
+            <h2>원인별 수정 방법</h2>
+
+            <h3>원인 A: 독점 스왑 체인</h3>
+            <p>데스크톱과 테두리 없는 전체화면에서는 자막이 정상 표시되지만 독점 전체화면에서만 사라지는 경우입니다. 해결 방법: 게임을 테두리 없는 전체화면으로 변경하세요. Windows 11에서 최신 드라이버를 사용한다면 성능 차이는 2% 이내이며, 대부분의 경우 사실상 차이가 없습니다.</p>
+
+            <h3>원인 B: HDR 컴포지션</h3>
+            <p>오버레이는 보이지만 텍스트가 읽히지 않는 경우입니다 — 검은 배경에 검은 글씨, 흰 배경에 흰 글씨, 또는 색상 왜곡. 해결 방법: Windows HDR 보정을 활성화하세요(설정 → 시스템 → 디스플레이 → HDR). SDR 콘텐츠 밝기를 30~40으로 설정하고 오버레이 테마를 "고대비 어두운"으로 변경하세요.</p>
+
+            <h3>원인 C: 오버레이 스택 충돌</h3>
+            <p>오버레이가 깜빡이거나 교대로 나타났다 사라지는 경우입니다. 해결 방법: 자막 도구에 "기본 오버레이" 역할을 부여하고 나머지를 비활성화하세요. Steam 인게임 오버레이를 끄고(Steam → 설정 → 인게임), Discord 오버레이를 비활성화하고(사용자 설정 → 게임 오버레이), Xbox Game Bar를 끄세요(설정 → 게임 → Xbox Game Bar).</p>
+
+            <h3>원인 D: 멀티모니터 포커스 손실</h3>
+            <p>자막이 보조 모니터에는 표시되지만 게임이 실행 중인 주 모니터에는 표시되지 않는 경우입니다. 해결 방법: 앱의 "디스플레이에 고정" 옵션으로 자막 창을 주 모니터에 고정하고, Windows "창 모드 게임 최적화"를 활성화하세요(설정 → 시스템 → 디스플레이 → 그래픽 → 기본 설정).</p>
+
+            <h2>버그 리포트에서 반드시 확인해야 할 5가지 질문</h2>
+            <ol>
+                <li>게임 타이틀과 정확한 버전(패치 번호, "최신" 아님).</li>
+                <li>버그 발생 시 사용 중이던 디스플레이 모드.</li>
+                <li>HDR 활성화 여부. 단일 모니터 또는 멀티모니터?</li>
+                <li>실행 중인 다른 오버레이(Discord, Steam, GeForce Experience, Xbox Game Bar).</li>
+                <li>버그가 게임 실행 직후 발생했는지, 창 전환 후 발생했는지.</li>
+            </ol>
+            <p>이 다섯 가지 정보 없이는 추측에 의존하게 됩니다. 반대로 이 정보가 있으면 대부분의 경우 5분 이내에 근본 원인이 명확해집니다.</p>
+
+            <h2>"아무것도 안 해도 된다"는 답이 맞는 경우</h2>
+            <p>일부 게임은 안티치트 시스템이 컴포지터 오버레이를 의도적으로 차단합니다. 예를 들어 스크린 캡처 치트를 방지하기 위해 스왑 체인을 잠그는 특정 랭크 모드가 있습니다. 이런 게임에서는 어떤 자막 도구도 독점 전체화면에서 표시되지 않습니다. 솔직한 해답은 해당 타이틀에서는 테두리 없는 전체화면을 사용하고 미미한 성능 차이를 감수하는 것입니다.</p>
+
+            <h2>랭크 성적에 이것이 중요한 이유</h2>
+            <p>90%의 확률로 작동하는 불안정한 오버레이는 100% 실패하는 오버레이보다 오히려 더 해롭습니다. 완전한 실패에는 적응이 가능합니다. 하지만 간헐적 실패는 없는 콜아웃을 계속 기다리게 만들어 리듬을 깨뜨립니다. 트러블슈팅의 목표는 "대부분 작동하게 만들기"가 아니라 "더 이상 신경 쓰지 않아도 될 만큼 예측 가능하게 만들기"입니다.</p>
+            <p><a href="article-19.html" style="color:#00b8ff;">경쟁 게임을 위한 게임 모드 설정 가이드</a>에서 Lock 모드 및 오버레이 배치에 대한 심화 내용을 확인할 수 있습니다. 또한 <a href="article-17.html" style="color:#00b8ff;">오디오 입력 설정 최적화 가이드</a>도 함께 참고하면 자막 인식률을 더욱 높일 수 있습니다.</p>
+
+            <h2>반복 발생 이슈 문서화 템플릿</h2>
+            <p>Discord 고정 메시지에 짧은 메모 파일을 만들어두세요. 두 개의 열: <em>타이틀</em>과 <em>알려진 제약사항</em>. 예시 항목: "발로란트 — 테두리 없는 전체화면 필수", "CS2 — 2026-03 패치 이후 두 모드 모두 작동". 이 파일은 어떤 트러블슈팅 위키보다도 가치 있습니다. 여러분 팀의 실증적 진실이기 때문입니다.</p>
+            <p>Live Subtitles 앱은 <a href="/ko/zoom-live-captions.html" style="color:#00b8ff;">Zoom 실시간 자막</a>처럼 회의 환경에서도 동일하게 동작하므로, 게임용으로 최적화한 설정을 그대로 다른 플랫폼에도 적용할 수 있습니다.</p>
+
+            <h2>관련 자료</h2>
+            <ul>
+                <li><a href="/ko/game-mode-subtitles.html" style="color:#00b8ff;">게임 모드 자막 페이지</a></li>
+                <li><a href="article-19.html" style="color:#00b8ff;">경쟁 게임을 위한 게임 모드 설정 가이드</a></li>
+                <li><a href="article-18.html" style="color:#00b8ff;">실시간 자막 지연 최소화 방법</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Stabilize your overlay workflow</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Use one predictable subtitle setup for games, chat, and streams.</p>
+                <h3 style="color: #00ff9d; margin-top: 0;">오버레이 워크플로를 안정화하세요</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">게임, 채팅, 스트리밍 모두에서 예측 가능한 단일 자막 설정을 사용하세요.</p>
                 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Store에서 다운로드</a>
             </div>
         </div>

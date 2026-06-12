@@ -13,13 +13,30 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>Fehlerbehebung für Fullscreen-Untertitel-Overlay in Spielen | Live Subtitles</title>
-    <meta name="description" content="Checkliste zur Fehlerbehebung bei Untertitel-Overlays in Spielen: Fullscreen-Sichtbarkeit, Borderless-Setup, Fokusprobleme, Hotkey-Verhalten und praktische Recovery-Schritte.">
+    <meta name="description" content="Untertitel-Overlay im Spiel unsichtbar? Diagnose in 5 Schritten: Vollbild, HDR, Overlay-Kollisionen und Fokus. Stabiles Setup in Minuten - jetzt anwenden.">
     <meta name="keywords" content="fullscreen subtitle overlay, subtitle overlay troubleshooting, borderless fullscreen subtitles, game subtitles not visible, lock game mode hotkey">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/de/article-20.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-20.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-20.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-20.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-20.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-20.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-20.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-20.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-20.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-20.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-20.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-20.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-20.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-20.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-20.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="Fehlerbehebung für Fullscreen-Untertitel-Overlay in Spielen">
-    <meta property="og:description" content="Operative Checkliste zur Wiederherstellung der Untertitel-Overlay-Stabilität in Gaming-Szenarien.">
+    <meta property="og:description" content="Untertitel-Overlay im Spiel unsichtbar? Diagnose in 5 Schritten: Vollbild, HDR, Overlay-Kollisionen und Fokus. Stabiles Setup in Minuten - jetzt anwenden.">
     <meta property="og:url" content="https://live-subtitles.com/articles/de/article-20.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/de/games.webp">
     <meta property="og:image:width" content="1280">
@@ -28,7 +45,7 @@
     <meta property="og:locale" content="de_DE">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Fehlerbehebung für Fullscreen-Untertitel-Overlay in Spielen">
-    <meta name="twitter:description" content="Schneller Diagnosepfad für Sichtbarkeits- und Interaktionsprobleme bei Untertitel-Overlays in Spielen.">
+    <meta name="twitter:description" content="Untertitel-Overlay im Spiel unsichtbar? Diagnose in 5 Schritten: Vollbild, HDR, Overlay-Kollisionen und Fokus. Stabiles Setup in Minuten - jetzt anwenden.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/de/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -51,11 +68,22 @@
       "dateModified": "2026-05-12",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "Checkliste zur Fehlerbehebung bei Untertitel-Overlays in Spielen: Fullscreen-Sichtbarkeit, Borderless-Setup, Fokusprobleme, Hotkey-Verhalten und praktische Recovery-Schritte.",
+      "description": "Untertitel-Overlay im Spiel unsichtbar? Diagnose in 5 Schritten: Vollbild, HDR, Overlay-Kollisionen und Fokus. Stabiles Setup in Minuten - jetzt anwenden.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/de/article-20.html"
     }
     </script>
     <link rel="preload" as="image" href="/articles/img/de/games.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://live-subtitles.com/de/" },
+        { "@type": "ListItem", "position": 2, "name": "Artikel", "item": "https://live-subtitles.com/articles/de/" },
+        { "@type": "ListItem", "position": 3, "name": "Fehlerbehebung für Fullscreen-Untertitel-Overlay in Spielen", "item": "https://live-subtitles.com/articles/de/article-20.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
@@ -67,48 +95,99 @@
         <img class="article-hero" src="/articles/img/de/games.webp" alt="Live-Untertitel-Overlay während eines kompetitiven Spiels" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p>Wenn das Overlay-Verhalten im Spiel instabil wird, kosten Zufallsfixes meist Zeit. Dieses Playbook bietet eine schnelle Diagnose-Reihenfolge, um die Ursache zu isolieren: Rendering-Modus, Interaktionsmodus oder Workflow-Mismatch.</p>
+            <p>Wenn das Untertitel-Overlay während des Spielens instabil wird, kosten planlose Reparaturversuche meist nur Zeit. Dieses Playbook gibt Ihnen eine feste Diagnose-Reihenfolge an die Hand, mit der Sie die eigentliche Ursache isolieren: Rendering-Modus, Interaktionsmodus oder ein Workflow-Mismatch im Team. Statt blind an Einstellungen zu drehen, arbeiten Sie sich Schicht für Schicht vor und stoppen bei der ersten Ebene, die das Problem reproduziert.</p>
 
             <h2>Schritt 1: zuerst den Rendering-Modus prüfen</h2>
-            <p>Bevor Sie Untertitel-Einstellungen ändern, prüfen Sie den Anzeigemodus. Wenn Sie im exklusiven Vollbild sind und Untertitel fehlen, wechseln Sie auf <strong>Borderless Fullscreen</strong>. Das löst die meisten Sichtbarkeitsprobleme bei Desktop-Overlays.</p>
+            <p>Bevor Sie überhaupt eine Untertitel-Einstellung anfassen, prüfen Sie den Anzeigemodus des Spiels. Wenn Sie sich im exklusiven Vollbild befinden und die Untertitel fehlen, wechseln Sie zu <strong>Borderless Fullscreen</strong> (randloses Vollbild). Dieser eine Schritt löst die große Mehrheit aller Sichtbarkeitsprobleme bei Desktop-Overlays, weil das Overlay im Compositor von Windows korrekt über dem Spielbild gezeichnet wird.</p>
 
             <h2>Schritt 2: Lock/Game-Mode-Verhalten validieren</h2>
             <ul>
-                <li>Aktivieren Sie Lock/Game Mode mit <strong>Ctrl+Shift+L</strong>.</li>
+                <li>Aktivieren Sie Lock/Game Mode mit <strong>Strg+Umschalt+L</strong>.</li>
                 <li>Bestätigen Sie, dass versehentliche Klicks auf das Untertitelfenster nicht mehr auftreten.</li>
-                <li>Bestätigen Sie, dass das Spiel den Fokus bei Mausbewegung und Kampf behält.</li>
+                <li>Bestätigen Sie, dass das Spiel bei Mausbewegung und im Gefecht durchgehend den Fokus behält.</li>
             </ul>
 
             <h2>Schritt 3: Untertitel-Layout und Dichte prüfen</h2>
-            <p>Überladen Sie den Textbereich nicht. Hohe Untertiteldichte plus schlechte Platzierung wirkt wie ein Sichtbarkeitsbug, selbst wenn das Rendering korrekt ist. Nutzen Sie weniger Zeilen, höheren Kontrast und eine stabile untere Position.</p>
+            <p>Überladen Sie den Textbereich nicht. Eine hohe Untertiteldichte in Kombination mit schlechter Platzierung sieht aus wie ein Sichtbarkeits-Bug, selbst wenn das Rendering technisch einwandfrei ist. Nutzen Sie weniger Zeilen, höheren Kontrast und eine stabile Position im unteren Bildschirmdrittel, die das Fadenkreuz und die HUD-Elemente nicht verdeckt.</p>
 
             <h2>Schritt 4: Team-Kommunikationsformat abstimmen</h2>
-            <p>Viele Untertitelprobleme sind in Wahrheit Callout-Qualitätsprobleme. Wenn Teamkollegen lange Sätze mit uneinheitlichen Begriffen nutzen, sinkt der Nutzen. Standardisieren Sie kurze Callouts und gemeinsames Map-Vokabular.</p>
+            <p>Viele vermeintliche „Untertitelprobleme“ sind in Wahrheit Callout-Qualitätsprobleme. Wenn Teamkollegen lange Sätze mit uneinheitlichen Begriffen verwenden, sinkt der Nutzen der Untertitel rapide. Standardisieren Sie kurze Callouts und ein gemeinsames Map-Vokabular, damit die Live-Erkennung saubere, konsistente Phrasen ausgeben kann.</p>
+
+            <h2>Warum „Untertitel erscheinen im Vollbild nicht“ selten ein Untertitel-Bug ist</h2>
+            <p>Wenn ein Spieler meldet, dass während des Spielens keine Untertitel angezeigt werden, ist der erste Reflex, die Untertitel-Engine zu beschuldigen. In der Praxis lassen sich jedoch mehr als 80 % der Fälle, die wir analysieren, auf eine von drei Ursachen zurückführen, die nichts mit der Caption-Pipeline zu tun haben: <strong>exklusives Swap-Chain-Rendering</strong>, der <strong>HDR-Kompositionspfad</strong> oder <strong>Kollisionen mit Drittanbieter-Overlays</strong>. Solange diese nicht ausgeschlossen sind, verschiebt das Ändern von Untertitel-Einstellungen das Problem nur, statt es zu lösen.</p>
+
+            <h2>Diagnose-Reihenfolge, die Zeit spart</h2>
+            <p>Gehen Sie das Problem genau in dieser Reihenfolge durch. Stoppen Sie bei der ersten Ebene, die das Problem reproduziert.</p>
+            <ol>
+                <li><strong>In einer 60-Sekunden-Schleife reproduzieren.</strong> Starten Sie das Spiel, lösen Sie eine Sprachzeile aus und beobachten Sie das Overlay. Ist der Fehler sporadisch, notieren Sie die Zeitstempel.</li>
+                <li><strong>Anzeigemodus wechseln.</strong> Wechseln Sie vom exklusiven Vollbild zu Borderless Fullscreen. Kehrt das Overlay zurück, liegt die Ursache in der Swap Chain.</li>
+                <li><strong>HDR umschalten.</strong> Werden die Untertitel zwar gerendert, wirken aber ausgewaschen oder vor hellem Hintergrund unsichtbar, ist das HDR-Tone-Mapping die Ursache.</li>
+                <li><strong>Sekundäre Overlays deaktivieren.</strong> Steam, Discord, GeForce Experience und die Xbox Game Bar können jeweils ein globales Overlay registrieren. Schalten Sie sie nacheinander für je eine Runde ab.</li>
+                <li><strong>In einem Nicht-Spiel-Fenster testen.</strong> Sprechen Sie einen Testsatz, während Sie ein YouTube-Video betrachten. Funktioniert das Overlay dort, ist das Problem spielspezifisch.</li>
+            </ol>
+
+            <h2>Lösungsrezepte je Ursache</h2>
+
+            <h3>Ursache A: exklusive Swap Chain</h3>
+            <p>Erkennbar daran, dass Untertitel auf dem Desktop und in Borderless Fullscreen funktionieren, im exklusiven Vollbild aber verschwinden. Lösung: Stellen Sie das Spiel auf Borderless Fullscreen um. Moderne GPU-Treiber komponieren diesen Modus nahezu identisch zum exklusiven Vollbild – der Performance-Unterschied liegt meist unter 2 % und ist unter Windows 11 oft gar nicht messbar.</p>
+
+            <h3>Ursache B: HDR-Komposition</h3>
+            <p>Erkennbar daran, dass das Overlay zwar sichtbar, aber unleserlich ist: Schwarz auf Schwarz, Weiß auf Weiß oder farbverschoben. Lösung: Aktivieren Sie die Windows-HDR-Kalibrierung (Einstellungen → System → Anzeige → HDR), stellen Sie die SDR-Inhaltshelligkeit auf 30–40 und wechseln Sie das Overlay-Theme auf „kontrastreiches Dunkel“.</p>
+
+            <h3>Ursache C: Kollision im Overlay-Stack</h3>
+            <p>Erkennbar daran, dass Overlays flackern oder abwechselnd sichtbar werden. Lösung: Weisen Sie dem Untertitel-Tool die Rolle des einzigen „primären Overlays“ zu. Deaktivieren Sie das Steam-Overlay im Spiel (Steam → Einstellungen → Im Spiel), das Discord-Overlay (Benutzereinstellungen → Spiel-Overlay) und die Xbox Game Bar (Einstellungen → Gaming → Game Bar).</p>
+
+            <h3>Ursache D: Fokusverlust bei mehreren Monitoren</h3>
+            <p>Erkennbar daran, dass die Untertitel auf dem zweiten Monitor erscheinen, das Spiel aber auf dem Hauptmonitor läuft. Lösung: Heften Sie das Untertitelfenster über die Option „An Display anheften“ an den Hauptmonitor und aktivieren Sie anschließend die Windows-„Optimierungen für Fenster-Spiele“ (Einstellungen → System → Anzeige → Grafik → Standardeinstellungen).</p>
+
+            <div class="checklist">
+                <strong>Tipp:</strong> Testen Sie nach jeder Änderung in einer echten Spielsituation, nicht im Hauptmenü. Viele Rendering-Pfade greifen erst, wenn das Spiel das eigentliche 3D-Bild zeichnet – im Menü kann ein Overlay sichtbar sein, das im Match wieder verschwindet.
+            </div>
 
             <h2>Schnelle Recovery-Checkliste</h2>
             <div class="checklist">
                 <ul>
                     <li>Stellen Sie das Spiel auf Borderless Fullscreen um.</li>
-                    <li>Aktivieren Sie Lock/Game Mode und testen Sie Ctrl+Shift+L.</li>
-                    <li>Verschieben Sie Untertitel in eine stabile untere Bildschirmzone.</li>
+                    <li>Aktivieren Sie Lock/Game Mode und testen Sie Strg+Umschalt+L.</li>
+                    <li>Verschieben Sie die Untertitel in eine stabile untere Bildschirmzone.</li>
                     <li>Reduzieren Sie die Größe des Untertitelblocks auf dem Bildschirm.</li>
                     <li>Testen Sie 3 bis 5 Minuten in einem Live-Voice-Channel.</li>
                 </ul>
             </div>
 
+            <h2>Die 5 Fragen für jeden Fehlerbericht</h2>
+            <ol>
+                <li>Spieltitel und exakte Version (Patch-Nummer, nicht „neueste“).</li>
+                <li>Welcher Anzeigemodus war während des Fehlers aktiv?</li>
+                <li>War HDR aktiviert? Ein oder mehrere Monitore?</li>
+                <li>Welche anderen Overlays liefen (Discord, Steam, GeForce, Xbox Bar)?</li>
+                <li>Trat der Fehler sofort beim Start auf oder erst nach einem Fensterwechsel?</li>
+            </ol>
+            <p>Ohne diese Antworten raten Sie. Mit ihnen ist die Ursache in der Regel in unter fünf Minuten offensichtlich.</p>
+
             <h2>Wann Eskalation erforderlich ist</h2>
-            <p>Wenn das Overlay in bestimmten Titeln weiterhin verborgen bleibt, dokumentieren Sie genaues Spiel, API-Modus und Display-Pfad. So lassen sich titelabhängige Rendering-Beschränkungen von generischen Konfigurationsproblemen trennen.</p>
+            <p>Wenn das Overlay in bestimmten Titeln weiterhin verborgen bleibt, dokumentieren Sie das genaue Spiel, den API-Modus und den Display-Pfad. So lassen sich titelspezifische Rendering-Beschränkungen sauber von generischen Untertitel-Konfigurationsproblemen trennen und gezielt an das Support-Team weitergeben.</p>
+
+            <h2>Wenn die Lösung lautet: „nichts tun“</h2>
+            <p>Eine kleine Gruppe von Titeln blockiert Compositor-Overlays bewusst während der Anti-Cheat-Prüfungen. Beispiele sind bestimmte Ranglisten-Modi, die die Swap Chain sperren, um Screen-Capture-Cheats zu verhindern. In diesen Spielen zeigt kein Untertitel-Stack im exklusiven Vollbild etwas an. Die ehrliche Antwort lautet: Nutzen Sie für genau diesen Titel Borderless Fullscreen und akzeptieren Sie den vernachlässigbaren Performance-Kompromiss.</p>
+
+            <h2>Warum das für die Ranglisten-Leistung zählt</h2>
+            <p>Ein unzuverlässiges Overlay, das zu 90 % funktioniert, ist schlimmer als eines, das konsistent versagt. Bei konsistentem Versagen passen Sie sich an. Bei sporadischem Versagen greifen Sie immer wieder nach einem Callout, der nicht da ist, und verlieren den Rhythmus. Das Ziel der Fehlerbehebung ist nicht „läuft meistens“, sondern „läuft vorhersehbar genug, dass Sie nicht mehr darüber nachdenken müssen“.</p>
+
+            <h2>Vorlagen zur Dokumentation wiederkehrender Probleme</h2>
+            <p>Pflegen Sie eine kurze Markdown-Datei in den angepinnten Discord-Nachrichten Ihres Teams. Zwei Spalten: <em>Titel</em> und <em>bekannte Einschränkung</em>. Beispielzeilen: „Valorant – Overlay erfordert Borderless“, „CS2 – funktioniert nach dem März-2026-Patch in beiden Modi“. Diese Datei ist wertvoller als jedes Troubleshooting-Wiki, weil sie die empirische Wahrheit Ihres Teams festhält.</p>
 
             <h2>Verwandte Ressourcen</h2>
             <ul>
                 <li><a href="/de/game-mode-subtitles.html" style="color:#00b8ff;">Game-Mode-Untertitel-Seite</a></li>
                 <li><a href="article-19.html" style="color:#00b8ff;">Game-Mode-Guide für kompetitive Spiele</a></li>
+                <li><a href="article-21.html" style="color:#00b8ff;">Untertitel-Layout und Lesbarkeit optimieren</a></li>
                 <li><a href="/de/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord- und Twitch-Untertitel in Echtzeit</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
                 <h3 style="color: #00ff9d; margin-top: 0;">Stabilisieren Sie Ihren Overlay-Workflow</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Nutzen Sie ein vorhersehbares Untertitel-Setup für Spiele, Chat und Streams.</p>
+                <p style="color: #eee; margin-bottom: 1.5rem;">Die App Live Subtitles bietet ein vorhersehbares Untertitel-Setup für Spiele, Chat und Streams – mit Lock/Game Mode und stabilem Overlay.</p>
                 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Im Microsoft Store herunterladen</a>
             </div>
         </div>

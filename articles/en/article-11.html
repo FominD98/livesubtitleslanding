@@ -13,7 +13,7 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>Netflix Dual Subtitles Workflow: 30-Day Playbook | Live Subtitles</title>
-    <meta name="description" content="A 30-day Netflix dual subtitles playbook: setup, session structure, KPIs, and common mistakes to improve comprehension with less rewinding.">
+    <meta name="description" content="Netflix dual subtitles 30-day playbook: setup, session structure, weekly KPIs, and fixes for common mistakes. Improve comprehension with fewer rewinds.">
     <meta name="keywords" content="netflix dual subtitles, netflix subtitles in two languages, bilingual subtitles workflow, language learning with netflix, subtitle learning playbook">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/en/article-11.html" />
@@ -21,7 +21,7 @@
     <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-11.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="Netflix Dual Subtitles Workflow: 30-Day Playbook">
-    <meta property="og:description" content="Practical Netflix workflow for dual subtitles: daily routine, phrase capture, and measurable progress with fewer rewinds.">
+    <meta property="og:description" content="Netflix dual subtitles 30-day playbook: setup, session structure, weekly KPIs, and fixes for common mistakes. Improve comprehension with fewer rewinds.">
     <meta property="og:url" content="https://live-subtitles.com/articles/en/article-11.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/en/movies.webp">
     <meta property="og:image:width" content="1280">
@@ -30,7 +30,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Netflix Dual Subtitles Workflow: 30-Day Playbook">
-    <meta name="twitter:description" content="30-day Netflix dual subtitles plan with practical steps and KPIs.">
+    <meta name="twitter:description" content="Netflix dual subtitles 30-day playbook: setup, session structure, weekly KPIs, and fixes for common mistakes. Improve comprehension with fewer rewinds.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/movies.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -53,7 +53,7 @@
       "author": { "@type": "Person", "name": "Aarav Sharma", "url": "https://live-subtitles.com/about/team/aarav-sharma.html", "jobTitle": "Streaming Platforms Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
       
-      "description": "A 30-day Netflix dual subtitles playbook: setup, session structure, KPIs, and common mistakes to improve comprehension with less rewinding.",
+      "description": "Netflix dual subtitles 30-day playbook: setup, session structure, weekly KPIs, and fixes for common mistakes. Improve comprehension with fewer rewinds.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/en/article-11.html"
     }
     </script>
@@ -79,101 +79,144 @@
         <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/movies.webp" alt="Dual subtitles on a film for language learning" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
-        <div itemprop="articleBody">
-            <p>People who search for <strong>Netflix subtitles in two languages</strong> usually have one concrete problem: understanding real dialogue without turning every episode into a stop-and-lookup session. Dual subtitles are useful, but results depend on workflow, not on the feature alone. This guide gives you a practical 30-day system you can repeat.</p>
+        <div itemprop=”articleBody”>
+            <p>People who search for <strong>Netflix subtitles in two languages</strong> usually have one concrete problem: understanding real dialogue without turning every episode into an exhausting stop-and-lookup session. Dual subtitles are a genuinely useful learning aid, but the results you get depend almost entirely on your workflow, not on the feature alone. This guide gives you a repeatable 30-day system, grounded in what actually reduces rewinds and builds lasting vocabulary — not in theory, but in practice.</p>
 
-            <h2>What this article solves</h2>
+            <h2>The core problem: why most dual-subtitle learners plateau</h2>
+            <p>The failure mode is predictable. A learner installs a dual-subtitle extension, watches happily for a week, then notices their comprehension score — or subjective sense of progress — has stopped moving. The reason is almost always the same: they are <em>consuming</em> language, not <em>processing</em> it. Reading both lines simultaneously creates comfort, but comfort without active engagement produces shallow retention. The vocabulary you encounter during a session does not automatically transfer to long-term memory unless you do something deliberate with it within 24 hours.</p>
+            <p>A second issue is setup friction. Netflix does not natively render two simultaneous subtitle tracks in the way dedicated language-learning tools do. You need a browser extension, a third-party player, or a system-level live-caption tool layered on top. Each approach has a different latency, a different language coverage, and a different cost. Choosing the wrong one wastes weeks before you discover its limitations.</p>
+            <p>This guide solves both problems: it helps you pick the right technical setup and then gives you a structured 30-day routine that turns passive watching into measurable progress.</p>
+
+            <h2>Technical setup: four options compared</h2>
+            <p>Before starting the 30-day plan, confirm your setup works reliably. These are the four most common approaches, ranked by coverage and stability:</p>
+
+            <h3>Option 1: Browser extension (Language Reactor / NF Dual Subtitles)</h3>
+            <p>Browser extensions like Language Reactor (formerly Language Learning with Netflix) inject a second subtitle track into the Netflix player. They pull SRT files from Netflix's own subtitle library, so coverage is good for major languages but sparse for regional dialects or newer releases. The main constraint: both languages must have a Netflix subtitle file. If your target language is not in Netflix's catalog for a given title, there is no fallback. <a href=”article-17.html” style=”color:#00b8ff;”>See our comparison of Language Reactor alternatives</a> for tools that cover this gap.</p>
+
+            <h3>Option 2: System-level live captions (Windows speech recognition layer)</h3>
+            <p>Tools like <strong>Live Subtitles</strong> operate at the operating-system audio layer rather than at the browser level. They capture system audio in real time, transcribe it in your source language, and optionally translate it into your target language — regardless of which streaming service you are using and regardless of whether that service has subtitles at all. This approach works with Netflix, Disney+, Amazon Prime, and local video files alike. Latency is typically 0.3–1.5 seconds on a modern CPU, which is acceptable for film dialogue. You can <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener noreferrer” style=”color:#00b8ff;”>download Live Subtitles from the Microsoft Store</a> and use it on top of any content without touching the browser or the Netflix interface.</p>
+
+            <h3>Option 3: Dedicated dual-subtitle players (VLC with subtitles + secondary track)</h3>
+            <p>For downloaded content, VLC Media Player supports loading two subtitle files simultaneously. This requires the content file and two matching SRT/ASS subtitle files. It is the highest-fidelity option for offline content but requires manual file management per title, which does not scale well for daily practice.</p>
+
+            <h3>Option 4: Language-learning platforms (Yabla, Lingopie)</h3>
+            <p>Platforms built specifically for subtitle-assisted learning offer integrated vocabulary tools, spaced repetition, and progress tracking baked in. The downside is catalog size: they typically carry a few hundred curated titles, not Netflix's full library. They are best used as a supplement to Netflix, not a replacement.</p>
+
+            <div style=”background: rgba(0,255,157,0.08); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
+                <strong style=”color:#00ff9d;”>Recommendation for most learners:</strong> Use a browser extension for Netflix-specific content when subtitle files exist, and layer a system-level tool like Live Subtitles for everything else. This covers 95%+ of realistic viewing scenarios.
+            </div>
+
+            <h2>Choosing the right content for dual-subtitle learning</h2>
+            <p>Content selection has a larger effect on progress speed than most learners expect. Use these criteria:</p>
             <ul>
-                <li>Too many rewinds when speech is fast or accent-heavy.</li>
-                <li>Low retention when you only “watch” but do not reuse phrases.</li>
-                <li>No clear way to measure progress week to week.</li>
-                <li>High cognitive load from over-analyzing every sentence.</li>
+                <li><strong>Speech rate:</strong> Aim for slower-paced dialogue first. Documentaries, reality TV, and drama series have more natural pauses than action films or comedy stand-up. Once you are comfortable, add faster content.</li>
+                <li><strong>Register:</strong> Match the register you need. If you need business English, watch corporate dramas (Suits, Succession) rather than teen shows. If you need conversational Spanish, choose sitcoms with high dialogue density.</li>
+                <li><strong>Repeat exposure:</strong> Rewatching familiar content — episodes you already understand the plot of — lets you focus on language rather than story. This is not a shortcut; it is a deliberate technique used in pedagogical literature on comprehensible input.</li>
+                <li><strong>Episode length:</strong> 22–30 minute episodes allow you to complete one full episode per session without fatigue, which matters for habit formation in weeks 1 and 2.</li>
             </ul>
-
-            <h2>Why dual subtitles work in practice</h2>
-            <p>Single-language subtitles force trade-offs. Native-language subtitles maximize comfort but can reduce noticing of target-language patterns. Target-language-only subtitles build recognition but may increase fatigue too early. Dual subtitles remove that binary choice: you keep comprehension while still seeing target phrasing, collocations, and register.</p>
-            <p>The key benefit is continuity. Continuity gives volume. Volume gives pattern recognition. Pattern recognition is what starts reducing rewinds after a few weeks.</p>
 
             <h2>30-day execution plan</h2>
-            <h3>Week 1: Stabilize the routine</h3>
+            <p>The plan is structured around four weekly stages, each building on the previous. Each stage has a daily action (what you do during watching) and a post-session action (what you do in the 5 minutes after). Both matter.</p>
+
+            <h3>Week 1: Stabilize the routine (days 1–7)</h3>
+            <p>Goal: establish daily habit, reduce cognitive overload, stop over-pausing.</p>
             <ul>
-                <li>Watch 20-30 minutes daily with dual subtitles enabled.</li>
-                <li>Do not pause on every unknown word.</li>
-                <li>Capture only 5 high-value phrases per session.</li>
+                <li>Watch 20–30 minutes daily with dual subtitles enabled in your preferred setup.</li>
+                <li>Do <em>not</em> pause on every unknown word. Let scenes play through to the end before reflecting.</li>
+                <li>After the session, capture exactly 5 high-value phrases — not random words, but complete collocations or idiomatic expressions you heard used naturally (e.g., “I can't afford to lose this” rather than just “afford”).</li>
+                <li>Write those 5 phrases in a notebook or text file. No translation required yet — just the phrase and the scene context.</li>
+            </ul>
+            <p><strong>Success signal:</strong> You complete 6 out of 7 days. The content feels mostly comprehensible (60%+ without checking the second line).</p>
+
+            <h3>Week 2: Add phrase reuse (days 8–14)</h3>
+            <p>Goal: move captured phrases from passive recognition into active memory.</p>
+            <ul>
+                <li>Rewrite each of your 5 phrases into a short personal example sentence. Use situations from your own life, not abstract definitions.</li>
+                <li>Read those 5 example sentences aloud once immediately after writing them. Pronunciation matters even for reading comprehension — it anchors phonological form.</li>
+                <li>Tag each phrase by conversational function: agreement, disagreement, planning, describing emotion, asking for clarification. This tagging forces you to notice pragmatic patterns, not just vocabulary.</li>
+                <li>At the end of week 2, count how many phrases from week 1 you can recall without looking. Aim for at least 15 out of 35.</li>
             </ul>
 
-            <h3>Week 2: Add phrase reuse</h3>
+            <h3>Week 3: Increase listening pressure (days 15–21)</h3>
+            <p>Goal: reduce dependence on the native-language line while maintaining viewing flow.</p>
             <ul>
-                <li>Rewrite your 5 phrases into short personal examples.</li>
-                <li>Read those examples aloud once after each session.</li>
-                <li>Tag each phrase by context: agreement, disagreement, planning, emotion.</li>
+                <li>Keep dual subtitles active, but make a deliberate effort to read the <em>target-language line first</em> before glancing at your native language.</li>
+                <li>Replay one short scene per session (30–90 seconds) with the native-language subtitle line hidden or covered. Try to follow using only audio and target-language text.</li>
+                <li>In your phrase log, add a column: “understood before checking?” Mark Y or N for each phrase captured. Track the Y-rate across the week — it should climb from around 30% to 50%.</li>
             </ul>
 
-            <h3>Week 3: Increase listening pressure</h3>
+            <h3>Week 4: Transition and evaluate (days 22–30)</h3>
+            <p>Goal: consolidate gains, identify remaining gaps, plan the next cycle.</p>
             <ul>
-                <li>Keep dual subtitles, but prioritize reading the target-language line first.</li>
-                <li>Replay one short scene without looking at native-language text.</li>
-                <li>Track how often you understood before checking the second line.</li>
+                <li>For genres you are comfortable with, switch 1–2 episodes to target-language-only subtitles. Observe your rewind rate compared to week 1.</li>
+                <li>Keep dual mode for technically dense episodes, new genres, or content with heavy accents. This is not a regression — it is correct tool use.</li>
+                <li>Review your full phrase log (now ~35 entries). Remove any phrases you now use automatically and without thinking. Those are permanently acquired; replace them with 5 new stretch phrases in a new domain.</li>
+                <li>Write a 3-sentence summary of what you learned about your own patterns: what type of dialogue is hardest, which register is easiest, which session length worked best.</li>
             </ul>
 
-            <h3>Week 4: Transition and evaluate</h3>
+            <h2>KPIs that actually measure progress</h2>
+            <p>Hours watched is a vanity metric. Use these four operational signals instead:</p>
             <ul>
-                <li>Switch selected scenes to target-language-only subtitles.</li>
-                <li>Keep dual mode for dense episodes or new genres.</li>
-                <li>Review your phrase log and remove items you already use automatically.</li>
-            </ul>
-
-            <h2>KPIs that actually matter</h2>
-            <p>Do not evaluate progress by “hours watched” only. Use operational signals:</p>
-            <ul>
-                <li><strong>Rewind rate:</strong> rewinds per 10 minutes (goal: steady decline).</li>
-                <li><strong>Phrase activation:</strong> how many captured phrases you reused in writing/speaking.</li>
-                <li><strong>Comprehension confidence:</strong> percentage of scenes understood without pausing.</li>
-                <li><strong>Session consistency:</strong> days per week with completed routine.</li>
+                <li><strong>Rewind rate:</strong> number of rewinds per 10 minutes of viewing. Log this informally each session. A steady decline over 4 weeks — even modest, from 8 to 5 — is a reliable indicator of improved automatic processing.</li>
+                <li><strong>Phrase activation rate:</strong> of the phrases you captured across 4 weeks, how many did you spontaneously use in writing, speaking, or reading comprehension outside Netflix? A rate above 30% after 30 days is strong.</li>
+                <li><strong>First-line comprehension percentage:</strong> estimated proportion of scenes where you understood the target-language subtitle before checking the native-language line. Baseline ~25%; target after 30 days: ~55%.</li>
+                <li><strong>Session consistency:</strong> days per week with a completed routine (session + phrase capture). Aim for 6/7. Anything below 4/7 means the session length or content choice needs adjustment, not willpower.</li>
             </ul>
 
             <h2>Common mistakes that slow progress</h2>
-            <h3>Mistake 1: Treating subtitles as passive support only</h3>
-            <p>If you never reuse language, retention stays shallow. Capture fewer phrases but process them better.</p>
 
-            <h3>Mistake 2: Switching content constantly</h3>
-            <p>One episode per genre gives variety. Constantly changing channels prevents repeated exposure to the same lexical patterns.</p>
+            <h3>Mistake 1: Treating subtitles as passive reassurance</h3>
+            <p>The most common error is glancing at the native-language line immediately — before attempting to process the target language — every single time. This turns dual subtitles into a crutch rather than a scaffold. Fix: cover or shrink the native-language line in your setup so it requires deliberate effort to read. If your tool allows opacity settings, reduce the native-language line to 40% opacity.</p>
 
-            <h3>Mistake 3: Forcing target-language-only too early</h3>
-            <p>Early frustration reduces consistency. Dual mode is not a weakness; it is an intermediate stage that protects learning volume.</p>
+            <h3>Mistake 2: Chasing quantity over consistency</h3>
+            <p>Watching 3 hours once a week produces worse results than watching 25 minutes every day. Frequency drives pattern recognition; volume alone does not. The brain acquires language through spaced, repeated exposure — not through marathon sessions that exhaust working memory.</p>
 
-            <h2>When to move beyond dual subtitles</h2>
-            <p>Use this trigger: when you can follow 70-80% of a familiar show with low rewind rate, start gradual reduction of native-language support. Keep dual subtitles for technical, slang-heavy, or culturally dense content.</p>
+            <h3>Mistake 3: Switching content too often</h3>
+            <p>Each show introduces its own lexical ecosystem: character-specific speech patterns, recurring idioms, genre conventions. Constantly switching to new shows resets this familiarity. Stick with one or two shows per 30-day cycle. Variety is fine across episodes; switching between five different shows per week is counterproductive.</p>
 
-            <h2>References and platform docs</h2>
+            <h3>Mistake 4: Forcing target-language-only mode too early</h3>
+            <p>Some learners feel that using the native-language line is “cheating.” It is not. Dual subtitles are an intermediate stage that maintains comprehension volume — and volume is what drives pattern acquisition. Switching to single-language mode before you are ready reduces comprehension to 40–50%, which is both frustrating and less efficient. Dual mode is a legitimate learning strategy, not a weakness to overcome.</p>
+
+            <h3>Mistake 5: Ignoring post-session processing</h3>
+            <p>The phrase capture and review step takes 5 minutes. Skipping it is the single biggest predictor of plateau. Research on vocabulary acquisition consistently shows that a brief consolidation pass within 30 minutes of first exposure dramatically improves retention. This is the mechanism behind spaced repetition — you do not need an app if you spend 5 minutes reviewing your 5 phrases immediately after watching.</p>
+
+            <h2>Extending the workflow beyond Netflix</h2>
+            <p>The same 30-day structure works on any video platform. For YouTube, a system-level transcription tool is often better than a browser extension because YouTube's auto-captions are lower quality in many languages and the extension ecosystem is fragmented. See <a href=”article-13.html” style=”color:#00b8ff;”>our guide to YouTube dual subtitles</a> for the specific setup steps. For live meetings and webinars — where there are no subtitle files at all — a real-time live-caption tool is the only option; <a href=”/netflix-subtitles.html” style=”color:#00b8ff;”>learn more about extending this workflow to live scenarios</a> beyond recorded content.</p>
+
+            <h2>When to graduate from dual subtitles</h2>
+            <p>Use this concrete trigger: when you can follow 70–80% of a <em>familiar</em> show with fewer than 3 rewinds per 10 minutes, begin gradual reduction of native-language support. “Gradual” means one genre at a time, not a cold-switch across all content simultaneously. Keep dual mode permanently for:</p>
             <ul>
-                <li><a href="https://help.netflix.com/en/node/372" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Netflix Help Center: Subtitles and captioning</a></li>
-                <li><a href="https://www.nfdualsubtitles.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">NF Dual Subtitles (market benchmark)</a></li>
-                <li><a href="https://www.yabla.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Yabla (language learning with video subtitles)</a></li>
+                <li>Content with strong regional accents (Scottish English, Andalusian Spanish, Cantonese-influenced Mandarin).</li>
+                <li>Technical or specialized vocabulary domains you have not studied before.</li>
+                <li>Fast-paced comedy with dense wordplay or cultural references.</li>
+                <li>Any content where missing 20% significantly breaks narrative comprehension.</li>
             </ul>
+            <p>There is no shame in maintaining dual mode for specific genres indefinitely. Proficient non-native speakers use context aids in demanding listening environments — dual subtitles are simply a more systematic version of that practice.</p>
 
             <h2>FAQ</h2>
-            <p><strong>How long should one session be?</strong><br>20-30 focused minutes is enough for most learners when paired with phrase capture and quick review.</p>
-            <p><strong>Should I pause every unknown phrase?</strong><br>No. Keep flow first. Capture only high-value repeated phrases; process them after the scene.</p>
-            <p><strong>When do dual subtitles stop being necessary?</strong><br>When you can consistently follow familiar content with low rewind rate, gradually shift to target-language-priority viewing.</p>
+            <p><strong>How long should one session be?</strong><br>20–30 focused minutes is the optimal range for most learners. At this length, cognitive load stays manageable, habit formation is easier (it fits any schedule), and one full episode of a standard sitcom fits within a single session. Longer is not better until comprehension is high enough that fatigue is not the limiting factor.</p>
+            <p><strong>Should I pause on every unknown phrase?</strong><br>No — especially in weeks 1 and 2. Flow continuity is more valuable early on than lookup precision. The target is 5 high-value phrases per session, chosen after the scene rather than during it. Over-pausing destroys listening flow and makes the session feel like work, which kills consistency.</p>
+            <p><strong>Does dual subtitles work for reading-weak learners?</strong><br>Yes, but with a modification: reduce font size on one of the subtitle lines rather than removing it. This keeps both lines visible but forces the brain to prioritize the cleaner or larger track. If reading in the target script is the actual obstacle (e.g., Japanese kanji), address script literacy separately before relying on dual subtitles as the primary method.</p>
+            <p><strong>Which languages are best supported on Netflix?</strong><br>English, Spanish, French, Portuguese (Brazilian), German, Italian, Japanese, and Korean have the broadest subtitle coverage on Netflix. Arabic and Hindi coverage is growing rapidly. For languages with limited Netflix subtitle files, system-level tools like Live Subtitles bypass the catalog dependency entirely by working from audio rather than pre-existing files.</p>
+            <p><strong>When do dual subtitles stop being necessary?</strong><br>When you consistently follow familiar content at low rewind rate, gradually reduce native-language support one genre at a time. For learners reaching B2 level in the target language, dual mode often becomes optional for most content — but remains useful for high-register or technically specialized material regardless of level.</p>
 
             <h2>Final takeaway</h2>
-            <p>The winning approach is not “find perfect subtitles.” It is “run a repeatable workflow.” With dual subtitles, phrase capture, and weekly KPI checks, Netflix becomes a consistent learning channel rather than random practice.</p>
+            <p>The winning approach is not “find the perfect subtitle extension.” It is “run a repeatable, measurable workflow.” Dual subtitles are the scaffold; the 30-day routine is the structure that makes the scaffold produce results. With the right technical setup, a consistent session habit, post-session phrase processing, and weekly KPI checks, Netflix becomes a reliable language-learning channel rather than a source of background noise you happen to understand a bit better over time. Start week 1 today with 25 minutes and one show. The system compounds from there.</p>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Related Articles</h3>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-17.html" style="color: #00b8ff; text-decoration: none;">Language Reactor Alternatives for Netflix and YouTube</a></li>
-                    <li><a href="article-16.html" style="color: #00b8ff; text-decoration: none;">Google Meet Live Captions: Practical Playbook</a></li>
-                    <li><a href="article-12.html" style="color: #00b8ff; text-decoration: none;">Zoom Live Captions for International Meetings</a></li>
-                    <li><a href="article-13.html" style="color: #00b8ff; text-decoration: none;">YouTube Dual Subtitles for Faster Learning</a></li>
+            <div style=”background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
+                <h3 style=”color: #00b8ff; margin-top: 0;”>Related Articles</h3>
+                <ul style=”list-style: none; padding-left: 0;”>
+                    <li><a href=”article-17.html” style=”color: #00b8ff; text-decoration: none;”>Language Reactor Alternatives for Netflix and YouTube</a></li>
+                    <li><a href=”article-16.html” style=”color: #00b8ff; text-decoration: none;”>Google Meet Live Captions: Practical Playbook</a></li>
+                    <li><a href=”article-12.html” style=”color: #00b8ff; text-decoration: none;”>Zoom Live Captions for International Meetings</a></li>
+                    <li><a href=”article-13.html” style=”color: #00b8ff; text-decoration: none;”>YouTube Dual Subtitles for Faster Learning</a></li>
                 </ul>
             </div>
 
-            <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Try Live Subtitles</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Use dual subtitles and live captions across streaming, meetings, and daily communication.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
+            <div style=”background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;”>
+                <h3 style=”color: #00ff9d; margin-top: 0;”>Try Live Subtitles</h3>
+                <p style=”color: #eee; margin-bottom: 1.5rem;”>Add real-time dual subtitles to Netflix and any other content — no browser extension required. Works with any streaming service via system-level audio capture.</p>
+                <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” style=”display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;”>Download from Microsoft Store</a>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>Live Captions in 2026: How AI-Generated Captions Work and When to Use Them | Live Subtitles</title>
-    <meta name="description" content="Live captions explained: how AI converts speech to text in under 2 seconds, where they show up across Windows, Mac, Android, iOS and Chrome, and when each option wins.">
+    <meta name="description" content="Live captions in 2026: how AI converts speech to text in real time, which layer wins across Windows, Mac and Android, and when to add translation. Start free.">
     <meta name="keywords" content="live captions, live caption windows, ai captions, real time captions, automatic captions, live caption 2026">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/en/article-25.html" />
@@ -36,7 +36,7 @@
     <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-25.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="Live Captions in 2026: How AI-Generated Captions Work and When to Use Them">
-    <meta property="og:description" content="How AI live captions work, where they appear across OS/browser/app layers, and when each one wins.">
+    <meta property="og:description" content="Live captions in 2026: how AI converts speech to text in real time, which layer wins across Windows, Mac and Android, and when to add translation. Start free.">
     <meta property="og:url" content="https://live-subtitles.com/articles/en/article-25.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/en/meetings.webp">
     <meta property="og:image:width" content="1280">
@@ -45,7 +45,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Live Captions in 2026: How AI-Generated Captions Work and When to Use Them">
-    <meta name="twitter:description" content="A 2026 explainer covering Windows, Apple, Android, Chrome and third-party live caption layers.">
+    <meta name="twitter:description" content="Live captions in 2026: how AI converts speech to text in real time, which layer wins across Windows, Mac and Android, and when to add translation. Start free.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/meetings.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -70,7 +70,7 @@
       "dateModified": "2026-05-28",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "Live captions explained: how AI converts speech to text in under 2 seconds, where they show up across Windows, Mac, Android, iOS and Chrome, and when each option wins.",
+      "description": "Live captions in 2026: how AI converts speech to text in real time, which layer wins across Windows, Mac and Android, and when to add translation. Start free.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/en/article-25.html"
     }
     </script>
@@ -97,19 +97,41 @@
         <img class="article-hero" src="/articles/img/en/meetings.webp" alt="Live captions appearing on screen during a real-time conversation" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p><strong>Live captions</strong> sound like a single feature, but the term hides three very different implementations: operating-system overlays, browser-built captions, and third-party caption layers. Each one wins in a different scenario, and "just turn on captions" hides surprising platform asymmetries.</p>
+            <p><strong>Live captions</strong> sound like a single feature, but in 2026 the term conceals at least three architecturally distinct systems: operating-system overlays that follow you across every app, browser-built captions scoped to a single tab, and per-app captions baked into platforms like Zoom or Teams. Picking the wrong layer is one of the most common productivity mistakes for anyone who relies on real-time text. This guide explains how the technology works, maps every mainstream option, and gives you a concrete decision framework so you can choose — or combine — them correctly.</p>
 
-            <h2>What live captions actually are</h2>
-            <p>Live captions are real-time automatic speech recognition (ASR) output rendered as on-screen text within 1–2 seconds of being spoken. They are not pre-written subtitles; they are generated as audio arrives. The 2026 generation of captioning runs on Whisper-class models — sometimes on-device for privacy, sometimes in the cloud for accuracy.</p>
-
-            <h2>Three layers where live captions show up</h2>
-            <p>The same word "captions" hides three very different implementations:</p>
+            <h2>What live captions actually are (and what they are not)</h2>
+            <p>Live captions are real-time automatic speech recognition (ASR) output rendered as on-screen text, typically within 1–3 seconds of the words being spoken. They are fundamentally different from:</p>
             <ul>
-                <li><strong>OS-level captions:</strong> the operating system listens to system audio and renders captions in a floating window. Examples: Windows 11 Live Captions, macOS Live Captions, Android Live Caption.</li>
-                <li><strong>Browser-level captions:</strong> the browser captures audio from any tab and shows captions for that tab only. Example: Chrome Live Caption.</li>
-                <li><strong>App-level captions:</strong> the meeting or media app generates its own captions inside the app's window. Examples: Zoom, Microsoft Teams, Google Meet, YouTube.</li>
+                <li><strong>Pre-written subtitles:</strong> scripted captions prepared in advance for a specific video or film, word-perfect by definition.</li>
+                <li><strong>Closed captions (CC):</strong> a broadcast-television standard that embeds pre-synchronized caption data in a video stream.</li>
+                <li><strong>Machine-translated subtitles:</strong> subtitles generated offline from a completed transcript, not a live stream.</li>
             </ul>
-            <p>The crucial difference is scope. OS-level captions work across every app at once. App-level captions only work in their own app. If you switch from Zoom to a YouTube tutorial mid-day, app-level captions stop; OS-level captions follow you.</p>
+            <p>What makes live captions distinctive is that they are <em>generated</em> as audio arrives. The model never has the full sentence before it must start outputting text. That constraint shapes every engineering trade-off you will encounter: latency vs. accuracy, on-device vs. cloud, single-language vs. multilingual.</p>
+            <p>The 2026 generation of captioning engines is almost universally based on Whisper-architecture models — sometimes running entirely on-device for privacy, sometimes offloaded to a server cluster for speed on lower-end hardware. The practical result: most OS-level captioners today achieve 90–97% word accuracy on clean, single-speaker audio in English, dropping to 75–88% in realistic meeting conditions with multiple speakers and background noise.</p>
+
+            <h2>The ASR pipeline: five steps that happen 10–30 times per second</h2>
+            <p>Understanding the pipeline makes it far easier to diagnose why captions sometimes lag, hallucinate words, or fail entirely:</p>
+            <ol>
+                <li><strong>Audio capture:</strong> the system taps a loopback device (system audio), a microphone, or a virtual audio cable. The quality of this capture dominates everything downstream. Lossy Bluetooth headsets and phone speakers introduce artifacts that no ASR engine can fully recover from.</li>
+                <li><strong>Voice Activity Detection (VAD):</strong> a lightweight classifier decides whether a 20–30 ms chunk of audio contains speech or silence. VAD errors are the leading cause of captions that randomly appear during music or refrigerator hum.</li>
+                <li><strong>Acoustic feature extraction:</strong> the raw waveform is converted to a mel-spectrogram — a compact numerical representation of which frequencies are present at which time.</li>
+                <li><strong>ASR decoding:</strong> the spectrogram passes through the neural model, which outputs a probability distribution over possible word sequences. Beam search selects the most likely path. This step costs the most compute and is where GPU acceleration matters.</li>
+                <li><strong>Post-processing:</strong> raw token sequences are converted to readable text with capitalization, punctuation, and number formatting. Many engines also run a lightweight language model here to smooth errors.</li>
+            </ol>
+            <p>The rendering step — actually putting text on screen — is trivially fast compared to decoding. When captions feel slow, the culprit is almost always audio buffering or ASR decoding latency, not display rendering.</p>
+
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#00ff9d;">Latency benchmark (2026):</strong> On a mid-range laptop with integrated GPU, on-device Whisper-large-v3 delivers captions at roughly 1.8–2.5 s end-to-end latency. Cloud-accelerated captioners (Zoom, Teams, Meet) typically achieve 1.0–1.5 s but require a stable internet connection. For most conversational use, anything under 3 s feels acceptable.
+            </div>
+
+            <h2>Three architectural layers — and why the distinction matters</h2>
+            <p>The single most important concept in choosing a live-caption solution is the <em>architectural layer</em> at which captions are generated. Each layer has a fundamentally different scope:</p>
+            <ul>
+                <li><strong>OS-level captions:</strong> the operating system routes system audio (or microphone input) through an ASR engine and renders a floating caption window outside any app's frame. Examples: Windows 11 Live Captions, macOS Live Captions, Android Live Caption. Crucially, these work across <em>every</em> app simultaneously — Zoom, Spotify, YouTube, your terminal emulator — without any per-app integration.</li>
+                <li><strong>Browser-level captions:</strong> the browser intercepts audio from a specific tab and captions it in an overlay tied to that browser window. Example: Chrome Live Caption. Scope is strictly tab-scoped; if you switch to a native desktop app, captions stop.</li>
+                <li><strong>App-level captions:</strong> the meeting or media app runs its own ASR, often with access to speaker identity and meeting metadata not available to OS-level captioners. Examples: Zoom Live Transcript, Microsoft Teams captions, Google Meet captions. These work only inside the respective app.</li>
+            </ul>
+            <p>The practical consequence: if your day involves a Teams standup, then a Slack Huddle, then a YouTube tutorial, and then a podcast, <strong>only an OS-level or third-party cross-app captioner covers all four contexts</strong>. Any app-level solution drops out the moment you leave that app.</p>
 
             <h2>2026 comparison: which live captions to use when</h2>
             <table>
@@ -118,91 +140,171 @@
                         <th>Provider</th>
                         <th>Layer</th>
                         <th>Strengths</th>
-                        <th>Limits</th>
+                        <th>Key limits</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Windows 11 Live Captions</td>
                         <td>OS-level</td>
-                        <td>Works across all desktop apps, on-device privacy, free</td>
-                        <td>Limited language coverage outside English</td>
+                        <td>Free, on-device, works across every desktop app, supports 60+ languages for display</td>
+                        <td>Captions source language only (no translation); caption window not movable to secondary monitor on all configs</td>
                     </tr>
                     <tr>
                         <td>macOS Live Captions</td>
                         <td>OS-level</td>
-                        <td>System-wide captions on Apple Silicon, on-device</td>
-                        <td>Requires recent macOS; language list narrower than Windows</td>
+                        <td>On-device (Apple Silicon), system-wide, tight OS integration</td>
+                        <td>Requires macOS Ventura or later; language support narrower than Windows; Intel Macs need iCloud fallback</td>
                     </tr>
                     <tr>
                         <td>Android Live Caption</td>
                         <td>OS-level (Pixel-first)</td>
-                        <td>Captions any audio on the phone, on-device</td>
-                        <td>Mobile only; not for desktop workflows</td>
+                        <td>Captions any phone audio on-device, instant activation from volume button</td>
+                        <td>Mobile only; limited language support on non-Pixel Android; no desktop workflow</td>
+                    </tr>
+                    <tr>
+                        <td>iOS Live Captions</td>
+                        <td>OS-level</td>
+                        <td>System-wide captions on iPhone 11+ running iOS 16+; on-device</td>
+                        <td>English-only in most regions as of 2026; no translation layer</td>
                     </tr>
                     <tr>
                         <td>Chrome Live Caption</td>
                         <td>Browser-level</td>
-                        <td>Works on any tab playing audio; runs locally</td>
-                        <td>Tab-scoped; English-only in many regions</td>
+                        <td>Works on any Chrome tab playing audio; no install; runs locally</td>
+                        <td>Tab-scoped; English-only in many regions; misses native desktop audio</td>
                     </tr>
                     <tr>
-                        <td>Zoom / Teams / Meet captions</td>
+                        <td>Zoom Live Transcript</td>
                         <td>App-level</td>
-                        <td>Best speaker labeling and meeting context</td>
-                        <td>Each platform's coverage and admin policy differs</td>
+                        <td>Speaker labels, meeting transcript saving, multi-language captions if admin enables</td>
+                        <td>Admin must enable; quality varies with plan tier; Zoom only</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft Teams captions</td>
+                        <td>App-level</td>
+                        <td>Deep Microsoft 365 integration, speaker attribution, translated captions (some plans)</td>
+                        <td>Microsoft 365 license required for translated captions; Teams only</td>
+                    </tr>
+                    <tr>
+                        <td>Google Meet captions</td>
+                        <td>App-level</td>
+                        <td>Instant on, no setup, translated captions (Workspace plans)</td>
+                        <td>Google Meet only; translation needs Workspace subscription</td>
                     </tr>
                     <tr>
                         <td>Live Subtitles</td>
                         <td>OS-level + dual-language</td>
-                        <td>Cross-app captions plus real-time translation; works across Windows and macOS apps</td>
-                        <td>Third-party install required; not pre-bundled with the OS</td>
+                        <td>Cross-app captions across all Windows apps; real-time translation to a second language simultaneously; 50+ language pairs</td>
+                        <td>Third-party install; Windows-focused (no native macOS build yet)</td>
                     </tr>
                 </tbody>
             </table>
 
-            <h2>How AI live captions actually work under the hood</h2>
-            <p>A live caption pipeline does five things continuously: capture audio from a source, run voice activity detection, push the audio into an ASR model, post-process the text for punctuation and casing, and render the result on screen. The bottleneck is rarely the model accuracy in 2026 — it is the audio source. System-audio captures (from Zoom, browser, OS) are clean and stable. Microphone-only captures pick up room noise and degrade rapidly with two or more speakers.</p>
-
             <h2>When each layer wins</h2>
-            <h3>OS-level wins when</h3>
-            <p>You move between apps during the day — meeting in the morning, Netflix at lunch, podcast in the afternoon. One OS layer follows you everywhere. Privacy-sensitive use cases also prefer OS-level because audio never leaves the device.</p>
+            <h3>OS-level is the right choice when</h3>
+            <p>You move between multiple apps during the day — morning standup in Teams, an afternoon of web research, an evening podcast or YouTube session. A single OS-level layer follows you through all of it. OS-level is also the correct choice for privacy-sensitive workflows: on Windows 11 and macOS, the ASR runs entirely on-device; audio never leaves your machine. This matters for healthcare professionals, legal teams, and anyone dealing with confidential conversations.</p>
 
-            <h3>App-level wins when</h3>
-            <p>You stay inside one meeting platform all day, you need speaker labels with names from the meeting attendee list, or your admin has rolled out translated captions inside Teams/Meet/Zoom. Native captions match the platform's own UX.</p>
+            <h3>App-level is the right choice when</h3>
+            <p>You spend most of your day inside one platform and that platform's captions are excellent. Zoom's transcript, for instance, associates captions with speaker names from the attendee list — something no OS-level captioner can do. Teams translated captions can render a German colleague's speech as English text simultaneously, which is a killer feature for international teams. If your admin has provisioned those features, use them — they are deeply integrated and require no extra install.</p>
 
-            <h3>Browser-level wins when</h3>
-            <p>Most of your audio lives in tabs (YouTube tutorials, web meetings, web-based players). Chrome Live Caption captions any tab without extra installs.</p>
+            <h3>Browser-level is the right choice when</h3>
+            <p>Your audio primarily lives in browser tabs: YouTube tutorials, web-based conference rooms, streaming video. Chrome Live Caption requires zero configuration and works immediately. For casual, browser-heavy use it is often the highest-value lowest-effort option.</p>
 
-            <h3>Third-party cross-app wins when</h3>
-            <p>You need translation alongside captions (OS-native is mostly same-language), dual-language display for learning, or captions on platforms that don't ship their own (Discord voice chat, OBS streams, recorded video files). This is the gap Live Subtitles fills.</p>
+            <h3>A third-party cross-app layer wins when</h3>
+            <p>You need something that native OS captioners do not provide: translation into a second language simultaneously displayed on screen, support for apps that have no built-in captions (Discord voice, OBS Studio, VLC, recorded lecture videos), or caption overlay pinned to a specific monitor position regardless of which app is in focus. This is the gap that <strong>Live Subtitles</strong> fills. It captions every Windows app and simultaneously translates to your chosen language — useful for language learners, ESL professionals, international meetings, and anyone whose workflow crosses multiple platforms in a single day. You can download it from the <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft Store</a>.</p>
 
-            <h2>Setup checklist</h2>
+            <h2>Accuracy: what the numbers actually mean</h2>
+            <p>Marketing claims of "99% accuracy" are technically true under ideal conditions — and misleading in practice. Here is what real-world accuracy looks like in 2026:</p>
+            <ul>
+                <li><strong>Clean, single-speaker audio (headset mic, studio recording):</strong> 95–98% word accuracy. At this level, you will miss one or two words per paragraph. Comfortable for most accessibility needs.</li>
+                <li><strong>Two-speaker meeting, average home office:</strong> 85–92%. Sentences are fully comprehensible; occasional proper nouns or technical terms are mangled.</li>
+                <li><strong>Multi-speaker meeting with overlapping speech:</strong> 70–82%. Useful as a comprehension aid but not suitable for verbatim documentation without correction.</li>
+                <li><strong>Phone speaker playback or Bluetooth compression:</strong> 60–75%. Audio artifacts severely damage ASR quality regardless of how powerful the model is.</li>
+            </ul>
+            <p>The consistent practical advice from these numbers: invest in audio quality before investing in a more powerful caption tool. A wired USB headset improves accuracy more reliably than upgrading between captioning services.</p>
+
+            <div style="background: rgba(255,200,0,0.07); border-left: 4px solid #ffc800; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#ffc800;">Note on language accuracy:</strong> Word error rates for languages other than English, Spanish, and Mandarin are substantially higher — often 15–25 percentage points worse — on most publicly available models. If your primary use case involves Hindi, Arabic, Portuguese, or another language, test each captioner's accuracy on your specific dialect before committing.
+            </div>
+
+            <h2>Privacy: on-device vs. cloud captioning</h2>
+            <p>In 2026, the on-device vs. cloud distinction is more important than ever because live captions now process everything you say in real time. Key points:</p>
+            <ul>
+                <li><strong>Windows 11 Live Captions</strong> runs on-device by default; Microsoft states that no audio data is sent to Microsoft servers.</li>
+                <li><strong>macOS Live Captions</strong> on Apple Silicon is fully on-device. Intel Macs fall back to iCloud processing, which means audio leaves the device.</li>
+                <li><strong>Android Live Caption</strong> (on Pixel) is on-device.</li>
+                <li><strong>App-level captions (Zoom, Teams, Meet)</strong> process audio on the vendor's cloud infrastructure. Check your organization's data processing agreements.</li>
+                <li><strong>Live Subtitles</strong> uses on-device ASR for the source-language recognition step; the translation step involves a secure API call.</li>
+            </ul>
+            <p>For HIPAA-covered entities or organizations with strict data residency requirements, confirm the vendor's data processing agreement before deploying any cloud-based captioner in meetings that include protected information.</p>
+
+            <h2>Step-by-step setup for the most common workflows</h2>
+            <h3>Workflow A: Desktop power user across multiple apps (Windows)</h3>
             <ol>
-                <li>Identify your dominant context: desktop, mobile, browser, or specific app.</li>
-                <li>Try the native OS captions first — they are free and require zero install.</li>
-                <li>If you need translation or multi-app coverage, add a third-party layer.</li>
-                <li>Avoid stacking two caption layers in the same context: they desync visually and confuse the eye.</li>
+                <li>Open <strong>Settings → Accessibility → Captions</strong> and toggle on Live Captions. Choose your preferred language and caption style.</li>
+                <li>Pin the caption bar to the top of your primary monitor.</li>
+                <li>If you want translation alongside English captions, install <strong>Live Subtitles</strong> from the Microsoft Store, configure source and target languages, and dock its overlay below the Windows caption bar.</li>
+                <li>Disable app-level captions in Zoom and Teams to avoid double-rendering when those apps are active.</li>
             </ol>
+            <h3>Workflow B: Browser-heavy user (any OS)</h3>
+            <ol>
+                <li>In Chrome, go to <strong>Settings → Accessibility</strong> and enable Live Caption.</li>
+                <li>Play any tab with audio; the caption bar appears at the bottom of the browser window automatically.</li>
+                <li>For content outside the browser, fall back to your OS-level captioner.</li>
+            </ol>
+            <h3>Workflow C: Video conferencing only</h3>
+            <ol>
+                <li>In <strong>Zoom</strong>: during a meeting, click "CC" → "Enable Auto-Transcription". Ask the meeting host to allow captions if the button is greyed out.</li>
+                <li>In <strong>Teams</strong>: click the three-dot menu → "Turn on live captions". If your organization uses Premium, translated captions appear as a separate option.</li>
+                <li>In <strong>Google Meet</strong>: click "CC" in the bottom toolbar. Translated captions require a Workspace Business Standard plan or above.</li>
+            </ol>
+            <p>For a detailed head-to-head of these three platforms' translated caption quality, see <a href="article-18.html" style="color:#00b8ff;">Google Meet vs Zoom vs Teams Translated Captions in 2026</a>.</p>
 
             <h2>Common myths about live captions in 2026</h2>
             <ul>
-                <li><strong>"AI captions are 99% accurate":</strong> only on clean studio audio. In real meetings with crosstalk, accuracy is 75–90% regardless of vendor.</li>
-                <li><strong>"Live captions need internet":</strong> not anymore. Most 2026 OS-level captioners run on-device.</li>
-                <li><strong>"Captions and subtitles are the same":</strong> subtitles are pre-written translations of dialogue; captions are AI-generated and include speaker shifts and audio cues.</li>
+                <li><strong>"AI captions are 99% accurate":</strong> only on clean single-speaker studio audio. Realistic meeting conditions drop accuracy to 75–90% regardless of vendor. Treat captions as a comprehension aid, not a verbatim transcript.</li>
+                <li><strong>"Live captions need internet":</strong> not anymore. Most 2026 OS-level captioners run entirely on-device. Windows 11, macOS (Apple Silicon), and Android Live Caption all process audio locally.</li>
+                <li><strong>"Captions and subtitles are the same thing":</strong> subtitles are pre-written translations of scripted dialogue; captions are AI-generated in real time and can also convey non-speech audio cues like [applause] or [music]. The terms are often used interchangeably in casual speech, but they are technically distinct.</li>
+                <li><strong>"More powerful hardware = better captions":</strong> true only up to a point. A modern mid-range laptop handles on-device Whisper without issue. The real bottleneck is audio input quality, not compute.</li>
+                <li><strong>"OS captions work for translation too":</strong> native OS captioners (Windows, macOS, Android) caption in the source language only. Translation to a second language requires either an app-level solution with a translation layer or a dedicated third-party tool like Live Subtitles.</li>
             </ul>
 
-            <h2>FAQ</h2>
-            <p><strong>Do live captions work offline?</strong><br>OS-level captions on Windows 11, macOS and recent Android are on-device. App-level captions usually need a server. Check each vendor's docs.</p>
-            <p><strong>Can I get live captions in two languages at once?</strong><br>Native OS captions are usually source-language only. Dual-language requires a third-party layer.</p>
-            <p><strong>Will live captions replace subtitles?</strong><br>For live audio yes; for pre-recorded film/TV no — scripted subtitles still beat ASR for craft.</p>
+            <h2>Live captions for accessibility vs. language learning vs. productivity</h2>
+            <p>The same technology serves very different populations, and the optimal setup differs by use case:</p>
+            <ul>
+                <li><strong>Deaf and hard-of-hearing users:</strong> OS-level captions with a large font size, high contrast, and positioning at a comfortable reading distance. Speed of onset matters most; aim for sub-2-second latency. Windows 11 and macOS both allow font/color customization.</li>
+                <li><strong>Language learners:</strong> dual-language display is extremely effective — see the source language in real time alongside your target language. This is the core use case for tools like Live Subtitles. Watching a <a href="/netflix-subtitles.html" style="color:#00b8ff;">Netflix show with dual subtitles</a> or following a lecture with original audio plus translated captions accelerates acquisition significantly.</li>
+                <li><strong>ESL professionals in international meetings:</strong> translated captions from the meeting platform (Teams Premium or Meet Workspace) or a third-party layer reduce the cognitive load of processing a non-native language under time pressure. Even 85% accuracy is sufficient to catch missed technical terms or action items.</li>
+                <li><strong>Productivity users (ADHD, reading comprehension support):</strong> captions reinforce auditory input with visual text, improving retention. An OS-level captioner that follows the user across all apps is most effective here because it provides constant reinforcement regardless of context.</li>
+            </ul>
+
+            <h2>Frequently asked questions</h2>
+            <p><strong>Do live captions work offline?</strong><br>
+            OS-level captions on Windows 11, macOS (Apple Silicon), and recent Android are fully on-device and work without internet. App-level captions (Zoom, Teams, Meet) generally require a server connection. Chrome Live Caption runs locally after an initial model download.</p>
+
+            <p><strong>Can I get live captions in two languages at once?</strong><br>
+            Native OS captioners output source language only. Dual-language simultaneous display requires a third-party tool. Live Subtitles supports 50+ language pairs and renders both languages on screen simultaneously — useful for meetings where different participants speak different languages.</p>
+
+            <p><strong>Why do captions sometimes show random words during music or silence?</strong><br>
+            Voice Activity Detection false positives. The ASR model is interpreting non-speech audio as phonemes. Most captioners let you set a VAD sensitivity threshold; reducing it eliminates most false triggers at the cost of slightly cutting the start of words.</p>
+
+            <p><strong>Can I save a live caption session as a transcript?</strong><br>
+            Windows 11 Live Captions does not save transcripts natively. Zoom and Teams both offer in-app transcript saving (check your plan). Third-party tools vary; Live Subtitles supports export to text file from the session history panel.</p>
+
+            <p><strong>Will live captions replace scripted subtitles for film and TV?</strong><br>
+            Not for pre-recorded narrative content. Scripted subtitles are edited by professionals, timed to the frame, and handle music, accents, and cultural context far better than ASR. For live broadcasts and real-time events, AI-generated captions are rapidly approaching broadcast quality in major languages.</p>
+
+            <p><strong>How do I add live captions to a Zoom meeting as a host?</strong><br>
+            In your Zoom account settings (web portal), navigate to <em>Meeting → In Meeting (Advanced)</em> and enable "Automated captions". During the meeting, participants can activate captions via the CC button. For a full walkthrough, see <a href="article-10.html" style="color:#00b8ff;">our Zoom live captions setup guide</a>.</p>
 
             <h2>References</h2>
             <ul>
-                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft — Use Live Captions on Windows</a></li>
-                <li><a href="https://support.apple.com/en-us/HT213295" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — Live Captions on Mac</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft — Use Live Captions on Windows 11</a></li>
+                <li><a href="https://support.apple.com/en-us/HT213295" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — Live Captions on Mac and iPhone</a></li>
                 <li><a href="https://support.google.com/accessibility/android/answer/9350862" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google — Live Caption on Android</a></li>
                 <li><a href="https://support.google.com/chrome/answer/10538231" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google — Live Caption in Chrome</a></li>
+                <li><a href="https://openai.com/research/whisper" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">OpenAI — Whisper: Robust Speech Recognition via Large-Scale Weak Supervision</a></li>
             </ul>
 
             <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
@@ -211,12 +313,13 @@
                     <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">Transcribe Audio to Text in 2026: Real-Time vs Batch Transcription Compared</a></li>
                     <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">Voice Translation Apps in 2026: Real-Time Tools Compared by Use Case</a></li>
                     <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams Translated Captions in 2026</a></li>
+                    <li><a href="article-10.html" style="color: #00b8ff; text-decoration: none;">Zoom Live Captions Setup: Step-by-Step Guide</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
                 <h3 style="color: #00ff9d; margin-top: 0;">Live captions across every app, with real-time translation</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Cross-app live captions and dual-language translation — works wherever audio happens.</p>
+                <p style="color: #eee; margin-bottom: 1.5rem;">Cross-app live captions and dual-language translation for Windows — works wherever audio happens, from meetings to media to Discord.</p>
                 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
             </div>
         </div>

@@ -13,13 +13,30 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>Диагностика fullscreen-оверлея субтитров в играх | Live Subtitles</title>
-    <meta name="description" content="Чеклист диагностики проблем оверлея субтитров в играх: видимость в fullscreen, borderless-режим, фокус, hotkey-поведение и быстрые шаги восстановления.">
+    <meta name="description" content="Субтитры пропали в полноэкранной игре? Пошаговый чеклист диагностики оверлея: borderless-режим, HDR, конфликт оверлеев и фокус. Решите проблему за 5 минут.">
     <meta name="keywords" content="fullscreen оверлей субтитров, диагностика оверлея субтитров, borderless fullscreen субтитры, в игре не видно субтитры, hotkey lock game mode">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-20.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-20.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-20.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-20.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-20.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-20.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-20.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-20.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-20.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-20.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-20.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-20.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-20.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-20.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="Диагностика fullscreen-оверлея субтитров в играх">
-    <meta property="og:description" content="Операционный чеклист для восстановления стабильности оверлея в игровых сценариях.">
+    <meta property="og:description" content="Субтитры пропали в полноэкранной игре? Пошаговый чеклист диагностики оверлея: borderless-режим, HDR, конфликт оверлеев и фокус. Решите проблему за 5 минут.">
     <meta property="og:url" content="https://live-subtitles.com/articles/ru/article-20.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/ru/games.webp">
     <meta property="og:image:width" content="1280">
@@ -28,7 +45,7 @@
     <meta property="og:locale" content="ru_RU">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Диагностика fullscreen-оверлея субтитров в играх">
-    <meta name="twitter:description" content="Быстрый путь диагностики проблем видимости и взаимодействия с игровым оверлеем субтитров.">
+    <meta name="twitter:description" content="Субтитры пропали в полноэкранной игре? Пошаговый чеклист диагностики оверлея: borderless-режим, HDR, конфликт оверлеев и фокус. Решите проблему за 5 минут.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ru/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -51,11 +68,22 @@
       "dateModified": "2026-05-12",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "Чеклист диагностики проблем оверлея субтитров в играх: видимость в fullscreen, borderless-режим, фокус, hotkey-поведение и быстрые шаги восстановления.",
+      "description": "Субтитры пропали в полноэкранной игре? Пошаговый чеклист диагностики оверлея: borderless-режим, HDR, конфликт оверлеев и фокус. Решите проблему за 5 минут.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/ru/article-20.html"
     }
     </script>
     <link rel="preload" as="image" href="/articles/img/ru/games.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Главная", "item": "https://live-subtitles.com/ru/" },
+        { "@type": "ListItem", "position": 2, "name": "Статьи", "item": "https://live-subtitles.com/articles/ru/" },
+        { "@type": "ListItem", "position": 3, "name": "Диагностика fullscreen-оверлея субтитров в играх", "item": "https://live-subtitles.com/articles/ru/article-20.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
@@ -67,42 +95,93 @@
         <img class="article-hero" src="/articles/img/ru/games.webp" alt="Живые субтитры во время соревновательной игры" width="1280" height="771" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p>Если оверлей субтитров ведет себя нестабильно в игре, хаотичные правки только тратят время. Этот плейбук дает короткий порядок диагностики, чтобы быстро понять источник: рендеринг, поведение взаимодействия или ошибка рабочего процесса.</p>
+            <p>Когда оверлей субтитров ведет себя нестабильно прямо посреди катки, хаотичные правки настроек почти всегда тратят время впустую. Этот плейбук задает строгий порядок диагностики, который изолирует настоящую причину: режим рендеринга, режим взаимодействия или несоответствие рабочего процесса. Останавливайтесь на первом слое, где проблема воспроизводится, и не трогайте остальное, пока не подтвердите гипотезу.</p>
 
             <h2>Шаг 1: сначала проверьте режим рендера</h2>
-            <p>До любых правок субтитров проверьте display mode игры. Если вы в exclusive fullscreen и субтитры пропали, переходите на <strong>Borderless Fullscreen</strong>. Это закрывает большинство проблем видимости desktop-оверлеев.</p>
+            <p>До любых правок субтитров проверьте режим отображения (display mode) игры. Если вы находитесь в эксклюзивном полноэкранном режиме (exclusive fullscreen) и субтитры пропали, первым делом переходите на <strong>Borderless Fullscreen</strong> (полноэкранный без рамки). Это закрывает большинство проблем видимости оконных оверлеев на рабочем столе, потому что система композитинга Windows рисует поверх оконного приложения, но не имеет доступа к буферу эксклюзивного полноэкрана.</p>
 
             <h2>Шаг 2: проверьте поведение Lock/Game Mode</h2>
+            <p>Второй слой — это взаимодействие с окном субтитров. Игровой режим должен сделать оверлей «прозрачным» для мыши и клавиатуры, чтобы он не перехватывал фокус у игры.</p>
             <ul>
-                <li>Включите Lock/Game Mode через <strong>Ctrl+Shift+L</strong>.</li>
-                <li>Убедитесь, что случайные клики по окну субтитров исчезли.</li>
-                <li>Проверьте, что игра сохраняет фокус в движении и в бою.</li>
+                <li>Включите Lock/Game Mode сочетанием <strong>Ctrl+Shift+L</strong>.</li>
+                <li>Убедитесь, что случайные клики по окну субтитров больше не происходят.</li>
+                <li>Проверьте, что игра сохраняет фокус во время движения мыши и боя.</li>
             </ul>
 
             <h2>Шаг 3: проверьте плотность и позицию субтитров</h2>
-            <p>Слишком плотный текстовый блок часто выглядит как "проблема видимости", хотя рендер работает нормально. Используйте меньше строк, выше контраст и стабильную нижнюю позицию.</p>
+            <p>Не перегружайте текстовую область. Высокая плотность субтитров в сочетании с неудачным расположением визуально выглядит как баг видимости, даже когда рендеринг работает идеально. Используйте меньше строк, более высокий контраст и стабильную позицию в нижней части экрана, чтобы взгляд возвращался к субтитрам по привычке, а не по поиску.</p>
 
             <h2>Шаг 4: синхронизируйте формат голосовых коллаутов</h2>
-            <p>Часть "проблем субтитров" на практике - это проблемы качества коллаутов. Если команда говорит длинно и несогласованными терминами, эффективность субтитров падает. Нужны короткие стандартизированные формулировки.</p>
+            <p>Многие «проблемы субтитров» на самом деле являются проблемами качества коллаутов. Если тиммейты говорят длинными предложениями с несогласованными терминами, полезность субтитров резко падает: движок распознавания корректно выводит текст, но его невозможно использовать в темпе игры. Стандартизируйте короткие коллауты и общий словарь карты — это сделает субтитры читаемыми за доли секунды.</p>
 
             <h2>Быстрый чеклист восстановления</h2>
             <div class="checklist">
                 <ul>
                     <li>Переключите игру в Borderless Fullscreen.</li>
                     <li>Включите Lock/Game Mode и проверьте Ctrl+Shift+L.</li>
-                    <li>Переместите субтитры в стабильную нижнюю зону.</li>
-                    <li>Уменьшите размер текстового блока на экране.</li>
-                    <li>Сделайте повторный тест 3-5 минут в живом голосовом канале.</li>
+                    <li>Переместите субтитры в стабильную нижнюю зону экрана.</li>
+                    <li>Уменьшите размер текстового блока субтитров.</li>
+                    <li>Сделайте повторный тест 3–5 минут в живом голосовом канале.</li>
                 </ul>
             </div>
 
             <h2>Когда нужна эскалация</h2>
-            <p>Если в конкретной игре оверлей все равно скрыт, фиксируйте точный тайтл, API-режим и display path. Так проще отделить ограничения рендер-пути от ошибок пользовательской конфигурации.</p>
+            <p>Если в конкретной игре оверлей по-прежнему скрыт, задокументируйте точное название тайтла, режим графического API (DirectX 11, DirectX 12, Vulkan) и путь отображения. Это помогает отделить ограничения рендеринга, специфичные для тайтла, от общих ошибок конфигурации субтитров — и не тратить часы на проблему, которую разработчик игры заложил намеренно.</p>
+
+            <h2>Почему «субтитры не видны в полноэкранном режиме» почти никогда не баг субтитров</h2>
+            <p>Когда игрок сообщает, что подписи пропали во время игры, первый рефлекс — обвинить движок субтитров. На практике более чем в 80% случаев, которые мы разбираем, причина сводится к одной из трех вещей, не имеющих отношения к конвейеру подписей: <strong>эксклюзивный рендеринг через swap chain</strong>, <strong>путь композитинга HDR</strong> или <strong>конфликт со сторонними оверлеями</strong>. Пока эти три фактора не исключены, изменение настроек субтитров не убирает проблему, а только сдвигает ее.</p>
+
+            <h2>Порядок диагностики, который экономит время</h2>
+            <p>Проводите диагностику строго в этом порядке. Останавливайтесь на первом слое, где проблема воспроизводится.</p>
+            <ol>
+                <li><strong>Воспроизведите в 60-секундном цикле.</strong> Запустите игру, спровоцируйте голосовую реплику, понаблюдайте за оверлеем. Если баг непостоянный, фиксируйте таймстемпы.</li>
+                <li><strong>Смените режим отображения.</strong> Перейдите из эксклюзивного полноэкрана в Borderless Fullscreen. Если оверлей вернулся — корень в swap chain.</li>
+                <li><strong>Переключите HDR.</strong> Если субтитры рендерятся, но выглядят выцветшими или невидимыми на ярком фоне — виноват путь тональной компрессии HDR.</li>
+                <li><strong>Отключите вторичные оверлеи.</strong> Steam, Discord, GeForce Experience и Xbox Game Bar регистрируют собственные глобальные оверлеи. Отключайте их по одному, по одной катке на каждый.</li>
+                <li><strong>Протестируйте вне игры.</strong> Произнесите тестовую фразу, глядя на ролик YouTube. Если оверлей там работает — проблема привязана к конкретной игре.</li>
+            </ol>
+
+            <h2>Рецепты исправления по каждой причине</h2>
+
+            <h3>Причина A: эксклюзивный swap chain</h3>
+            <p>Определяется так: субтитры работают на рабочем столе и в Borderless Fullscreen, но пропадают в эксклюзивном полноэкране. Решение: переведите игру в Borderless Fullscreen. Современные драйверы GPU компонуют этот режим почти идентично эксклюзивному — разница в производительности обычно меньше 2%, а на Windows 11 нередко нулевая.</p>
+
+            <h3>Причина B: композитинг HDR</h3>
+            <p>Определяется так: оверлей виден, но нечитаем — черное на черном, белое на белом или со смещением цвета. Решение: запустите Windows HDR Calibration (Параметры → Система → Дисплей → HDR), установите яркость SDR-контента на 30–40 и переключите тему оверлея на высококонтрастную темную.</p>
+
+            <h3>Причина C: конфликт стека оверлеев</h3>
+            <p>Определяется так: оверлеи мерцают или поочередно появляются и исчезают. Решение: назначьте инструменту субтитров роль единственного «основного оверлея». Отключите оверлей Steam в игре (Steam → Настройки → В игре), оверлей Discord (Настройки пользователя → Внутриигровой оверлей) и Xbox Game Bar (Параметры → Игры → Game Bar).</p>
+
+            <h3>Причина D: потеря фокуса на нескольких мониторах</h3>
+            <p>Определяется так: субтитры рендерятся на втором мониторе, а игра — на основном. Решение: закрепите окно субтитров за основным монитором через опцию приложения «Закрепить за дисплеем», затем включите Windows «Оптимизации для оконных игр» (Параметры → Система → Дисплей → Графика → Параметры по умолчанию).</p>
+
+            <h2>Пять вопросов в каждом отчете о баге</h2>
+            <ol>
+                <li>Название игры и точная версия (номер патча, а не «последняя»).</li>
+                <li>Режим отображения во время появления бага.</li>
+                <li>Включен ли HDR? Один монитор или несколько?</li>
+                <li>Какие еще оверлеи работают (Discord, Steam, GeForce, Xbox Bar)?</li>
+                <li>Баг был сразу при запуске или после переключения окна?</li>
+            </ol>
+            <p>Без этих ответов вы гадаете. С ними корневая причина обычно очевидна меньше чем за пять минут.</p>
+
+            <h2>Когда правильное действие — «ничего не делать»</h2>
+            <p>Небольшой набор тайтлов намеренно блокирует оверлеи композитора во время проверок античита. Примеры — отдельные рейтинговые режимы, которые блокируют swap chain, чтобы предотвратить чит-захват экрана. В таких играх ни один стек субтитров не отобразится в эксклюзивном полноэкране. Честный ответ: используйте для этого конкретного тайтла Borderless Fullscreen и примите ничтожный компромисс по производительности.</p>
+
+            <h2>Почему это важно для рейтинговой игры</h2>
+            <p>Капризный оверлей, который работает в 90% случаев, хуже того, что стабильно не работает. При стабильном отказе вы адаптируетесь. При перемежающемся отказе вы продолжаете тянуться к коллауту, которого нет, и теряете ритм. Цель диагностики — не «заставить работать почти всегда», а «сделать поведение предсказуемым настолько, чтобы вы перестали об этом думать».</p>
+
+            <h2>Шаблоны для фиксации повторяющихся проблем</h2>
+            <p>Держите короткий Markdown-файл в закрепленных сообщениях своего Discord. Две колонки: <em>Тайтл</em> и <em>Известное ограничение</em>. Примеры строк: «Valorant — оверлею нужен Borderless», «CS2 — работает в обоих режимах после патча 2026-03». Этот файл ценнее любой вики по диагностике, потому что он — эмпирическая правда вашей команды.</p>
+
+            <h2>Как помогает приложение Live Subtitles</h2>
+            <p>Приложение <strong>Live Subtitles</strong> объединяет распознавание речи, перевод и устойчивый оверлей в одном предсказуемом окне: режим Lock/Game Mode, закрепление за дисплеем и высококонтрастные темы решают большинство описанных выше причин из коробки. Один и тот же сценарий работает для игр, голосового чата и стримов, поэтому вам не нужно перенастраивать оверлей при каждой смене сцены. <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Установите Live Subtitles из Microsoft Store</a> и проверьте чеклист восстановления на собственной системе.</p>
 
             <h2>Связанные материалы</h2>
             <ul>
                 <li><a href="/ru/game-mode-subtitles.html" style="color:#00b8ff;">Страница Game Mode субтитров</a></li>
                 <li><a href="article-19.html" style="color:#00b8ff;">Гайд по настройке Game Mode для соревновательных игр</a></li>
+                <li><a href="article-21.html" style="color:#00b8ff;">Субтитры в Discord Voice Chat для международных сквадов</a></li>
                 <li><a href="/ru/discord-twitch-subtitles.html" style="color:#00b8ff;">Субтитры Discord и Twitch в реальном времени</a></li>
             </ul>
 

@@ -13,13 +13,30 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>FPSとMOBA向け字幕オーバーレイ最適設定 | Live Subtitles</title>
-    <meta name="description" content="FPSとMOBAで見やすさを保つ字幕オーバーレイの位置・密度・コントラスト設定。">
+    <meta name="description" content="FPSとMOBA向け字幕オーバーレイの最適な設定方法を徹底的に解説しています。表示位置・行数・文字コントラスト・ロックモードなどの各設定を正しく細かく行うことで、ゲームプレイの視認性を損なわない快適な字幕環境を構築できます。Live Subtitlesで今すぐ最適化を始めましょう。">
     <meta name="keywords" content="subtitle overlay settings, fps subtitles, moba subtitles, game mode overlay, borderless fullscreen subtitles, subtitle readability">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/ja/article-22.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-22.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-22.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-22.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-22.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-22.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-22.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-22.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-22.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-22.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-22.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-22.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-22.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-22.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-22.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-22.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-22.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-22.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="FPSとMOBA向け字幕オーバーレイ最適設定">
-    <meta property="og:description" content="FPSとMOBAで見やすさを保つ字幕オーバーレイの位置・密度・コントラスト設定。">
+    <meta property="og:description" content="FPSとMOBA向け字幕オーバーレイの最適な設定方法を徹底的に解説しています。表示位置・行数・文字コントラスト・ロックモードなどの各設定を正しく細かく行うことで、ゲームプレイの視認性を損なわない快適な字幕環境を構築できます。Live Subtitlesで今すぐ最適化を始めましょう。">
     <meta property="og:url" content="https://live-subtitles.com/articles/ja/article-22.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/ja/games.webp">
     <meta property="og:image:width" content="1280">
@@ -28,7 +45,7 @@
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="FPSとMOBA向け字幕オーバーレイ最適設定">
-    <meta name="twitter:description" content="FPSとMOBAで見やすさを保つ字幕オーバーレイの位置・密度・コントラスト設定。">
+    <meta name="twitter:description" content="FPSとMOBA向け字幕オーバーレイの最適な設定方法を徹底的に解説しています。表示位置・行数・文字コントラスト・ロックモードなどの各設定を正しく細かく行うことで、ゲームプレイの視認性を損なわない快適な字幕環境を構築できます。Live Subtitlesで今すぐ最適化を始めましょう。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ja/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -51,15 +68,26 @@
       "dateModified": "2026-05-12",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "FPSとMOBAで見やすさを保つ字幕オーバーレイの位置・密度・コントラスト設定。",
+      "description": "FPSとMOBA向け字幕オーバーレイの最適な設定方法を徹底的に解説しています。表示位置・行数・文字コントラスト・ロックモードなどの各設定を正しく細かく行うことで、ゲームプレイの視認性を損なわない快適な字幕環境を構築できます。Live Subtitlesで今すぐ最適化を始めましょう。",
       "mainEntityOfPage": "https://live-subtitles.com/articles/ja/article-22.html"
     }
     </script>
     <link rel="preload" as="image" href="/articles/img/ja/games.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://live-subtitles.com/ja/" },
+        { "@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://live-subtitles.com/articles/ja/" },
+        { "@type": "ListItem", "position": 3, "name": "FPSとMOBA向け字幕オーバーレイ最適設定", "item": "https://live-subtitles.com/articles/ja/article-22.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
-        <a href="index.html" class="back-link">&larr; Back to articles</a>
+        <a href="index.html" class="back-link">&larr; 記事一覧に戻る</a>
         <h1 class="article-title" itemprop="headline">FPSとMOBA向け字幕オーバーレイ最適設定</h1>
         <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日</div>
         <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ゲーミングオーバーレイ エンジニア, Live Subtitles</div>
@@ -67,57 +95,101 @@
         <img class="article-hero" src="/articles/img/ja/games.webp" alt="競技ゲームのマッチ中のライブ字幕オーバーレイ" width="1280" height="771" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p>In fast games, subtitle quality depends less on style and more on layout discipline. A readable overlay should support decisions, not compete with the HUD. This guide gives practical settings for FPS and MOBA matches.</p>
+            <p>競技ゲームにおける字幕の品質は、デザインの美しさよりもレイアウトの規律によって決まります。読みやすいオーバーレイはプレイヤーの判断を補助するものであり、HUD（ヘッドアップディスプレイ）と注意を奪い合うものであってはなりません。このガイドでは、FPSおよびMOBAのマッチで実際に役立つ字幕設定を具体的に解説します。Live Subtitlesアプリを使えば、チームメイトの音声を画面上にリアルタイムで表示でき、聴覚に頼らず情報を把握できるようになります。</p>
 
-            <h2>Placement rules</h2>
+            <h2>競技ゲームHUDの視覚的構造を理解する</h2>
+            <p>FPSやMOBAのHUDは、プレイヤーの視覚的注意の約70%がゲーム世界に向けられ、残り30%がHUD要素に割り当てられることを前提として設計されています。字幕やボイスチャット表示、パーティフレームなど、追加されるオーバーレイはすべてその30%を奪い合います。誤った位置に字幕を置くと、単に「マップが見えにくくなる」だけでなく、クールダウン完了・弾薬残量・アビリティ解放などのHUD変化の検知を積極的に妨害することになります。周辺視野の注意は有限だからです。</p>
+            <p>ゲームによってHUDの密度は大きく異なります。タクティカルFPSでは画面中央付近にクロスヘアと情報が集中し、MOBAでは画面下部にアビリティバーとミニマップが並びます。字幕オーバーレイを設定する前に、自分がプレイするゲームのHUD構造を把握することが最初の一歩です。</p>
+
+            <h2>「禁止エリア」ルール：配置してはいけない場所</h2>
+            <p>字幕の位置を決める前に、HUDの「禁止エリア（ノーフライゾーン）」を特定してください。これはゲームエンジンが予測不可能なタイミングで重要な状態情報を表示するエリアです。禁止エリアの内部や隣接した位置に字幕を置くと、ゲームのシグナルを見逃すか、意識が誤った方向へ引っ張られます。</p>
+            <table style="width:100%; border-collapse:collapse; margin:18px 0;">
+                <thead>
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                        <th style="text-align:left; padding:8px;">ジャンル</th>
+                        <th style="text-align:left; padding:8px;">禁止エリア</th>
+                        <th style="text-align:left; padding:8px;">安全な字幕配置エリア</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="padding:8px; color:#eee;">タクティカルFPS</td><td style="padding:8px; color:#eee;">クロスヘア、ミニマップ、キルフィード</td><td style="padding:8px; color:#eee;">左下、画面下から約30%</td></tr>
+                    <tr><td style="padding:8px; color:#eee;">バトルロイヤル</td><td style="padding:8px; color:#eee;">弾薬カウンター、コンパス、キルフィード、ピングホイール</td><td style="padding:8px; color:#eee;">弾薬表示の上・下から約20%の中央</td></tr>
+                    <tr><td style="padding:8px; color:#eee;">MOBA</td><td style="padding:8px; color:#eee;">ミニマップ、アビリティバー、スコアボードポップアップ</td><td style="padding:8px; color:#eee;">ポートレートとアビリティバーの間（下中央）</td></tr>
+                    <tr><td style="padding:8px; color:#eee;">MMOレイド</td><td style="padding:8px; color:#eee;">パーティフレーム、キャストバー、ボスフレーム</td><td style="padding:8px; color:#eee;">パーティフレーム隣の右上エリア</td></tr>
+                </tbody>
+            </table>
+
+            <h2>字幕の配置ルール</h2>
             <ul>
-                <li>Keep subtitles in lower-center or lower-left area, outside crosshair path.</li>
-                <li>Avoid edges where minimap, kill feed, or ability cooldowns already compete for attention.</li>
-                <li>Do not change position mid-session unless a conflict is critical.</li>
+                <li>字幕は画面の下中央または左下に配置し、クロスヘアの軌跡から外れた場所を選ぶ。</li>
+                <li>ミニマップ、キルフィード、アビリティクールダウンがすでに集中しているエッジには配置しない。</li>
+                <li>セッション中は位置を変えない。競技中の設定変更は集中を乱し、パフォーマンスを低下させる。</li>
+                <li>新しい配置を試すときは、ランク戦の外（カジュアルモードやトレーニング）で必ずテストする。</li>
             </ul>
 
-            <h2>Density and formatting rules</h2>
+            <h2>周辺視野でも読める文字設定</h2>
+            <p>周辺視野では2つの能力が著しく低下します。<strong>色の識別力</strong>と<strong>文字形状の認識力</strong>です。直視したときに美しく読めるフォントが、クロスヘアに焦点を当てている状態では全く読めなくなることがあります。周辺視野での可読性を最大化するには、以下の設定が効果的です。</p>
             <ul>
-                <li>Prefer 1 to 2 short lines over long wrapped paragraphs.</li>
-                <li>Use high contrast text and moderate background opacity.</li>
-                <li>Increase line spacing slightly for peripheral readability.</li>
-                <li>Avoid decorative fonts that reduce recognition speed.</li>
+                <li><strong>フォントウェイト：</strong>中程度から太め。細いフォントは周辺視野で消えてしまう。</li>
+                <li><strong>字間（レタースペーシング）：</strong>デフォルトより若干広め。圧縮されたカーニングは斜め視点で「ぼやけた」印象になる。</li>
+                <li><strong>行の高さ（ラインハイト）：</strong>1.4〜1.6倍。詰めすぎると周辺視野で行が「融合して」見える。</li>
+                <li><strong>アウトライン（縁取り）：</strong>1〜2pxの暗色アウトライン。この設定一つで、HDRや明るいシーンでの視認性が最も大きく向上する。</li>
+                <li><strong>イタリック体を避ける：</strong>イタリック体は中心視野でも認識速度を5〜10%低下させる。競技環境では不要なリスク。</li>
             </ul>
 
-            <h2>Interaction stability rules</h2>
+            <h2>字幕密度のルール：1秒あたりどれだけの情報量か</h2>
+            <p>よくある間違いは、字幕をチャットログのように扱うことです。複数行を積み重ねて古い行を上にスクロールしていくスタイルは、競技プレイにおいては誤りです。画面に表示すべきは最新の1〜2行の短い文のみであり、2〜3秒以内に消去する設計が最適です。</p>
+            <ul>
+                <li><strong>最大表示行数：</strong>FPSは2行、MOBAは2〜3行、MMOは3行。</li>
+                <li><strong>1行あたりの最大文字数：</strong>日本語で約20〜25文字（英語換算で約40文字）。これを超えると視線を走らせる必要が生じる。</li>
+                <li><strong>フェードアウトまでの時間：</strong>FPSは2.0秒、バトルロイヤルは2.5秒、MOBAは3.0秒、レイドは3.5秒。</li>
+                <li><strong>フリーズ機能：</strong>現在の字幕を一時停止するホットキーを用意しておくと「もう一度言って」と声に出さずに内容を確認できる。</li>
+            </ul>
+
+            <h2>インタラクション安定性のルール</h2>
             <div class="checklist">
                 <ul>
-                    <li>Enable Lock/Game Mode before queue start.</li>
-                    <li>Use Ctrl+Shift+L for immediate emergency toggle.</li>
-                    <li>Use Borderless Fullscreen to keep desktop overlay visible.</li>
-                    <li>Re-test settings after major game patch updates.</li>
+                    <li>キュー参加前にロック／ゲームモードを有効にする。マッチ中に設定画面が誤って開くのを防ぐ。</li>
+                    <li>緊急時のトグルには <strong>Ctrl+Shift+L</strong> を使用する。即座に字幕を非表示にできる。</li>
+                    <li>ゲームは「ボーダーレスフルスクリーン」モードで起動する。これにより、デスクトップのオーバーレイが正しく機能する。</li>
+                    <li>ゲームの大型パッチ適用後は必ず設定を再テストする。UIレイアウトが変わっている可能性がある。</li>
                 </ul>
             </div>
 
-            <h2>Preset strategy by game type</h2>
-            <h3>FPS preset</h3>
-            <ul>
-                <li>Small-to-medium font, high contrast, minimal background.</li>
-                <li>Short subtitle timeout for fast combat phases.</li>
-            </ul>
+            <h2>ジャンル別プリセット詳細</h2>
 
-            <h3>MOBA preset</h3>
-            <ul>
-                <li>Medium font, slightly longer timeout for macro calls.</li>
-                <li>Position away from minimap and objective timers.</li>
-            </ul>
+            <h3>タクティカルFPSプリセット：小さく・速く・低く</h3>
+            <p>タクティカルFPSではコミュニケーションの詳細より反応速度が重要です。字幕は小さく、素早く消え、クロスヘアの平面より下に配置して、ピーク動作中に視線が上方向へ引っ張られないようにします。フォントサイズの目安は1080pで16〜18px、1440pで22〜24px、4Kで28〜32pxです。背景グラジェントは0〜30%の透明度にとどめ、暗いコーナーで武器のシルエットを遮らないようにします。</p>
 
-            <h2>Related resources</h2>
+            <h3>バトルロイヤルプリセット：コンパスと弾薬を考慮した配置</h3>
+            <p>バトルロイヤルでは弾薬残量とコンパスの常時監視が必要です。字幕は弾薬表示のすぐ上、ミニマップより下に配置します。戦略的なコールアウトが多く反射的な動作が少ないため、タイムアウトは2.5秒と若干長めに設定します。コンパスエリアとの重複は絶対に避け、移動方向の読み違いを防ぎましょう。</p>
+
+            <h3>MOBAプリセット：アビリティバーとの干渉を排除</h3>
+            <p>MOBAはリズムベースのゲームです。クールダウンが判断を左右するため、アビリティバーと字幕が視覚的に重複してはなりません。字幕はアビリティバーの上方5〜10%、左右に20%のパディングを確保した位置に固定します。マクロコールアウト（「ドラゴンに集合」「後退してオブジェクトを守れ」など）は情報量が多いため、フォントは中程度、タイムアウトは3.0秒に設定します。</p>
+
+            <h3>MMOレイドプリセット：パーティフレームと連携させる</h3>
+            <p>レイド環境では、レイドリーダーが長いコールアウトを発します。「次のキャストをインタラプト」「スタンス変更」「プル時にディフェンシブを使え」といった指示は詳細情報が多く、3.5秒のタイムアウトと、パーティフレーム近くに配置された字幕が効果的です。「タンク、プル時にディフェンシブ」という指示を、名指しされたタンクのHPバーと視覚的に結びつけることができます。</p>
+
+            <h2>「固定プリセット」の規律</h2>
+            <p>ジャンルごとに1つのプリセットを決めたら保存し、セッションをまたいで変更しないようにします。ランク戦中の視覚設定の調整は「傾き（チルト）」の一形態です。生産的に感じられますが、パフォーマンスの向上はゼロで、むしろ機能している設定を壊すリスクがあります。プリセットが本当に失敗していると判断できるのは、1週間分の複数マッチで繰り返し問題が確認された場合のみです。その場合はランク戦以外の時間に30分の見直しセッションを設けてください。</p>
+            <p>Live Subtitlesでは、ゲームごとに異なる設定プロファイルを保存でき、ゲームを切り替えるたびに手動で変更する手間がかかりません。<a href="article-19.html" style="color:#00b8ff;">競技環境向けの詳細なセットアップガイド</a>も参照してください。</p>
+
+            <h2>最終原則：字幕はゲームに奉仕するもの</h2>
+            <p>字幕プリセットの最良のテスト方法があります。1時間プレイした後、字幕がどの位置にあったか説明できますか？説明できるなら、プリセットは目立ちすぎており、ゲームから注意を奪っています。思い出せないなら、プリセットは正しく機能しています。つまり、競い合わずにコミュニケーションを取り持っている状態です。</p>
+            <p>この「透明な存在感」こそが字幕オーバーレイの理想です。チームの指示を確実に受け取りながら、ゲームプレイへの集中は一切損なわれない。そのバランスを達成するために、上記の設定ルールを丁寧に適用してください。</p>
+            <p>難聴や聴覚処理に課題のあるプレイヤーにとって、字幕オーバーレイは競技への参加を可能にするアクセシビリティツールでもあります。<a href="article-2.html" style="color:#00b8ff;">アクセシビリティと字幕に関する記事</a>もご覧ください。</p>
+
+            <h2>関連リソース</h2>
             <ul>
-                <li><a href="/ja/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode subtitles page</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Competitive setup guide</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">Troubleshooting playbook</a></li>
-                <li><a href="article-21.html" style="color:#00b8ff;">Discord squad workflow</a></li>
+                <li><a href="/ja/game-mode-subtitles.html" style="color:#00b8ff;">ゲームモード字幕ページ</a></li>
+                <li><a href="article-19.html" style="color:#00b8ff;">競技環境向けセットアップガイド</a></li>
+                <li><a href="article-20.html" style="color:#00b8ff;">トラブルシューティングプレイブック</a></li>
+                <li><a href="article-21.html" style="color:#00b8ff;">Discordスクワッドワークフロー</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Use one preset per game type</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Consistency is more valuable than endless visual tweaks.</p>
+                <h3 style="color: #00ff9d; margin-top: 0;">ゲームタイプごとに1つのプリセットを使う</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">際限ない視覚的な微調整より、一貫性の方がはるかに価値があります。Live SubtitlesをMicrosoft Storeからダウンロードして、最適な字幕環境を構築しましょう。</p>
                 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Storeからダウンロード</a>
             </div>
         </div>

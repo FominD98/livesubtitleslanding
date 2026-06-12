@@ -13,13 +13,30 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>Diagnostyka pełnoekranowej nakładki napisów w grach | Live Subtitles</title>
-    <meta name="description" content="Szybka checklista diagnozy problemów pełnoekranowej nakładki napisów w grach.">
+    <meta name="description" content="Napisy nie pokazują się w grze pełnoekranowej? Sprawdzona kolejność diagnozy: tryb renderowania, HDR, kolizje nakładek. Napraw nakładkę napisów w 5 minut.">
     <meta name="keywords" content="fullscreen subtitle overlay, subtitle overlay troubleshooting, borderless fullscreen subtitles, game subtitles not visible, lock game mode hotkey">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/pl/article-20.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-20.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-20.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-20.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-20.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-20.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-20.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-20.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-20.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-20.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-20.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-20.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-20.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-20.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-20.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="Diagnostyka pełnoekranowej nakładki napisów w grach">
-    <meta property="og:description" content="Szybka checklista diagnozy problemów pełnoekranowej nakładki napisów w grach.">
+    <meta property="og:description" content="Napisy nie pokazują się w grze pełnoekranowej? Sprawdzona kolejność diagnozy: tryb renderowania, HDR, kolizje nakładek. Napraw nakładkę napisów w 5 minut.">
     <meta property="og:url" content="https://live-subtitles.com/articles/pl/article-20.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/pl/games.webp">
     <meta property="og:image:width" content="1280">
@@ -28,7 +45,7 @@
     <meta property="og:locale" content="pl_PL">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Diagnostyka pełnoekranowej nakładki napisów w grach">
-    <meta name="twitter:description" content="Szybka checklista diagnozy problemów pełnoekranowej nakładki napisów w grach.">
+    <meta name="twitter:description" content="Napisy nie pokazują się w grze pełnoekranowej? Sprawdzona kolejność diagnozy: tryb renderowania, HDR, kolizje nakładek. Napraw nakładkę napisów w 5 minut.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/pl/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -51,15 +68,26 @@
       "dateModified": "2026-05-12",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "Szybka checklista diagnozy problemów pełnoekranowej nakładki napisów w grach.",
+      "description": "Napisy nie pokazują się w grze pełnoekranowej? Sprawdzona kolejność diagnozy: tryb renderowania, HDR, kolizje nakładek. Napraw nakładkę napisów w 5 minut.",
       "mainEntityOfPage": "https://live-subtitles.com/articles/pl/article-20.html"
     }
     </script>
     <link rel="preload" as="image" href="/articles/img/pl/games.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Strona główna", "item": "https://live-subtitles.com/pl/" },
+        { "@type": "ListItem", "position": 2, "name": "Artykuły", "item": "https://live-subtitles.com/articles/pl/" },
+        { "@type": "ListItem", "position": 3, "name": "Diagnostyka pełnoekranowej nakładki napisów w grach", "item": "https://live-subtitles.com/articles/pl/article-20.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
-        <a href="index.html" class="back-link">&larr; Back to articles</a>
+        <a href="index.html" class="back-link">&larr; Powrót do artykułów</a>
         <h1 class="article-title" itemprop="headline">Diagnostyka pełnoekranowej nakładki napisów w grach</h1>
         <div class="article-date" itemprop="datePublished" content="2026-03-05">5 marca 2026</div>
         <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Autor: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; inżynier nakładek gamingowych, Live Subtitles</div>
@@ -67,48 +95,99 @@
         <img class="article-hero" src="/articles/img/pl/games.webp" alt="Napisy na żywo podczas meczu rankingowego" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p>If subtitle overlay behavior becomes unstable during gaming, random fixes usually waste time. This playbook gives a quick diagnosis order to isolate root cause: rendering mode, interaction mode, or workflow mismatch.</p>
+            <p>Kiedy nakładka napisów zaczyna zachowywać się niestabilnie podczas grania, przypadkowe zmiany ustawień zwykle tylko marnują czas. Ten przewodnik podaje konkretną kolejność diagnozy, która pozwala odizolować prawdziwą przyczynę problemu: tryb renderowania gry, sposób interakcji okna napisów z systemem albo niedopasowanie samego sposobu pracy z napisami. Zamiast zgadywać, przechodzisz przez kolejne warstwy i zatrzymujesz się na tej, która faktycznie odtwarza usterkę.</p>
 
-            <h2>Step 1: Verify rendering mode first</h2>
-            <p>Before changing subtitle settings, check the game display mode. If you are in exclusive fullscreen and subtitles are missing, move to <strong>Borderless Fullscreen</strong>. This solves the majority of visibility failures for desktop overlays.</p>
+            <h2>Dlaczego „napisy nie pokazują się w trybie pełnoekranowym” rzadko jest błędem napisów</h2>
+            <p>Gdy gracz zgłasza, że napisy znikają podczas rozgrywki, pierwszym odruchem jest obwinianie silnika napisów. W praktyce ponad 80% przypadków, które analizujemy, sprowadza się do jednej z trzech przyczyn niemających nic wspólnego z samym potokiem napisów: <strong>renderowania przez wyłączny swap chain</strong>, <strong>ścieżki kompozycji HDR</strong> lub <strong>kolizji z nakładkami innych programów</strong>. Dopóki te trzy elementy nie zostaną wykluczone, zmiana ustawień napisów sprawia, że problem się przesuwa, a nie znika. To dlatego warto najpierw zatrzymać się na warstwie systemowej, zanim ktokolwiek dotknie suwaków czcionki czy koloru.</p>
 
-            <h2>Step 2: Validate Lock/Game Mode behavior</h2>
+            <h2>Krok 1: najpierw sprawdź tryb renderowania</h2>
+            <p>Zanim zmienisz jakiekolwiek ustawienia napisów, zweryfikuj tryb wyświetlania gry. Jeśli grasz w trybie pełnoekranowym wyłącznym (exclusive fullscreen), a napisów brakuje, przełącz się na <strong>pełny ekran w oknie bez ramki</strong> (Borderless Fullscreen). To rozwiązuje większość problemów z widocznością nakładek desktopowych, ponieważ tryb bez ramki pozwala kompozytorowi Windows rysować okno napisów nad obrazem gry. W trybie wyłącznym gra przejmuje pełną kontrolę nad łańcuchem renderowania i każda zewnętrzna nakładka po prostu nie ma gdzie się pojawić.</p>
+
+            <h2>Krok 2: zweryfikuj działanie trybu Lock/Game Mode</h2>
             <ul>
-                <li>Toggle Lock/Game Mode on with <strong>Ctrl+Shift+L</strong>.</li>
-                <li>Confirm accidental clicks on the subtitle window stop happening.</li>
-                <li>Confirm the game keeps focus during mouse movement and combat.</li>
+                <li>Włącz tryb blokady/gry skrótem <strong>Ctrl+Shift+L</strong>.</li>
+                <li>Upewnij się, że przypadkowe kliknięcia w okno napisów przestały przejmować kursor.</li>
+                <li>Potwierdź, że gra zachowuje fokus podczas ruchu myszą i w trakcie walki.</li>
             </ul>
+            <p>Tryb gry sprawia, że okno napisów staje się „przezroczyste dla kliknięć” — kursor i celownik trafiają do gry, a nie do nakładki. Jeśli to nie działa, prawdziwym objawem nie jest brak napisów, tylko utrata fokusu, którą trzeba diagnozować inaczej.</p>
 
-            <h2>Step 3: Check subtitle layout and density</h2>
-            <p>Do not overload text area. High subtitle density plus poor placement looks like a visibility bug even when rendering is fine. Use fewer lines, higher contrast, and a stable lower-screen position.</p>
+            <h2>Kolejność diagnozy, która oszczędza czas</h2>
+            <p>Diagnozuj dokładnie w tej kolejności. Zatrzymaj się na pierwszej warstwie, która odtwarza problem.</p>
+            <ol>
+                <li><strong>Odtwórz usterkę w 60-sekundowej pętli.</strong> Uruchom grę, wywołaj wypowiedź głosową, obserwuj nakładkę. Jeśli błąd jest sporadyczny, zapisuj znaczniki czasu.</li>
+                <li><strong>Zmień tryb wyświetlania.</strong> Przejdź z trybu pełnoekranowego wyłącznego na pełny ekran w oknie bez ramki. Jeśli nakładka wraca, przyczyną jest swap chain.</li>
+                <li><strong>Przełącz HDR.</strong> Jeśli napisy się renderują, ale są wyblakłe lub niewidoczne na jasnym tle, winowajcą jest ścieżka mapowania tonów HDR.</li>
+                <li><strong>Wyłącz dodatkowe nakładki.</strong> Steam, Discord, GeForce Experience i pasek Xbox Game Bar — każde z nich rejestruje własną globalną nakładkę. Wyłączaj je pojedynczo, po jednym meczu na test.</li>
+                <li><strong>Sprawdź poza grą.</strong> Wypowiedz testową frazę, patrząc na film w przeglądarce. Jeśli nakładka działa tutaj, problem dotyczy konkretnej gry.</li>
+            </ol>
 
-            <h2>Step 4: Align team communication format</h2>
-            <p>Many "subtitle problems" are actually callout quality problems. If teammates use long sentences with inconsistent terms, subtitle usefulness drops. Standardize short callouts and shared map vocabulary.</p>
+            <h2>Przepisy naprawcze dla każdej przyczyny</h2>
 
-            <h2>Quick recovery checklist</h2>
+            <h3>Przyczyna A: wyłączny swap chain</h3>
+            <p>Rozpoznasz ją, gdy napisy działają na pulpicie i w trybie bez ramki, ale znikają w pełnoekranowym wyłącznym. Rozwiązanie: przełącz grę na pełny ekran w oknie bez ramki. Współczesne sterowniki kart graficznych komponują ten tryb niemal identycznie jak wyłączny — różnica w wydajności zwykle nie przekracza 2%, a na Windows 11 często jest zerowa.</p>
+
+            <h3>Przyczyna B: kompozycja HDR</h3>
+            <p>Rozpoznasz ją, gdy nakładka jest widoczna, ale nieczytelna: czarne na czarnym, białe na białym lub z przesuniętymi kolorami. Rozwiązanie: uruchom kalibrację HDR Windows (Ustawienia → System → Ekran → HDR), ustaw jasność treści SDR na 30–40 i przełącz motyw nakładki na „wysoki kontrast, ciemny”.</p>
+
+            <h3>Przyczyna C: kolizja stosu nakładek</h3>
+            <p>Rozpoznasz ją, gdy nakładki migoczą lub na zmianę się pojawiają i znikają. Rozwiązanie: przypisz rolę jednej „głównej nakładki” narzędziu do napisów. Wyłącz nakładkę Steam w grze (Steam → Ustawienia → W grze), wyłącz nakładkę Discorda (Ustawienia użytkownika → Nakładka w grze) i wyłącz Xbox Game Bar (Ustawienia → Gry → Pasek gier).</p>
+
+            <h3>Przyczyna D: utrata fokusu przy wielu monitorach</h3>
+            <p>Rozpoznasz ją, gdy napisy renderują się na drugim monitorze, a gra działa na głównym. Rozwiązanie: przypnij okno napisów do monitora głównego za pomocą opcji „Przypnij do ekranu” w aplikacji, a następnie włącz w Windows „Optymalizacje dla gier w oknie” (Ustawienia → System → Ekran → Grafika → Ustawienia domyślne).</p>
+
+            <h2>Krok 3: sprawdź układ i gęstość napisów</h2>
+            <p>Nie przeciążaj obszaru tekstu. Wysoka gęstość napisów połączona ze złym rozmieszczeniem wygląda jak błąd widoczności, nawet gdy renderowanie działa poprawnie. Stosuj mniej wierszy, wyższy kontrast i stabilną pozycję w dolnej części ekranu. Czytelność liczy się bardziej niż ilość — w środku meczu masz ułamek sekundy na odczytanie wezwania.</p>
+
+            <h2>Krok 4: ujednolić format komunikacji w drużynie</h2>
+            <p>Wiele „problemów z napisami” to w rzeczywistości problemy z jakością wezwań głosowych. Jeśli koledzy z drużyny używają długich zdań i niespójnych pojęć, użyteczność napisów spada. Ustal krótkie, ustandaryzowane wezwania i wspólne słownictwo mapy — wtedy napisy stają się szybkie do odczytania i przewidywalne.</p>
+
+            <h3>Sprawdź, czy okno napisów jest „zawsze na wierzchu”</h3>
+            <p>Nawet w trybie bez ramki nakładka potrafi chować się pod oknem gry, jeśli straci atrybut „zawsze na wierzchu”. Zdarza się to po przełączeniu kombinacją Alt+Tab albo po wybudzeniu komputera z trybu uśpienia. Zanim uznasz, że to błąd renderowania, kliknij okno napisów raz poza grą i potwierdź, że opcja utrzymywania go na pierwszym planie jest aktywna. To trzydziestosekundowy test, który eliminuje całą klasę pozornych usterek widoczności.</p>
+
+            <h2>Szybka checklista przywracania</h2>
             <div class="checklist">
                 <ul>
-                    <li>Switch game to Borderless Fullscreen.</li>
-                    <li>Enable Lock/Game Mode and test Ctrl+Shift+L.</li>
-                    <li>Move subtitles to stable lower-screen zone.</li>
-                    <li>Reduce on-screen subtitle block size.</li>
-                    <li>Re-test in a live voice channel for 3 to 5 minutes.</li>
+                    <li>Przełącz grę na pełny ekran w oknie bez ramki.</li>
+                    <li>Włącz tryb Lock/Game Mode i przetestuj Ctrl+Shift+L.</li>
+                    <li>Przesuń napisy do stabilnej dolnej strefy ekranu.</li>
+                    <li>Zmniejsz rozmiar bloku napisów na ekranie.</li>
+                    <li>Przetestuj ponownie na żywym kanale głosowym przez 3 do 5 minut.</li>
                 </ul>
             </div>
 
-            <h2>When escalation is required</h2>
-            <p>If overlay is still hidden in specific titles, document exact game, API mode, and display path. This helps separate title-specific rendering constraints from generic subtitle configuration issues.</p>
+            <h2>5 pytań, które warto zadać w każdym zgłoszeniu błędu</h2>
+            <ol>
+                <li>Tytuł gry i dokładna wersja (numer aktualizacji, a nie „najnowsza”).</li>
+                <li>Tryb wyświetlania używany w momencie wystąpienia błędu.</li>
+                <li>Czy HDR był włączony? Jeden monitor czy kilka?</li>
+                <li>Jakie inne nakładki działały (Discord, Steam, GeForce, Xbox Bar)?</li>
+                <li>Czy błąd pojawił się od razu po uruchomieniu, czy dopiero po przełączeniu okna?</li>
+            </ol>
+            <p>Bez tych odpowiedzi zgadujesz. Z nimi prawdziwa przyczyna jest zwykle oczywista w mniej niż pięć minut.</p>
 
-            <h2>Related resources</h2>
+            <h2>Kiedy konieczna jest eskalacja</h2>
+            <p>Jeśli nakładka nadal pozostaje ukryta w konkretnych tytułach, udokumentuj dokładną grę, tryb API graficznego i ścieżkę wyświetlania. To pomaga oddzielić ograniczenia renderowania specyficzne dla danego tytułu od ogólnych problemów z konfiguracją napisów, które dotyczą całego systemu.</p>
+
+            <h2>Kiedy najlepszym rozwiązaniem jest „nic nie rób”</h2>
+            <p>Niewielki podzbiór gier celowo blokuje nakładki kompozytora podczas kontroli antycheat. Przykładem są niektóre tryby rankingowe, które blokują swap chain, aby zapobiec oszustwom opartym na przechwytywaniu ekranu. W takich grach żaden stos napisów nie wyświetli się w trybie pełnoekranowym wyłącznym. Uczciwa odpowiedź brzmi: dla tego konkretnego tytułu używaj pełnego ekranu w oknie bez ramki i zaakceptuj znikomy kompromis wydajnościowy.</p>
+
+            <h2>Dlaczego ma to znaczenie dla gry rankingowej</h2>
+            <p>Niestabilna nakładka, która działa w 90% przypadków, jest gorsza od takiej, która zawodzi konsekwentnie. Przy stałej awarii potrafisz się dostosować. Przy awarii sporadycznej wciąż sięgasz po wezwanie, którego nie ma na ekranie, i tracisz rytm. Celem diagnozy nie jest „żeby działało przez większość czasu” — celem jest „żeby było na tyle przewidywalne, że przestajesz o tym myśleć”.</p>
+
+            <h2>Szablony do dokumentowania powtarzających się problemów</h2>
+            <p>Trzymaj krótki plik tekstowy w przypiętych wiadomościach na Discordzie. Dwie kolumny: <em>Tytuł</em> i <em>Znane ograniczenie</em>. Przykładowe wiersze: „Valorant — nakładka wymaga trybu bez ramki”, „CS2 — działa w obu trybach po aktualizacji z marca 2026”. Ten plik jest cenniejszy niż jakakolwiek wiki z poradami, ponieważ to empiryczna prawda twojej własnej drużyny. Aplikacja <strong>Live Subtitles</strong> pozwala utrzymać jeden, przewidywalny zestaw ustawień nakładki we wszystkich tych grach.</p>
+
+            <h2>Powiązane materiały</h2>
             <ul>
-                <li><a href="/pl/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode subtitles page</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Game Mode setup guide for competitive games</a></li>
-                <li><a href="/pl/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord and Twitch subtitles in real time</a></li>
+                <li><a href="/pl/game-mode-subtitles.html" style="color:#00b8ff;">Tryb gry dla napisów na żywo</a></li>
+                <li><a href="article-19.html" style="color:#00b8ff;">Przewodnik konfiguracji trybu gry dla rozgrywki rankingowej</a></li>
+                <li><a href="/pl/discord-twitch-subtitles.html" style="color:#00b8ff;">Napisy na żywo w Discordzie i na Twitchu</a></li>
+                <li><a href="article-2.html" style="color:#00b8ff;">Jak ustawić wygodne i czytelne napisy na ekranie</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Stabilize your overlay workflow</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Use one predictable subtitle setup for games, chat, and streams.</p>
+                <h3 style="color: #00ff9d; margin-top: 0;">Ustabilizuj swój sposób pracy z nakładką</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">Korzystaj z jednej przewidywalnej konfiguracji napisów do gier, czatu i streamów dzięki aplikacji Live Subtitles.</p>
                 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Pobierz z Microsoft Store</a>
             </div>
         </div>

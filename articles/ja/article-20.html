@@ -13,13 +13,30 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>ゲーム向けフルスクリーン字幕オーバーレイのトラブルシューティング | Live Subtitles</title>
-    <meta name="description" content="ゲームで発生するフルスクリーン字幕オーバーレイ問題を素早く診断するチェックリスト。">
+    <meta name="description" content="ゲームの字幕オーバーレイが正常に表示されない時の原因を素早く正確に特定するための完全な診断ガイドです。排他フルスクリーン・HDR・競合オーバーレイアプリなど各根本原因ごとに詳しい修正手順をステップ形式でわかりやすく解説し、Live Subtitlesを安定して快適に運用しましょう。">
     <meta name="keywords" content="fullscreen subtitle overlay, subtitle overlay troubleshooting, borderless fullscreen subtitles, game subtitles not visible, lock game mode hotkey">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/articles/ja/article-20.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/articles/en/article-20.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/articles/ru/article-20.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/articles/fr/article-20.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/articles/es/article-20.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/articles/de/article-20.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/articles/it/article-20.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/articles/ja/article-20.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/articles/ko/article-20.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/articles/zh/article-20.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/articles/ar/article-20.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/articles/hi/article-20.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/articles/pt/article-20.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/articles/pl/article-20.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-20.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-20.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-20.html" />
     <meta property="og:type" content="article">
     <meta property="og:title" content="ゲーム向けフルスクリーン字幕オーバーレイのトラブルシューティング">
-    <meta property="og:description" content="ゲームで発生するフルスクリーン字幕オーバーレイ問題を素早く診断するチェックリスト。">
+    <meta property="og:description" content="ゲームの字幕オーバーレイが正常に表示されない時の原因を素早く正確に特定するための完全な診断ガイドです。排他フルスクリーン・HDR・競合オーバーレイアプリなど各根本原因ごとに詳しい修正手順をステップ形式でわかりやすく解説し、Live Subtitlesを安定して快適に運用しましょう。">
     <meta property="og:url" content="https://live-subtitles.com/articles/ja/article-20.html">
     <meta property="og:image" content="https://live-subtitles.com/articles/img/ja/games.webp">
     <meta property="og:image:width" content="1280">
@@ -28,7 +45,7 @@
     <meta property="og:locale" content="ja_JP">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ゲーム向けフルスクリーン字幕オーバーレイのトラブルシューティング">
-    <meta name="twitter:description" content="ゲームで発生するフルスクリーン字幕オーバーレイ問題を素早く診断するチェックリスト。">
+    <meta name="twitter:description" content="ゲームの字幕オーバーレイが正常に表示されない時の原因を素早く正確に特定するための完全な診断ガイドです。排他フルスクリーン・HDR・競合オーバーレイアプリなど各根本原因ごとに詳しい修正手順をステップ形式でわかりやすく解説し、Live Subtitlesを安定して快適に運用しましょう。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ja/games.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
@@ -51,15 +68,26 @@
       "dateModified": "2026-05-12",
       "author": { "@type": "Person", "name": "Hiroshi Tanaka", "url": "https://live-subtitles.com/about/team/hiroshi-tanaka.html", "jobTitle": "Gaming Overlay Engineer, Live Subtitles" },
       "publisher": { "@type": "Organization", "name": "Live Subtitles" },
-      "description": "ゲームで発生するフルスクリーン字幕オーバーレイ問題を素早く診断するチェックリスト。",
+      "description": "ゲームの字幕オーバーレイが正常に表示されない時の原因を素早く正確に特定するための完全な診断ガイドです。排他フルスクリーン・HDR・競合オーバーレイアプリなど各根本原因ごとに詳しい修正手順をステップ形式でわかりやすく解説し、Live Subtitlesを安定して快適に運用しましょう。",
       "mainEntityOfPage": "https://live-subtitles.com/articles/ja/article-20.html"
     }
     </script>
     <link rel="preload" as="image" href="/articles/img/ja/games.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://live-subtitles.com/ja/" },
+        { "@type": "ListItem", "position": 2, "name": "記事一覧", "item": "https://live-subtitles.com/articles/ja/" },
+        { "@type": "ListItem", "position": 3, "name": "ゲーム向けフルスクリーン字幕オーバーレイのトラブルシューティング", "item": "https://live-subtitles.com/articles/ja/article-20.html" }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
-        <a href="index.html" class="back-link">&larr; Back to articles</a>
+        <a href="index.html" class="back-link">← 記事に戻る</a>
         <h1 class="article-title" itemprop="headline">ゲーム向けフルスクリーン字幕オーバーレイのトラブルシューティング</h1>
         <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日</div>
         <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ゲーミングオーバーレイ エンジニア, Live Subtitles</div>
@@ -67,48 +95,116 @@
         <img class="article-hero" src="/articles/img/ja/games.webp" alt="競技ゲームのマッチ中のライブ字幕オーバーレイ" width="1280" height="771" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
-            <p>If subtitle overlay behavior becomes unstable during gaming, random fixes usually waste time. This playbook gives a quick diagnosis order to isolate root cause: rendering mode, interaction mode, or workflow mismatch.</p>
+            <p>ゲームプレイ中に字幕オーバーレイが突然表示されなくなった、あるいは不安定に点滅する——こうした問題に直面したとき、設定を手当たり次第に変え始めるのは最も非効率な対処法です。問題の原因は大きく「レンダリングモード」「フォーカス管理」「オーバーレイ競合」の三層に分類でき、それぞれ異なる修正手順が必要です。本記事では診断を素早く絞り込むための体系的なチェックリストと、原因別の具体的な修正レシピを解説します。</p>
 
-            <h2>Step 1: Verify rendering mode first</h2>
-            <p>Before changing subtitle settings, check the game display mode. If you are in exclusive fullscreen and subtitles are missing, move to <strong>Borderless Fullscreen</strong>. This solves the majority of visibility failures for desktop overlays.</p>
-
-            <h2>Step 2: Validate Lock/Game Mode behavior</h2>
+            <h2>「字幕がフルスクリーンで見えない」の80%はオーバーレイ側の問題ではない</h2>
+            <p>プレイヤーから「ゲーム中に字幕が消えた」という報告を受けた場合、反射的に字幕エンジン側の設定を疑いがちです。しかし実際にトリアージを行うと、80%以上のケースで以下の三つのうちいずれかが真の原因です。</p>
             <ul>
-                <li>Toggle Lock/Game Mode on with <strong>Ctrl+Shift+L</strong>.</li>
-                <li>Confirm accidental clicks on the subtitle window stop happening.</li>
-                <li>Confirm the game keeps focus during mouse movement and combat.</li>
+                <li><strong>排他スワップチェーン（Exclusive Swap Chain）レンダリング</strong>：ゲームが描画面を完全に占有しており、Windowsのコンポジターがオーバーレイを描画できない状態。</li>
+                <li><strong>HDRコンポジションパス</strong>：HDRトーンマッピングが字幕の色を白飛び・黒潰れさせ、画面上では「見えない」状態になっている。</li>
+                <li><strong>サードパーティオーバーレイの競合</strong>：Steam、Discord、GeForce Experience、Xbox Game BarなどがグローバルオーバーレイのZ順序を奪っている。</li>
+            </ul>
+            <p>この三つを排除する前に字幕設定を変更しても、問題が「移動」するだけで解決しません。診断は必ずこの順番で進めてください。</p>
+
+            <h2>ステップ1：レンダリングモードを最初に確認する</h2>
+            <p>字幕の設定を触る前に、ゲームの表示モードを確認します。多くのゲームはデフォルトで<strong>排他フルスクリーン（Exclusive Fullscreen）</strong>に設定されており、この状態ではWindowsのデスクトップコンポジター（DWM）がほぼ完全にバイパスされます。DWMがバイパスされると、Live Subtitlesのようなウィンドウベースのオーバーレイはゲーム画面の上に描画されません。</p>
+            <p>修正方法は明快です。ゲームのグラフィック設定を開き、表示モードを<strong>ボーダーレスフルスクリーン（Borderless Fullscreen / Windowed Fullscreen）</strong>に変更してください。最新のGPUドライバーはボーダーレスモードでも排他フルスクリーンと同等のパフォーマンスを実現しており、Windows 11環境では多くのタイトルで性能差はほぼゼロです。パフォーマンスへの影響が心配な場合も、実測値は通常2%未満です。</p>
+
+            <h2>ステップ2：Lock/ゲームモードの動作を確認する</h2>
+            <p>ボーダーレスモードに切り替えた後も問題が続く場合は、フォーカス管理を確認します。Live SubtitlesのLock/ゲームモード（ホットキー：<strong>Ctrl+Shift+L</strong>）は、字幕ウィンドウへの誤クリックを防ぎ、ゲームがマウス操作とフォーカスを維持できるように設計されています。</p>
+            <ul>
+                <li><strong>Ctrl+Shift+L</strong>を押してLock/ゲームモードをオンにする。</li>
+                <li>戦闘中や移動中にゲームがフォーカスを失わないことを確認する。</li>
+                <li>字幕ウィンドウへの誤クリックが止まることを確認する。</li>
+                <li>問題が解消されない場合は、ゲームモードをオフにして字幕ウィンドウの位置を変更してから再度オンにする。</li>
             </ul>
 
-            <h2>Step 3: Check subtitle layout and density</h2>
-            <p>Do not overload text area. High subtitle density plus poor placement looks like a visibility bug even when rendering is fine. Use fewer lines, higher contrast, and a stable lower-screen position.</p>
+            <h2>ステップ3：字幕のレイアウトと密度を最適化する</h2>
+            <p>レンダリングとフォーカスに問題がなくても、字幕の視認性が低い場合は「表示されていない」と誤判断されることがあります。特に次の状況は注意が必要です。</p>
+            <ul>
+                <li>字幕の表示行数が多すぎて、HUDや重要情報と重なっている。</li>
+                <li>字幕のフォントカラーがゲームの背景色と同化している（白い雪景色のステージなど）。</li>
+                <li>字幕ウィンドウが画面中央付近に配置されていて、ゲームの視点移動と干渉している。</li>
+            </ul>
+            <p>推奨設定は、表示行数を2〜3行に絞り、高コントラストのテーマを使用し、字幕ウィンドウを画面下部の安定した位置に固定することです。HUDの要素と重ならないよう、座標をピクセル単位で調整してください。</p>
 
-            <h2>Step 4: Align team communication format</h2>
-            <p>Many "subtitle problems" are actually callout quality problems. If teammates use long sentences with inconsistent terms, subtitle usefulness drops. Standardize short callouts and shared map vocabulary.</p>
+            <h2>ステップ4：チームのコミュニケーション形式を統一する</h2>
+            <p>「字幕の問題」に見えるものの多くは、実際には<strong>コールアウトの質の問題</strong>です。チームメイトが長い文章や不統一な用語を使うと、字幕の有用性は大きく低下します。音声認識エンジンはチームごとのスラングや短縮語に対応しにくい場合があるためです。</p>
+            <p>チーム内で使う短いコールアウト（例：「B行く」「ラッシュ」「フラッシュ投げて」など）を標準化し、マップの呼称を統一しておくと、字幕の実用性が劇的に改善します。これはソフトウェアの設定変更では補えない人的な最適化ですが、効果は設定変更と同等かそれ以上です。</p>
 
-            <h2>Quick recovery checklist</h2>
+            <h2>時間を節約する診断順序</h2>
+            <p>問題を再現するループを作り、以下の順番でトリアージしてください。最初に問題を再現した層で止まり、修正してから次の層には進まないようにします。</p>
+            <ol>
+                <li><strong>60秒ループで再現する。</strong>ゲームを起動し、音声入力をトリガーしてオーバーレイを観察します。バグが断続的な場合はタイムスタンプを記録してください。</li>
+                <li><strong>表示モードを切り替える。</strong>排他フルスクリーンからボーダーレスフルスクリーンに変更します。オーバーレイが戻る場合、根本原因はスワップチェーンです。</li>
+                <li><strong>HDRを切り替える。</strong>字幕は表示されているが白飛び・黒潰れしている場合、HDRトーンマッピングパスが原因です。</li>
+                <li><strong>サードパーティオーバーレイを無効化する。</strong>Steam、Discord、GeForce Experience、Xbox Game Barを1つずつ無効にして1マッチずつテストします。</li>
+                <li><strong>非ゲームウィンドウでテストする。</strong>YouTubeを再生しながらテストフレーズを話してオーバーレイが機能するか確認します。ここで動作する場合はゲーム固有の問題です。</li>
+            </ol>
+
+            <h2>原因別の修正レシピ</h2>
+
+            <h3>原因A：排他スワップチェーン</h3>
+            <p>デスクトップや他のアプリでは字幕が表示されるのに、排他フルスクリーンのゲームでのみ消えるケースがこれに該当します。<strong>修正方法：</strong>ゲームをボーダーレスフルスクリーンに変更してください。Windows 11環境では最新のGPUドライバーがボーダーレスモードのパフォーマンスを最適化しており、ほとんどの場合で体感できる差はありません。</p>
+
+            <h3>原因B：HDRコンポジション</h3>
+            <p>オーバーレイは表示されているが読めない（黒背景に黒文字、白背景に白文字、または色ずれが起きている）ケースです。<strong>修正方法：</strong>Windowsの「HDRキャリブレーション」（設定 → システム → ディスプレイ → HDR）を開き、「SDRコンテンツの明るさ」を30〜40に設定します。また字幕のテーマを「ハイコントラスト・ダーク」に変更してください。</p>
+
+            <h3>原因C：オーバーレイスタックの競合</h3>
+            <p>オーバーレイが点滅する、または他のオーバーレイと交互に表示されるケースです。複数のアプリがグローバルオーバーレイを登録している状態です。<strong>修正方法：</strong>字幕ツールに「主要オーバーレイ」の役割を割り当て、競合するオーバーレイを無効化します。具体的には、Steamのインゲームオーバーレイ（Steam → 設定 → ゲーム中）、Discordのオーバーレイ（ユーザー設定 → ゲームオーバーレイ）、Xbox Game Bar（設定 → ゲーム → Xbox Game Bar）をそれぞれオフにしてください。</p>
+
+            <h3>原因D：マルチモニターのフォーカス喪失</h3>
+            <p>字幕がサブモニターに表示されていて、ゲームはプライマリモニターで動作しているケースです。<strong>修正方法：</strong>アプリの「ディスプレイに固定」オプションで字幕ウィンドウをプライマリモニターにピン留めします。さらにWindowsの「ウィンドウ化されたゲームの最適化」（設定 → システム → ディスプレイ → グラフィックス → 既定の設定）を有効化してください。</p>
+
+            <h2>クイックリカバリーチェックリスト</h2>
             <div class="checklist">
                 <ul>
-                    <li>Switch game to Borderless Fullscreen.</li>
-                    <li>Enable Lock/Game Mode and test Ctrl+Shift+L.</li>
-                    <li>Move subtitles to stable lower-screen zone.</li>
-                    <li>Reduce on-screen subtitle block size.</li>
-                    <li>Re-test in a live voice channel for 3 to 5 minutes.</li>
+                    <li>ゲームをボーダーレスフルスクリーンに切り替える。</li>
+                    <li>Lock/ゲームモードを有効にして <strong>Ctrl+Shift+L</strong> を確認する。</li>
+                    <li>字幕を画面下部の安定したゾーンに移動させる。</li>
+                    <li>画面上の字幕ブロックのサイズを縮小する。</li>
+                    <li>ライブの音声チャンネルで3〜5分間再テストする。</li>
+                    <li>競合するサードパーティオーバーレイを1つずつ無効化する。</li>
+                    <li>HDRを一時的にオフにして表示が改善するか確認する。</li>
                 </ul>
             </div>
 
-            <h2>When escalation is required</h2>
-            <p>If overlay is still hidden in specific titles, document exact game, API mode, and display path. This helps separate title-specific rendering constraints from generic subtitle configuration issues.</p>
+            <h2>バグレポートで必ず確認する5つの質問</h2>
+            <p>チームメンバーやサポートへの報告時には、以下の情報がなければ原因特定は推測に頼るしかありません。この5点を事前に確認しておけば、多くの場合5分以内に根本原因が判明します。</p>
+            <ol>
+                <li>ゲームタイトルと正確なバージョン（「最新版」ではなくパッチ番号）。</li>
+                <li>バグ発生時に使用していた表示モード（排他フルスクリーン / ボーダーレス / ウィンドウ）。</li>
+                <li>HDRは有効か。シングルモニターかマルチモニターか。</li>
+                <li>他に起動しているオーバーレイ（Discord、Steam、GeForce Experience、Xbox Game Bar）。</li>
+                <li>バグは起動直後から発生しているか、ウィンドウ切り替え後から発生しているか。</li>
+            </ol>
 
-            <h2>Related resources</h2>
+            <h2>「修正しない」が正解のケース</h2>
+            <p>一部のゲームタイトルは、アンチチートシステムの一環として意図的にコンポジターオーバーレイをブロックしています。ランク戦でスクリーンキャプチャチートを防ぐためにスワップチェーンをロックするモードが代表例です。こうしたゲームでは排他フルスクリーン中はいかなる字幕スタックも表示できません。</p>
+            <p>正直な答えは「そのタイトルではボーダーレスフルスクリーンを使い、わずかなパフォーマンス差を受け入れる」です。無理に排他フルスクリーンで動作させようとすると、不安定な動作を招くだけです。</p>
+
+            <h2>ランクパフォーマンスへの影響</h2>
+            <p>90%の確率で動作するオーバーレイは、完全に動作しないものより扱いが難しいという逆説があります。完全に動作しない場合は「使えない」と判断して適応できます。しかし断続的な失敗の場合、そこにあるはずのコールアウトを探して手を伸ばし、リズムを崩します。</p>
+            <p>トラブルシューティングの目標は「ほとんどの時間動作させること」ではなく、<strong>「考えずに済むほど予測可能にすること」</strong>です。オーバーレイの動作が完全に予測可能になったとき、プレイヤーはツールではなくゲームに集中できます。</p>
+
+            <h2>繰り返し発生する問題の記録テンプレート</h2>
+            <p>DiscordのPINメッセージにMarkdownファイルを1つ保管しておくことをお勧めします。2列構成で「タイトル」と「既知の制約」を記録します。記入例：「Valorant — オーバーレイはボーダーレス必須」「CS2 — 2026年3月パッチ以降、両モードで動作確認済み」。このファイルはあらゆるトラブルシューティングWikiより価値があります。なぜならそれはチームの実証済みの事実だからです。</p>
+            <p>記録を続けることで、新しいチームメンバーが参加したときや、ゲームのアップデート後に同じ問題が再発したときも、診断時間をゼロに近づけることができます。</p>
+
+            <h2>エスカレーションが必要な場合</h2>
+            <p>上記のすべての手順を試してもオーバーレイが特定のタイトルで表示されない場合は、正確なゲーム名、使用しているAPIモード（DirectX 11 / 12 / Vulkan）、ディスプレイパスの情報をまとめてサポートに報告してください。これにより、タイトル固有のレンダリング制約と一般的な字幕設定の問題を切り分けることができます。</p>
+
+            <h2>関連記事</h2>
             <ul>
-                <li><a href="/ja/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode subtitles page</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Game Mode setup guide for competitive games</a></li>
-                <li><a href="/ja/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord and Twitch subtitles in real time</a></li>
+                <li><a href="article-19.html" style="color:#00b8ff;">競技ゲーム向けゲームモード設定ガイド</a></li>
+                <li><a href="article-21.html" style="color:#00b8ff;">チームゲームでのリアルタイム字幕活用法</a></li>
+                <li><a href="article-17.html" style="color:#00b8ff;">Windows向けライブ字幕のセットアップ完全ガイド</a></li>
+                <li><a href="/ja/zoom-live-captions.html" style="color:#00b8ff;">Zoomのライブキャプション設定</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Stabilize your overlay workflow</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Use one predictable subtitle setup for games, chat, and streams.</p>
+                <h3 style="color: #00ff9d; margin-top: 0;">オーバーレイのワークフローを安定させる</h3>
+                <p style="color: #eee; margin-bottom: 1.5rem;">ゲーム、チャット、配信のすべてに対応した予測可能な字幕セットアップを1つ導入してください。<strong>Live Subtitles</strong>はMicrosoft Storeから無料でダウンロードできます。評価4.7（351件のレビュー）。</p>
                 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Storeからダウンロード</a>
             </div>
         </div>
