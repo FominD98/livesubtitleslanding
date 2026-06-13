@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="AirPods Live Translation in iOS 26: What It Does Well and Where It Falls Short">
     <meta name="twitter:description" content="AirPods Live Translation (iOS 26) reviewed: on-device privacy wins for travel, but meetings and desktop media need a dedicated caption layer.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/movies.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,12 +150,30 @@
     <link rel="preload" as="image" href="/articles/img/en/movies.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">How AirPods Live Translation Actua…</a>
+            <a href="#sec-2">Where AirPods Live Translation Gen…</a>
+            <a href="#sec-3">Where AirPods Live Translation Fal…</a>
+            <a href="#sec-4">AirPods Live Translation vs the Ma…</a>
+            <a href="#sec-5">Setting Up AirPods Live Translatio…</a>
+            <a href="#sec-6">Real-World Accuracy: What to Expect</a>
+            <a href="#sec-7">The Desktop Gap: What Fills It</a>
+            <a href="#sec-8">Frequently Asked Questions</a>
+            <a href="#sec-9">Bottom Line: Right Tool, Right Con…</a>
+            <a href="#sec-10">References</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Back to articles</a>
         <h1 class="article-title" itemprop="headline">AirPods Live Translation in iOS 26: What It Does Well and Where It Falls Short</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">May 28, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By: <a href="https://live-subtitles.com/about/team/daniel-formind.html" rel="author" style="color:#00b8ff; text-decoration:none;">Daniel Formind</a> &middot; Founder & Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 28, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">May 28, 2026<span class="reading-time">13 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By: <a href="https://live-subtitles.com/about/team/daniel-formind.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Daniel Formind</a> &middot; Founder & Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 28, 2026</div>
         <img class="article-hero" src="/articles/img/en/movies.webp" alt="AirPods translating speech live during a face-to-face conversation" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
@@ -101,7 +181,8 @@
 
             <p>This article covers the full picture: how the technology actually works under the hood, which scenarios it genuinely excels at, where it hits hard limits, how it compares to the main alternatives, and — critically — which complementary tools fill the gaps it leaves open for desktop work, meetings, and broadcast media.</p>
 
-            <h2>How AirPods Live Translation Actually Works</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">How AirPods Live Translation Actually Works</a></li><li><a href="#sec-2">Where AirPods Live Translation Genuinely Wins</a></li><li><a href="#sec-3">Where AirPods Live Translation Falls Short</a></li><li><a href="#sec-4">AirPods Live Translation vs the Main Alternatives</a></li><li><a href="#sec-5">Setting Up AirPods Live Translation: Step-by-Step</a></li><li><a href="#sec-6">Real-World Accuracy: What to Expect</a></li><li><a href="#sec-7">The Desktop Gap: What Fills It</a></li><li><a href="#sec-8">Frequently Asked Questions</a></li><li><a href="#sec-9">Bottom Line: Right Tool, Right Context</a></li><li><a href="#sec-10">References</a></li></ol></details>
+            <h2 id="sec-1">How AirPods Live Translation Actually Works</h2>
             <p>The architecture matters because it explains both the strengths and the constraints. When AirPods Live Translation is active, speech captured by the iPhone's microphone (or, depending on configuration, relayed from AirPods) passes through Apple's on-device automatic speech recognition engine. The transcript is then fed into Apple's Translation framework, which also runs locally on Apple Silicon chips (A17 Pro and newer). The translated output is rendered via on-device text-to-speech and delivered directly into your AirPods.</p>
 
             <p>The critical phrase is <em>on-device</em>. No audio packet leaves your phone during this process. For iOS 26, Apple has expanded the set of language pairs that work fully offline, provided you download the relevant language pack in Settings → General → Language &amp; Region → Translation Languages. Languages not yet available offline fall back to Apple's servers — you will see an indication in the Translate app's settings.</p>
@@ -112,7 +193,7 @@
             <h3>Which devices support it</h3>
             <p>AirPods Live Translation requires iOS 26 and a compatible AirPods model (AirPods Pro 2 or later, AirPods 4, AirPods Max with USB-C). It is not available on older AirPods connected to an iOS 26 device — the in-ear audio routing relies on firmware introduced alongside the feature. The iPhone itself needs to be iPhone 15 Pro or newer for full on-device offline processing; other iPhone 15 or iPhone 14 models may run some pairs in online mode.</p>
 
-            <h2>Where AirPods Live Translation Genuinely Wins</h2>
+            <h2 id="sec-2">Where AirPods Live Translation Genuinely Wins</h2>
 
             <h3>Face-to-face travel conversations</h3>
             <p>This is the canonical use case Apple designed for, and it shows. You hold your iPhone between you and the other person, or simply use the AirPods mic to capture ambient speech. Translated audio plays in your ear; the original speech plays in the air, audible to both parties. Short exchange turns — asking for directions, ordering food, negotiating a price at a market, confirming a hotel booking — feel natural. The other person does not need any device. This is a meaningful UX advantage over Google Translate's Conversation mode, which requires the phone screen to stay on and both parties to look at it.</p>
@@ -123,13 +204,13 @@
             <h3>Hands-free convenience for brief interactions</h3>
             <p>Checking in at an airport counter, asking a taxi driver for a detour, confirming a delivery — micro-interactions where pulling out your phone, unlocking it, opening an app, and selecting a language pair costs more time than the interaction itself. With AirPods already in and the feature activated, you speak and hear. The reduction in friction is real.</p>
 
-            <h2>Where AirPods Live Translation Falls Short</h2>
+            <h2 id="sec-3">Where AirPods Live Translation Falls Short</h2>
 
             <h3>Multi-speaker meetings and video calls</h3>
-            <p>AirPods Live Translation is built around a two-person, alternating-turn model. A Zoom call with six participants speaking over each other — or even a three-person discussion where two people sometimes speak simultaneously — overwhelms the feature. The speech recognition engine attempts to handle crosstalk but produces incomplete or confused transcripts. More importantly, the feature cannot distinguish between multiple speakers on a call and assign speaker labels to translation output. For multilingual team meetings, <a href="article-18.html" style="color:#00b8ff;">platform-native translated captions in Google Meet, Zoom, or Teams</a> are the appropriate tool.</p>
+            <p>AirPods Live Translation is built around a two-person, alternating-turn model. A Zoom call with six participants speaking over each other — or even a three-person discussion where two people sometimes speak simultaneously — overwhelms the feature. The speech recognition engine attempts to handle crosstalk but produces incomplete or confused transcripts. More importantly, the feature cannot distinguish between multiple speakers on a call and assign speaker labels to translation output. For multilingual team meetings, <a href="article-18.html" style="color:#0b6ad1;">platform-native translated captions in Google Meet, Zoom, or Teams</a> are the appropriate tool.</p>
 
             <h3>Broadcast audio: lectures, films, podcasts, YouTube</h3>
-            <p>This is the most common misconception about the feature. AirPods Live Translation processes microphone input — it does not intercept system audio. If you are watching a French documentary on your Mac, or listening to a Spanish lecture on your iPhone, AirPods Live Translation will not translate that audio. It would pick up whatever is in the room (including the speaker, mixed with background noise), not the clean audio stream from the application. Translating broadcast, streaming, or system audio is a screen captioning problem, requiring software that sits between the application and the audio output. Tools like <a href="article-25.html" style="color:#00b8ff;">Windows Live Captions or dedicated caption apps</a> handle this correctly.</p>
+            <p>This is the most common misconception about the feature. AirPods Live Translation processes microphone input — it does not intercept system audio. If you are watching a French documentary on your Mac, or listening to a Spanish lecture on your iPhone, AirPods Live Translation will not translate that audio. It would pick up whatever is in the room (including the speaker, mixed with background noise), not the clean audio stream from the application. Translating broadcast, streaming, or system audio is a screen captioning problem, requiring software that sits between the application and the audio output. Tools like <a href="article-25.html" style="color:#0b6ad1;">Windows Live Captions or dedicated caption apps</a> handle this correctly.</p>
 
             <h3>Desktop and laptop workflows</h3>
             <p>The feature lives entirely within the iOS/iPadOS ecosystem. If you work on a Windows PC or a Mac, it is simply not available. Your desktop does not run iOS 26. Any translation or captioning need during desktop work — foreign-language web meetings, international video content, dictated notes in another language — requires a desktop-native solution.</p>
@@ -137,7 +218,7 @@
             <h3>Languages outside Apple's supported set</h3>
             <p>As of iOS 26, AirPods Live Translation supports a subset of the languages Apple's Translation app covers, and that set is itself smaller than Google Translate's 133-language catalogue. Less common language pairs (e.g., Thai↔English, Vietnamese↔German, Swahili↔French) are either unavailable or fall back to server-based processing. Check the supported pairs in Settings → Translate before relying on the feature for a specific trip.</p>
 
-            <h2>AirPods Live Translation vs the Main Alternatives</h2>
+            <h2 id="sec-4">AirPods Live Translation vs the Main Alternatives</h2>
             <table>
                 <thead>
                     <tr>
@@ -181,7 +262,7 @@
                 </tbody>
             </table>
 
-            <h2>Setting Up AirPods Live Translation: Step-by-Step</h2>
+            <h2 id="sec-5">Setting Up AirPods Live Translation: Step-by-Step</h2>
             <p>If you have a compatible device, the setup takes under two minutes:</p>
             <ol>
                 <li>Update to iOS 26 (Settings → General → Software Update).</li>
@@ -192,7 +273,7 @@
             </ol>
             <p>For optimal accuracy, reduce background noise where possible. The on-device speech recognition is strong but not noise-immune; busy streets or loud restaurants noticeably reduce transcription quality, which cascades into translation errors.</p>
 
-            <h2>Real-World Accuracy: What to Expect</h2>
+            <h2 id="sec-6">Real-World Accuracy: What to Expect</h2>
             <p>Apple's on-device models in iOS 26 represent a significant step forward over iOS 17-era translation quality, particularly for European language pairs. In side-by-side testing of Spanish, French, German, Italian, and Japanese against Google Translate's Conversation mode, accuracy for standard vocabulary and clear speech is comparable — sometimes better on short sentences. The meaningful differences appear at the edges:</p>
             <ul>
                 <li><strong>Accents and dialects:</strong> A heavy regional accent (Sicilian Italian, Québécois French, Andalusian Spanish) reduces Apple's accuracy faster than Google's, which has trained on more dialect variation due to its larger data volume.</li>
@@ -201,18 +282,18 @@
                 <li><strong>Numbers and proper nouns:</strong> Both systems struggle with unfamiliar place names and numbers spoken quickly. Speaking numbers clearly and slowly improves accuracy noticeably.</li>
             </ul>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">Practical tip:</strong> For any conversation where accuracy is critical (medical symptoms, legal clauses, financial terms), confirm the translated output in writing — ask the other party to also use a text translator on their own device and compare. AirPods Live Translation is excellent for establishing communication; it is not yet reliable enough for high-stakes precise language.
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">Practical tip:</strong> For any conversation where accuracy is critical (medical symptoms, legal clauses, financial terms), confirm the translated output in writing — ask the other party to also use a text translator on their own device and compare. AirPods Live Translation is excellent for establishing communication; it is not yet reliable enough for high-stakes precise language.
             </div>
 
-            <h2>The Desktop Gap: What Fills It</h2>
+            <h2 id="sec-7">The Desktop Gap: What Fills It</h2>
             <p>A large share of language barrier situations in 2026 happen on screens, not in physical spaces. International Zoom meetings, foreign-language YouTube tutorials, online courses in another language, multilingual Slack threads where someone pastes a voice note — none of these are reachable by AirPods Live Translation.</p>
 
-            <p>For Windows users, the most capable solution is a desktop app that taps into the system audio pipeline directly, generating real-time captions and translation as an overlay on top of any running application. The <strong>Live Subtitles</strong> app does exactly this: it intercepts the audio output from any application — Zoom, Teams, Chrome, VLC, streaming services — and produces a floating caption window with optional translation into your preferred language. Unlike browser extensions or per-app integrations, it works across your entire desktop regardless of which software is producing the audio. You can read more about how caption layers work and why they outperform per-app solutions in <a href="article-25.html" style="color:#00b8ff;">this overview of AI-generated live captions in 2026</a>.</p>
+            <p>For Windows users, the most capable solution is a desktop app that taps into the system audio pipeline directly, generating real-time captions and translation as an overlay on top of any running application. The <strong>Live Subtitles</strong> app does exactly this: it intercepts the audio output from any application — Zoom, Teams, Chrome, VLC, streaming services — and produces a floating caption window with optional translation into your preferred language. Unlike browser extensions or per-app integrations, it works across your entire desktop regardless of which software is producing the audio. You can read more about how caption layers work and why they outperform per-app solutions in <a href="article-25.html" style="color:#0b6ad1;">this overview of AI-generated live captions in 2026</a>.</p>
 
-            <p>For professionals who regularly move between travel (AirPods Live Translation) and desktop work (a caption overlay), the two tools are complementary rather than competing: one covers in-person speech, the other covers screen-based audio. See also our <a href="article-23.html" style="color:#00b8ff;">comparison of voice translation apps by use case</a> for a broader market view.</p>
+            <p>For professionals who regularly move between travel (AirPods Live Translation) and desktop work (a caption overlay), the two tools are complementary rather than competing: one covers in-person speech, the other covers screen-based audio. See also our <a href="article-23.html" style="color:#0b6ad1;">comparison of voice translation apps by use case</a> for a broader market view.</p>
 
-            <h2>Frequently Asked Questions</h2>
+            <h2 id="sec-8">Frequently Asked Questions</h2>
 
             <p><strong>Does AirPods Live Translation work completely offline?</strong><br>
             For the language pairs Apple supports with on-device models (listed in Settings → Translate on iOS 26), yes — once the language pack is downloaded, no internet connection is required. Unsupported pairs fall back to Apple's servers and require connectivity.</p>
@@ -232,34 +313,80 @@
             <p><strong>Does it work on iPad?</strong><br>
             Yes, on compatible iPads running iPadOS 26 with Apple Silicon (M-series chips). The experience is identical to iPhone except that the iPad's larger microphone array sometimes gives marginally better pickup in louder environments.</p>
 
-            <h2>Bottom Line: Right Tool, Right Context</h2>
+            <h2 id="sec-9">Bottom Line: Right Tool, Right Context</h2>
             <p>AirPods Live Translation is a genuinely useful, well-executed feature for the specific workflow it targets: spontaneous, private, in-person conversations between two people. It is not a universal translation layer. For travel and face-to-face interaction with compatible language pairs, it reduces friction better than any prior Apple solution and competes seriously with Google Translate's Conversation mode.</p>
 
             <p>For everything else — meetings, desktop media, broadcast audio, multi-speaker scenarios, languages outside Apple's supported set — you need a different tool. Knowing that boundary in advance means you arrive at the meeting with the right solution active, rather than discovering the limitation mid-call in front of colleagues.</p>
 
-            <h2>References</h2>
+            <h2 id="sec-10">References</h2>
             <ul>
-                <li><a href="https://support.apple.com/guide/iphone/translate-text-voice-and-conversations-iphd74cb450f/ios" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — Translate text, voice, and conversations on iPhone</a></li>
-                <li><a href="https://www.apple.com/airpods/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — AirPods overview</a></li>
-                <li><a href="https://developer.apple.com/translation/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple Developer — Translation framework documentation</a></li>
-                <li><a href="https://support.google.com/translate/answer/6142473" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google — Translate conversations in real time</a></li>
+                <li><a href="https://support.apple.com/guide/iphone/translate-text-voice-and-conversations-iphd74cb450f/ios" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — Translate text, voice, and conversations on iPhone</a></li>
+                <li><a href="https://www.apple.com/airpods/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — AirPods overview</a></li>
+                <li><a href="https://developer.apple.com/translation/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple Developer — Translation framework documentation</a></li>
+                <li><a href="https://support.google.com/translate/answer/6142473" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google — Translate conversations in real time</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Related reading</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Related reading</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">Voice Translation Apps in 2026: Real-Time Tools Compared by Use Case</a></li>
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">Live Captions in 2026: How AI-Generated Captions Work and When to Use Them</a></li>
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams Translated Captions in 2026</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">Voice Translation Apps in 2026: Real-Time Tools Compared by Use Case</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">Live Captions in 2026: How AI-Generated Captions Work and When to Use Them</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">Google Meet vs Zoom vs Teams Translated Captions in 2026</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">For meetings and desktop: get captions that AirPods Live Translation cannot provide</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Live Subtitles delivers cross-app captions and real-time translation on Windows — covering every desktop workflow that AirPods Live Translation cannot reach. Rated 4.7 stars by 350+ users on the Microsoft Store.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">For meetings and desktop: get captions that AirPods Live Translation cannot provide</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Live Subtitles delivers cross-app captions and real-time translation on Windows — covering every desktop workflow that AirPods Live Translation cannot reach. Rated 4.7 stars by 350+ users on the Microsoft Store.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

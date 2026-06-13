@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,20 +43,86 @@
     <meta name="twitter:title" content="Comparación de subtítulos en idioma nativo y objetivo: qué elegir para diferentes niveles | Live Subtitles">
     <meta name="twitter:description" content="Subtítulos en idioma nativo, objetivo o duales: descubre cuál elegir según tu nivel (A1–C2) para aprender idiomas con series y películas. Pruébalo gratis.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/es/learning.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
         .article { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .article h1 { color: #00ff9d; margin-bottom: 30px; }
-        .article h2 { color: #00b8ff; margin-top: 40px; margin-bottom: 20px; }
-        .article p, .article li { line-height: 1.8; margin-bottom: 15px; color: #eee; }
-        .comparison-table { background: rgba(255,255,255,0.05); padding: 20px; border-radius: 8px; margin: 20px 0; }
-        .level-card { background: rgba(0, 184, 255, 0.1); padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #00b8ff; }
+        .article h1 { color: #0a7f55; margin-bottom: 30px; }
+        .article h2 { color: #0b6ad1; margin-top: 40px; margin-bottom: 20px; }
+        .article p, .article li { line-height: 1.8; margin-bottom: 15px; color: #2d333b; }
+        .comparison-table { background: rgba(0,0,0,0.05); padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .level-card { background: rgba(0, 184, 255, 0.1); padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #0b6ad1; }
         .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
         .pros { background: rgba(0, 255, 157, 0.1); padding: 15px; border-radius: 8px; }
         .cons { background: rgba(255, 69, 69, 0.1); padding: 15px; border-radius: 8px; }
         .back-link { margin-bottom: 30px; }
-        .back-link a { color: #00b8ff; text-decoration: none; }
+        .back-link a { color: #0b6ad1; text-decoration: none; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
 
     <!-- Article Schema -->
@@ -107,19 +169,39 @@
     <link rel="preload" as="image" href="/articles/img/es/learning.webp">
 </head>
 <body>
-    <div class="container article">
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contenido">
+        <div class="toc-inner">
+            <h4>Contenido</h4>
+            <a href="#sec-1">Subtítulos en idioma nativo: comod…</a>
+            <a href="#sec-2">Subtítulos en idioma objetivo: un …</a>
+            <a href="#sec-3">Subtítulos duales (2 sub): equilib…</a>
+            <a href="#sec-4">Recomendaciones de subtítulos segú…</a>
+            <a href="#sec-5">Recomendaciones detalladas por nivel</a>
+            <a href="#sec-6">Factores adicionales a considerar</a>
+            <a href="#sec-7">Estrategias de transición</a>
+            <a href="#sec-8">Signos de que es hora de cambiar</a>
+            <a href="#sec-9">Herramientas para usar subtítulos …</a>
+            <a href="#sec-10">Conclusión</a>
+            </div>
+    </nav>
+    <main class="article-main">
+    <div class="container article-container">
         <div class="back-link">
             <a href="../">← Volver a todos los artículos</a>
         </div>
         
         <h1>Comparación de subtítulos en idioma nativo y objetivo: qué elegir para diferentes niveles</h1>
-                <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Autor: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#00b8ff; text-decoration:none;">Sofia Almeida</a> &middot; líder de lingüística aplicada, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Actualizado: 12 mayo 2026</div>
+        <div class="article-date"><span class="reading-time" style="margin:0">9 min de lectura</span></div>
+                <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Autor: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Sofia Almeida</a> &middot; líder de lingüística aplicada, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Actualizado: 12 mayo 2026</div>
         <img class="article-hero" src="/articles/img/es/learning.webp" alt="Subtítulos duales en una lección en video para aprender idiomas" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         
         <p>Aprender un idioma viendo películas y series con subtítulos se ha convertido en uno de los métodos más populares y eficaces. Sin embargo, surge enseguida una pregunta clave: ¿qué subtítulos conviene usar, los del idioma nativo, los del idioma que estás aprendiendo (idioma objetivo) o ambos a la vez (los llamados subtítulos duales o «2 sub»)? La respuesta no es única: depende sobre todo de tu nivel de dominio y de los objetivos concretos que persigas. En esta guía analizamos las ventajas y los inconvenientes de cada opción, ofrecemos recomendaciones por nivel del Marco Común Europeo (A1-C2) y repasamos las herramientas que te permiten mostrar dos pistas de subtítulos al mismo tiempo.</p>
 
-        <h2>Subtítulos en idioma nativo: comodidad para principiantes</h2>
+        <details class="toc-mobile"><summary>Contenido</summary><ol><li><a href="#sec-1">Subtítulos en idioma nativo: comodidad para principiantes</a></li><li><a href="#sec-2">Subtítulos en idioma objetivo: un paso hacia la inmersión</a></li><li><a href="#sec-3">Subtítulos duales (2 sub): equilibrio entre comprensión y aprendizaje</a></li><li><a href="#sec-4">Recomendaciones de subtítulos según el nivel</a></li><li><a href="#sec-5">Recomendaciones detalladas por nivel</a></li><li><a href="#sec-6">Factores adicionales a considerar</a></li><li><a href="#sec-7">Estrategias de transición</a></li><li><a href="#sec-8">Signos de que es hora de cambiar</a></li><li><a href="#sec-9">Herramientas para usar subtítulos duales</a></li><li><a href="#sec-10">Conclusión</a></li></ol></details>
+            <h2 id="sec-1">Subtítulos en idioma nativo: comodidad para principiantes</h2>
         <p>Para quien acaba de empezar, los subtítulos en el idioma nativo garantizan la comprensión de la trama y del contexto. Permiten seguir la historia sin perder el hilo y reducen la ansiedad que produce escuchar una lengua desconocida. El riesgo, eso sí, es evidente: la atención tiende a centrarse en la lectura cómoda más que en la percepción real del sonido extranjero, de modo que el oído avanza despacio.</p>
         <div class="pros-cons">
             <div class="pros">
@@ -141,7 +223,7 @@
             </div>
         </div>
 
-        <h2>Subtítulos en idioma objetivo: un paso hacia la inmersión</h2>
+        <h2 id="sec-2">Subtítulos en idioma objetivo: un paso hacia la inmersión</h2>
         <p>Usar subtítulos en el idioma que estás aprendiendo mejora a la vez la lectura y la comprensión auditiva, porque el oído y la vista reciben la misma información. Es la mejor forma de memorizar vocabulario y expresiones en su contexto natural y de prepararse para entender sin ningún apoyo. A cambio, exige más concentración y puede resultar exigente si todavía te falta vocabulario.</p>
         <div class="pros-cons">
             <div class="pros">
@@ -163,7 +245,7 @@
             </div>
         </div>
 
-        <h2>Subtítulos duales (2 sub): equilibrio entre comprensión y aprendizaje</h2>
+        <h2 id="sec-3">Subtítulos duales (2 sub): equilibrio entre comprensión y aprendizaje</h2>
         <p>Los subtítulos duales, conocidos también como «2 sub», muestran simultáneamente el texto en el idioma nativo y en el idioma objetivo. El formato es tan popular que en países como Indonesia los usuarios buscan películas con doble subtítulo escribiendo directamente la consulta «film sub indo». La gran ventaja es que permiten comparar la traducción con el texto original frase a frase, lo que da una comprensión mucho más profunda de la estructura de cada lengua. Es el punto intermedio perfecto: entiendes la historia sin renunciar al contacto constante con el idioma que aprendes.</p>
         <div class="pros-cons">
             <div class="pros">
@@ -186,7 +268,7 @@
         </div>
 
         <div class="comparison-table">
-            <h2>Recomendaciones de subtítulos según el nivel</h2>
+            <h2 id="sec-4">Recomendaciones de subtítulos según el nivel</h2>
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>
@@ -212,7 +294,7 @@
             <p>Para los principiantes lo prioritario es la comodidad y la comprensión, así que conviene empezar con subtítulos en el idioma nativo. En el nivel intermedio, los subtítulos duales ayudan a profundizar y a comparar la estructura de ambas lenguas. A los estudiantes avanzados se les recomienda usar subtítulos en el idioma objetivo para lograr la máxima inmersión. A continuación detallamos cada etapa con su estrategia concreta.</p>
         </div>
 
-        <h2>Recomendaciones detalladas por nivel</h2>
+        <h2 id="sec-5">Recomendaciones detalladas por nivel</h2>
 
         <div class="level-card">
             <h3>Principiante (A1-A2)</h3>
@@ -249,7 +331,7 @@
             <p><strong>Objetivo:</strong> Comprensión natural sin apoyo visual.</p>
         </div>
 
-        <h2>Factores adicionales a considerar</h2>
+        <h2 id="sec-6">Factores adicionales a considerar</h2>
 
         <h3>Tipo de contenido</h3>
         <ul>
@@ -267,7 +349,7 @@
             <li><strong>Cultura:</strong> Subtítulos nativos para comprensión completa de contexto</li>
         </ul>
 
-        <h2>Estrategias de transición</h2>
+        <h2 id="sec-7">Estrategias de transición</h2>
 
         <h3>Método gradual</h3>
         <ol>
@@ -283,7 +365,7 @@
         <h3>Método temático</h3>
         <p>Usa diferentes tipos de subtítulos según el tipo de escena: diálogos emocionales con subtítulos nativos, conversaciones cotidianas con subtítulos del idioma objetivo.</p>
 
-        <h2>Signos de que es hora de cambiar</h2>
+        <h2 id="sec-8">Signos de que es hora de cambiar</h2>
 
         <h3>Cambiar a menos apoyo cuando:</h3>
         <ul>
@@ -300,7 +382,7 @@
             <li>El aprendizaje se vuelve estresante en lugar de agradable</li>
         </ul>
 
-        <h2>Herramientas para usar subtítulos duales</h2>
+        <h2 id="sec-9">Herramientas para usar subtítulos duales</h2>
         <p>Mostrar dos pistas de subtítulos al mismo tiempo no es algo que ofrezcan de serie todas las plataformas, pero existen extensiones y aplicaciones que lo hacen posible. Estas son algunas de las más conocidas:</p>
 
         <div class="level-card">
@@ -325,27 +407,73 @@
 
         <p>¿Quieres profundizar en este método? Te recomendamos leer <a href="article-1.html">cómo los subtítulos duales te ayudan a aprender idiomas más rápido</a> y nuestra guía práctica sobre <a href="article-7.html">cómo usar subtítulos duales para el aprendizaje rápido de idiomas</a>. Si además sueles asistir a videollamadas, puedes activar los <a href="/es/zoom-live-captions.html">subtítulos en directo de Zoom</a> para practicar con conversaciones reales.</p>
 
-        <h2>Conclusión</h2>
+        <h2 id="sec-10">Conclusión</h2>
         <p>No existe un enfoque único que funcione para todos. La elección del tipo de subtítulo depende de tu nivel y de tus objetivos: los subtítulos en idioma nativo encajan con los principiantes, los duales («2 sub») son perfectos para quienes quieren profundizar y comparar lenguas, y los subtítulos en idioma objetivo brillan en los niveles avanzados que buscan la máxima inmersión. La clave está en ser honesto sobre tu nivel actual, fijar objetivos claros y ajustar la estrategia a medida que progresas.</p>
 
         <p>Recuerda que el objetivo final es la independencia total de los subtítulos, pero el camino hacia esa meta debe ser gradual y adaptado a tus necesidades. Con el método adecuado, las películas y las series se convierten en una de las formas más amenas y eficaces de aprender un idioma.</p>
 
         <!-- Related Articles -->
-        <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-            <h3 style="color: #00b8ff; margin-top: 0;">Artículos relacionados</h3>
+        <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+            <h3 style="color: #0b6ad1; margin-top: 0;">Artículos relacionados</h3>
             <ul style="list-style: none; padding-left: 0;">
-                <li><a href="article-1.html" style="color: #00b8ff; text-decoration: none;">Cómo los subtítulos duales te ayudan a aprender idiomas más rápido</a></li>
-                <li><a href="article-2.html" style="color: #00b8ff; text-decoration: none;">Por qué los subtítulos son importantes para el aprendizaje de idiomas</a></li>
-                <li><a href="article-6.html" style="color: #00b8ff; text-decoration: none;">Errores que evitar al aprender idiomas con videos con subtítulos duales</a></li>
+                <li><a href="article-1.html" style="color: #0b6ad1; text-decoration: none;">Cómo los subtítulos duales te ayudan a aprender idiomas más rápido</a></li>
+                <li><a href="article-2.html" style="color: #0b6ad1; text-decoration: none;">Por qué los subtítulos son importantes para el aprendizaje de idiomas</a></li>
+                <li><a href="article-6.html" style="color: #0b6ad1; text-decoration: none;">Errores que evitar al aprender idiomas con videos con subtítulos duales</a></li>
             </ul>
         </div>
 
         <!-- CTA -->
         <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-            <h3 style="color: #00ff9d; margin-top: 0;">Prueba Live Subtitles gratis</h3>
-            <p style="color: #eee; margin-bottom: 1.5rem;">Consigue subtítulos duales, reconocimiento de voz en tiempo real y traducción en cualquier aplicación. Funciona con YouTube, Netflix, Zoom y más de 50 programas.</p>
-            <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Descargar desde Microsoft Store</a>
+            <h3 style="color: #0a7f55; margin-top: 0;">Prueba Live Subtitles gratis</h3>
+            <p style="color: #2d333b; margin-bottom: 1.5rem;">Consigue subtítulos duales, reconocimiento de voz en tiempo real y traducción en cualquier aplicación. Funciona con YouTube, Netflix, Zoom y más de 50 programas.</p>
+            <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Descargar gratis</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reseñas</div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Subtítulos en vivo para cualquier app</h3>
+                <div class="explore-cols"><div><h5>Reuniones y llamadas</h5><a href="/es/zoom-live-captions.html">Zoom</a><a href="/es/teams-live-captions.html">Microsoft Teams</a><a href="/es/google-meet-live-captions.html">Google Meet</a><a href="/es/webex-live-captions.html">Webex</a><a href="/es/skype-live-captions.html">Skype</a><a href="/es/slack-live-captions.html">Slack</a><a href="/es/whatsapp-live-translation.html">WhatsApp</a><a href="/es/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming y redes</h5><a href="/es/youtube-dual-subtitles.html">YouTube</a><a href="/es/netflix-subtitles.html">Netflix</a><a href="/es/twitch-live-captions.html">Twitch</a><a href="/es/discord-live-captions.html">Discord</a><a href="/es/tiktok-live-captions.html">TikTok</a><a href="/es/instagram-live-captions.html">Instagram</a><a href="/es/facebook-live-subtitles.html">Facebook</a><a href="/es/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Juegos y creadores</h5><a href="/es/obs-subtitles.html">OBS</a><a href="/es/game-mode-subtitles.html">Game Mode</a><a href="/es/steam-subtitles.html">Steam</a><a href="/es/restream-subtitles.html">Restream</a><a href="/es/vimeo-subtitles.html">Vimeo</a><a href="/es/vlc-subtitles.html">VLC</a></div><div><h5>Estudio y trabajo</h5><a href="/es/coursera-subtitles.html">Coursera</a><a href="/es/udemy-live-captions.html">Udemy</a><a href="/es/google-classroom-subtitles.html">Google Classroom</a><a href="/es/linkedin-live-captions.html">LinkedIn</a><a href="/es/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/es/" style="font-weight:600;text-decoration:none;">Inicio de Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Leer también</h4>
+            <a class="s-item" href="article-1.html">Cómo los subtítulos duales te ayudan a aprender idiomas má…</a>
+            <a class="s-item" href="article-2.html">Por qué los subtítulos son importantes para el aprendizaje…</a>
+            <a class="s-item" href="article-3.html">Cómo ver películas regularmente en idioma extranjero mejor…</a>
+            <a class="s-item" href="article-4.html">Por qué los subtítulos son útiles incluso para hablantes n…</a>
+            <a class="s-item" href="article-5.html">TOP-10 de películas con subtítulos duales para aprender in…</a>
+            <a class="s-item" href="article-6.html">Errores que evitar al aprender idiomas con videos con subt…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Subtítulos en vivo para cualquier app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Descargar gratis</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Arriba" title="Arriba">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/es/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html> 

@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="Google Meet vs Zoom vs Teams：2026 年翻译字幕对比">
     <meta name="twitter:description" content="Google Meet、Zoom 与 Microsoft Teams 翻译字幕 2026 深度横评：支持语言数量、管理员权限与跨平台统一部署策略全面解析，帮助多语言国际团队选出最契合自身工作流与业务需求的视频会议实时字幕解决方案，消除语言沟通障碍，显著提升跨文化协作效率，立即查看对比结果。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/zh/meetings.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,38 @@
     <link rel="preload" as="image" href="/articles/img/zh/meetings.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目录">
+        <div class="toc-inner">
+            <h4>目录</h4>
+            <a href="#sec-1">2026年三大平台现状快照（截至2026年2月18日）</a>
+            <a href="#sec-2">深度对比：Google Meet 翻译字幕</a>
+            <a href="#sec-3">深度对比：Zoom 翻译字幕</a>
+            <a href="#sec-4">深度对比：Microsoft Teams 翻译字幕</a>
+            <a href="#sec-5">什么情况下原生内置字幕就足够了</a>
+            <a href="#sec-6">什么情况下统一跨平台字幕工作流更值得投资</a>
+            <a href="#sec-7">管理者决策框架：四步落地方法</a>
+            <a href="#sec-8">部署过程中常见的三类风险</a>
+            <a href="#sec-9">按团队类型的具体建议</a>
+            <a href="#sec-10">常见问题</a>
+            <a href="#sec-11">延伸阅读</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 返回文章</a>
         <h1 class="article-title" itemprop="headline">Google Meet vs Zoom vs Teams：2026 年翻译字幕对比</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-02-18">2026 年 2 月 18 日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#00b8ff; text-decoration:none;">Lukas Bergström</a> &middot; 实时流水线工程师, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2026-02-18">2026 年 2 月 18 日<span class="reading-time">8 分钟阅读</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Lukas Bergström</a> &middot; 实时流水线工程师, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/zh/meetings.webp" alt="多语言视频会议中的实时字幕" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>对于需要跨语言沟通的团队来说，<strong>翻译字幕</strong>已经不再是加分项，而是日常运营的基础设施。问题不在于"要不要开启字幕"，而在于：我们该依赖 Google Meet、Zoom 还是 Microsoft Teams 各自内置的翻译能力？还是应该在所有平台上统一一套外部字幕工作流？本文从实际运营角度切入，帮助团队负责人和 IT 管理员做出有依据的决策。</p>
 
-            <h2>2026年三大平台现状快照（截至2026年2月18日）</h2>
+            <details class="toc-mobile"><summary>目录</summary><ol><li><a href="#sec-1">2026年三大平台现状快照（截至2026年2月18日）</a></li><li><a href="#sec-2">深度对比：Google Meet 翻译字幕</a></li><li><a href="#sec-3">深度对比：Zoom 翻译字幕</a></li><li><a href="#sec-4">深度对比：Microsoft Teams 翻译字幕</a></li><li><a href="#sec-5">什么情况下原生内置字幕就足够了</a></li><li><a href="#sec-6">什么情况下统一跨平台字幕工作流更值得投资</a></li><li><a href="#sec-7">管理者决策框架：四步落地方法</a></li><li><a href="#sec-8">部署过程中常见的三类风险</a></li><li><a href="#sec-9">按团队类型的具体建议</a></li><li><a href="#sec-10">常见问题</a></li><li><a href="#sec-11">延伸阅读</a></li></ol></details>
+            <h2 id="sec-1">2026年三大平台现状快照（截至2026年2月18日）</h2>
             <p>在正式对比之前，先了解三个平台当前的基本数据：</p>
             <table>
                 <thead>
@@ -129,7 +211,7 @@
             </table>
             <p>单从语言数量看，Google Meet 领先。但语言数量只是决策的一个维度，并不等于实际使用效果。</p>
 
-            <h2>深度对比：Google Meet 翻译字幕</h2>
+            <h2 id="sec-2">深度对比：Google Meet 翻译字幕</h2>
             <h3>优势</h3>
             <ul>
                 <li>截至2025年6月，支持高达69种语言的实时翻译，覆盖了绝大多数全球主要商业语言。</li>
@@ -144,7 +226,7 @@
                 <li>字幕无法导出为会议文字记录，需结合其他工具才能满足合规归档需求。</li>
             </ul>
 
-            <h2>深度对比：Zoom 翻译字幕</h2>
+            <h2 id="sec-3">深度对比：Zoom 翻译字幕</h2>
             <h3>优势</h3>
             <ul>
                 <li>支持46种语言，覆盖主要欧亚语种，对大多数国际企业团队已经足够。</li>
@@ -159,7 +241,7 @@
                 <li>在与外部合作方（非同一 Zoom 账号体系）的会议中，字幕功能的一致性可能降低。</li>
             </ul>
 
-            <h2>深度对比：Microsoft Teams 翻译字幕</h2>
+            <h2 id="sec-4">深度对比：Microsoft Teams 翻译字幕</h2>
             <h3>优势</h3>
             <ul>
                 <li>与 Microsoft 365 生态紧密绑定，企业用户可在同一许可证体系内获取字幕能力。</li>
@@ -173,7 +255,7 @@
                 <li>在混合租户（guest 用户）场景下，字幕翻译功能的可用性会受到限制，需额外测试。</li>
             </ul>
 
-            <h2>什么情况下原生内置字幕就足够了</h2>
+            <h2 id="sec-5">什么情况下原生内置字幕就足够了</h2>
             <p>不是每个团队都需要引入额外工具。如果满足以下条件，各平台的原生翻译字幕通常已经够用：</p>
             <ul>
                 <li>组织已全面标准化在单一会议平台上，几乎不与其他平台的外部方协作。</li>
@@ -183,7 +265,7 @@
             </ul>
             <p>满足上述条件时，原生字幕提供的是最低摩擦、零额外成本的多语言解决方案。</p>
 
-            <h2>什么情况下统一跨平台字幕工作流更值得投资</h2>
+            <h2 id="sec-6">什么情况下统一跨平台字幕工作流更值得投资</h2>
             <p>现实中，许多团队同时在多个平台上运作。一旦沟通场景碎片化，原生字幕的局限就会被放大：</p>
             <ul>
                 <li>团队日常使用 Meet 处理内部会议，用 Zoom 接待外部合作伙伴，用 Teams 处理与企业客户的项目推进。</li>
@@ -192,11 +274,11 @@
             </ul>
             <p>当沟通环境高度分散时，频繁的工具切换本身就是一种隐性生产力损耗。建立一套覆盖多场景的统一字幕工作流，可以显著降低这种认知切换成本。</p>
 
-            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">实用提示：</strong> 如果你的团队在 Windows 设备上工作，<a href="/zh/zoom-live-captions.html" style="color:#00b8ff;">「Live Subtitles」应用</a>可以作为系统级字幕层运行，覆盖 Meet、Zoom、Teams 以及其他任何音频来源，实现真正的跨平台统一字幕体验。
+            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">实用提示：</strong> 如果你的团队在 Windows 设备上工作，<a href="/zh/zoom-live-captions.html" style="color:#0b6ad1;">「Live Subtitles」应用</a>可以作为系统级字幕层运行，覆盖 Meet、Zoom、Teams 以及其他任何音频来源，实现真正的跨平台统一字幕体验。
             </div>
 
-            <h2>管理者决策框架：四步落地方法</h2>
+            <h2 id="sec-7">管理者决策框架：四步落地方法</h2>
             <h3>第一步：梳理实际沟通渠道分布</h3>
             <p>不要从软件采购清单出发，而要从真实使用数据出发。统计团队成员每周在每个平台上花费的会议时长，以及各类沟通场景的占比。例如：Google Meet 占内部会议的60%，Zoom 用于客户演示占25%，Teams 用于项目文档协作占15%。这张地图决定了你的优化优先级。</p>
 
@@ -214,47 +296,93 @@
             <h3>第四步：规模化推广胜出方案</h3>
             <p>实验出结果后，将胜出方案制度化：更新团队的"会议准备清单"，明确字幕工作流的启动步骤；在入职培训中加入字幕使用规范；建立季度复盘节点持续优化。</p>
 
-            <h2>部署过程中常见的三类风险</h2>
+            <h2 id="sec-8">部署过程中常见的三类风险</h2>
             <ul>
                 <li><strong>策略配置与用户行为脱节：</strong>IT 管理员完成了后台配置，但员工不知道功能已开放，也没有收到使用指引。解决方案是配置完成后立即发送使用说明，并在团队周会中演示一次完整操作流程。</li>
                 <li><strong>缺乏发言协议：</strong>多人同时讲话是字幕质量杀手。应在多语言会议前明确"一次一人发言"规则，并建议主持人在翻译字幕开启时适当放慢语速。</li>
                 <li><strong>没有效果反馈闭环：</strong>部署后不跟进数据，无法发现问题也无法向管理层证明价值。建议在部署后第3周和第6周各做一次简短的用户满意度调查，收集真实反馈并迭代改进。</li>
             </ul>
 
-            <h2>按团队类型的具体建议</h2>
+            <h2 id="sec-9">按团队类型的具体建议</h2>
             <p><strong>纯内部单平台组织（如全面使用 Google Workspace 的公司）：</strong>优先启用 Google Meet 原生翻译字幕，完善管理员策略配置，建立使用规范后再考虑是否引入外部工具。</p>
             <p><strong>多平台外向型组织（同时使用 Meet、Zoom、Teams 与外部客户协作）：</strong>优先建立跨平台统一的字幕工作流，确保员工在切换会议工具时不需要重新学习字幕操作，然后再针对各平台进行精细化优化。</p>
-            <p><strong>语言学习与业务运营并重的团队：</strong>选择一套在会议之外也能工作的字幕方案——涵盖异步视频回放、培训课程、行业直播等场景，避免员工在"学习模式"和"工作模式"之间反复切换工具。对于 Windows 用户，<a href="article-17.html" style="color:#00b8ff;">「Live Subtitles」这类系统级实时字幕应用</a>能够跨越所有应用场景提供一致的字幕体验。</p>
+            <p><strong>语言学习与业务运营并重的团队：</strong>选择一套在会议之外也能工作的字幕方案——涵盖异步视频回放、培训课程、行业直播等场景，避免员工在"学习模式"和"工作模式"之间反复切换工具。对于 Windows 用户，<a href="article-17.html" style="color:#0b6ad1;">「Live Subtitles」这类系统级实时字幕应用</a>能够跨越所有应用场景提供一致的字幕体验。</p>
 
-            <h2>常见问题</h2>
+            <h2 id="sec-10">常见问题</h2>
             <p><strong>语言支持数量是选择平台的唯一标准吗？</strong><br>不是。69种 vs 46种的差异对大多数团队而言并不构成决定性因素——实际工作中用到的往往只有5到10种核心语言。管理员配置的便捷度、跨平台一致性、以及字幕在非会议场景中的可用性，通常比语言总数更能影响最终体验。</p>
             <p><strong>能否同时使用原生字幕和外部字幕工具？</strong><br>可以，而且这是很多成熟团队的选择。在单一平台、受控场景下使用原生字幕，在跨平台、混合场景下切换到系统级字幕工具，两者互为补充，不必非此即彼。</p>
             <p><strong>部署后多久能看到效果？</strong><br>通常在使用习惯稳定后的2至4周内，可以观察到会后澄清消息数量的下降和会议决策速度的提升。前提是团队成员确实在持续使用字幕功能，而不是偶尔启用。</p>
             <p><strong>小语种支持不足时怎么办？</strong><br>如果团队中有平台未覆盖的小语种使用者，可以考虑系统级字幕应用作为补充。Windows「Live Subtitles」应用依托 Azure 认知服务的 ASR 能力，支持超过80种语言的实时字幕，可以填补平台原生方案的语言缺口。</p>
 
-            <h2>延伸阅读</h2>
+            <h2 id="sec-11">延伸阅读</h2>
             <ul>
-                <li><a href="https://workspaceupdates.googleblog.com/2025/06/google-meet-translated-captions-69-languages.html" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google Workspace 官方博客：Meet 翻译字幕扩展至69种语言</a></li>
-                <li><a href="https://www.zoom.com/en/products/collaboration-tools/features/captions/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Zoom 字幕与翻译字幕功能说明</a></li>
-                <li><a href="https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-ba3f845a-9d15-4d84-a8d2-5df2da3bad2b" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft Teams 实时字幕官方文档</a></li>
-                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Windows 实时字幕功能支持页面</a></li>
+                <li><a href="https://workspaceupdates.googleblog.com/2025/06/google-meet-translated-captions-69-languages.html" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google Workspace 官方博客：Meet 翻译字幕扩展至69种语言</a></li>
+                <li><a href="https://www.zoom.com/en/products/collaboration-tools/features/captions/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Zoom 字幕与翻译字幕功能说明</a></li>
+                <li><a href="https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-ba3f845a-9d15-4d84-a8d2-5df2da3bad2b" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Microsoft Teams 实时字幕官方文档</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Windows 实时字幕功能支持页面</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">相关阅读</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">相关阅读</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-17.html" style="color: #00b8ff; text-decoration: none;">Windows 实时字幕应用：全场景使用指南</a></li>
-                    <li><a href="article-19.html" style="color: #00b8ff; text-decoration: none;">多语言团队会议效率提升实战手册</a></li>
-                    <li><a href="article-20.html" style="color: #00b8ff; text-decoration: none;">实时字幕在远程协作中的最佳实践</a></li>
+                    <li><a href="article-17.html" style="color: #0b6ad1; text-decoration: none;">Windows 实时字幕应用：全场景使用指南</a></li>
+                    <li><a href="article-19.html" style="color: #0b6ad1; text-decoration: none;">多语言团队会议效率提升实战手册</a></li>
+                    <li><a href="article-20.html" style="color: #0b6ad1; text-decoration: none;">实时字幕在远程协作中的最佳实践</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">建立一套跨平台统一字幕工作流</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">无论使用 Meet、Zoom 还是 Teams，「Live Subtitles」都能在系统层提供实时翻译字幕，覆盖会议、培训、直播等所有场景，帮助团队彻底消除跨语言沟通摩擦。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">在 Microsoft Store 免费下载</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">建立一套跨平台统一字幕工作流</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">无论使用 Meet、Zoom 还是 Teams，「Live Subtitles」都能在系统层提供实时翻译字幕，覆盖会议、培训、直播等所有场景，帮助团队彻底消除跨语言沟通摩擦。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">免费下载</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 条评价</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>适用于任何应用的实时字幕</h3>
+                <div class="explore-cols"><div><h5>会议与通话</h5><a href="/zh/zoom-live-captions.html">Zoom</a><a href="/zh/teams-live-captions.html">Microsoft Teams</a><a href="/zh/google-meet-live-captions.html">Google Meet</a><a href="/zh/webex-live-captions.html">Webex</a><a href="/zh/skype-live-captions.html">Skype</a><a href="/zh/slack-live-captions.html">Slack</a><a href="/zh/whatsapp-live-translation.html">WhatsApp</a><a href="/zh/telegram-subtitles.html">Telegram</a></div><div><h5>流媒体与社交</h5><a href="/zh/youtube-dual-subtitles.html">YouTube</a><a href="/zh/netflix-subtitles.html">Netflix</a><a href="/zh/twitch-live-captions.html">Twitch</a><a href="/zh/discord-live-captions.html">Discord</a><a href="/zh/tiktok-live-captions.html">TikTok</a><a href="/zh/instagram-live-captions.html">Instagram</a><a href="/zh/facebook-live-subtitles.html">Facebook</a><a href="/zh/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>游戏与创作者</h5><a href="/zh/obs-subtitles.html">OBS</a><a href="/zh/game-mode-subtitles.html">Game Mode</a><a href="/zh/steam-subtitles.html">Steam</a><a href="/zh/restream-subtitles.html">Restream</a><a href="/zh/vimeo-subtitles.html">Vimeo</a><a href="/zh/vlc-subtitles.html">VLC</a></div><div><h5>学习与工作</h5><a href="/zh/coursera-subtitles.html">Coursera</a><a href="/zh/udemy-live-captions.html">Udemy</a><a href="/zh/google-classroom-subtitles.html">Google Classroom</a><a href="/zh/linkedin-live-captions.html">LinkedIn</a><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/zh/" style="font-weight:600;text-decoration:none;">Live Subtitles 首页 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>相关阅读</h4>
+            <a class="s-item" href="article-1.html">双语字幕如何帮助您更快学习语言</a>
+            <a class="s-item" href="article-2.html">为什么字幕对语言学习很重要</a>
+            <a class="s-item" href="article-3.html">双语字幕学习法的跨文化应用</a>
+            <a class="s-item" href="article-4.html">为什么字幕对母语使用者也有用</a>
+            <a class="s-item" href="article-5.html">学习英语的双语字幕电影TOP-10推荐</a>
+            <a class="s-item" href="article-6.html">通过双语字幕视频学习语言时要避免的错误</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>适用于任何应用的实时字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">免费下载</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/zh/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

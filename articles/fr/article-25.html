@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="Sous-titres en direct 2026 : comment fonctionnent les sous-titres IA et quand les utiliser">
     <meta name="twitter:description" content="Sous-titres en direct IA en 2026 : transcription en moins de 2 s sur Windows, Mac et Android, et guide pour choisir la bonne couche. Essayez.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/fr/meetings.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,22 +150,40 @@
     <link rel="preload" as="image" href="/articles/img/fr/meetings.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Sommaire">
+        <div class="toc-inner">
+            <h4>Sommaire</h4>
+            <a href="#sec-1">Que sont vraiment les sous-titres …</a>
+            <a href="#sec-2">Trois couches où les sous-titres e…</a>
+            <a href="#sec-3">Comparatif 2026 : quel sous-titre …</a>
+            <a href="#sec-4">Comment l'IA génère réellement les…</a>
+            <a href="#sec-5">Quand chaque couche l'emporte</a>
+            <a href="#sec-6">Liste de vérification pour la conf…</a>
+            <a href="#sec-7">Idées reçues sur les sous-titres e…</a>
+            <a href="#sec-8">Questions fréquentes</a>
+            <a href="#sec-9">Références</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Retour aux articles</a>
         <h1 class="article-title" itemprop="headline">Sous-titres en direct 2026 : comment fonctionnent les sous-titres IA et quand les utiliser</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 mai 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Auteur: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingénieur overlays gaming, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Mis à jour: 28 mai 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 mai 2026<span class="reading-time">8 min de lecture</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Auteur: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingénieur overlays gaming, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Mis à jour: 28 mai 2026</div>
         <img class="article-hero" src="/articles/img/fr/meetings.webp" alt="Sous-titres en direct apparaissant à l'écran pendant une conversation en temps réel" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Les <strong>sous-titres en direct</strong> ressemblent à une fonctionnalité unique, mais le terme recouvre en réalité trois implémentations très différentes : les superpositions au niveau du système d'exploitation, les sous-titres intégrés au navigateur et les couches de sous-titrage tierces. Chacune l'emporte dans un scénario précis, et l'idée rassurante qu'« il suffit d'activer les sous-titres » masque des asymétries de plateforme parfois déroutantes. Cet article de 2026 explique comment l'IA transforme la parole en texte en temps réel, où ces sous-titres apparaissent réellement, et comment choisir la bonne couche selon votre usage quotidien.</p>
 
-            <h2>Que sont vraiment les sous-titres en direct</h2>
+            <details class="toc-mobile"><summary>Sommaire</summary><ol><li><a href="#sec-1">Que sont vraiment les sous-titres en direct</a></li><li><a href="#sec-2">Trois couches où les sous-titres en direct apparaissent</a></li><li><a href="#sec-3">Comparatif 2026 : quel sous-titre en direct utiliser et quand</a></li><li><a href="#sec-4">Comment l'IA génère réellement les sous-titres en direct</a></li><li><a href="#sec-5">Quand chaque couche l'emporte</a></li><li><a href="#sec-6">Liste de vérification pour la configuration</a></li><li><a href="#sec-7">Idées reçues sur les sous-titres en direct en 2026</a></li><li><a href="#sec-8">Questions fréquentes</a></li><li><a href="#sec-9">Références</a></li></ol></details>
+            <h2 id="sec-1">Que sont vraiment les sous-titres en direct</h2>
             <p>Les sous-titres en direct sont le résultat d'une reconnaissance automatique de la parole (ASR) rendue sous forme de texte à l'écran dans un délai de 1 à 2 secondes après que les mots ont été prononcés. Ce ne sont pas des sous-titres pré-rédigés : ils sont générés à mesure que l'audio arrive, mot après mot. La génération de sous-titrage de 2026 s'appuie sur des modèles de la famille Whisper — parfois exécutés directement sur l'appareil pour préserver la confidentialité, parfois dans le cloud lorsque la précision prime sur tout le reste.</p>
             <p>Cette distinction est essentielle. Un sous-titre en direct doit composer en permanence avec le compromis entre latence et exactitude : afficher le texte trop tôt produit des corrections visibles qui « sautillent » à l'écran ; attendre trop longtemps casse la sensation de temps réel. Les bons moteurs gèrent ce compromis avec une fenêtre glissante qui consolide les hypothèses au fur et à mesure.</p>
 
-            <h2>Trois couches où les sous-titres en direct apparaissent</h2>
+            <h2 id="sec-2">Trois couches où les sous-titres en direct apparaissent</h2>
             <p>Le même mot « sous-titres » cache trois implémentations très différentes, qu'il faut distinguer avant de choisir un outil :</p>
             <ul>
                 <li><strong>Au niveau du système (OS) :</strong> le système d'exploitation écoute l'audio système et affiche les sous-titres dans une fenêtre flottante. Exemples : Windows 11 Live Captions, macOS Live Captions, Android Live Caption.</li>
@@ -112,7 +192,7 @@
             </ul>
             <p>La différence cruciale tient à la <strong>portée</strong>. Les sous-titres au niveau OS fonctionnent simultanément dans toutes les applications. Les sous-titres au niveau application ne fonctionnent que dans leur propre fenêtre. Si vous passez de Zoom à un tutoriel YouTube en milieu de journée, les sous-titres applicatifs s'arrêtent net ; les sous-titres au niveau OS, eux, vous suivent partout. Comprendre cette portée évite de chercher un réglage qui n'existe pas dans l'outil que vous utilisez.</p>
 
-            <h2>Comparatif 2026 : quel sous-titre en direct utiliser et quand</h2>
+            <h2 id="sec-3">Comparatif 2026 : quel sous-titre en direct utiliser et quand</h2>
             <table>
                 <thead>
                     <tr>
@@ -131,13 +211,13 @@
                     <tr><td>Live Subtitles</td><td>Niveau OS + bilingue</td><td>Sous-titres inter-apps plus traduction en temps réel ; fonctionne dans les apps Windows et macOS</td><td>Installation tierce requise ; non pré-intégré au système</td></tr>
                 </tbody>
             </table>
-            <p>Pour aller plus loin sur les sous-titres traduits propres aux plateformes de visioconférence, comparez les approches dans notre analyse <a href="article-18.html" style="color:#00b8ff;">Google Meet vs Zoom vs Teams : sous-titres traduits en 2026</a>, ou consultez directement la page dédiée aux <a href="/fr/zoom-live-captions.html" style="color:#00b8ff;">sous-titres en direct sur Zoom</a>.</p>
+            <p>Pour aller plus loin sur les sous-titres traduits propres aux plateformes de visioconférence, comparez les approches dans notre analyse <a href="article-18.html" style="color:#0b6ad1;">Google Meet vs Zoom vs Teams : sous-titres traduits en 2026</a>, ou consultez directement la page dédiée aux <a href="/fr/zoom-live-captions.html" style="color:#0b6ad1;">sous-titres en direct sur Zoom</a>.</p>
 
-            <h2>Comment l'IA génère réellement les sous-titres en direct</h2>
+            <h2 id="sec-4">Comment l'IA génère réellement les sous-titres en direct</h2>
             <p>Un pipeline de sous-titrage en direct enchaîne cinq étapes en continu : capturer l'audio depuis une source, exécuter une détection d'activité vocale, transmettre l'audio à un modèle ASR, post-traiter le texte pour la ponctuation et les majuscules, puis afficher le résultat à l'écran. En 2026, le goulot d'étranglement n'est presque jamais la précision du modèle : c'est la <strong>qualité de la source audio</strong>. Les captures d'audio système (depuis Zoom, le navigateur ou l'OS) sont propres et stables. Les captures au seul microphone récupèrent le bruit ambiant et se dégradent rapidement dès que deux personnes parlent ou se coupent la parole.</p>
-            <p>Concrètement, cela signifie qu'un même moteur peut produire un texte quasi parfait sur un podcast bien enregistré et trébucher sur une réunion bruyante avec écho. Si vous voulez approfondir la différence entre traitement instantané et traitement par lots, notre guide <a href="article-24.html" style="color:#00b8ff;">Transcrire l'audio en texte en 2026 : temps réel vs par lots</a> détaille les compromis de chaque approche.</p>
+            <p>Concrètement, cela signifie qu'un même moteur peut produire un texte quasi parfait sur un podcast bien enregistré et trébucher sur une réunion bruyante avec écho. Si vous voulez approfondir la différence entre traitement instantané et traitement par lots, notre guide <a href="article-24.html" style="color:#0b6ad1;">Transcrire l'audio en texte en 2026 : temps réel vs par lots</a> détaille les compromis de chaque approche.</p>
 
-            <h2>Quand chaque couche l'emporte</h2>
+            <h2 id="sec-5">Quand chaque couche l'emporte</h2>
             <h3>Le niveau OS gagne quand…</h3>
             <p>Vous passez d'une application à l'autre au fil de la journée — réunion le matin, Netflix à midi, podcast l'après-midi. Une seule couche OS vous suit partout, sans avoir à reconfigurer chaque application. Les usages sensibles à la confidentialité privilégient également le niveau OS, car l'audio ne quitte jamais l'appareil lorsque le moteur s'exécute localement.</p>
             <h3>Le niveau application gagne quand…</h3>
@@ -147,7 +227,7 @@
             <h3>La couche tierce inter-apps gagne quand…</h3>
             <p>Vous avez besoin de <strong>traduction</strong> en plus du sous-titrage (les solutions natives OS restent le plus souvent monolingues), d'un affichage bilingue pour apprendre une langue, ou de sous-titres sur des plateformes qui n'en proposent aucun : chat vocal Discord, flux OBS, fichiers vidéo enregistrés. C'est précisément la lacune que comble l'application <strong>Live Subtitles</strong>, en superposant des sous-titres traduits à n'importe quelle source audio.</p>
 
-            <h2>Liste de vérification pour la configuration</h2>
+            <h2 id="sec-6">Liste de vérification pour la configuration</h2>
             <ol>
                 <li>Identifiez votre contexte dominant : ordinateur de bureau, mobile, navigateur ou application précise.</li>
                 <li>Essayez d'abord les sous-titres natifs du système — ils sont gratuits et ne demandent aucune installation.</li>
@@ -155,45 +235,91 @@
                 <li>Évitez d'empiler deux couches de sous-titres dans le même contexte : elles se désynchronisent visuellement et fatiguent l'œil.</li>
             </ol>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <p style="margin:0;"><strong style="color:#00b8ff;">Conseil :</strong> avant une réunion importante, faites un test de 30 secondes avec votre source audio réelle. La précision affichée par un moteur sur de l'audio propre n'est pas représentative d'une salle bruyante avec plusieurs intervenants.</p>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <p style="margin:0;"><strong style="color:#0b6ad1;">Conseil :</strong> avant une réunion importante, faites un test de 30 secondes avec votre source audio réelle. La précision affichée par un moteur sur de l'audio propre n'est pas représentative d'une salle bruyante avec plusieurs intervenants.</p>
             </div>
 
-            <h2>Idées reçues sur les sous-titres en direct en 2026</h2>
+            <h2 id="sec-7">Idées reçues sur les sous-titres en direct en 2026</h2>
             <ul>
                 <li><strong>« Les sous-titres IA sont exacts à 99 % » :</strong> uniquement sur un audio de studio impeccable. Dans de vraies réunions avec chevauchements de voix, la précision se situe entre 75 et 90 %, quel que soit le fournisseur.</li>
                 <li><strong>« Les sous-titres en direct nécessitent Internet » :</strong> ce n'est plus vrai. La plupart des moteurs de sous-titrage au niveau OS en 2026 s'exécutent sur l'appareil, sans connexion.</li>
                 <li><strong>« Sous-titres en direct et sous-titres classiques, c'est pareil » :</strong> les sous-titres classiques sont des traductions de dialogues pré-rédigées ; les sous-titres en direct sont générés par l'IA et incluent les changements de locuteur et certains repères sonores.</li>
             </ul>
 
-            <h2>Questions fréquentes</h2>
+            <h2 id="sec-8">Questions fréquentes</h2>
             <p><strong>Les sous-titres en direct fonctionnent-ils hors ligne ?</strong><br>Les sous-titres au niveau OS sur Windows 11, macOS et Android récent sont traités sur l'appareil et fonctionnent donc sans connexion. Les sous-titres au niveau application nécessitent généralement un serveur. Vérifiez la documentation de chaque fournisseur.</p>
             <p><strong>Puis-je obtenir des sous-titres en direct dans deux langues à la fois ?</strong><br>Les sous-titres natifs du système sont en général uniquement dans la langue source. L'affichage bilingue requiert une couche tierce comme Live Subtitles.</p>
             <p><strong>Les sous-titres en direct vont-ils remplacer les sous-titres classiques ?</strong><br>Pour l'audio en direct, oui ; pour le cinéma et la télévision préenregistrés, non — les sous-titres scriptés battent encore l'ASR sur le plan du soin éditorial et de la qualité.</p>
 
-            <h2>Références</h2>
+            <h2 id="sec-9">Références</h2>
             <ul>
-                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft — utiliser Live Captions sur Windows</a></li>
-                <li><a href="https://support.apple.com/en-us/HT213295" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — Live Captions sur Mac</a></li>
-                <li><a href="https://support.google.com/accessibility/android/answer/9350862" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google — Live Caption sur Android</a></li>
-                <li><a href="https://support.google.com/chrome/answer/10538231" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google — Live Caption dans Chrome</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Microsoft — utiliser Live Captions sur Windows</a></li>
+                <li><a href="https://support.apple.com/en-us/HT213295" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — Live Captions sur Mac</a></li>
+                <li><a href="https://support.google.com/accessibility/android/answer/9350862" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google — Live Caption sur Android</a></li>
+                <li><a href="https://support.google.com/chrome/answer/10538231" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google — Live Caption dans Chrome</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Lecture connexe</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Lecture connexe</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">Transcrire l'audio en texte 2026 : transcription en temps réel vs par lots</a></li>
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">Traducteur vocal en 2026 : outils en temps réel comparés par cas d'usage</a></li>
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams : sous-titres traduits en 2026</a></li>
+                    <li><a href="article-24.html" style="color: #0b6ad1; text-decoration: none;">Transcrire l'audio en texte 2026 : transcription en temps réel vs par lots</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">Traducteur vocal en 2026 : outils en temps réel comparés par cas d'usage</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">Google Meet vs Zoom vs Teams : sous-titres traduits en 2026</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Sous-titres en direct sur toutes les apps, avec traduction en temps réel</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Sous-titres en direct inter-apps et traduction bilingue — partout où il y a de l'audio.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Télécharger depuis Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Sous-titres en direct sur toutes les apps, avec traduction en temps réel</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Sous-titres en direct inter-apps et traduction bilingue — partout où il y a de l'audio.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Télécharger gratuitement</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 avis</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Sous-titres en direct pour toute application</h3>
+                <div class="explore-cols"><div><h5>Réunions et appels</h5><a href="/fr/zoom-live-captions.html">Zoom</a><a href="/fr/teams-live-captions.html">Microsoft Teams</a><a href="/fr/google-meet-live-captions.html">Google Meet</a><a href="/fr/webex-live-captions.html">Webex</a><a href="/fr/skype-live-captions.html">Skype</a><a href="/fr/slack-live-captions.html">Slack</a><a href="/fr/whatsapp-live-translation.html">WhatsApp</a><a href="/fr/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming et réseaux</h5><a href="/fr/youtube-dual-subtitles.html">YouTube</a><a href="/fr/netflix-subtitles.html">Netflix</a><a href="/fr/twitch-live-captions.html">Twitch</a><a href="/fr/discord-live-captions.html">Discord</a><a href="/fr/tiktok-live-captions.html">TikTok</a><a href="/fr/instagram-live-captions.html">Instagram</a><a href="/fr/facebook-live-subtitles.html">Facebook</a><a href="/fr/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Jeux et créateurs</h5><a href="/fr/obs-subtitles.html">OBS</a><a href="/fr/game-mode-subtitles.html">Game Mode</a><a href="/fr/steam-subtitles.html">Steam</a><a href="/fr/restream-subtitles.html">Restream</a><a href="/fr/vimeo-subtitles.html">Vimeo</a><a href="/fr/vlc-subtitles.html">VLC</a></div><div><h5>Études et travail</h5><a href="/fr/coursera-subtitles.html">Coursera</a><a href="/fr/udemy-live-captions.html">Udemy</a><a href="/fr/google-classroom-subtitles.html">Google Classroom</a><a href="/fr/linkedin-live-captions.html">LinkedIn</a><a href="/fr/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/fr/" style="font-weight:600;text-decoration:none;">Accueil Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>À lire aussi</h4>
+            <a class="s-item" href="article-1.html">Comment les sous-titres doubles vous aident Г apprendre le…</a>
+            <a class="s-item" href="article-2.html">Pourquoi les sous-titres sont importants pour l'apprentiss…</a>
+            <a class="s-item" href="article-3.html">Comment regarder rГ©guliГЁrement des films en langue Г©tra…</a>
+            <a class="s-item" href="article-4.html">Pourquoi les sous-titres sont utiles même pour les locuteu…</a>
+            <a class="s-item" href="article-5.html">TOP-10 des films avec sous-titres doubles pour apprendre l…</a>
+            <a class="s-item" href="article-6.html">Erreurs Г Г©viter lors de l'apprentissage des langues par …</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Sous-titres en direct pour toute application.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Télécharger gratuitement</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Haut de page" title="Haut de page">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/fr/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="게임용 전체화면 자막 오버레이 문제 해결">
     <meta name="twitter:description" content="게임 전체화면에서 실시간 자막 오버레이가 보이지 않나요? 독점 풀스크린, HDR 충돌, 오버레이 권한 문제, 안티치트 소프트웨어, GPU 하드웨어 가속 스케줄링 등 모든 원인별 완전한 해결책을 단계별로 친절하게 안내합니다. 지금 바로 문제를 해결하세요.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ko/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,22 +148,44 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="목차">
+        <div class="toc-inner">
+            <h4>목차</h4>
+            <a href="#sec-1">1단계: 렌더링 모드부터 확인하세요</a>
+            <a href="#sec-2">2단계: Lock/게임 모드 동작을 검증하세요</a>
+            <a href="#sec-3">3단계: 자막 레이아웃과 밀도를 점검하세요</a>
+            <a href="#sec-4">4단계: 팀 커뮤니케이션 형식을 맞추세요</a>
+            <a href="#sec-5">빠른 복구 체크리스트</a>
+            <a href="#sec-6">"전체화면에서 자막이 안 보인다"는 말이 자막 버그인 경우는 …</a>
+            <a href="#sec-7">시간을 절약하는 진단 순서</a>
+            <a href="#sec-8">원인별 수정 방법</a>
+            <a href="#sec-9">버그 리포트에서 반드시 확인해야 할 5가지 질문</a>
+            <a href="#sec-10">"아무것도 안 해도 된다"는 답이 맞는 경우</a>
+            <a href="#sec-11">랭크 성적에 이것이 중요한 이유</a>
+            <a href="#sec-12">반복 발생 이슈 문서화 템플릿</a>
+            <a href="#sec-13">관련 자료</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 기사 목록으로 돌아가기</a>
         <h1 class="article-title" itemprop="headline">게임용 전체화면 자막 오버레이 문제 해결</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026년 3월 5일</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">저자: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; 게이밍 오버레이 엔지니어, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">업데이트: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026년 3월 5일<span class="reading-time">8 분 분량</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">저자: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; 게이밍 오버레이 엔지니어, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">업데이트: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/ko/games.webp" alt="경쟁 게임 매치 중 실시간 자막 오버레이" width="1280" height="762" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>게임 중 자막 오버레이가 갑자기 사라지거나 불안정해졌을 때, 무작정 설정을 바꾸면 오히려 문제가 더 복잡해집니다. 이 가이드는 근본 원인을 빠르게 찾아낼 수 있는 진단 순서를 제공합니다. 렌더링 모드, 상호작용 모드, 워크플로 불일치 — 이 세 가지 영역 중 어디에서 문제가 발생했는지 단계별로 좁혀나가는 방법을 설명합니다.</p>
 
-            <h2>1단계: 렌더링 모드부터 확인하세요</h2>
+            <details class="toc-mobile"><summary>목차</summary><ol><li><a href="#sec-1">1단계: 렌더링 모드부터 확인하세요</a></li><li><a href="#sec-2">2단계: Lock/게임 모드 동작을 검증하세요</a></li><li><a href="#sec-3">3단계: 자막 레이아웃과 밀도를 점검하세요</a></li><li><a href="#sec-4">4단계: 팀 커뮤니케이션 형식을 맞추세요</a></li><li><a href="#sec-5">빠른 복구 체크리스트</a></li><li><a href="#sec-6">"전체화면에서 자막이 안 보인다"는 말이 자막 버그인 경우는 드뭅니다</a></li><li><a href="#sec-7">시간을 절약하는 진단 순서</a></li><li><a href="#sec-8">원인별 수정 방법</a></li><li><a href="#sec-9">버그 리포트에서 반드시 확인해야 할 5가지 질문</a></li><li><a href="#sec-10">"아무것도 안 해도 된다"는 답이 맞는 경우</a></li><li><a href="#sec-11">랭크 성적에 이것이 중요한 이유</a></li><li><a href="#sec-12">반복 발생 이슈 문서화 템플릿</a></li><li><a href="#sec-13">관련 자료</a></li></ol></details>
+            <h2 id="sec-1">1단계: 렌더링 모드부터 확인하세요</h2>
             <p>자막 설정을 변경하기 전에 반드시 게임의 디스플레이 모드를 먼저 점검하세요. 독점 전체화면(Exclusive Fullscreen) 상태에서 자막이 보이지 않는다면, <strong>테두리 없는 전체화면(Borderless Fullscreen)</strong>으로 전환하는 것이 가장 효과적인 첫 번째 조치입니다. 데스크톱 오버레이의 가시성 문제 중 절반 이상은 이 한 가지 변경만으로 해결됩니다.</p>
             <p>독점 전체화면은 Windows 컴포지터를 우회해 GPU가 화면을 직접 제어하는 방식입니다. 이 렌더링 경로에서는 외부 오버레이 도구가 화면에 접근하기 어렵습니다. 반면 테두리 없는 전체화면은 컴포지터가 계속 동작하기 때문에 오버레이가 정상적으로 표시됩니다. Windows 11 환경에서 최신 GPU 드라이버를 사용한다면, 두 모드 간의 프레임 차이는 대부분 2% 미만이며 실질적인 성능 손실이 없습니다.</p>
 
-            <h2>2단계: Lock/게임 모드 동작을 검증하세요</h2>
+            <h2 id="sec-2">2단계: Lock/게임 모드 동작을 검증하세요</h2>
             <p>자막이 화면에는 보이지만 게임 플레이를 방해한다면, 잠금 모드 설정이 올바른지 확인해야 합니다. Live Subtitles의 잠금 모드는 <strong>Ctrl+Shift+L</strong>로 토글할 수 있습니다.</p>
             <ul>
                 <li><strong>Ctrl+Shift+L</strong>을 눌러 Lock/게임 모드를 활성화하세요.</li>
@@ -111,7 +195,7 @@
             </ul>
             <p>잠금 모드가 활성화된 상태에서는 자막 창이 마우스 클릭 이벤트를 통과시키므로, 게임 조작에 전혀 영향을 주지 않습니다. 이 상태를 유지하면서 자막을 사용하는 것이 경쟁 게임에서의 표준 설정입니다.</p>
 
-            <h2>3단계: 자막 레이아웃과 밀도를 점검하세요</h2>
+            <h2 id="sec-3">3단계: 자막 레이아웃과 밀도를 점검하세요</h2>
             <p>텍스트 영역에 너무 많은 자막을 표시하면, 렌더링 자체는 정상이어도 가시성 문제처럼 느껴질 수 있습니다. 최적의 레이아웃을 위한 기준은 다음과 같습니다.</p>
             <ul>
                 <li><strong>줄 수</strong>: 한 번에 2~3줄 이내로 제한하세요. 그 이상은 화면을 가립니다.</li>
@@ -120,7 +204,7 @@
                 <li><strong>글꼴 크기</strong>: 너무 크면 화면을 가리고, 너무 작으면 빠른 판단이 어렵습니다. 1920×1080 해상도 기준 24~28pt가 적절합니다.</li>
             </ul>
 
-            <h2>4단계: 팀 커뮤니케이션 형식을 맞추세요</h2>
+            <h2 id="sec-4">4단계: 팀 커뮤니케이션 형식을 맞추세요</h2>
             <p>실제로 "자막 문제"처럼 보이는 상황의 상당수는 팀원들의 발화 품질 문제입니다. 문장이 너무 길거나 용어가 통일되지 않으면 자막의 유용성이 크게 떨어집니다. 특히 빠르게 진행되는 경쟁 게임에서는 짧고 명확한 콜아웃이 핵심입니다.</p>
             <ul>
                 <li>맵 지명은 팀 전체가 동일한 약어나 명칭을 사용하도록 합의하세요.</li>
@@ -128,7 +212,7 @@
                 <li>긴 전략 설명은 경기 전 텍스트 채팅으로 공유하고, 인게임 음성은 간결하게 유지하세요.</li>
             </ul>
 
-            <h2>빠른 복구 체크리스트</h2>
+            <h2 id="sec-5">빠른 복구 체크리스트</h2>
             <div class="checklist">
                 <ul>
                     <li>게임을 <strong>테두리 없는 전체화면(Borderless Fullscreen)</strong>으로 전환하세요.</li>
@@ -140,7 +224,7 @@
                 </ul>
             </div>
 
-            <h2>"전체화면에서 자막이 안 보인다"는 말이 자막 버그인 경우는 드뭅니다</h2>
+            <h2 id="sec-6">"전체화면에서 자막이 안 보인다"는 말이 자막 버그인 경우는 드뭅니다</h2>
             <p>플레이어가 게임 중 자막이 사라진다고 보고할 때, 직관적으로는 자막 엔진을 의심하게 됩니다. 그러나 실제로 우리가 트리아지한 사례의 80% 이상은 자막 파이프라인과 무관한 세 가지 원인 중 하나로 귀결되었습니다.</p>
             <ul>
                 <li><strong>독점 스왑 체인 렌더링</strong>: 게임이 컴포지터를 우회해 화면을 직접 제어하는 경우</li>
@@ -149,7 +233,7 @@
             </ul>
             <p>이 세 가지를 배제하기 전에 자막 설정을 변경해봤자 문제가 이동할 뿐 사라지지 않습니다.</p>
 
-            <h2>시간을 절약하는 진단 순서</h2>
+            <h2 id="sec-7">시간을 절약하는 진단 순서</h2>
             <p>아래 순서대로 트리아지하세요. 문제가 재현되는 첫 번째 레이어에서 멈추고 그 원인을 수정하면 됩니다.</p>
             <ol>
                 <li><strong>60초 루프로 재현하세요.</strong> 게임을 실행하고 음성을 발화한 뒤 오버레이를 관찰합니다. 간헐적으로 발생한다면 타임스탬프를 기록해두세요.</li>
@@ -159,7 +243,7 @@
                 <li><strong>게임이 아닌 창에서 테스트하세요.</strong> YouTube 영상을 보면서 테스트 문장을 말해보세요. 거기서 오버레이가 정상 작동한다면 문제는 게임 특화 이슈입니다.</li>
             </ol>
 
-            <h2>원인별 수정 방법</h2>
+            <h2 id="sec-8">원인별 수정 방법</h2>
 
             <h3>원인 A: 독점 스왑 체인</h3>
             <p>데스크톱과 테두리 없는 전체화면에서는 자막이 정상 표시되지만 독점 전체화면에서만 사라지는 경우입니다. 해결 방법: 게임을 테두리 없는 전체화면으로 변경하세요. Windows 11에서 최신 드라이버를 사용한다면 성능 차이는 2% 이내이며, 대부분의 경우 사실상 차이가 없습니다.</p>
@@ -173,7 +257,7 @@
             <h3>원인 D: 멀티모니터 포커스 손실</h3>
             <p>자막이 보조 모니터에는 표시되지만 게임이 실행 중인 주 모니터에는 표시되지 않는 경우입니다. 해결 방법: 앱의 "디스플레이에 고정" 옵션으로 자막 창을 주 모니터에 고정하고, Windows "창 모드 게임 최적화"를 활성화하세요(설정 → 시스템 → 디스플레이 → 그래픽 → 기본 설정).</p>
 
-            <h2>버그 리포트에서 반드시 확인해야 할 5가지 질문</h2>
+            <h2 id="sec-9">버그 리포트에서 반드시 확인해야 할 5가지 질문</h2>
             <ol>
                 <li>게임 타이틀과 정확한 버전(패치 번호, "최신" 아님).</li>
                 <li>버그 발생 시 사용 중이던 디스플레이 모드.</li>
@@ -183,30 +267,76 @@
             </ol>
             <p>이 다섯 가지 정보 없이는 추측에 의존하게 됩니다. 반대로 이 정보가 있으면 대부분의 경우 5분 이내에 근본 원인이 명확해집니다.</p>
 
-            <h2>"아무것도 안 해도 된다"는 답이 맞는 경우</h2>
+            <h2 id="sec-10">"아무것도 안 해도 된다"는 답이 맞는 경우</h2>
             <p>일부 게임은 안티치트 시스템이 컴포지터 오버레이를 의도적으로 차단합니다. 예를 들어 스크린 캡처 치트를 방지하기 위해 스왑 체인을 잠그는 특정 랭크 모드가 있습니다. 이런 게임에서는 어떤 자막 도구도 독점 전체화면에서 표시되지 않습니다. 솔직한 해답은 해당 타이틀에서는 테두리 없는 전체화면을 사용하고 미미한 성능 차이를 감수하는 것입니다.</p>
 
-            <h2>랭크 성적에 이것이 중요한 이유</h2>
+            <h2 id="sec-11">랭크 성적에 이것이 중요한 이유</h2>
             <p>90%의 확률로 작동하는 불안정한 오버레이는 100% 실패하는 오버레이보다 오히려 더 해롭습니다. 완전한 실패에는 적응이 가능합니다. 하지만 간헐적 실패는 없는 콜아웃을 계속 기다리게 만들어 리듬을 깨뜨립니다. 트러블슈팅의 목표는 "대부분 작동하게 만들기"가 아니라 "더 이상 신경 쓰지 않아도 될 만큼 예측 가능하게 만들기"입니다.</p>
-            <p><a href="article-19.html" style="color:#00b8ff;">경쟁 게임을 위한 게임 모드 설정 가이드</a>에서 Lock 모드 및 오버레이 배치에 대한 심화 내용을 확인할 수 있습니다. 또한 <a href="article-17.html" style="color:#00b8ff;">오디오 입력 설정 최적화 가이드</a>도 함께 참고하면 자막 인식률을 더욱 높일 수 있습니다.</p>
+            <p><a href="article-19.html" style="color:#0b6ad1;">경쟁 게임을 위한 게임 모드 설정 가이드</a>에서 Lock 모드 및 오버레이 배치에 대한 심화 내용을 확인할 수 있습니다. 또한 <a href="article-17.html" style="color:#0b6ad1;">오디오 입력 설정 최적화 가이드</a>도 함께 참고하면 자막 인식률을 더욱 높일 수 있습니다.</p>
 
-            <h2>반복 발생 이슈 문서화 템플릿</h2>
+            <h2 id="sec-12">반복 발생 이슈 문서화 템플릿</h2>
             <p>Discord 고정 메시지에 짧은 메모 파일을 만들어두세요. 두 개의 열: <em>타이틀</em>과 <em>알려진 제약사항</em>. 예시 항목: "발로란트 — 테두리 없는 전체화면 필수", "CS2 — 2026-03 패치 이후 두 모드 모두 작동". 이 파일은 어떤 트러블슈팅 위키보다도 가치 있습니다. 여러분 팀의 실증적 진실이기 때문입니다.</p>
-            <p>Live Subtitles 앱은 <a href="/ko/zoom-live-captions.html" style="color:#00b8ff;">Zoom 실시간 자막</a>처럼 회의 환경에서도 동일하게 동작하므로, 게임용으로 최적화한 설정을 그대로 다른 플랫폼에도 적용할 수 있습니다.</p>
+            <p>Live Subtitles 앱은 <a href="/ko/zoom-live-captions.html" style="color:#0b6ad1;">Zoom 실시간 자막</a>처럼 회의 환경에서도 동일하게 동작하므로, 게임용으로 최적화한 설정을 그대로 다른 플랫폼에도 적용할 수 있습니다.</p>
 
-            <h2>관련 자료</h2>
+            <h2 id="sec-13">관련 자료</h2>
             <ul>
-                <li><a href="/ko/game-mode-subtitles.html" style="color:#00b8ff;">게임 모드 자막 페이지</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">경쟁 게임을 위한 게임 모드 설정 가이드</a></li>
-                <li><a href="article-18.html" style="color:#00b8ff;">실시간 자막 지연 최소화 방법</a></li>
+                <li><a href="/ko/game-mode-subtitles.html" style="color:#0b6ad1;">게임 모드 자막 페이지</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">경쟁 게임을 위한 게임 모드 설정 가이드</a></li>
+                <li><a href="article-18.html" style="color:#0b6ad1;">실시간 자막 지연 최소화 방법</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">오버레이 워크플로를 안정화하세요</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">게임, 채팅, 스트리밍 모두에서 예측 가능한 단일 자막 설정을 사용하세요.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Store에서 다운로드</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">오버레이 워크플로를 안정화하세요</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">게임, 채팅, 스트리밍 모두에서 예측 가능한 단일 자막 설정을 사용하세요.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">무료 다운로드</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 개 리뷰</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>모든 앱을 위한 실시간 자막</h3>
+                <div class="explore-cols"><div><h5>회의 및 통화</h5><a href="/ko/zoom-live-captions.html">Zoom</a><a href="/ko/teams-live-captions.html">Microsoft Teams</a><a href="/ko/google-meet-live-captions.html">Google Meet</a><a href="/ko/webex-live-captions.html">Webex</a><a href="/ko/skype-live-captions.html">Skype</a><a href="/ko/slack-live-captions.html">Slack</a><a href="/ko/whatsapp-live-translation.html">WhatsApp</a><a href="/ko/telegram-subtitles.html">Telegram</a></div><div><h5>스트리밍 및 소셜</h5><a href="/ko/youtube-dual-subtitles.html">YouTube</a><a href="/ko/netflix-subtitles.html">Netflix</a><a href="/ko/twitch-live-captions.html">Twitch</a><a href="/ko/discord-live-captions.html">Discord</a><a href="/ko/tiktok-live-captions.html">TikTok</a><a href="/ko/instagram-live-captions.html">Instagram</a><a href="/ko/facebook-live-subtitles.html">Facebook</a><a href="/ko/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>게임 및 크리에이터</h5><a href="/ko/obs-subtitles.html">OBS</a><a href="/ko/game-mode-subtitles.html">Game Mode</a><a href="/ko/steam-subtitles.html">Steam</a><a href="/ko/restream-subtitles.html">Restream</a><a href="/ko/vimeo-subtitles.html">Vimeo</a><a href="/ko/vlc-subtitles.html">VLC</a></div><div><h5>학습 및 업무</h5><a href="/ko/coursera-subtitles.html">Coursera</a><a href="/ko/udemy-live-captions.html">Udemy</a><a href="/ko/google-classroom-subtitles.html">Google Classroom</a><a href="/ko/linkedin-live-captions.html">LinkedIn</a><a href="/ko/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ko/" style="font-weight:600;text-decoration:none;">Live Subtitles 홈 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>함께 읽기</h4>
+            <a class="s-item" href="article-1.html">이중 자막이 언어 학습을 빠르게 하는 방법</a>
+            <a class="s-item" href="article-2.html">자막이 언어 학습에 중요한 이유</a>
+            <a class="s-item" href="article-3.html">이중 자막과 언어 습득의 신경과학적 원리</a>
+            <a class="s-item" href="article-4.html">원어민에게도 자막이 유용한 이유</a>
+            <a class="s-item" href="article-5.html">영어 학습을 위한 이중 자막 영화 TOP-10</a>
+            <a class="s-item" href="article-6.html">이중 자막 동영상 언어 학습에서 피해야 할 실수들</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>모든 앱을 위한 실시간 자막.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">무료 다운로드</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="맨 위로" title="맨 위로">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ko/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

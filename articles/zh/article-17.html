@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="2026 年 Netflix 与 YouTube 的 Language Reactor 替代方案">
     <meta name="twitter:description" content="2026 年 Language Reactor 替代方案深度横评：全面对比 Netflix 与 YouTube 双语字幕浏览器扩展和跨全平台实时字幕工具，从功能覆盖广度、支持语言数量到真实学习效果逐项深入分析，按你的学习目标精准推荐最优方案——帮你少走弯路，立即查看完整测评结果与建议。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/zh/movies.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,35 @@
     <link rel="preload" as="image" href="/articles/img/zh/movies.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目录">
+        <div class="toc-inner">
+            <h4>目录</h4>
+            <a href="#sec-1">这一类工具在 2026 年发生了什么变化</a>
+            <a href="#sec-2">选型时真正重要的评估维度</a>
+            <a href="#sec-3">2026 年主流工具横向对比</a>
+            <a href="#sec-4">各工具深度解析</a>
+            <a href="#sec-5">如何根据实际目标选择工具</a>
+            <a href="#sec-6">30 分钟快速部署方案</a>
+            <a href="#sec-7">常见问题解答</a>
+            <a href="#sec-8">参考资料</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 返回文章</a>
         <h1 class="article-title" itemprop="headline">2026 年 Netflix 与 YouTube 的 Language Reactor 替代方案</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-02-18">2026 年 2 月 18 日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/aarav-sharma.html" rel="author" style="color:#00b8ff; text-decoration:none;">Aarav Sharma</a> &middot; 流媒体平台工程师, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2026-02-18">2026 年 2 月 18 日<span class="reading-time">8 分钟阅读</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/aarav-sharma.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Aarav Sharma</a> &middot; 流媒体平台工程师, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/zh/movies.webp" alt="用于语言学习的电影双语字幕" width="1280" height="708" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>每当有人搜索 <strong>Language Reactor 替代方案</strong>，背后往往隐藏着三类真实需求：希望覆盖更多平台、希望减少日常操作摩擦，或者希望在语言学习与真实工作沟通之间建立统一的使用习惯。本文不依赖营销话术，而是从实际使用场景出发，帮助你根据自己的目标做出理性选择。</p>
 
-            <h2>这一类工具在 2026 年发生了什么变化</h2>
+            <details class="toc-mobile"><summary>目录</summary><ol><li><a href="#sec-1">这一类工具在 2026 年发生了什么变化</a></li><li><a href="#sec-2">选型时真正重要的评估维度</a></li><li><a href="#sec-3">2026 年主流工具横向对比</a></li><li><a href="#sec-4">各工具深度解析</a></li><li><a href="#sec-5">如何根据实际目标选择工具</a></li><li><a href="#sec-6">30 分钟快速部署方案</a></li><li><a href="#sec-7">常见问题解答</a></li><li><a href="#sec-8">参考资料</a></li></ol></details>
+            <h2 id="sec-1">这一类工具在 2026 年发生了什么变化</h2>
             <p>浏览器字幕学习扩展依然是主流选项，但整个市场已经分化为两种截然不同的使用模式，理解这一分野是选型的前提：</p>
             <ul>
                 <li><strong>媒体优先模式：</strong>以浏览器扩展为核心，专门针对 Netflix 和 YouTube 的观看场景深度优化。这类工具的字幕交互功能成熟，适合固定坐在电脑前集中学习的场景。</li>
@@ -107,7 +186,7 @@
             </ul>
             <p>如果你的学习场景完全局限于 Netflix 和 YouTube，浏览器扩展已经足够。但如果你每天还需要参加英文会议、看英文直播或与外籍同事沟通，那么在两类工具之间频繁切换本身就是一种认知损耗。选择全系统方案往往能在实际使用中带来更显著的长期收益。</p>
 
-            <h2>选型时真正重要的评估维度</h2>
+            <h2 id="sec-2">选型时真正重要的评估维度</h2>
             <p>很多人在比较工具时过于关注功能列表，而忽略了影响长期坚持的关键因素。以下四个维度是实际选型中最值得考量的：</p>
             <ul>
                 <li><strong>平台覆盖范围：</strong>工具在你日常真实使用的平台上是否稳定运行？不要只看官网宣传的支持列表，要考虑自己实际的使用环境。</li>
@@ -116,7 +195,7 @@
                 <li><strong>习惯一致性：</strong>这套方法能否同时用于学习时间和真实工作沟通？如果学习时用一套工具、开会时又要切换另一套，习惯的迁移成本会大大降低坚持的可能性。</li>
             </ul>
 
-            <h2>2026 年主流工具横向对比</h2>
+            <h2 id="sec-3">2026 年主流工具横向对比</h2>
             <p>以下对比基于四款在中文用户群体中关注度较高的字幕学习工具，涵盖各自的最佳适用场景、核心优势与主要局限：</p>
             <table>
                 <thead>
@@ -155,7 +234,7 @@
                 </tbody>
             </table>
 
-            <h2>各工具深度解析</h2>
+            <h2 id="sec-4">各工具深度解析</h2>
             <h3>Language Reactor：成熟的浏览器学习利器</h3>
             <p>Language Reactor 是这一品类中安装量最大的工具，在 Netflix 上能够展示双语字幕、支持单句重复播放、生词保存和词汇测验。它的学习闭环设计经过多年打磨，对于专注于 Netflix 或 YouTube 学习的用户来说，上手成本低、学习曲线短。主要限制在于它本质上是浏览器扩展，一旦你需要在 Zoom 会议或 Teams 频道中同样获得字幕支持，就需要额外的工具或方案。</p>
 
@@ -166,26 +245,27 @@
             <p>Migaku 的设计哲学来自于"可理解性输入"理论，强调从真实的原生媒体内容中习得语言。它不仅支持视频字幕，还整合了词典查询、Anki 卡片生成和深度词汇管理功能。这套工具对认真学习的用户来说功能极为强大，但配置复杂度较高，需要一定的时间投入才能充分发挥其价值。对于只想轻松看剧、顺带学语言的用户来说，Migaku 可能显得过于重量级。</p>
 
             <h3>Live Subtitles：跨场景一致的系统级方案</h3>
-            <p><strong>Live Subtitles</strong> 的核心定位与前三款工具不同——它是一个 Windows 桌面应用，能够为系统中运行的任何音频来源提供实时字幕，包括 Zoom 视频会议、YouTube 直播、本地视频文件、Twitch 和 Netflix 等。这意味着你不需要为不同场景安装不同的扩展，一套工作流可以贯穿工作日和学习时间。你可以从 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Microsoft Store 下载 Live Subtitles</a>，它支持超过 50 种语言的实时翻译字幕。</p>
+            <p><strong>Live Subtitles</strong> 的核心定位与前三款工具不同——它是一个 Windows 桌面应用，能够为系统中运行的任何音频来源提供实时字幕，包括 Zoom 视频会议、YouTube 直播、本地视频文件、Twitch 和 Netflix 等。这意味着你不需要为不同场景安装不同的扩展，一套工作流可以贯穿工作日和学习时间。你可以从 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">免费下载</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 条评价</div>，它支持超过 50 种语言的实时翻译字幕。</p>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color: #00ff9d;">实用提示：</strong>如果你每周有超过 3 次英文视频会议，同时还在用 Netflix 或 YouTube 学语言，使用单一系统级工具而非两套独立扩展，通常能显著降低习惯维护成本。
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color: #0a7f55;">实用提示：</strong>如果你每周有超过 3 次英文视频会议，同时还在用 Netflix 或 YouTube 学语言，使用单一系统级工具而非两套独立扩展，通常能显著降低习惯维护成本。
             </div>
 
-            <h2>如何根据实际目标选择工具</h2>
+            <h2 id="sec-5">如何根据实际目标选择工具</h2>
             <h3>目标 A：专注于 Netflix 和 YouTube 的集中学习</h3>
             <p>如果你的语言学习场景高度聚焦于 Netflix 剧集或 YouTube 频道，浏览器优先的工具（Language Reactor 或 Trancy）是最快的起步路径。关键不是工具本身的功能数量，而是建立高质量的日常学习例程：每天 20–30 分钟的专注观看，配合短语捕捉和定期复习。量化指标可以参考每 10 分钟的主动重播次数，以及每周新增并复用的短语数量。</p>
             <p>建议在开始的两周内，只专注于一类内容（比如纪录片、情景喜剧或访谈节目），不要同时尝试多种内容形态。专注带来的进步速度往往快于分散尝试。</p>
 
             <h3>目标 B：媒体学习与工作沟通统一为一套工作流</h3>
             <p>如果你的日常既包含英文视频学习，又包含英文视频会议或其他跨语言沟通场景，那么选择系统级方案能带来真实可测量的效率提升。这里的核心逻辑不是某个额外功能，而是消除不同工具之间的切换摩擦——每一次切换都是一次习惯中断的风险。</p>
-            <p>系统级方案另一个被低估的优势是：在真实的工作沟通场景中接触目标语言，比在学习专用的"安全环境"中接触效果更好。听真实会议、理解真实讨论，字幕的辅助能直接加速这一过程。参考<a href="article-18.html" style="color:#00b8ff;">2026 年视频会议翻译字幕横评</a>了解在 Zoom 和 Teams 中使用实时字幕的具体方案。</p>
+            <p>系统级方案另一个被低估的优势是：在真实的工作沟通场景中接触目标语言，比在学习专用的"安全环境"中接触效果更好。听真实会议、理解真实讨论，字幕的辅助能直接加速这一过程。参考<a href="article-18.html" style="color:#0b6ad1;">2026 年视频会议翻译字幕横评</a>了解在 Zoom 和 Teams 中使用实时字幕的具体方案。</p>
 
             <h3>目标 C：构建长期留存，而非被动接触</h3>
             <p>无论选择哪款工具，被动接触语言输入本身不足以产生持久记忆。需要在工具层面之上建立一套"激活循环"：每次学习后提取 5 个高频短语，用这些短语造 3 个贴近自己生活的例句，并在 24 小时后主动复习一次。这套简单的结构在大量实践中被证明远比单纯增加观看时间更有效。</p>
             <p>选择能让这套复习循环嵌入日常工作流的工具，才能保证长期执行。如果生词保存和复习步骤需要离开当前场景才能完成，坚持率会显著下降。</p>
 
-            <h2>30 分钟快速部署方案</h2>
+            <h2 id="sec-6">30 分钟快速部署方案</h2>
             <p>无论你选择哪款工具，以下四步部署框架能帮助你在 30 分钟内建立一套可执行的学习系统：</p>
             <ol>
                 <li><strong>确定 14 天内容赛道：</strong>选择一类内容形态（职场访谈、科技解说或英美剧），不要同时开始多条赛道。内容一致性有助于词汇的自然复现。</li>
@@ -195,37 +275,82 @@
             </ol>
             <p>这套框架的价值不在于复杂性，而在于它让学习行为可量化、可迭代。大多数情况下，优化执行质量比增加功能复杂度能带来更快的进步。</p>
 
-            <h2>常见问题解答</h2>
+            <h2 id="sec-7">常见问题解答</h2>
             <p><strong>有没有一款工具适合所有人？</strong><br>没有。最佳选择取决于你的使用场景组合——如果只在浏览器中学习，浏览器扩展足够优秀；如果需要跨场景一致性，系统级工具更有优势。</p>
             <p><strong>功能越多的工具学习效果越好吗？</strong><br>通常不是。决定进步速度的是学习频率和输出激活质量，而非工具的功能数量。一个简单工具配合高质量例程，往往优于一个功能复杂但执行不稳定的工具。</p>
             <p><strong>应该多久换一次工具？</strong><br>建议在使用新工具至少 2–4 周后、并基于可量化的指标（重播次数、短语复用率等）才考虑切换。过于频繁地更换工具通常是在回避真正需要解决的学习习惯问题，而非工具本身的问题。</p>
             <p><strong>这些工具对中文母语学习者学英语有效吗？</strong><br>有效，但需要注意：对于以英语为学习目标的中文母语者，双语字幕中"中文字幕依赖"是一个真实的风险。建议在中级阶段开始逐渐减少中文字幕的显示时间，强迫自己更多依赖英文理解，再用中文验证。这种渐进式减少辅助的策略在听力提升上效果显著。</p>
             <p><strong>Live Subtitles 支持哪些语言？</strong><br>Live Subtitles 支持超过 50 种语言的实时字幕显示与翻译，包括英语、日语、韩语、法语、西班牙语等主流外语，以及中文界面支持，适合以中文为母语的多语言学习者。</p>
 
-            <h2>参考资料</h2>
+            <h2 id="sec-8">参考资料</h2>
             <ul>
-                <li><a href="https://chromewebstore.google.com/detail/language-reactor/hoombieeljmmljlkjmnheibnpciblicm" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Language Reactor — Chrome Web Store</a></li>
-                <li><a href="https://chromewebstore.google.com/detail/trancy/aiimdkdngfcipjohbjenkahhlhccpdbc" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Trancy — Chrome Web Store</a></li>
-                <li><a href="https://migaku.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Migaku 官方网站</a></li>
-                <li><a href="https://help.netflix.com/en/node/372" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Netflix 帮助中心 — 字幕与语言选项</a></li>
-                <li><a href="https://support.google.com/youtube/answer/6373554" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">YouTube 帮助 — 自动字幕功能说明</a></li>
+                <li><a href="https://chromewebstore.google.com/detail/language-reactor/hoombieeljmmljlkjmnheibnpciblicm" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Language Reactor — Chrome Web Store</a></li>
+                <li><a href="https://chromewebstore.google.com/detail/trancy/aiimdkdngfcipjohbjenkahhlhccpdbc" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Trancy — Chrome Web Store</a></li>
+                <li><a href="https://migaku.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Migaku 官方网站</a></li>
+                <li><a href="https://help.netflix.com/en/node/372" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Netflix 帮助中心 — 字幕与语言选项</a></li>
+                <li><a href="https://support.google.com/youtube/answer/6373554" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">YouTube 帮助 — 自动字幕功能说明</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">延伸阅读</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">延伸阅读</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams：2026 年翻译字幕对比</a></li>
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">2026 年语音翻译应用：按使用场景比较实时工具</a></li>
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">2026 年实时字幕：AI 字幕的工作原理及使用场景</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">Google Meet vs Zoom vs Teams：2026 年翻译字幕对比</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">2026 年语音翻译应用：按使用场景比较实时工具</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">2026 年实时字幕：AI 字幕的工作原理及使用场景</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">在学习与工作中使用同一套字幕习惯</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Live Subtitles 支持 50+ 种语言的实时字幕，覆盖视频会议、流媒体和本地播放器，一次安装，全场景适用。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">从 Microsoft Store 免费下载</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">在学习与工作中使用同一套字幕习惯</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Live Subtitles 支持 50+ 种语言的实时字幕，覆盖视频会议、流媒体和本地播放器，一次安装，全场景适用。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">免费下载</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>适用于任何应用的实时字幕</h3>
+                <div class="explore-cols"><div><h5>会议与通话</h5><a href="/zh/zoom-live-captions.html">Zoom</a><a href="/zh/teams-live-captions.html">Microsoft Teams</a><a href="/zh/google-meet-live-captions.html">Google Meet</a><a href="/zh/webex-live-captions.html">Webex</a><a href="/zh/skype-live-captions.html">Skype</a><a href="/zh/slack-live-captions.html">Slack</a><a href="/zh/whatsapp-live-translation.html">WhatsApp</a><a href="/zh/telegram-subtitles.html">Telegram</a></div><div><h5>流媒体与社交</h5><a href="/zh/youtube-dual-subtitles.html">YouTube</a><a href="/zh/netflix-subtitles.html">Netflix</a><a href="/zh/twitch-live-captions.html">Twitch</a><a href="/zh/discord-live-captions.html">Discord</a><a href="/zh/tiktok-live-captions.html">TikTok</a><a href="/zh/instagram-live-captions.html">Instagram</a><a href="/zh/facebook-live-subtitles.html">Facebook</a><a href="/zh/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>游戏与创作者</h5><a href="/zh/obs-subtitles.html">OBS</a><a href="/zh/game-mode-subtitles.html">Game Mode</a><a href="/zh/steam-subtitles.html">Steam</a><a href="/zh/restream-subtitles.html">Restream</a><a href="/zh/vimeo-subtitles.html">Vimeo</a><a href="/zh/vlc-subtitles.html">VLC</a></div><div><h5>学习与工作</h5><a href="/zh/coursera-subtitles.html">Coursera</a><a href="/zh/udemy-live-captions.html">Udemy</a><a href="/zh/google-classroom-subtitles.html">Google Classroom</a><a href="/zh/linkedin-live-captions.html">LinkedIn</a><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/zh/" style="font-weight:600;text-decoration:none;">Live Subtitles 首页 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>相关阅读</h4>
+            <a class="s-item" href="article-1.html">双语字幕如何帮助您更快学习语言</a>
+            <a class="s-item" href="article-2.html">为什么字幕对语言学习很重要</a>
+            <a class="s-item" href="article-3.html">双语字幕学习法的跨文化应用</a>
+            <a class="s-item" href="article-4.html">为什么字幕对母语使用者也有用</a>
+            <a class="s-item" href="article-5.html">学习英语的双语字幕电影TOP-10推荐</a>
+            <a class="s-item" href="article-6.html">通过双语字幕视频学习语言时要避免的错误</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>适用于任何应用的实时字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">免费下载</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/zh/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

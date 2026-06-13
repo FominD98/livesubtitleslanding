@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,25 +43,91 @@
     <meta name="twitter:title" content="Çift altyazılı videolarla dil öğrenirken kaçınılması gereken hatalar - Live Subtitles">
     <meta name="twitter:description" content="Çift altyazılı videolarla dil öğrenirken yapılan 7 yaygın hatayı keşfedin ve bunlardan kaçınarak dinleme ile kelime becerilerinizi hızla geliştirin.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/tr/learning.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 900px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 10px; padding: 2.3rem; border: 1px solid rgba(255,255,255,0.08); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; line-height: 1.3; }
-        .article-date { color: #bbb; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 1.5rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 900px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 10px; padding: 2.3rem; border: 1px solid rgba(0,0,0,0.08); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; line-height: 1.3; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 1.5rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2 { color: #00ff9d; margin-top: 2rem; }
-        h3 { color: #00d4ff; margin-top: 1rem; font-size: 1.1rem; }
-        p, li { color: #eee; line-height: 1.8; }
+        h2 { color: #0a7f55; margin-top: 2rem; }
+        h3 { color: #0b6ad1; margin-top: 1rem; font-size: 1.1rem; }
+        p, li { color: #2d333b; line-height: 1.8; }
         .lang-switch { margin-bottom: 1rem; }
-        .faq-item { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 8px; padding: 1rem; margin-bottom: 0.8rem; }
-        .related { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0; }
-        .related a { color: #00b8ff; text-decoration: none; }
+        .faq-item { background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 1rem; margin-bottom: 0.8rem; }
+        .related { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0; }
+        .related a { color: #0b6ad1; text-decoration: none; }
         .related a:hover { text-decoration: underline; }
         .cta { background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 1.6rem; margin-top: 2rem; text-align: center; }
-        .cta h3 { color: #00ff9d; margin-top: 0; }
-        .cta a { display: inline-block; margin-top: 0.8rem; padding: 0.8rem 1.8rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 700; }
+        .cta h3 { color: #0a7f55; margin-top: 0; }
+        .cta a { display: inline-block; margin-top: 0.8rem; padding: 0.8rem 1.8rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 700; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
 {
@@ -145,20 +207,37 @@
     <link rel="preload" as="image" href="/articles/img/tr/learning.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="İçindekiler">
+        <div class="toc-inner">
+            <h4>İçindekiler</h4>
+            <a href="#sec-1">Çift altyazılar neden bu kadar etk…</a>
+            <a href="#sec-2">Çift altyazılı videolarla öğrenirk…</a>
+            <a href="#sec-3">Çift altyazıları verimli kullanman…</a>
+            <a href="#sec-4">Adım adım uygulanabilir plan</a>
+            <a href="#sec-5">Seviyenize göre doğru içeriği seçmek</a>
+            <a href="#sec-6">İlerlemenizi nasıl ölçersiniz?</a>
+            <a href="#sec-7">Sık sorulan sorular</a>
+            <a href="#sec-8">Sonuç</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <div class="lang-switch">
-            <a href="/" style="color:#00b8ff;">Ana siteye dön</a>
+            <a href="/" style="color:#0b6ad1;">Ana siteye dön</a>
         </div>
         <a href="index.html" class="back-link">&larr; Makalelere dön</a>
         <h1 class="article-title" itemprop="headline">Çift altyazılı videolarla dil öğrenirken kaçınılması gereken hatalar</h1>
-        <div class="article-date" itemprop="datePublished" content="2024-04-30">Yayın tarihi: 2024-04-30</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Yazar: <a href="/about/team/mei-lin-chen.html" rel="author" style="color:#00b8ff; text-decoration:none;">Mei Lin Chen</a> &middot; konuşma tanıma mühendisi, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Güncellendi: 12 Mayıs 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2024-04-30">Yayın tarihi: 2024-04-30<span class="reading-time">6 dk okuma</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Yazar: <a href="/about/team/mei-lin-chen.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Mei Lin Chen</a> &middot; konuşma tanıma mühendisi, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Güncellendi: 12 Mayıs 2026</div>
         <img class="article-hero" src="/articles/img/tr/learning.webp" alt="Dil öğrenimi için bir video derste çift altyazı" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         <div itemprop="articleBody">
             <p>Çift altyazılı videolarla dil öğrenmek; dinleme anlayışını geliştirmek, kelime dağarcığını genişletmek ve dil bilgisini bağlam içinde kavramak için güçlü bir yöntemdir. Hem orijinal metni hem de çevirisini aynı ekranda gördüğünüzde, anlamadığınız bir cümleyi anında çözebilir ve öğrenmeyi sürdürebilirsiniz. Ne var ki yeni başlayanlar çoğu zaman bu yöntemin verimini ciddi şekilde düşüren birkaç tipik hata yapar. Bu yazıda en sık karşılaşılan yanlışları tek tek ele alıyor ve her biri için somut, uygulanabilir öneriler sunuyoruz; böylece izlediğiniz her dakikayı gerçek bir ilerlemeye dönüştürebilirsiniz.</p>
 
-            <h2>Çift altyazılar neden bu kadar etkilidir?</h2>
+            <details class="toc-mobile"><summary>İçindekiler</summary><ol><li><a href="#sec-1">Çift altyazılar neden bu kadar etkilidir?</a></li><li><a href="#sec-2">Çift altyazılı videolarla öğrenirken yapılan yaygın hatalar</a></li><li><a href="#sec-3">Çift altyazıları verimli kullanmanın yolları</a></li><li><a href="#sec-4">Adım adım uygulanabilir plan</a></li><li><a href="#sec-5">Seviyenize göre doğru içeriği seçmek</a></li><li><a href="#sec-6">İlerlemenizi nasıl ölçersiniz?</a></li><li><a href="#sec-7">Sık sorulan sorular</a></li><li><a href="#sec-8">Sonuç</a></li></ol></details>
+            <h2 id="sec-1">Çift altyazılar neden bu kadar etkilidir?</h2>
             <p>Çift altyazı, orijinal dildeki metni ve onun ana dilinizdeki çevirisini aynı anda görmenizi sağlar. Bu yaklaşım birkaç açıdan öğrenmeyi hızlandırır:</p>
             <ul>
                 <li>Yeni kelimelerin bağlam içindeki anlamını sözlüğe bakmadan kavrarsınız.</li>
@@ -168,11 +247,11 @@
             </ul>
             <p>Örneğin İngilizce öğreniyorsanız, bir dizinin replikasını hem İngilizce hem Türkçe altyazıyla izlemek, kelimenin yalın anlamı ile cümle içindeki işlevi arasındaki farkı net biçimde gösterir. Aynı mantık az bilinen diller için de geçerlidir: Endonezce için "sub indo" gibi yerel altyazı seçenekleri, o dili öğrenenler için benzer bir köprü kurar. Önemli olan, çift altyazıyı bir koltuk değneği değil, geçici bir destek olarak kullanmaktır.</p>
 
-            <h2>Çift altyazılı videolarla öğrenirken yapılan yaygın hatalar</h2>
+            <h2 id="sec-2">Çift altyazılı videolarla öğrenirken yapılan yaygın hatalar</h2>
             <p>Aşağıdaki beş hata, çift altyazı yönteminin verimini en çok düşüren tuzaklardır. Her birinin yanına, sahada işe yaradığı kanıtlanmış bir çözüm ekledik.</p>
 
             <div style="margin-bottom:1.5rem; padding:1.3rem; background:rgba(255,100,100,0.05); border-radius:8px; border-left:3px solid #ff6b6b;">
-                <h3 style="color:#ff6b6b; margin-top:0;">1. Tamamen çeviriye bağımlı kalmak</h3>
+                <h3 style="color:#e03131; margin-top:0;">1. Tamamen çeviriye bağımlı kalmak</h3>
                 <p>Yeni başlayanların en sık düştüğü tuzak, gözlerini yalnızca ana dildeki çeviriye sabitleyip orijinal metni ve sesi tamamen göz ardı etmektir. Bu durum şunlara yol açar:</p>
                 <ul>
                     <li>Dinleyerek anlama becerisinin hiç gelişmemesi.</li>
@@ -184,7 +263,7 @@
             </div>
 
             <div style="margin-bottom:1.5rem; padding:1.3rem; background:rgba(255,100,100,0.05); border-radius:8px; border-left:3px solid #ff6b6b;">
-                <h3 style="color:#ff6b6b; margin-top:0;">2. Bağlamı görmezden gelmek</h3>
+                <h3 style="color:#e03131; margin-top:0;">2. Bağlamı görmezden gelmek</h3>
                 <p>Altyazı çevirileri çoğu zaman birebir, kelime kelime yapılır ve cümlenin gerçek bağlamını yansıtmaz. Bu da şu sonuçları doğurur:</p>
                 <ul>
                     <li>Deyimlerin ve öbek fiillerin yanlış anlaşılması.</li>
@@ -196,7 +275,7 @@
             </div>
 
             <div style="margin-bottom:1.5rem; padding:1.3rem; background:rgba(255,100,100,0.05); border-radius:8px; border-left:3px solid #ff6b6b;">
-                <h3 style="color:#ff6b6b; margin-top:0;">3. Tekrarı atlamak</h3>
+                <h3 style="color:#e03131; margin-top:0;">3. Tekrarı atlamak</h3>
                 <p>Bir bölümü bir kez izleyip geçmek hızlı ilerliyormuş hissi verir, ancak kalıcılığı ciddi biçimde düşürür. Tekrarın eksikliği şunlara yol açar:</p>
                 <ul>
                     <li>Yeni öğrenilen kelimelerin birkaç gün içinde unutulması.</li>
@@ -208,7 +287,7 @@
             </div>
 
             <div style="margin-bottom:1.5rem; padding:1.3rem; background:rgba(255,100,100,0.05); border-radius:8px; border-left:3px solid #ff6b6b;">
-                <h3 style="color:#ff6b6b; margin-top:0;">4. Telaffuzun önemini hafife almak</h3>
+                <h3 style="color:#e03131; margin-top:0;">4. Telaffuzun önemini hafife almak</h3>
                 <p>Yalnızca altyazıyı okumak, sesi dinlemeden ve taklit etmeden, konuşma becerisini geliştirmez. Bu eksiklik şunlara yol açar:</p>
                 <ul>
                     <li>Telaffuz hatalarının fark edilmeden yerleşmesi.</li>
@@ -220,7 +299,7 @@
             </div>
 
             <div style="margin-bottom:1.5rem; padding:1.3rem; background:rgba(255,100,100,0.05); border-radius:8px; border-left:3px solid #ff6b6b;">
-                <h3 style="color:#ff6b6b; margin-top:0;">5. Düzenlilikten yoksunluk</h3>
+                <h3 style="color:#e03131; margin-top:0;">5. Düzenlilikten yoksunluk</h3>
                 <p>Videoları gelişigüzel, ara sıra izlemek ilerlemeyi yavaşlatır. Düzensiz çalışmanın sonuçları şunlardır:</p>
                 <ul>
                     <li>Motivasyonun zamanla düşmesi.</li>
@@ -231,7 +310,7 @@
                 </div>
             </div>
 
-            <h2>Çift altyazıları verimli kullanmanın yolları</h2>
+            <h2 id="sec-3">Çift altyazıları verimli kullanmanın yolları</h2>
             <p>Hataları bilmek tek başına yeterli değildir; yöntemi doğru kurmak gerekir. İşte ilerlemenizi belirgin biçimde hızlandıracak temel ilkeler:</p>
             <ul>
                 <li><strong>Seviyenize uygun içerik seçin:</strong> Önce diyalogları yavaş ve sade olan diziler veya çizgi filmlerle başlayın, ardından kademeli olarak daha karmaşık belgesellere ve filmlere geçin.</li>
@@ -240,7 +319,7 @@
                 <li><strong>Diğer yöntemlerle birleştirin:</strong> Video izlemeyi gramer alıştırmaları, dil değişimi sohbetleri ve düzenli yazma pratiğiyle destekleyin.</li>
             </ul>
 
-            <h2>Adım adım uygulanabilir plan</h2>
+            <h2 id="sec-4">Adım adım uygulanabilir plan</h2>
             <p>Aşağıdaki basit rutin, yukarıdaki ilkeleri günlük bir alışkanlığa dönüştürür:</p>
             <ol>
                 <li>Hedefinize ve seviyenize uygun, 5-10 dakikalık bir video bölümü seçin.</li>
@@ -250,14 +329,14 @@
                 <li>Hafta sonunda eski notlarınızı hızlıca gözden geçirip kalıcılığı pekiştirin.</li>
             </ol>
 
-            <h2>Seviyenize göre doğru içeriği seçmek</h2>
+            <h2 id="sec-5">Seviyenize göre doğru içeriği seçmek</h2>
             <p>Çoğu öğrenen, başarısızlığı yöntemde arar; oysa sorun çoğu zaman seçilen içeriğin seviyesindedir. Kendi düzeyinizin çok üzerindeki bir film, sizi sürekli durdurup çevirisine baktırır ve izlemeyi bir ödeve dönüştürür. Bunun yerine, anlama oranınızın yaklaşık yüzde 70-80 olduğu içerikleri hedefleyin; bu, "biraz zorlandığınız ama akışı kaybetmediğiniz" tatlı noktadır.</p>
             <h3>Yeni başlayanlar için</h3>
             <p>Diyalogları yavaş, kelime dağarcığı sade ve görsel bağlamı güçlü olan çocuk dizileri, çizgi filmler ve günlük yaşam temalı kısa bölümlerle başlayın. Görüntü, anlamadığınız kelimeleri tahmin etmenize yardımcı olur ve cesaretinizi kırmaz.</p>
             <h3>Orta ve ileri seviye için</h3>
             <p>Sitcom'lar, vlog'lar ve röportajlar, gerçek konuşma hızını ve günlük deyimleri öğrenmek için idealdir. İleri seviyede ise belgeseller, haber programları ve konuşmacının aksanının değiştiği içerikler kulağınızı çeşitliliğe alıştırır. İlgi alanınıza uygun konuları seçmek, devam etme isteğinizi belirgin biçimde artırır.</p>
 
-            <h2>İlerlemenizi nasıl ölçersiniz?</h2>
+            <h2 id="sec-6">İlerlemenizi nasıl ölçersiniz?</h2>
             <p>Subjektif "iyi gidiyorum" hissi yanıltıcı olabilir. Somut göstergeler kullanın:</p>
             <ul>
                 <li><strong>Anlama oranı:</strong> Aynı içeriği altyazısız izlediğinizde ne kadarını anlıyorsunuz? Bu oran haftalar içinde artmalı.</li>
@@ -265,16 +344,16 @@
                 <li><strong>Aktif kullanım:</strong> İzlediğiniz içerikten öğrendiğiniz kaç ifadeyi gerçek konuşma veya yazıda kullanabiliyorsunuz?</li>
             </ul>
 
-            <h2>Sık sorulan sorular</h2>
+            <h2 id="sec-7">Sık sorulan sorular</h2>
             <div class="faq-item"><h3>Ne sıklıkla çalışmalıyım?</h3><p>Haftada 4-5 kısa oturum, genellikle haftada bir uzun seanstan çok daha iyi sonuç verir. Beyin küçük ve sık tekrarlarla bilgiyi daha kalıcı saklar.</p></div>
             <div class="faq-item"><h3>İlerlememi nasıl ölçerim?</h3><p>Anlama oranınızı, bir sahneyi anlamak için geri sarma sayınızı ve öğrendiğiniz yeni ifadeleri günlük konuşmada ne kadar kullandığınızı düzenli olarak takip edin.</p></div>
             <div class="faq-item"><h3>Hangi seviyede çift altyazıyı bırakmalıyım?</h3><p>Bir sahnenin çoğunu çeviriye bakmadan anlayabildiğinizde önce ana dildeki altyazıyı kapatın, sonra yalnızca orijinal altyazıyla, en son tamamen altyazısız izlemeye geçin.</p></div>
 
-            <h2>Sonuç</h2>
+            <h2 id="sec-8">Sonuç</h2>
             <p>Çift altyazılı videolarla dil öğrenmek, bilinçli yaklaşıldığında son derece etkili bir yöntemdir. Yalnızca çeviriye bağımlı kalmak, bağlamı göz ardı etmek, tekrarı atlamak, telaffuzu ihmal etmek ve düzensiz çalışmak gibi yaygın hatalardan kaçının; materyalle aktif çalışın ve bu yöntemi diğer öğrenme yaklaşımlarıyla birleştirin. Daha derin ipuçları için <a href="article-1.html">çift altyazıların dil öğrenmeyi nasıl hızlandırdığını</a>, <a href="article-7.html">hızlı dil öğrenimi için çift altyazıların nasıl kullanılacağını</a> ve <a href="article-2.html">altyazıların dil öğreniminde neden bu kadar önemli olduğunu</a> da inceleyebilirsiniz. Düzenli ve bilinçli uygulama, uzun vadede en kritik etkendir.</p>
 
             <div class="related">
-                <h3 style="color:#00b8ff; margin-top:0;">İlgili makaleler</h3>
+                <h3 style="color:#0b6ad1; margin-top:0;">İlgili makaleler</h3>
                 <ul style="list-style:none; padding-left:0; margin-bottom:0;">
                     <li><a href="article-1.html">Çift altyazılar dil öğrenmenizi nasıl hızlandırır</a></li>
                     <li><a href="article-2.html">Altyazıların dil öğrenimi için neden önemli olduğu</a></li>
@@ -285,9 +364,55 @@
             <div class="cta">
                 <h3>Live Subtitles uygulamasını ücretsiz deneyin</h3>
                 <p>Herhangi bir uygulamada gerçek zamanlı konuşma tanıma, çeviri ve çift altyazı edinin. YouTube, Netflix, Zoom ve 50'den fazla uygulamayla çalışır.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank">Microsoft Store üzerinden indir</a>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" class="js-store-cta" data-os-label="1">Ücretsiz indir</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 değerlendirme</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Her uygulama için canlı altyazılar</h3>
+                <div class="explore-cols"><div><h5>Toplantılar ve aramalar</h5><a href="/tr/zoom-live-captions.html">Zoom</a><a href="/tr/teams-live-captions.html">Microsoft Teams</a><a href="/tr/google-meet-live-captions.html">Google Meet</a><a href="/tr/webex-live-captions.html">Webex</a><a href="/tr/skype-live-captions.html">Skype</a><a href="/tr/slack-live-captions.html">Slack</a><a href="/tr/whatsapp-live-translation.html">WhatsApp</a><a href="/tr/telegram-subtitles.html">Telegram</a></div><div><h5>Yayın ve sosyal</h5><a href="/tr/youtube-dual-subtitles.html">YouTube</a><a href="/tr/netflix-subtitles.html">Netflix</a><a href="/tr/twitch-live-captions.html">Twitch</a><a href="/tr/discord-live-captions.html">Discord</a><a href="/tr/tiktok-live-captions.html">TikTok</a><a href="/tr/instagram-live-captions.html">Instagram</a><a href="/tr/facebook-live-subtitles.html">Facebook</a><a href="/tr/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Oyun ve içerik üreticileri</h5><a href="/tr/obs-subtitles.html">OBS</a><a href="/tr/game-mode-subtitles.html">Game Mode</a><a href="/tr/steam-subtitles.html">Steam</a><a href="/tr/restream-subtitles.html">Restream</a><a href="/tr/vimeo-subtitles.html">Vimeo</a><a href="/tr/vlc-subtitles.html">VLC</a></div><div><h5>Eğitim ve iş</h5><a href="/tr/coursera-subtitles.html">Coursera</a><a href="/tr/udemy-live-captions.html">Udemy</a><a href="/tr/google-classroom-subtitles.html">Google Classroom</a><a href="/tr/linkedin-live-captions.html">LinkedIn</a><a href="/tr/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/tr/" style="font-weight:600;text-decoration:none;">Live Subtitles ana sayfa →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Ayrıca okuyun</h4>
+            <a class="s-item" href="article-1.html">İkili altyazılar dil öğrenmenizi nasıl hızlandırır</a>
+            <a class="s-item" href="article-2.html">Altyazıların Dil Öğrenimi İçin Neden Önemli Olduğu</a>
+            <a class="s-item" href="article-3.html">Çift Altyazılar ile Dil Öğreniminde Motivasyon ve Sürdürül…</a>
+            <a class="s-item" href="article-4.html">Altyazıların ana dil konuşucuları için bile neden faydalı …</a>
+            <a class="s-item" href="article-5.html">İngilizce öğrenmek için çift altyazılı TOP-10 film</a>
+            <a class="s-item" href="article-7.html">Hızlı dil öğrenimi için çift altyazılar nasıl kullanılır</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Her uygulama için canlı altyazılar.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Ücretsiz indir</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Yukarı" title="Yukarı">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/tr/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

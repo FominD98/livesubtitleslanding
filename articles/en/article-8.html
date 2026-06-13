@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -34,21 +30,87 @@
     <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-8.html" />
     <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-8.html" />
     <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-8.html" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 800px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 800px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        h4 { color: #00d4ff; margin-top: 1.5rem; }
-        p, li { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        h4 { color: #0b6ad1; margin-top: 1.5rem; }
+        p, li { color: #2d333b; }
         .lang-switch { margin-bottom: 2rem; }
-        .feature-item { margin-bottom: 1.5rem; padding: 1.5rem; background: rgba(255,255,255,0.02); border-radius: 6px; border-left: 3px solid #fd7e14; }
-        .feature-number { color: #fd7e14; font-weight: bold; margin-bottom: 0.5rem; }
+        .feature-item { margin-bottom: 1.5rem; padding: 1.5rem; background: rgba(0,0,0,0.02); border-radius: 6px; border-left: 3px solid #fd7e14; }
+        .feature-number { color: #b35413; font-weight: bold; margin-bottom: 0.5rem; }
         .icon { font-size: 1.5rem; margin-right: 0.5rem; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <!-- Article Schema Markup -->
     <script type="application/ld+json">
@@ -110,24 +172,41 @@
     <link rel="preload" as="image" href="/articles/img/en/movies.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">Why Cinema Is a Cultural Mirror</a>
+            <a href="#sec-2">The Four Cultural Dimensions Movie…</a>
+            <a href="#sec-3">Dual Subtitles: Why Two Languages …</a>
+            <a href="#sec-4">How to Set Up Dual Subtitles on An…</a>
+            <a href="#sec-5">Choosing the Right Films for Cultu…</a>
+            <a href="#sec-6">Active Watching vs. Passive Viewing</a>
+            <a href="#sec-7">Recognizing Cultural Subtext in Di…</a>
+            <a href="#sec-8">Frequently Asked Questions</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <div class="lang-switch">
-            <a href="/" style="color:#00b8ff;">Back to main site</a>
+            <a href="/" style="color:#0b6ad1;">Back to main site</a>
         </div>
         <a href="index.html" class="back-link">← Back to articles</a>
         <h1 class="article-title" itemprop="headline">How Movies Help Understand the Culture and Mentality of Native Speakers</h1>
-        <div class="article-date" itemprop="datePublished" content="2024-05-02">May 2, 2024</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/aarav-sharma.html" rel="author" style="color:#00b8ff; text-decoration:none;">Aarav Sharma</a> &middot; Streaming Platforms Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2024-05-02">May 2, 2024<span class="reading-time">11 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/aarav-sharma.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Aarav Sharma</a> &middot; Streaming Platforms Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/movies.webp" alt="Dual subtitles on a film for language learning" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         <div itemprop="articleBody">
             <p>Language learning goes far beyond memorizing vocabulary lists or drilling grammar rules. The deepest, most durable understanding of a foreign language comes from grasping the culture that shaped it — the unspoken assumptions, the humor, the social hierarchy, the way people argue or apologize or flirt. Cinema is one of the most powerful windows into that world. When you watch a film with subtitles, you are not just decoding words; you are observing how real people behave, what they value, and what makes them laugh or cry. This guide explains exactly why movies with subtitles are so effective for cultural and linguistic immersion, and how to make the most of every viewing session.</p>
 
-            <h2>Why Cinema Is a Cultural Mirror</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">Why Cinema Is a Cultural Mirror</a></li><li><a href="#sec-2">The Four Cultural Dimensions Movies Teach Best</a></li><li><a href="#sec-3">Dual Subtitles: Why Two Languages on Screen Works</a></li><li><a href="#sec-4">How to Set Up Dual Subtitles on Any Platform</a></li><li><a href="#sec-5">Choosing the Right Films for Cultural Immersion</a></li><li><a href="#sec-6">Active Watching vs. Passive Viewing</a></li><li><a href="#sec-7">Recognizing Cultural Subtext in Dialogue</a></li><li><a href="#sec-8">Frequently Asked Questions</a></li></ol></details>
+            <h2 id="sec-1">Why Cinema Is a Cultural Mirror</h2>
             <p>Every film is a time capsule. A 1990s British drama captures class anxiety in ways no textbook can describe. A contemporary Korean thriller reflects social pressure around academic achievement. A classic Hollywood road movie embodies a distinctly American faith in self-reinvention. Screenwriters, directors, and actors draw on the cultural assumptions of their audience — references they never explain, because every native viewer already understands them.</p>
             <p>When you watch with subtitles in the original language, you catch layers that a dubbed version destroys: the rhythm of a joke, the sarcasm in a three-word reply, the loaded silence that tells you more than any speech. Research published in <em>Language Learning &amp; Technology</em> found that learners who watched authentic video content with target-language subtitles scored up to 28% higher on idiom recognition tests than those who relied on coursebooks alone.</p>
 
-            <h2>The Four Cultural Dimensions Movies Teach Best</h2>
+            <h2 id="sec-2">The Four Cultural Dimensions Movies Teach Best</h2>
 
             <div class="feature-item">
                 <div class="feature-number">1. Communicative Style: Direct vs. Indirect</div>
@@ -149,20 +228,21 @@
                 <p>How do people greet each other in the morning? Who pours the tea? What topics are avoided at the dinner table? Films answer all of these with zero explanation, because the native audience does not need one. Watching a French family argue over politics during a holiday meal, or a Brazilian family negotiate who sits at the head of the table, teaches the implicit rules that govern daily life far more vividly than a cultural overview chapter in a phrasebook.</p>
             </div>
 
-            <h2>Dual Subtitles: Why Two Languages on Screen Works</h2>
+            <h2 id="sec-3">Dual Subtitles: Why Two Languages on Screen Works</h2>
             <p>Watching with your native language subtitles alone is comfortable but passive — your brain skips the foreign audio and reads the translation. Watching with no subtitles at all is admirable but exhausting, especially below B2 level. Dual subtitles — target language on top, native language below — hit the sweet spot. You process the spoken word, read the phonetic confirmation, and glance at the translation only when needed. Studies tracking eye movement show that after roughly four weeks of dual-subtitle viewing, learners' gaze shifts overwhelmingly to the target-language line, with translation consulted only for genuinely unfamiliar vocabulary.</p>
             <p>For Indonesian learners, this is exactly why <em>film sub indo</em> content with dual-language tracks has become so popular on regional streaming platforms: seeing the original English (or Korean, or Arabic) alongside a Bahasa Indonesia gloss accelerates comprehension of both the language and the cultural context without the frustration of being completely lost.</p>
 
-            <h2>How to Set Up Dual Subtitles on Any Platform</h2>
+            <h2 id="sec-4">How to Set Up Dual Subtitles on Any Platform</h2>
             <p>Getting two subtitle tracks on screen simultaneously used to require technical workarounds. Today there are several practical approaches:</p>
             <ul>
                 <li><strong>Dedicated extensions</strong> — Browser add-ons for <a href="/netflix-subtitles.html">Netflix</a> and YouTube can overlay a second subtitle track, letting you pair, for example, English and Spanish subtitles on the same video.</li>
                 <li><strong>Media player software</strong> — VLC and MPV can load two separate SRT files, positioning them at different vertical offsets so they do not overlap.</li>
-                <li><strong>Live Subtitles app (Windows)</strong> — For any content playing on your PC — whether on a streaming service, a locally stored file, or a video call — <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank">Live Subtitles</a> listens to your system audio in real time and displays a second subtitle overlay in the language of your choice. This works regardless of whether the platform natively supports dual subtitles. It uses on-device AI speech recognition, so there is no upload latency, and it supports over 50 languages. The overlay floats above any window, so you see both the original subtitles burned into the video and the live translation beneath them.</li>
+                <li><strong>Live Subtitles app (Windows)</strong> — For any content playing on your PC — whether on a streaming service, a locally stored file, or a video call — <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div> listens to your system audio in real time and displays a second subtitle overlay in the language of your choice. This works regardless of whether the platform natively supports dual subtitles. It uses on-device AI speech recognition, so there is no upload latency, and it supports over 50 languages. The overlay floats above any window, so you see both the original subtitles burned into the video and the live translation beneath them.</li>
             </ul>
             <p>The Live Subtitles approach is particularly powerful for streaming services that do not offer your target language track, for DVDs ripped without subtitle files, or for foreign-language YouTube content with auto-generated captions you want translated simultaneously.</p>
 
-            <h2>Choosing the Right Films for Cultural Immersion</h2>
+            <h2 id="sec-5">Choosing the Right Films for Cultural Immersion</h2>
             <p>Not every film is equally useful for cultural learning. Some guidelines:</p>
             <ul>
                 <li><strong>Prefer contemporary over classic</strong> — Language and culture shift. A 1950s American film teaches the culture of 1950s America, not of today. For practical cultural fluency, weight your list toward films from the last 10–15 years.</li>
@@ -172,7 +252,7 @@
             </ul>
             <p>For a structured watchlist organized by language level and genre, see our <a href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a> and our guide on <a href="article-3.html">How Regular Foreign Language Movie Watching Improves Your Level</a>.</p>
 
-            <h2>Active Watching vs. Passive Viewing</h2>
+            <h2 id="sec-6">Active Watching vs. Passive Viewing</h2>
             <p>There is a meaningful difference between watching a film for relaxation and watching it as a deliberate learning exercise. Neither approach is wrong, but they produce different results. Passive viewing builds a general feel for rhythm, intonation, and cultural context. Active watching accelerates vocabulary acquisition and grammar pattern recognition. A practical routine:</p>
             <ol>
                 <li><strong>First pass:</strong> Watch the scene with dual subtitles for comprehension and enjoyment.</li>
@@ -181,11 +261,11 @@
             </ol>
             <p>Even 30 minutes of active watching three times a week, sustained over six months, produces measurable improvements in listening comprehension and spontaneous vocabulary recall.</p>
 
-            <h2>Recognizing Cultural Subtext in Dialogue</h2>
+            <h2 id="sec-7">Recognizing Cultural Subtext in Dialogue</h2>
             <p>One of the highest-value skills a film learner can develop is reading subtext — what a character means versus what they say. This is intensely cultural. A British character who says "That's very interesting" may be politely dismissing you. An American character who says "We should do lunch sometime" may have no intention of following through. A Russian character's apparent bluntness in a business scene is not aggression — it is efficiency. These readings are invisible to learners working from a pure translation; they require cultural context that films provide naturally.</p>
             <p>When you notice a moment where the character's words and actions seem misaligned, pause. That gap is almost always doing cultural work. Search for commentary, read a review written for domestic audiences, or ask in a language-learning forum. Those investigations are among the most valuable learning sessions you will have.</p>
 
-            <h2>Frequently Asked Questions</h2>
+            <h2 id="sec-8">Frequently Asked Questions</h2>
 
             <div class="feature-item">
                 <div class="feature-number">Q: Should I watch with subtitles in my native language or the target language?</div>
@@ -210,21 +290,66 @@
             <p>Cinema is not a shortcut to fluency — nothing is. But it is one of the most enjoyable and culturally rich paths available. Every film you watch with intent adds vocabulary, sharpens your ear, and deposits another layer of cultural intuition that no grammar workbook can replicate. The tools to do it well — dual subtitle setups, real-time translation overlays — have never been more accessible. The only remaining step is pressing play.</p>
 
 <!-- Related Articles -->
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Related Articles</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Related Articles</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                <li><a href="article-3.html" style="color: #00b8ff; text-decoration: none;">How Regular Foreign Language Movie Watching Improves Your Level</a></li>
-                <li><a href="article-5.html" style="color: #00b8ff; text-decoration: none;">TOP-10 Movies with Dual Subtitles for Learning English</a></li>
-                <li><a href="article-9.html" style="color: #00b8ff; text-decoration: none;">How to Use Subtitles for Learning Conversational Speech and Slang</a></li>
+                <li><a href="article-3.html" style="color: #0b6ad1; text-decoration: none;">How Regular Foreign Language Movie Watching Improves Your Level</a></li>
+                <li><a href="article-5.html" style="color: #0b6ad1; text-decoration: none;">TOP-10 Movies with Dual Subtitles for Learning English</a></li>
+                <li><a href="article-9.html" style="color: #0b6ad1; text-decoration: none;">How to Use Subtitles for Learning Conversational Speech and Slang</a></li>
                 </ul>
             </div>
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Try Live Subtitles for Free</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Get dual subtitles, real-time speech recognition and translation in any application. Works with YouTube, Netflix, Zoom, and 50+ other apps.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Try Live Subtitles for Free</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Get dual subtitles, real-time speech recognition and translation in any application. Works with YouTube, Netflix, Zoom, and 50+ other apps.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">Download free</a>
             </div>
 <!-- CTA -->
 </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html> 

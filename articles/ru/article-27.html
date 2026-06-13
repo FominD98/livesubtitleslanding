@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="Субтитры для стримеров в 2026: OBS, Twitch, YouTube Live workflow">
     <meta name="twitter:description" content="Субтитры для стримеров 2026: OBS оверлей, Twitch CC, YouTube Live и AI-инструменты — полное руководство по выбору workflow и настройке за 10 минут.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ru/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,22 +150,42 @@
     <link rel="preload" as="image" href="/articles/img/ru/games.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Содержание">
+        <div class="toc-inner">
+            <h4>Содержание</h4>
+            <a href="#sec-1">Почему субтитры важны для стримера…</a>
+            <a href="#sec-2">Три источника аудио, три места выв…</a>
+            <a href="#sec-3">Сравнение инструментов субтитров д…</a>
+            <a href="#sec-4">Как выбирать workflow под тип стрима</a>
+            <a href="#sec-5">Настройка OBS для захвата субтитров</a>
+            <a href="#sec-6">Пре-стрим чек-лист (10 минут)</a>
+            <a href="#sec-7">Частые ошибки и как их избежать</a>
+            <a href="#sec-8">Субтитры и монетизация: неожиданна…</a>
+            <a href="#sec-9">Live Subtitles: захват системного …</a>
+            <a href="#sec-10">Часто задаваемые вопросы</a>
+            <a href="#sec-11">Источники</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Назад к статьям</a>
         <h1 class="article-title" itemprop="headline">Субтитры для стримеров в 2026: OBS, Twitch, YouTube Live workflow</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 мая 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Автор: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; инженер игровых оверлеев, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Обновлено: 28 мая 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 мая 2026<span class="reading-time">10 мин чтения</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Автор: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; инженер игровых оверлеев, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Обновлено: 28 мая 2026</div>
         <img class="article-hero" src="/articles/img/ru/games.webp" alt="Живые субтитры поверх Twitch-стрима" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p><strong>Субтитры для стримеров</strong> — принципиально другая задача, чем субтитры на рабочих встречах или вебинарах. На стриме у тебя одновременно работают три источника аудио: игровой звук, микрофон и системные звуки. Субтитры нужно выводить в трёх местах сразу: оверлей внутри стрима, платформенный CC и запись для VOD-архива. А главное — нельзя допустить ни одного сбоя в прямом эфире: лагающие субтитры ломают тайминг реплик и разрушают атмосферу. В этом руководстве разберём, как выбрать правильный workflow под свой тип стрима и настроить всё за 10 минут до выхода в эфир.</p>
 
-            <h2>Почему субтитры важны для стримера в 2026 году</h2>
+            <details class="toc-mobile"><summary>Содержание</summary><ol><li><a href="#sec-1">Почему субтитры важны для стримера в 2026 году</a></li><li><a href="#sec-2">Три источника аудио, три места вывода субтитров</a></li><li><a href="#sec-3">Сравнение инструментов субтитров для стримеров в 2026 году</a></li><li><a href="#sec-4">Как выбирать workflow под тип стрима</a></li><li><a href="#sec-5">Настройка OBS для захвата субтитров</a></li><li><a href="#sec-6">Пре-стрим чек-лист (10 минут)</a></li><li><a href="#sec-7">Частые ошибки и как их избежать</a></li><li><a href="#sec-8">Субтитры и монетизация: неожиданная связь</a></li><li><a href="#sec-9">Live Subtitles: захват системного звука и перевод для стримеров</a></li><li><a href="#sec-10">Часто задаваемые вопросы</a></li><li><a href="#sec-11">Источники</a></li></ol></details>
+            <h2 id="sec-1">Почему субтитры важны для стримера в 2026 году</h2>
             <p>Среди аудитории стримеров глухих и слабослышащих зрителей значительно больше, чем принято думать. По данным ВОЗ, более 430 миллионов человек в мире имеют нарушения слуха. Но субтитры нужны не только им: зрители, которые смотрят стрим в офисе без наушников, в шумном общественном месте, в другом часовом поясе поздно ночью — все они выиграют от наличия текстовой дорожки.</p>
             <p>Кроме доступности, субтитры напрямую влияют на удержание аудитории. Исследования платформ показывают, что видео с субтитрами смотрят на 40% дольше. Для VOD-архивов эта цифра ещё выше: субтитры улучшают SEO YouTube-канала и помогают алгоритму понять, о чём стрим. Наконец, стримеры с международной аудиторией через встроенный перевод получают зрителей из регионов, где нет носителей языка стримера.</p>
 
-            <h2>Три источника аудио, три места вывода субтитров</h2>
+            <h2 id="sec-2">Три источника аудио, три места вывода субтитров</h2>
             <p>Качество субтитров не может быть выше качества входящего аудио. Сначала определись, что именно ты хочешь субтитрировать — и уже под это выбирай инструмент:</p>
             <ul>
                 <li><strong>Только микрофон:</strong> читает твой голос чисто, полностью игнорирует игровой звук. Оптимально для разговорных форматов — Just Chatting, IRL, стримы-интервью, подкасты. Даёт наименьшую задержку (обычно меньше 1 секунды), потому что модели распознавания заточены под чистую речь без фоновых шумов.</li>
@@ -111,7 +193,7 @@
                 <li><strong>Потрековая маршрутизация в OBS:</strong> каждый источник аудио идёт на отдельный трек OBS, и каждый трек независимо передаётся в инструмент субтитров. Это сложная конфигурация, но она позволяет на коллаб-стримах маркировать реплики разных спикеров — незаменимо для шоу с двумя-тремя соведущими.</li>
             </ul>
 
-            <h2>Сравнение инструментов субтитров для стримеров в 2026 году</h2>
+            <h2 id="sec-3">Сравнение инструментов субтитров для стримеров в 2026 году</h2>
             <p>Ни один инструмент не закрывает все сценарии одновременно. Вот честное сравнение четырёх основных подходов:</p>
             <table>
                 <thead>
@@ -130,7 +212,7 @@
                 </tbody>
             </table>
 
-            <h2>Как выбирать workflow под тип стрима</h2>
+            <h2 id="sec-4">Как выбирать workflow под тип стрима</h2>
             <h3>Just Chatting и IRL-стримы</h3>
             <p>Здесь всё просто: используй субтитры только с микрофона и накладывай их через OBS-оверлей. Цель — задержка меньше 1,5 секунды и точность именно на твоём голосе. AI-движки распознавания речи после нескольких сессий буквально «запоминают» тембр, темп и характерные слова стримера, заметно снижая ошибки. Twitch-нативный CC работает как запасной вариант, но там нет ни настройки стиля, ни гарантии, что зрители его включат.</p>
             <h3>Стримы разных жанров игр (Variety Gaming)</h3>
@@ -140,7 +222,7 @@
             <h3>Многоязычная и международная аудитория</h3>
             <p>Используй десктопный слой субтитров с поддержкой перевода в реальном времени. Приложение вроде <strong>Live Subtitles</strong> захватывает системный звук, распознаёт речь и тут же переводит — например, с английского на русский и испанский одновременно. Запекай двуязычные субтитры в OBS: зрители любого региона видят текст без лишних настроек со своей стороны.</p>
 
-            <h2>Настройка OBS для захвата субтитров</h2>
+            <h2 id="sec-5">Настройка OBS для захвата субтитров</h2>
             <p>Если ты используешь десктопное приложение субтитров, правильный захват в OBS — ключевой шаг. Вот рабочая схема:</p>
             <ol>
                 <li>Открой OBS и добавь в сцену новый источник типа «Захват окна» (Window Capture).</li>
@@ -151,7 +233,7 @@
             </ol>
             <p>Альтернативный подход — использовать OBS-плагин типа <em>obs-browser</em> с локальной страничкой, которая получает субтитры через WebSocket от вашего AI-движка. Это даёт полный контроль CSS-стилизации и исключает захват лишней части окна.</p>
 
-            <h2>Пре-стрим чек-лист (10 минут)</h2>
+            <h2 id="sec-6">Пре-стрим чек-лист (10 минут)</h2>
             <ol>
                 <li>Убедись, что микрофон и игровое аудио назначены на разные треки OBS — иначе субтитры будут читать оба источника вместе, смешивая речь с игровыми звуками.</li>
                 <li>Выбери в инструменте субтитров нужный источник: только микрофон или системный звук — в зависимости от формата стрима.</li>
@@ -160,7 +242,7 @@
                 <li>Проверь запись: запусти тестовую запись на 2 минуты и просмотри — если субтитры занимают важные зоны HUD, скорректируй позицию заранее.</li>
             </ol>
 
-            <h2>Частые ошибки и как их избежать</h2>
+            <h2 id="sec-7">Частые ошибки и как их избежать</h2>
             <ul>
                 <li><strong>Субтитры перекрывают HUD:</strong> в момент клатча субтитры закрывают килл-фид или полоску здоровья. Всегда проверяй позицию сначала в полноэкранном режиме игры — не в окне OBS.</li>
                 <li><strong>Дрейф задержки на марафонских стримах:</strong> некоторые AI-движки через 3–4 часа работы начинают отставать от речи на 3–5 секунд. Причина — накопленный буфер в памяти. Перезапускай инструмент субтитров каждые 2 часа во время коротких перерывов.</li>
@@ -169,48 +251,94 @@
                 <li><strong>Плохое распознавание сленга и игровых терминов:</strong> стандартные ASR-модели не знают стримерских слов типа «клатч», «тилт», «фарм», «ганк». Если инструмент поддерживает пользовательский словарь или hotwords — добавь туда ключевые термины своей ниши.</li>
             </ul>
 
-            <h2>Субтитры и монетизация: неожиданная связь</h2>
+            <h2 id="sec-8">Субтитры и монетизация: неожиданная связь</h2>
             <p>Субтитры напрямую влияют на монетизацию стрима через несколько каналов. Во-первых, VOD с субтитрами лучше ранжируются в поиске YouTube — это дополнительный органический трафик и просмотры. Во-вторых, стримы с субтитрами доступны более широкой аудитории, что увеличивает среднее число одновременных зрителей — а это ключевой метрик для партнёрской программы Twitch. В-третьих, клипы со стримов с субтитрами лучше распространяются в социальных сетях: TikTok и Instagram Reels автоматически показываются без звука, и именно субтитры делают клипы понятными без аудио.</p>
             <p>Стримеры, добавившие субтитры в свой стандартный workflow, отмечают рост удержания аудитории в среднем на 15–20% — особенно среди зрителей с мобильных устройств, где звук часто выключен.</p>
 
-            <div style="background: rgba(0,255,157,0.06); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">Практический совет:</strong> Если твой стрим идёт одновременно на Twitch и YouTube (например, через Restream или нативный мультистриминг), запекай субтитры через OBS-оверлей — только тогда они гарантированно появятся на обеих платформах без дополнительных настроек на каждой из них.
+            <div style="background: rgba(0,255,157,0.06); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">Практический совет:</strong> Если твой стрим идёт одновременно на Twitch и YouTube (например, через Restream или нативный мультистриминг), запекай субтитры через OBS-оверлей — только тогда они гарантированно появятся на обеих платформах без дополнительных настроек на каждой из них.
             </div>
 
-            <h2>Live Subtitles: захват системного звука и перевод для стримеров</h2>
+            <h2 id="sec-9">Live Subtitles: захват системного звука и перевод для стримеров</h2>
             <p>Приложение <strong>Live Subtitles</strong> для Windows решает самую сложную задачу стримера — захват системного аудио целиком, а не только микрофона. Оно работает как отдельное прозрачное окно поверх всех приложений: запускаешь, оно начинает читать всё, что звучит в системе, включая игровые диалоги, голоса соигроков в Discord и твою речь одновременно.</p>
-            <p>Ключевое преимущество для международной аудитории — встроенный перевод в реальном времени. Ты ведёшь стрим на русском, а зрители из Германии или Японии видят субтитры на своём языке, просто потому что ты добавил окно перевода в OBS. Скачать приложение можно в <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft Store</a> — рейтинг 4.7 из 5 на основе более 350 реальных отзывов пользователей, среди которых немало стримеров.</p>
-            <p>Подробнее о том, как работает AI-распознавание в реальном времени и почему оно отличается от пакетной транскрипции, читай в статье <a href="article-25.html" style="color:#00b8ff;">«Живые субтитры 2026: как работают AI-субтитры и когда их использовать»</a>.</p>
+            <p>Ключевое преимущество для международной аудитории — встроенный перевод в реальном времени. Ты ведёшь стрим на русском, а зрители из Германии или Японии видят субтитры на своём языке, просто потому что ты добавил окно перевода в OBS. Скачать приложение можно в <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">Скачать бесплатно</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 отзывов</div> — рейтинг 4.7 из 5 на основе более 350 реальных отзывов пользователей, среди которых немало стримеров.</p>
+            <p>Подробнее о том, как работает AI-распознавание в реальном времени и почему оно отличается от пакетной транскрипции, читай в статье <a href="article-25.html" style="color:#0b6ad1;">«Живые субтитры 2026: как работают AI-субтитры и когда их использовать»</a>.</p>
 
-            <h2>Часто задаваемые вопросы</h2>
+            <h2 id="sec-10">Часто задаваемые вопросы</h2>
             <p><strong>Видят ли зрители Twitch субтитры автоматически?</strong><br>Нет — только если твой энкодер отправляет поток CEA-608/708 И зрители вручную включают CC в настройках плеера. По умолчанию Twitch не показывает субтитры. Именно поэтому большинство стримеров предпочитают OBS-оверлей: субтитры видны всем без исключения.</p>
             <p><strong>Субтитры снизят производительность и FPS?</strong><br>Современные AI-движки распознавания речи потребляют не более 3–5% CPU на системах среднего класса (Ryzen 5 / Core i5 и выше). Если CPU уже загружен под завязку энкодером — используй модель меньшего размера или вынеси распознавание на второй компьютер или смартфон.</p>
             <p><strong>Можно ли стримить с субтитрами сразу на двух языках?</strong><br>Да. Десктопные приложения с встроенным переводом умеют показывать две строки: оригинал сверху, перевод снизу. Запеки это в OBS-оверлей — и зрители из любой страны увидят нужный язык без каких-либо действий с их стороны.</p>
             <p><strong>Субтитры на VOD сохраняются автоматически?</strong><br>Если ты запекаешь их через OBS-оверлей — да, они навсегда в записи. Если используешь платформенный CC (YouTube Live, Twitch) — зависит от платформы: YouTube сохраняет автосубтитры на VOD, Twitch — только если ты явно включил запись с CC.</p>
             <p><strong>Что делать, если субтитры сильно отстают от речи?</strong><br>Проверь три вещи: загрузку CPU (если выше 90% — снизи битрейт энкодера или уменьши модель ASR), интернет-соединение (облачные ASR-движки страдают от пакетных потерь), буфер аудиоинтерфейса (увеличь его до 20–30 мс в настройках ASIO/WASAPI — парадоксально, но это снижает суммарную задержку).</p>
 
-            <h2>Источники</h2>
+            <h2 id="sec-11">Источники</h2>
             <ul>
-                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Twitch — документация Closed Captions</a></li>
-                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">OBS Studio — официальный сайт</a></li>
-                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">YouTube Help — автоматические субтитры</a></li>
+                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Twitch — документация Closed Captions</a></li>
+                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">OBS Studio — официальный сайт</a></li>
+                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">YouTube Help — автоматические субтитры</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Похожие материалы</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Похожие материалы</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">Живые субтитры 2026: как работают AI-субтитры и когда их использовать</a></li>
-                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">Транскрибация аудио в текст 2026: реал-тайм vs батч-транскрипция</a></li>
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">Голосовой переводчик в 2026 году: реал-тайм инструменты по сценариям</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">Живые субтитры 2026: как работают AI-субтитры и когда их использовать</a></li>
+                    <li><a href="article-24.html" style="color: #0b6ad1; text-decoration: none;">Транскрибация аудио в текст 2026: реал-тайм vs батч-транскрипция</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">Голосовой переводчик в 2026 году: реал-тайм инструменты по сценариям</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Субтитры стрима, ловящие и игровой звук, и твой голос</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Системные субтитры + реалтаймовый перевод для стримеров — захватывай окно в OBS и выпускай стрим с субтитрами за несколько минут. Рейтинг 4.7 · более 350 отзывов.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Скачать из Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Субтитры стрима, ловящие и игровой звук, и твой голос</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Системные субтитры + реалтаймовый перевод для стримеров — захватывай окно в OBS и выпускай стрим с субтитрами за несколько минут. Рейтинг 4.7 · более 350 отзывов.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">Скачать бесплатно</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Живые субтитры для любого приложения</h3>
+                <div class="explore-cols"><div><h5>Встречи и звонки</h5><a href="/ru/zoom-live-captions.html">Zoom</a><a href="/ru/teams-live-captions.html">Microsoft Teams</a><a href="/ru/google-meet-live-captions.html">Google Meet</a><a href="/ru/webex-live-captions.html">Webex</a><a href="/ru/skype-live-captions.html">Skype</a><a href="/ru/slack-live-captions.html">Slack</a><a href="/ru/whatsapp-live-translation.html">WhatsApp</a><a href="/ru/telegram-subtitles.html">Telegram</a></div><div><h5>Стриминг и соцсети</h5><a href="/ru/youtube-dual-subtitles.html">YouTube</a><a href="/ru/netflix-subtitles.html">Netflix</a><a href="/ru/twitch-live-captions.html">Twitch</a><a href="/ru/discord-live-captions.html">Discord</a><a href="/ru/tiktok-live-captions.html">TikTok</a><a href="/ru/instagram-live-captions.html">Instagram</a><a href="/ru/facebook-live-subtitles.html">Facebook</a><a href="/ru/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Игры и креаторы</h5><a href="/ru/obs-subtitles.html">OBS</a><a href="/ru/game-mode-subtitles.html">Game Mode</a><a href="/ru/steam-subtitles.html">Steam</a><a href="/ru/restream-subtitles.html">Restream</a><a href="/ru/vimeo-subtitles.html">Vimeo</a><a href="/ru/vlc-subtitles.html">VLC</a></div><div><h5>Учёба и работа</h5><a href="/ru/coursera-subtitles.html">Coursera</a><a href="/ru/udemy-live-captions.html">Udemy</a><a href="/ru/google-classroom-subtitles.html">Google Classroom</a><a href="/ru/linkedin-live-captions.html">LinkedIn</a><a href="/ru/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ru/" style="font-weight:600;text-decoration:none;">На главную Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Читайте также</h4>
+            <a class="s-item" href="article-1.html">Как двойные субтитры помогают учить языки быстрее</a>
+            <a class="s-item" href="article-2.html">Почему субтитры важны для изучения иностранных языков</a>
+            <a class="s-item" href="article-3.html">Как регулярный просмотр фильмов на иностранном языке улучш…</a>
+            <a class="s-item" href="article-4.html">Почему субтитры полезны даже для носителей языка</a>
+            <a class="s-item" href="article-5.html">ТОП-10 фильмов с двойными субтитрами для изучения английск…</a>
+            <a class="s-item" href="article-6.html">Ошибки, которых стоит избегать при изучении языка через ви…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Живые субтитры для любого приложения.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Скачать бесплатно</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Наверх" title="Наверх">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ru/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -34,20 +30,86 @@
     <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-7.html" />
     <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-7.html" />
     <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-7.html" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 800px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 800px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        h4 { color: #00d4ff; margin-top: 1.5rem; }
-        p, li { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        h4 { color: #0b6ad1; margin-top: 1.5rem; }
+        p, li { color: #2d333b; }
         .lang-switch { margin-bottom: 2rem; }
-        .tool-item { margin-bottom: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 6px; border-left: 3px solid #339af0; }
+        .tool-item { margin-bottom: 1.5rem; padding: 1rem; background: rgba(0,0,0,0.02); border-radius: 6px; border-left: 3px solid #339af0; }
         .benefit-item { margin-bottom: 1rem; padding: 1rem; background: rgba(100,255,100,0.05); border-radius: 6px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <!-- Article Schema Markup -->
     <script type="application/ld+json">
@@ -109,21 +171,39 @@
     <link rel="preload" as="image" href="/articles/img/en/learning.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">What Dual Subtitles Are — and Why …</a>
+            <a href="#sec-2">Choosing the Right Content for You…</a>
+            <a href="#sec-3">A Practical Step-by-Step Dual-Subt…</a>
+            <a href="#sec-4">Top Tools for Dual Subtitles in 2026</a>
+            <a href="#sec-5">How to Use Live Subtitles Alongsid…</a>
+            <a href="#sec-6">The Most Common Mistakes — and How…</a>
+            <a href="#sec-7">Measuring Your Progress</a>
+            <a href="#sec-8">Dual Subtitles vs. Other Vocabular…</a>
+            <a href="#sec-9">Frequently Asked Questions</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <div class="lang-switch">
-            <a href="/" style="color:#00b8ff;">Back to main site</a>
+            <a href="/" style="color:#0b6ad1;">Back to main site</a>
         </div>
         <a href="index.html" class="back-link">← Back to articles</a>
         <h1 class="article-title" itemprop="headline">How to Use Dual Subtitles for Fast Language Learning</h1>
-        <div class="article-date" itemprop="datePublished" content="2024-05-01">May 1, 2024</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/sofia-almeida.html" rel="author" style="color:#00b8ff; text-decoration:none;">Sofia Almeida</a> &middot; Applied Linguistics Lead, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2024-05-01">May 1, 2024<span class="reading-time">13 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/sofia-almeida.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Sofia Almeida</a> &middot; Applied Linguistics Lead, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/learning.webp" alt="Dual subtitles on a video lesson for language learning" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         <div itemprop="articleBody">
 
             <p>Watching videos in a foreign language is one of the richest language-learning environments you can create at home — but only if you engage with the audio in the right way. Plain subtitles in your native tongue let you follow the plot while your brain quietly ignores the target language entirely. Dual subtitles fix that: they place the original-language text <em>and</em> a translation on screen at the same time, forcing your eyes and ears to cross-reference both simultaneously. The result is faster vocabulary retention, sharper listening comprehension, and grammar patterns absorbed through sheer repetition — not textbook drills. This guide covers exactly how to make the method work, which tools support it, and how to build a daily routine around it.</p>
 
-            <h2>What Dual Subtitles Are — and Why They Work</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">What Dual Subtitles Are — and Why They Work</a></li><li><a href="#sec-2">Choosing the Right Content for Your Level</a></li><li><a href="#sec-3">A Practical Step-by-Step Dual-Subtitle Routine</a></li><li><a href="#sec-4">Top Tools for Dual Subtitles in 2026</a></li><li><a href="#sec-5">How to Use Live Subtitles Alongside Your Target-Language Content</a></li><li><a href="#sec-6">The Most Common Mistakes — and How to Avoid Them</a></li><li><a href="#sec-7">Measuring Your Progress</a></li><li><a href="#sec-8">Dual Subtitles vs. Other Vocabulary Methods: A Quick Comparison</a></li><li><a href="#sec-9">Frequently Asked Questions</a></li></ol></details>
+            <h2 id="sec-1">What Dual Subtitles Are — and Why They Work</h2>
             <p>Dual subtitles (sometimes called bilingual subtitles or 2sub mode) display two lines of text per utterance: the upper line in the target language, the lower line in your native language (or vice versa). When you hear an unfamiliar word, your eye drops to the translation for half a second and then returns — no pausing required, no app-switching, no disruption to the listening experience.</p>
             <p>This technique maps to several well-documented learning principles:</p>
             <ul>
@@ -133,11 +213,11 @@
                 <li><strong>Sentence-level grammar absorption:</strong> Seeing how a sentence is structured in both languages at the same moment trains intuition for word order, verb conjugation, and collocations faster than explicit rule study.</li>
             </ul>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.1rem 1.4rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
-                <strong style="color:#00ff9d;">Research snapshot:</strong> A 2019 study published in <em>Language Learning &amp; Technology</em> found that learners using dual subtitles outperformed same-level learners using single subtitles by 34% on incidental vocabulary acquisition tests after just 6 weeks of equal viewing time.
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.1rem 1.4rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+                <strong style="color:#0a7f55;">Research snapshot:</strong> A 2019 study published in <em>Language Learning &amp; Technology</em> found that learners using dual subtitles outperformed same-level learners using single subtitles by 34% on incidental vocabulary acquisition tests after just 6 weeks of equal viewing time.
             </div>
 
-            <h2>Choosing the Right Content for Your Level</h2>
+            <h2 id="sec-2">Choosing the Right Content for Your Level</h2>
             <p>Not every video is equally effective. The content you choose dramatically affects your progress speed.</p>
 
             <h3>For beginners (A1–A2)</h3>
@@ -161,7 +241,7 @@
                 <li>At this level, try flipping the subtitle pair: put the <em>target language translation</em> on the bottom so you are reading in a language you know less well.</li>
             </ul>
 
-            <h2>A Practical Step-by-Step Dual-Subtitle Routine</h2>
+            <h2 id="sec-3">A Practical Step-by-Step Dual-Subtitle Routine</h2>
             <p>Passive viewing with dual subtitles gives moderate gains. An active routine doubles or triples them. Here is a 30-minute session structure used by polyglots who reach conversational fluency in under a year:</p>
             <ol>
                 <li><strong>First pass — flow viewing (10 min).</strong> Watch a 10-minute segment without stopping. Focus on understanding the story. Let your brain encounter new words naturally. Do not pause.</li>
@@ -171,7 +251,7 @@
             </ol>
             <p>Consistency is everything. 30 minutes daily beats a 3-hour weekend marathon — your brain consolidates language during sleep each night, so daily short sessions outperform irregular long ones.</p>
 
-            <h2>Top Tools for Dual Subtitles in 2026</h2>
+            <h2 id="sec-4">Top Tools for Dual Subtitles in 2026</h2>
 
             <div class="tool-item">
                 <h4><strong>Language Reactor (formerly Language Learning with Netflix)</strong></h4>
@@ -190,10 +270,11 @@
 
             <div class="tool-item">
                 <h4><strong>Live Subtitles (Windows app)</strong></h4>
-                <p>If you watch videos through any Windows application — a browser, a downloaded file in VLC, a Zoom call, a local stream — <strong>Live Subtitles</strong> overlays real-time speech-to-text captions directly on your screen with optional live translation into 50+ languages. Unlike browser extensions, it works on <em>any</em> audio source: Netflix in the browser, a locally downloaded movie file, a YouTube stream, even a live podcast. The captions are a floating window you can resize and reposition, making it easy to read alongside the video. You can <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank">download Live Subtitles from the Microsoft Store</a> and use it immediately without configuration — it listens to your system audio and generates subtitles in seconds. It pairs especially well with content that has no official subtitles at all, such as foreign-language podcasts or live streams.</p>
+                <p>If you watch videos through any Windows application — a browser, a downloaded file in VLC, a Zoom call, a local stream — <strong>Live Subtitles</strong> overlays real-time speech-to-text captions directly on your screen with optional live translation into 50+ languages. Unlike browser extensions, it works on <em>any</em> audio source: Netflix in the browser, a locally downloaded movie file, a YouTube stream, even a live podcast. The captions are a floating window you can resize and reposition, making it easy to read alongside the video. You can <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div> and use it immediately without configuration — it listens to your system audio and generates subtitles in seconds. It pairs especially well with content that has no official subtitles at all, such as foreign-language podcasts or live streams.</p>
             </div>
 
-            <h2>How to Use Live Subtitles Alongside Your Target-Language Content</h2>
+            <h2 id="sec-5">How to Use Live Subtitles Alongside Your Target-Language Content</h2>
             <p>Live Subtitles complements dedicated dual-subtitle tools by covering the gaps they cannot reach. Here is how to combine them effectively:</p>
             <ul>
                 <li>Open your video in any player. Start <strong>Live Subtitles</strong> and set the translation target to your native language.</li>
@@ -203,26 +284,26 @@
             </ul>
             <p>The practical benefit: you are no longer limited to Netflix or YouTube. Any foreign film from a direct download, any foreign-language lecture on a university portal, any live event stream becomes a dual-subtitle learning session. See also our guide on <a href="article-2.html">setting up real-time subtitles for any video</a> for a more technical walkthrough.</p>
 
-            <h2>The Most Common Mistakes — and How to Avoid Them</h2>
+            <h2 id="sec-6">The Most Common Mistakes — and How to Avoid Them</h2>
             <p>Dual subtitles are powerful, but certain habits undermine the method entirely:</p>
 
             <div style="background: rgba(255,80,80,0.07); border-left: 4px solid #ff5050; padding: 1.1rem 1.4rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
-                <strong style="color:#ff7070;">Mistake 1 — Reading only the native-language line.</strong> If your eyes jump straight to the translation every time, you are getting story comprehension but zero language acquisition. Force yourself to read the target-language line first for at least the first viewing pass.
+                <strong style="color:#e03131;">Mistake 1 — Reading only the native-language line.</strong> If your eyes jump straight to the translation every time, you are getting story comprehension but zero language acquisition. Force yourself to read the target-language line first for at least the first viewing pass.
             </div>
 
             <div style="background: rgba(255,80,80,0.07); border-left: 4px solid #ff5050; padding: 1.1rem 1.4rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
-                <strong style="color:#ff7070;">Mistake 2 — Watching content that is too easy.</strong> If you understand every sentence without glancing at the translation, you are not encountering new language. Move up a difficulty level until you need the translation roughly 20–30% of the time.
+                <strong style="color:#e03131;">Mistake 2 — Watching content that is too easy.</strong> If you understand every sentence without glancing at the translation, you are not encountering new language. Move up a difficulty level until you need the translation roughly 20–30% of the time.
             </div>
 
             <div style="background: rgba(255,80,80,0.07); border-left: 4px solid #ff5050; padding: 1.1rem 1.4rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
-                <strong style="color:#ff7070;">Mistake 3 — Never speaking.</strong> Watching is receptive practice only. Without output — shadowing, writing, or conversation — your speaking ability lags far behind your comprehension. Use the shadowing step described in the routine above. For more on avoiding passive-only traps, read our article on <a href="article-6.html">mistakes to avoid when learning languages through videos</a>.
+                <strong style="color:#e03131;">Mistake 3 — Never speaking.</strong> Watching is receptive practice only. Without output — shadowing, writing, or conversation — your speaking ability lags far behind your comprehension. Use the shadowing step described in the routine above. For more on avoiding passive-only traps, read our article on <a href="article-6.html">mistakes to avoid when learning languages through videos</a>.
             </div>
 
             <div style="background: rgba(255,80,80,0.07); border-left: 4px solid #ff5050; padding: 1.1rem 1.4rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
-                <strong style="color:#ff7070;">Mistake 4 — Ignoring pronunciation while reading.</strong> Dual subtitles show you spelling, but the audio tells you how the word actually sounds. Many learners learn a written word silently and later discover they have been mispronouncing it for months. Always listen for the audio match even when you already understood the word.
+                <strong style="color:#e03131;">Mistake 4 — Ignoring pronunciation while reading.</strong> Dual subtitles show you spelling, but the audio tells you how the word actually sounds. Many learners learn a written word silently and later discover they have been mispronouncing it for months. Always listen for the audio match even when you already understood the word.
             </div>
 
-            <h2>Measuring Your Progress</h2>
+            <h2 id="sec-7">Measuring Your Progress</h2>
             <p>Language progress is notoriously hard to perceive day-to-day. Use these concrete benchmarks:</p>
             <ul>
                 <li><strong>Translation glance rate:</strong> At the start of a new show, note what percentage of sentences require a glance at the native-language line. Re-measure after 20 episodes. A drop from 40% to 15% is measurable evidence of progress.</li>
@@ -231,7 +312,7 @@
                 <li><strong>Standardized tests:</strong> CEFR-aligned online placement tests (e.g., British Council's free assessment) give you an objective level every 2–3 months. Most consistent dual-subtitle learners report a half-level gain (e.g., A2 to B1) within 3–4 months of daily 30-minute sessions.</li>
             </ul>
 
-            <h2>Dual Subtitles vs. Other Vocabulary Methods: A Quick Comparison</h2>
+            <h2 id="sec-8">Dual Subtitles vs. Other Vocabulary Methods: A Quick Comparison</h2>
             <p>Dual subtitles are not the only tool — but they compare favourably for most learner profiles:</p>
             <ul>
                 <li><strong>Dual subtitles vs. flashcard apps (Anki, Duolingo):</strong> Flashcards offer precise spaced repetition but decontextualised practice. Dual subtitles offer rich context but no scheduling. The winning strategy combines both: use the video to encounter and understand a word, then add it to a flashcard deck for long-term retention.</li>
@@ -239,7 +320,7 @@
                 <li><strong>Dual subtitles vs. monolingual immersion (no subtitles at all):</strong> Pure immersion is most effective for C1+ learners. Below that level, comprehension drops too low to provide enough input. Dual subtitles are the pragmatic bridge that maintains comprehension while immersion ability develops.</li>
             </ul>
 
-            <h2>Frequently Asked Questions</h2>
+            <h2 id="sec-9">Frequently Asked Questions</h2>
 
             <div style="margin: 1.5rem 0;">
                 <p><strong>Q: Can dual subtitles make me dependent on the translation and stop me from thinking in the target language?</strong><br>
@@ -267,21 +348,66 @@
             </div>
 
 <!-- Related Articles -->
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Related Articles</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Related Articles</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                <li><a href="article-1.html" style="color: #00b8ff; text-decoration: none;">How Dual Subtitles Help You Learn Languages Faster</a></li>
-                <li><a href="article-6.html" style="color: #00b8ff; text-decoration: none;">Mistakes to Avoid When Learning Languages Through Videos</a></li>
-                <li><a href="article-10.html" style="color: #00b8ff; text-decoration: none;">Comparing Subtitle Types: What to Choose for Different Levels</a></li>
+                <li><a href="article-1.html" style="color: #0b6ad1; text-decoration: none;">How Dual Subtitles Help You Learn Languages Faster</a></li>
+                <li><a href="article-6.html" style="color: #0b6ad1; text-decoration: none;">Mistakes to Avoid When Learning Languages Through Videos</a></li>
+                <li><a href="article-10.html" style="color: #0b6ad1; text-decoration: none;">Comparing Subtitle Types: What to Choose for Different Levels</a></li>
                 </ul>
             </div>
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Try Live Subtitles for Free</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Get real-time speech recognition and translation as a floating overlay on any Windows app — YouTube, Netflix, VLC, Zoom, and 50+ others. Perfect for dual-subtitle language learning on any content.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Try Live Subtitles for Free</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Get real-time speech recognition and translation as a floating overlay on any Windows app — YouTube, Netflix, VLC, Zoom, and 50+ others. Perfect for dual-subtitle language learning on any content.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">Download free</a>
             </div>
 <!-- CTA -->
 </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html> 

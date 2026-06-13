@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,29 +43,95 @@
     <meta name="twitter:title" content="Сравнение субтитров на родном и целевом языке: что выбрать для разных уровней — Live Subtitles">
     <meta name="twitter:description" content="Какие субтитры выбрать для изучения языка: на родном, целевом или двойные (2 sub)? Сравнение по уровням A1–C2, инструменты и советы. Начните учить язык!">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ru/learning.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 800px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 800px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        h4 { color: #00d4ff; margin-top: 1.5rem; }
-        p, li { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        h4 { color: #0b6ad1; margin-top: 1.5rem; }
+        p, li { color: #2d333b; }
         .lang-switch { margin-bottom: 2rem; }
         .subtitle-type { margin-bottom: 2rem; padding: 1.5rem; border-radius: 8px; border-left: 4px solid; }
-        .native-lang { border-left-color: #51cf66; background: rgba(81,207,102,0.1); }
+        .native-lang { border-left-color: #2f9e44; background: rgba(81,207,102,0.1); }
         .target-lang { border-left-color: #339af0; background: rgba(51,154,240,0.1); }
-        .dual-sub { border-left-color: #ffc107; background: rgba(255,193,7,0.1); }
-        .comparison-table { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
-        .level-recommendation { text-align: center; font-weight: bold; color: #00ff9d; margin: 1rem 0; }
-        .tool-item { margin-bottom: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 6px; border-left: 3px solid #868e96; }
+        .dual-sub { border-left-color: #9a6700; background: rgba(255,193,7,0.1); }
+        .comparison-table { background: rgba(0,0,0,0.02); border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+        .level-recommendation { text-align: center; font-weight: bold; color: #0a7f55; margin: 1rem 0; }
+        .tool-item { margin-bottom: 1rem; padding: 1rem; background: rgba(0,0,0,0.02); border-radius: 6px; border-left: 3px solid #868e96; }
         .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
         .pros { background: rgba(81,207,102,0.1); padding: 1rem; border-radius: 6px; }
         .cons { background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 6px; }
         .icon { font-size: 1.2rem; margin-right: 0.5rem; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <!-- Микроразметка Article -->
     <script type="application/ld+json">
@@ -116,15 +178,31 @@
     <link rel="preload" as="image" href="/articles/img/ru/learning.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Содержание">
+        <div class="toc-inner">
+            <h4>Содержание</h4>
+            <a href="#sec-1">🟢Субтитры на родном языке: комфорт…</a>
+            <a href="#sec-2">🔵Субтитры на целевом языке: шаг к …</a>
+            <a href="#sec-3">🟡Двойные субтитры (2 sub): баланс …</a>
+            <a href="#sec-4">📊Рекомендации по выбору субтитров …</a>
+            <a href="#sec-5">🎯Как менять режим субтитров по мер…</a>
+            <a href="#sec-6">🛠️Инструменты для использования дв…</a>
+            <a href="#sec-7">⚡Двойные субтитры в реальном време…</a>
+            <a href="#sec-8">✅Заключение</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <div class="lang-switch">
-            <a href="/" style="color:#00b8ff;">На главную</a>
+            <a href="/" style="color:#0b6ad1;">На главную</a>
         </div>
         <a href="index.html" class="back-link">← К списку статей</a>
         <h1 class="article-title" itemprop="headline">Сравнение субтитров на родном и целевом языке: что выбрать для разных уровней</h1>
-        <div class="article-date" itemprop="datePublished" content="2024-05-04">4 мая 2024</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Автор: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#00b8ff; text-decoration:none;">Sofia Almeida</a> &middot; руководитель направления прикладной лингвистики, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Обновлено: 12 мая 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2024-05-04">4 мая 2024<span class="reading-time">9 мин чтения</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Автор: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Sofia Almeida</a> &middot; руководитель направления прикладной лингвистики, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Обновлено: 12 мая 2026</div>
         <img class="article-hero" src="/articles/img/ru/learning.webp" alt="Двойные субтитры в видеоуроке для изучения языка" width="1280" height="681" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         <div itemprop="articleBody">
             <p>Изучение иностранных языков через просмотр фильмов и сериалов с субтитрами давно перестало быть нишевым лайфхаком и превратилось в полноценный метод обучения. Но за внешней простотой («включил кино — учу язык») скрывается важный вопрос, который определяет, будет ли просмотр действительно полезен: какие субтитры выбрать — на родном языке, на целевом или оба одновременно (так называемые двойные субтитры, или 2 sub)? Неправильный выбор приводит к двум типичным крайностям. В первом случае человек месяцами смотрит сериалы с субтитрами на родном языке, получает удовольствие, но почти не продвигается в аудировании. Во втором — сразу включает субтитры на целевом языке, ничего не понимает, устаёт и бросает.</p>
@@ -132,7 +210,8 @@
             <p>В этой статье мы разберём преимущества и недостатки каждого формата, привяжем их к конкретным уровням владения языком (от начального до продвинутого), рассмотрим инструменты для двойных субтитров и дадим практические сценарии, как переключаться между режимами по мере прогресса. Если коротко: универсального «лучшего» варианта не существует — есть вариант, оптимальный для вашего текущего уровня и для конкретной цели просмотра.</p>
 
             <div class="subtitle-type native-lang">
-                <h2><span class="icon">🟢</span>Субтитры на родном языке: комфорт для начинающих</h2>
+                <details class="toc-mobile"><summary>Содержание</summary><ol><li><a href="#sec-1">🟢Субтитры на родном языке: комфорт для начинающих</a></li><li><a href="#sec-2">🔵Субтитры на целевом языке: шаг к погружению</a></li><li><a href="#sec-3">🟡Двойные субтитры (2 sub): баланс между пониманием и обучением</a></li><li><a href="#sec-4">📊Рекомендации по выбору субтитров в зависимости от уровня</a></li><li><a href="#sec-5">🎯Как менять режим субтитров по мере прогресса</a></li><li><a href="#sec-6">🛠️Инструменты для использования двойных субтитров</a></li><li><a href="#sec-7">⚡Двойные субтитры в реальном времени: приложение Live Subtitles</a></li><li><a href="#sec-8">✅Заключение</a></li></ol></details>
+            <h2 id="sec-1"><span class="icon">🟢</span>Субтитры на родном языке: комфорт для начинающих</h2>
                 <p>Для тех, кто только начинает изучать язык, субтитры на родном языке обеспечивают понимание сюжета и контекста. Они позволяют сосредоточиться на аудировании, не теряя нить повествования, и снимают тревогу от того, что «ничего не понятно». Это особенно ценно для длинных, насыщенных диалогами сериалов, где потеря сюжетной линии означает потерю интереса.</p>
                 <p>Однако у этого комфорта есть обратная сторона. Когда внизу экрана есть текст на родном языке, мозг почти автоматически переключается на чтение, а не на восприятие иностранной речи. Глаз «съедает» перевод быстрее, чем ухо успевает распознать оригинал, и слушание превращается в фон. Поэтому родные субтитры стоит рассматривать как временную опору, а не как постоянный режим.</p>
 
@@ -157,7 +236,7 @@
             </div>
 
             <div class="subtitle-type target-lang">
-                <h2><span class="icon">🔵</span>Субтитры на целевом языке: шаг к погружению</h2>
+                <h2 id="sec-2"><span class="icon">🔵</span>Субтитры на целевом языке: шаг к погружению</h2>
                 <p>Использование субтитров на изучаемом языке помогает одновременно улучшать навыки чтения и аудирования. Вы слышите фразу и тут же видите, как она записывается, — это закрепляет связь между звучанием и письменной формой, что особенно важно для языков с «нечитаемой» орфографией, например английского или французского.</p>
                 <p>Главное преимущество такого формата — запоминание слов и выражений в естественном контексте, а не в виде сухого списка из учебника. Когда вы встречаете незнакомое выражение в эмоциональной сцене, оно закрепляется куда прочнее. Минус в том, что для новичка экран, полностью заполненный незнакомой лексикой, превращается в стену текста: приходится постоянно ставить на паузу и лезть в словарь, темп просмотра падает, а удовольствие исчезает.</p>
 
@@ -183,7 +262,7 @@
             </div>
 
             <div class="subtitle-type dual-sub">
-                <h2><span class="icon">🟡</span>Двойные субтитры (2 sub): баланс между пониманием и обучением</h2>
+                <h2 id="sec-3"><span class="icon">🟡</span>Двойные субтитры (2 sub): баланс между пониманием и обучением</h2>
                 <p>Двойные субтитры, или 2 sub, — это одновременное отображение текста на родном и целевом языках. Подход настолько востребован, что в разных странах под него сложились собственные поисковые запросы: например, в Индонезии пользователи ищут фильмы с двойными субтитрами по запросу «film sub indo», а в русскоязычной среде — «двойные субтитры» или «2 sub». Идея проста: вы видите оригинальную реплику и её перевод одновременно и можете мгновенно сопоставить их.</p>
                 <p>Такое сопоставление даёт то, чего не дают ни родные, ни целевые субтитры по отдельности. Вы замечаете, как устроена грамматика: где в предложении стоит глагол, как меняется порядок слов, какие идиомы переводятся вовсе не дословно. По сути, двойные субтитры превращают каждую реплику фильма в мини-урок сравнительной лингвистики. Подробнее о том, почему этот формат ускоряет обучение, мы писали в статье <a href="article-1.html">«Как двойные субтитры помогают учить языки быстрее»</a>.</p>
 
@@ -209,7 +288,7 @@
             </div>
 
             <div class="comparison-table">
-                <h2><span class="icon">📊</span>Рекомендации по выбору субтитров в зависимости от уровня</h2>
+                <h2 id="sec-4"><span class="icon">📊</span>Рекомендации по выбору субтитров в зависимости от уровня</h2>
                 <p>Чтобы было проще ориентироваться, мы свели рекомендации в таблицу по уровням владения языком (по шкале CEFR — A1–C2):</p>
                 <table class="table table-dark table-striped">
                     <thead>
@@ -239,7 +318,7 @@
                 </div>
             </div>
 
-            <h2><span class="icon">🎯</span>Как менять режим субтитров по мере прогресса</h2>
+            <h2 id="sec-5"><span class="icon">🎯</span>Как менять режим субтитров по мере прогресса</h2>
             <p>Главная ошибка большинства изучающих — застрять в одном режиме и не пересматривать выбор по мере роста уровня. Субтитры должны эволюционировать вместе с вами. Вот рабочий сценарий поэтапного перехода:</p>
             <ol>
                 <li><strong>Старт (A1–A2):</strong> смотрите знакомый контент (например, фильмы, которые уже видели в дубляже) с субтитрами на родном языке. Цель — привыкнуть к мелодике и ритму речи.</li>
@@ -260,7 +339,7 @@
                 <p>Больше разборов подобных промахов мы собрали в статье <a href="article-6.html">«Ошибки, которых стоит избегать при изучении языка по видео»</a>.</p>
             </div>
 
-            <h2><span class="icon">🛠️</span>Инструменты для использования двойных субтитров</h2>
+            <h2 id="sec-6"><span class="icon">🛠️</span>Инструменты для использования двойных субтитров</h2>
             <p>Существуют различные расширения и платформы, позволяющие использовать двойные субтитры. Ниже — обзор популярных решений и их особенностей:</p>
 
             <div class="tool-item">
@@ -285,7 +364,7 @@
 
             <p>Главное ограничение перечисленных решений в том, что почти все они работают только в браузере и только на YouTube или Netflix. Но язык встречается повсюду: на онлайн-уроках в <a href="/ru/zoom-live-captions.html">Zoom</a>, в стриминговых приложениях, в видеоплеерах и даже в живых разговорах. Именно здесь полезен системный инструмент, не привязанный к одной площадке.</p>
 
-            <h2><span class="icon">⚡</span>Двойные субтитры в реальном времени: приложение Live Subtitles</h2>
+            <h2 id="sec-7"><span class="icon">⚡</span>Двойные субтитры в реальном времени: приложение Live Subtitles</h2>
             <p>Браузерные расширения отлично подходят для готовых видео с уже существующими субтитрами. Но что делать, если вы смотрите вебинар, общаетесь с собеседником по видеосвязи или запускаете контент в приложении, где субтитров просто нет? Здесь на помощь приходит распознавание речи в реальном времени.</p>
             <p>Приложение <strong>Live Subtitles</strong> работает на уровне всей системы: оно слушает звук с любого приложения и формирует субтитры на лету, без привязки к конкретному сайту. Можно вывести оригинал и перевод одновременно — то есть получить полноценные двойные субтитры даже там, где исходных субтитров не существует. Это превращает любой видеоконтент, онлайн-урок или встречу в материал для изучения языка. О том, как настроить такой формат для разных площадок, мы рассказываем в обзоре <a href="article-2.html">сервисов и приложений для двойных субтитров</a>.</p>
 
@@ -293,10 +372,55 @@
                 <p style="text-align:center; margin:0;">💡 <strong>Совет:</strong> для онлайн-уроков и встреч включайте режим двойных субтитров — это позволит одновременно следить за смыслом и подмечать новые конструкции в живой речи преподавателя или собеседника.</p>
             </div>
 
-            <h2><span class="icon">✅</span>Заключение</h2>
+            <h2 id="sec-8"><span class="icon">✅</span>Заключение</h2>
             <p>Выбор типа субтитров зависит от вашего уровня владения языком и целей конкретного просмотра. Субтитры на родном языке подходят для начинающих, двойные субтитры (2 sub) — для тех, кто хочет углубить знания и сравнить языковые структуры, а субтитры на целевом языке — для продвинутых изучающих, стремящихся к полному погружению. Самое важное — не застревать в одном режиме, а менять его по мере роста уровня и сочетать просмотр с активными приёмами: повтором фраз и работой над лексикой.</p>
             <p>Правильно подобранный формат субтитров превращает обычный просмотр кино в эффективную тренировку, а инструменты вроде приложения Live Subtitles делают двойные субтитры доступными буквально в любом приложении, а не только в браузере.</p>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Живые субтитры для любого приложения</h3>
+                <div class="explore-cols"><div><h5>Встречи и звонки</h5><a href="/ru/zoom-live-captions.html">Zoom</a><a href="/ru/teams-live-captions.html">Microsoft Teams</a><a href="/ru/google-meet-live-captions.html">Google Meet</a><a href="/ru/webex-live-captions.html">Webex</a><a href="/ru/skype-live-captions.html">Skype</a><a href="/ru/slack-live-captions.html">Slack</a><a href="/ru/whatsapp-live-translation.html">WhatsApp</a><a href="/ru/telegram-subtitles.html">Telegram</a></div><div><h5>Стриминг и соцсети</h5><a href="/ru/youtube-dual-subtitles.html">YouTube</a><a href="/ru/netflix-subtitles.html">Netflix</a><a href="/ru/twitch-live-captions.html">Twitch</a><a href="/ru/discord-live-captions.html">Discord</a><a href="/ru/tiktok-live-captions.html">TikTok</a><a href="/ru/instagram-live-captions.html">Instagram</a><a href="/ru/facebook-live-subtitles.html">Facebook</a><a href="/ru/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Игры и креаторы</h5><a href="/ru/obs-subtitles.html">OBS</a><a href="/ru/game-mode-subtitles.html">Game Mode</a><a href="/ru/steam-subtitles.html">Steam</a><a href="/ru/restream-subtitles.html">Restream</a><a href="/ru/vimeo-subtitles.html">Vimeo</a><a href="/ru/vlc-subtitles.html">VLC</a></div><div><h5>Учёба и работа</h5><a href="/ru/coursera-subtitles.html">Coursera</a><a href="/ru/udemy-live-captions.html">Udemy</a><a href="/ru/google-classroom-subtitles.html">Google Classroom</a><a href="/ru/linkedin-live-captions.html">LinkedIn</a><a href="/ru/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ru/" style="font-weight:600;text-decoration:none;">На главную Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Читайте также</h4>
+            <a class="s-item" href="article-1.html">Как двойные субтитры помогают учить языки быстрее</a>
+            <a class="s-item" href="article-2.html">Почему субтитры важны для изучения иностранных языков</a>
+            <a class="s-item" href="article-3.html">Как регулярный просмотр фильмов на иностранном языке улучш…</a>
+            <a class="s-item" href="article-4.html">Почему субтитры полезны даже для носителей языка</a>
+            <a class="s-item" href="article-5.html">ТОП-10 фильмов с двойными субтитрами для изучения английск…</a>
+            <a class="s-item" href="article-6.html">Ошибки, которых стоит избегать при изучении языка через ви…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Живые субтитры для любого приложения.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Скачать бесплатно</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Наверх" title="Наверх">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ru/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html> 

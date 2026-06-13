@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="Sottotitoli per streamer nel 2026: workflow OBS, Twitch, YouTube Live">
     <meta name="twitter:description" content="Sottotitoli per streamer nel 2026: aggiungi CC live su Twitch, YouTube e OBS senza rompere il layout. Workflow, confronto strumenti e checklist pratica.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/it/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,35 @@
     <link rel="preload" as="image" href="/articles/img/it/games.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Indice">
+        <div class="toc-inner">
+            <h4>Indice</h4>
+            <a href="#sec-1">Tre sorgenti audio, tre destinazio…</a>
+            <a href="#sec-2">Confronto dei sottotitoli per stre…</a>
+            <a href="#sec-3">Come scegliere in base al tipo di …</a>
+            <a href="#sec-4">Workflow OBS passo per passo</a>
+            <a href="#sec-5">Checklist di setup pre-stream (10 …</a>
+            <a href="#sec-6">Errori comuni nella sottotitolazio…</a>
+            <a href="#sec-7">FAQ</a>
+            <a href="#sec-8">Riferimenti</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Torna agli articoli</a>
         <h1 class="article-title" itemprop="headline">Sottotitoli per streamer nel 2026: workflow OBS, Twitch, YouTube Live</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 maggio 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Autore: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingegnere overlay gaming, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Aggiornato: 28 maggio 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 maggio 2026<span class="reading-time">9 min di lettura</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Autore: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingegnere overlay gaming, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Aggiornato: 28 maggio 2026</div>
         <img class="article-hero" src="/articles/img/it/games.webp" alt="Sottotitoli live sovrapposti a una configurazione di stream Twitch" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>I <strong>sottotitoli per streamer</strong> sono un problema completamente diverso dai sottotitoli per le riunioni. In una call hai una sola sorgente audio pulita e un solo posto in cui mostrare il testo. In diretta, invece, gestisci tre sorgenti audio (l'audio del gioco, il microfono e l'audio di sistema), tre possibili destinazioni dei sottotitoli (overlay dentro lo stream, CC nativo della piattaforma e versione sul VOD) e il peggior modo di fallire possibile: sottotitoli che ritardano e rovinano i tuoi tempi comici o il momento d'azione. Scegli il workflow sbagliato e il layout dello stream si rompe esattamente nel momento più visibile. Questa guida ti aiuta a scegliere la combinazione giusta di sorgente audio, strumento e posizione, con una checklist pratica per andare in diretta sapendo che i sottotitoli reggeranno.</p>
 
-            <h2>Tre sorgenti audio, tre destinazioni di sottotitoli</h2>
+            <details class="toc-mobile"><summary>Indice</summary><ol><li><a href="#sec-1">Tre sorgenti audio, tre destinazioni di sottotitoli</a></li><li><a href="#sec-2">Confronto dei sottotitoli per streamer nel 2026</a></li><li><a href="#sec-3">Come scegliere in base al tipo di stream</a></li><li><a href="#sec-4">Workflow OBS passo per passo</a></li><li><a href="#sec-5">Checklist di setup pre-stream (10 minuti)</a></li><li><a href="#sec-6">Errori comuni nella sottotitolazione per streamer</a></li><li><a href="#sec-7">FAQ</a></li><li><a href="#sec-8">Riferimenti</a></li></ol></details>
+            <h2 id="sec-1">Tre sorgenti audio, tre destinazioni di sottotitoli</h2>
             <p>I tuoi sottotitoli valgono esattamente quanto la sorgente audio che leggono: se l'audio è sporco o mescolato, nessun modello potrà recuperare. Per questo la prima decisione non riguarda lo strumento, ma cosa gli dai da ascoltare. Le tre opzioni principali sono:</p>
             <ul>
                 <li><strong>Sottotitoli solo microfono:</strong> leggono solo la tua voce, pulita, ignorando l'audio del gioco. È la scelta ideale per stream "talking-head" come Just Chatting, IRL e podcast. Offre la latenza più bassa e la massima accuratezza, perché il modello non deve districare voce, musica ed effetti sonori.</li>
@@ -108,7 +187,7 @@
             </ul>
             <p>La regola pratica: scegli la sorgente più ristretta che copre il tuo contenuto. Più audio fai entrare nel modello, più aumentano latenza ed errori. Se trasmetti soprattutto chiacchierando, parti dal solo microfono e amplia solo quando il contenuto del gioco lo richiede davvero.</p>
 
-            <h2>Confronto dei sottotitoli per streamer nel 2026</h2>
+            <h2 id="sec-2">Confronto dei sottotitoli per streamer nel 2026</h2>
             <p>Ogni piattaforma e strumento mostra i sottotitoli in un punto diverso, e questa differenza è più importante della pura accuratezza. Un sottotitolo bruciato nell'overlay raggiunge ogni spettatore; uno legato al player della piattaforma lo vede solo chi attiva i CC. Ecco il confronto delle opzioni più usate nel 2026:</p>
             <table>
                 <thead>
@@ -128,15 +207,15 @@
             </table>
             <p>Nessuna opzione è "la migliore" in assoluto: i CC nativi sono comodi ma poco controllabili, mentre l'overlay OBS ti dà controllo totale a costo della reversibilità. Molti streamer professionali combinano un overlay sempre visibile con i CC nativi come ridondanza, così chi guarda da mobile o dal VOD non resta mai senza testo.</p>
 
-            <h2>Come scegliere in base al tipo di stream</h2>
+            <h2 id="sec-3">Come scegliere in base al tipo di stream</h2>
             <h3>Streamer Just Chatting / IRL</h3>
             <p>Usa la sottotitolazione solo microfono con un overlay OBS. Qui ciò che fa la differenza è una latenza sotto 1,5 secondi e l'accuratezza sulla tua voce specifica: dopo alcune sessioni di riscaldamento del profilo vocale, lo strumento impara il tuo modo di parlare, gli intercalari e i nomi propri ricorrenti. Il CC nativo di Twitch resta un buon fallback, ma rinunci al controllo dello stile (font, dimensione, contrasto) che invece l'overlay ti garantisce.</p>
             <h3>Streamer di gaming "variety"</h3>
             <p>Esegui i sottotitoli sull'audio di sistema, così anche i dialoghi del gioco vengono trascritti. Blocca il box dei sottotitoli in un angolo che non si sovrapponga al frame della webcam né alle informazioni di gioco essenziali. Testa almeno tre generi diversi prima della diretta: il mix audio varia moltissimo tra un FPS rumoroso e un'avventura narrativa, e uno strumento che funziona benissimo su un titolo può saturarsi su un altro.</p>
             <h3>Audience multilingue / internazionale</h3>
-            <p>Usa un livello di sottotitolazione desktop che supporti la traduzione accanto alla lingua sorgente. Brucia i sottotitoli bilingue in OBS, così gli spettatori di ogni regione li vedono senza dover attivare alcun CC. Per approfondire la parte di traduzione automatica vale la pena leggere la nostra guida su <a href="article-23.html" style="color:#00b8ff;">gli strumenti di traduzione vocale in tempo reale a confronto per caso d'uso</a>.</p>
+            <p>Usa un livello di sottotitolazione desktop che supporti la traduzione accanto alla lingua sorgente. Brucia i sottotitoli bilingue in OBS, così gli spettatori di ogni regione li vedono senza dover attivare alcun CC. Per approfondire la parte di traduzione automatica vale la pena leggere la nostra guida su <a href="article-23.html" style="color:#0b6ad1;">gli strumenti di traduzione vocale in tempo reale a confronto per caso d'uso</a>.</p>
 
-            <h2>Workflow OBS passo per passo</h2>
+            <h2 id="sec-4">Workflow OBS passo per passo</h2>
             <p>OBS è il punto in cui le tre sorgenti audio diventano un'unica diretta sottotitolata. La sequenza che funziona meglio per la maggior parte degli streamer è questa:</p>
             <ol>
                 <li>Apri la finestra di sottotitolazione (ad esempio l'overlay desktop di Live Subtitles) e impostala sulla sorgente audio scelta — microfono o audio di sistema.</li>
@@ -144,9 +223,9 @@
                 <li>Ritaglia la cattura in modo che resti solo la fascia di testo, senza bordi né barra del titolo.</li>
                 <li>Posiziona la fascia in un angolo fisso, blocca la sorgente nella scena e prova un cambio scena per verificare che il sottotitolo non sparisca.</li>
             </ol>
-            <p>Se vuoi una guida dedicata, abbiamo una pagina specifica sui <a href="/it/obs-subtitles.html" style="color:#00b8ff;">sottotitoli in OBS</a> e una sui <a href="/it/twitch-live-captions.html" style="color:#00b8ff;">sottotitoli live su Twitch</a> con gli screenshot dei singoli passaggi.</p>
+            <p>Se vuoi una guida dedicata, abbiamo una pagina specifica sui <a href="/it/obs-subtitles.html" style="color:#0b6ad1;">sottotitoli in OBS</a> e una sui <a href="/it/twitch-live-captions.html" style="color:#0b6ad1;">sottotitoli live su Twitch</a> con gli screenshot dei singoli passaggi.</p>
 
-            <h2>Checklist di setup pre-stream (10 minuti)</h2>
+            <h2 id="sec-5">Checklist di setup pre-stream (10 minuti)</h2>
             <p>Dedica gli ultimi dieci minuti prima del "GO LIVE" a questi controlli: prevengono il 90% dei problemi di sottotitolazione in diretta.</p>
             <ol>
                 <li>Verifica che il microfono e l'audio del gioco siano su tracce OBS separate, così potrai isolarli in caso di problemi.</li>
@@ -156,12 +235,12 @@
                 <li>Controlla il contrasto: testo bianco con bordo nero o sfondo semitrasparente resta leggibile su qualunque scena di gioco.</li>
             </ol>
 
-            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Consiglio</h3>
+            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0a7f55; margin-top: 0;">Consiglio</h3>
                 <p style="margin-bottom: 0;">Salva una scena OBS dedicata "Test sottotitoli" con la sola cattura della fascia di testo su sfondo nero. In 10 secondi verifichi che lo strumento stia trascrivendo prima ancora di passare alle scene di gioco, senza mostrare nulla agli spettatori.</p>
             </div>
 
-            <h2>Errori comuni nella sottotitolazione per streamer</h2>
+            <h2 id="sec-6">Errori comuni nella sottotitolazione per streamer</h2>
             <ul>
                 <li><strong>Sovrapposizione con l'HUD:</strong> proprio nel momento clutch, i sottotitoli coprono la kill feed o la minimappa. Posiziona la fascia di testo fuori dalle zone permanenti dell'HUD di gioco.</li>
                 <li><strong>Deriva di latenza sugli stream lunghi:</strong> dopo oltre 3 ore alcuni sottotitolatori IA accumulano ritardo rispetto all'audio. Riavvia lo strumento ogni 2 ore durante le maratone per riazzerare il buffer.</li>
@@ -169,34 +248,80 @@
                 <li><strong>Contrasto insufficiente:</strong> testo chiaro su scene chiare diventa illeggibile. Aggiungi sempre un bordo o un fondo dietro le lettere.</li>
             </ul>
 
-            <h2>FAQ</h2>
+            <h2 id="sec-7">FAQ</h2>
             <p><strong>Gli spettatori Twitch vedono i sottotitoli automaticamente?</strong><br>Solo se il tuo encoder invia sottotitoli CEA-608/708 E gli spettatori attivano i CC nel player. La maggior parte degli streamer preferisce l'overlay OBS proprio perché i sottotitoli sono sempre visibili, senza azioni da parte di chi guarda.</p>
             <p><strong>I sottotitoli danneggiano le prestazioni dello stream?</strong><br>La sottotitolazione gira su CPU o GPU. Su sistemi moderni il costo è sotto il 5% di CPU; con un budget encoder stretto, usa un modello ASR più piccolo o sposta il carico su una seconda macchina dedicata.</p>
             <p><strong>Posso sottotitolare uno stream in due lingue contemporaneamente?</strong><br>Sì, con un livello desktop che supporti lingua sorgente più lingua di destinazione. Brucia i sottotitoli bilingue in OBS per raggiungere un'audience globale in un colpo solo.</p>
-            <p><strong>Conviene generare i sottotitoli anche per il VOD?</strong><br>Sì. I sottotitoli bruciati nell'overlay restano nella registrazione, ma per la ricerca e l'accessibilità conviene caricare anche una traccia CC separata sul VOD. Per capire la differenza tra trascrizione in tempo reale e in batch, vedi <a href="article-24.html" style="color:#00b8ff;">la guida sulla trascrizione audio in testo</a>.</p>
+            <p><strong>Conviene generare i sottotitoli anche per il VOD?</strong><br>Sì. I sottotitoli bruciati nell'overlay restano nella registrazione, ma per la ricerca e l'accessibilità conviene caricare anche una traccia CC separata sul VOD. Per capire la differenza tra trascrizione in tempo reale e in batch, vedi <a href="article-24.html" style="color:#0b6ad1;">la guida sulla trascrizione audio in testo</a>.</p>
 
-            <h2>Riferimenti</h2>
+            <h2 id="sec-8">Riferimenti</h2>
             <ul>
-                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Twitch — documentazione Closed Captions</a></li>
-                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">OBS Studio ufficiale</a></li>
-                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Aiuto YouTube — sottotitoli automatici</a></li>
+                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Twitch — documentazione Closed Captions</a></li>
+                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">OBS Studio ufficiale</a></li>
+                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Aiuto YouTube — sottotitoli automatici</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Letture correlate</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Letture correlate</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">Sottotitoli live 2026: come funzionano i sottotitoli IA e quando usarli</a></li>
-                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">Trascrivere audio in testo 2026: trascrizione in tempo reale vs in batch</a></li>
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">Traduzione vocale 2026: strumenti in tempo reale a confronto per caso d'uso</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">Sottotitoli live 2026: come funzionano i sottotitoli IA e quando usarli</a></li>
+                    <li><a href="article-24.html" style="color: #0b6ad1; text-decoration: none;">Trascrivere audio in testo 2026: trascrizione in tempo reale vs in batch</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">Traduzione vocale 2026: strumenti in tempo reale a confronto per caso d'uso</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Sottotitoli stream che catturano audio gioco E la tua voce</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Sottotitolazione audio sistema più traduzione in tempo reale per streamer — cattura in OBS e lancia uno stream sottotitolato in minuti.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Scarica da Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Sottotitoli stream che catturano audio gioco E la tua voce</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Sottotitolazione audio sistema più traduzione in tempo reale per streamer — cattura in OBS e lancia uno stream sottotitolato in minuti.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Scarica gratis</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 recensioni</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Sottotitoli live per qualsiasi app</h3>
+                <div class="explore-cols"><div><h5>Riunioni e chiamate</h5><a href="/it/zoom-live-captions.html">Zoom</a><a href="/it/teams-live-captions.html">Microsoft Teams</a><a href="/it/google-meet-live-captions.html">Google Meet</a><a href="/it/webex-live-captions.html">Webex</a><a href="/it/skype-live-captions.html">Skype</a><a href="/it/slack-live-captions.html">Slack</a><a href="/it/whatsapp-live-translation.html">WhatsApp</a><a href="/it/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming e social</h5><a href="/it/youtube-dual-subtitles.html">YouTube</a><a href="/it/netflix-subtitles.html">Netflix</a><a href="/it/twitch-live-captions.html">Twitch</a><a href="/it/discord-live-captions.html">Discord</a><a href="/it/tiktok-live-captions.html">TikTok</a><a href="/it/instagram-live-captions.html">Instagram</a><a href="/it/facebook-live-subtitles.html">Facebook</a><a href="/it/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming e creator</h5><a href="/it/obs-subtitles.html">OBS</a><a href="/it/game-mode-subtitles.html">Game Mode</a><a href="/it/steam-subtitles.html">Steam</a><a href="/it/restream-subtitles.html">Restream</a><a href="/it/vimeo-subtitles.html">Vimeo</a><a href="/it/vlc-subtitles.html">VLC</a></div><div><h5>Studio e lavoro</h5><a href="/it/coursera-subtitles.html">Coursera</a><a href="/it/udemy-live-captions.html">Udemy</a><a href="/it/google-classroom-subtitles.html">Google Classroom</a><a href="/it/linkedin-live-captions.html">LinkedIn</a><a href="/it/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/it/" style="font-weight:600;text-decoration:none;">Home di Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Da leggere</h4>
+            <a class="s-item" href="article-1.html">Come i sottotitoli doppi ti aiutano a imparare le lingue p…</a>
+            <a class="s-item" href="article-2.html">Perché i sottotitoli sono importanti per l'apprendimento d…</a>
+            <a class="s-item" href="article-3.html">I migliori contenuti per l'apprendimento delle lingue con …</a>
+            <a class="s-item" href="article-4.html">Perché i sottotitoli sono utili anche per i madrelingua</a>
+            <a class="s-item" href="article-5.html">TOP-10 film con sottotitoli doppi per imparare l&amp;#39;inglese</a>
+            <a class="s-item" href="article-6.html">Errori da evitare nell&amp;#39;apprendimento delle lingue tram…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Sottotitoli live per qualsiasi app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Scarica gratis</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Torna su" title="Torna su">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/it/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

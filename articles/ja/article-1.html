@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="二重字幕が語学学習を加速する理由 — Live Subtitles">
     <meta name="twitter:description" content="二重字幕は語学習得の速度を劇的に高める強力なツールです。認知科学の裏付けに基づいたバイリンガル字幕の詳しい仕組みを解説し、語彙・文法・リスニング力を同時かつ効率的に伸ばすための具体的な実践ステップを順を追って丁寧にご紹介します。Live Subtitlesで今すぐ試してみましょう。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ja/learning.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
         .article-content { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .highlight-box { background: rgba(0,255,157,0.1); border-left: 4px solid #00ff9d; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
-        .info-box { background: rgba(0,184,255,0.1); border-left: 4px solid #00b8ff; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+        .highlight-box { background: rgba(0,255,157,0.1); border-left: 4px solid #0a7f55; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+        .info-box { background: rgba(0,184,255,0.1); border-left: 4px solid #0b6ad1; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
         .warning-box { background: rgba(255,193,7,0.1); border-left: 4px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
-        .back-link { color: #00b8ff; margin-bottom: 2rem; display: inline-block; }
-        h1 { color: #00ff9d; margin-bottom: 2rem; }
-        h2 { color: #00b8ff; margin-top: 2rem; margin-bottom: 1rem; }
-        h3 { color: #ffc107; margin-top: 1.5rem; margin-bottom: 1rem; }
+        .back-link { color: #0b6ad1; margin-bottom: 2rem; display: inline-block; }
+        h1 { color: #0a7f55; margin-bottom: 2rem; }
+        h2 { color: #0b6ad1; margin-top: 2rem; margin-bottom: 1rem; }
+        h3 { color: #9a6700; margin-top: 1.5rem; margin-bottom: 1rem; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -103,19 +165,39 @@
     <link rel="preload" as="image" href="/articles/img/ja/learning.webp">
 </head>
 <body>
-    <div class="container article-content">
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目次">
+        <div class="toc-inner">
+            <h4>目次</h4>
+            <a href="#sec-1">二重字幕の認知科学的根拠</a>
+            <a href="#sec-2">二重字幕が複数の学習チャネルを活性化する仕組み</a>
+            <a href="#sec-3">二重字幕がもたらす具体的なメリット</a>
+            <a href="#sec-4">二重字幕を効果的に活用するステップバイステップガイド</a>
+            <a href="#sec-5">研究が語ること</a>
+            <a href="#sec-6">二重字幕にまつわる誤解を解く</a>
+            <a href="#sec-7">習熟度レベル別の実践的アドバイス</a>
+            <a href="#sec-8">日常生活への組み込み方</a>
+            <a href="#sec-9">参考文献</a>
+            <a href="#sec-10">まとめ</a>
+            </div>
+    </nav>
+    <main class="article-main">
+    <div class="container article-container">
         <a href="index.html" class="back-link">← 記事に戻る</a>
         
         <h1>二重字幕が語学学習を加速する理由</h1>
-                <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#00b8ff; text-decoration:none;">Sofia Almeida</a> &middot; 応用言語学リード, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026-05-12</div>
+        <div class="article-date"><span class="reading-time" style="margin:0">13 分で読了</span></div>
+                <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Sofia Almeida</a> &middot; 応用言語学リード, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/ja/learning.webp" alt="語学学習のためのビデオレッスンのデュアル字幕" width="1280" height="681" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         
         <p>お気に入りの映画を観ながら、意識的に勉強しているわけでもないのに、新しい語彙が自然と身につき、文法パターンが頭の中に定着し、外国語の音を聞き分ける耳が鍛えられていく——そんな体験を想像してみてください。それこそが<b>二重字幕</b>（デュアル字幕）を使ってコンテンツを視聴したときに起きることです。画面に2行のテキストが同時に表示され、1行は学習したい言語、もう1行はすでに理解できる言語で書かれています。一見すると単なる便利機能のように見えますが、実際には現代の認知科学が支持する最も効果的な語学学習技術のひとつです。</p>
 
         <p>この記事では、二重字幕の科学的根拠を分解し、複数の学習チャネルを同時に活性化させるメカニズムを解説し、あらゆる習熟度レベルで活用できる実践的なロードマップを提供します。</p>
 
-        <h2>二重字幕の認知科学的根拠</h2>
+        <details class="toc-mobile"><summary>目次</summary><ol><li><a href="#sec-1">二重字幕の認知科学的根拠</a></li><li><a href="#sec-2">二重字幕が複数の学習チャネルを活性化する仕組み</a></li><li><a href="#sec-3">二重字幕がもたらす具体的なメリット</a></li><li><a href="#sec-4">二重字幕を効果的に活用するステップバイステップガイド</a></li><li><a href="#sec-5">研究が語ること</a></li><li><a href="#sec-6">二重字幕にまつわる誤解を解く</a></li><li><a href="#sec-7">習熟度レベル別の実践的アドバイス</a></li><li><a href="#sec-8">日常生活への組み込み方</a></li><li><a href="#sec-9">参考文献</a></li><li><a href="#sec-10">まとめ</a></li></ol></details>
+            <h2 id="sec-1">二重字幕の認知科学的根拠</h2>
 
         <h3>デュアルコーディング理論</h3>
         <p>1971年、心理学者アラン・ペイビオは<b>デュアルコーディング理論</b>を提唱しました。この理論によると、人間の認知は2つの異なるが相互接続されたシステムで動いています。言語を処理する言語システムと、映像を処理する非言語システムです。情報が両方のチャネルを通じて同時にエンコードされると、記憶の保持率が劇的に向上します。二重字幕はまさにこの原理を活用しています。聴覚入力（話し言葉のセリフ）、目標言語の視覚・言語入力（L2字幕）、そして母語の視覚・言語入力（L1字幕）を組み合わせることで、脳は1つではなく3つの並行した記憶痕跡を形成し、想起がはるかに確実になります。</p>
@@ -126,7 +208,7 @@
         <h3>「気づき」仮説</h3>
         <p>リチャード・シュミットの<b>気づき仮説</b>はさらに重要な視点を加えます。この仮説によると、習得には言語形式への意識的な注意が必要です。単語が話されるのを聞きながら同時に2言語で書かれているのを見ると、その単語に気づかないわけにはいきません。L1とL2の行を比較し、語順の違いを発見し、似た語（コグネート）を認識するこの不随意な「気づき」が、まさに深い処理と長期記憶への定着を促進するのです。</p>
 
-        <h2>二重字幕が複数の学習チャネルを活性化する仕組み</h2>
+        <h2 id="sec-2">二重字幕が複数の学習チャネルを活性化する仕組み</h2>
 
         <p>従来の学習法はスキルを分離する傾向があります。フラッシュカードアプリは語彙を反復練習し、文法教科書はルールを説明し、リスニング演習は理解力を試します。これに対して二重字幕は、<b>4つの言語スキルを同時に</b>働かせます。</p>
         <ul>
@@ -137,7 +219,7 @@
         </ul>
         <p>このマルチチャネルへの働きかけにより、1時間の二重字幕視聴は、従来の単一演習1時間よりも多くの言語的側面に触れることができます。</p>
 
-        <h2>二重字幕がもたらす具体的なメリット</h2>
+        <h2 id="sec-3">二重字幕がもたらす具体的なメリット</h2>
 
         <h3>語彙習得の加速</h3>
         <p>教育心理学と第二言語習得の研究によると、字幕付きまたはバイリンガル字幕条件を使った学習者は、音声のみや単一チャネルの条件と比べて語彙を習得するのが速いことが示されています。理由はシンプルです。新しい単語が出てきたとき、一時停止して辞書を開き、学習の流れを中断する必要がないのです。翻訳がすぐそこにあるため、意味を吸収してすぐにセリフに注意を戻せます。時間が経つにつれて、最初はL1の行がないと分からなかった単語が、次第に自力で認識できるようになります。</p>
@@ -158,7 +240,7 @@
             <strong>注意：</strong> 二重字幕はあくまでも補助ツールです。目標言語の字幕に意識的に注意を向けながら視聴し、母語の翻訳行はあくまでも「確認用」として使う習慣を意識しましょう。
         </div>
 
-        <h2>二重字幕を効果的に活用するステップバイステップガイド</h2>
+        <h2 id="sec-4">二重字幕を効果的に活用するステップバイステップガイド</h2>
 
         <p>すべての視聴が同等に生産的なわけではありません。受動的な娯楽から能動的な学習へと移行するための体系的なアプローチを紹介します。</p>
 
@@ -180,7 +262,7 @@
         <h3>ステップ6：字幕への依存を段階的に減らす</h3>
         <p>習熟度が上がってきたら、母語の行への依存を少しずつ減らし始めます。目標言語のみの字幕に切り替え、最終的には字幕なしで視聴を試みましょう。自分のレベルを大きく超えた素材に遭遇したときだけ、二重字幕モードに戻ります。</p>
 
-        <h2>研究が語ること</h2>
+        <h2 id="sec-5">研究が語ること</h2>
 
         <p>バイリンガル字幕の言語習得における効果を支持する学術研究が蓄積されています。</p>
         <ul>
@@ -190,7 +272,7 @@
             <li><b>Montero Perez ら（2013年）</b>のメタ分析は、字幕が音声のみの条件よりも一貫してより優れた語彙習得をもたらし、目標言語テキストと翻訳の両方にアクセスできる場合に効果が最も大きいと結論づけています。</li>
         </ul>
 
-        <h2>二重字幕にまつわる誤解を解く</h2>
+        <h2 id="sec-6">二重字幕にまつわる誤解を解く</h2>
 
         <h3>誤解1：「字幕は本当の学習を妨げる松葉杖だ」</h3>
         <p>おそらく最も根強い誤解です。研究は一貫してその逆を示しています。字幕は<b>理解の足場</b>を作り、学習者が本来なら手が届かない素材と関わることを可能にします。重要なのは戦略的に使い、時間をかけて依存度を下げることであって、時期尚早に捨て去ることではありません。</p>
@@ -204,7 +286,7 @@
         <h3>誤解4：「テレビを観るのは本当の勉強じゃない」</h3>
         <p>意味のある文脈的インプットを通じた習得は、第二言語研究で最も支持されている原則のひとつです。二重字幕付きでコンテンツを視聴することは、すべての学習形式の代替ではありませんが、従来の演習が見逃しがちなスキルを育てる<b>非常に効果的な補完手段</b>です。</p>
 
-        <h2>習熟度レベル別の実践的アドバイス</h2>
+        <h2 id="sec-7">習熟度レベル別の実践的アドバイス</h2>
 
         <h3>初級者（A1-A2）</h3>
         <ul>
@@ -230,45 +312,91 @@
             <li>二重字幕を<b>翻訳演習</b>として活用しましょう：母語の行を隠して、確認前に頭の中で翻訳を試みます。</li>
         </ul>
 
-        <h2>日常生活への組み込み方</h2>
+        <h2 id="sec-8">日常生活への組み込み方</h2>
 
         <p>二重字幕学習の最大の利点は、日常のルーティンに自然と溶け込む点にあります。余分な勉強時間を確保する必要はありません——ただ<b>すでに楽しんでいるメディアの消費方法を変えるだけ</b>です。朝のニュース、夜のシリーズ、週末の映画、YouTubeのチュートリアル——どんなコンテンツも語学レッスンになります。</p>
 
-        <p><b>Live Subtitles</b>のようなツールは、これを特に実用的にします。ストリーミングサービスの視聴中・オンライン会議中・ポッドキャストの聴取中など、あらゆる音声ソースに対してリアルタイムの二重字幕を生成します。あらかじめ作成された字幕ファイルに頼ることなく、オンデマンドでバイリンガル字幕を取得できる能力は、継続的で没入型の練習を阻む最後の障壁を取り除いてくれます。<a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Microsoft Store</a>から無料でダウンロードして試してみてください。</p>
+        <p><b>Live Subtitles</b>のようなツールは、これを特に実用的にします。ストリーミングサービスの視聴中・オンライン会議中・ポッドキャストの聴取中など、あらゆる音声ソースに対してリアルタイムの二重字幕を生成します。あらかじめ作成された字幕ファイルに頼ることなく、オンデマンドでバイリンガル字幕を取得できる能力は、継続的で没入型の練習を阻む最後の障壁を取り除いてくれます。<a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">無料ダウンロード</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 件のレビュー</div>から無料でダウンロードして試してみてください。</p>
 
         <div class="highlight-box">
             <strong>専門家のアドバイス：</strong> 学習日記をつけてください。二重字幕を通じて学んだ新しい単語やフレーズを記録し、間隔反復システムで定期的に復習することで、定着率が大幅に向上します。
         </div>
 
-        <h2>参考文献</h2>
+        <h2 id="sec-9">参考文献</h2>
 
         <ul>
-            <li><a href="https://scholar.google.com/scholar?q=Danan+2004+captioning+and+subtitling+language+learning" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Danan (2004)：字幕と言語学習に関する研究概要</a></li>
-            <li><a href="https://scholar.google.com/scholar?q=Bird+Williams+2002+new+words+spoken+and+written+forms" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Bird &amp; Williams (2002)：音声と書き言葉の組み合わせによる単語習得</a></li>
-            <li><a href="https://scholar.google.com/scholar?q=Vanderplank+2010+subtitles+second+language+learning" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Vanderplank (2010)：第二言語学習における字幕の活用</a></li>
-            <li><a href="https://scholar.google.com/scholar?q=Montero+Perez+2013+captioned+video+second+language" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Montero Perez ら (2013)：字幕付き動画と語彙習得</a></li>
+            <li><a href="https://scholar.google.com/scholar?q=Danan+2004+captioning+and+subtitling+language+learning" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Danan (2004)：字幕と言語学習に関する研究概要</a></li>
+            <li><a href="https://scholar.google.com/scholar?q=Bird+Williams+2002+new+words+spoken+and+written+forms" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Bird &amp; Williams (2002)：音声と書き言葉の組み合わせによる単語習得</a></li>
+            <li><a href="https://scholar.google.com/scholar?q=Vanderplank+2010+subtitles+second+language+learning" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Vanderplank (2010)：第二言語学習における字幕の活用</a></li>
+            <li><a href="https://scholar.google.com/scholar?q=Montero+Perez+2013+captioned+video+second+language" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Montero Perez ら (2013)：字幕付き動画と語彙習得</a></li>
         </ul>
 
-        <h2>まとめ</h2>
+        <h2 id="sec-10">まとめ</h2>
 
         <p>二重字幕は近道でも単なるギミックでもありません。人間の脳が自然に言語を処理し保持する方法を活用した、<b>科学的に裏付けられた技術</b>です。聴覚入力・目標言語テキスト・母語による確認を1つの魅力的な体験に組み合わせることで、孤立した学習で何ヶ月もかかるものを、はるかに短い時間に圧縮します。</p>
 
         <p>新しい言語を始めたばかりでも、高度なスキルを磨いている段階でも、二重字幕をメディア消費に取り入れることは、語学学習の旅においてリターンが最も高い投資のひとつです。好きなコンテンツから始め、上で説明したステップバイステップのアプローチに従い、想像以上の速さで理解力が伸びていくのを実感してください。</p>
 
         <!-- Related Articles -->
-        <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-            <h3 style="color: #00b8ff; margin-top: 0;">関連記事</h3>
+        <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+            <h3 style="color: #0b6ad1; margin-top: 0;">関連記事</h3>
             <ul style="list-style: none; padding-left: 0;">
-                <li><a href="article-2.html" style="color: #00b8ff; text-decoration: none;">字幕が語学学習に重要な理由</a></li>
-                <li><a href="article-7.html" style="color: #00b8ff; text-decoration: none;">二重字幕を活用した速習語学学習法</a></li>
-                <li><a href="article-10.html" style="color: #00b8ff; text-decoration: none;">字幕の種類を比較：レベル別の最適な選び方</a></li>
+                <li><a href="article-2.html" style="color: #0b6ad1; text-decoration: none;">字幕が語学学習に重要な理由</a></li>
+                <li><a href="article-7.html" style="color: #0b6ad1; text-decoration: none;">二重字幕を活用した速習語学学習法</a></li>
+                <li><a href="article-10.html" style="color: #0b6ad1; text-decoration: none;">字幕の種類を比較：レベル別の最適な選び方</a></li>
             </ul>
         </div>
         <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-            <h3 style="color: #00ff9d; margin-top: 0;">Live Subtitles を無料で試す</h3>
-            <p style="color: #eee; margin-bottom: 1.5rem;">二重字幕・リアルタイム音声認識・翻訳をあらゆるアプリで。YouTube・Netflix・Zoom など50以上のアプリに対応しています。</p>
-            <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Store からダウンロード</a>
+            <h3 style="color: #0a7f55; margin-top: 0;">Live Subtitles を無料で試す</h3>
+            <p style="color: #2d333b; margin-bottom: 1.5rem;">二重字幕・リアルタイム音声認識・翻訳をあらゆるアプリで。YouTube・Netflix・Zoom など50以上のアプリに対応しています。</p>
+            <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">無料ダウンロード</a>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>あらゆるアプリのライブ字幕</h3>
+                <div class="explore-cols"><div><h5>会議・通話</h5><a href="/ja/zoom-live-captions.html">Zoom</a><a href="/ja/teams-live-captions.html">Microsoft Teams</a><a href="/ja/google-meet-live-captions.html">Google Meet</a><a href="/ja/webex-live-captions.html">Webex</a><a href="/ja/skype-live-captions.html">Skype</a><a href="/ja/slack-live-captions.html">Slack</a><a href="/ja/whatsapp-live-translation.html">WhatsApp</a><a href="/ja/telegram-subtitles.html">Telegram</a></div><div><h5>配信・SNS</h5><a href="/ja/youtube-dual-subtitles.html">YouTube</a><a href="/ja/netflix-subtitles.html">Netflix</a><a href="/ja/twitch-live-captions.html">Twitch</a><a href="/ja/discord-live-captions.html">Discord</a><a href="/ja/tiktok-live-captions.html">TikTok</a><a href="/ja/instagram-live-captions.html">Instagram</a><a href="/ja/facebook-live-subtitles.html">Facebook</a><a href="/ja/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>ゲーム・配信者</h5><a href="/ja/obs-subtitles.html">OBS</a><a href="/ja/game-mode-subtitles.html">Game Mode</a><a href="/ja/steam-subtitles.html">Steam</a><a href="/ja/restream-subtitles.html">Restream</a><a href="/ja/vimeo-subtitles.html">Vimeo</a><a href="/ja/vlc-subtitles.html">VLC</a></div><div><h5>学習・仕事</h5><a href="/ja/coursera-subtitles.html">Coursera</a><a href="/ja/udemy-live-captions.html">Udemy</a><a href="/ja/google-classroom-subtitles.html">Google Classroom</a><a href="/ja/linkedin-live-captions.html">LinkedIn</a><a href="/ja/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ja/" style="font-weight:600;text-decoration:none;">Live Subtitles ホーム →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>あわせて読みたい</h4>
+            <a class="s-item" href="article-2.html">字幕が語学学習にとって重要な理由</a>
+            <a class="s-item" href="article-3.html">字幕を使った言語学習でよくある間違いとその回避法</a>
+            <a class="s-item" href="article-4.html">ネイティブスピーカーにとっても字幕が有用な理由</a>
+            <a class="s-item" href="article-5.html">英語学習のための二重字幕映画TOP-10</a>
+            <a class="s-item" href="article-6.html">二重字幕動画による語学学習で避けるべき間違い</a>
+            <a class="s-item" href="article-7.html">語学習得を加速するための二重字幕の使用方法</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>あらゆるアプリのライブ字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">無料ダウンロード</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="トップへ" title="トップへ">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ja/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

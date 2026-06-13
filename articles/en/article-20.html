@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="Fullscreen Subtitle Overlay Troubleshooting for Games">
     <meta name="twitter:description" content="Fix fullscreen subtitle overlay in games: borderless mode, HDR, overlay collisions, Lock Mode, and a step-by-step recovery checklist. Get stable captions now.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,22 +148,44 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">Why "subtitles don't show in fulls…</a>
+            <a href="#sec-2">Step 1: Verify the game's renderin…</a>
+            <a href="#sec-3">Step 2: Enable Lock Mode to preven…</a>
+            <a href="#sec-4">Step 3: Diagnose the full overlay …</a>
+            <a href="#sec-5">Step 4: Address HDR composition is…</a>
+            <a href="#sec-6">Step 5: Resolve multi-monitor focu…</a>
+            <a href="#sec-7">Per-cause fix reference table</a>
+            <a href="#sec-8">Anti-cheat and intentional overlay…</a>
+            <a href="#sec-9">Why overlay reliability matters fo…</a>
+            <a href="#sec-10">Complete recovery checklist</a>
+            <a href="#sec-11">The 5 questions every bug report n…</a>
+            <a href="#sec-12">Frequently asked questions</a>
+            <a href="#sec-13">Related resources</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Fullscreen Subtitle Overlay Troubleshooting for Games</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">March 5, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">March 5, 2026<span class="reading-time">12 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/games.webp" alt="Live subtitle overlay during a competitive game match" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Nothing breaks competitive focus faster than a subtitle overlay that disappears exactly when a teammate calls a critical position. If your live-caption window is missing, flickering, or unresponsive during gameplay, random settings changes waste precious queue time. This playbook provides a structured, evidence-first diagnosis path that isolates the real root cause — rendering mode, focus ownership, overlay stack conflict, or composition pipeline — so you fix the right thing on the first attempt.</p>
 
-            <h2>Why "subtitles don't show in fullscreen" is almost never a subtitle bug</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">Why "subtitles don't show in fullscreen" is almost never a subtitle bug</a></li><li><a href="#sec-2">Step 1: Verify the game's rendering mode</a></li><li><a href="#sec-3">Step 2: Enable Lock Mode to prevent focus loss</a></li><li><a href="#sec-4">Step 3: Diagnose the full overlay stack</a></li><li><a href="#sec-5">Step 4: Address HDR composition issues</a></li><li><a href="#sec-6">Step 5: Resolve multi-monitor focus issues</a></li><li><a href="#sec-7">Per-cause fix reference table</a></li><li><a href="#sec-8">Anti-cheat and intentional overlay blocks</a></li><li><a href="#sec-9">Why overlay reliability matters for ranked performance</a></li><li><a href="#sec-10">Complete recovery checklist</a></li><li><a href="#sec-11">The 5 questions every bug report needs</a></li><li><a href="#sec-12">Frequently asked questions</a></li><li><a href="#sec-13">Related resources</a></li></ol></details>
+            <h2 id="sec-1">Why "subtitles don't show in fullscreen" is almost never a subtitle bug</h2>
             <p>When a player reports that captions are missing during a session, the instinct is to blame the subtitle engine or microphone capture. In practice, more than 80% of the cases we triage trace back to one of three causes that have nothing to do with the caption pipeline at all: <strong>exclusive swap chain rendering</strong>, <strong>HDR composition path mismatches</strong>, or <strong>third-party overlay collisions</strong>. Until each of those is ruled out, changing subtitle font size or re-authorizing microphone access makes the problem move, not disappear.</p>
             <p>Windows uses a compositor called Desktop Window Manager (DWM) to layer windows on screen. When a game runs in <em>exclusive fullscreen</em>, it bypasses DWM entirely and writes pixels directly to the display adapter. Any application that depends on DWM layering — including the Live Subtitles overlay — becomes invisible, because DWM is not compositing the frame. Switching to <strong>Borderless Fullscreen</strong> hands composition back to DWM and restores the overlay. That is why the very first step in any diagnosis is the game's own display settings, not the subtitle application.</p>
 
-            <h2>Step 1: Verify the game's rendering mode</h2>
+            <h2 id="sec-2">Step 1: Verify the game's rendering mode</h2>
             <p>Before touching any subtitle setting, open the game's graphics or video options. Look for a "Window Mode" or "Display Mode" selector. The three values you typically encounter are:</p>
             <ul>
                 <li><strong>Exclusive Fullscreen (or "Fullscreen"):</strong> bypasses DWM, overlays invisible.</li>
@@ -110,8 +194,8 @@
             </ul>
             <p>Set the game to Borderless Fullscreen. On Windows 11 with an NVIDIA or AMD driver from 2024 or later, the frame-time difference between exclusive and borderless is under 2 ms at 1080p and effectively zero at 1440p. You lose nothing tangible, and the overlay gains full visibility.</p>
 
-            <h2>Step 2: Enable Lock Mode to prevent focus loss</h2>
-            <p>Even in Borderless Fullscreen, a subtitle window that accepts mouse input can steal focus from the game. When focus moves to the subtitle window, the game stops receiving keyboard and mouse events — your character stops moving, abilities fail to fire, and the session is potentially ruined. <a href="article-19.html" style="color:#00b8ff;">Live Subtitles' Game Mode setup</a> includes a dedicated Lock Mode for exactly this scenario.</p>
+            <h2 id="sec-3">Step 2: Enable Lock Mode to prevent focus loss</h2>
+            <p>Even in Borderless Fullscreen, a subtitle window that accepts mouse input can steal focus from the game. When focus moves to the subtitle window, the game stops receiving keyboard and mouse events — your character stops moving, abilities fail to fire, and the session is potentially ruined. <a href="article-19.html" style="color:#0b6ad1;">Live Subtitles' Game Mode setup</a> includes a dedicated Lock Mode for exactly this scenario.</p>
             <p>Activate Lock Mode with <strong>Ctrl+Shift+L</strong>. In Lock Mode, the subtitle window is set to click-through: mouse events pass straight through it to the game window below. The subtitle text continues to update in real time, but the overlay no longer competes for focus. Verify by moving the mouse cursor across the subtitle window during an active match — the game cursor should remain active and no focus shift should occur.</p>
             <div class="checklist">
                 <ul>
@@ -123,7 +207,7 @@
                 </ul>
             </div>
 
-            <h2>Step 3: Diagnose the full overlay stack</h2>
+            <h2 id="sec-4">Step 3: Diagnose the full overlay stack</h2>
             <p>Modern gaming setups layer four to six compositor overlays simultaneously: the game's own HUD, Discord overlay, Steam overlay, GeForce Experience/Shadowplay, Xbox Game Bar, and the subtitle window. Each tool registers a global hook at the Win32 level. When two hooks conflict over z-order or focus ownership, the result is flickering, invisible overlays, or erratic click-through behavior. Isolate the conflict by disabling overlays one at a time.</p>
 
             <h3>Disable the Steam in-game overlay</h3>
@@ -138,7 +222,7 @@
             <h3>Disable GeForce Experience / AMD ReLive overlay</h3>
             <p>GeForce Experience → Settings (gear icon) → General → toggle "In-Game Overlay" off. For AMD Software: Adrenalin Edition, open the overlay hotkey panel and set it to Disabled. Both tools register hardware-level capture hooks that can interrupt DWM composition order.</p>
 
-            <h2>Step 4: Address HDR composition issues</h2>
+            <h2 id="sec-5">Step 4: Address HDR composition issues</h2>
             <p>If your display is running HDR and the subtitle overlay appears washed out, white-on-white, or completely invisible against bright game backgrounds, the problem is tone-mapping. When HDR is active, the OS maps SDR application colors (including the subtitle overlay's background and text) to a brightness range that can make 100% white text invisible on an HDR-bright game frame.</p>
             <p>Fix this in two steps:</p>
             <ol>
@@ -146,11 +230,11 @@
                 <li>In Live Subtitles settings, switch the overlay theme to <strong>High-Contrast Dark</strong> (black background, bright-green or white text). High-contrast themes maintain legibility across the widest range of HDR brightness values.</li>
             </ol>
 
-            <h2>Step 5: Resolve multi-monitor focus issues</h2>
+            <h2 id="sec-6">Step 5: Resolve multi-monitor focus issues</h2>
             <p>On a two-monitor desk with the game on the primary display and the subtitle window docked to the secondary, you may observe subtitles rendering correctly on monitor 2 but the text being occluded by the game on monitor 1. The window is visible — it is on the wrong screen.</p>
             <p>Use the subtitle application's "Pin to display" feature to anchor the overlay to the primary monitor. Then enable Windows' compositor optimization: Settings → System → Display → Graphics → Default graphics settings → toggle "Optimizations for windowed games" on. This setting improves DWM frame latency for borderless windows and prevents Windows from deprioritizing your overlay's repaint during intensive 3D rendering.</p>
 
-            <h2>Per-cause fix reference table</h2>
+            <h2 id="sec-7">Per-cause fix reference table</h2>
             <p>Use this as a quick lookup after you have identified which symptom matches your situation:</p>
             <ul>
                 <li><strong>Overlay completely invisible in fullscreen:</strong> switch to Borderless Fullscreen — exclusive swap chain is the cause.</li>
@@ -161,15 +245,15 @@
                 <li><strong>Overlay visible in menu but vanishes mid-match:</strong> disable Discord and Steam overlays — competing hook is the cause.</li>
             </ul>
 
-            <h2>Anti-cheat and intentional overlay blocks</h2>
+            <h2 id="sec-8">Anti-cheat and intentional overlay blocks</h2>
             <p>A small subset of titles actively block compositor overlays during ranked matches as an anti-cheat measure. Games like certain ranked modes in Valorant, FACEIT-anti-cheat lobbies in CS2, and some battle-royale titles lock the swap chain specifically to prevent screen-reading tools. In these cases, no overlay application — subtitle, FPS counter, or otherwise — can display in exclusive fullscreen. This is by design, not a bug.</p>
             <p>The practical answer: switch to Borderless Fullscreen for that specific title. The performance difference is negligible, the anti-cheat system does not block borderless mode, and your subtitle overlay functions normally. Keep a short text file (or a pinned message in your team's Discord) that lists each title and its required mode. Example entries: "Valorant ranked — Borderless required," "CS2 Premier — works in both modes since 2026-03 patch." That document is more accurate than any troubleshooting forum because it reflects your actual hardware and driver combination.</p>
 
-            <h2>Why overlay reliability matters for ranked performance</h2>
+            <h2 id="sec-9">Why overlay reliability matters for ranked performance</h2>
             <p>A subtitle overlay that works 90% of the time is objectively worse than one that fails completely and predictably. When failure is total, you adapt your communication strategy to compensate. When failure is intermittent, you keep reaching for a callout that is not there. You hesitate, miss the window, and the round is lost. The goal of this troubleshooting process is not "make it work most of the time" — it is "make it deterministic enough that you stop thinking about it and play."</p>
-            <p>If you play competitively with <a href="article-21.html" style="color:#00b8ff;">international squads using Discord voice</a>, a reliable subtitle overlay is not a convenience feature — it is the communication layer that lets players with different native languages compete as a cohesive unit without slowing down for repetition or clarification. Every second spent wondering whether a callout was spoken or missed is a second the enemy team is using. Reliable captions eliminate that uncertainty.</p>
+            <p>If you play competitively with <a href="article-21.html" style="color:#0b6ad1;">international squads using Discord voice</a>, a reliable subtitle overlay is not a convenience feature — it is the communication layer that lets players with different native languages compete as a cohesive unit without slowing down for repetition or clarification. Every second spent wondering whether a callout was spoken or missed is a second the enemy team is using. Reliable captions eliminate that uncertainty.</p>
 
-            <h2>Complete recovery checklist</h2>
+            <h2 id="sec-10">Complete recovery checklist</h2>
             <div class="checklist">
                 <ul>
                     <li>Set game display mode to Borderless Fullscreen and relaunch.</li>
@@ -184,7 +268,7 @@
                 </ul>
             </div>
 
-            <h2>The 5 questions every bug report needs</h2>
+            <h2 id="sec-11">The 5 questions every bug report needs</h2>
             <p>If the issue persists after the checklist, you need a precise bug report to escalate effectively. These five data points eliminate 95% of back-and-forth:</p>
             <ol>
                 <li><strong>Game title and exact patch version</strong> — not "latest," the actual build number visible in the game's main menu.</li>
@@ -195,7 +279,7 @@
             </ol>
             <p>Without these answers, diagnosis is guesswork. With them, root cause is typically clear in under five minutes and a fix can be shipped or recommended on the same day.</p>
 
-            <h2>Frequently asked questions</h2>
+            <h2 id="sec-12">Frequently asked questions</h2>
             <h3>Does switching to Borderless Fullscreen hurt performance?</h3>
             <p>On Windows 11 with driver versions from 2024 onward, the average frame-time overhead is under 1 ms at 1440p and essentially zero at 1080p. Microsoft's "Optimizations for windowed games" feature, introduced in Windows 11 22H2, closes nearly all of the remaining latency gap. For most players, frame rates are identical between exclusive and borderless modes on modern hardware.</p>
 
@@ -208,21 +292,67 @@
             <h3>My overlay is stable in casual modes but flickers in ranked. Why?</h3>
             <p>Some titles apply additional anti-cheat hooks at the transition to ranked mode. Those hooks can force a DWM z-order refresh that interrupts overlays on a fixed interval. Disabling Xbox Game Bar background capture resolves the majority of periodic-flicker reports in ranked modes. If it persists, try disabling GeForce Experience's "In-Game Overlay" as the secondary suspect.</p>
 
-            <h2>Related resources</h2>
+            <h2 id="sec-13">Related resources</h2>
             <ul>
-                <li><a href="/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode subtitles — feature overview</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Game Mode setup guide for competitive play</a></li>
-                <li><a href="article-21.html" style="color:#00b8ff;">Discord voice subtitles for international squads</a></li>
-                <li><a href="article-22.html" style="color:#00b8ff;">Best subtitle overlay settings for FPS and MOBA</a></li>
-                <li><a href="/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord and Twitch subtitles in real time</a></li>
+                <li><a href="/game-mode-subtitles.html" style="color:#0b6ad1;">Game Mode subtitles — feature overview</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">Game Mode setup guide for competitive play</a></li>
+                <li><a href="article-21.html" style="color:#0b6ad1;">Discord voice subtitles for international squads</a></li>
+                <li><a href="article-22.html" style="color:#0b6ad1;">Best subtitle overlay settings for FPS and MOBA</a></li>
+                <li><a href="/discord-twitch-subtitles.html" style="color:#0b6ad1;">Discord and Twitch subtitles in real time</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">One predictable subtitle setup for every session</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Live Subtitles works across games, Discord voice, streams, and meetings — with Lock Mode, borderless support, and high-contrast themes built in. Rated 4.7 stars by 350+ players on the Microsoft Store.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">One predictable subtitle setup for every session</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Live Subtitles works across games, Discord voice, streams, and meetings — with Lock Mode, borderless support, and high-contrast themes built in. Rated 4.7 stars by 350+ players on the Microsoft Store.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="国際スクワッド向けDiscord Voice Chat字幕">
     <meta name="twitter:description" content="国際スクワッド向けのDiscord Voice Chat字幕を最大限に活用するための完全な設定ガイドです。ロックモード・コールアウトテンプレート・KPI管理の実践的な手順を詳しく丁寧に解説し、多言語ゲームチームのコミュニケーション品質を大幅に高めてランクマッチの勝率を上げましょう。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ja/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,18 +148,40 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目次">
+        <div class="toc-inner">
+            <h4>目次</h4>
+            <a href="#sec-1">Discordセッションの基本セットアップ</a>
+            <a href="#sec-2">字幕と相性の良いコールアウト構造</a>
+            <a href="#sec-3">スクワッドオンボーディングチェックリスト</a>
+            <a href="#sec-4">週次で追うべきKPI</a>
+            <a href="#sec-5">アクセントの違いが引き起こす隠れたコスト</a>
+            <a href="#sec-6">字幕レイヤーが解決する4つのコミュニケーション障害</a>
+            <a href="#sec-7">スクワッド共有グロッサリーのテンプレート</a>
+            <a href="#sec-8">新メンバーを15分でオンボーディングする手順</a>
+            <a href="#sec-9">ゲームでは字幕の精度がミーティングより重要な理由</a>
+            <a href="#sec-10">クロスランゲージスクワッドにおけるIGLの役割</a>
+            <a href="#sec-11">ランク夜ごとに記録すべき指標</a>
+            <a href="#sec-12">3週間の規律後にデータはどう変わるか</a>
+            <a href="#sec-13">関連リソース</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 記事に戻る</a>
         <h1 class="article-title" itemprop="headline">国際スクワッド向けDiscord Voice Chat字幕</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ゲーミングオーバーレイ エンジニア, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日<span class="reading-time">8 分で読了</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; ゲーミングオーバーレイ エンジニア, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/ja/games.webp" alt="競技ゲームのマッチ中のライブ字幕オーバーレイ" width="1280" height="771" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>国際スクワッドがラウンドを落とす最大の原因は、コールアウトの解読が間に合わないことにある。問題はボイスの音質だけではない。理解のスピードと一貫性こそが勝敗を分ける。Discord上に字幕レイヤーを導入すれば、「もう一回言って」という無駄なやりとりを減らし、1秒を争う場面での反応速度を大幅に短縮できる。</p>
 
-            <h2>Discordセッションの基本セットアップ</h2>
+            <details class="toc-mobile"><summary>目次</summary><ol><li><a href="#sec-1">Discordセッションの基本セットアップ</a></li><li><a href="#sec-2">字幕と相性の良いコールアウト構造</a></li><li><a href="#sec-3">スクワッドオンボーディングチェックリスト</a></li><li><a href="#sec-4">週次で追うべきKPI</a></li><li><a href="#sec-5">アクセントの違いが引き起こす隠れたコスト</a></li><li><a href="#sec-6">字幕レイヤーが解決する4つのコミュニケーション障害</a></li><li><a href="#sec-7">スクワッド共有グロッサリーのテンプレート</a></li><li><a href="#sec-8">新メンバーを15分でオンボーディングする手順</a></li><li><a href="#sec-9">ゲームでは字幕の精度がミーティングより重要な理由</a></li><li><a href="#sec-10">クロスランゲージスクワッドにおけるIGLの役割</a></li><li><a href="#sec-11">ランク夜ごとに記録すべき指標</a></li><li><a href="#sec-12">3週間の規律後にデータはどう変わるか</a></li><li><a href="#sec-13">関連リソース</a></li></ol></details>
+            <h2 id="sec-1">Discordセッションの基本セットアップ</h2>
             <p>字幕オーバーレイを安定して機能させるには、ゲームに入る前に環境を整えておくことが重要だ。設定を後から変えようとすると、ラウンド中に注意が分散してしまう。</p>
             <ol>
                 <li>ボイスチャンネルに参加する前に「Live Subtitles」アプリのロックモード（ゲームモード）を有効にする。</li>
@@ -106,7 +190,7 @@
                 <li>字幕の表示位置は画面下中央に設定し、背景色とのコントラストを最大化しておく。</li>
             </ol>
 
-            <h2>字幕と相性の良いコールアウト構造</h2>
+            <h2 id="sec-2">字幕と相性の良いコールアウト構造</h2>
             <p>字幕がリアルタイムで表示される以上、発話そのものが読みやすい構造になっていなければ意味がない。長い説明文は字幕でも聞き取りでも等しく処理が重い。</p>
             <ul>
                 <li>短いフォーマットを統一する: <strong>アクション + 場所 + タイミング</strong>。例「B突入、5秒後」。</li>
@@ -115,7 +199,7 @@
                 <li>重要なコールへの確認は「了解」「OK」などワンワードで返す習慣をつける。</li>
             </ul>
 
-            <h2>スクワッドオンボーディングチェックリスト</h2>
+            <h2 id="sec-3">スクワッドオンボーディングチェックリスト</h2>
             <div class="note">
                 <ul>
                     <li>マップ用語20〜30語の共有グロッサリー（用語集）を作成する。</li>
@@ -125,17 +209,17 @@
                 </ul>
             </div>
 
-            <h2>週次で追うべきKPI</h2>
+            <h2 id="sec-4">週次で追うべきKPI</h2>
             <ul>
                 <li>チームメイトがコールアウトの聞き返しを求めた回数（目標: 1試合あたり2回未満）。</li>
                 <li>コールアウトからチームアクションまでの平均遅延時間。</li>
                 <li>ボイスコムの聞き間違いによるミスローテーション回数（目標: 1夜あたり0件）。</li>
             </ul>
 
-            <h2>アクセントの違いが引き起こす隠れたコスト</h2>
+            <h2 id="sec-5">アクセントの違いが引き起こす隠れたコスト</h2>
             <p>3つのタイムゾーンにまたがり、母国語が2言語の6人スクワッドは、メカニカルミスではなく<strong>コールアウト解読の遅延</strong>によって1試合夜あたり2〜3ラウンドを失っている。IGLがネイティブペースで話すとき、第二言語で聞くチームメイトは1フレーズごとに200〜400ミリ秒の追加処理時間を必要とする。30ラウンドの試合で累計すると6〜12秒の反応遅延が積み重なる。ランク戦の勝敗はそれよりも短いマージンで決まる。</p>
 
-            <h2>字幕レイヤーが解決する4つのコミュニケーション障害</h2>
+            <h2 id="sec-6">字幕レイヤーが解決する4つのコミュニケーション障害</h2>
             <ul>
                 <li><strong>アクセント解読の遅延。</strong> 聞きながら読むことで、非ネイティブリスナーの解読時間は30〜50%短縮される。視覚情報が音声と競合するのではなく、補強する役割を果たす。</li>
                 <li><strong>略語の曖昧さ。</strong> 「B2」はCS2では「Bサイト、2名」を意味し、Valorantでは「2秒後にBへローテート」を意味する場合もある。書かれたコールアウトは、略語が自然語と視覚的に区別されるため聴覚的な曖昧さを排除する。</li>
@@ -143,11 +227,11 @@
                 <li><strong>声疲れによる品質低下。</strong> 連日の深夜セッション4時間目、声は荒れる。しかし字幕は常に鮮明なままだ。</li>
             </ul>
 
-            <h2>スクワッド共有グロッサリーのテンプレート</h2>
+            <h2 id="sec-7">スクワッド共有グロッサリーのテンプレート</h2>
             <p>グロッサリーは多言語スクワッドにとって最もレバレッジの高い成果物だ。20〜30行の表をDiscordに1件ピン留めし、シーズン中の中途編集を禁じること。サンプル構成:</p>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
                         <th style="text-align:left; padding:8px;">マップ / 文脈</th>
                         <th style="text-align:left; padding:8px;">用語</th>
                         <th style="text-align:left; padding:8px;">意味（1行）</th>
@@ -163,7 +247,7 @@
             </table>
             <p>重要なのは内容よりも規律だ。「コネクター」と「ミッドホール」という2つの同義語が存在するだけで、グロッサリーゼロの状態よりも多くの試合を失う。</p>
 
-            <h2>新メンバーを15分でオンボーディングする手順</h2>
+            <h2 id="sec-8">新メンバーを15分でオンボーディングする手順</h2>
             <ol>
                 <li>スクリム前にピン留めされたグロッサリーを共有し、一度読むよう求める。</li>
                 <li>スクリムを1試合実施する。新メンバーがリアルタイムで理解できなかったコールアウトをDiscordのリアクション絵文字でタグ付けしていく。</li>
@@ -171,14 +255,14 @@
                 <li>グロッサリーを修正するか、2回目のスクリムを予定する。新メンバーが2回目のスクリムで字幕なしにすべてのコールアウトを解読できたと確認できるまでランク戦への投入を見合わせること。</li>
             </ol>
 
-            <h2>ゲームでは字幕の精度がミーティングより重要な理由</h2>
+            <h2 id="sec-9">ゲームでは字幕の精度がミーティングより重要な理由</h2>
             <p>ビジネスミーティングには冗長性がある: スライド、フォローアップメール、録画トランスクリプト。ランク戦にはそれがない。見逃したコールアウトを巻き戻す手段はない。これにより字幕の許容レイテンシーが、生産性ツールの「十分な品質」（1.5〜2秒）から「知覚不能」（600ミリ秒未満）へと引き上げられる。複数秒の音声をバッファしてからテキストを生成するツールは、最終的な精度がどれだけ高くても、ランク戦のコミュニケーションには使いものにならない。</p>
 
-            <h2>クロスランゲージスクワッドにおけるIGLの役割</h2>
+            <h2 id="sec-10">クロスランゲージスクワッドにおけるIGLの役割</h2>
             <p>ネイティブ英語話者4名とネイティブスペイン語話者2名で構成されるスクワッドでは、IGLは試合中ずっと1つのコール言語にコミットしなければならない。ラウンド中に言語を切り替えること（「rotate B、vamos a B」）は、全リスナーの認知負荷を倍増させる。IGLがバイリンガルであれば、試合開始前に多数派の言語を選択し、それを拘束力のあるルールとして扱うこと。</p>
             <p>日本人プレイヤーが多い環境では日本語統一が最も安定するが、海外チームとの混成スクワッドでは英語コールアウトに字幕を重ねるハイブリッド構成が現実的だ。「Live Subtitles」のリアルタイム翻訳機能を使えば、英語音声を日本語字幕に即時変換して表示することも可能になる。</p>
 
-            <h2>ランク夜ごとに記録すべき指標</h2>
+            <h2 id="sec-11">ランク夜ごとに記録すべき指標</h2>
             <ul>
                 <li><strong>リピートレート:</strong> 1試合あたりの「もう一回」「え?」の回数。目標 &lt; 2回。</li>
                 <li><strong>ミスローテーション率:</strong> 間違った方向へのローテーション実行回数。目標: 1夜あたり0件。</li>
@@ -186,25 +270,71 @@
                 <li><strong>母国語への逸脱:</strong> 非ネイティブ話者が通話中にL1（母国語）へ切り替えた回数。記録するが罰しない。疲労は現実だ。</li>
             </ul>
 
-            <h2>3週間の規律後にデータはどう変わるか</h2>
+            <h2 id="sec-12">3週間の規律後にデータはどう変わるか</h2>
             <p>観測してきたスクワッドの典型的なパターン: 1週目にリピートレートが半減する（グロッサリーが機能している証拠）。2週目にミスローテーションが半減する（語彙がメンタルマップと一致し始める）。3週目にランク勝率が5〜10ポイント改善する（新しいコミュニケーション基準がラウンドをまたいで積み上がる）。字幕レイヤーはこのカーブを加速させる。規律の代替にはならない。</p>
-            <p>重要なのは、このプロセスに特別なハードウェアは不要だという点だ。<a href="article-19.html" style="color:#00b8ff;">ゲームモードの設定ガイド</a>に従って「Live Subtitles」を導入するだけで、Discordのボイスチャットに字幕レイヤーを追加できる。フルスクリーンゲームでのオーバーレイ表示に問題がある場合は、<a href="article-20.html" style="color:#00b8ff;">フルスクリーンオーバーレイのトラブルシューティング</a>を参照してほしい。</p>
+            <p>重要なのは、このプロセスに特別なハードウェアは不要だという点だ。<a href="article-19.html" style="color:#0b6ad1;">ゲームモードの設定ガイド</a>に従って「Live Subtitles」を導入するだけで、Discordのボイスチャットに字幕レイヤーを追加できる。フルスクリーンゲームでのオーバーレイ表示に問題がある場合は、<a href="article-20.html" style="color:#0b6ad1;">フルスクリーンオーバーレイのトラブルシューティング</a>を参照してほしい。</p>
 
-            <h2>関連リソース</h2>
+            <h2 id="sec-13">関連リソース</h2>
             <ul>
-                <li><a href="/ja/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord・Twitch字幕ページ</a></li>
-                <li><a href="/ja/game-mode-subtitles.html" style="color:#00b8ff;">ゲームモード字幕ページ</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">ゲームモード設定ガイド</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">フルスクリーンオーバーレイのトラブルシューティング</a></li>
-                <li><a href="article-17.html" style="color:#00b8ff;">ゲーム中のリアルタイム翻訳字幕</a></li>
+                <li><a href="/ja/discord-twitch-subtitles.html" style="color:#0b6ad1;">Discord・Twitch字幕ページ</a></li>
+                <li><a href="/ja/game-mode-subtitles.html" style="color:#0b6ad1;">ゲームモード字幕ページ</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">ゲームモード設定ガイド</a></li>
+                <li><a href="article-20.html" style="color:#0b6ad1;">フルスクリーンオーバーレイのトラブルシューティング</a></li>
+                <li><a href="article-17.html" style="color:#0b6ad1;">ゲーム中のリアルタイム翻訳字幕</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">チームコミュニケーションを一度標準化する</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Discordに安定した字幕ワークフローを導入すれば、すべての試合日が改善される。「Live Subtitles」はMicrosoft Storeから無料でインストールできる。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Storeからダウンロード</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">チームコミュニケーションを一度標準化する</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Discordに安定した字幕ワークフローを導入すれば、すべての試合日が改善される。「Live Subtitles」はMicrosoft Storeから無料でインストールできる。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">無料ダウンロード</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 件のレビュー</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>あらゆるアプリのライブ字幕</h3>
+                <div class="explore-cols"><div><h5>会議・通話</h5><a href="/ja/zoom-live-captions.html">Zoom</a><a href="/ja/teams-live-captions.html">Microsoft Teams</a><a href="/ja/google-meet-live-captions.html">Google Meet</a><a href="/ja/webex-live-captions.html">Webex</a><a href="/ja/skype-live-captions.html">Skype</a><a href="/ja/slack-live-captions.html">Slack</a><a href="/ja/whatsapp-live-translation.html">WhatsApp</a><a href="/ja/telegram-subtitles.html">Telegram</a></div><div><h5>配信・SNS</h5><a href="/ja/youtube-dual-subtitles.html">YouTube</a><a href="/ja/netflix-subtitles.html">Netflix</a><a href="/ja/twitch-live-captions.html">Twitch</a><a href="/ja/discord-live-captions.html">Discord</a><a href="/ja/tiktok-live-captions.html">TikTok</a><a href="/ja/instagram-live-captions.html">Instagram</a><a href="/ja/facebook-live-subtitles.html">Facebook</a><a href="/ja/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>ゲーム・配信者</h5><a href="/ja/obs-subtitles.html">OBS</a><a href="/ja/game-mode-subtitles.html">Game Mode</a><a href="/ja/steam-subtitles.html">Steam</a><a href="/ja/restream-subtitles.html">Restream</a><a href="/ja/vimeo-subtitles.html">Vimeo</a><a href="/ja/vlc-subtitles.html">VLC</a></div><div><h5>学習・仕事</h5><a href="/ja/coursera-subtitles.html">Coursera</a><a href="/ja/udemy-live-captions.html">Udemy</a><a href="/ja/google-classroom-subtitles.html">Google Classroom</a><a href="/ja/linkedin-live-captions.html">LinkedIn</a><a href="/ja/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ja/" style="font-weight:600;text-decoration:none;">Live Subtitles ホーム →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>あわせて読みたい</h4>
+            <a class="s-item" href="article-1.html">二重字幕が語学学習を加速する理由</a>
+            <a class="s-item" href="article-2.html">字幕が語学学習にとって重要な理由</a>
+            <a class="s-item" href="article-3.html">字幕を使った言語学習でよくある間違いとその回避法</a>
+            <a class="s-item" href="article-4.html">ネイティブスピーカーにとっても字幕が有用な理由</a>
+            <a class="s-item" href="article-5.html">英語学習のための二重字幕映画TOP-10</a>
+            <a class="s-item" href="article-6.html">二重字幕動画による語学学習で避けるべき間違い</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>あらゆるアプリのライブ字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">無料ダウンロード</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="トップへ" title="トップへ">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ja/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

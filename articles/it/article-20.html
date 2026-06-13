@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="Diagnostica dell'overlay sottotitoli fullscreen nei giochi">
     <meta name="twitter:description" content="Sottotitoli che spariscono in fullscreen nei giochi? Guida pratica per diagnosticare overlay, rendering, HDR e conflitti: risolvi in pochi minuti.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/it/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,38 +148,61 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Indice">
+        <div class="toc-inner">
+            <h4>Indice</h4>
+            <a href="#sec-1">Perché "i sottotitoli non compaion…</a>
+            <a href="#sec-2">Passo 1: verifica per prima cosa l…</a>
+            <a href="#sec-3">Passo 2: convalida il comportament…</a>
+            <a href="#sec-4">Passo 3: controlla layout e densit…</a>
+            <a href="#sec-5">Passo 4: allinea il formato di com…</a>
+            <a href="#sec-6">Ordine diagnostico che fa risparmi…</a>
+            <a href="#sec-7">Ricette di correzione per ogni causa</a>
+            <a href="#sec-8">Checklist rapida di ripristino</a>
+            <a href="#sec-9">Le 5 domande da porre in ogni segn…</a>
+            <a href="#sec-10">Quando la cosa giusta da fare è "n…</a>
+            <a href="#sec-11">Quando serve un'escalation</a>
+            <a href="#sec-12">Perché conta per le prestazioni in…</a>
+            <a href="#sec-13">Modelli per documentare i problemi…</a>
+            <a href="#sec-14">Risorse correlate</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Torna agli articoli</a>
         <h1 class="article-title" itemprop="headline">Diagnostica dell'overlay sottotitoli fullscreen nei giochi</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 marzo 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Autore: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingegnere overlay gaming, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Aggiornato: 12 maggio 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 marzo 2026<span class="reading-time">8 min di lettura</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Autore: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingegnere overlay gaming, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Aggiornato: 12 maggio 2026</div>
         <img class="article-hero" src="/articles/img/it/games.webp" alt="Sottotitoli in diretta durante una partita competitiva" width="1280" height="722" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Quando l'overlay dei sottotitoli diventa instabile mentre giochi, applicare correzioni a caso fa solo perdere tempo. Questo manuale operativo propone un ordine di diagnosi preciso per isolare la causa reale: modalità di rendering, modalità di interazione o disallineamento del flusso di lavoro. L'obiettivo non è "farlo funzionare quasi sempre", ma renderlo abbastanza prevedibile da poterlo dimenticare durante la partita.</p>
 
-            <h2>Perché "i sottotitoli non compaiono in fullscreen" è raramente un bug dei sottotitoli</h2>
+            <details class="toc-mobile"><summary>Indice</summary><ol><li><a href="#sec-1">Perché "i sottotitoli non compaiono in fullscreen" è raramente un bug dei sottotitoli</a></li><li><a href="#sec-2">Passo 1: verifica per prima cosa la modalità di rendering</a></li><li><a href="#sec-3">Passo 2: convalida il comportamento della modalità di blocco/gioco</a></li><li><a href="#sec-4">Passo 3: controlla layout e densità dei sottotitoli</a></li><li><a href="#sec-5">Passo 4: allinea il formato di comunicazione del team</a></li><li><a href="#sec-6">Ordine diagnostico che fa risparmiare tempo</a></li><li><a href="#sec-7">Ricette di correzione per ogni causa</a></li><li><a href="#sec-8">Checklist rapida di ripristino</a></li><li><a href="#sec-9">Le 5 domande da porre in ogni segnalazione di bug</a></li><li><a href="#sec-10">Quando la cosa giusta da fare è "non fare nulla"</a></li><li><a href="#sec-11">Quando serve un'escalation</a></li><li><a href="#sec-12">Perché conta per le prestazioni in classificata</a></li><li><a href="#sec-13">Modelli per documentare i problemi ricorrenti</a></li><li><a href="#sec-14">Risorse correlate</a></li></ol></details>
+            <h2 id="sec-1">Perché "i sottotitoli non compaiono in fullscreen" è raramente un bug dei sottotitoli</h2>
             <p>Quando un giocatore segnala che i sottotitoli mancano durante la sessione, l'istinto è incolpare il motore dei sottotitoli. Nella pratica, oltre l'80% dei casi che analizziamo si riconduce a una di tre cause che non hanno nulla a che vedere con la pipeline delle didascalie: <strong>il rendering tramite swap chain esclusiva</strong>, <strong>il percorso di composizione HDR</strong> oppure <strong>i conflitti con overlay di terze parti</strong>. Finché non escludi questi fattori, cambiare le impostazioni dei sottotitoli sposta il problema, non lo elimina.</p>
 
-            <h2>Passo 1: verifica per prima cosa la modalità di rendering</h2>
+            <h2 id="sec-2">Passo 1: verifica per prima cosa la modalità di rendering</h2>
             <p>Prima di toccare le impostazioni dei sottotitoli, controlla la modalità di visualizzazione del gioco. Se sei in <strong>fullscreen esclusivo</strong> e i sottotitoli mancano, passa alla <strong>modalità a schermo intero senza bordi</strong> (Borderless Fullscreen). Questa scelta risolve la maggior parte dei problemi di visibilità degli overlay desktop, perché lascia che sia il compositore di Windows a disegnare la finestra dei sottotitoli sopra il gioco.</p>
 
-            <h2>Passo 2: convalida il comportamento della modalità di blocco/gioco</h2>
+            <h2 id="sec-3">Passo 2: convalida il comportamento della modalità di blocco/gioco</h2>
             <ul>
                 <li>Attiva la modalità di blocco/gioco con <strong>Ctrl+Shift+L</strong>.</li>
                 <li>Verifica che i clic accidentali sulla finestra dei sottotitoli non avvengano più.</li>
                 <li>Verifica che il gioco mantenga il focus durante i movimenti del mouse e nei combattimenti.</li>
             </ul>
-            <p>Se il gioco perde il focus ogni volta che il puntatore tocca l'area dei sottotitoli, quasi sempre la modalità di blocco è disattivata o un altro programma sta intercettando l'input. Per una procedura completa di configurazione consulta la nostra <a href="article-19.html" style="color:#00b8ff;">guida alla configurazione della Modalità Gioco per i titoli competitivi</a>.</p>
+            <p>Se il gioco perde il focus ogni volta che il puntatore tocca l'area dei sottotitoli, quasi sempre la modalità di blocco è disattivata o un altro programma sta intercettando l'input. Per una procedura completa di configurazione consulta la nostra <a href="article-19.html" style="color:#0b6ad1;">guida alla configurazione della Modalità Gioco per i titoli competitivi</a>.</p>
 
-            <h2>Passo 3: controlla layout e densità dei sottotitoli</h2>
+            <h2 id="sec-4">Passo 3: controlla layout e densità dei sottotitoli</h2>
             <p>Non sovraccaricare l'area di testo. Una densità elevata di sottotitoli unita a un posizionamento scadente sembra un bug di visibilità anche quando il rendering funziona perfettamente. Usa meno righe, un contrasto più alto e una posizione stabile nella parte bassa dello schermo, lontana dalla minimappa e dagli indicatori delle abilità.</p>
 
-            <h2>Passo 4: allinea il formato di comunicazione del team</h2>
-            <p>Molti "problemi di sottotitoli" sono in realtà problemi di qualità delle chiamate vocali. Se i compagni usano frasi lunghe e termini incoerenti, l'utilità dei sottotitoli crolla. Standardizza chiamate brevi e un vocabolario di mappa condiviso: "A lungo", "due est", "rotazione mid". Per impostare sottotitoli affidabili nei canali vocali e in streaming guarda <a href="/it/discord-twitch-subtitles.html" style="color:#00b8ff;">Sottotitoli su Discord e Twitch in tempo reale</a>.</p>
+            <h2 id="sec-5">Passo 4: allinea il formato di comunicazione del team</h2>
+            <p>Molti "problemi di sottotitoli" sono in realtà problemi di qualità delle chiamate vocali. Se i compagni usano frasi lunghe e termini incoerenti, l'utilità dei sottotitoli crolla. Standardizza chiamate brevi e un vocabolario di mappa condiviso: "A lungo", "due est", "rotazione mid". Per impostare sottotitoli affidabili nei canali vocali e in streaming guarda <a href="/it/discord-twitch-subtitles.html" style="color:#0b6ad1;">Sottotitoli su Discord e Twitch in tempo reale</a>.</p>
 
-            <h2>Ordine diagnostico che fa risparmiare tempo</h2>
+            <h2 id="sec-6">Ordine diagnostico che fa risparmiare tempo</h2>
             <p>Esegui la diagnosi esattamente in questo ordine e fermati al primo livello che riproduce il problema.</p>
             <ol>
                 <li><strong>Riproduci in un ciclo di 60 secondi.</strong> Avvia il gioco, fai partire una battuta vocale, osserva l'overlay. Se il bug è intermittente, annota i timestamp.</li>
@@ -127,7 +212,7 @@
                 <li><strong>Prova in una finestra non di gioco.</strong> Pronuncia una frase di test mentre guardi un video di YouTube. Se l'overlay funziona lì, il problema è specifico del gioco.</li>
             </ol>
 
-            <h2>Ricette di correzione per ogni causa</h2>
+            <h2 id="sec-7">Ricette di correzione per ogni causa</h2>
 
             <h3>Causa A: swap chain esclusiva</h3>
             <p>Si riconosce quando i sottotitoli funzionano sul desktop e in modalità senza bordi, ma spariscono in fullscreen esclusivo. Soluzione: imposta il gioco in modalità senza bordi. I driver GPU moderni compongono questa modalità in modo quasi identico a quella esclusiva: la differenza di prestazioni è in genere inferiore al 2% e spesso nulla su Windows 11.</p>
@@ -141,7 +226,7 @@
             <h3>Causa D: perdita di focus con più monitor</h3>
             <p>Si riconosce quando i sottotitoli vengono disegnati sul monitor secondario mentre il gioco è sul primario. Soluzione: ancora la finestra dei sottotitoli al monitor principale tramite l'opzione "Fissa allo schermo" dell'applicazione, poi attiva in Windows le "Ottimizzazioni per i giochi in finestra" (Impostazioni &rarr; Sistema &rarr; Schermo &rarr; Grafica &rarr; Impostazioni predefinite).</p>
 
-            <h2>Checklist rapida di ripristino</h2>
+            <h2 id="sec-8">Checklist rapida di ripristino</h2>
             <div class="checklist">
                 <ul>
                     <li>Imposta il gioco in modalità a schermo intero senza bordi.</li>
@@ -152,7 +237,7 @@
                 </ul>
             </div>
 
-            <h2>Le 5 domande da porre in ogni segnalazione di bug</h2>
+            <h2 id="sec-9">Le 5 domande da porre in ogni segnalazione di bug</h2>
             <ol>
                 <li>Titolo del gioco e versione esatta (numero di patch, non "ultima").</li>
                 <li>Modalità di visualizzazione usata durante il bug.</li>
@@ -162,31 +247,77 @@
             </ol>
             <p>Senza queste risposte stai tirando a indovinare. Con esse, la causa è di solito evidente in meno di cinque minuti.</p>
 
-            <h2>Quando la cosa giusta da fare è "non fare nulla"</h2>
+            <h2 id="sec-10">Quando la cosa giusta da fare è "non fare nulla"</h2>
             <p>Un piccolo gruppo di titoli blocca volutamente gli overlay del compositore durante i controlli anti-cheat. È il caso di alcune modalità classificate che bloccano la swap chain per impedire trucchi basati sulla cattura dello schermo. In quei giochi nessuno stack di sottotitoli verrà mostrato in fullscreen esclusivo. La risposta onesta è: usa la modalità senza bordi per quel titolo specifico e accetta il trascurabile compromesso sulle prestazioni.</p>
 
-            <h2>Quando serve un'escalation</h2>
+            <h2 id="sec-11">Quando serve un'escalation</h2>
             <p>Se l'overlay resta nascosto in titoli specifici, documenta il gioco esatto, la modalità API e il percorso di visualizzazione. Questo aiuta a distinguere i vincoli di rendering propri del titolo dai problemi generici di configurazione dei sottotitoli, evitando di rifare gli stessi test a ogni partita.</p>
 
-            <h2>Perché conta per le prestazioni in classificata</h2>
+            <h2 id="sec-12">Perché conta per le prestazioni in classificata</h2>
             <p>Un overlay traballante che funziona il 90% delle volte è peggiore di uno che fallisce sempre. Con un guasto costante ti adatti; con un guasto intermittente continui a cercare una chiamata che non c'è e perdi il ritmo. Lo scopo della diagnosi non è "farlo funzionare quasi sempre", ma renderlo abbastanza prevedibile da smettere di pensarci.</p>
 
-            <h2>Modelli per documentare i problemi ricorrenti</h2>
-            <p>Tieni un breve file in Markdown tra i messaggi fissati del tuo Discord. Due colonne: <em>Titolo</em> e <em>Vincolo noto</em>. Esempi di righe: "Valorant &mdash; l'overlay richiede la modalità senza bordi", "CS2 &mdash; funziona in entrambe le modalità dopo la patch di marzo 2026". Questo file vale più di qualsiasi wiki di assistenza, perché è la verità empirica del tuo team. Se cerchi un punto di partenza per ottimizzare le impostazioni, parti dalla nostra <a href="/it/game-mode-subtitles.html" style="color:#00b8ff;">pagina sui sottotitoli in Modalità Gioco</a>.</p>
+            <h2 id="sec-13">Modelli per documentare i problemi ricorrenti</h2>
+            <p>Tieni un breve file in Markdown tra i messaggi fissati del tuo Discord. Due colonne: <em>Titolo</em> e <em>Vincolo noto</em>. Esempi di righe: "Valorant &mdash; l'overlay richiede la modalità senza bordi", "CS2 &mdash; funziona in entrambe le modalità dopo la patch di marzo 2026". Questo file vale più di qualsiasi wiki di assistenza, perché è la verità empirica del tuo team. Se cerchi un punto di partenza per ottimizzare le impostazioni, parti dalla nostra <a href="/it/game-mode-subtitles.html" style="color:#0b6ad1;">pagina sui sottotitoli in Modalità Gioco</a>.</p>
 
-            <h2>Risorse correlate</h2>
+            <h2 id="sec-14">Risorse correlate</h2>
             <ul>
-                <li><a href="article-19.html" style="color:#00b8ff;">Guida alla configurazione della Modalità Gioco per i titoli competitivi</a></li>
-                <li><a href="article-21.html" style="color:#00b8ff;">Sottotitoli nella chat vocale di Discord per squad internazionali</a></li>
-                <li><a href="/it/zoom-live-captions.html" style="color:#00b8ff;">Sottotitoli in tempo reale su Zoom</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">Guida alla configurazione della Modalità Gioco per i titoli competitivi</a></li>
+                <li><a href="article-21.html" style="color:#0b6ad1;">Sottotitoli nella chat vocale di Discord per squad internazionali</a></li>
+                <li><a href="/it/zoom-live-captions.html" style="color:#0b6ad1;">Sottotitoli in tempo reale su Zoom</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Stabilizza il tuo flusso di lavoro con gli overlay</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Usa un'unica configurazione di sottotitoli prevedibile per giochi, chat e streaming con l'app Live Subtitles.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Scarica da Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Stabilizza il tuo flusso di lavoro con gli overlay</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Usa un'unica configurazione di sottotitoli prevedibile per giochi, chat e streaming con l'app Live Subtitles.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Scarica gratis</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 recensioni</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Sottotitoli live per qualsiasi app</h3>
+                <div class="explore-cols"><div><h5>Riunioni e chiamate</h5><a href="/it/zoom-live-captions.html">Zoom</a><a href="/it/teams-live-captions.html">Microsoft Teams</a><a href="/it/google-meet-live-captions.html">Google Meet</a><a href="/it/webex-live-captions.html">Webex</a><a href="/it/skype-live-captions.html">Skype</a><a href="/it/slack-live-captions.html">Slack</a><a href="/it/whatsapp-live-translation.html">WhatsApp</a><a href="/it/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming e social</h5><a href="/it/youtube-dual-subtitles.html">YouTube</a><a href="/it/netflix-subtitles.html">Netflix</a><a href="/it/twitch-live-captions.html">Twitch</a><a href="/it/discord-live-captions.html">Discord</a><a href="/it/tiktok-live-captions.html">TikTok</a><a href="/it/instagram-live-captions.html">Instagram</a><a href="/it/facebook-live-subtitles.html">Facebook</a><a href="/it/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming e creator</h5><a href="/it/obs-subtitles.html">OBS</a><a href="/it/game-mode-subtitles.html">Game Mode</a><a href="/it/steam-subtitles.html">Steam</a><a href="/it/restream-subtitles.html">Restream</a><a href="/it/vimeo-subtitles.html">Vimeo</a><a href="/it/vlc-subtitles.html">VLC</a></div><div><h5>Studio e lavoro</h5><a href="/it/coursera-subtitles.html">Coursera</a><a href="/it/udemy-live-captions.html">Udemy</a><a href="/it/google-classroom-subtitles.html">Google Classroom</a><a href="/it/linkedin-live-captions.html">LinkedIn</a><a href="/it/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/it/" style="font-weight:600;text-decoration:none;">Home di Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Da leggere</h4>
+            <a class="s-item" href="article-1.html">Come i sottotitoli doppi ti aiutano a imparare le lingue p…</a>
+            <a class="s-item" href="article-2.html">Perché i sottotitoli sono importanti per l'apprendimento d…</a>
+            <a class="s-item" href="article-3.html">I migliori contenuti per l'apprendimento delle lingue con …</a>
+            <a class="s-item" href="article-4.html">Perché i sottotitoli sono utili anche per i madrelingua</a>
+            <a class="s-item" href="article-5.html">TOP-10 film con sottotitoli doppi per imparare l&amp;#39;inglese</a>
+            <a class="s-item" href="article-6.html">Errori da evitare nell&amp;#39;apprendimento delle lingue tram…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Sottotitoli live per qualsiasi app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Scarica gratis</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Torna su" title="Torna su">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/it/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

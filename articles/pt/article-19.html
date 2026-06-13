@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,16 +43,82 @@
     <meta name="twitter:title" content="Legendas Game Mode para jogos competitivos: guia de configuração 2026">
     <meta name="twitter:description" content="Configure legendas Game Mode estáveis no competitivo: bloqueio, borderless fullscreen e callouts claros. Guia completo 2026 para vencer mais ranqueadas.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/pt/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -85,22 +147,44 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Conteúdo">
+        <div class="toc-inner">
+            <h4>Conteúdo</h4>
+            <a href="#sec-1">Princípio central: estabilidade ac…</a>
+            <a href="#sec-2">Configuração base recomendada</a>
+            <a href="#sec-3">O modelo mental de 3 camadas: rend…</a>
+            <a href="#sec-4">Fluxo de equipe que melhora a qual…</a>
+            <a href="#sec-5">Base por gênero que funciona já no…</a>
+            <a href="#sec-6">Checklist de 90 segundos antes de …</a>
+            <a href="#sec-7">Por que a maioria nunca chega a um…</a>
+            <a href="#sec-8">Limites de visibilidade que você d…</a>
+            <a href="#sec-9">KPIs que vale a pena acompanhar</a>
+            <a href="#sec-10">O que dizem os jogadores depois de…</a>
+            <a href="#sec-11">Caso especial: fazer stream e joga…</a>
+            <a href="#sec-12">Se a partida continua caótica mesm…</a>
+            <a href="#sec-13">Recursos relacionados</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Voltar aos artigos</a>
         <h1 class="article-title" itemprop="headline">Legendas Game Mode para jogos competitivos: guia de configuração 2026</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 de março de 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Autor: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; engenheiro de overlays de games, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Atualizado: 12 maio 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 de março de 2026<span class="reading-time">9 min de leitura</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Autor: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; engenheiro de overlays de games, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Atualizado: 12 maio 2026</div>
         <img class="article-hero" src="/articles/img/pt/games.webp" alt="Legendas ao vivo durante uma partida competitiva" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Em partidas ranqueadas, as equipes raramente perdem porque as legendas são "ruins". Elas perdem quando a comunicação fica instável: interações acidentais com o overlay, callouts rápidos pouco claros e contexto perdido no chat de voz multilíngue. Este guia foca naquilo que realmente decide rounds — uma configuração confiável de <strong>legendas Game Mode</strong> que não muda de comportamento no meio da semana e não rouba o foco do jogo em um momento de clutch.</p>
 
-            <h2>Princípio central: estabilidade acima de ajustes visuais</h2>
+            <details class="toc-mobile"><summary>Conteúdo</summary><ol><li><a href="#sec-1">Princípio central: estabilidade acima de ajustes visuais</a></li><li><a href="#sec-2">Configuração base recomendada</a></li><li><a href="#sec-3">O modelo mental de 3 camadas: renderizar, interagir, comunicar</a></li><li><a href="#sec-4">Fluxo de equipe que melhora a qualidade dos callouts</a></li><li><a href="#sec-5">Base por gênero que funciona já no primeiro dia</a></li><li><a href="#sec-6">Checklist de 90 segundos antes de clicar em jogar</a></li><li><a href="#sec-7">Por que a maioria nunca chega a uma configuração competitiva estável</a></li><li><a href="#sec-8">Limites de visibilidade que você deve comunicar com clareza</a></li><li><a href="#sec-9">KPIs que vale a pena acompanhar</a></li><li><a href="#sec-10">O que dizem os jogadores depois de adotar uma build congelada</a></li><li><a href="#sec-11">Caso especial: fazer stream e jogar ranqueada ao mesmo tempo</a></li><li><a href="#sec-12">Se a partida continua caótica mesmo com as legendas perfeitas</a></li><li><a href="#sec-13">Recursos relacionados</a></li></ol></details>
+            <h2 id="sec-1">Princípio central: estabilidade acima de ajustes visuais</h2>
             <p>O estilo da fonte importa muito menos do que o comportamento de interação. Você pode passar uma hora escolhendo cor e contorno da legenda, mas se o overlay puder capturar o clique do mouse durante uma troca de tiro, todo esse cuidado visual é inútil. Priorize, nesta ordem: comportamento de bloqueio (lock), um hotkey de emergência claro e uma renderização fullscreen previsível. Beleza vem depois da confiabilidade.</p>
             <p>O objetivo de uma legenda competitiva não é "ficar bonita na tela", e sim entregar a informação de voz traduzida ou transcrita sem nunca interferir no controle do jogo. Trate o overlay como uma camada passiva: ele lê e mostra, mas jamais reage ao seu input.</p>
 
-            <h2>Configuração base recomendada</h2>
+            <h2 id="sec-2">Configuração base recomendada</h2>
             <ol>
                 <li>Ative o Lock/Game Mode <strong>antes</strong> de entrar na fila, nunca no meio da partida.</li>
                 <li>Use <strong>Ctrl+Shift+L</strong> como único atalho de emergência para ligar e desligar o bloqueio.</li>
@@ -109,7 +193,7 @@
                 <li>Use um estilo de legenda curto e com alto contraste, pensado para leitura periférica e não para leitura focada.</li>
             </ol>
 
-            <h2>O modelo mental de 3 camadas: renderizar, interagir, comunicar</h2>
+            <h2 id="sec-3">O modelo mental de 3 camadas: renderizar, interagir, comunicar</h2>
             <p>Para diagnosticar o Game Mode rapidamente, separe a pilha do overlay em três camadas independentes. Cada uma falha por um motivo diferente e é corrigida em um lugar diferente. Quando algo dá errado, identifique a camada antes de mexer em qualquer configuração.</p>
 
             <h3>Camada 1: caminho de renderização</h3>
@@ -121,7 +205,7 @@
             <h3>Camada 3: caminho de comunicação</h3>
             <p>Mesmo com renderização perfeita e overlay travado, as legendas falham se os callouts forem desestruturados. O mecanismo de legendas não consegue recuperar um significado que o jogador nunca codificou com clareza. Disciplina de vocabulário no nível do squad transforma um callout barulhento em uma linha de legenda realmente útil.</p>
 
-            <h2>Fluxo de equipe que melhora a qualidade dos callouts</h2>
+            <h2 id="sec-4">Fluxo de equipe que melhora a qualidade dos callouts</h2>
             <h3>Pré-partida</h3>
             <ul>
                 <li>Alinhe o vocabulário-chave de callouts em todo o squad antes do aquecimento.</li>
@@ -143,11 +227,11 @@
                 <li>Fixe um glossário de equipe atualizado no Discord para a próxima sessão.</li>
             </ul>
 
-            <h2>Base por gênero que funciona já no primeiro dia</h2>
+            <h2 id="sec-5">Base por gênero que funciona já no primeiro dia</h2>
             <p>Em vez de reinventar a configuração para cada jogo, parta de um ponto de partida testado por gênero e ajuste só o necessário. A diferença está principalmente na posição da legenda e no tempo de exibição (timeout), porque cada gênero tem um ritmo de combate distinto.</p>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
                         <th style="text-align:left; padding:8px;">Gênero</th>
                         <th style="text-align:left; padding:8px;">Modo de exibição</th>
                         <th style="text-align:left; padding:8px;">Posição da legenda</th>
@@ -162,7 +246,7 @@
                 </tbody>
             </table>
 
-            <h2>Checklist de 90 segundos antes de clicar em jogar</h2>
+            <h2 id="sec-6">Checklist de 90 segundos antes de clicar em jogar</h2>
             <ol>
                 <li>Confirme que o Lock/Game Mode está ATIVADO. O ícone de bloqueio deve aparecer verde na bandeja do sistema.</li>
                 <li>Pressione Ctrl+Shift+L uma vez e observe o overlay piscar rapidamente — isso confirma que o hotkey está vinculado.</li>
@@ -174,7 +258,7 @@
                 <p style="margin:0;"><strong>Aviso:</strong> se qualquer passo falhar, não entre na fila. Corrigir um bug de renderização entre rounds é exatamente o que faz você perder a partida.</p>
             </div>
 
-            <h2>Por que a maioria nunca chega a uma configuração competitiva estável</h2>
+            <h2 id="sec-7">Por que a maioria nunca chega a uma configuração competitiva estável</h2>
             <p>A maior causa de "as legendas são instáveis no ranqueado" não é o mecanismo de legendas. É a deriva de configuração (configuration drift). Os jogadores ajustam opacidade, tamanho da fonte e timeout entre uma sessão e outra, e depois esquecem qual build funcionava. Na próxima noite de ranqueada, metade do overlay se comporta de forma diferente e o squad culpa a ferramenta. Trate a configuração como um artefato congelado: uma vez que uma build competitiva está afinada, ela não deve ser tocada no meio da semana.</p>
 
             <h3>Padrões de deriva e como preveni-los</h3>
@@ -184,10 +268,10 @@
                 <li><strong>O "overlay que anda".</strong> Arrastar o overlay para uma posição nova antes de cada troca de gênero deixa pixels fracionários no monitor errado em setups com várias telas. Escolha uma posição por perfil de jogo e nunca arraste à mão.</li>
             </ul>
 
-            <h2>Limites de visibilidade que você deve comunicar com clareza</h2>
+            <h2 id="sec-8">Limites de visibilidade que você deve comunicar com clareza</h2>
             <p>Alguns caminhos de renderização em fullscreen exclusivo podem ocultar overlays de desktop. Isso é uma limitação do caminho de renderização, e nem sempre um bug do mecanismo de legendas. Para confiabilidade operacional, use borderless fullscreen sempre que possível e deixe esse limite documentado para o squad — assim ninguém perde tempo "consertando" algo que é, na verdade, esperado.</p>
 
-            <h2>KPIs que vale a pena acompanhar</h2>
+            <h2 id="sec-9">KPIs que vale a pena acompanhar</h2>
             <ul>
                 <li><strong>Pedidos de repetição:</strong> quantas vezes alguém pede "repete?" por partida.</li>
                 <li><strong>Latência de callout:</strong> tempo entre o callout e a resposta da equipe.</li>
@@ -195,30 +279,76 @@
                 <li><strong>Qualidade da comunicação em clutch:</strong> pontuação subjetiva atribuída pelo IGL.</li>
             </ul>
 
-            <h2>O que dizem os jogadores depois de adotar uma build congelada</h2>
+            <h2 id="sec-10">O que dizem os jogadores depois de adotar uma build congelada</h2>
             <p>Dados anonimizados de uma stack de CS2 ao longo de uma temporada de ranqueada: a taxa média de "callout repetido" caiu de 4,1 por partida para 1,6 depois que a equipe travou um perfil de legenda por pool de mapas. A melhora não veio de nenhuma mudança de funcionalidade — veio de eliminar a variância de configuração.</p>
 
-            <h2>Caso especial: fazer stream e jogar ranqueada ao mesmo tempo</h2>
+            <h2 id="sec-11">Caso especial: fazer stream e jogar ranqueada ao mesmo tempo</h2>
             <p>Se você faz stream enquanto joga ranqueada, não rode um perfil de legenda separado para a transmissão. Use um único perfil e deixe o OBS capturar o desktop incluindo o quadro de legendas. Dois mecanismos de overlay simultâneos brigam pelo foco de input e reintroduzem exatamente a instabilidade que o Lock Mode foi feito para eliminar.</p>
 
-            <h2>Se a partida continua caótica mesmo com as legendas perfeitas</h2>
-            <p>Então o problema é de comunicação, não de renderização. Releia a seção de fluxo de equipe acima e fixe um glossário de 10 termos. Uma camada de legendas não salva callouts desestruturados; ela só torna os callouts já estruturados mais rápidos de ler. Se você ainda está validando a parte técnica do overlay, comece pelo <a href="article-20.html" style="color:#00b8ff;">playbook de diagnóstico de overlay fullscreen</a> e só depois volte ao trabalho de comunicação.</p>
+            <h2 id="sec-12">Se a partida continua caótica mesmo com as legendas perfeitas</h2>
+            <p>Então o problema é de comunicação, não de renderização. Releia a seção de fluxo de equipe acima e fixe um glossário de 10 termos. Uma camada de legendas não salva callouts desestruturados; ela só torna os callouts já estruturados mais rápidos de ler. Se você ainda está validando a parte técnica do overlay, comece pelo <a href="article-20.html" style="color:#0b6ad1;">playbook de diagnóstico de overlay fullscreen</a> e só depois volte ao trabalho de comunicação.</p>
 
-            <h2>Recursos relacionados</h2>
+            <h2 id="sec-13">Recursos relacionados</h2>
             <ul>
-                <li><a href="/pt/game-mode-subtitles.html" style="color:#00b8ff;">Página de legendas Game Mode</a></li>
-                <li><a href="/pt/discord-twitch-subtitles.html" style="color:#00b8ff;">Legendas do Discord e Twitch em tempo real</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">Playbook de diagnóstico de overlay fullscreen</a></li>
-                <li><a href="article-21.html" style="color:#00b8ff;">Boas práticas de overlay e leitura periférica</a></li>
-                <li><a href="article-18.html" style="color:#00b8ff;">Configuração de legendas para chat de voz</a></li>
+                <li><a href="/pt/game-mode-subtitles.html" style="color:#0b6ad1;">Página de legendas Game Mode</a></li>
+                <li><a href="/pt/discord-twitch-subtitles.html" style="color:#0b6ad1;">Legendas do Discord e Twitch em tempo real</a></li>
+                <li><a href="article-20.html" style="color:#0b6ad1;">Playbook de diagnóstico de overlay fullscreen</a></li>
+                <li><a href="article-21.html" style="color:#0b6ad1;">Boas práticas de overlay e leitura periférica</a></li>
+                <li><a href="article-18.html" style="color:#0b6ad1;">Configuração de legendas para chat de voz</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Teste esse fluxo na sua próxima sessão</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Use um processo consistente de legendas em jogos, chat de voz e streams. O app Live Subtitles entrega legendas em tempo real, com Lock/Game Mode e overlay pass-through prontos para o competitivo.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Baixar na Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Teste esse fluxo na sua próxima sessão</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Use um processo consistente de legendas em jogos, chat de voz e streams. O app Live Subtitles entrega legendas em tempo real, com Lock/Game Mode e overlay pass-through prontos para o competitivo.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Baixar grátis</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 avaliações</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Legendas ao vivo para qualquer app</h3>
+                <div class="explore-cols"><div><h5>Reuniões e chamadas</h5><a href="/pt/zoom-live-captions.html">Zoom</a><a href="/pt/teams-live-captions.html">Microsoft Teams</a><a href="/pt/google-meet-live-captions.html">Google Meet</a><a href="/pt/webex-live-captions.html">Webex</a><a href="/pt/skype-live-captions.html">Skype</a><a href="/pt/slack-live-captions.html">Slack</a><a href="/pt/whatsapp-live-translation.html">WhatsApp</a><a href="/pt/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming e redes</h5><a href="/pt/youtube-dual-subtitles.html">YouTube</a><a href="/pt/netflix-subtitles.html">Netflix</a><a href="/pt/twitch-live-captions.html">Twitch</a><a href="/pt/discord-live-captions.html">Discord</a><a href="/pt/tiktok-live-captions.html">TikTok</a><a href="/pt/instagram-live-captions.html">Instagram</a><a href="/pt/facebook-live-subtitles.html">Facebook</a><a href="/pt/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Jogos e criadores</h5><a href="/pt/obs-subtitles.html">OBS</a><a href="/pt/game-mode-subtitles.html">Game Mode</a><a href="/pt/steam-subtitles.html">Steam</a><a href="/pt/restream-subtitles.html">Restream</a><a href="/pt/vimeo-subtitles.html">Vimeo</a><a href="/pt/vlc-subtitles.html">VLC</a></div><div><h5>Estudo e trabalho</h5><a href="/pt/coursera-subtitles.html">Coursera</a><a href="/pt/udemy-live-captions.html">Udemy</a><a href="/pt/google-classroom-subtitles.html">Google Classroom</a><a href="/pt/linkedin-live-captions.html">LinkedIn</a><a href="/pt/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/pt/" style="font-weight:600;text-decoration:none;">Início do Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Leia também</h4>
+            <a class="s-item" href="article-1.html">Como as legendas duplas ajudam você a aprender idiomas mai…</a>
+            <a class="s-item" href="article-2.html">Por que as legendas são importantes para o aprendizado de …</a>
+            <a class="s-item" href="article-3.html">Como acelerar o aprendizado de idiomas com legendas duplas</a>
+            <a class="s-item" href="article-4.html">Por que as legendas são úteis até mesmo para falantes nati…</a>
+            <a class="s-item" href="article-5.html">TOP-10 filmes com legendas duplas para aprender inglês</a>
+            <a class="s-item" href="article-6.html">Erros a evitar no aprendizado de idiomas através de vídeos…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Legendas ao vivo para qualquer app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Baixar grátis</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/pt/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

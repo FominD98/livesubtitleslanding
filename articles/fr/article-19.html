@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,16 +43,82 @@
     <meta name="twitter:title" content="Sous-titres Game Mode pour jeux compétitifs : guide 2026">
     <meta name="twitter:description" content="Sous-titres Game Mode en compétitif : verrouillez la fenêtre, activez borderless fullscreen et boostez vos callouts. Téléchargez Live Subtitles.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/fr/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -85,21 +147,44 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Sommaire">
+        <div class="toc-inner">
+            <h4>Sommaire</h4>
+            <a href="#sec-1">Principe central : la stabilité av…</a>
+            <a href="#sec-2">Configuration de base recommandée</a>
+            <a href="#sec-3">Pourquoi la plupart des joueurs n'…</a>
+            <a href="#sec-4">Le modèle mental à 3 couches : ren…</a>
+            <a href="#sec-5">Workflow d'équipe qui améliore la …</a>
+            <a href="#sec-6">Réglage de base par genre, opérati…</a>
+            <a href="#sec-7">Checklist d'avant-file (90 seconde…</a>
+            <a href="#sec-8">Schémas de dérive de configuration…</a>
+            <a href="#sec-9">Limites de visibilité à communique…</a>
+            <a href="#sec-10">KPI à suivre</a>
+            <a href="#sec-11">Ce que disent les joueurs classés …</a>
+            <a href="#sec-12">Cas limite : streamer et jouer en …</a>
+            <a href="#sec-13">Si le match reste chaotique alors …</a>
+            <a href="#sec-14">Ressources associées</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Retour aux articles</a>
         <h1 class="article-title" itemprop="headline">Sous-titres Game Mode pour jeux compétitifs : guide 2026</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 mars 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Auteur : <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingénieur overlays gaming, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Mis à jour: 12 mai 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 mars 2026<span class="reading-time">9 min de lecture</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Auteur : <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; ingénieur overlays gaming, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Mis à jour: 12 mai 2026</div>
         <img class="article-hero" src="/articles/img/fr/games.webp" alt="Sous-titres en direct pendant un match compétitif" width="1280" height="762" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Dans les matchs classés, les équipes ne perdent pas parce que les sous-titres seraient « mauvais ». Elles perdent quand la communication devient instable : clics accidentels sur l'overlay, callouts rapides illisibles, contexte manqué dans un chat vocal multilingue. Ce guide se concentre sur une configuration fiable des <strong>sous-titres Game Mode</strong> : un overlay qui reste à sa place, ne vole jamais le focus et transforme la voix de l'équipe en lignes lisibles d'un coup d'œil, même au milieu d'un clutch.</p>
 
-            <h2>Principe central : la stabilité avant les retouches visuelles</h2>
+            <details class="toc-mobile"><summary>Sommaire</summary><ol><li><a href="#sec-1">Principe central : la stabilité avant les retouches visuelles</a></li><li><a href="#sec-2">Configuration de base recommandée</a></li><li><a href="#sec-3">Pourquoi la plupart des joueurs n'atteignent jamais une config compétitive stable</a></li><li><a href="#sec-4">Le modèle mental à 3 couches : rendu, interaction, communication</a></li><li><a href="#sec-5">Workflow d'équipe qui améliore la qualité des callouts</a></li><li><a href="#sec-6">Réglage de base par genre, opérationnel dès le premier jour</a></li><li><a href="#sec-7">Checklist d'avant-file (90 secondes avant de cliquer sur Jouer)</a></li><li><a href="#sec-8">Schémas de dérive de configuration et comment les éviter</a></li><li><a href="#sec-9">Limites de visibilité à communiquer clairement</a></li><li><a href="#sec-10">KPI à suivre</a></li><li><a href="#sec-11">Ce que disent les joueurs classés après être passés à une config figée</a></li><li><a href="#sec-12">Cas limite : streamer et jouer en classé en même temps</a></li><li><a href="#sec-13">Si le match reste chaotique alors que les sous-titres fonctionnent parfaitement</a></li><li><a href="#sec-14">Ressources associées</a></li></ol></details>
+            <h2 id="sec-1">Principe central : la stabilité avant les retouches visuelles</h2>
             <p>Le style de police compte beaucoup moins que le comportement d'interaction. Si l'overlay peut détourner l'attention ou capter un clic dans un moment décisif, le système échoue — quelle que soit la beauté de la typographie. Priorisez trois choses dans cet ordre : le verrouillage (Lock/Game Mode), un hotkey unique et clair, puis un rendu plein écran prévisible. Tout le reste — couleur, taille, ombrage — n'est qu'un réglage cosmétique qui ne doit jamais introduire d'instabilité.</p>
 
-            <h2>Configuration de base recommandée</h2>
+            <h2 id="sec-2">Configuration de base recommandée</h2>
             <p>Voici la base de départ qui fonctionne dès la première session, sans réglage fin préalable :</p>
             <ol>
                 <li>Activez <strong>Lock/Game Mode</strong> avant d'entrer en file d'attente, pas pendant le match.</li>
@@ -109,10 +194,10 @@
                 <li>Utilisez un style court et à fort contraste, pensé pour une lecture périphérique.</li>
             </ol>
 
-            <h2>Pourquoi la plupart des joueurs n'atteignent jamais une config compétitive stable</h2>
+            <h2 id="sec-3">Pourquoi la plupart des joueurs n'atteignent jamais une config compétitive stable</h2>
             <p>La cause numéro un de « mes sous-titres sont peu fiables en classé » n'est presque jamais le moteur de reconnaissance vocale. C'est la <strong>dérive de configuration</strong>. Entre deux sessions, les joueurs ajustent l'opacité, la taille de police et les délais d'affichage, puis oublient quelle combinaison fonctionnait. La soirée classée suivante, la moitié de l'overlay se comporte différemment et l'escouade accuse l'outil. Traitez plutôt la configuration comme un artefact figé : une fois qu'un profil compétitif est calé, on n'y touche plus en milieu de semaine.</p>
 
-            <h2>Le modèle mental à 3 couches : rendu, interaction, communication</h2>
+            <h2 id="sec-4">Le modèle mental à 3 couches : rendu, interaction, communication</h2>
             <p>Pour diagnostiquer le Game Mode rapidement, séparez la pile d'overlay en trois couches indépendantes. Chaque couche échoue pour une raison différente et se corrige à un endroit différent.</p>
 
             <h3>Couche 1 : le chemin de rendu</h3>
@@ -124,7 +209,7 @@
             <h3>Couche 3 : le chemin de communication</h3>
             <p>Même avec un rendu parfait et un overlay verrouillé, les sous-titres échouent si les callouts ne sont pas structurés. Le moteur ne peut pas restituer un sens que le locuteur n'a jamais encodé clairement. La discipline de vocabulaire au niveau de l'escouade transforme un callout bruité en une ligne de sous-titre exploitable.</p>
 
-            <h2>Workflow d'équipe qui améliore la qualité des callouts</h2>
+            <h2 id="sec-5">Workflow d'équipe qui améliore la qualité des callouts</h2>
             <h3>Avant le match</h3>
             <ul>
                 <li>Alignez le vocabulaire de callouts clés dans toute l'escouade.</li>
@@ -146,10 +231,10 @@
                 <li>Épinglez un glossaire d'équipe mis à jour sur Discord.</li>
             </ul>
 
-            <h2>Réglage de base par genre, opérationnel dès le premier jour</h2>
+            <h2 id="sec-6">Réglage de base par genre, opérationnel dès le premier jour</h2>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
                         <th style="text-align:left; padding:8px;">Genre</th>
                         <th style="text-align:left; padding:8px;">Mode d'affichage</th>
                         <th style="text-align:left; padding:8px;">Position des sous-titres</th>
@@ -164,7 +249,7 @@
                 </tbody>
             </table>
 
-            <h2>Checklist d'avant-file (90 secondes avant de cliquer sur Jouer)</h2>
+            <h2 id="sec-7">Checklist d'avant-file (90 secondes avant de cliquer sur Jouer)</h2>
             <ol>
                 <li>Confirmez que Lock/Game Mode est activé. L'icône de verrou doit être verte dans la zone de notification.</li>
                 <li>Pressez Ctrl+Shift+L une fois et observez le bref clignotement de l'overlay : cela confirme que le raccourci est bien lié.</li>
@@ -174,17 +259,17 @@
             </ol>
             <p>Si une seule étape échoue, ne lancez pas la file. Corriger un bug de rendu entre deux rounds, c'est précisément ce qui vous coûte le match.</p>
 
-            <h2>Schémas de dérive de configuration et comment les éviter</h2>
+            <h2 id="sec-8">Schémas de dérive de configuration et comment les éviter</h2>
             <ul>
                 <li><strong>Le « glissement du curseur d'opacité ».</strong> Après chaque patch, on monte l'opacité en invoquant des problèmes de visibilité. Au bout de trois patchs, le sous-titre est un bloc opaque qui recouvre le HUD. Verrouillez l'opacité à 70&nbsp;% et interdisez tout ajustement en cours de saison.</li>
                 <li><strong>Le « nouveau hotkey à chaque réinstallation ».</strong> Les pilotes se mettent à jour, les raccourcis se réinitialisent. Gardez une note d'une ligne en message épinglé Discord : « Ctrl+Shift+L = bascule du verrou de sous-titres ». Revérifiez après chaque mise à jour de fonctionnalités Windows.</li>
                 <li><strong>L'« overlay baladeur ».</strong> Tirer l'overlay vers une nouvelle position avant chaque changement de genre fait fuiter des pixels fractionnaires sur le mauvais écran en configuration multi-moniteurs. Choisissez une position par profil de jeu et ne le déplacez jamais à la main.</li>
             </ul>
 
-            <h2>Limites de visibilité à communiquer clairement</h2>
+            <h2 id="sec-9">Limites de visibilité à communiquer clairement</h2>
             <p>Certains chemins de rendu plein écran exclusif peuvent masquer les overlays de bureau. C'est une contrainte du chemin de rendu, pas forcément un bug du moteur de sous-titres. Pour une fiabilité opérationnelle, privilégiez le borderless fullscreen dès que le titre le permet.</p>
 
-            <h2>KPI à suivre</h2>
+            <h2 id="sec-10">KPI à suivre</h2>
             <ul>
                 <li><strong>Demandes de répétition :</strong> nombre de « tu répètes ? » par match.</li>
                 <li><strong>Latence des callouts :</strong> temps entre l'appel et la réaction de l'équipe.</li>
@@ -192,34 +277,80 @@
                 <li><strong>Qualité de communication en clutch :</strong> score subjectif attribué par l'IGL.</li>
             </ul>
 
-            <h2>Ce que disent les joueurs classés après être passés à une config figée</h2>
+            <h2 id="sec-11">Ce que disent les joueurs classés après être passés à une config figée</h2>
             <p>Données anonymisées d'une stack CS2 sur une saison classée : le taux moyen de « callout à répéter » est tombé de 4,1 à 1,6 par match une fois l'équipe passée à un seul profil de sous-titres par pool de maps. L'amélioration n'est pas venue d'un changement de fonctionnalité — elle est venue de la suppression de la variance de configuration.</p>
 
-            <h2>Cas limite : streamer et jouer en classé en même temps</h2>
+            <h2 id="sec-12">Cas limite : streamer et jouer en classé en même temps</h2>
             <p>Si vous streamez tout en jouant en classé, n'exécutez pas un profil de sous-titres séparé pour le stream. Utilisez un profil unique, puis laissez OBS capturer le bureau, cadre de sous-titres inclus. Deux moteurs d'overlay simultanés se disputent le focus d'entrée et réintroduisent exactement l'instabilité que le Lock Mode est censé éliminer.</p>
 
-            <h2>Si le match reste chaotique alors que les sous-titres fonctionnent parfaitement</h2>
+            <h2 id="sec-13">Si le match reste chaotique alors que les sous-titres fonctionnent parfaitement</h2>
             <p>Le problème vient de la communication, pas du rendu. Relisez la section sur le workflow d'équipe et épinglez un glossaire de 10 termes. Une couche de sous-titres ne peut pas sauver des callouts non structurés ; elle peut seulement rendre ceux qui le sont plus rapides à lire.</p>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 3px solid #00b8ff; border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.8rem 0;">
-                <strong style="color:#00b8ff;">Astuce :</strong> avec l'application <strong>Live Subtitles</strong>, créez un profil par genre, verrouillez l'opacité à 70&nbsp;% et exportez le profil. Vous le réimportez en un clic après chaque mise à jour Windows, ce qui élimine la dérive de configuration à la racine.
+            <div style="background: rgba(0,184,255,0.08); border-left: 3px solid #0b6ad1; border-radius: 6px; padding: 1.2rem 1.5rem; margin: 1.8rem 0;">
+                <strong style="color:#0b6ad1;">Astuce :</strong> avec l'application <strong>Live Subtitles</strong>, créez un profil par genre, verrouillez l'opacité à 70&nbsp;% et exportez le profil. Vous le réimportez en un clic après chaque mise à jour Windows, ce qui élimine la dérive de configuration à la racine.
             </div>
 
-            <h2>Ressources associées</h2>
+            <h2 id="sec-14">Ressources associées</h2>
             <ul>
-                <li><a href="/fr/game-mode-subtitles.html" style="color:#00b8ff;">Page des sous-titres Game Mode</a></li>
-                <li><a href="/fr/discord-twitch-subtitles.html" style="color:#00b8ff;">Sous-titres Discord et Twitch en temps réel</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">Playbook de diagnostic de l'overlay plein écran</a></li>
-                <li><a href="article-17.html" style="color:#00b8ff;">Réduire la latence des sous-titres en direct</a></li>
-                <li><a href="/fr/discord-live-captions.html" style="color:#00b8ff;">Sous-titres en direct sur Discord</a></li>
+                <li><a href="/fr/game-mode-subtitles.html" style="color:#0b6ad1;">Page des sous-titres Game Mode</a></li>
+                <li><a href="/fr/discord-twitch-subtitles.html" style="color:#0b6ad1;">Sous-titres Discord et Twitch en temps réel</a></li>
+                <li><a href="article-20.html" style="color:#0b6ad1;">Playbook de diagnostic de l'overlay plein écran</a></li>
+                <li><a href="article-17.html" style="color:#0b6ad1;">Réduire la latence des sous-titres en direct</a></li>
+                <li><a href="/fr/discord-live-captions.html" style="color:#0b6ad1;">Sous-titres en direct sur Discord</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Testez ce workflow lors de votre prochaine session</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Utilisez un processus de sous-titres cohérent pour les jeux, le chat vocal et les streams.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Télécharger depuis Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Testez ce workflow lors de votre prochaine session</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Utilisez un processus de sous-titres cohérent pour les jeux, le chat vocal et les streams.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Télécharger gratuitement</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 avis</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Sous-titres en direct pour toute application</h3>
+                <div class="explore-cols"><div><h5>Réunions et appels</h5><a href="/fr/zoom-live-captions.html">Zoom</a><a href="/fr/teams-live-captions.html">Microsoft Teams</a><a href="/fr/google-meet-live-captions.html">Google Meet</a><a href="/fr/webex-live-captions.html">Webex</a><a href="/fr/skype-live-captions.html">Skype</a><a href="/fr/slack-live-captions.html">Slack</a><a href="/fr/whatsapp-live-translation.html">WhatsApp</a><a href="/fr/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming et réseaux</h5><a href="/fr/youtube-dual-subtitles.html">YouTube</a><a href="/fr/netflix-subtitles.html">Netflix</a><a href="/fr/twitch-live-captions.html">Twitch</a><a href="/fr/discord-live-captions.html">Discord</a><a href="/fr/tiktok-live-captions.html">TikTok</a><a href="/fr/instagram-live-captions.html">Instagram</a><a href="/fr/facebook-live-subtitles.html">Facebook</a><a href="/fr/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Jeux et créateurs</h5><a href="/fr/obs-subtitles.html">OBS</a><a href="/fr/game-mode-subtitles.html">Game Mode</a><a href="/fr/steam-subtitles.html">Steam</a><a href="/fr/restream-subtitles.html">Restream</a><a href="/fr/vimeo-subtitles.html">Vimeo</a><a href="/fr/vlc-subtitles.html">VLC</a></div><div><h5>Études et travail</h5><a href="/fr/coursera-subtitles.html">Coursera</a><a href="/fr/udemy-live-captions.html">Udemy</a><a href="/fr/google-classroom-subtitles.html">Google Classroom</a><a href="/fr/linkedin-live-captions.html">LinkedIn</a><a href="/fr/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/fr/" style="font-weight:600;text-decoration:none;">Accueil Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>À lire aussi</h4>
+            <a class="s-item" href="article-1.html">Comment les sous-titres doubles vous aident Г apprendre le…</a>
+            <a class="s-item" href="article-2.html">Pourquoi les sous-titres sont importants pour l'apprentiss…</a>
+            <a class="s-item" href="article-3.html">Comment regarder rГ©guliГЁrement des films en langue Г©tra…</a>
+            <a class="s-item" href="article-4.html">Pourquoi les sous-titres sont utiles même pour les locuteu…</a>
+            <a class="s-item" href="article-5.html">TOP-10 des films avec sous-titres doubles pour apprendre l…</a>
+            <a class="s-item" href="article-6.html">Erreurs Г Г©viter lors de l'apprentissage des langues par …</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Sous-titres en direct pour toute application.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Télécharger gratuitement</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Haut de page" title="Haut de page">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/fr/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

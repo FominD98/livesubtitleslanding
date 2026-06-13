@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="Discord Voice Chat Subtitles for International Squads">
     <meta name="twitter:description" content="Discord voice chat subtitles for international squads: step-by-step setup, callout templates, glossary tips, and latency benchmarks. Free on Microsoft Store.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,24 +148,46 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">Why international squads bleed rou…</a>
+            <a href="#sec-2">Step-by-step: baseline subtitle se…</a>
+            <a href="#sec-3">The four communication failure mod…</a>
+            <a href="#sec-4">Callout structure that maximises s…</a>
+            <a href="#sec-5">Building and maintaining the share…</a>
+            <a href="#sec-6">Onboarding new squad members in un…</a>
+            <a href="#sec-7">Latency requirements: why gaming d…</a>
+            <a href="#sec-8">Cross-language squads: the IGL's c…</a>
+            <a href="#sec-9">What to measure after each ranked …</a>
+            <a href="#sec-10">Observed results over three weeks …</a>
+            <a href="#sec-11">Related guides for deeper configur…</a>
+            <a href="#sec-12">Frequently asked questions</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Discord Voice Chat Subtitles for International Squads</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">March 5, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">March 5, 2026<span class="reading-time">19 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/games.webp" alt="Live subtitle overlay during a competitive game match" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>International squads lose rounds for one reason more than any other: callouts are heard but not decoded fast enough. Voice quality is rarely the bottleneck. The real problem is the extra 200–400 milliseconds a non-native listener needs to convert an accented phrase into an actionable mental map update — and ranked matches are routinely decided on margins shorter than that. Adding a real-time subtitle layer inside your Discord session eliminates that bottleneck without changing mic hardware, audio settings, or communication habits. This guide walks through the full setup, explains why subtitles outperform repeated callouts, and gives you a complete operational playbook for any multilingual squad, from two-language duos to six-player international rosters.</p>
 
-            <h2>Why international squads bleed rounds on communication alone</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">Why international squads bleed rounds on communication alone</a></li><li><a href="#sec-2">Step-by-step: baseline subtitle setup for Discord voice sessions</a></li><li><a href="#sec-3">The four communication failure modes that subtitle layers eliminate</a></li><li><a href="#sec-4">Callout structure that maximises subtitle readability</a></li><li><a href="#sec-5">Building and maintaining the shared callout glossary</a></li><li><a href="#sec-6">Onboarding new squad members in under 20 minutes</a></li><li><a href="#sec-7">Latency requirements: why gaming demands faster subtitles than meetings</a></li><li><a href="#sec-8">Cross-language squads: the IGL's communication responsibility</a></li><li><a href="#sec-9">What to measure after each ranked session</a></li><li><a href="#sec-10">Observed results over three weeks of consistent use</a></li><li><a href="#sec-11">Related guides for deeper configuration</a></li><li><a href="#sec-12">Frequently asked questions</a></li></ol></details>
+            <h2 id="sec-1">Why international squads bleed rounds on communication alone</h2>
             <p>Consider a six-player CS2 squad split across Germany, Brazil, and South Korea. The IGL is a native English speaker calling at around 160 words per minute. The German player processes English at 95% accuracy but needs roughly 250 ms of extra processing time per complex phrase. The Brazilian player is strong in English but any regional slang or run-on callout costs 300–500 ms of extra decode time. The Korean player competes at a high mechanical level but has the weakest listening comprehension in English under time pressure.</p>
             <p>Over a 30-round match, those per-phrase delays accumulate to 8–15 seconds of lost reaction time — enough to flip two or three rounds in games where engagements are decided in under 500 ms. The problem compounds further because the non-native listener who misses a callout typically does not ask for a repeat immediately; they act on a partial understanding and execute the wrong rotation. The cost is not just one lost round but the downstream loss of economy and confidence that follows a cascade of mis-rotations.</p>
             <p>Subtitles do not speed up the speaker. They give every listener a second, simultaneous channel: eyes confirm what ears just heard. Dual-modality input — receiving the same information through both audio and text at the same moment — cuts decode latency by 30–50% for non-native listeners, according to well-established findings in language processing research. For native listeners the improvement is smaller but still measurable in noisy environments where mechanical keyboards, in-game audio, and microphone bleed compete for auditory attention.</p>
 
-            <h2>Step-by-step: baseline subtitle setup for Discord voice sessions</h2>
-            <p>The following steps assume you are using the <strong>Live Subtitles</strong> app on Windows. The same principles apply to any real-time captioning tool, but the specific hotkeys and modes referenced here correspond to Live Subtitles, available from the <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Microsoft Store</a>.</p>
+            <h2 id="sec-2">Step-by-step: baseline subtitle setup for Discord voice sessions</h2>
+            <p>The following steps assume you are using the <strong>Live Subtitles</strong> app on Windows. The same principles apply to any real-time captioning tool, but the specific hotkeys and modes referenced here correspond to Live Subtitles, available from the <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div>.</p>
             <ol>
                 <li><strong>Enable Game Mode (Lock Mode) before joining the voice channel.</strong> Game Mode keeps the subtitle overlay on top of the game window and prevents the overlay from capturing mouse clicks. Without it, clicking on a subtitle will defocus your game — a critical mistake mid-round.</li>
                 <li><strong>Assign an emergency toggle hotkey.</strong> <kbd>Ctrl+Shift+L</kbd> is the default. Remap it to a key you can reach without lifting your hand from WASD. A single keystroke should hide or show the overlay without interrupting movement.</li>
@@ -117,7 +201,7 @@
                 <strong>Pre-session checklist:</strong> run one 10-minute custom lobby where every player confirms they can see the subtitles, that the overlay does not block any HUD element they rely on, and that the emergency toggle works for their keybind. Five minutes of shared setup prevents a full session of in-game complaints.
             </div>
 
-            <h2>The four communication failure modes that subtitle layers eliminate</h2>
+            <h2 id="sec-3">The four communication failure modes that subtitle layers eliminate</h2>
             <ul>
                 <li><strong>Accent decode delay.</strong> Reading a callout simultaneously with hearing it cuts processing time by 30–50% for non-native listeners. The visual channel reinforces audio instead of competing with it — the listener does not need to fully parse the audio because the text already delivered the meaning.</li>
                 <li><strong>Acronym and jargon ambiguity.</strong> "B2" means "B site, 2 enemies" in CS2 but "rotate to B in 2 seconds" in some Valorant callout systems. Written callouts eliminate auditory ambiguity because the abbreviation's context is visually distinct from natural speech — the reader can re-parse the phrase in under 100 ms rather than asking for clarification and waiting for an answer.</li>
@@ -125,7 +209,7 @@
                 <li><strong>Voice-fatigue degradation.</strong> In hour four of a ranked night, voices flatten and articulation degrades. "Rotate" starts sounding like "rotat—" cut off by a cough. Subtitles stay sharp as long as the microphone is functional, regardless of how tired the caller's voice sounds.</li>
             </ul>
 
-            <h2>Callout structure that maximises subtitle readability</h2>
+            <h2 id="sec-4">Callout structure that maximises subtitle readability</h2>
             <p>Subtitles reproduce what was said, not what was meant. Structuring callouts for subtitle readability makes the visual channel as useful as possible during live play:</p>
             <ul>
                 <li><strong>Use action + location + timing:</strong> "Push A, 3 hit, now" rather than "guys go A there's three of them." The noun-first, number-explicit format is faster to parse visually at a glance, especially when the reader's eye is at the bottom of the screen and not centered on the subtitle bar.</li>
@@ -134,29 +218,29 @@
                 <li><strong>Acknowledge with one word.</strong> "Copy," "ack," or "on it" is sufficient. Full sentences in acknowledgement consume subtitle display space and push the original callout out of the visible window.</li>
             </ul>
 
-            <h2>Building and maintaining the shared callout glossary</h2>
+            <h2 id="sec-5">Building and maintaining the shared callout glossary</h2>
             <p>The squad glossary is the single highest-leverage artifact for a multilingual squad. A 20–30 row pinned Discord message with canonical terms per map zone removes synonym confusion before it starts. Here is a sample structure for CS2 — adapt the same format to any game with named zones:</p>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">Map / context</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">Canonical term</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">Meaning (one line)</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">Banned synonyms</th>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">Map / context</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">Canonical term</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">Meaning (one line)</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">Banned synonyms</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td style="padding:7px; color:#eee;">Mirage</td><td style="padding:7px; color:#eee;">"Connector"</td><td style="padding:7px; color:#eee;">Hallway between mid and A site</td><td style="padding:7px; color:#888;">Mid-hall, Cat-con</td></tr>
-                    <tr><td style="padding:7px; color:#eee;">Inferno</td><td style="padding:7px; color:#eee;">"Pit"</td><td style="padding:7px; color:#eee;">Lower position on A site near truck</td><td style="padding:7px; color:#888;">A-hole, Lower A</td></tr>
-                    <tr><td style="padding:7px; color:#eee;">Overpass</td><td style="padding:7px; color:#eee;">"Monster"</td><td style="padding:7px; color:#eee;">Lower B raised area under site</td><td style="padding:7px; color:#888;">Lower B, Tunnel lower</td></tr>
-                    <tr><td style="padding:7px; color:#eee;">Any map</td><td style="padding:7px; color:#eee;">"Default"</td><td style="padding:7px; color:#eee;">Standard opening, no contact yet</td><td style="padding:7px; color:#888;">Standard, Normal</td></tr>
-                    <tr><td style="padding:7px; color:#eee;">Any map</td><td style="padding:7px; color:#eee;">"Eco"</td><td style="padding:7px; color:#eee;">Full economy save, no buy</td><td style="padding:7px; color:#888;">Save, Force-eco</td></tr>
-                    <tr><td style="padding:7px; color:#eee;">Any map</td><td style="padding:7px; color:#eee;">"Force"</td><td style="padding:7px; color:#eee;">Partial buy with limited funds</td><td style="padding:7px; color:#888;">Half-buy, Semi-eco</td></tr>
+                    <tr><td style="padding:7px; color:#2d333b;">Mirage</td><td style="padding:7px; color:#2d333b;">"Connector"</td><td style="padding:7px; color:#2d333b;">Hallway between mid and A site</td><td style="padding:7px; color:#5b6470;">Mid-hall, Cat-con</td></tr>
+                    <tr><td style="padding:7px; color:#2d333b;">Inferno</td><td style="padding:7px; color:#2d333b;">"Pit"</td><td style="padding:7px; color:#2d333b;">Lower position on A site near truck</td><td style="padding:7px; color:#5b6470;">A-hole, Lower A</td></tr>
+                    <tr><td style="padding:7px; color:#2d333b;">Overpass</td><td style="padding:7px; color:#2d333b;">"Monster"</td><td style="padding:7px; color:#2d333b;">Lower B raised area under site</td><td style="padding:7px; color:#5b6470;">Lower B, Tunnel lower</td></tr>
+                    <tr><td style="padding:7px; color:#2d333b;">Any map</td><td style="padding:7px; color:#2d333b;">"Default"</td><td style="padding:7px; color:#2d333b;">Standard opening, no contact yet</td><td style="padding:7px; color:#5b6470;">Standard, Normal</td></tr>
+                    <tr><td style="padding:7px; color:#2d333b;">Any map</td><td style="padding:7px; color:#2d333b;">"Eco"</td><td style="padding:7px; color:#2d333b;">Full economy save, no buy</td><td style="padding:7px; color:#5b6470;">Save, Force-eco</td></tr>
+                    <tr><td style="padding:7px; color:#2d333b;">Any map</td><td style="padding:7px; color:#2d333b;">"Force"</td><td style="padding:7px; color:#2d333b;">Partial buy with limited funds</td><td style="padding:7px; color:#5b6470;">Half-buy, Semi-eco</td></tr>
                 </tbody>
             </table>
             <p>The discipline of the glossary matters more than the specific terms you choose. Two synonyms for "Connector" — one player calling it "Mid-hall," another calling it "Connector" — cost more matches than having no glossary at all, because each listener must pause to resolve which meaning applies. Freeze the glossary at the start of each season. Allow revisions only during a designated post-session review, never mid-ranked-night.</p>
 
-            <h2>Onboarding new squad members in under 20 minutes</h2>
+            <h2 id="sec-6">Onboarding new squad members in under 20 minutes</h2>
             <p>Integrating a new member into a multilingual squad without a structured onboarding wastes at least one ranked session on callout confusion that could have been resolved beforehand. Follow this sequence:</p>
             <ol>
                 <li><strong>Share the pinned glossary and allow 10 minutes to read it.</strong> Do not assume passive absorption. Ask the new member to repeat the five most-used zone names back before the first scrim starts. If they cannot, do the scrim but extend the post-scrim review.</li>
@@ -166,7 +250,7 @@
                 <li><strong>Confirm their subtitle overlay is positioned correctly before ranked.</strong> A new member who has never used Live Subtitles may place the bar over a critical HUD element. A 30-second screen share and positioning check costs nothing compared to a round-one complaint about not seeing their ability cooldowns.</li>
             </ol>
 
-            <h2>Latency requirements: why gaming demands faster subtitles than meetings</h2>
+            <h2 id="sec-7">Latency requirements: why gaming demands faster subtitles than meetings</h2>
             <p>A business meeting tolerates 1.5–2 seconds of subtitle lag with no real cost. If the speaker says "let's move the deadline to Friday" and the subtitle appears 1.8 seconds later, no decision is harmed — the meeting continues. A ranked match has no such forgiveness. A callout like "AWP mid, peek now" is actionable for roughly 600–800 ms. If the subtitle appears after 1.2 seconds, the peek window has closed or the AWP has repositioned. The information is stale and the subtitle becomes noise.</p>
             <p>This sets a hard latency ceiling for gaming-grade subtitles: <strong>under 600 ms end-to-end</strong>, from the speaker's voice to rendered text on screen. Tools that batch audio in 2-second windows to improve accuracy are unusable for live callouts regardless of transcription quality. Live Subtitles processes audio in real time with a target latency under 500 ms, which keeps callouts actionable. You can verify your actual latency in the app settings under the diagnostic display. If latency reads consistently above 700 ms, switch to a lower-complexity language model in the settings panel or close background applications competing for CPU resources.</p>
 
@@ -174,12 +258,12 @@
                 <strong>High-action game tip:</strong> enable the single-line display mode in Live Subtitles. This shows only the most recent phrase rather than a scrolling transcript, which reduces the eye-tracking distance from crosshair to subtitle bar. In Valorant and CS2, where the crosshair rarely leaves the center-screen area, single-line mode reduces the eye movement cost of reading subtitles to near zero.
             </div>
 
-            <h2>Cross-language squads: the IGL's communication responsibility</h2>
+            <h2 id="sec-8">Cross-language squads: the IGL's communication responsibility</h2>
             <p>In a squad where four players are native English speakers and two are native Spanish speakers, the IGL must commit to one calling language for the entire match and treat that commitment as binding throughout all 30 rounds. Switching mid-round — "rotate B, vamos a B!" — does not help the non-native listener; it doubles the cognitive load on every player simultaneously parsing two language streams, including the native speakers who now must ignore the second-language version they do not need.</p>
             <p>If the IGL is bilingual, the practical rule is: call in the language of the statistical majority, and rely on subtitles as the bridge for the minority group. A Spanish-speaking IGL calling in accented English is better served by subtitles than by language alternation. The subtitle layer makes accent variance essentially irrelevant; mid-call language switching does not.</p>
             <p>For squads with an even language split — three native EN players and three native ES players — consider a relay caller model: one bilingual player listens to the IGL and immediately echoes critical calls in the other language. This adds 100–200 ms of relay delay but ensures both language groups receive a native-speed callout. The relay caller's output is then subtitled for everyone, making even the relay accessible regardless of the listener's proficiency in either language.</p>
 
-            <h2>What to measure after each ranked session</h2>
+            <h2 id="sec-9">What to measure after each ranked session</h2>
             <p>Running subtitles without measuring outcomes is like training without tracking performance. Log these four metrics after each ranked night in a shared Discord note or spreadsheet:</p>
             <ul>
                 <li><strong>Repeat rate:</strong> total count of "say again?", "what?", or equivalent per map. Target: fewer than 2 per map. Consistently above 5 indicates a communication system problem, not a player skill problem — the fix is structural, not individual.</li>
@@ -188,7 +272,7 @@
                 <li><strong>Native-language drift:</strong> instances where a non-native speaker under pressure reverted to their first language mid-call. This is a fatigue and comfort indicator, not a performance failure. Track which players drift and at what round count — and schedule shorter sessions or more breaks for those players.</li>
             </ul>
 
-            <h2>Observed results over three weeks of consistent use</h2>
+            <h2 id="sec-10">Observed results over three weeks of consistent use</h2>
             <p>Squads that maintain the full setup described in this article — shared glossary, subtitle overlay enabled and correctly positioned, callout structure enforced — consistently see the following progression across three weeks:</p>
             <ul>
                 <li><strong>Week 1:</strong> repeat rate drops by roughly half. The glossary eliminates the most common synonym confusion, and subtitles reduce accent-related decode failures. Players consistently report feeling "less stressed" on IGL calls even before their ranked stats improve.</li>
@@ -197,17 +281,17 @@
             </ul>
             <p>The subtitle layer accelerates this progression but does not replace the discipline of the glossary, consistent callout structure, or the IGL's commitment to one language. The discipline is cheap to maintain once established, partly because players who can read a callout stop asking for repeats — which means the IGL spends more time calling and less time managing communication overhead.</p>
 
-            <h2>Related guides for deeper configuration</h2>
-            <p>For the full overlay configuration specific to competitive titles, see the <a href="article-19.html" style="color:#00b8ff;">Game Mode subtitle setup guide</a>, which covers borderless window optimization, refresh rate considerations, and per-game overlay profile recommendations. If your overlay disappears on map loads or during loading screens, the <a href="article-20.html" style="color:#00b8ff;">fullscreen overlay troubleshooting guide</a> covers the most common causes and fixes in detail. For HUD-specific placement differences between FPS and MOBA games, the <a href="article-22.html" style="color:#00b8ff;">subtitle overlay settings guide for FPS and MOBA</a> addresses each genre's unique requirements.</p>
-            <p>For platform-level setup notes covering Discord mobile and cross-device sessions, see the <a href="/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord and Twitch subtitles platform page</a>. The dedicated <a href="/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode subtitles page</a> explains how the Windows overlay compositor layer works and why it is the most stable rendering path for competitive use.</p>
+            <h2 id="sec-11">Related guides for deeper configuration</h2>
+            <p>For the full overlay configuration specific to competitive titles, see the <a href="article-19.html" style="color:#0b6ad1;">Game Mode subtitle setup guide</a>, which covers borderless window optimization, refresh rate considerations, and per-game overlay profile recommendations. If your overlay disappears on map loads or during loading screens, the <a href="article-20.html" style="color:#0b6ad1;">fullscreen overlay troubleshooting guide</a> covers the most common causes and fixes in detail. For HUD-specific placement differences between FPS and MOBA games, the <a href="article-22.html" style="color:#0b6ad1;">subtitle overlay settings guide for FPS and MOBA</a> addresses each genre's unique requirements.</p>
+            <p>For platform-level setup notes covering Discord mobile and cross-device sessions, see the <a href="/discord-twitch-subtitles.html" style="color:#0b6ad1;">Discord and Twitch subtitles platform page</a>. The dedicated <a href="/game-mode-subtitles.html" style="color:#0b6ad1;">Game Mode subtitles page</a> explains how the Windows overlay compositor layer works and why it is the most stable rendering path for competitive use.</p>
 
-            <h2>Frequently asked questions</h2>
+            <h2 id="sec-12">Frequently asked questions</h2>
 
             <h3>Will the subtitle overlay affect my FPS or game performance?</h3>
             <p>Live Subtitles runs as a lightweight transparent overlay using the Windows Desktop Window Manager compositor layer — the same layer used by Discord's own in-game overlay. In benchmark testing across CS2, Valorant, and Apex Legends at both 1080p and 1440p, the framerate impact is 0–2 FPS, which falls within measurement noise on any mid-range or higher GPU. The overlay does not inject into the game process and does not require DirectX hooks. If you observe significant FPS drops after enabling it, check whether your GPU was already running at 99% utilization before launching the overlay; the overlay cannot compensate for a GPU that is already saturated at baseline.</p>
 
             <h3>Can players on different operating systems benefit in the same squad?</h3>
-            <p>Live Subtitles is a Windows application available from the <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Microsoft Store</a>. Squadmates on macOS or Linux cannot run the same app. However, the subtitle overlay operates entirely on the individual player's machine — there is no shared server component and no squad-wide dependency. A squad where three members run Live Subtitles and two do not still benefits substantially from the three who do, because those three will ask for fewer repeats and execute callouts faster. Non-Windows squadmates can explore browser-based alternatives, but Windows players gain full integration with Lock/Game Mode.</p>
+            <p>Live Subtitles is a Windows application available from the <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta">Download free</a>. Squadmates on macOS or Linux cannot run the same app. However, the subtitle overlay operates entirely on the individual player's machine — there is no shared server component and no squad-wide dependency. A squad where three members run Live Subtitles and two do not still benefits substantially from the three who do, because those three will ask for fewer repeats and execute callouts faster. Non-Windows squadmates can explore browser-based alternatives, but Windows players gain full integration with Lock/Game Mode.</p>
 
             <h3>What happens if subtitle latency spikes above acceptable levels mid-match?</h3>
             <p>If latency exceeds roughly 700 ms consistently, tactical callouts become less reliable but strategic communications — mid-round plan changes, economy calls, post-fight analysis — remain fully useful because their timing constraints are looser. To reduce latency in the moment: switch to the fastest available language model in Live Subtitles settings, close browser tabs and background applications competing for CPU, and set Discord's noise suppression to "Standard" rather than "High" — high suppression adds processing delay before the audio even reaches the recognition model. If latency spikes are intermittent rather than persistent, they are usually caused by Windows Update downloading in the background or antivirus scanning active processes.</p>
@@ -222,11 +306,56 @@
             <p>Yes, and you should. Discord's "User Settings &gt; Voice &amp; Video &gt; Mic Test" combined with a custom lobby in your game of choice is the recommended pre-session check. Have one squadmate make callouts at normal pace and accent while you verify that subtitles appear within 500 ms, that the overlay position does not conflict with any HUD element, and that the emergency toggle hotkey works. Ten minutes of this before a ranked night is the most efficient investment a multilingual squad can make in their communication quality.</p>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Standardize team communication — starting tonight</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">One stable subtitle workflow in Discord can improve every match day. Live Subtitles is free to download on Windows — no subscription, no server integration, no setup beyond five minutes per player.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Standardize team communication — starting tonight</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">One stable subtitle workflow in Discord can improve every match day. Live Subtitles is free to download on Windows — no subscription, no server integration, no setup beyond five minutes per player.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">Download free</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

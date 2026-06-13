@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -32,16 +28,82 @@
     <meta name="twitter:title" content="Discord and Twitch Subtitles: Real-Time Community Workflow">
     <meta name="twitter:description" content="Master Discord and Twitch subtitles: step-by-step setup, gaming callouts, mod workflows, multilingual streams, and real-time captions. Try it free.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -71,18 +133,36 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">Why Voice-Heavy Platforms Need Rea…</a>
+            <a href="#sec-2">How Live Subtitles Works With Disc…</a>
+            <a href="#sec-3">Gaming Squad Protocols: Before, Du…</a>
+            <a href="#sec-4">Streamer and Moderation Workflows</a>
+            <a href="#sec-5">Comparing Caption Approaches: Nati…</a>
+            <a href="#sec-6">Measurable Outcomes: What to Track…</a>
+            <a href="#sec-7">Common Pitfalls and How to Avoid T…</a>
+            <a href="#sec-8">Frequently Asked Questions</a>
+            <a href="#sec-9">Final Takeaway</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Discord and Twitch Subtitles: Real-Time Community Workflow</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-02-10">February 10, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-02-10">February 10, 2026<span class="reading-time">13 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/games.webp" alt="Live subtitle overlay during a competitive game match" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop=”articleBody”>
             <p>In Discord voice channels and Twitch streams, language is fast, overlapping, and context-heavy. A callout missed by one teammate can cost a ranked match; a slurred in-joke lost on an international viewer can cost a subscription. People search for <strong>Discord subtitles</strong> and <strong>Twitch subtitles</strong> not for convenience, but because they need to catch every word in real time — across accents, background noise, and six simultaneous speakers. This guide covers the complete operational workflow: hardware setup, software configuration with <strong>Live Subtitles</strong>, gaming squad protocols, streamer best practices, moderation use-cases, and measurable outcomes you can actually track.</p>
 
-            <h2>Why Voice-Heavy Platforms Need Real-Time Captions</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">Why Voice-Heavy Platforms Need Real-Time Captions</a></li><li><a href="#sec-2">How Live Subtitles Works With Discord and Twitch</a></li><li><a href="#sec-3">Gaming Squad Protocols: Before, During, and After</a></li><li><a href="#sec-4">Streamer and Moderation Workflows</a></li><li><a href="#sec-5">Comparing Caption Approaches: Native Tools vs. Live Subtitles Overlay</a></li><li><a href="#sec-6">Measurable Outcomes: What to Track After Rollout</a></li><li><a href="#sec-7">Common Pitfalls and How to Avoid Them</a></li><li><a href="#sec-8">Frequently Asked Questions</a></li><li><a href="#sec-9">Final Takeaway</a></li></ol></details>
+            <h2 id="sec-1">Why Voice-Heavy Platforms Need Real-Time Captions</h2>
 
             <p>Discord and Twitch share a common trait: audio is the primary communication channel, but the audience is rarely homogeneous. A typical competitive Discord server hosts players from at least four to six different countries. A mid-sized Twitch streamer (2,000–10,000 concurrent viewers) routinely sees 30–40% of chat messages in languages other than the stream's main language. These are not edge cases — they are the norm for any community that has grown beyond a local friend group.</p>
 
@@ -93,17 +173,17 @@
                 <li><strong>Cognitive overload failure:</strong> during high-stakes moments, the brain deprioritizes auditory processing. A text transcript provides a second channel that bypasses this bottleneck.</li>
             </ul>
 
-            <div style=”background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
-                <strong style=”color:#00ff9d;”>Key stat:</strong> Twitch's own accessibility documentation notes that captions can increase average session watch-time by 12–18% for viewers who engage with them — not just for deaf or hard-of-hearing users, but for anyone in a noisy environment or non-native language context.
+            <div style=”background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
+                <strong style=”color:#0a7f55;”>Key stat:</strong> Twitch's own accessibility documentation notes that captions can increase average session watch-time by 12–18% for viewers who engage with them — not just for deaf or hard-of-hearing users, but for anyone in a noisy environment or non-native language context.
             </div>
 
-            <h2>How Live Subtitles Works With Discord and Twitch</h2>
+            <h2 id="sec-2">How Live Subtitles Works With Discord and Twitch</h2>
 
-            <p><a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener noreferrer” style=”color:#00b8ff;”><strong>Live Subtitles</strong></a> (rated 4.7/5 on the Microsoft Store) is a Windows overlay app that captures system audio or microphone input, transcribes it locally in real time using on-device AI, and renders a transparent caption overlay on top of any application — including Discord, the Twitch dashboard, or a game running in fullscreen. Unlike browser extensions or platform-native caption tools, it does not require the platform to support captions natively, works across all voice sources simultaneously, and adds no perceptible latency to the audio itself.</p>
+            <p><a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener noreferrer” style=”color:#0b6ad1;”><strong>Live Subtitles</strong></a> (rated 4.7/5 on the Microsoft Store) is a Windows overlay app that captures system audio or microphone input, transcribes it locally in real time using on-device AI, and renders a transparent caption overlay on top of any application — including Discord, the Twitch dashboard, or a game running in fullscreen. Unlike browser extensions or platform-native caption tools, it does not require the platform to support captions natively, works across all voice sources simultaneously, and adds no perceptible latency to the audio itself.</p>
 
             <h3>Step-by-Step Setup for Discord Voice Channels</h3>
             <ol>
-                <li><strong>Install Live Subtitles</strong> from the <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener noreferrer” style=”color:#00b8ff;”>Microsoft Store</a>. No account creation required.</li>
+                <li><strong>Install Live Subtitles</strong> from the <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener noreferrer” style=”color:#0b6ad1;”>Microsoft Store</a>. No account creation required.</li>
                 <li>Open Live Subtitles and select <em>System Audio</em> as the input source. This captures all audio routed through your Windows sound device — including Discord voice output.</li>
                 <li>In the overlay settings, choose a screen corner that does not overlap your minimap or HUD. Bottom-center works for most first-person games; top-right for strategy games where the minimap occupies the bottom-left.</li>
                 <li>Set font size to at least 18pt so captions are readable during fast-paced action without requiring eye focus shifts.</li>
@@ -118,7 +198,7 @@
                 <li>For <strong>multilingual audiences</strong>, combine Live Subtitles' transcription with its optional translation layer: set the display language to the viewer's preferred language, and captions appear already translated — turning a monolingual English stream into an accessible experience for Spanish, Japanese, or Portuguese speakers instantly.</li>
             </ol>
 
-            <h2>Gaming Squad Protocols: Before, During, and After</h2>
+            <h2 id="sec-3">Gaming Squad Protocols: Before, During, and After</h2>
 
             <p>The biggest mistake competitive teams make is treating subtitles as a passive accessibility tool rather than an active communication protocol. The following three-phase framework treats captions as a structured part of your team's operating procedure.</p>
 
@@ -149,7 +229,7 @@
                 <li>Update your pinned Discord glossary and share it with the team before the next session.</li>
             </ul>
 
-            <h2>Streamer and Moderation Workflows</h2>
+            <h2 id="sec-4">Streamer and Moderation Workflows</h2>
 
             <h3>Long-Form Stream Accessibility</h3>
             <p>A four-hour IRL or variety stream exhausts both the streamer's voice and the viewer's attention. Captions help in two concrete ways: they give viewers who joined mid-stream a way to catch context without scrubbing the VOD, and they reduce the cognitive load on the streamer because they no longer need to repeat themselves for viewers who missed a point. Streamers who have adopted permanent captions report a measurable drop in chat messages containing “what did you say?” or “can you repeat that” — typically 30–50% within two weeks of rollout.</p>
@@ -158,9 +238,9 @@
             <p>For communities spanning Europe, Latin America, and Southeast Asia, captions with real-time translation are transformative. When a Spanish-speaking viewer sees English speech transcribed and translated simultaneously, they engage in Spanish-language chat threads in parallel — effectively running two communities on the same stream. Moderators benefit from this too: instead of guessing whether a flagged comment was a reaction to what was said 30 seconds ago, they can cross-reference the caption timeline and make faster, better-informed moderation decisions.</p>
 
             <h3>Moderator Incident Response</h3>
-            <p>Moderation teams increasingly use caption logs to reconstruct voice incidents. If a streamer says something ambiguous during a heated moment, the caption transcript provides an objective record — useful both for internal reviews and for responding to platform reports. This is especially valuable for large communities where multiple moderators share shifts and cannot always be present in voice. See also our <a href=”article-14.html” style=”color:#00b8ff;”>Microsoft Teams Captions: Practical Playbook</a> for parallel moderation techniques in enterprise voice contexts.</p>
+            <p>Moderation teams increasingly use caption logs to reconstruct voice incidents. If a streamer says something ambiguous during a heated moment, the caption transcript provides an objective record — useful both for internal reviews and for responding to platform reports. This is especially valuable for large communities where multiple moderators share shifts and cannot always be present in voice. See also our <a href=”article-14.html” style=”color:#0b6ad1;”>Microsoft Teams Captions: Practical Playbook</a> for parallel moderation techniques in enterprise voice contexts.</p>
 
-            <h2>Comparing Caption Approaches: Native Tools vs. Live Subtitles Overlay</h2>
+            <h2 id="sec-5">Comparing Caption Approaches: Native Tools vs. Live Subtitles Overlay</h2>
 
             <p>Discord introduced its own experimental Live Captions feature for voice channels in 2024. Twitch offers manual captions for VODs but no real-time caption layer for live streams. How does the overlay approach compare?</p>
 
@@ -170,9 +250,9 @@
                 <li><strong>Live Subtitles overlay:</strong> works on any audio source, supports 100+ languages, provides transcript export, works for viewers without any action by the streamer, runs entirely on-device with no audio data sent to cloud servers.</li>
             </ul>
 
-            <p>The overlay approach is not a replacement for platform-native features — it is a complement that fills the gaps those features leave, especially for multilingual, multi-platform, or privacy-conscious users. For comparison with meeting platform caption tools, see our <a href=”article-18.html” style=”color:#00b8ff;”>Google Meet vs Zoom vs Teams Translated Captions</a> deep-dive.</p>
+            <p>The overlay approach is not a replacement for platform-native features — it is a complement that fills the gaps those features leave, especially for multilingual, multi-platform, or privacy-conscious users. For comparison with meeting platform caption tools, see our <a href=”article-18.html” style=”color:#0b6ad1;”>Google Meet vs Zoom vs Teams Translated Captions</a> deep-dive.</p>
 
-            <h2>Measurable Outcomes: What to Track After Rollout</h2>
+            <h2 id="sec-6">Measurable Outcomes: What to Track After Rollout</h2>
 
             <p>If you are introducing captions to a community or streaming operation, measure these four indicators over a 30-day window:</p>
             <ul>
@@ -182,7 +262,7 @@
                 <li><strong>International participation rate:</strong> track the percentage of chat messages or voice participants from non-primary-language regions. A well-captioned stream typically sees this rise 15–25% within two months.</li>
             </ul>
 
-            <h2>Common Pitfalls and How to Avoid Them</h2>
+            <h2 id="sec-7">Common Pitfalls and How to Avoid Them</h2>
 
             <h3>Pitfall 1: No Shared Terminology</h3>
             <p>Without a stable vocabulary, subtitles reflect inconsistent language and compound rather than resolve ambiguity. Fix this before the first captioned session, not after several frustrated matches.</p>
@@ -194,12 +274,12 @@
             <p>A caption overlay placed over the minimap, ability bar, or kill feed actively hurts performance. Spend ten minutes in a custom lobby testing overlay position before your first captioned ranked game. Most overlay tools, including Live Subtitles, allow per-application position profiles — set one for each game you play.</p>
 
             <h3>Pitfall 4: Ignoring Speaker Identification</h3>
-            <p>In a five-player squad, undifferentiated captions become a wall of text. Enable speaker labels from the start. Color-coding by speaker (matching Discord's per-user voice indicator colors where possible) makes it possible to parse five simultaneous talkers at a glance. For streaming accessibility, see also our guide on <a href=”article-9.html” style=”color:#00b8ff;”>real-time captions for live events</a>.</p>
+            <p>In a five-player squad, undifferentiated captions become a wall of text. Enable speaker labels from the start. Color-coding by speaker (matching Discord's per-user voice indicator colors where possible) makes it possible to parse five simultaneous talkers at a glance. For streaming accessibility, see also our guide on <a href=”article-9.html” style=”color:#0b6ad1;”>real-time captions for live events</a>.</p>
 
             <h3>Pitfall 5: Neglecting the Transcript Archive</h3>
             <p>The post-session transcript is one of the most underused features in caption workflows. Teams that review transcripts weekly iterate on their communication vocabulary three to four times faster than those who only use captions passively during sessions.</p>
 
-            <h2>Frequently Asked Questions</h2>
+            <h2 id="sec-8">Frequently Asked Questions</h2>
 
             <p><strong>Q: Are Discord and Twitch subtitles only useful for non-native speakers?</strong><br>
             A: No. They provide equal value for native speakers in high-noise environments, for players with auditory processing differences, for anyone using low-quality audio hardware, and for sessions where multiple people speak simultaneously. The tactical clarity benefit in competitive gaming is largely independent of language background.</p>
@@ -219,26 +299,71 @@
             <p><strong>Q: Is my audio data private?</strong><br>
             A: Live Subtitles processes all audio locally on your device. No audio is sent to external servers. This is critical for competitive gaming environments where voice strategy is sensitive, and for content creators who need to comply with platform terms around third-party data sharing.</p>
 
-            <h2>Final Takeaway</h2>
-            <p>Discord and Twitch subtitles are not a single feature you enable once — they are a communication infrastructure that rewards deliberate process design. The teams and creators who see the largest gains share three habits: they align on vocabulary before sessions, they run captions as a default rather than an emergency tool, and they mine transcript archives to continuously improve how they communicate. Combined with a reliable overlay like <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener noreferrer” style=”color:#00b8ff;”>Live Subtitles</a>, that process turns real-time captions from a nice-to-have into a genuine competitive and community advantage.</p>
+            <h2 id="sec-9">Final Takeaway</h2>
+            <p>Discord and Twitch subtitles are not a single feature you enable once — they are a communication infrastructure that rewards deliberate process design. The teams and creators who see the largest gains share three habits: they align on vocabulary before sessions, they run captions as a default rather than an emergency tool, and they mine transcript archives to continuously improve how they communicate. Combined with a reliable overlay like <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener noreferrer” style=”color:#0b6ad1;”>Live Subtitles</a>, that process turns real-time captions from a nice-to-have into a genuine competitive and community advantage.</p>
 
-            <div style=”background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
-                <h3 style=”color: #00b8ff; margin-top: 0;”>Related Articles</h3>
+            <div style=”background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
+                <h3 style=”color: #0b6ad1; margin-top: 0;”>Related Articles</h3>
                 <ul style=”list-style: none; padding-left: 0;”>
-                    <li><a href=”article-18.html” style=”color: #00b8ff; text-decoration: none;”>Google Meet vs Zoom vs Teams Translated Captions</a></li>
-                    <li><a href=”article-16.html” style=”color: #00b8ff; text-decoration: none;”>Google Meet Live Captions: Practical Playbook</a></li>
-                    <li><a href=”article-9.html” style=”color: #00b8ff; text-decoration: none;”>Real-Time Captions for Live Events</a></li>
-                    <li><a href=”article-14.html” style=”color: #00b8ff; text-decoration: none;”>Microsoft Teams Captions: Practical Playbook</a></li>
-                    <li><a href=”article-12.html” style=”color: #00b8ff; text-decoration: none;”>Zoom Live Captions for International Meetings</a></li>
+                    <li><a href=”article-18.html” style=”color: #0b6ad1; text-decoration: none;”>Google Meet vs Zoom vs Teams Translated Captions</a></li>
+                    <li><a href=”article-16.html” style=”color: #0b6ad1; text-decoration: none;”>Google Meet Live Captions: Practical Playbook</a></li>
+                    <li><a href=”article-9.html” style=”color: #0b6ad1; text-decoration: none;”>Real-Time Captions for Live Events</a></li>
+                    <li><a href=”article-14.html” style=”color: #0b6ad1; text-decoration: none;”>Microsoft Teams Captions: Practical Playbook</a></li>
+                    <li><a href=”article-12.html” style=”color: #0b6ad1; text-decoration: none;”>Zoom Live Captions for International Meetings</a></li>
                 </ul>
             </div>
 
             <div style=”background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;”>
-                <h3 style=”color: #00ff9d; margin-top: 0;”>Use Live Subtitles in Every Voice Context</h3>
-                <p style=”color: #eee; margin-bottom: 1.5rem;”>One overlay app for gaming callouts, multilingual streams, meetings, and media. Runs on-device, no audio data leaves your PC.</p>
-                <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” style=”display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;”>Download from Microsoft Store — Free</a>
+                <h3 style=”color: #0a7f55; margin-top: 0;”>Use Live Subtitles in Every Voice Context</h3>
+                <p style=”color: #2d333b; margin-bottom: 1.5rem;”>One overlay app for gaming callouts, multilingual streams, meetings, and media. Runs on-device, no audio data leaves your PC.</p>
+                <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” style=”display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;”>Download from Microsoft Store — Free</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,16 +43,82 @@
     <meta name="twitter:title" content="竞技游戏的 Game Mode 字幕：2026 设置指南">
     <meta name="twitter:description" content="竞技游戏 Game Mode 实时字幕完整配置指南：从锁定模式开启方式、无边框全屏兼容设置到战术报点术语词汇规范和配置冻结策略，每个操作环节均有详细清晰的说明，帮助跨语言国际战队全面提升实时沟通与协作配合水平——立即免费下载 Live Subtitles，按本指南快速部署，即刻见效。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/zh/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -85,22 +147,44 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目录">
+        <div class="toc-inner">
+            <h4>目录</h4>
+            <a href="#sec-1">核心原则：稳定性优先于视觉调整</a>
+            <a href="#sec-2">推荐基线配置（五步完成）</a>
+            <a href="#sec-3">三层模型：渲染 → 交互 → 沟通</a>
+            <a href="#sec-4">提升报点质量的队伍工作流</a>
+            <a href="#sec-5">可见性限制：必须提前说清楚的事</a>
+            <a href="#sec-6">各游戏类型的基线配置表</a>
+            <a href="#sec-7">进队前90秒检查清单</a>
+            <a href="#sec-8">值得追踪的关键指标（KPI）</a>
+            <a href="#sec-9">配置漂移：大多数玩家从未达到稳定竞技字幕设置的真正原因</a>
+            <a href="#sec-10">直播与排位同时进行的特殊情况</a>
+            <a href="#sec-11">字幕完美运行但比赛依然混乱怎么办</a>
+            <a href="#sec-12">真实数据：锁定配置后的效果</a>
+            <a href="#sec-13">相关资源</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 返回文章列表</a>
         <h1 class="article-title" itemprop="headline">竞技游戏的 Game Mode 字幕：2026 设置指南</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日<span class="reading-time">7 分钟阅读</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/zh/games.webp" alt="竞技比赛中的实时字幕覆盖" width="1280" height="762" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>在排位赛中，玩家输掉对局往往不是因为字幕"不好用"，而是因为沟通不稳定：覆盖层意外抢夺焦点、快速报点模糊不清、多语言语音中的关键信息被遗漏。本指南专注于在竞技环境中构建可靠的 <strong>Game Mode 字幕</strong>工作流——从渲染路径到队伍词汇表，逐层解决问题。</p>
 
-            <h2>核心原则：稳定性优先于视觉调整</h2>
+            <details class="toc-mobile"><summary>目录</summary><ol><li><a href="#sec-1">核心原则：稳定性优先于视觉调整</a></li><li><a href="#sec-2">推荐基线配置（五步完成）</a></li><li><a href="#sec-3">三层模型：渲染 → 交互 → 沟通</a></li><li><a href="#sec-4">提升报点质量的队伍工作流</a></li><li><a href="#sec-5">可见性限制：必须提前说清楚的事</a></li><li><a href="#sec-6">各游戏类型的基线配置表</a></li><li><a href="#sec-7">进队前90秒检查清单</a></li><li><a href="#sec-8">值得追踪的关键指标（KPI）</a></li><li><a href="#sec-9">配置漂移：大多数玩家从未达到稳定竞技字幕设置的真正原因</a></li><li><a href="#sec-10">直播与排位同时进行的特殊情况</a></li><li><a href="#sec-11">字幕完美运行但比赛依然混乱怎么办</a></li><li><a href="#sec-12">真实数据：锁定配置后的效果</a></li><li><a href="#sec-13">相关资源</a></li></ol></details>
+            <h2 id="sec-1">核心原则：稳定性优先于视觉调整</h2>
             <p>字体样式的重要性远低于交互行为。如果覆盖层能在关键时刻抢走鼠标焦点，整个系统就是失败的。竞技场景下，锁定行为、快捷键可控性和可预测的全屏渲染，三者缺一不可。很多玩家花大量时间调整字幕颜色和背景透明度，却对锁定模式是否生效毫不在意——这是本末倒置的做法。</p>
             <p>稳定的字幕配置意味着：每次启动游戏时，覆盖层都在同样的位置、以同样的行为运转，无论是否刚刚更新了显卡驱动，也无论队友的语言设置如何。这才是竞技字幕的真正价值所在。</p>
 
-            <h2>推荐基线配置（五步完成）</h2>
+            <h2 id="sec-2">推荐基线配置（五步完成）</h2>
             <p>以下步骤适用于绝大多数竞技游戏，是经过反复验证的最小可靠配置：</p>
             <ol>
                 <li>进入排队前先开启 Lock/Game Mode，确保覆盖层处于穿透状态。</li>
@@ -111,7 +195,7 @@
             </ol>
             <p>这五步不需要每局都重新配置。一旦跑通，就把这套配置保存为专属的"竞技档案"，整个赛季沿用同一份档案。</p>
 
-            <h2>三层模型：渲染 → 交互 → 沟通</h2>
+            <h2 id="sec-3">三层模型：渲染 → 交互 → 沟通</h2>
             <p>要快速诊断 Game Mode 问题，需要把覆盖层拆解成三个独立的层次。每一层的故障原因不同，修复位置也不同。</p>
 
             <h3>第一层：渲染路径</h3>
@@ -123,7 +207,7 @@
             <h3>第三层：沟通路径</h3>
             <p>即使渲染和交互都完美，如果报点本身杂乱无章，字幕依然无法发挥作用。字幕引擎无法从说话者从未清晰表达的内容中恢复出意义。队伍层面的词汇纪律，才能把一条嘈杂的语音报点转化为可用的字幕行。</p>
 
-            <h2>提升报点质量的队伍工作流</h2>
+            <h2 id="sec-4">提升报点质量的队伍工作流</h2>
 
             <h3>赛前准备</h3>
             <ul>
@@ -149,24 +233,24 @@
                 <li>下一场前花两分钟过一遍词汇表，强化肌肉记忆。</li>
             </ul>
 
-            <h2>可见性限制：必须提前说清楚的事</h2>
+            <h2 id="sec-5">可见性限制：必须提前说清楚的事</h2>
             <p>某些独占全屏渲染路径会隐藏桌面覆盖层。这是渲染路径的系统限制，不是字幕引擎的 bug。下列情形会导致覆盖层消失：</p>
             <ul>
                 <li>游戏以独占全屏模式运行（部分老游戏默认如此）。</li>
                 <li>显卡驱动在某次更新后改变了合成器优先级。</li>
                 <li>多显示器环境下覆盖层被渲染到非主屏幕的合成器上。</li>
             </ul>
-            <p>操作可靠性的最佳实践是：凡是重要对局，一律使用无边框全屏。如果游戏强制独占全屏，请参阅 <a href="article-20.html" style="color:#00b8ff;">全屏覆盖层故障排查手册</a> 中的强制合成器方案。</p>
+            <p>操作可靠性的最佳实践是：凡是重要对局，一律使用无边框全屏。如果游戏强制独占全屏，请参阅 <a href="article-20.html" style="color:#0b6ad1;">全屏覆盖层故障排查手册</a> 中的强制合成器方案。</p>
 
-            <h2>各游戏类型的基线配置表</h2>
+            <h2 id="sec-6">各游戏类型的基线配置表</h2>
             <p>以下表格是经过社区验证的开箱即用配置，可直接作为你队伍档案的起点：</p>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">游戏类型</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">显示模式</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">字幕位置</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">超时时间</th>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">游戏类型</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">显示模式</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">字幕位置</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">超时时间</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -177,7 +261,7 @@
                 </tbody>
             </table>
 
-            <h2>进队前90秒检查清单</h2>
+            <h2 id="sec-7">进队前90秒检查清单</h2>
             <p>这份清单应在每次点击"开始游戏"前完成，全程不超过90秒：</p>
             <ol>
                 <li>确认 Lock/Game Mode 已开启——系统托盘图标应为绿色锁定状态。</li>
@@ -188,7 +272,7 @@
             </ol>
             <p>如果任何一步失败，不要进入排队。在回合间隙处理渲染 bug，才是真正让你输掉比赛的原因。</p>
 
-            <h2>值得追踪的关键指标（KPI）</h2>
+            <h2 id="sec-8">值得追踪的关键指标（KPI）</h2>
             <p>如果你在认真管理战队，以下指标能帮你量化字幕工作流的实际效果：</p>
             <ul>
                 <li><strong>重复请求次数：</strong>每场比赛中"再说一遍？"出现的频率，目标是每场低于 2 次。</li>
@@ -198,7 +282,7 @@
             </ul>
             <p>建立这套记录习惯后，通常在两到三周内就能看到明显的趋势：哪个玩家的报点最容易被误识别，哪个地图的术语混淆最严重。</p>
 
-            <h2>配置漂移：大多数玩家从未达到稳定竞技字幕设置的真正原因</h2>
+            <h2 id="sec-9">配置漂移：大多数玩家从未达到稳定竞技字幕设置的真正原因</h2>
             <p>字幕"在排位赛中不稳定"的最大原因不是字幕引擎本身，而是配置漂移。玩家在每次更新后调整透明度、字体大小和超时设置，然后忘记哪个版本有效。下一个排位之夜，一半的覆盖层行为不同，全队开始怪罪工具本身。</p>
             <p>本指南将配置视为一个"冻结的工件"：一旦某个竞技版本调试好，在整个赛季中途就不要再动它。以下是三种最常见的配置漂移模式及其预防方法：</p>
             <ul>
@@ -207,31 +291,77 @@
                 <li><strong>浮动覆盖层：</strong>在每次类型切换前手动拖动覆盖层位置，会在多显示器环境中把位置偏移到错误的屏幕。为每个游戏档案指定固定位置，绝不手动拖拽。</li>
             </ul>
 
-            <h2>直播与排位同时进行的特殊情况</h2>
+            <h2 id="sec-10">直播与排位同时进行的特殊情况</h2>
             <p>如果你在打排位的同时开播，不要为直播运行独立的字幕配置档案。使用单一配置档案，让 OBS 捕获包含字幕框的桌面画面即可。两个同时运行的覆盖层引擎会争夺输入焦点，重新引入 Lock Mode 设计用来消除的那种不稳定性。单档案策略同时保证了你的游戏体验和观众的观看体验。</p>
-            <p>关于在直播平台上配置字幕的更多细节，可参阅 <a href="article-18.html" style="color:#00b8ff;">面向主播的字幕配置指南</a>。</p>
+            <p>关于在直播平台上配置字幕的更多细节，可参阅 <a href="article-18.html" style="color:#0b6ad1;">面向主播的字幕配置指南</a>。</p>
 
-            <h2>字幕完美运行但比赛依然混乱怎么办</h2>
+            <h2 id="sec-11">字幕完美运行但比赛依然混乱怎么办</h2>
             <p>如果字幕正常工作，但每局对话依然一片混乱，问题出在沟通上，而不是渲染上。回头重读上方的队伍工作流章节，制定一份10个词条的词汇表并置顶。字幕层无法拯救结构混乱的报点，它只能让有结构的报点被更快解析。</p>
 
-            <h2>真实数据：锁定配置后的效果</h2>
+            <h2 id="sec-12">真实数据：锁定配置后的效果</h2>
             <p>来自一支 CS2 战队整个排位赛季的匿名数据：在战队锁定每个地图池专属字幕档案后，平均"重复报点"次数从每场 4.1 次降至 1.6 次。这一改进不来自功能变更，而来自消除配置差异。这也是为什么本指南如此强调"冻结"的原因——稳定性本身就是一种竞技优势。</p>
-            <p>想了解 Live Subtitles 如何在不同语音聊天平台上保持同等稳定性，可参阅 <a href="article-5.html" style="color:#00b8ff;">多语言语音聊天中的字幕策略</a>。</p>
+            <p>想了解 Live Subtitles 如何在不同语音聊天平台上保持同等稳定性，可参阅 <a href="article-5.html" style="color:#0b6ad1;">多语言语音聊天中的字幕策略</a>。</p>
 
-            <h2>相关资源</h2>
+            <h2 id="sec-13">相关资源</h2>
             <ul>
-                <li><a href="/zh/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode 字幕功能页面</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">全屏覆盖层故障排查手册</a></li>
-                <li><a href="article-18.html" style="color:#00b8ff;">面向主播的字幕配置指南</a></li>
-                <li><a href="article-5.html" style="color:#00b8ff;">多语言语音聊天中的字幕策略</a></li>
+                <li><a href="/zh/game-mode-subtitles.html" style="color:#0b6ad1;">Game Mode 字幕功能页面</a></li>
+                <li><a href="article-20.html" style="color:#0b6ad1;">全屏覆盖层故障排查手册</a></li>
+                <li><a href="article-18.html" style="color:#0b6ad1;">面向主播的字幕配置指南</a></li>
+                <li><a href="article-5.html" style="color:#0b6ad1;">多语言语音聊天中的字幕策略</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">在你的下一场对局中试用这套工作流</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Live Subtitles 为游戏、语音聊天和直播提供统一稳定的字幕流程，一次配置，全场景通用。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">从 Microsoft Store 下载</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">在你的下一场对局中试用这套工作流</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Live Subtitles 为游戏、语音聊天和直播提供统一稳定的字幕流程，一次配置，全场景通用。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">免费下载</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 条评价</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>适用于任何应用的实时字幕</h3>
+                <div class="explore-cols"><div><h5>会议与通话</h5><a href="/zh/zoom-live-captions.html">Zoom</a><a href="/zh/teams-live-captions.html">Microsoft Teams</a><a href="/zh/google-meet-live-captions.html">Google Meet</a><a href="/zh/webex-live-captions.html">Webex</a><a href="/zh/skype-live-captions.html">Skype</a><a href="/zh/slack-live-captions.html">Slack</a><a href="/zh/whatsapp-live-translation.html">WhatsApp</a><a href="/zh/telegram-subtitles.html">Telegram</a></div><div><h5>流媒体与社交</h5><a href="/zh/youtube-dual-subtitles.html">YouTube</a><a href="/zh/netflix-subtitles.html">Netflix</a><a href="/zh/twitch-live-captions.html">Twitch</a><a href="/zh/discord-live-captions.html">Discord</a><a href="/zh/tiktok-live-captions.html">TikTok</a><a href="/zh/instagram-live-captions.html">Instagram</a><a href="/zh/facebook-live-subtitles.html">Facebook</a><a href="/zh/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>游戏与创作者</h5><a href="/zh/obs-subtitles.html">OBS</a><a href="/zh/game-mode-subtitles.html">Game Mode</a><a href="/zh/steam-subtitles.html">Steam</a><a href="/zh/restream-subtitles.html">Restream</a><a href="/zh/vimeo-subtitles.html">Vimeo</a><a href="/zh/vlc-subtitles.html">VLC</a></div><div><h5>学习与工作</h5><a href="/zh/coursera-subtitles.html">Coursera</a><a href="/zh/udemy-live-captions.html">Udemy</a><a href="/zh/google-classroom-subtitles.html">Google Classroom</a><a href="/zh/linkedin-live-captions.html">LinkedIn</a><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/zh/" style="font-weight:600;text-decoration:none;">Live Subtitles 首页 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>相关阅读</h4>
+            <a class="s-item" href="article-1.html">双语字幕如何帮助您更快学习语言</a>
+            <a class="s-item" href="article-2.html">为什么字幕对语言学习很重要</a>
+            <a class="s-item" href="article-3.html">双语字幕学习法的跨文化应用</a>
+            <a class="s-item" href="article-4.html">为什么字幕对母语使用者也有用</a>
+            <a class="s-item" href="article-5.html">学习英语的双语字幕电影TOP-10推荐</a>
+            <a class="s-item" href="article-6.html">通过双语字幕视频学习语言时要避免的错误</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>适用于任何应用的实时字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">免费下载</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/zh/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

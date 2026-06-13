@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -49,14 +45,81 @@
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/fr/learning.webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
         .article { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        .article h1 { color: #00ff9d; }
-        .article h2 { color: #00b8ff; margin-top: 2rem; }
-        .article p { color: #eee; line-height: 1.7; }
+        .article h1 { color: #0a7f55; }
+        .article h2 { color: #0b6ad1; margin-top: 2rem; }
+        .article p { color: #2d333b; line-height: 1.7; }
         .lang-switch { margin-bottom: 2rem; }
-        .benefit-card { background: rgba(0,184,255,0.1); border-left: 4px solid #00b8ff; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+        .benefit-card { background: rgba(0,184,255,0.1); border-left: 4px solid #0b6ad1; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
         .tip-box { background: rgba(255,193,7,0.1); border-left: 4px solid #ffc107; padding: 1rem; margin: 1rem 0; border-radius: 4px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -101,20 +164,40 @@
     <link rel="preload" as="image" href="/articles/img/fr/learning.webp">
 </head>
 <body>
-    <div class="container article">
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Sommaire">
+        <div class="toc-inner">
+            <h4>Sommaire</h4>
+            <a href="#sec-1">La science des sous-titres et de l…</a>
+            <a href="#sec-2">Types de sous-titres : L1, L2 et b…</a>
+            <a href="#sec-3">Comment les sous-titres réduisent …</a>
+            <a href="#sec-4">Reconnaissance de motifs et appren…</a>
+            <a href="#sec-5">Les sous-titres selon les styles d…</a>
+            <a href="#sec-6">Applications concrètes</a>
+            <a href="#sec-7">Une stratégie progressive de sous-…</a>
+            <a href="#sec-8">Des bénéfices d'accessibilité au-d…</a>
+            <a href="#sec-9">Bien démarrer : recommandations pr…</a>
+            <a href="#sec-10">Conclusion</a>
+            </div>
+    </nav>
+    <main class="article-main">
+    <div class="container article-container">
         <div class="lang-switch">
-            <a href="/" style="color:#00b8ff;">Retour au site principal</a>
+            <a href="/" style="color:#0b6ad1;">Retour au site principal</a>
         </div>
         <h1>Pourquoi les sous-titres sont importants pour l'apprentissage des langues</h1>
-                <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Auteur : <a href="/about/team/sofia-almeida.html" rel="author" style="color:#00b8ff; text-decoration:none;">Sofia Almeida</a> &middot; responsable linguistique appliquée, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Mis à jour: 12 mai 2026</div>
+        <div class="article-date"><span class="reading-time" style="margin:0">15 min de lecture</span></div>
+                <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Auteur : <a href="/about/team/sofia-almeida.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Sofia Almeida</a> &middot; responsable linguistique appliquée, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Mis à jour: 12 mai 2026</div>
         <img class="article-hero" src="/articles/img/fr/learning.webp" alt="Sous-titres bilingues sur une leçon vidéo pour apprendre une langue" width="1280" height="674" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <p>Depuis des décennies, on répète aux apprenants que le chemin vers la maîtrise d'une langue passe par les manuels, les exercices de grammaire et les listes de vocabulaire. Ces outils ont leur utilité, mais un nombre croissant de travaux scientifiques met en lumière une méthode bien plus naturelle et efficace, souvent négligée : <b>regarder du contenu avec des sous-titres</b>. Que vous suiviez un film étranger, participiez à une réunion vidéo internationale ou écoutiez un podcast dans votre langue cible, les sous-titres comblent l'écart entre ce que vous entendez et ce que vous comprenez. Chaque contenu devient ainsi une véritable occasion d'apprendre.</p>
 
         <p>Cet article examine la science qui sous-tend l'apprentissage assisté par sous-titres, explore les différents types de sous-titres et leurs usages, puis propose un cadre pratique pour les intégrer à votre routine, quel que soit votre niveau.</p>
 
-        <h2>La science des sous-titres et de l'acquisition des langues</h2>
+        <details class="toc-mobile"><summary>Sommaire</summary><ol><li><a href="#sec-1">La science des sous-titres et de l'acquisition des langues</a></li><li><a href="#sec-2">Types de sous-titres : L1, L2 et bilingues</a></li><li><a href="#sec-3">Comment les sous-titres réduisent la charge cognitive et l'anxiété</a></li><li><a href="#sec-4">Reconnaissance de motifs et apprentissage de la grammaire</a></li><li><a href="#sec-5">Les sous-titres selon les styles d'apprentissage</a></li><li><a href="#sec-6">Applications concrètes</a></li><li><a href="#sec-7">Une stratégie progressive de sous-titres</a></li><li><a href="#sec-8">Des bénéfices d'accessibilité au-delà de l'apprentissage</a></li><li><a href="#sec-9">Bien démarrer : recommandations pratiques</a></li><li><a href="#sec-10">Conclusion</a></li></ol></details>
+            <h2 id="sec-1">La science des sous-titres et de l'acquisition des langues</h2>
 
         <h3>Traitement multimodal et mémoire</h3>
         <p>Le cerveau humain ne traite pas la langue par un seul canal. Lorsque vous regardez un contenu sous-titré, il gère simultanément l'<b>entrée auditive</b> (les mots prononcés), l'<b>entrée visuelle</b> (le texte affiché) et l'<b>entrée contextuelle</b> (les images, les expressions du visage, les situations). Ce traitement multimodal produit ce que les neuroscientifiques appellent l'<b>encodage redondant</b> : la même information est stockée par plusieurs voies, ce qui la rend bien plus facile à retrouver ensuite.</p>
@@ -133,7 +216,7 @@
         <h3>L'effet de segmentation</h3>
         <p>La langue parlée est un flux sonore continu : contrairement au texte écrit, il n'y a pas d'espaces entre les mots. L'une des tâches les plus difficiles consiste à <b>découper ce flux en mots distincts</b>, une compétence que les linguistes nomment la segmentation de la parole. Les sous-titres résolvent ce problème directement en montrant exactement où un mot finit et où le suivant commence. Avec le temps, le cerveau apprend à reconnaître ces frontières dans la parole seule, sans appui visuel. C'est pourquoi les utilisateurs de sous-titres obtiennent régulièrement de meilleurs résultats aux tests de compréhension orale.</p>
 
-        <h2>Types de sous-titres : L1, L2 et bilingues</h2>
+        <h2 id="sec-2">Types de sous-titres : L1, L2 et bilingues</h2>
 
         <p>Tous les sous-titres ne remplissent pas la même fonction. Comprendre les trois grands types et le moment où les employer est essentiel pour optimiser votre apprentissage.</p>
 
@@ -158,7 +241,7 @@
             <li><b>Limite :</b> peut sembler chargé visuellement et exige un outil compatible avec l'affichage bilingue.</li>
         </ul>
 
-        <h2>Comment les sous-titres réduisent la charge cognitive et l'anxiété</h2>
+        <h2 id="sec-3">Comment les sous-titres réduisent la charge cognitive et l'anxiété</h2>
 
         <p>L'un des bénéfices les moins discutés, mais des plus importants, concerne la <b>dimension émotionnelle de l'apprentissage</b>. L'anxiété langagière — la peur de ne pas comprendre, de se tromper, de se sentir perdu — est l'un des principaux obstacles à l'acquisition. Les travaux de Horwitz, Horwitz et Cope (1986) ont établi que l'anxiété nuit directement au traitement et à la mémorisation de la langue.</p>
 
@@ -166,7 +249,7 @@
 
         <p>Du point de vue de la charge cognitive, les sous-titres aident aussi en <b>répartissant l'effort de traitement</b> entre les canaux visuel et auditif. Au lieu que l'audition porte seule tout le poids de la compréhension, la vision partage la charge. C'est crucial pour les passages rapides ou complexes, où le canal auditif seul peut être débordé.</p>
 
-        <h2>Reconnaissance de motifs et apprentissage de la grammaire</h2>
+        <h2 id="sec-4">Reconnaissance de motifs et apprentissage de la grammaire</h2>
 
         <p>La grammaire est souvent enseignée comme un ensemble de règles explicites à mémoriser. Pourtant, la linguistique fondée sur l'usage suggère qu'une grande partie du savoir grammatical s'acquiert par <b>reconnaissance de motifs</b> : l'exposition à des milliers d'exemples permet au cerveau d'en extraire seul les régularités.</p>
 
@@ -178,7 +261,7 @@
             <li><b>Registre et formalité :</b> le texte écrit rend plus facile de repérer le passage d'un langage formel à un langage familier, ce qui développe la compétence sociolinguistique.</li>
         </ul>
 
-        <h2>Les sous-titres selon les styles d'apprentissage</h2>
+        <h2 id="sec-5">Les sous-titres selon les styles d'apprentissage</h2>
 
         <h3>Apprenants visuels</h3>
         <p>Si vous apprenez mieux en voyant, les sous-titres sont l'outil idéal. Le texte écrit offre un <b>repère visuel concret</b> pour des sons abstraits. Vous voyez les schémas orthographiques, repérez préfixes et suffixes, et comparez visuellement les structures entre langues. Beaucoup d'apprenants visuels disent « photographier » les lignes de sous-titres dans leur mémoire et se rappeler un mot en visualisant l'endroit où il est apparu.</p>
@@ -192,7 +275,7 @@
         <h3>Apprenants kinesthésiques</h3>
         <p>Les sous-titres ne sont pas physiques en soi, mais ils se combinent à des techniques actives comme le <b>shadowing</b> (répéter le dialogue à voix haute en temps réel) ou la <b>dictée</b> (mettre la vidéo en pause, écrire ce que l'on a entendu, puis vérifier avec les sous-titres). Ces gestes, vérifiés par le texte, bouclent un cycle d'apprentissage complet.</p>
 
-        <h2>Applications concrètes</h2>
+        <h2 id="sec-6">Applications concrètes</h2>
 
         <h3>Films et séries</h3>
         <p>L'usage le plus répandu. Choisissez un contenu qui vous plaît vraiment et <b>regardez régulièrement</b>. La constance compte plus que l'intensité : trente minutes de visionnage sous-titré par jour donnent de meilleurs résultats sur trois mois qu'un marathon de six heures une fois par mois. Les séries sont particulièrement efficaces, car les personnages récurrents emploient un vocabulaire constant, ce qui crée une répétition espacée naturelle. Pour approfondir, lisez <a href="article-3.html">comment regarder régulièrement des films en langue étrangère améliore votre niveau</a>.</p>
@@ -209,7 +292,7 @@
         <h3>Musique et paroles</h3>
         <p>Les chansons sont excellentes pour apprendre, car la mélodie favorise la mémorisation. Afficher les paroles en sous-titres pendant l'écoute aide à <b>décoder un chant rapide ou peu clair</b>, à apprendre des expressions familières et à associer les mots à des contextes émotionnels mémorables.</p>
 
-        <h2>Une stratégie progressive de sous-titres</h2>
+        <h2 id="sec-7">Une stratégie progressive de sous-titres</h2>
 
         <p>L'approche la plus efficace n'est pas figée : elle évolue avec votre niveau. Voici une <b>progression en quatre étapes</b> qui vous mène du soutien total à la compréhension autonome.</p>
 
@@ -229,7 +312,7 @@
             <strong>Conseil :</strong> ne sautez pas d'étape. Rester un peu plus longtemps à une étape confortable vaut mieux que de passer trop tôt à un soutien insuffisant, ce qui ranime l'anxiété et freine les progrès.
         </div>
 
-        <h2>Des bénéfices d'accessibilité au-delà de l'apprentissage</h2>
+        <h2 id="sec-8">Des bénéfices d'accessibilité au-delà de l'apprentissage</h2>
 
         <p>Si cet article porte sur l'acquisition des langues, les sous-titres servent un but bien plus large. Ils sont <b>indispensables aux personnes sourdes et malentendantes</b>, leur donnant accès à un contenu audio autrement inaccessible. Ils aident aussi les personnes souffrant de troubles du traitement auditif, de difficultés d'attention ou de différences cognitives à s'approprier les médias à leur rythme.</p>
 
@@ -237,7 +320,7 @@
 
         <p>Ainsi, les outils offrant des sous-titres en temps réel de qualité — comme l'application <b>Live Subtitles</b>, qui génère des sous-titres pour tout audio de votre appareil — servent non seulement les apprenants, mais aussi quiconque tire profit de voir les mots à mesure qu'ils sont prononcés.</p>
 
-        <h2>Bien démarrer : recommandations pratiques</h2>
+        <h2 id="sec-9">Bien démarrer : recommandations pratiques</h2>
 
         <ul>
             <li><b>Commencez aujourd'hui, pas demain.</b> La meilleure stratégie est celle que vous appliquez vraiment. Choisissez une série en attente et activez les sous-titres.</li>
@@ -250,23 +333,69 @@
 
         <p>Pour bien choisir entre L1, L2 et bilingue selon votre niveau, notre guide détaillé sur <a href="article-10.html">la comparaison des types de sous-titres</a> vous aidera à décider.</p>
 
-        <h2>Conclusion</h2>
+        <h2 id="sec-10">Conclusion</h2>
 
         <p>Les sous-titres sont bien plus qu'un confort ou un simple module d'accessibilité. Ce sont un <b>outil d'apprentissage validé par la science</b> qui active plusieurs canaux cognitifs, réduit l'anxiété, accélère l'acquisition du vocabulaire et construit l'intuition grammaticale par reconnaissance naturelle de motifs. Que vous soyez un apprenant visuel qui a besoin de voir les mots écrits, un apprenant auditif qui veut confirmer ce qu'il entend ou un apprenant kinesthésique qui associe sous-titres et répétition active, il existe une stratégie adaptée à votre style.</p>
 
         <p>La recherche est claire et les obstacles pratiques n'ont jamais été aussi faibles. Avec les outils modernes qui génèrent des sous-titres en temps réel pour toute source audio, vous n'avez plus à chercher des fichiers de sous-titres tout faits ni à vous limiter aux grandes plateformes de streaming. Chaque conversation, cours, podcast ou vidéo devient une leçon potentielle.</p>
 
         <div class="benefit-card" style="text-align:center;">
-            <h3 style="color:#00b8ff; margin-top:0;">Essayez Live Subtitles gratuitement</h3>
+            <h3 style="color:#0b6ad1; margin-top:0;">Essayez Live Subtitles gratuitement</h3>
             <p style="margin-bottom:1.2rem;">Sous-titres bilingues, reconnaissance vocale et traduction en temps réel dans n'importe quelle application. Fonctionne avec YouTube, Netflix, Zoom et plus de 50 autres applications.</p>
-            <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display:inline-block; padding:0.8rem 2rem; background:linear-gradient(135deg,#00ff9d,#00b8ff); color:#0a0a0a; text-decoration:none; border-radius:8px; font-weight:600;">Télécharger depuis le Microsoft Store</a>
+            <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display:inline-block; padding:0.8rem 2rem; background:linear-gradient(135deg,#00ff9d,#00b8ff); color:#1f2328; text-decoration:none; border-radius:8px; font-weight:600;" class="js-store-cta" data-os-label="1">Télécharger gratuitement</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 avis</div>
         </div>
 
         <p>Il ne vous reste plus qu'à appuyer sur lecture.</p>
 
         <div class="text-center mt-5">
-            <a href="./" style="color:#00ff9d;">&larr; Retour aux articles</a>
+            <a href="./" style="color:#0a7f55;">&larr; Retour aux articles</a>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Sous-titres en direct pour toute application</h3>
+                <div class="explore-cols"><div><h5>Réunions et appels</h5><a href="/fr/zoom-live-captions.html">Zoom</a><a href="/fr/teams-live-captions.html">Microsoft Teams</a><a href="/fr/google-meet-live-captions.html">Google Meet</a><a href="/fr/webex-live-captions.html">Webex</a><a href="/fr/skype-live-captions.html">Skype</a><a href="/fr/slack-live-captions.html">Slack</a><a href="/fr/whatsapp-live-translation.html">WhatsApp</a><a href="/fr/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming et réseaux</h5><a href="/fr/youtube-dual-subtitles.html">YouTube</a><a href="/fr/netflix-subtitles.html">Netflix</a><a href="/fr/twitch-live-captions.html">Twitch</a><a href="/fr/discord-live-captions.html">Discord</a><a href="/fr/tiktok-live-captions.html">TikTok</a><a href="/fr/instagram-live-captions.html">Instagram</a><a href="/fr/facebook-live-subtitles.html">Facebook</a><a href="/fr/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Jeux et créateurs</h5><a href="/fr/obs-subtitles.html">OBS</a><a href="/fr/game-mode-subtitles.html">Game Mode</a><a href="/fr/steam-subtitles.html">Steam</a><a href="/fr/restream-subtitles.html">Restream</a><a href="/fr/vimeo-subtitles.html">Vimeo</a><a href="/fr/vlc-subtitles.html">VLC</a></div><div><h5>Études et travail</h5><a href="/fr/coursera-subtitles.html">Coursera</a><a href="/fr/udemy-live-captions.html">Udemy</a><a href="/fr/google-classroom-subtitles.html">Google Classroom</a><a href="/fr/linkedin-live-captions.html">LinkedIn</a><a href="/fr/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/fr/" style="font-weight:600;text-decoration:none;">Accueil Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>À lire aussi</h4>
+            <a class="s-item" href="article-1.html">Comment les sous-titres doubles vous aident Г apprendre le…</a>
+            <a class="s-item" href="article-3.html">Comment regarder rГ©guliГЁrement des films en langue Г©tra…</a>
+            <a class="s-item" href="article-4.html">Pourquoi les sous-titres sont utiles même pour les locuteu…</a>
+            <a class="s-item" href="article-5.html">TOP-10 des films avec sous-titres doubles pour apprendre l…</a>
+            <a class="s-item" href="article-6.html">Erreurs Г Г©viter lors de l'apprentissage des langues par …</a>
+            <a class="s-item" href="article-7.html">Comment utiliser les sous-titres doubles pour l'apprentiss…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Sous-titres en direct pour toute application.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Télécharger gratuitement</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Haut de page" title="Haut de page">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/fr/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html> 

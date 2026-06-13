@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="تعليقات المذيعين في 2026: سير عمل OBS وTwitch وYouTube Live">
     <meta name="twitter:description" content="أضف ترجمة فورية احترافية لبثك المباشر على Twitch وYouTube وOBS: قارن الأدوات المتاحة، تجنّب أخطاء التأخير، وانطلق في دقائق مع Live Subtitles.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ar/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-right: 2px solid #e6e8eb; padding-right: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-right: 2px solid transparent; margin-right: -1rem; padding-right: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-right-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,12 +150,29 @@
     <link rel="preload" as="image" href="/articles/img/ar/games.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="المحتويات">
+        <div class="toc-inner">
+            <h4>المحتويات</h4>
+            <a href="#sec-1">ثلاثة مصادر صوتية، ثلاثة وجهات للت…</a>
+            <a href="#sec-2">مقارنة أدوات التعليقات للمذيعين 2026</a>
+            <a href="#sec-3">كيفية الاختيار حسب نوع البث</a>
+            <a href="#sec-4">قائمة فحص إعداد ما قبل البث (10 دق…</a>
+            <a href="#sec-5">كيفية إعداد تراكب OBS مع Live Subt…</a>
+            <a href="#sec-6">مزالق التعليقات الشائعة للمذيعين و…</a>
+            <a href="#sec-7">التعليقات كأداة إتاحة وتوسيع الجمهور</a>
+            <a href="#sec-8">الأسئلة الشائعة</a>
+            <a href="#sec-9">المراجع</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← العودة إلى المقالات</a>
         <h1 class="article-title" itemprop="headline">تعليقات المذيعين في 2026: سير عمل OBS وTwitch وYouTube Live</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 مايو 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">الكاتب: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; مهندس واجهات الألعاب, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">آخر تحديث: 28 مايو 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 مايو 2026<span class="reading-time">10 دقيقة قراءة</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">الكاتب: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; مهندس واجهات الألعاب, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">آخر تحديث: 28 مايو 2026</div>
         <img class="article-hero" src="/articles/img/ar/games.webp" alt="تعليقات حية مغطاة على إعداد بث Twitch" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
@@ -101,7 +180,8 @@
 
             <p>في 2026، وصلت أدوات التعليقات المدعومة بالذكاء الاصطناعي إلى مستوى دقة يبرر الاعتماد عليها في البث المباشر — لكن الإعداد الصحيح لا يزال يستغرق عشر دقائق، ويحتاج إلى قرارات واعية بشأن مصدر الصوت وموضع التراكب وأداة التعليق المناسبة لنوع بثك. هذا الدليل يضعك في المسار الصحيح من البداية.</p>
 
-            <h2>ثلاثة مصادر صوتية، ثلاثة وجهات للتعليقات</h2>
+            <details class="toc-mobile"><summary>المحتويات</summary><ol><li><a href="#sec-1">ثلاثة مصادر صوتية، ثلاثة وجهات للتعليقات</a></li><li><a href="#sec-2">مقارنة أدوات التعليقات للمذيعين 2026</a></li><li><a href="#sec-3">كيفية الاختيار حسب نوع البث</a></li><li><a href="#sec-4">قائمة فحص إعداد ما قبل البث (10 دقائق)</a></li><li><a href="#sec-5">كيفية إعداد تراكب OBS مع Live Subtitles خطوة بخطوة</a></li><li><a href="#sec-6">مزالق التعليقات الشائعة للمذيعين وكيفية تجنبها</a></li><li><a href="#sec-7">التعليقات كأداة إتاحة وتوسيع الجمهور</a></li><li><a href="#sec-8">الأسئلة الشائعة</a></li><li><a href="#sec-9">المراجع</a></li></ol></details>
+            <h2 id="sec-1">ثلاثة مصادر صوتية، ثلاثة وجهات للتعليقات</h2>
             <p>جودة تعليقاتك لن تتجاوز جودة مصدر الصوت الذي تقرؤه. هذه نقطة البداية الأساسية التي يتجاهلها كثير من المذيعين المبتدئين:</p>
             <ul>
                 <li><strong>تعليقات الميكروفون فقط:</strong> تقرأ صوتك بنقاء تام وتتجاهل صوت اللعبة وضجيج البيئة. هذا الخيار الأفضل لبثوث "المحادثة الخالصة" (Just Chatting وIRL والبودكاست). يُحقق أقل تأخير لأن نموذج التعرف على الكلام يعالج صوتًا واحدًا محددًا فقط. عيبه الوحيد أن حوار اللعبة لا يُترجم.</li>
@@ -109,7 +189,7 @@
                 <li><strong>تعليقات لكل مسار (per-track):</strong> مسارات صوت OBS مُوجَّهة بشكل منفصل إلى أداة التعليقات باستخدام أجهزة صوت افتراضية. الخيار الأفضل للبثوث التعاونية أو الـ collab حيث تريد الحفاظ على القدرة على تمييز المتحدثين الفرديين في النص. يتطلب برنامجًا مثل VB-Audio Virtual Cable أو Voicemeeter لتوجيه الصوت بدقة.</li>
             </ul>
 
-            <h2>مقارنة أدوات التعليقات للمذيعين 2026</h2>
+            <h2 id="sec-2">مقارنة أدوات التعليقات للمذيعين 2026</h2>
             <p>الجدول التالي يلخص الخيارات الأربعة الرئيسية مع نقاط قوة وقيود كل منها. لا توجد أداة واحدة تناسب جميع الحالات.</p>
             <table>
                 <thead>
@@ -128,7 +208,7 @@
                 </tbody>
             </table>
 
-            <h2>كيفية الاختيار حسب نوع البث</h2>
+            <h2 id="sec-3">كيفية الاختيار حسب نوع البث</h2>
             <p>النوع الجمهور الذي تستهدفه يحدد سير العمل الأنسب. إليك ثلاثة سيناريوهات شائعة مع توصية واضحة لكل منها:</p>
 
             <h3>مذيعو Just Chatting وIRL</h3>
@@ -140,7 +220,7 @@
             <h3>المذيعون ذوو الجمهور متعدد اللغات</h3>
             <p>استخدم طبقة تعليقات سطح المكتب التي تدعم الترجمة الفورية إلى جانب لغة المصدر. تطبيق <strong>Live Subtitles</strong> يتيح هذا بالضبط: يُنشئ نافذة تراكب شفافة على شاشتك تعرض التعليق الأصلي والترجمة في آنٍ معًا، ثم تضيف هذه النافذة كـ"مصدر نافذة" في OBS لتحترق في البث. المشاهدون في أي منطقة جغرافية يرون التعليقات مباشرةً دون الحاجة إلى تفعيل CC.</p>
 
-            <h2>قائمة فحص إعداد ما قبل البث (10 دقائق)</h2>
+            <h2 id="sec-4">قائمة فحص إعداد ما قبل البث (10 دقائق)</h2>
             <p>عشر دقائق من الإعداد قبل كل بث توفر عليك مواقف محرجة أمام آلاف المشاهدين:</p>
             <ol>
                 <li><strong>فصل المسارات الصوتية:</strong> تأكد من أن مصدر الميكروفون ومصدر صوت اللعبة مُعيَّنان على مسارات OBS منفصلة (Track 1 للميكروفون، Track 2 للعبة مثلًا). هذا يُمكّنك لاحقًا من توجيه كل مسار بشكل مستقل.</li>
@@ -150,10 +230,11 @@
                 <li><strong>مراجعة سيناريوهات الفشل:</strong> ماذا يحدث لو توقف برنامج التعليقات فجأة؟ هل سيبقى البث يعمل؟ تأكد أن تعطل أداة التعليقات لا يُوقف البث أو OBS.</li>
             </ol>
 
-            <h2>كيفية إعداد تراكب OBS مع Live Subtitles خطوة بخطوة</h2>
+            <h2 id="sec-5">كيفية إعداد تراكب OBS مع Live Subtitles خطوة بخطوة</h2>
             <p>هذا الإعداد يجمع أفضل ما في الأدوات المتاحة: دقة تعليقات الذكاء الاصطناعي من Live Subtitles مع مرونة OBS في التخصيص البصري:</p>
             <ol>
-                <li>حمّل تطبيق <strong>Live Subtitles</strong> من <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">متجر Microsoft</a> وشغّله على Windows.</li>
+                <li>حمّل تطبيق <strong>Live Subtitles</strong> من <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">تنزيل مجاني</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 تقييم</div> وشغّله على Windows.</li>
                 <li>في إعدادات التطبيق، اختر "صوت النظام" كمصدر إذا كنت تريد تعليق حوار اللعبة، أو "الميكروفون" للتعليق على صوتك فقط.</li>
                 <li>فعّل الترجمة الفورية واختر اللغة المستهدفة إذا كنت تريد ترجمة متزامنة.</li>
                 <li>في OBS، أضف مصدرًا جديدًا من نوع "التقاط نافذة" (Window Capture) واختر نافذة Live Subtitles.</li>
@@ -161,7 +242,7 @@
                 <li>ضع الطبقة الجديدة في أسفل الشاشة أو الزاوية التي لا تتداخل مع عناصر اللعبة المهمة.</li>
             </ol>
 
-            <h2>مزالق التعليقات الشائعة للمذيعين وكيفية تجنبها</h2>
+            <h2 id="sec-6">مزالق التعليقات الشائعة للمذيعين وكيفية تجنبها</h2>
             <p>معظم مشاكل التعليقات في البث المباشر متكررة ويمكن تجنبها إذا عرفت مسبقًا ما الذي تبحث عنه:</p>
             <ul>
                 <li><strong>التداخل مع HUD:</strong> في اللحظات الحاسمة (Kill Feed، الخريطة، مؤشر الصحة)، تحجب التعليقات المعلومات الحيوية على الشاشة. الحل: قم برسم مناطق "محظورة" على الشاشة حيث توجد عناصر HUD دائمة، وتأكد ألا يقترب صندوق التعليقات من هذه المناطق في أي دقة شاشة.</li>
@@ -171,43 +252,88 @@
                 <li><strong>تعليقات تُفسد نكات التوقيت:</strong> إذا كنت تعتمد على توقيت الكوميديا في بثك، تأكد أن التأخير أقل من ثانية ونصف. أي تأخير أكثر من ذلك يُظهر النص بعد أن يضحك جمهورك بالفعل، وهذا يكسر الإيقاع.</li>
             </ul>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">نصيحة الاحترافيين:</strong> قبل الذهاب مباشرًا لأول مرة مع أي إعداد تعليقات جديد، ابث لمدة 15 دقيقة على Twitch أو YouTube وأنت تلعب — بدون إعلان — وراقب التسجيل بعدها. ستجد مشاكل الموضع والتأخير والدقة كلها دفعة واحدة دون ضغط جمهور حي.
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">نصيحة الاحترافيين:</strong> قبل الذهاب مباشرًا لأول مرة مع أي إعداد تعليقات جديد، ابث لمدة 15 دقيقة على Twitch أو YouTube وأنت تلعب — بدون إعلان — وراقب التسجيل بعدها. ستجد مشاكل الموضع والتأخير والدقة كلها دفعة واحدة دون ضغط جمهور حي.
             </div>
 
-            <h2>التعليقات كأداة إتاحة وتوسيع الجمهور</h2>
+            <h2 id="sec-7">التعليقات كأداة إتاحة وتوسيع الجمهور</h2>
             <p>يفكر معظم المذيعين في التعليقات بوصفها "ميزة إضافية" اختيارية، لكن الأرقام تقول غير ذلك. وفقًا لدراسات الإتاحة الرقمية، ما بين 15 و20 بالمئة من المشاهدين يشاهدون المقاطع المرئية بالصوت مكتومًا في بيئات عامة أو عمل. التعليقات ليست فقط لمن يعانون من ضعف السمع — هي أداة توسيع جمهور حقيقية.</p>
             <p>بالنسبة للمذيعين العرب تحديدًا، يفتح دعم اللغة العربية في أدوات التعليقات فرصة مزدوجة: يمكنك بث بالعربية وتوليد تعليقات إنجليزية تلقائيًا لتوسيع جمهورك لغير العرب، أو العكس — البث بالإنجليزية وتقديم تعليقات عربية لجمهورك في المنطقة. تطبيق Live Subtitles يدعم كلا الاتجاهين بفضل محرك الترجمة المدمج.</p>
-            <p>يمكنك الاستعانة بمقال <a href="article-25.html" style="color:#00b8ff; text-decoration:none;">كيف تعمل تعليقات الذكاء الاصطناعي ومتى تستخدمها</a> لفهم التقنية بشكل أعمق، أو مقال <a href="article-23.html" style="color:#00b8ff; text-decoration:none;">تطبيقات الترجمة الصوتية الفورية: مقارنة حسب الاستخدام</a> إذا كان هدفك الوصول لجمهور دولي بلغات متعددة.</p>
+            <p>يمكنك الاستعانة بمقال <a href="article-25.html" style="color:#0b6ad1; text-decoration:none;">كيف تعمل تعليقات الذكاء الاصطناعي ومتى تستخدمها</a> لفهم التقنية بشكل أعمق، أو مقال <a href="article-23.html" style="color:#0b6ad1; text-decoration:none;">تطبيقات الترجمة الصوتية الفورية: مقارنة حسب الاستخدام</a> إذا كان هدفك الوصول لجمهور دولي بلغات متعددة.</p>
 
-            <h2>الأسئلة الشائعة</h2>
+            <h2 id="sec-8">الأسئلة الشائعة</h2>
             <p><strong>هل يرى مشاهدو Twitch التعليقات تلقائيًا؟</strong><br>لا. نظام Closed Captions في Twitch يتطلب من المشاهد تفعيل CC يدويًا من قائمة المشغل. علاوة على ذلك، يحتاج المُشفِّر الخاص بك إلى إرسال تدفق تعليقات بصيغة CEA-608 أو CEA-708، وهو ما لا تدعمه جميع برامج البث. إذا أردت أن يرى كل مشاهد التعليقات فور بدء البث، فالتراكب المحروق في OBS هو الضمان الوحيد.</p>
             <p><strong>هل ستضر التعليقات بأداء الجهاز والبث؟</strong><br>على أجهزة الحاسوب الحديثة (معالجات من الجيل العاشر فأحدث)، لا تتجاوز تكلفة معالجة التعليقات 3 إلى 5 بالمئة من الـ CPU. إذا كنت على ميزانية معالج ضيقة أو تبث بدقة عالية، يمكنك استخدام نموذج ASR أصغر (مثل tiny أو base من نماذج Whisper) أو توجيه معالجة التعليقات إلى جهاز ثانٍ. تطبيق Live Subtitles محسّن للأجهزة المتوسطة ولا يُثقل الجلسة.</p>
             <p><strong>هل يمكنني التعليق على بث بلغتين في وقت واحد؟</strong><br>نعم، وهذا ممكن عبر طبقة تعليقات سطح المكتب التي تدعم وضع "المصدر + الهدف" — أي إظهار التعليق الأصلي والترجمة في نفس الوقت. بعد إضافة نافذة التطبيق كمصدر في OBS وحرقها في البث، يرى كل مشاهد التعليقات باللغتين معًا دون أي إجراء من جانبه.</p>
             <p><strong>ما أفضل موضع لصندوق التعليقات في بثوث الألعاب؟</strong><br>أسفل الشاشة بشريط عرضي ثابت هو الموضع المعياري لأنه يتجنب تعارض HUD (الذي عادةً في الزوايا الأربع والحواف). تجنب المنتصف السفلي في الألعاب التي تُظهر مؤشرات النقاط أو رسائل الهدف أسفل الشاشة. اختبر كل لعبة جديدة على حدة.</p>
 
-            <h2>المراجع</h2>
+            <h2 id="sec-9">المراجع</h2>
             <ul>
-                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Twitch — توثيق Closed Captions الرسمي</a></li>
-                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">OBS Studio — الموقع الرسمي</a></li>
-                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">مساعدة YouTube — التعليقات التلقائية في البث المباشر</a></li>
+                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Twitch — توثيق Closed Captions الرسمي</a></li>
+                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">OBS Studio — الموقع الرسمي</a></li>
+                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">مساعدة YouTube — التعليقات التلقائية في البث المباشر</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">قراءات ذات صلة</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">قراءات ذات صلة</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">التعليقات الحية في 2026: كيف تعمل تعليقات الذكاء الاصطناعي ومتى تستخدمها</a></li>
-                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">تحويل الصوت إلى نص في 2026: مقارنة بين التفريغ الفوري والمجمّع</a></li>
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">تطبيقات الترجمة الصوتية في 2026: مقارنة الأدوات الفورية حسب الاستخدام</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">التعليقات الحية في 2026: كيف تعمل تعليقات الذكاء الاصطناعي ومتى تستخدمها</a></li>
+                    <li><a href="article-24.html" style="color: #0b6ad1; text-decoration: none;">تحويل الصوت إلى نص في 2026: مقارنة بين التفريغ الفوري والمجمّع</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">تطبيقات الترجمة الصوتية في 2026: مقارنة الأدوات الفورية حسب الاستخدام</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">تعليقات بث تلتقط صوت اللعبة وصوتك معًا</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">تعليقات صوت النظام مع ترجمة فورية لأكثر من 50 لغة — أضف نافذة Live Subtitles كمصدر في OBS وابدأ بثًا مع تعليقات احترافية في أقل من 10 دقائق.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">تنزيل من متجر Microsoft</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">تعليقات بث تلتقط صوت اللعبة وصوتك معًا</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">تعليقات صوت النظام مع ترجمة فورية لأكثر من 50 لغة — أضف نافذة Live Subtitles كمصدر في OBS وابدأ بثًا مع تعليقات احترافية في أقل من 10 دقائق.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">تنزيل مجاني</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>ترجمة حية لأي تطبيق</h3>
+                <div class="explore-cols"><div><h5>الاجتماعات والمكالمات</h5><a href="/ar/zoom-live-captions.html">Zoom</a><a href="/ar/teams-live-captions.html">Microsoft Teams</a><a href="/ar/google-meet-live-captions.html">Google Meet</a><a href="/ar/webex-live-captions.html">Webex</a><a href="/ar/skype-live-captions.html">Skype</a><a href="/ar/slack-live-captions.html">Slack</a><a href="/ar/whatsapp-live-translation.html">WhatsApp</a><a href="/ar/telegram-subtitles.html">Telegram</a></div><div><h5>البث والتواصل</h5><a href="/ar/youtube-dual-subtitles.html">YouTube</a><a href="/ar/netflix-subtitles.html">Netflix</a><a href="/ar/twitch-live-captions.html">Twitch</a><a href="/ar/discord-live-captions.html">Discord</a><a href="/ar/tiktok-live-captions.html">TikTok</a><a href="/ar/instagram-live-captions.html">Instagram</a><a href="/ar/facebook-live-subtitles.html">Facebook</a><a href="/ar/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>الألعاب والمبدعون</h5><a href="/ar/obs-subtitles.html">OBS</a><a href="/ar/game-mode-subtitles.html">Game Mode</a><a href="/ar/steam-subtitles.html">Steam</a><a href="/ar/restream-subtitles.html">Restream</a><a href="/ar/vimeo-subtitles.html">Vimeo</a><a href="/ar/vlc-subtitles.html">VLC</a></div><div><h5>التعلّم والعمل</h5><a href="/ar/coursera-subtitles.html">Coursera</a><a href="/ar/udemy-live-captions.html">Udemy</a><a href="/ar/google-classroom-subtitles.html">Google Classroom</a><a href="/ar/linkedin-live-captions.html">LinkedIn</a><a href="/ar/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ar/" style="font-weight:600;text-decoration:none;">← الصفحة الرئيسية لـ Live Subtitles</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>اقرأ أيضًا</h4>
+            <a class="s-item" href="article-1.html">كيف تساعد الترجمات المزدوجة في تعلم اللغات بشكل أسرع</a>
+            <a class="s-item" href="article-2.html">لماذا تعتبر الترجمة مهمة لتعلم اللغات</a>
+            <a class="s-item" href="article-3.html">الترجمة المزدوجة وتعلم اللغات للأطفال والمراهقين</a>
+            <a class="s-item" href="article-4.html">لماذا تعتبر الترجمة مفيدة حتى للمتحدثين الأصليين</a>
+            <a class="s-item" href="article-5.html">أفضل 10 أفلام بترجمة مزدوجة لتعلم الإنجليزية</a>
+            <a class="s-item" href="article-6.html">أخطاء يجب تجنبها عند تعلم اللغات من خلال الفيديوهات بالترج…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>ترجمة حية لأي تطبيق.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">تنزيل مجاني</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="إلى الأعلى" title="إلى الأعلى">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ar/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

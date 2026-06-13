@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="Google Meet vs Zoom vs Teams Translated Captions in 2026">
     <meta name="twitter:description" content="2026 comparison of translated captions in Google Meet, Zoom, and Teams: language coverage, rollout limits, and which workflow fits global teams.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/meetings.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,36 @@
     <link rel="preload" as="image" href="/articles/img/en/meetings.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">How each platform handles translat…</a>
+            <a href="#sec-2">Side-by-side comparison table</a>
+            <a href="#sec-3">Where built-in captions are suffic…</a>
+            <a href="#sec-4">Where a cross-app workflow outperf…</a>
+            <a href="#sec-5">Decision framework for managers an…</a>
+            <a href="#sec-6">Implementation risks to watch</a>
+            <a href="#sec-7">Practical recommendation by organi…</a>
+            <a href="#sec-8">Frequently asked questions</a>
+            <a href="#sec-9">References and further reading</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Google Meet vs Zoom vs Teams Translated Captions in 2026</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-02-18">February 18, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#00b8ff; text-decoration:none;">Lukas Bergström</a> &middot; Real-time Pipelines Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-02-18">February 18, 2026<span class="reading-time">12 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Lukas Bergström</a> &middot; Real-time Pipelines Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/meetings.webp" alt="Live captions during a multilingual video meeting" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Teams searching for <strong>translated captions</strong> usually ask one practical question: should we rely on built-in captions inside each meeting tool, or maintain one external workflow that spans all communication contexts? The honest answer depends on your platform mix, language pairs, admin maturity, and how much of your work actually happens inside scheduled video calls. This deep-dive covers Google Meet, Zoom, and Microsoft Teams side by side — not as a feature checklist, but as an operational guide for IT leads and team managers who need to make a durable decision in 2026.</p>
 
-            <h2>How each platform handles translated captions in 2026</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">How each platform handles translated captions in 2026</a></li><li><a href="#sec-2">Side-by-side comparison table</a></li><li><a href="#sec-3">Where built-in captions are sufficient</a></li><li><a href="#sec-4">Where a cross-app workflow outperforms native options</a></li><li><a href="#sec-5">Decision framework for managers and IT leads</a></li><li><a href="#sec-6">Implementation risks to watch</a></li><li><a href="#sec-7">Practical recommendation by organization type</a></li><li><a href="#sec-8">Frequently asked questions</a></li><li><a href="#sec-9">References and further reading</a></li></ol></details>
+            <h2 id="sec-1">How each platform handles translated captions in 2026</h2>
 
             <h3>Google Meet: widest native language coverage</h3>
             <p>Google Meet's translated captions reached support for up to 69 languages in a June 2025 update, making it the broadest native option among the three platforms today. The feature is available on Workspace Business Standard, Business Plus, Enterprise, and Education tiers — it is not included in the free consumer tier. Captions are generated in real time on Google's speech pipeline and then machine-translated before display; the two-step process introduces a small lag (typically 1–2 seconds) that increases slightly for language pairs with structural differences, such as Japanese or Arabic versus English.</p>
@@ -108,13 +188,13 @@
             <h3>Zoom: deep enterprise controls with 46 languages</h3>
             <p>Zoom's translated captions cover 46 languages and are available on Business, Business Plus, Enterprise, and Education plans. The feature requires account-level enablement by the admin and then individual user activation — a two-step rollout that frequently causes confusion when one side is enabled and the other is not. Once live, quality is generally comparable to Meet for common European languages; less-resourced languages such as Tagalog or Malay have higher error rates across both platforms.</p>
             <p>Where Zoom stands out is in its ecosystem of complementary controls: breakout room caption continuity, cloud recording with translated subtitle files (.vtt format), and an API that lets developers pull real-time caption streams for archival or compliance. For legal, finance, or regulated-industry teams that need a durable record of what was said and translated, Zoom's export capabilities are genuinely ahead of Meet's out-of-the-box options.</p>
-            <p>For a full step-by-step rollout plan covering Zoom's admin console and user settings, see <a href="article-12.html" style="color:#00b8ff;">Zoom Live Captions Rollout: Team Operations Playbook</a>.</p>
+            <p>For a full step-by-step rollout plan covering Zoom's admin console and user settings, see <a href="article-12.html" style="color:#0b6ad1;">Zoom Live Captions Rollout: Team Operations Playbook</a>.</p>
 
             <h3>Microsoft Teams: richest governance, most complex rollout</h3>
             <p>Teams' live translated captions require a Microsoft 365 E3, E5, or equivalent license, a correctly configured language policy in the Teams admin center, and — in some tenants — explicit per-user policy assignment. The feature is not on by default even when the license permits it, which catches many organizations mid-deployment. Once configured correctly, translated captions work well in standard meetings; they are not yet available in Live Events (now called Town Halls) in all regions.</p>
-            <p>Teams' advantage is its deep integration with the broader Microsoft 365 compliance stack: caption content can flow into meeting transcripts stored in SharePoint, indexed for eDiscovery, and governed by retention policies. For regulated industries — banking, healthcare, government — this tight integration is often the deciding factor. The trade-off is that the rollout requires more IT involvement upfront than either Meet or Zoom. See <a href="article-14.html" style="color:#00b8ff;">Microsoft Teams Captions Strategy: Manager Playbook</a> for a detailed admin configuration guide.</p>
+            <p>Teams' advantage is its deep integration with the broader Microsoft 365 compliance stack: caption content can flow into meeting transcripts stored in SharePoint, indexed for eDiscovery, and governed by retention policies. For regulated industries — banking, healthcare, government — this tight integration is often the deciding factor. The trade-off is that the rollout requires more IT involvement upfront than either Meet or Zoom. See <a href="article-14.html" style="color:#0b6ad1;">Microsoft Teams Captions Strategy: Manager Playbook</a> for a detailed admin configuration guide.</p>
 
-            <h2>Side-by-side comparison table</h2>
+            <h2 id="sec-2">Side-by-side comparison table</h2>
             <table>
                 <thead>
                     <tr>
@@ -170,7 +250,7 @@
                 </tbody>
             </table>
 
-            <h2>Where built-in captions are sufficient</h2>
+            <h2 id="sec-3">Where built-in captions are sufficient</h2>
             <p>Native captions are the right first choice when all of the following are true:</p>
             <ul>
                 <li>Your organization is standardized on a single meeting platform and has no plans to change.</li>
@@ -181,7 +261,7 @@
             </ul>
             <p>In this setup, native captions are the lowest-friction choice. Enabling them requires no additional software, no end-user installation, and no per-device configuration. For a Google Workspace shop, Meet's 69-language coverage will satisfy the vast majority of global team scenarios with near-zero IT overhead.</p>
 
-            <h2>Where a cross-app workflow outperforms native options</h2>
+            <h2 id="sec-4">Where a cross-app workflow outperforms native options</h2>
             <p>The native caption story breaks down quickly as soon as workers move between contexts. Consider a typical distributed team day:</p>
             <ol>
                 <li>A morning standup on Zoom (client mandates Zoom).</li>
@@ -193,11 +273,11 @@
             <p>Native captions cover exactly one of those contexts per platform. A worker who needs to follow conversations in a second language must switch habits, remember different shortcut keys, and accept varying quality across five separate interactions. The cognitive cost is real: research on multilingual workplace communication consistently shows that switching assistive-tool behavior mid-day increases error and fatigue rates significantly.</p>
             <p>A system-level caption overlay — like the <a href="/any-app-live-captions.html">Live Subtitles app for Windows</a>, available in the Microsoft Store — solves this by operating at the audio driver layer. It works regardless of which meeting tool is active, displays on any video or audio source, and provides one consistent user experience that workers build a single habit around. For teams juggling three or more communication platforms, the productivity argument for a unified workflow is clear.</p>
 
-            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">Key insight:</strong> Language count is a marketing metric. The real differentiator is how many of your actual daily communication contexts are covered, and whether your workers can form one reliable habit rather than three fragmented ones.
+            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">Key insight:</strong> Language count is a marketing metric. The real differentiator is how many of your actual daily communication contexts are covered, and whether your workers can form one reliable habit rather than three fragmented ones.
             </div>
 
-            <h2>Decision framework for managers and IT leads</h2>
+            <h2 id="sec-5">Decision framework for managers and IT leads</h2>
 
             <h3>Step 1: Map actual communication channels, not licenses</h3>
             <p>Pull calendar data and meeting logs for one representative week. Count hours per platform, per content type (scheduled call, webinar, recorded playback, live stream, one-on-one voice). Do not plan from license inventory sheets; plan from observed usage patterns. You will almost always find that 30–40% of communication happens outside the primary video call platform.</p>
@@ -220,7 +300,7 @@
             <h3>Step 5: Standardize the rollout and training</h3>
             <p>Whichever model wins, write a one-page quick-start guide and deliver a 15-minute live walkthrough to each team. The most common failure mode for caption rollouts is not technical — it is that 40% of participants never learn to activate the feature, so the perceived benefit is low and the feature quietly gets disabled. Activation rate, not feature availability, determines outcome.</p>
 
-            <h2>Implementation risks to watch</h2>
+            <h2 id="sec-6">Implementation risks to watch</h2>
             <ul>
                 <li><strong>Policy-user mismatch:</strong> Admins enable features at the tenant level but users are unaware. Result: the feature is "live" but adoption is near zero for 6 months.</li>
                 <li><strong>No speaking protocol:</strong> Overlapping speech, fast filler words, and strong accents without clear turn-taking degrade caption accuracy by 20–40% in typical meeting conditions. Train speakers, not just tools.</li>
@@ -229,13 +309,13 @@
                 <li><strong>Mixed-context gap:</strong> Teams solve the meeting problem but ignore training videos, recorded webinars, and voice calls, leaving a significant portion of daily communication uncovered.</li>
             </ul>
 
-            <h2>Practical recommendation by organization type</h2>
+            <h2 id="sec-7">Practical recommendation by organization type</h2>
             <p><strong>Single-platform Google Workspace org:</strong> Enable Meet translated captions at the Workspace admin level, run a one-hour training session, and track clarification message volume for 30 days. The 69-language coverage will handle most global team scenarios without additional tools.</p>
             <p><strong>Single-platform Zoom or Teams org:</strong> Follow the dedicated rollout playbook for your platform (linked below). Budget 2–3 hours of admin time for initial configuration, then a team training session. Test compliance requirements before go-live if in a regulated industry.</p>
             <p><strong>Multi-platform or mixed-media org:</strong> Do not try to solve each platform individually. Evaluate a system-level caption solution that covers all audio sources uniformly. The <strong>Live Subtitles</strong> app on Windows provides real-time captions and translation for any active audio — meeting tools, recorded video, streams, VoIP — giving workers one consistent experience across their entire workday.</p>
             <p><strong>Language-learning plus operations:</strong> Teams that use captions both for work communication and individual language development benefit most from a unified system. Switching between a platform-native caption and a separate learning tool creates two workflows where one is sufficient.</p>
 
-            <h2>Frequently asked questions</h2>
+            <h2 id="sec-8">Frequently asked questions</h2>
 
             <p><strong>Q: Is language count the only thing that matters when choosing a caption solution?</strong><br>
             A: No. Language count is a starting filter, not a decision. Governance, user adoption rate, cross-platform consistency, compliance requirements, and actual language quality for your specific pairs all drive outcomes more than raw totals.</p>
@@ -252,30 +332,76 @@
             <p><strong>Q: Do these platforms work for external participants who are not on our license?</strong><br>
             A: It depends on the platform and meeting type. In Google Meet, guests (non-Workspace users joining via link) can typically use translated captions during the meeting. In Teams, external participants in federated meetings may not have access to translated captions depending on their own tenant policy. In Zoom, translated captions are controlled by the host account's settings and generally work for all participants in the call regardless of their own subscription. Always test with an external participant before rolling out to client-facing meetings.</p>
 
-            <h2>References and further reading</h2>
+            <h2 id="sec-9">References and further reading</h2>
             <ul>
-                <li><a href="https://workspaceupdates.googleblog.com/2025/06/google-meet-translated-captions-69-languages.html" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google Workspace Updates — Meet translated captions (June 2025)</a></li>
-                <li><a href="https://www.zoom.com/en/products/collaboration-tools/features/captions/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Zoom captions and translated captions overview</a></li>
-                <li><a href="https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-ba3f845a-9d15-4d84-a8d2-5df2da3bad2b" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft Teams live captions documentation</a></li>
-                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Windows live captions support page</a></li>
-                <li><a href="article-16.html" style="color:#00b8ff;">Google Meet Captions Rollout: Multilingual Meeting Playbook</a></li>
+                <li><a href="https://workspaceupdates.googleblog.com/2025/06/google-meet-translated-captions-69-languages.html" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google Workspace Updates — Meet translated captions (June 2025)</a></li>
+                <li><a href="https://www.zoom.com/en/products/collaboration-tools/features/captions/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Zoom captions and translated captions overview</a></li>
+                <li><a href="https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-ba3f845a-9d15-4d84-a8d2-5df2da3bad2b" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Microsoft Teams live captions documentation</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Windows live captions support page</a></li>
+                <li><a href="article-16.html" style="color:#0b6ad1;">Google Meet Captions Rollout: Multilingual Meeting Playbook</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Related platform playbooks</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Related platform playbooks</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-12.html" style="color: #00b8ff; text-decoration: none;">Zoom Live Captions Rollout: Team Operations Playbook</a></li>
-                    <li><a href="article-14.html" style="color: #00b8ff; text-decoration: none;">Microsoft Teams Captions Strategy: Manager Playbook</a></li>
-                    <li><a href="article-16.html" style="color: #00b8ff; text-decoration: none;">Google Meet Captions Rollout: Multilingual Meeting Playbook</a></li>
+                    <li><a href="article-12.html" style="color: #0b6ad1; text-decoration: none;">Zoom Live Captions Rollout: Team Operations Playbook</a></li>
+                    <li><a href="article-14.html" style="color: #0b6ad1; text-decoration: none;">Microsoft Teams Captions Strategy: Manager Playbook</a></li>
+                    <li><a href="article-16.html" style="color: #0b6ad1; text-decoration: none;">Google Meet Captions Rollout: Multilingual Meeting Playbook</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Build one reliable caption workflow across every app</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">The <strong>Live Subtitles</strong> app covers all your meeting tools, training videos, and live audio in one consistent experience — no switching, no gaps, no extra configuration per platform.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download Live Subtitles from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Build one reliable caption workflow across every app</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">The <strong>Live Subtitles</strong> app covers all your meeting tools, training videos, and live audio in one consistent experience — no switching, no gaps, no extra configuration per platform.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

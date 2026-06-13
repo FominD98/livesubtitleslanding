@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="2026 年实时字幕：AI 字幕的工作原理及使用场景">
     <meta name="twitter:description" content="实时字幕完全指南（2026）：深入解析 AI 如何在 1-2 秒内将语音实时转为文字，全面对比 Windows 11、macOS Sequoia、Android 与 Chrome 四大字幕层在延迟、隐私保护和语言支持方面的差异，帮你在会议、娱乐和语言学习等各类场景中选出最合适的实时 AI 字幕工具。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/zh/meetings.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,23 +150,42 @@
     <link rel="preload" as="image" href="/articles/img/zh/meetings.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目录">
+        <div class="toc-inner">
+            <h4>目录</h4>
+            <a href="#sec-1">实时字幕到底是什么</a>
+            <a href="#sec-2">三种字幕层：完全不同的工作方式</a>
+            <a href="#sec-3">2026 年主要实时字幕方案横向对比</a>
+            <a href="#sec-4">AI 实时字幕的底层工作原理</a>
+            <a href="#sec-5">各层级的适用场景详解</a>
+            <a href="#sec-6">常见误区：关于实时字幕的错误认知</a>
+            <a href="#sec-7">实时字幕快速配置指南</a>
+            <a href="#sec-8">面向中文用户的特别说明</a>
+            <a href="#sec-9">常见问题解答</a>
+            <a href="#sec-10">参考资料</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 返回文章</a>
         <h1 class="article-title" itemprop="headline">2026 年实时字幕：AI 字幕的工作原理及使用场景</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">2026 年 5 月 28 日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">作者: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026 年 5 月 28 日</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">2026 年 5 月 28 日<span class="reading-time">11 分钟阅读</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">作者: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026 年 5 月 28 日</div>
         <img class="article-hero" src="/articles/img/zh/meetings.webp" alt="实时对话中屏幕上出现的实时字幕" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p><strong>实时字幕</strong>听起来是一个简单的功能，但这个词背后隐藏着三种截然不同的实现方式：操作系统覆盖层、浏览器内置字幕和第三方字幕层。每种方式都在不同场景中占有优势，而"直接打开字幕"这个看似简单的操作，实际上掩盖了各平台之间令人意外的差异。本文将全面拆解 2026 年实时字幕技术的现状，帮助你在正确的场景选择最合适的工具。</p>
 
-            <h2>实时字幕到底是什么</h2>
+            <details class="toc-mobile"><summary>目录</summary><ol><li><a href="#sec-1">实时字幕到底是什么</a></li><li><a href="#sec-2">三种字幕层：完全不同的工作方式</a></li><li><a href="#sec-3">2026 年主要实时字幕方案横向对比</a></li><li><a href="#sec-4">AI 实时字幕的底层工作原理</a></li><li><a href="#sec-5">各层级的适用场景详解</a></li><li><a href="#sec-6">常见误区：关于实时字幕的错误认知</a></li><li><a href="#sec-7">实时字幕快速配置指南</a></li><li><a href="#sec-8">面向中文用户的特别说明</a></li><li><a href="#sec-9">常见问题解答</a></li><li><a href="#sec-10">参考资料</a></li></ol></details>
+            <h2 id="sec-1">实时字幕到底是什么</h2>
             <p>实时字幕是指自动语音识别（ASR）系统在语音发出后 1—2 秒内，将音频实时转换并渲染为屏幕文字。它与预先编写的字幕有本质区别：实时字幕是随着音频的到达即时生成的，而不是事先翻译好再同步播放的。</p>
             <p>2026 年的字幕生成技术普遍基于 Whisper 级别的模型。根据隐私和精度需求的不同，有些方案选择设备端（on-device）推理，有些则依赖云端服务器。设备端方案的优势在于不向外发送音频数据，且无需网络连接；云端方案则通常在多语言支持和噪声抑制方面表现更好。</p>
             <p>值得注意的是，实时字幕与字幕（subtitle）并非同一概念。字幕通常是对影视对白经过人工润色的翻译文本；而实时字幕是纯粹由 ASR 引擎生成的，包含说话人切换提示和音频描述等信息。</p>
 
-            <h2>三种字幕层：完全不同的工作方式</h2>
+            <h2 id="sec-2">三种字幕层：完全不同的工作方式</h2>
             <p>理解"字幕层"的概念是做出正确选择的关键。三种层级在音频来源、覆盖范围和适用场景上各不相同：</p>
             <ul>
                 <li><strong>操作系统级字幕（OS 级）：</strong>操作系统直接监听系统混音（system audio mix），在一个始终置顶的浮动窗口中渲染字幕。无论你正在使用哪个应用，字幕都会持续显示。代表产品：Windows 11 Live Captions、macOS Live Captions（Sequoia+）、Android Live Caption（Pixel 优先，部分 Android 14 设备支持）。</li>
@@ -113,7 +194,7 @@
             </ul>
             <p>三者的核心区别在于<strong>覆盖范围</strong>。OS 级字幕同时覆盖所有桌面应用；应用级字幕只在该应用内生效。如果你早上开 Zoom 会议、下午看 YouTube 教程、晚上用 Discord 语音聊天，应用级字幕每次都要重新打开，而 OS 级字幕只需打开一次就能全程跟随。</p>
 
-            <h2>2026 年主要实时字幕方案横向对比</h2>
+            <h2 id="sec-3">2026 年主要实时字幕方案横向对比</h2>
             <table>
                 <thead>
                     <tr>
@@ -163,7 +244,7 @@
                 </tbody>
             </table>
 
-            <h2>AI 实时字幕的底层工作原理</h2>
+            <h2 id="sec-4">AI 实时字幕的底层工作原理</h2>
             <p>一个完整的实时字幕流水线（pipeline）持续执行以下五个步骤：</p>
             <ol>
                 <li><strong>音频捕获：</strong>从系统混音、麦克风或单一应用音频流中持续抓取原始音频数据，通常以 16kHz 采样率、16bit 深度输出。</li>
@@ -174,11 +255,11 @@
             </ol>
             <p>2026 年，字幕准确率的瓶颈已不再是模型本身，而是<strong>音频质量</strong>。来自 Zoom、浏览器和操作系统的系统音频干净、稳定，可以达到 90% 以上的识别准确率。但如果只依靠麦克风捕获，环境噪音和多人同时说话会迅速将准确率拉低至 75—85%，即使是顶级的 ASR 模型也无法完全克服这个问题。</p>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">小贴士：</strong> 如果你的字幕质量不佳，第一步应该检查音频来源，而不是更换字幕工具。使用降噪耳麦，或切换为系统音频捕获（而非麦克风），往往能立竿见影地提升准确率。
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">小贴士：</strong> 如果你的字幕质量不佳，第一步应该检查音频来源，而不是更换字幕工具。使用降噪耳麦，或切换为系统音频捕获（而非麦克风），往往能立竿见影地提升准确率。
             </div>
 
-            <h2>各层级的适用场景详解</h2>
+            <h2 id="sec-5">各层级的适用场景详解</h2>
 
             <h3>OS 级字幕最适合的场景</h3>
             <p>如果你的工作日在不同应用之间频繁切换——早晨参加 Zoom 会议，中午看 Netflix 放松，下午收听英语播客——OS 级字幕是最省心的选择。打开一次，它就像背景服务一样默默跟随你切换应用，无需每次手动重新开启。</p>
@@ -201,7 +282,7 @@
                 <li><strong>跨平台一致性：</strong>如果你需要在 Windows 和 macOS 双平台保持一致的字幕体验，统一的第三方工具比依赖两个不同 OS 的原生字幕更可靠。</li>
             </ul>
 
-            <h2>常见误区：关于实时字幕的错误认知</h2>
+            <h2 id="sec-6">常见误区：关于实时字幕的错误认知</h2>
             <ul>
                 <li><strong>"AI 字幕准确率已经达到 99%"：</strong>这只在专业录音室的干净音频条件下成立。真实会议场景中，有人插话、有背景噪音或口音较重时，各大厂商的 ASR 准确率普遍在 75—90% 之间，差距没有宣传的那么悬殊。</li>
                 <li><strong>"实时字幕必须联网"：</strong>这在 2023 年之前是真的，但 2026 年的主流 OS 级方案（Windows 11、macOS、Android）均已支持完全离线的设备端识别，无需发送任何数据到云端。</li>
@@ -209,50 +290,96 @@
                 <li><strong>"开越多字幕工具越好"：</strong>在同一音频上叠加两个字幕层（例如同时开启 Windows Live Captions 和 Zoom 字幕）会造成视觉混乱，两个流水线的延迟不同步会让人无所适从。每个场景只使用一个字幕层即可。</li>
             </ul>
 
-            <h2>实时字幕快速配置指南</h2>
+            <h2 id="sec-7">实时字幕快速配置指南</h2>
             <ol>
                 <li><strong>确定主要使用场景：</strong>桌面多应用切换 → OS 级；固定在某个会议平台 → 应用级；浏览器内容为主 → 浏览器级；需要翻译或无原生字幕 → 第三方工具。</li>
                 <li><strong>先试用免费的原生方案：</strong>Windows 11 Live Captions 和 macOS Live Captions 都是内置免费工具，无需安装，是任何用户的第一步。Windows 用户在设置 → 辅助功能 → 字幕中即可开启。</li>
                 <li><strong>评估语言支持：</strong>如果你的工作语言不是英语，需要仔细核查各方案的目标语言支持情况。Windows 11 Live Captions 的中文支持质量在持续改善，但对于专业场景可能仍需借助第三方工具。</li>
-                <li><strong>按需叠加翻译层：</strong>如果原生字幕满足不了翻译需求，可以关闭 OS 原生字幕，转而使用 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Live Subtitles</a> 这类支持实时翻译的跨应用工具。</li>
+                <li><strong>按需叠加翻译层：</strong>如果原生字幕满足不了翻译需求，可以关闭 OS 原生字幕，转而使用 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">免费下载</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 条评价</div> 这类支持实时翻译的跨应用工具。</li>
                 <li><strong>调整音频来源：</strong>字幕质量差时优先检查音频来源（系统音频 vs 麦克风），再考虑更换工具。</li>
             </ol>
 
-            <h2>面向中文用户的特别说明</h2>
+            <h2 id="sec-8">面向中文用户的特别说明</h2>
             <p>对于中文（普通话）用户，2026 年的字幕使用场景有几个值得特别关注的要点：</p>
             <p>首先，<strong>英文字幕工具的中文支持参差不齐</strong>。Windows 11 Live Captions 已添加普通话支持，但在粤语、闽南语等方言上基本无法使用。Google Meet 和 Zoom 对中文普通话的支持相对完善，但需要主持人（Host）开启对应设置，普通参会者无法自行切换。</p>
-            <p>其次，<strong>国际视频会议场景对双语字幕的需求更迫切</strong>。在与英语母语者开会时，许多中文用户希望同屏看到英文原文和中文译文，这是 OS 原生字幕无法实现的功能。<a href="article-23.html" style="color:#00b8ff;">实时语音翻译工具</a>和具备双语字幕功能的第三方应用（如 Live Subtitles）可以填补这一空白，帮助跨语言沟通更顺畅。</p>
-            <p>此外，在学习英语的场景下，双语字幕可以作为辅助工具，帮助学习者理解陌生词汇和表达方式，而不是完全依赖中文翻译。可以参考<a href="article-17.html" style="color:#00b8ff;">如何用实时字幕辅助语言学习</a>的相关介绍。</p>
+            <p>其次，<strong>国际视频会议场景对双语字幕的需求更迫切</strong>。在与英语母语者开会时，许多中文用户希望同屏看到英文原文和中文译文，这是 OS 原生字幕无法实现的功能。<a href="article-23.html" style="color:#0b6ad1;">实时语音翻译工具</a>和具备双语字幕功能的第三方应用（如 Live Subtitles）可以填补这一空白，帮助跨语言沟通更顺畅。</p>
+            <p>此外，在学习英语的场景下，双语字幕可以作为辅助工具，帮助学习者理解陌生词汇和表达方式，而不是完全依赖中文翻译。可以参考<a href="article-17.html" style="color:#0b6ad1;">如何用实时字幕辅助语言学习</a>的相关介绍。</p>
 
-            <h2>常见问题解答</h2>
+            <h2 id="sec-9">常见问题解答</h2>
             <p><strong>实时字幕可以离线使用吗？</strong><br>可以。Windows 11 Live Captions、macOS Live Captions 以及 Android Live Caption（Pixel 和部分 Android 14+ 设备）均支持完全离线的设备端识别。应用级字幕（Zoom、Teams、Meet）通常需要服务器端处理，断网后无法使用。具体支持情况请查阅各厂商文档。</p>
             <p><strong>我能同时看到两种语言的实时字幕吗？</strong><br>OS 原生字幕通常只显示源语言。如需双语同屏显示，需要使用支持实时翻译的第三方工具，例如 Live Subtitles 应用。</p>
             <p><strong>实时字幕会取代传统字幕吗？</strong><br>在直播、在线会议等实时音频场景中，AI 字幕已经能够满足大多数无障碍和理解辅助需求。但对于精品影视内容，人工翻译和时间轴对齐的传统字幕在表达准确性和观看体验上仍有明显优势，AI 字幕暂时无法完全替代。</p>
             <p><strong>字幕工具会记录我的音频吗？</strong><br>这取决于具体方案。OS 级设备端字幕（Windows、macOS、Android）在本地处理音频，不上传数据。使用云端 ASR 的应用级字幕可能会在服务器端短暂处理音频。如有隐私顾虑，建议优先选择设备端方案，并阅读相关隐私政策。</p>
 
-            <h2>参考资料</h2>
+            <h2 id="sec-10">参考资料</h2>
             <ul>
-                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft — 在 Windows 上使用 Live Captions（官方文档）</a></li>
-                <li><a href="https://support.apple.com/en-us/HT213295" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — Mac 上的 Live Captions（官方支持页）</a></li>
-                <li><a href="https://support.google.com/accessibility/android/answer/9350862" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google — Android Live Caption（无障碍功能说明）</a></li>
-                <li><a href="https://support.google.com/chrome/answer/10538231" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google — Chrome 浏览器 Live Caption 设置指南</a></li>
+                <li><a href="https://support.microsoft.com/en-us/windows/use-live-captions-to-better-understand-audio-4ffec0d6-5999-4b86-a39e-fe779ac15f04" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Microsoft — 在 Windows 上使用 Live Captions（官方文档）</a></li>
+                <li><a href="https://support.apple.com/en-us/HT213295" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — Mac 上的 Live Captions（官方支持页）</a></li>
+                <li><a href="https://support.google.com/accessibility/android/answer/9350862" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google — Android Live Caption（无障碍功能说明）</a></li>
+                <li><a href="https://support.google.com/chrome/answer/10538231" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google — Chrome 浏览器 Live Caption 设置指南</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">相关阅读</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">相关阅读</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">2026 年音频转文字：实时 vs 批量转录深度对比</a></li>
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">2026 年语音翻译应用：按使用场景比较实时工具</a></li>
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">2026 年 Google Meet vs Zoom vs Teams 翻译字幕横评</a></li>
+                    <li><a href="article-24.html" style="color: #0b6ad1; text-decoration: none;">2026 年音频转文字：实时 vs 批量转录深度对比</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">2026 年语音翻译应用：按使用场景比较实时工具</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">2026 年 Google Meet vs Zoom vs Teams 翻译字幕横评</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">跨所有应用的实时字幕，附带实时翻译</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">无论你在用 Zoom、Discord、本地播放器还是浏览器——Live Subtitles 让字幕跟随你，而不是绑定在某个应用里。支持双语同屏显示，覆盖 50 种以上语言对。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">从 Microsoft Store 免费下载</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">跨所有应用的实时字幕，附带实时翻译</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">无论你在用 Zoom、Discord、本地播放器还是浏览器——Live Subtitles 让字幕跟随你，而不是绑定在某个应用里。支持双语同屏显示，覆盖 50 种以上语言对。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">免费下载</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>适用于任何应用的实时字幕</h3>
+                <div class="explore-cols"><div><h5>会议与通话</h5><a href="/zh/zoom-live-captions.html">Zoom</a><a href="/zh/teams-live-captions.html">Microsoft Teams</a><a href="/zh/google-meet-live-captions.html">Google Meet</a><a href="/zh/webex-live-captions.html">Webex</a><a href="/zh/skype-live-captions.html">Skype</a><a href="/zh/slack-live-captions.html">Slack</a><a href="/zh/whatsapp-live-translation.html">WhatsApp</a><a href="/zh/telegram-subtitles.html">Telegram</a></div><div><h5>流媒体与社交</h5><a href="/zh/youtube-dual-subtitles.html">YouTube</a><a href="/zh/netflix-subtitles.html">Netflix</a><a href="/zh/twitch-live-captions.html">Twitch</a><a href="/zh/discord-live-captions.html">Discord</a><a href="/zh/tiktok-live-captions.html">TikTok</a><a href="/zh/instagram-live-captions.html">Instagram</a><a href="/zh/facebook-live-subtitles.html">Facebook</a><a href="/zh/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>游戏与创作者</h5><a href="/zh/obs-subtitles.html">OBS</a><a href="/zh/game-mode-subtitles.html">Game Mode</a><a href="/zh/steam-subtitles.html">Steam</a><a href="/zh/restream-subtitles.html">Restream</a><a href="/zh/vimeo-subtitles.html">Vimeo</a><a href="/zh/vlc-subtitles.html">VLC</a></div><div><h5>学习与工作</h5><a href="/zh/coursera-subtitles.html">Coursera</a><a href="/zh/udemy-live-captions.html">Udemy</a><a href="/zh/google-classroom-subtitles.html">Google Classroom</a><a href="/zh/linkedin-live-captions.html">LinkedIn</a><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/zh/" style="font-weight:600;text-decoration:none;">Live Subtitles 首页 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>相关阅读</h4>
+            <a class="s-item" href="article-1.html">双语字幕如何帮助您更快学习语言</a>
+            <a class="s-item" href="article-2.html">为什么字幕对语言学习很重要</a>
+            <a class="s-item" href="article-3.html">双语字幕学习法的跨文化应用</a>
+            <a class="s-item" href="article-4.html">为什么字幕对母语使用者也有用</a>
+            <a class="s-item" href="article-5.html">学习英语的双语字幕电影TOP-10推荐</a>
+            <a class="s-item" href="article-6.html">通过双语字幕视频学习语言时要避免的错误</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>适用于任何应用的实时字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">免费下载</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/zh/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

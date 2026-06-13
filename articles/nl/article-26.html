@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="AirPods Live Translation in iOS 26: wat het goed doet en waar het tekortschiet">
     <meta name="twitter:description" content="AirPods Live Translation in iOS 26 eerlijk getest: wat het goed doet bij gesprekken en reizen, waar het tekortschiet en wat je voor vergaderingen kiest.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/nl/movies.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,12 +150,28 @@
     <link rel="preload" as="image" href="/articles/img/nl/movies.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Inhoud">
+        <div class="toc-inner">
+            <h4>Inhoud</h4>
+            <a href="#sec-1">Hoe AirPods Live Translation eigen…</a>
+            <a href="#sec-2">Waar AirPods Live Translation wint</a>
+            <a href="#sec-3">Waar AirPods Live Translation teko…</a>
+            <a href="#sec-4">AirPods Live Translation vs altern…</a>
+            <a href="#sec-5">Wat wanneer gebruiken</a>
+            <a href="#sec-6">Zo stel je AirPods Live Translatio…</a>
+            <a href="#sec-7">Veelgestelde vragen</a>
+            <a href="#sec-8">Bronnen</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Terug naar artikelen</a>
         <h1 class="article-title" itemprop="headline">AirPods Live Translation in iOS 26: wat het goed doet en waar het tekortschiet</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 mei 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Auteur: <a href="https://live-subtitles.com/about/team/daniel-formind.html" rel="author" style="color:#00b8ff; text-decoration:none;">Daniel Formind</a> &middot; oprichter en engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Bijgewerkt: 28 mei 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 mei 2026<span class="reading-time">7 min lezen</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Auteur: <a href="https://live-subtitles.com/about/team/daniel-formind.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Daniel Formind</a> &middot; oprichter en engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Bijgewerkt: 28 mei 2026</div>
         <img class="article-hero" src="/articles/img/nl/movies.webp" alt="AirPods vertalen spraak live tijdens een persoonlijk gesprek" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
@@ -101,7 +179,8 @@
 
             <p>In deze gids leggen we eerst uit hoe de techniek onder de motorkap werkt, vervolgens waar de functie echt sterk is, waar ze tekortschiet, hoe ze zich verhoudt tot alternatieven, en welke gereedschappen je het beste in welke situatie inzet. We sluiten af met een korte instelgids en de meestgestelde vragen.</p>
 
-            <h2>Hoe AirPods Live Translation eigenlijk werkt</h2>
+            <details class="toc-mobile"><summary>Inhoud</summary><ol><li><a href="#sec-1">Hoe AirPods Live Translation eigenlijk werkt</a></li><li><a href="#sec-2">Waar AirPods Live Translation wint</a></li><li><a href="#sec-3">Waar AirPods Live Translation tekortschiet</a></li><li><a href="#sec-4">AirPods Live Translation vs alternatieven</a></li><li><a href="#sec-5">Wat wanneer gebruiken</a></li><li><a href="#sec-6">Zo stel je AirPods Live Translation goed in</a></li><li><a href="#sec-7">Veelgestelde vragen</a></li><li><a href="#sec-8">Bronnen</a></li></ol></details>
+            <h2 id="sec-1">Hoe AirPods Live Translation eigenlijk werkt</h2>
             <p>Audio die door de iPhone wordt vastgelegd (microfoon of AirPods gerouteerd als systeem-microfoon) gaat door Apple's on-device spraakherkenning, en daarna door het Translation-framework — dat op Apple Silicon eveneens lokaal op het toestel draait. De vertaalde tekst wordt teruggespeeld via je AirPods met Apple's text-to-speech. De volledige pipeline verloopt zonder audio naar een cloudserver te sturen. De latency ligt rond de 1,5 tot 2,5 seconden per beurt: kort genoeg om een gesprek soepel te laten verlopen, maar merkbaar genoeg dat je leert in korte, afgeronde zinnen te spreken.</p>
 
             <h3>On-device verwerking: waarom dat ertoe doet</h3>
@@ -110,23 +189,23 @@
             <h3>De grens van het model</h3>
             <p>Diezelfde architectuur verklaart meteen de beperkingen. Omdat de functie microfooninvoer routeert en is gebouwd rond beurtgebaseerde spraak, heeft ze geen toegang tot de systeemaudio van je toestel. Alles wat geen direct, persoonlijk gesprek is — een video, een livestream, een vergadering met meerdere kanalen — valt buiten het ontwerp.</p>
 
-            <h2>Waar AirPods Live Translation wint</h2>
+            <h2 id="sec-2">Waar AirPods Live Translation wint</h2>
             <ul>
                 <li><strong>Persoonlijke reisgesprekken:</strong> korte beurten, twee sprekers, waarvan er één mogelijk geen AirPods heeft. Een perfecte match. De vertaalde audio klinkt in jouw oor terwijl de stem van je gesprekspartner in de ruimte klinkt — een natuurlijke heen-en-weerbeweging die voelt als een tweerichtingsgesprek in plaats van een digitale tolk.</li>
                 <li><strong>Privacygevoelige momenten:</strong> medische, juridische of persoonlijke gesprekken waarbij je geen cloudservers in de keten wilt. De on-device verwerking is hier hét onderscheidende kenmerk; je vertrouwt geen gevoelige inhoud toe aan een externe dienst.</li>
                 <li><strong>Snelle hardop-vertaling:</strong> een menu lezen, de weg vragen, een boeking bevestigen. Het handsfree gemak wint het van een workflow waarbij je voor elke zin je telefoon moet pakken en op het scherm moet turen.</li>
             </ul>
-            <p>Wil je zien hoe spraakvertalers zich onderling verhouden in dit soort scenario's, dan vind je in onze vergelijking van <a href="article-23.html" style="color:#00b8ff;">spraakvertaalapps per use case</a> een breder overzicht van wat handsfree tools wel en niet leveren.</p>
+            <p>Wil je zien hoe spraakvertalers zich onderling verhouden in dit soort scenario's, dan vind je in onze vergelijking van <a href="article-23.html" style="color:#0b6ad1;">spraakvertaalapps per use case</a> een breder overzicht van wat handsfree tools wel en niet leveren.</p>
 
-            <h2>Waar AirPods Live Translation tekortschiet</h2>
+            <h2 id="sec-3">Waar AirPods Live Translation tekortschiet</h2>
             <ul>
                 <li><strong>Vergaderingen met meerdere sprekers:</strong> de functie is ontworpen voor beurten tussen twee personen. Een Zoom-call met zes mensen die door elkaar praten, met overlappende stemmen en wisselende microfoonkwaliteit, valt simpelweg buiten haar werkterrein.</li>
                 <li><strong>Broadcast-audio (lezingen, films, streams, YouTube):</strong> AirPods Live Translation leest geen systeemaudio; het routeert microfooninvoer. Een anderstalige lezing volgen en de vertaling lezen is een ondertitelingsworkflow, geen AirPods-workflow.</li>
                 <li><strong>Desktop- en laptopwerk:</strong> de functie leeft op de iPhone en iPad. Gebeurt je werk op een desktop, dan heb je een aparte ondertiteling-en-vertaallaag nodig die de audio van dát scherm afvangt.</li>
             </ul>
-            <p>Voor die laatste twee scenario's is een ondertitelingsoplossing op systeemniveau de juiste keuze. Hoe AI-gestuurde ondertiteling werkt en wanneer je ze inzet, leggen we uit in <a href="article-25.html" style="color:#00b8ff;">live ondertiteling in 2026</a>.</p>
+            <p>Voor die laatste twee scenario's is een ondertitelingsoplossing op systeemniveau de juiste keuze. Hoe AI-gestuurde ondertiteling werkt en wanneer je ze inzet, leggen we uit in <a href="article-25.html" style="color:#0b6ad1;">live ondertiteling in 2026</a>.</p>
 
-            <h2>AirPods Live Translation vs alternatieven</h2>
+            <h2 id="sec-4">AirPods Live Translation vs alternatieven</h2>
             <table>
                 <thead>
                     <tr>
@@ -144,16 +223,16 @@
                 </tbody>
             </table>
 
-            <h2>Wat wanneer gebruiken</h2>
+            <h2 id="sec-5">Wat wanneer gebruiken</h2>
             <h3>Reizen en persoonlijk contact</h3>
             <p>Gebruik AirPods Live Translation. De handsfree in-ear-levering is in de praktijk echt prettiger dan voor elke reactie je telefoon pakken. Houd wel een fallback achter de hand — Google Translate of een soortgelijke app — voor talen of dialecten die Apple nog niet dekt. Combineer beide en je hebt voor vrijwel elke reissituatie een dekkende oplossing.</p>
             <h3>Vergaderingen, lezingen en media op desktop</h3>
-            <p>Schakel hier over op een ondertitelingslaag op systeemniveau: Windows Live Captions, macOS Live Captions, of een cross-app oplossing zoals de <strong>Live Subtitles</strong>-app die de audio van elke desktop-applicatie afvangt en realtime ondertitelt én vertaalt. AirPods Live Translation draait daar simpelweg niet, omdat het geen systeemaudio leest. Werk je vooral in Zoom, dan helpt onze pagina over <a href="/nl/zoom-live-captions.html" style="color:#00b8ff;">live ondertiteling in Zoom</a> je verder op weg.</p>
+            <p>Schakel hier over op een ondertitelingslaag op systeemniveau: Windows Live Captions, macOS Live Captions, of een cross-app oplossing zoals de <strong>Live Subtitles</strong>-app die de audio van elke desktop-applicatie afvangt en realtime ondertitelt én vertaalt. AirPods Live Translation draait daar simpelweg niet, omdat het geen systeemaudio leest. Werk je vooral in Zoom, dan helpt onze pagina over <a href="/nl/zoom-live-captions.html" style="color:#0b6ad1;">live ondertiteling in Zoom</a> je verder op weg.</p>
 
             <h3>Online vergaderingen specifiek</h3>
-            <p>Bij videovergaderingen verschilt de aanpak per platform. Zoom, Google Meet en Microsoft Teams hebben elk een eigen niveau van ingebouwde vertaalde ondertiteling. Welk platform wat biedt en waar je een externe laag nodig hebt, hebben we naast elkaar gezet in <a href="article-18.html" style="color:#00b8ff;">Google Meet vs Zoom vs Teams: vertaalde ondertiteling in 2026</a>.</p>
+            <p>Bij videovergaderingen verschilt de aanpak per platform. Zoom, Google Meet en Microsoft Teams hebben elk een eigen niveau van ingebouwde vertaalde ondertiteling. Welk platform wat biedt en waar je een externe laag nodig hebt, hebben we naast elkaar gezet in <a href="article-18.html" style="color:#0b6ad1;">Google Meet vs Zoom vs Teams: vertaalde ondertiteling in 2026</a>.</p>
 
-            <h2>Zo stel je AirPods Live Translation goed in</h2>
+            <h2 id="sec-6">Zo stel je AirPods Live Translation goed in</h2>
             <p>Een paar praktische punten halen het meeste uit de functie:</p>
             <ol>
                 <li><strong>Download de taalpakketten vooraf.</strong> Doe dit op wifi vóór je vertrekt, zodat de vertaling ook offline werkt op je bestemming.</li>
@@ -162,39 +241,85 @@
                 <li><strong>Controleer het gekozen taalpaar.</strong> Stel de bron- en doeltaal expliciet in zodat het systeem niet de verkeerde richting kiest.</li>
             </ol>
 
-            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
-                <strong style="color:#00ff9d;">Tip:</strong> <span style="color:#eee;">Combineer beide werelden. Gebruik AirPods Live Translation voor gesprekken onderweg en een ondertitelingsapp op je desktop voor vergaderingen en video. Eén tool dekt zelden alles — de juiste combinatie wel.</span>
+            <div style="background: rgba(0,255,157,0.08); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0;">
+                <strong style="color:#0a7f55;">Tip:</strong> <span style="color:#2d333b;">Combineer beide werelden. Gebruik AirPods Live Translation voor gesprekken onderweg en een ondertitelingsapp op je desktop voor vergaderingen en video. Eén tool dekt zelden alles — de juiste combinatie wel.</span>
             </div>
 
-            <h2>Veelgestelde vragen</h2>
+            <h2 id="sec-7">Veelgestelde vragen</h2>
             <p><strong>Werkt AirPods Live Translation zonder internet?</strong><br>Op Apple Silicon iPhones (iPhone 15 Pro en nieuwer) draaien ondersteunde taalpakketten on-device na download.</p>
             <p><strong>Kan ik AirPods Live Translation in een Zoom-gesprek gebruiken?</strong><br>Niet zoals ontworpen. De functie is voor persoonlijke spraak, niet voor systeemaudio. Voor Zoom-vertaling gebruik je Zoom's ingebouwde vertaalde ondertiteling of een desktop ondertitelinglaag.</p>
             <p><strong>Vervangt het toegewijde vertaalapps?</strong><br>Voor gesprekken en reizen, ja, voor de meeste gebruikers. Voor vergaderingen, broadcasts en desktop-workflows, nee — daar blijft een ondertitelingslaag op systeemniveau de betere keuze.</p>
             <p><strong>Welke iPhones en AirPods ondersteunen de functie?</strong><br>Je hebt een iPhone met Apple Silicon (iPhone 15 Pro en nieuwer) en compatibele AirPods nodig. De exacte combinatie en ondersteunde talen vind je in Apple's officiële documentatie.</p>
             <p><strong>Hoe snel is de vertaling in de praktijk?</strong><br>Reken op zo'n 1,5 tot 2,5 seconden per beurt. Dat is prima voor een gesprek, maar te traag voor real-time ondertiteling van een doorlopende video of lezing — daar wil je continue ondertiteling in plaats van beurt-voor-beurt vertaling.</p>
 
-            <h2>Bronnen</h2>
+            <h2 id="sec-8">Bronnen</h2>
             <ul>
-                <li><a href="https://support.apple.com/guide/iphone/translate-text-voice-and-conversations-iphd74cb450f/ios" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — Tekst, spraak en gesprekken vertalen</a></li>
-                <li><a href="https://www.apple.com/airpods/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — AirPods overzicht</a></li>
-                <li><a href="https://developer.apple.com/translation/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple Developer — Translation framework</a></li>
+                <li><a href="https://support.apple.com/guide/iphone/translate-text-voice-and-conversations-iphd74cb450f/ios" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — Tekst, spraak en gesprekken vertalen</a></li>
+                <li><a href="https://www.apple.com/airpods/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — AirPods overzicht</a></li>
+                <li><a href="https://developer.apple.com/translation/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple Developer — Translation framework</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Gerelateerde artikelen</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Gerelateerde artikelen</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">Spraakvertaling in 2026: realtime tools vergeleken per use case</a></li>
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">Live ondertiteling in 2026: hoe AI-ondertiteling werkt en wanneer te gebruiken</a></li>
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams: vertaalde ondertiteling in 2026</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">Spraakvertaling in 2026: realtime tools vergeleken per use case</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">Live ondertiteling in 2026: hoe AI-ondertiteling werkt en wanneer te gebruiken</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">Google Meet vs Zoom vs Teams: vertaalde ondertiteling in 2026</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Voor vergaderingen en desktop: ondertiteling die AirPods Live Translation niet kan</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Cross-app live ondertiteling en realtime vertaling op Windows en Mac — dekt de workflows die AirPods Live Translation niet doet.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download via Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Voor vergaderingen en desktop: ondertiteling die AirPods Live Translation niet kan</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Cross-app live ondertiteling en realtime vertaling op Windows en Mac — dekt de workflows die AirPods Live Translation niet doet.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Gratis downloaden</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live ondertitels voor elke app</h3>
+                <div class="explore-cols"><div><h5>Vergaderingen &amp; gesprekken</h5><a href="/nl/zoom-live-captions.html">Zoom</a><a href="/nl/teams-live-captions.html">Microsoft Teams</a><a href="/nl/google-meet-live-captions.html">Google Meet</a><a href="/nl/webex-live-captions.html">Webex</a><a href="/nl/skype-live-captions.html">Skype</a><a href="/nl/slack-live-captions.html">Slack</a><a href="/nl/whatsapp-live-translation.html">WhatsApp</a><a href="/nl/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/nl/youtube-dual-subtitles.html">YouTube</a><a href="/nl/netflix-subtitles.html">Netflix</a><a href="/nl/twitch-live-captions.html">Twitch</a><a href="/nl/discord-live-captions.html">Discord</a><a href="/nl/tiktok-live-captions.html">TikTok</a><a href="/nl/instagram-live-captions.html">Instagram</a><a href="/nl/facebook-live-subtitles.html">Facebook</a><a href="/nl/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/nl/obs-subtitles.html">OBS</a><a href="/nl/game-mode-subtitles.html">Game Mode</a><a href="/nl/steam-subtitles.html">Steam</a><a href="/nl/restream-subtitles.html">Restream</a><a href="/nl/vimeo-subtitles.html">Vimeo</a><a href="/nl/vlc-subtitles.html">VLC</a></div><div><h5>Leren &amp; werken</h5><a href="/nl/coursera-subtitles.html">Coursera</a><a href="/nl/udemy-live-captions.html">Udemy</a><a href="/nl/google-classroom-subtitles.html">Google Classroom</a><a href="/nl/linkedin-live-captions.html">LinkedIn</a><a href="/nl/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/nl/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Lees ook</h4>
+            <a class="s-item" href="article-1.html">Hoe dubbele ondertitels u helpen sneller talen te leren</a>
+            <a class="s-item" href="article-2.html">Waarom ondertiteling belangrijk is voor taalonderwijs</a>
+            <a class="s-item" href="article-3.html">Dubbele ondertiteling en het leren van uitspraak en accent</a>
+            <a class="s-item" href="article-4.html">Waarom ondertitels zelfs nuttig zijn voor moedertaalsprekers</a>
+            <a class="s-item" href="article-5.html">TOP-10 films met dubbele ondertitels voor het leren van En…</a>
+            <a class="s-item" href="article-6.html">Fouten te vermijden bij taalleren door video&amp;#39;s met dub…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live ondertitels voor elke app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Gratis downloaden</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Naar boven" title="Naar boven">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/nl/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

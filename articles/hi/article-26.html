@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="iOS 26 में AirPods लाइव अनुवाद: यह क्या अच्छा करता है और कहाँ कम पड़ता है">
     <meta name="twitter:description" content="iOS 26 में AirPods लाइव अनुवाद की पूरी समीक्षा — ऑन-डिवाइस अनुवाद कैसे काम करता है, किन परिस्थितियों में बेहतरीन है और मीटिंग व डेस्कटॉप के लिए क्या चाहिए।">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/hi/movies.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,25 +150,43 @@
     <link rel="preload" as="image" href="/articles/img/hi/movies.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="विषय-सूची">
+        <div class="toc-inner">
+            <h4>विषय-सूची</h4>
+            <a href="#sec-1">AirPods लाइव अनुवाद की तकनीकी संरचना</a>
+            <a href="#sec-2">AirPods लाइव अनुवाद कहाँ वाकई शानद…</a>
+            <a href="#sec-3">AirPods लाइव अनुवाद की स्पष्ट सीमाएँ</a>
+            <a href="#sec-4">AirPods लाइव अनुवाद बनाम अन्य विकल…</a>
+            <a href="#sec-5">कब कौन सा टूल चुनें</a>
+            <a href="#sec-6">भाषा सटीकता और व्यावहारिक अनुभव</a>
+            <a href="#sec-7">डेस्कटॉप कैप्शनिंग के विकल्प: AirP…</a>
+            <a href="#sec-8">अक्सर पूछे जाने वाले प्रश्न</a>
+            <a href="#sec-9">संदर्भ और स्रोत</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← लेखों पर वापस</a>
         <h1 class="article-title" itemprop="headline">iOS 26 में AirPods लाइव अनुवाद: यह क्या अच्छा करता है और कहाँ कम पड़ता है</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 मई 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">लेखक: <a href="https://live-subtitles.com/about/team/daniel-formind.html" rel="author" style="color:#00b8ff; text-decoration:none;">Daniel Formind</a> &middot; संस्थापक और इंजीनियर, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">अद्यतन: 28 मई 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 मई 2026<span class="reading-time">19 मिनट पढ़ना</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">लेखक: <a href="https://live-subtitles.com/about/team/daniel-formind.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Daniel Formind</a> &middot; संस्थापक और इंजीनियर, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">अद्यतन: 28 मई 2026</div>
         <img class="article-hero" src="/articles/img/hi/movies.webp" alt="आमने-सामने बातचीत के दौरान AirPods लाइव भाषा अनुवाद कर रहे हैं" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Apple का iOS 26 में <strong>AirPods लाइव अनुवाद</strong> इस वर्ष की सबसे अधिक चर्चित तकनीकी सुविधाओं में से एक है। जब आप किसी विदेशी भाषा बोलने वाले से आमने-सामने मिलते हैं, तो यह सुविधा वाकई कमाल करती है — लगभग बिना रुके, बिना फ़ोन उठाए। लेकिन इसकी सीमाएँ उतनी ही स्पष्ट हैं जितनी इसकी ताकत। यह लेख आपको बताएगा कि यह टूल ठीक वैसे काम करता है या नहीं जैसा आप सोच रहे हैं — और जहाँ यह नहीं पहुँचता, वहाँ किस टूल की ज़रूरत है।</p>
 
-            <h2>AirPods लाइव अनुवाद की तकनीकी संरचना</h2>
+            <details class="toc-mobile"><summary>विषय-सूची</summary><ol><li><a href="#sec-1">AirPods लाइव अनुवाद की तकनीकी संरचना</a></li><li><a href="#sec-2">AirPods लाइव अनुवाद कहाँ वाकई शानदार है</a></li><li><a href="#sec-3">AirPods लाइव अनुवाद की स्पष्ट सीमाएँ</a></li><li><a href="#sec-4">AirPods लाइव अनुवाद बनाम अन्य विकल्प: तुलनात्मक जायज़ा</a></li><li><a href="#sec-5">कब कौन सा टूल चुनें</a></li><li><a href="#sec-6">भाषा सटीकता और व्यावहारिक अनुभव</a></li><li><a href="#sec-7">डेस्कटॉप कैप्शनिंग के विकल्प: AirPods की कमी को कहाँ पूरा करें</a></li><li><a href="#sec-8">अक्सर पूछे जाने वाले प्रश्न</a></li><li><a href="#sec-9">संदर्भ और स्रोत</a></li></ol></details>
+            <h2 id="sec-1">AirPods लाइव अनुवाद की तकनीकी संरचना</h2>
             <p>iOS 26 में AirPods लाइव अनुवाद की पाइपलाइन पूरी तरह डिवाइस पर चलती है — कोई क्लाउड राउंडट्रिप नहीं। iPhone का माइक्रोफ़ोन (या AirPods से रूट किया गया ऑडियो) पहले Apple की ऑन-डिवाइस स्पीच रिकग्निशन प्रणाली में जाता है जो आवाज़ को पाठ में बदलती है। फिर यह पाठ Apple के Translation फ़्रेमवर्क से होकर गुज़रता है, जो Apple Silicon चिप पर चलता है। अंत में अनुवादित पाठ TTS (Text-to-Speech) इंजन के ज़रिए AirPods में आवाज़ बनकर आता है।</p>
             <p>इस पूरी प्रक्रिया में प्रति टर्न लगभग <strong>1.5 से 2.5 सेकंड</strong> की देरी होती है। यह प्राकृतिक बातचीत में थोड़ी असहज लग सकती है, लेकिन दो व्यक्तियों के बीच सामान्य आगे-पीछे में यह स्वीकार्य है। iPhone 15 Pro और उसके बाद के Apple Silicon मॉडल पर यह सुविधा पूरी तरह ऑफ़लाइन भी काम करती है — यदि आपने भाषा पैक पहले डाउनलोड कर लिए हों।</p>
 
             <h3>समर्थित भाषाएँ</h3>
             <p>iOS 26 के लॉन्च पर AirPods लाइव अनुवाद लगभग 20 प्रमुख भाषाओं को सपोर्ट करता है जिनमें अंग्रेज़ी, स्पेनिश, फ्रेंच, जर्मन, जापानी, मंदारिन, पुर्तगाली, इटालियन और अरबी शामिल हैं। हिंदी का समर्थन अभी सीमित दायरे में है। यदि आपकी भाषा सूची में नहीं है, तो Google Translate का Conversation Mode एक अच्छा विकल्प है जो 100 से अधिक भाषाओं को कवर करता है।</p>
 
-            <h2>AirPods लाइव अनुवाद कहाँ वाकई शानदार है</h2>
+            <h2 id="sec-2">AirPods लाइव अनुवाद कहाँ वाकई शानदार है</h2>
             <p>कुछ परिदृश्य ऐसे हैं जहाँ यह सुविधा बाकी सभी विकल्पों से बेहतर प्रदर्शन करती है। इन स्थितियों में इसे ज़रूर आज़माएँ।</p>
             <ul>
                 <li><strong>आमने-सामने यात्रा बातचीत:</strong> होटल में चेक-इन, बाज़ार में मोलभाव, टैक्सी ड्राइवर से बात — ये छोटी, सीधी बातचीत इस सुविधा की मीठी जगह है। दो व्यक्ति, बारी-बारी बोलते हैं, एक के पास AirPods नहीं भी हो तो काम चलता है। अनुवादित आवाज़ आपके कान में आती है जबकि दूसरे की बात हवा में सुनाई देती है — बातचीत स्वाभाविक रहती है।</li>
@@ -115,11 +195,11 @@
                 <li><strong>एकल-डिवाइस परिदृश्य:</strong> जब आपके पास केवल iPhone है और दूसरी पार्टी के पास कोई टूल नहीं, तब भी यह काम करता है। उन्हें कुछ डाउनलोड नहीं करना पड़ता, कोई ऐप इंस्टॉल नहीं करना पड़ता।</li>
             </ul>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">सुझाव:</strong> यात्रा से पहले उन सभी भाषाओं के ऑफ़लाइन पैक डाउनलोड कर लें जहाँ आप जा रहे हैं। Settings → Translate → Downloaded Languages में जाएँ। इंटरनेट कनेक्शन के बिना भी काम करेगा।
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">सुझाव:</strong> यात्रा से पहले उन सभी भाषाओं के ऑफ़लाइन पैक डाउनलोड कर लें जहाँ आप जा रहे हैं। Settings → Translate → Downloaded Languages में जाएँ। इंटरनेट कनेक्शन के बिना भी काम करेगा।
             </div>
 
-            <h2>AirPods लाइव अनुवाद की स्पष्ट सीमाएँ</h2>
+            <h2 id="sec-3">AirPods लाइव अनुवाद की स्पष्ट सीमाएँ</h2>
             <p>यह सुविधा एक विशेष उद्देश्य के लिए बनाई गई है — दो व्यक्तियों के बीच बारी-बारी बातचीत। जैसे ही आप इस दायरे से बाहर जाते हैं, यह काम नहीं करती।</p>
             <ul>
                 <li><strong>बहु-वक्ता मीटिंग:</strong> Zoom, Teams या Meet पर 5-6 लोग एक साथ बोल रहे हों — यह सुविधा उस माहौल के लिए नहीं बनी। स्पीकर डायराइज़ेशन (कौन बोल रहा है इसकी पहचान) और एक साथ कई आवाज़ें संभालना इसके डिज़ाइन में नहीं है।</li>
@@ -129,7 +209,7 @@
                 <li><strong>Android और Windows उपयोगकर्ता:</strong> दूसरी पार्टी के पास iPhone न हो तो कोई बात नहीं, लेकिन आपके पास iPhone होना ज़रूरी है। इसका कोई Android या Windows संस्करण नहीं है।</li>
             </ul>
 
-            <h2>AirPods लाइव अनुवाद बनाम अन्य विकल्प: तुलनात्मक जायज़ा</h2>
+            <h2 id="sec-4">AirPods लाइव अनुवाद बनाम अन्य विकल्प: तुलनात्मक जायज़ा</h2>
             <p>सही टूल चुनने के लिए यह समझना ज़रूरी है कि हर टूल किस परिदृश्य के लिए बना है।</p>
             <table>
                 <thead>
@@ -168,7 +248,7 @@
                 </tbody>
             </table>
 
-            <h2>कब कौन सा टूल चुनें</h2>
+            <h2 id="sec-5">कब कौन सा टूल चुनें</h2>
             <h3>यात्रा और व्यक्तिगत बातचीत</h3>
             <p>विदेश यात्रा पर AirPods लाइव अनुवाद का उपयोग करें। हर उत्तर के लिए फ़ोन स्क्रीन खोलने की ज़रूरत नहीं — बातचीत सीधे कान में आती है। Apple जिन भाषाओं को सपोर्ट नहीं करता, उनके लिए Google Translate का Conversation Mode बैकअप के रूप में रखें। दोनों ऐप्स फ़ोन में होने चाहिए।</p>
             <p>एक व्यावहारिक सुझाव: यात्रा से एक-दो दिन पहले टूल को टेस्ट करें। लेटेंसी और बोलने की गति के बीच तालमेल बैठाने में थोड़ा अभ्यास लगता है।</p>
@@ -180,7 +260,7 @@
             <h3>गोपनीयता-संवेदनशील परिदृश्य</h3>
             <p>अगर डेटा गोपनीयता आपकी प्राथमिकता है, तो AirPods लाइव अनुवाद का ऑन-डिवाइस मॉडल आदर्श है। लेकिन याद रखें — ऑन-डिवाइस प्रोसेसिंग केवल तभी सुनिश्चित होती है जब भाषा पैक पहले से डाउनलोड हो और iPhone ऑफ़लाइन मोड में हो। इंटरनेट से जुड़े होने पर कुछ अनुरोध क्लाउड को भी भेजे जा सकते हैं।</p>
 
-            <h2>भाषा सटीकता और व्यावहारिक अनुभव</h2>
+            <h2 id="sec-6">भाषा सटीकता और व्यावहारिक अनुभव</h2>
             <p>iOS 26 में AirPods लाइव अनुवाद की सटीकता प्रमुख भाषाओं जैसे अंग्रेज़ी-स्पेनिश या अंग्रेज़ी-फ्रेंच के लिए अच्छी है। लेकिन कुछ व्यावहारिक बातें ध्यान में रखें:</p>
             <ul>
                 <li><strong>तेज़ या भारी लहजे वाली बोली:</strong> अगर बोलने वाला बहुत तेज़ बोल रहा है या किसी क्षेत्रीय उच्चारण के साथ, तो सटीकता गिर सकती है।</li>
@@ -193,44 +273,90 @@
                 <strong style="color:orange;">सावधानी:</strong> स्वास्थ्य, कानूनी मामलों या वित्तीय लेनदेन में AirPods लाइव अनुवाद पर पूरी तरह निर्भर न रहें। एक गलत अनुवाद गंभीर परिणाम दे सकता है। इन संदर्भों में हमेशा किसी प्रमाणित द्विभाषी व्यक्ति या पेशेवर अनुवादक की मदद लें।
             </div>
 
-            <h2>डेस्कटॉप कैप्शनिंग के विकल्प: AirPods की कमी को कहाँ पूरा करें</h2>
+            <h2 id="sec-7">डेस्कटॉप कैप्शनिंग के विकल्प: AirPods की कमी को कहाँ पूरा करें</h2>
             <p>यदि आपका अधिकांश काम लैपटॉप या डेस्कटॉप पर होता है और आपको किसी विदेशी भाषा में सामग्री समझनी है, तो निम्नलिखित विकल्प देखें:</p>
             <ul>
                 <li><strong>Windows Live Captions:</strong> Windows 11 में बिल्ट-इन, माइक्रोफ़ोन और सिस्टम ऑडियो दोनों को कैप्शन करता है। लेकिन यह मुख्यतः अंग्रेज़ी के लिए है और अनुवाद नहीं करता।</li>
                 <li><strong>macOS Live Captions:</strong> macOS Sonoma से उपलब्ध, सिस्टम ऑडियो कैप्शन करता है। भाषा समर्थन सीमित है।</li>
-                <li><strong>Live Subtitles ऐप (Windows):</strong> यह थर्ड-पार्टी टूल किसी भी ऐप का सिस्टम ऑडियो पकड़ता है और रीयल-टाइम में दूसरी भाषा में अनुवाद दिखाता है। Zoom, YouTube, Netflix, Teams — सब पर काम करता है। <a href="article-25.html" style="color:#00b8ff;">लाइव कैप्शन तकनीक के बारे में अधिक जानें।</a></li>
+                <li><strong>Live Subtitles ऐप (Windows):</strong> यह थर्ड-पार्टी टूल किसी भी ऐप का सिस्टम ऑडियो पकड़ता है और रीयल-टाइम में दूसरी भाषा में अनुवाद दिखाता है। Zoom, YouTube, Netflix, Teams — सब पर काम करता है। <a href="article-25.html" style="color:#0b6ad1;">लाइव कैप्शन तकनीक के बारे में अधिक जानें।</a></li>
             </ul>
-            <p>यदि आप ऑनलाइन मीटिंग में भाग लेते हैं और दूसरी भाषा में अनुवाद चाहते हैं, तो <a href="article-18.html" style="color:#00b8ff;">Zoom, Teams और Google Meet की अनुवादित कैप्शन सुविधाओं की तुलना</a> ज़रूर पढ़ें।</p>
+            <p>यदि आप ऑनलाइन मीटिंग में भाग लेते हैं और दूसरी भाषा में अनुवाद चाहते हैं, तो <a href="article-18.html" style="color:#0b6ad1;">Zoom, Teams और Google Meet की अनुवादित कैप्शन सुविधाओं की तुलना</a> ज़रूर पढ़ें।</p>
 
-            <h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+            <h2 id="sec-8">अक्सर पूछे जाने वाले प्रश्न</h2>
             <p><strong>क्या AirPods लाइव अनुवाद इंटरनेट के बिना काम करता है?</strong><br>हाँ — Apple Silicon iPhones (iPhone 15 Pro और उससे नए) पर, यदि आपने भाषा पैक पहले डाउनलोड किए हों। Settings → Translate → Downloaded Languages से डाउनलोड करें। पुराने iPhones पर यह क्लाउड पर निर्भर हो सकता है।</p>
-            <p><strong>क्या मैं Zoom कॉल में AirPods लाइव अनुवाद का उपयोग कर सकता हूँ?</strong><br>नहीं — यह सुविधा माइक्रोफ़ोन इनपुट के लिए है, सिस्टम ऑडियो के लिए नहीं। Zoom के रास्ते आने वाली आवाज़ें iPhone स्पीकर से आएंगी, माइक्रोफ़ोन चैनल पर नहीं। Zoom ट्रांसलेशन के लिए Zoom के बिल्ट-इन Translated Captions या <a href="article-23.html" style="color:#00b8ff;">डेस्कटॉप कैप्शन टूल</a> का उपयोग करें।</p>
+            <p><strong>क्या मैं Zoom कॉल में AirPods लाइव अनुवाद का उपयोग कर सकता हूँ?</strong><br>नहीं — यह सुविधा माइक्रोफ़ोन इनपुट के लिए है, सिस्टम ऑडियो के लिए नहीं। Zoom के रास्ते आने वाली आवाज़ें iPhone स्पीकर से आएंगी, माइक्रोफ़ोन चैनल पर नहीं। Zoom ट्रांसलेशन के लिए Zoom के बिल्ट-इन Translated Captions या <a href="article-23.html" style="color:#0b6ad1;">डेस्कटॉप कैप्शन टूल</a> का उपयोग करें।</p>
             <p><strong>क्या यह समर्पित अनुवाद ऐप्स की जगह ले सकता है?</strong><br>यात्रा और आमने-सामने बातचीत के लिए अधिकांश उपयोगकर्ताओं के लिए हाँ — खासकर उन भाषाओं में जिन्हें Apple सपोर्ट करता है। मीटिंग, ब्रॉडकास्ट, ऑनलाइन कोर्स और डेस्कटॉप वर्कफ़्लो के लिए नहीं।</p>
             <p><strong>क्या AirPods Pro और AirPods Max दोनों में काम करता है?</strong><br>हाँ, AirPods Pro 2 और AirPods Max (USB-C) iOS 26 पर इस सुविधा को सपोर्ट करते हैं। मानक AirPods (4th gen) पर उपलब्धता सीमित हो सकती है।</p>
             <p><strong>क्या यह हिंदी भाषा को सपोर्ट करता है?</strong><br>iOS 26 के प्रारंभिक रोलआउट में हिंदी सपोर्ट आंशिक है। Apple की आधिकारिक सूची में हिंदी को पूर्ण समर्थन मिलने में कुछ समय लग सकता है। इस बीच Google Translate Conversation Mode हिंदी के लिए बेहतर विकल्प है।</p>
 
-            <h2>संदर्भ और स्रोत</h2>
+            <h2 id="sec-9">संदर्भ और स्रोत</h2>
             <ul>
-                <li><a href="https://support.apple.com/guide/iphone/translate-text-voice-and-conversations-iphd74cb450f/ios" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple Support — पाठ, आवाज़ और बातचीत का अनुवाद</a></li>
-                <li><a href="https://www.apple.com/airpods/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — AirPods का आधिकारिक अवलोकन</a></li>
-                <li><a href="https://developer.apple.com/translation/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple Developer — Translation फ़्रेमवर्क तकनीकी दस्तावेज़</a></li>
+                <li><a href="https://support.apple.com/guide/iphone/translate-text-voice-and-conversations-iphd74cb450f/ios" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple Support — पाठ, आवाज़ और बातचीत का अनुवाद</a></li>
+                <li><a href="https://www.apple.com/airpods/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — AirPods का आधिकारिक अवलोकन</a></li>
+                <li><a href="https://developer.apple.com/translation/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple Developer — Translation फ़्रेमवर्क तकनीकी दस्तावेज़</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">संबंधित लेख</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">संबंधित लेख</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">2026 में आवाज़ अनुवाद ऐप्स: उपयोग के मामले के अनुसार रीयल-टाइम तुलना</a></li>
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">2026 में लाइव कैप्शन: AI-जनरेटेड कैप्शन कैसे काम करते हैं और कब उपयोग करें</a></li>
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">2026 में Google Meet बनाम Zoom बनाम Teams अनुवादित कैप्शन की तुलना</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">2026 में आवाज़ अनुवाद ऐप्स: उपयोग के मामले के अनुसार रीयल-टाइम तुलना</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">2026 में लाइव कैप्शन: AI-जनरेटेड कैप्शन कैसे काम करते हैं और कब उपयोग करें</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">2026 में Google Meet बनाम Zoom बनाम Teams अनुवादित कैप्शन की तुलना</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">मीटिंग और डेस्कटॉप के लिए: वो कैप्शन जो AirPods नहीं दे सकता</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Windows और Mac पर किसी भी ऐप में सिस्टम-ऑडियो लाइव कैप्शन और रीयल-टाइम अनुवाद — Zoom, YouTube, Netflix, Teams सब पर। <strong>Live Subtitles</strong> वो कवर करता है जो AirPods लाइव अनुवाद नहीं कर सकता।</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Store से डाउनलोड करें</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">मीटिंग और डेस्कटॉप के लिए: वो कैप्शन जो AirPods नहीं दे सकता</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Windows और Mac पर किसी भी ऐप में सिस्टम-ऑडियो लाइव कैप्शन और रीयल-टाइम अनुवाद — Zoom, YouTube, Netflix, Teams सब पर। <strong>Live Subtitles</strong> वो कवर करता है जो AirPods लाइव अनुवाद नहीं कर सकता।</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">मुफ़्त डाउनलोड</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 समीक्षाएँ</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>किसी भी ऐप के लिए लाइव सबटाइटल</h3>
+                <div class="explore-cols"><div><h5>मीटिंग और कॉल</h5><a href="/hi/zoom-live-captions.html">Zoom</a><a href="/hi/teams-live-captions.html">Microsoft Teams</a><a href="/hi/google-meet-live-captions.html">Google Meet</a><a href="/hi/webex-live-captions.html">Webex</a><a href="/hi/skype-live-captions.html">Skype</a><a href="/hi/slack-live-captions.html">Slack</a><a href="/hi/whatsapp-live-translation.html">WhatsApp</a><a href="/hi/telegram-subtitles.html">Telegram</a></div><div><h5>स्ट्रीमिंग और सोशल</h5><a href="/hi/youtube-dual-subtitles.html">YouTube</a><a href="/hi/netflix-subtitles.html">Netflix</a><a href="/hi/twitch-live-captions.html">Twitch</a><a href="/hi/discord-live-captions.html">Discord</a><a href="/hi/tiktok-live-captions.html">TikTok</a><a href="/hi/instagram-live-captions.html">Instagram</a><a href="/hi/facebook-live-subtitles.html">Facebook</a><a href="/hi/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>गेमिंग और क्रिएटर</h5><a href="/hi/obs-subtitles.html">OBS</a><a href="/hi/game-mode-subtitles.html">Game Mode</a><a href="/hi/steam-subtitles.html">Steam</a><a href="/hi/restream-subtitles.html">Restream</a><a href="/hi/vimeo-subtitles.html">Vimeo</a><a href="/hi/vlc-subtitles.html">VLC</a></div><div><h5>पढ़ाई और काम</h5><a href="/hi/coursera-subtitles.html">Coursera</a><a href="/hi/udemy-live-captions.html">Udemy</a><a href="/hi/google-classroom-subtitles.html">Google Classroom</a><a href="/hi/linkedin-live-captions.html">LinkedIn</a><a href="/hi/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/hi/" style="font-weight:600;text-decoration:none;">Live Subtitles होम →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>यह भी पढ़ें</h4>
+            <a class="s-item" href="article-1.html">दोहरे उपशीर्षक आपको भाषा सीखने में कैसे तेज़ बनाते हैं</a>
+            <a class="s-item" href="article-2.html">भाषा सीखने के लिए उपशीर्षक क्यों महत्वपूर्ण हैं</a>
+            <a class="s-item" href="article-3.html">दोहरे उपशीर्षक के साथ सांस्कृतिक संदर्भ को समझना</a>
+            <a class="s-item" href="article-4.html">देशी भाषियों के लिए भी उपशीर्षक क्यों उपयोगी हैं</a>
+            <a class="s-item" href="article-5.html">अंग्रेजी सीखने के लिए दोहरे उपशीर्षक वाली टॉप-10 फिल्में</a>
+            <a class="s-item" href="article-6.html">दोहरे उपशीर्षक के साथ वीडियो से भाषा सीखते समय बचने योग्य …</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>किसी भी ऐप के लिए लाइव सबटाइटल.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">मुफ़्त डाउनलोड</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="ऊपर जाएँ" title="ऊपर जाएँ">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/hi/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

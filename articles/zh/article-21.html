@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="国际战队的 Discord 语音聊天字幕">
     <meta name="twitter:description" content="Discord 实时字幕助力国际跨语言电竞战队实现高效实时沟通：详解 Game Mode 窗口覆盖锁定完整配置流程、战术报点术语模板的快速创建与调用技巧、以及自定义专属词汇表的系统化精准管理策略，大幅减少跨语言误操作，全面系统地提升战队每一局比赛的整体协作效率与最终胜率，立即下载。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/zh/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,18 +148,38 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目录">
+        <div class="toc-inner">
+            <h4>目录</h4>
+            <a href="#sec-1">Discord 会话的基础配置</a>
+            <a href="#sec-2">有效配合字幕的报点结构</a>
+            <a href="#sec-3">口音差异的隐性代价</a>
+            <a href="#sec-4">字幕层能修复的四种沟通故障模式</a>
+            <a href="#sec-5">战队共享词汇表模板</a>
+            <a href="#sec-6">战队新成员 15 分钟速成流程</a>
+            <a href="#sec-7">为什么语音聊天对字幕延迟的要求比会议更严格</a>
+            <a href="#sec-8">跨语言战队中指挥官的角色</a>
+            <a href="#sec-9">新队员加入后的每周 KPI 监测</a>
+            <a href="#sec-10">三周纪律执行后的数据规律</a>
+            <a href="#sec-11">相关资源</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 返回文章列表</a>
         <h1 class="article-title" itemprop="headline">国际战队的 Discord 语音聊天字幕</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">2026年3月5日<span class="reading-time">5 分钟阅读</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/zh/games.webp" alt="竞技比赛中的实时字幕覆盖" width="1280" height="762" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>国际战队输掉回合，往往不是因为操作失误，而是因为语音报点没能被队友及时理解。问题不在于音质，而在于<strong>理解速度</strong>和<strong>理解一致性</strong>。当队伍由来自不同母语背景的玩家组成时，非母语听者需要额外 200 到 400 毫秒来解析每一句指令。一局 30 回合的排位赛，这些延迟叠加起来可能累计损失 6 到 12 秒的反应时间——而高水平排位对局往往在更短的差距内决出胜负。在 Discord 语音频道中接入实时字幕层，可以显著压缩这一延迟，减少重复确认，让每位队员在关键时刻都能第一时间做出正确行动。</p>
 
-            <h2>Discord 会话的基础配置</h2>
+            <details class="toc-mobile"><summary>目录</summary><ol><li><a href="#sec-1">Discord 会话的基础配置</a></li><li><a href="#sec-2">有效配合字幕的报点结构</a></li><li><a href="#sec-3">口音差异的隐性代价</a></li><li><a href="#sec-4">字幕层能修复的四种沟通故障模式</a></li><li><a href="#sec-5">战队共享词汇表模板</a></li><li><a href="#sec-6">战队新成员 15 分钟速成流程</a></li><li><a href="#sec-7">为什么语音聊天对字幕延迟的要求比会议更严格</a></li><li><a href="#sec-8">跨语言战队中指挥官的角色</a></li><li><a href="#sec-9">新队员加入后的每周 KPI 监测</a></li><li><a href="#sec-10">三周纪律执行后的数据规律</a></li><li><a href="#sec-11">相关资源</a></li></ol></details>
+            <h2 id="sec-1">Discord 会话的基础配置</h2>
             <p>在加入语音频道之前，先完成以下四项设置，可以确保字幕在整局游戏中稳定显示，不会因窗口切换或全屏模式而中断：</p>
             <ol>
                 <li>加入语音频道前启用 <strong>锁定模式 / 游戏模式</strong>，防止字幕窗口被游戏遮挡。</li>
@@ -106,7 +188,7 @@
                 <li>将字幕位置设置在屏幕<strong>下方居中区域</strong>，并开启高对比度，避免与 HUD 元素重叠。</li>
             </ol>
 
-            <h2>有效配合字幕的报点结构</h2>
+            <h2 id="sec-2">有效配合字幕的报点结构</h2>
             <p>字幕能辅助理解，但报点本身的结构同样关键。冗长或歧义的语音指令，即使配上字幕也会造成理解延迟。以下原则经过实战验证，与字幕工作流配合效果最佳：</p>
             <ul>
                 <li>采用简短格式：<strong>动作 + 位置 + 时机</strong>，例如"守 B 点，两人，等烟"，而非"我觉得他们可能会从 B 点进来你们去守一下"。</li>
@@ -115,11 +197,11 @@
                 <li>关键指令用单词确认：收到"OK"或"确认"，而不是沉默或长回复。</li>
             </ul>
 
-            <h2>口音差异的隐性代价</h2>
+            <h2 id="sec-3">口音差异的隐性代价</h2>
             <p>跨三个时区、两种母语的六人战队在排位赛夜晚损失的 2 到 3 个回合，通常不来自机械操作失误，而来自<strong>报点解码延迟</strong>。指挥以母语语速发出指令；用第二语言收听的队友需要额外的认知处理时间。这种延迟在单次交战中可能微不足道，但在一整局比赛中反复叠加，最终体现在胜负差距上。</p>
             <p>字幕层能将听觉信号与视觉文字同时呈现，将非母语听者的解码时间缩短 30% 到 50%。视觉信号不会取代听觉，而是作为辅助通道加速确认，尤其在报点包含缩写或特定地图术语时效果最为显著。</p>
 
-            <h2>字幕层能修复的四种沟通故障模式</h2>
+            <h2 id="sec-4">字幕层能修复的四种沟通故障模式</h2>
             <ul>
                 <li><strong>口音解码延迟。</strong>边听边读，同步强化，非母语听者的理解速度提升幅度可达 30% 至 50%。</li>
                 <li><strong>缩写歧义。</strong>"B2"在 CS2 里可能表示"B 点两人"，在 Valorant 里可能表示"两秒后轮换到 B"。文字版本使缩写视觉可辨，消除听觉上的语境模糊。</li>
@@ -127,14 +209,14 @@
                 <li><strong>嗓音疲劳降质。</strong>连打四小时后，人声会变得嘶哑模糊，但字幕始终清晰。</li>
             </ul>
 
-            <h2>战队共享词汇表模板</h2>
+            <h2 id="sec-5">战队共享词汇表模板</h2>
             <p>词汇表是多语言战队最高价值的单一工件。在 Discord 频道固定一条消息，整理 20 到 30 个地图术语，并禁止在赛季中途随意修改。混用同义词的代价，比完全没有词汇表还要高。以下是推荐的表格结构：</p>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">地图 / 场景</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">术语</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">含义（一行）</th>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">地图 / 场景</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">术语</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">含义（一行）</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -147,7 +229,7 @@
             </table>
             <p>纪律比内容更重要。两个同义词并存在词汇表中，带来的混乱远大于完全不建词汇表。建完就冻结，赛季结束前不做大幅改动。</p>
 
-            <h2>战队新成员 15 分钟速成流程</h2>
+            <h2 id="sec-6">战队新成员 15 分钟速成流程</h2>
             <ol>
                 <li>分享已固定的词汇表，要求新成员在练习赛前通读一遍。</li>
                 <li>进行一局练习赛。对新成员未能及时响应的报点，用 Discord 表情实时标记，方便赛后复盘。</li>
@@ -155,14 +237,14 @@
                 <li>根据判断结果，修订词汇表或安排第二次练习赛。在新成员能够无字幕辅助完整解读所有报点之前，不推进排位。</li>
             </ol>
 
-            <h2>为什么语音聊天对字幕延迟的要求比会议更严格</h2>
+            <h2 id="sec-7">为什么语音聊天对字幕延迟的要求比会议更严格</h2>
             <p>商务会议有冗余保障：幻灯片、后续邮件、录音转写。排位赛一无所有。错过一次报点无法回放。这将字幕延迟的可接受标准从会议工具的"够用"水平（1.5 到 2 秒）提升到"几乎无感知"水平（600 毫秒以内）。任何在产出文字前需要缓冲数秒音频的工具，无论最终准确率多高，都不适合用于竞技排位通信。</p>
             <p>Live Subtitles 的低延迟设计正是针对这一场景——语音信号几乎即时转化为屏幕上的字幕，不会打断你对游戏本身的专注力。</p>
 
-            <h2>跨语言战队中指挥官的角色</h2>
+            <h2 id="sec-8">跨语言战队中指挥官的角色</h2>
             <p>在四名英语母语、两名西班牙语母语的战队中，指挥官必须选定一种指挥语言并在整场比赛中严格执行。中途切换语言（"rotate B，去 B 点"）会成倍增加所有队员的认知负担。如果指挥官是双语者，在比赛开始前选定多数人的母语作为指挥语言，并将其视为约定。字幕层在这里的作用是：即便指挥语言是少数队员的第二语言，他们仍能通过阅读字幕在毫秒级完成确认，而不需要要求重复。</p>
 
-            <h2>新队员加入后的每周 KPI 监测</h2>
+            <h2 id="sec-9">新队员加入后的每周 KPI 监测</h2>
             <div class="note">
                 <ul>
                     <li><strong>复述率：</strong>每局"再说一遍"或"什么"的出现次数，目标控制在每局 2 次以下。</li>
@@ -172,25 +254,71 @@
                 </ul>
             </div>
 
-            <h2>三周纪律执行后的数据规律</h2>
+            <h2 id="sec-10">三周纪律执行后的数据规律</h2>
             <p>根据我们观察的战队数据，典型进展如下：第一周复述率减半——词汇表开始发挥作用；第二周误轮换率减半——术语与队员的心理地图完成匹配；第三周排位胜率提升 5 到 10 个百分点——新的沟通基线在每个回合中形成复利效应。字幕层能加速这条进化曲线，但无法替代纪律本身。</p>
             <p>如果你的战队正处于第一周，最快见效的动作是：建词汇表，固定它，然后开一局字幕开着的练习赛。你会在赛后立刻看到哪些术语让队员反应迟缓。</p>
 
-            <h2>相关资源</h2>
+            <h2 id="sec-11">相关资源</h2>
             <ul>
-                <li><a href="/zh/discord-twitch-subtitles.html" style="color:#00b8ff;">Discord 与 Twitch 字幕功能介绍</a></li>
-                <li><a href="/zh/game-mode-subtitles.html" style="color:#00b8ff;">游戏模式字幕专页</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">游戏模式配置完整指南</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">全屏覆盖层故障排查</a></li>
-                <li><a href="article-22.html" style="color:#00b8ff;">多语言团队的实时沟通策略</a></li>
+                <li><a href="/zh/discord-twitch-subtitles.html" style="color:#0b6ad1;">Discord 与 Twitch 字幕功能介绍</a></li>
+                <li><a href="/zh/game-mode-subtitles.html" style="color:#0b6ad1;">游戏模式字幕专页</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">游戏模式配置完整指南</a></li>
+                <li><a href="article-20.html" style="color:#0b6ad1;">全屏覆盖层故障排查</a></li>
+                <li><a href="article-22.html" style="color:#0b6ad1;">多语言团队的实时沟通策略</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">统一战队沟通标准，从这一局开始</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">在 Discord 中稳定运行字幕工作流，可以改善每一个比赛日的表现。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">从微软商店下载 Live Subtitles</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">统一战队沟通标准，从这一局开始</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">在 Discord 中稳定运行字幕工作流，可以改善每一个比赛日的表现。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">免费下载</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 条评价</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>适用于任何应用的实时字幕</h3>
+                <div class="explore-cols"><div><h5>会议与通话</h5><a href="/zh/zoom-live-captions.html">Zoom</a><a href="/zh/teams-live-captions.html">Microsoft Teams</a><a href="/zh/google-meet-live-captions.html">Google Meet</a><a href="/zh/webex-live-captions.html">Webex</a><a href="/zh/skype-live-captions.html">Skype</a><a href="/zh/slack-live-captions.html">Slack</a><a href="/zh/whatsapp-live-translation.html">WhatsApp</a><a href="/zh/telegram-subtitles.html">Telegram</a></div><div><h5>流媒体与社交</h5><a href="/zh/youtube-dual-subtitles.html">YouTube</a><a href="/zh/netflix-subtitles.html">Netflix</a><a href="/zh/twitch-live-captions.html">Twitch</a><a href="/zh/discord-live-captions.html">Discord</a><a href="/zh/tiktok-live-captions.html">TikTok</a><a href="/zh/instagram-live-captions.html">Instagram</a><a href="/zh/facebook-live-subtitles.html">Facebook</a><a href="/zh/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>游戏与创作者</h5><a href="/zh/obs-subtitles.html">OBS</a><a href="/zh/game-mode-subtitles.html">Game Mode</a><a href="/zh/steam-subtitles.html">Steam</a><a href="/zh/restream-subtitles.html">Restream</a><a href="/zh/vimeo-subtitles.html">Vimeo</a><a href="/zh/vlc-subtitles.html">VLC</a></div><div><h5>学习与工作</h5><a href="/zh/coursera-subtitles.html">Coursera</a><a href="/zh/udemy-live-captions.html">Udemy</a><a href="/zh/google-classroom-subtitles.html">Google Classroom</a><a href="/zh/linkedin-live-captions.html">LinkedIn</a><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/zh/" style="font-weight:600;text-decoration:none;">Live Subtitles 首页 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>相关阅读</h4>
+            <a class="s-item" href="article-1.html">双语字幕如何帮助您更快学习语言</a>
+            <a class="s-item" href="article-2.html">为什么字幕对语言学习很重要</a>
+            <a class="s-item" href="article-3.html">双语字幕学习法的跨文化应用</a>
+            <a class="s-item" href="article-4.html">为什么字幕对母语使用者也有用</a>
+            <a class="s-item" href="article-5.html">学习英语的双语字幕电影TOP-10推荐</a>
+            <a class="s-item" href="article-6.html">通过双语字幕视频学习语言时要避免的错误</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>适用于任何应用的实时字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">免费下载</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/zh/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

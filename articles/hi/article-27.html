@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="2026 में स्ट्रीमर्स के लिए कैप्शन: OBS, Twitch, YouTube Live वर्कफ़्लो">
     <meta name="twitter:description" content="स्ट्रीमिंग में लाइव कैप्शन जोड़ें — OBS ओवरले, Twitch CC और YouTube Live के AI टूल की तुलना; स्ट्रीम लेआउट सुरक्षित रखें। Live Subtitles आज़माएं।">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/hi/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,36 @@
     <link rel="preload" as="image" href="/articles/img/hi/games.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="विषय-सूची">
+        <div class="toc-inner">
+            <h4>विषय-सूची</h4>
+            <a href="#sec-1">तीन ऑडियो स्रोत, तीन कैप्शन गंतव्य</a>
+            <a href="#sec-2">2026 स्ट्रीमर कैप्शन तुलना</a>
+            <a href="#sec-3">स्ट्रीम प्रकार के अनुसार सही टूल च…</a>
+            <a href="#sec-4">OBS में कैप्शन ओवरले सेट करने का त…</a>
+            <a href="#sec-5">प्री-स्ट्रीम सेटअप चेकलिस्ट (10 मि…</a>
+            <a href="#sec-6">सामान्य स्ट्रीमर कैप्शनिंग गलतियाँ…</a>
+            <a href="#sec-7">कैप्शन और एक्सेसिबिलिटी: स्ट्रीमर …</a>
+            <a href="#sec-8">अक्सर पूछे जाने वाले प्रश्न</a>
+            <a href="#sec-9">संदर्भ</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← लेखों पर वापस</a>
         <h1 class="article-title" itemprop="headline">2026 में स्ट्रीमर्स के लिए कैप्शन: OBS, Twitch, YouTube Live वर्कफ़्लो</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 मई 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">लेखक: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; गेमिंग ओवरले इंजीनियर, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">अद्यतन: 28 मई 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 मई 2026<span class="reading-time">19 मिनट पढ़ना</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">लेखक: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; गेमिंग ओवरले इंजीनियर, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">अद्यतन: 28 मई 2026</div>
         <img class="article-hero" src="/articles/img/hi/games.webp" alt="Twitch स्ट्रीमिंग सेटअप पर ओवरले किए गए लाइव कैप्शन" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p><strong>स्ट्रीमर्स के लिए लाइव कैप्शन</strong> जोड़ना मीटिंग कैप्शन जोड़ने से बिल्कुल अलग चुनौती है। एक सामान्य स्ट्रीमर के पास एक साथ तीन ऑडियो स्रोत होते हैं — गेम ऑडियो, माइक्रोफ़ोन और सिस्टम साउंड — और तीन जगहें जहाँ कैप्शन जा सकते हैं: इन-स्ट्रीम ओवरले, प्लेटफ़ॉर्म का नेटिव CC सिस्टम, और पोस्ट-VOD के लिए। इस सबके बीच सबसे बड़ी विफलता यह है कि कैप्शन पीछे रह जाते हैं और आपकी टाइमिंग बर्बाद कर देते हैं। एक ग़लत वर्कफ़्लो का चुनाव आपके स्ट्रीम लेआउट को ठीक उस क्षण तोड़ सकता है जब सबसे ज़रूरी हो। यह लेख आपको 2026 में Twitch, YouTube Live, Kick और Discord पर काम करने वाले कैप्शन वर्कफ़्लो को समझने में मदद करेगा — बिना लेआउट तोड़े।</p>
 
-            <h2>तीन ऑडियो स्रोत, तीन कैप्शन गंतव्य</h2>
+            <details class="toc-mobile"><summary>विषय-सूची</summary><ol><li><a href="#sec-1">तीन ऑडियो स्रोत, तीन कैप्शन गंतव्य</a></li><li><a href="#sec-2">2026 स्ट्रीमर कैप्शन तुलना</a></li><li><a href="#sec-3">स्ट्रीम प्रकार के अनुसार सही टूल चुनें</a></li><li><a href="#sec-4">OBS में कैप्शन ओवरले सेट करने का तरीका</a></li><li><a href="#sec-5">प्री-स्ट्रीम सेटअप चेकलिस्ट (10 मिनट)</a></li><li><a href="#sec-6">सामान्य स्ट्रीमर कैप्शनिंग गलतियाँ और उनसे बचाव</a></li><li><a href="#sec-7">कैप्शन और एक्सेसिबिलिटी: स्ट्रीमर के लिए यह क्यों मायने रखता है</a></li><li><a href="#sec-8">अक्सर पूछे जाने वाले प्रश्न</a></li><li><a href="#sec-9">संदर्भ</a></li></ol></details>
+            <h2 id="sec-1">तीन ऑडियो स्रोत, तीन कैप्शन गंतव्य</h2>
             <p>आपके कैप्शन की गुणवत्ता सीधे उस ऑडियो स्रोत पर निर्भर करती है जिसे वे पढ़ते हैं। इसलिए सबसे पहले यह तय करें कि आप किस स्रोत को कैप्शन करना चाहते हैं:</p>
             <ul>
                 <li><strong>केवल-माइक कैप्शनिंग:</strong> सिर्फ़ आपकी आवाज़ को साफ़-साफ़ पढ़ता है और गेम ऑडियो को पूरी तरह अनदेखा करता है। यह Just Chatting, IRL और पॉडकास्ट-शैली की स्ट्रीम के लिए सबसे उपयुक्त है। लेटेंसी भी सबसे कम रहती है क्योंकि AI को केवल एक स्पष्ट ऑडियो चैनल प्रोसेस करना होता है।</li>
@@ -108,7 +188,7 @@
             </ul>
             <p>इन तीन स्रोतों के अलावा, कैप्शन तीन जगह जा सकते हैं: सीधे आपकी स्ट्रीम में जले हुए ओवरले के रूप में, प्लेटफ़ॉर्म के अपने CC सिस्टम में (जहाँ दर्शक टॉगल कर सकते हैं), और VOD रिकॉर्डिंग के साथ। हर कॉम्बिनेशन के अपने फ़ायदे और सीमाएँ हैं।</p>
 
-            <h2>2026 स्ट्रीमर कैप्शन तुलना</h2>
+            <h2 id="sec-2">2026 स्ट्रीमर कैप्शन तुलना</h2>
             <p>नीचे दी गई तालिका 2026 में उपलब्ध प्रमुख कैप्शनिंग विकल्पों की विस्तृत तुलना करती है:</p>
             <table>
                 <thead>
@@ -127,7 +207,7 @@
                 </tbody>
             </table>
 
-            <h2>स्ट्रीम प्रकार के अनुसार सही टूल चुनें</h2>
+            <h2 id="sec-3">स्ट्रीम प्रकार के अनुसार सही टूल चुनें</h2>
             <p>सही टूल का चुनाव आपके स्ट्रीम की शैली पर निर्भर करता है। नीचे तीन सबसे आम स्ट्रीम प्रकारों के लिए सिफ़ारिशें दी गई हैं:</p>
 
             <h3>Just Chatting / IRL स्ट्रीमर</h3>
@@ -139,7 +219,7 @@
             <h3>बहुभाषी / अंतर्राष्ट्रीय दर्शकों के लिए</h3>
             <p>एक ऐसी डेस्कटॉप कैप्शनिंग परत का उपयोग करें जो स्रोत भाषा के साथ-साथ अनुवाद भी दे सके। <strong>Live Subtitles</strong> जैसे टूल हिंदी से अंग्रेज़ी या किसी अन्य भाषा में रीयल-टाइम में अनुवाद कर सकते हैं। इन द्विभाषी कैप्शनों को OBS के ज़रिए स्ट्रीम में जलाएँ ताकि दुनिया भर के दर्शक बिना कोई सेटिंग बदले कैप्शन देख सकें।</p>
 
-            <h2>OBS में कैप्शन ओवरले सेट करने का तरीका</h2>
+            <h2 id="sec-4">OBS में कैप्शन ओवरले सेट करने का तरीका</h2>
             <p>OBS में कैप्शन ओवरले सेट करना कुछ ही मिनटों का काम है। यहाँ बताया गया है कि Live Subtitles को OBS के साथ कैसे जोड़ें:</p>
             <ol>
                 <li><strong>Live Subtitles खोलें</strong> और अपनी स्पीच रिकॉग्निशन भाषा चुनें।</li>
@@ -151,7 +231,7 @@
             </ol>
             <p>एक बार यह सेटअप हो जाने के बाद, हर स्ट्रीम से पहले यही Scene लोड करें — कोई अतिरिक्त कॉन्फ़िगरेशन नहीं चाहिए।</p>
 
-            <h2>प्री-स्ट्रीम सेटअप चेकलिस्ट (10 मिनट)</h2>
+            <h2 id="sec-5">प्री-स्ट्रीम सेटअप चेकलिस्ट (10 मिनट)</h2>
             <p>स्ट्रीम शुरू करने से पहले इस त्वरित चेकलिस्ट को पूरा करें ताकि लाइव होने पर कोई गड़बड़ी न हो:</p>
             <ol>
                 <li>सत्यापित करें कि माइक्रोफ़ोन स्रोत और गेम ऑडियो स्रोत OBS में अलग-अलग ट्रैक पर असाइन हैं।</li>
@@ -161,11 +241,11 @@
                 <li>गेम की एक दृश्य जाँच करें — सुनिश्चित करें कि किलफ़ीड, मिनिमैप या स्कोर HUD कैप्शन से ढका न हो।</li>
             </ol>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00b8ff;">सुझाव:</strong> अगर आप हिंदी में स्ट्रीम करते हैं और अंग्रेज़ी-बोलने वाले दर्शकों तक पहुँचना चाहते हैं, तो <a href="/hi/zoom-live-captions.html" style="color:#00b8ff;">Live Subtitles का रीयल-टाइम अनुवाद फ़ीचर</a> आज़माएँ। यह स्वचालित रूप से हिंदी भाषण को अंग्रेज़ी कैप्शन में बदल सकता है — आपकी स्ट्रीम वैश्विक दर्शकों के लिए सुलभ हो जाती है।
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0b6ad1;">सुझाव:</strong> अगर आप हिंदी में स्ट्रीम करते हैं और अंग्रेज़ी-बोलने वाले दर्शकों तक पहुँचना चाहते हैं, तो <a href="/hi/zoom-live-captions.html" style="color:#0b6ad1;">Live Subtitles का रीयल-टाइम अनुवाद फ़ीचर</a> आज़माएँ। यह स्वचालित रूप से हिंदी भाषण को अंग्रेज़ी कैप्शन में बदल सकता है — आपकी स्ट्रीम वैश्विक दर्शकों के लिए सुलभ हो जाती है।
             </div>
 
-            <h2>सामान्य स्ट्रीमर कैप्शनिंग गलतियाँ और उनसे बचाव</h2>
+            <h2 id="sec-6">सामान्य स्ट्रीमर कैप्शनिंग गलतियाँ और उनसे बचाव</h2>
             <p>अनुभवी स्ट्रीमर भी इन आम गलतियों में पड़ जाते हैं। इन्हें जानना और इनसे बचना आपकी स्ट्रीम क्वालिटी को काफ़ी बेहतर बना सकता है:</p>
             <ul>
                 <li><strong>HUD के साथ कैप्शन का टकराव:</strong> क्लच मोमेंट पर जब सबकी नज़र किलफ़ीड या मिनिमैप पर होती है, तब कैप्शन उन्हें ढक लेते हैं। समाधान: गेम की HUD के स्थायी ज़ोन का अध्ययन करें और कैप्शन को उससे दूर रखें। स्क्रीन के नीचे बाईं या दाईं तरफ़ अक्सर सुरक्षित होता है, लेकिन यह हर गेम में अलग होता है।</li>
@@ -175,39 +255,85 @@
                 <li><strong>गेम बदलने पर ऑडियो प्रोफ़ाइल को अपडेट न करना:</strong> एक शांत RPG और एक तेज़ FPS शूटर के ऑडियो मिक्स में ज़मीन-आसमान का फ़र्क होता है। गेम बदलते समय कैप्शनिंग सोर्स सेटिंग की समीक्षा करें।</li>
             </ul>
 
-            <h2>कैप्शन और एक्सेसिबिलिटी: स्ट्रीमर के लिए यह क्यों मायने रखता है</h2>
+            <h2 id="sec-7">कैप्शन और एक्सेसिबिलिटी: स्ट्रीमर के लिए यह क्यों मायने रखता है</h2>
             <p>कैप्शन सिर्फ़ सुविधा नहीं है — यह आपकी स्ट्रीम को उन दर्शकों तक पहुँचाने का ज़रिया है जो बिना कैप्शन के आपकी सामग्री का आनंद नहीं ले सकते। भारत में लाखों लोग हैं जो सुनने में कठिनाई का सामना करते हैं। इसके अलावा, कैप्शन उन दर्शकों के लिए भी उपयोगी हैं जो बिना आवाज़ के ब्राउज़ करते हैं या जिनकी मातृभाषा आपकी बोली जाने वाली भाषा से अलग है।</p>
             <p>अध्ययन बताते हैं कि लाइव कैप्शन वाली स्ट्रीम में औसतन 15–25% अधिक दर्शक देर तक जुड़े रहते हैं। Twitch और YouTube दोनों अपने एल्गोरिदम में एंगेजमेंट को प्राथमिकता देते हैं, इसलिए कैप्शन अप्रत्यक्ष रूप से आपकी डिस्कवरेबिलिटी भी बढ़ाते हैं।</p>
 
-            <h2>अक्सर पूछे जाने वाले प्रश्न</h2>
+            <h2 id="sec-8">अक्सर पूछे जाने वाले प्रश्न</h2>
             <p><strong>क्या Twitch के दर्शक कैप्शन स्वचालित रूप से देखते हैं?</strong><br>नहीं। Twitch के नेटिव CC काम करने के लिए आपके एनकोडर को CEA-608/708 कैप्शन स्ट्रीम भेजनी होती है, और फिर दर्शकों को प्लेयर में CC बटन मैन्युअली दबाना पड़ता है। इसीलिए अधिकांश स्ट्रीमर OBS ओवरले पसंद करते हैं — कैप्शन हमेशा सभी को दिखते हैं, बिना किसी क्लिक के।</p>
             <p><strong>क्या कैप्शनिंग से स्ट्रीम परफ़ॉर्मेंस पर असर पड़ता है?</strong><br>आधुनिक सिस्टम पर AI कैप्शनिंग का CPU लोड 5% से कम होता है। अगर आपका एनकोडर पहले से टाइट है, तो एक छोटा ASR मॉडल चुनें या किसी दूसरे PC पर कैप्शनिंग रन करें और नेटवर्क के ज़रिए OBS को फ़ीड करें।</p>
             <p><strong>क्या एक साथ दो भाषाओं में कैप्शन दिखाए जा सकते हैं?</strong><br>हाँ। अगर आप Live Subtitles जैसा टूल इस्तेमाल करते हैं जो स्रोत भाषा और लक्ष्य भाषा दोनों दिखाता है, तो आप OBS में द्विभाषी कैप्शन बर्न कर सकते हैं। यह वैश्विक दर्शकों तक पहुँचने का सबसे प्रभावी तरीका है।</p>
             <p><strong>क्या कैप्शन VOD रिकॉर्डिंग पर भी आते हैं?</strong><br>अगर आपने OBS ओवरले का उपयोग किया है तो हाँ — कैप्शन रिकॉर्डिंग में स्थायी रूप से जले होते हैं। YouTube Live के ऑटो-कैप्शन VOD पर बने रहते हैं और उन्हें एडिट भी किया जा सकता है। Twitch VOD पर CC अलग से काम करता है।</p>
             <p><strong>हिंदी स्पीच रिकॉग्निशन की सटीकता कैसी है?</strong><br>2026 में हिंदी ASR मॉडलों ने काफ़ी सुधार किया है। साफ़ माइक और धीमी-से-सामान्य बोलने की गति पर सटीकता 85–95% तक पहुँच सकती है। तेज़ बोलने या हिंग्लिश (हिंदी-अंग्रेज़ी मिश्रण) के साथ सटीकता थोड़ी कम हो सकती है।</p>
 
-            <h2>संदर्भ</h2>
+            <h2 id="sec-9">संदर्भ</h2>
             <ul>
-                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Twitch — Closed Captions दस्तावेज़</a></li>
-                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">OBS Studio आधिकारिक</a></li>
-                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">YouTube सहायता — स्वचालित कैप्शन</a></li>
+                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Twitch — Closed Captions दस्तावेज़</a></li>
+                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">OBS Studio आधिकारिक</a></li>
+                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">YouTube सहायता — स्वचालित कैप्शन</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">संबंधित लेख</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">संबंधित लेख</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">2026 में लाइव कैप्शन: AI-जनरेटेड कैप्शन कैसे काम करते हैं और कब उपयोग करें</a></li>
-                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">2026 में ऑडियो को टेक्स्ट में ट्रांसक्राइब करें: रीयल-टाइम बनाम बैच ट्रांसक्रिप्शन की तुलना</a></li>
-                    <li><a href="article-17.html" style="color: #00b8ff; text-decoration: none;">स्क्रीन रीडर और लाइव कैप्शन: एक्सेसिबिलिटी टूल को साथ कैसे काम कराएँ</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">2026 में लाइव कैप्शन: AI-जनरेटेड कैप्शन कैसे काम करते हैं और कब उपयोग करें</a></li>
+                    <li><a href="article-24.html" style="color: #0b6ad1; text-decoration: none;">2026 में ऑडियो को टेक्स्ट में ट्रांसक्राइब करें: रीयल-टाइम बनाम बैच ट्रांसक्रिप्शन की तुलना</a></li>
+                    <li><a href="article-17.html" style="color: #0b6ad1; text-decoration: none;">स्क्रीन रीडर और लाइव कैप्शन: एक्सेसिबिलिटी टूल को साथ कैसे काम कराएँ</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">गेम ऑडियो और आपकी आवाज़ — दोनों को कैप्चर करने वाले स्ट्रीम कैप्शन</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">स्ट्रीमर्स के लिए सिस्टम-ऑडियो कैप्शनिंग और रीयल-टाइम अनुवाद — <strong>Live Subtitles</strong> को OBS में कैप्चर करें और मिनटों में कैप्शन वाली प्रोफ़ेशनल स्ट्रीम भेजें।</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Store से डाउनलोड करें</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">गेम ऑडियो और आपकी आवाज़ — दोनों को कैप्चर करने वाले स्ट्रीम कैप्शन</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">स्ट्रीमर्स के लिए सिस्टम-ऑडियो कैप्शनिंग और रीयल-टाइम अनुवाद — <strong>Live Subtitles</strong> को OBS में कैप्चर करें और मिनटों में कैप्शन वाली प्रोफ़ेशनल स्ट्रीम भेजें।</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">मुफ़्त डाउनलोड</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 समीक्षाएँ</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>किसी भी ऐप के लिए लाइव सबटाइटल</h3>
+                <div class="explore-cols"><div><h5>मीटिंग और कॉल</h5><a href="/hi/zoom-live-captions.html">Zoom</a><a href="/hi/teams-live-captions.html">Microsoft Teams</a><a href="/hi/google-meet-live-captions.html">Google Meet</a><a href="/hi/webex-live-captions.html">Webex</a><a href="/hi/skype-live-captions.html">Skype</a><a href="/hi/slack-live-captions.html">Slack</a><a href="/hi/whatsapp-live-translation.html">WhatsApp</a><a href="/hi/telegram-subtitles.html">Telegram</a></div><div><h5>स्ट्रीमिंग और सोशल</h5><a href="/hi/youtube-dual-subtitles.html">YouTube</a><a href="/hi/netflix-subtitles.html">Netflix</a><a href="/hi/twitch-live-captions.html">Twitch</a><a href="/hi/discord-live-captions.html">Discord</a><a href="/hi/tiktok-live-captions.html">TikTok</a><a href="/hi/instagram-live-captions.html">Instagram</a><a href="/hi/facebook-live-subtitles.html">Facebook</a><a href="/hi/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>गेमिंग और क्रिएटर</h5><a href="/hi/obs-subtitles.html">OBS</a><a href="/hi/game-mode-subtitles.html">Game Mode</a><a href="/hi/steam-subtitles.html">Steam</a><a href="/hi/restream-subtitles.html">Restream</a><a href="/hi/vimeo-subtitles.html">Vimeo</a><a href="/hi/vlc-subtitles.html">VLC</a></div><div><h5>पढ़ाई और काम</h5><a href="/hi/coursera-subtitles.html">Coursera</a><a href="/hi/udemy-live-captions.html">Udemy</a><a href="/hi/google-classroom-subtitles.html">Google Classroom</a><a href="/hi/linkedin-live-captions.html">LinkedIn</a><a href="/hi/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/hi/" style="font-weight:600;text-decoration:none;">Live Subtitles होम →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>यह भी पढ़ें</h4>
+            <a class="s-item" href="article-1.html">दोहरे उपशीर्षक आपको भाषा सीखने में कैसे तेज़ बनाते हैं</a>
+            <a class="s-item" href="article-2.html">भाषा सीखने के लिए उपशीर्षक क्यों महत्वपूर्ण हैं</a>
+            <a class="s-item" href="article-3.html">दोहरे उपशीर्षक के साथ सांस्कृतिक संदर्भ को समझना</a>
+            <a class="s-item" href="article-4.html">देशी भाषियों के लिए भी उपशीर्षक क्यों उपयोगी हैं</a>
+            <a class="s-item" href="article-5.html">अंग्रेजी सीखने के लिए दोहरे उपशीर्षक वाली टॉप-10 फिल्में</a>
+            <a class="s-item" href="article-6.html">दोहरे उपशीर्षक के साथ वीडियो से भाषा सीखते समय बचने योग्य …</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>किसी भी ऐप के लिए लाइव सबटाइटल.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">मुफ़्त डाउनलोड</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="ऊपर जाएँ" title="ऊपर जाएँ">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/hi/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

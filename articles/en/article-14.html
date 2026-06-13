@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -32,16 +28,82 @@
     <meta name="twitter:title" content="Microsoft Teams Captions Strategy: Manager Playbook">
     <meta name="twitter:description" content="Manager playbook for Microsoft Teams captions: rollout phases, governance standards, KPIs, and cross-platform strategy. Cut meeting friction today.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/meetings.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -71,12 +133,30 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">Why Microsoft Teams Captions Are a…</a>
+            <a href="#sec-2">Establishing Your Objective Before…</a>
+            <a href="#sec-3">Four-Phase Rollout Sequence</a>
+            <a href="#sec-4">Operational Standards That Determi…</a>
+            <a href="#sec-5">KPIs for Leadership Review</a>
+            <a href="#sec-6">Risk Register and Mitigation Strat…</a>
+            <a href="#sec-7">Extending the Workflow Beyond Nati…</a>
+            <a href="#sec-8">Template: Manager Communication fo…</a>
+            <a href="#sec-9">Frequently Asked Questions</a>
+            <a href="#sec-10">Summary: The Manager's Responsibil…</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Microsoft Teams Captions Strategy: Manager Playbook</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-02-10">February 10, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#00b8ff; text-decoration:none;">Lukas Bergström</a> &middot; Real-time Pipelines Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-02-10">February 10, 2026<span class="reading-time">18 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Lukas Bergström</a> &middot; Real-time Pipelines Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/meetings.webp" alt="Live captions during a multilingual video meeting" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop=”articleBody”>
@@ -84,7 +164,8 @@
 
             <p>This playbook is built for managers who want measurable results within four weeks and a sustainable framework that scales beyond a single team.</p>
 
-            <h2>Why Microsoft Teams Captions Are a Business Tool, Not a Convenience Feature</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">Why Microsoft Teams Captions Are a Business Tool, Not a Convenience Feature</a></li><li><a href="#sec-2">Establishing Your Objective Before Rollout</a></li><li><a href="#sec-3">Four-Phase Rollout Sequence</a></li><li><a href="#sec-4">Operational Standards That Determine Outcome Quality</a></li><li><a href="#sec-5">KPIs for Leadership Review</a></li><li><a href="#sec-6">Risk Register and Mitigation Strategies</a></li><li><a href="#sec-7">Extending the Workflow Beyond Native Teams Captions</a></li><li><a href="#sec-8">Template: Manager Communication for Caption Rollout</a></li><li><a href="#sec-9">Frequently Asked Questions</a></li><li><a href="#sec-10">Summary: The Manager's Responsibility in Caption Rollout</a></li></ol></details>
+            <h2 id="sec-1">Why Microsoft Teams Captions Are a Business Tool, Not a Convenience Feature</h2>
             <p>Live captions in Teams transcribe speech into on-screen text in near real-time, with latency typically under two seconds. That alone reduces the cognitive load of listening in a second language, following a fast speaker, or staying oriented in a noisy environment. But the business case goes further than accessibility.</p>
             <ul>
                 <li><strong>Decision traceability:</strong> Captions create a scrollable record of what was said during the meeting. Participants who need to confirm an owner or deadline can scan back without asking someone to repeat themselves.</li>
@@ -93,11 +174,11 @@
                 <li><strong>Reduced repeat meetings:</strong> Ambiguous verbal decisions are the most common reason a topic gets re-opened in the next standup. When captions make language visible and searchable, teams resolve ambiguity during the meeting itself rather than creating a follow-up loop.</li>
             </ul>
 
-            <div style=”background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
-                <strong style=”color:#00ff9d;”>Key benchmark:</strong> <span style=”color:#eee;”>Teams with structured caption workflows report 30–40% fewer post-meeting clarification messages within the first month, based on internal pilot data from mid-sized software and logistics organisations. The metric is easy to track: simply count Slack or Teams chat messages referencing a past meeting before and after rollout.</span>
+            <div style=”background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
+                <strong style=”color:#0a7f55;”>Key benchmark:</strong> <span style=”color:#2d333b;”>Teams with structured caption workflows report 30–40% fewer post-meeting clarification messages within the first month, based on internal pilot data from mid-sized software and logistics organisations. The metric is easy to track: simply count Slack or Teams chat messages referencing a past meeting before and after rollout.</span>
             </div>
 
-            <h2>Establishing Your Objective Before Rollout</h2>
+            <h2 id="sec-2">Establishing Your Objective Before Rollout</h2>
             <p>Captions address several different problems, and the configuration and measurement strategy differs depending on which problem you are solving. Before touching any setting, pick one primary business objective for the first 30 days. Secondary objectives can be layered in later.</p>
 
             <h3>Objective A: Reduce post-meeting clarification workload</h3>
@@ -112,7 +193,7 @@
             <h3>Objective D: Improve onboarding consistency for global hires</h3>
             <p>New employees in distributed companies are often lost in their first weeks because spoken context — team norms, project history, technical jargon — is passed verbally and never documented. Caption-based meeting records give new hires a searchable archive of real decisions and real language, accelerating time-to-productivity in a way that static onboarding documents cannot replicate.</p>
 
-            <h2>Four-Phase Rollout Sequence</h2>
+            <h2 id="sec-3">Four-Phase Rollout Sequence</h2>
             <p>A phased rollout takes six to eight weeks but dramatically reduces resistance and avoids the “we tried captions and it felt weird” outcome that happens when the feature is switched on organisation-wide without preparation.</p>
 
             <h3>Phase 1: Technical baseline (days 1–3)</h3>
@@ -138,11 +219,11 @@
             <h3>Phase 4: Cross-channel consistency (weeks 5–8)</h3>
             <ul>
                 <li>Extend the caption standard to other platforms your team uses. If some calls happen on Zoom and some on Google Meet, the standard should apply there too. Inconsistency across platforms is the single most common reason caption adoption stalls after an initial pilot.</li>
-                <li>For calls on non-Teams platforms, consider a dedicated caption tool that works system-wide rather than relying on each platform's native implementation. The <a href=”/zoom-live-captions.html” style=”color:#00b8ff;”>Live Subtitles app for Windows</a> provides real-time captions across any application — Teams, Zoom, Meet, browser-based tools — from a single interface, so the same workflow applies regardless of platform.</li>
+                <li>For calls on non-Teams platforms, consider a dedicated caption tool that works system-wide rather than relying on each platform's native implementation. The <a href=”/zoom-live-captions.html” style=”color:#0b6ad1;”>Live Subtitles app for Windows</a> provides real-time captions across any application — Teams, Zoom, Meet, browser-based tools — from a single interface, so the same workflow applies regardless of platform.</li>
                 <li>Use one subtitle workflow for meetings, webinars, and training video review. Reducing the number of different tools and habits minimises cognitive switching costs and makes the standard easier to enforce.</li>
             </ul>
 
-            <h2>Operational Standards That Determine Outcome Quality</h2>
+            <h2 id="sec-4">Operational Standards That Determine Outcome Quality</h2>
             <p>Caption technology is a multiplier, not a replacement for clear communication habits. These standards, applied consistently, determine whether your caption rollout produces a 10% improvement or a 40% improvement.</p>
 
             <h3>Language discipline</h3>
@@ -159,7 +240,7 @@
             <h3>Glossary maintenance</h3>
             <p>Assign one person per quarter to review the domain glossary, add new terms from recent projects, and remove deprecated terminology. A 45-minute quarterly review is sufficient for teams of 10–20. The glossary document should live in the same Teams channel where meeting recaps are posted, so facilitators can access it in one click.</p>
 
-            <h2>KPIs for Leadership Review</h2>
+            <h2 id="sec-5">KPIs for Leadership Review</h2>
             <p>Present these four metrics to leadership at the 30-day and 60-day marks. Avoid vanity metrics (caption activation rate, number of meetings with captions enabled) in favour of outcome metrics that are directly linked to business value.</p>
 
             <ul>
@@ -170,10 +251,10 @@
             </ul>
 
             <div style=”background: rgba(255,160,0,0.08); border-left: 4px solid #ffa000; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
-                <strong style=”color:#ffa000;”>Common measurement mistake:</strong> <span style=”color:#eee;”>Teams often track “how many meetings had captions on” as their primary KPI. This measures feature adoption, not business outcome. A meeting where captions were active but no structured recap was produced will show zero improvement on the four metrics above. Always measure what changes downstream of the meeting, not what happens during it.</span>
+                <strong style=”color:#9a6700;”>Common measurement mistake:</strong> <span style=”color:#2d333b;”>Teams often track “how many meetings had captions on” as their primary KPI. This measures feature adoption, not business outcome. A meeting where captions were active but no structured recap was produced will show zero improvement on the four metrics above. Always measure what changes downstream of the meeting, not what happens during it.</span>
             </div>
 
-            <h2>Risk Register and Mitigation Strategies</h2>
+            <h2 id="sec-6">Risk Register and Mitigation Strategies</h2>
 
             <h3>Risk 1: Low adoption despite manager mandate</h3>
             <p><strong>Cause:</strong> Enabling captions is perceived as optional because the policy is communicated but not enforced structurally.</p>
@@ -181,7 +262,7 @@
 
             <h3>Risk 2: Accuracy complaints derailing the rollout</h3>
             <p><strong>Cause:</strong> Teams' native live captions use general-purpose speech models that struggle with heavy accents, fast speech, and domain vocabulary.</p>
-            <p><strong>Mitigation:</strong> Set expectations before rollout — live captions are 85–95% accurate under normal conditions, not 100%. Train facilitators to make explicit verbal corrections (“to clarify, that deadline is the 15th, not the 5th”) rather than relying on transcription perfection. For teams with heavy domain terminology, supplement with a tool that allows vocabulary customisation. Also see our comparison of <a href=”article-18.html” style=”color:#00b8ff;”>Google Meet vs Zoom vs Teams translated captions</a> for a detailed accuracy breakdown across platforms.</p>
+            <p><strong>Mitigation:</strong> Set expectations before rollout — live captions are 85–95% accurate under normal conditions, not 100%. Train facilitators to make explicit verbal corrections (“to clarify, that deadline is the 15th, not the 5th”) rather than relying on transcription perfection. For teams with heavy domain terminology, supplement with a tool that allows vocabulary customisation. Also see our comparison of <a href=”article-18.html” style=”color:#0b6ad1;”>Google Meet vs Zoom vs Teams translated captions</a> for a detailed accuracy breakdown across platforms.</p>
 
             <h3>Risk 3: False confidence in ambiguous decisions</h3>
             <p><strong>Cause:</strong> Participants assume that because something was said and captioned, it was understood and agreed. In reality, captions do not resolve ambiguity — they only surface it.</p>
@@ -191,21 +272,21 @@
             <p><strong>Cause:</strong> Participants begin ignoring the caption overlay after two to three weeks, reducing the attention benefit.</p>
             <p><strong>Mitigation:</strong> Captions are most effective in conjunction with structured meeting formats, not as a standalone tool. If participants are engaged with a decision-focused agenda, the captions serve as a real-time reference, not a distraction. Reduce caption-fatigue risk by keeping meetings short, focused, and structured — the caption tool cannot compensate for an unstructured three-hour session.</p>
 
-            <h2>Extending the Workflow Beyond Native Teams Captions</h2>
+            <h2 id="sec-7">Extending the Workflow Beyond Native Teams Captions</h2>
             <p>Microsoft Teams' built-in live captions work well within the Teams ecosystem, but most organisations run meetings across multiple platforms simultaneously. A sales team may use Teams for internal calls and Zoom for client meetings. A distributed engineering team may use Teams for standups and Google Meet for vendor reviews. Native captions are siloed to each platform, which means your caption standard breaks every time someone switches tools.</p>
 
-            <p>The <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener” style=”color:#00b8ff;”>Live Subtitles app for Windows</a> solves this by operating at the operating-system audio level rather than within a single application. It captures system audio in real time and renders captions in an overlay window that appears on top of any application — Teams, Zoom, Meet, browser-based webinar tools, or a recorded video being played back for async review. The same caption format, the same font size, the same keyboard shortcuts work regardless of which platform is active. This cross-platform consistency is the feature that makes the four-phase rollout described above viable without maintaining separate workflows for each tool.</p>
+            <p>The <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener” style=”color:#0b6ad1;”>Live Subtitles app for Windows</a> solves this by operating at the operating-system audio level rather than within a single application. It captures system audio in real time and renders captions in an overlay window that appears on top of any application — Teams, Zoom, Meet, browser-based webinar tools, or a recorded video being played back for async review. The same caption format, the same font size, the same keyboard shortcuts work regardless of which platform is active. This cross-platform consistency is the feature that makes the four-phase rollout described above viable without maintaining separate workflows for each tool.</p>
 
-            <p>For teams that use translated captions — where one participant speaks one language and another receives captions in a different language — the Live Subtitles app supports over 50 languages for real-time translation. This is particularly relevant for the Objective B rollout described above (increasing multilingual participation), where native-language captions may not be sufficient for participants working in their third or fourth language. For a detailed comparison of translation quality across platforms, see our article on <a href=”article-12.html” style=”color:#00b8ff;”>Zoom live captions for international meetings</a>.</p>
+            <p>For teams that use translated captions — where one participant speaks one language and another receives captions in a different language — the Live Subtitles app supports over 50 languages for real-time translation. This is particularly relevant for the Objective B rollout described above (increasing multilingual participation), where native-language captions may not be sufficient for participants working in their third or fourth language. For a detailed comparison of translation quality across platforms, see our article on <a href=”article-12.html” style=”color:#0b6ad1;”>Zoom live captions for international meetings</a>.</p>
 
-            <h2>Template: Manager Communication for Caption Rollout</h2>
+            <h2 id="sec-8">Template: Manager Communication for Caption Rollout</h2>
             <p>Use this template when announcing the caption standard to your team. Customise the objective and timeline for your context.</p>
 
-            <div style=”background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0;”>
-                <p style=”color:#eee; margin:0;”><em>Starting [DATE], we will enable live captions as a standard in all recurring [TEAM NAME] meetings. The goal is to reduce post-meeting clarification messages and ensure every decision has a documented owner and deadline before we move to the next agenda item. [FACILITATOR NAME] will produce a three-line recap in this channel after each session. Captions will be enabled by default when you join any meeting in our recurring series — you do not need to do anything to activate them. If you have questions or notice accuracy issues with specific terminology, post them in [CHANNEL] and we will update the glossary.</em></p>
+            <div style=”background: rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 1.2rem; margin: 1.5rem 0;”>
+                <p style=”color:#2d333b; margin:0;”><em>Starting [DATE], we will enable live captions as a standard in all recurring [TEAM NAME] meetings. The goal is to reduce post-meeting clarification messages and ensure every decision has a documented owner and deadline before we move to the next agenda item. [FACILITATOR NAME] will produce a three-line recap in this channel after each session. Captions will be enabled by default when you join any meeting in our recurring series — you do not need to do anything to activate them. If you have questions or notice accuracy issues with specific terminology, post them in [CHANNEL] and we will update the glossary.</em></p>
             </div>
 
-            <h2>Frequently Asked Questions</h2>
+            <h2 id="sec-9">Frequently Asked Questions</h2>
 
             <p><strong>Who should own caption adoption in Teams?</strong><br>Ideally, a meeting operations owner or senior program manager with cross-team visibility. Without role ownership, usage becomes inconsistent across teams and the standard erodes within 6–8 weeks. If no formal role exists, assign ownership to the team lead for the first 90-day period and reassess at the quarterly review.</p>
 
@@ -219,27 +300,72 @@
 
             <p><strong>What is the realistic timeline to see measurable improvement?</strong><br>Most teams see a statistically meaningful reduction in clarification burden within 3–4 weeks, provided the facilitator role and the three-line recap standard are both in place from day one. Teams that enable captions without changing any meeting practices typically see no measurable improvement at all, because the problem is process rather than transcription.</p>
 
-            <h2>Summary: The Manager's Responsibility in Caption Rollout</h2>
+            <h2 id="sec-10">Summary: The Manager's Responsibility in Caption Rollout</h2>
             <p>Live captions in Microsoft Teams are a high-leverage tool when treated as a process standard. The technology is reliable, the rollout is low-cost, and the KPIs are straightforward to track. What separates high-performing deployments from abandoned ones is manager behaviour: designating a facilitator, enforcing decision language standards, and reviewing metrics at 30 and 60 days.</p>
 
             <p>The four-phase rollout — technical baseline, controlled pilot, process integration, cross-channel consistency — gives you a repeatable framework that applies to a five-person startup team and a 500-person distributed organisation equally. Start with one objective, measure it precisely, and build from there. The compound effect of cleaner meeting language, structured recaps, and cross-platform consistency compounds over quarters into a measurable reduction in coordination overhead — which is ultimately what allows distributed teams to execute at the speed of co-located ones.</p>
 
-            <div style=”background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
-                <h3 style=”color: #00b8ff; margin-top: 0;”>Related Articles</h3>
+            <div style=”background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;”>
+                <h3 style=”color: #0b6ad1; margin-top: 0;”>Related Articles</h3>
                 <ul style=”list-style: none; padding-left: 0;”>
-                    <li><a href=”article-18.html” style=”color: #00b8ff; text-decoration: none;”>Google Meet vs Zoom vs Teams Translated Captions</a></li>
-                    <li><a href=”article-16.html” style=”color: #00b8ff; text-decoration: none;”>Google Meet Live Captions: Practical Playbook</a></li>
-                    <li><a href=”article-12.html” style=”color: #00b8ff; text-decoration: none;”>Zoom Live Captions for International Meetings</a></li>
-                    <li><a href=”article-15.html” style=”color: #00b8ff; text-decoration: none;”>Live Captions for Windows: Full Feature Guide</a></li>
+                    <li><a href=”article-18.html” style=”color: #0b6ad1; text-decoration: none;”>Google Meet vs Zoom vs Teams Translated Captions</a></li>
+                    <li><a href=”article-16.html” style=”color: #0b6ad1; text-decoration: none;”>Google Meet Live Captions: Practical Playbook</a></li>
+                    <li><a href=”article-12.html” style=”color: #0b6ad1; text-decoration: none;”>Zoom Live Captions for International Meetings</a></li>
+                    <li><a href=”article-15.html” style=”color: #0b6ad1; text-decoration: none;”>Live Captions for Windows: Full Feature Guide</a></li>
                 </ul>
             </div>
 
             <div style=”background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;”>
-                <h3 style=”color: #00ff9d; margin-top: 0;”>Upgrade Team Communication</h3>
-                <p style=”color: #eee; margin-bottom: 1.5rem;”>Use Live Subtitles on Windows for consistent real-time captions across Teams, Zoom, Meet, and every other platform — one tool, one workflow, zero switching costs.</p>
-                <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener” style=”display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;”>Download from Microsoft Store</a>
+                <h3 style=”color: #0a7f55; margin-top: 0;”>Upgrade Team Communication</h3>
+                <p style=”color: #2d333b; margin-bottom: 1.5rem;”>Use Live Subtitles on Windows for consistent real-time captions across Teams, Zoom, Meet, and every other platform — one tool, one workflow, zero switching costs.</p>
+                <a href=”https://apps.microsoft.com/store/detail/9PH1R9DJG47S” target=”_blank” rel=”noopener” style=”display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;”>Download from Microsoft Store</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

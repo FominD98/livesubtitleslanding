@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="استكشاف أخطاء طبقة الترجمة بملء الشاشة في الألعاب">
     <meta name="twitter:description" content="أصلح طبقة الترجمة في الألعاب: حلول شاملة لمشاكل الشاشة الكاملة، وضع Borderless، تعارض الطبقات وHDR — احصل على ترجمة مستقرة مع Live Subtitles.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ar/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-right: 2px solid #e6e8eb; padding-right: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-right: 2px solid transparent; margin-right: -1rem; padding-right: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-right-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,25 +148,47 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="المحتويات">
+        <div class="toc-inner">
+            <h4>المحتويات</h4>
+            <a href="#sec-1">لماذا "الترجمة لا تظهر في ملء الشا…</a>
+            <a href="#sec-2">الخطوة الأولى: التحقق من وضع العرض</a>
+            <a href="#sec-3">الخطوة الثانية: التحقق من سلوك وضع…</a>
+            <a href="#sec-4">الخطوة الثالثة: فحص تخطيط الترجمة …</a>
+            <a href="#sec-5">الخطوة الرابعة: معالجة تعارض الطبقات</a>
+            <a href="#sec-6">قائمة التشخيص السريع الموفّرة للوقت</a>
+            <a href="#sec-7">وصفات إصلاح لكل سبب</a>
+            <a href="#sec-8">قائمة الاسترداد السريع</a>
+            <a href="#sec-9">الأسئلة الخمسة الضرورية في كل تقري…</a>
+            <a href="#sec-10">حين يكون الإصلاح "لا تفعل شيئاً"</a>
+            <a href="#sec-11">لماذا تؤثر الطبقة المتقطعة على الأ…</a>
+            <a href="#sec-12">نموذج لتوثيق المشاكل المتكررة</a>
+            <a href="#sec-13">موارد ذات صلة</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← العودة إلى قائمة المقالات</a>
         <h1 class="article-title" itemprop="headline">استكشاف أخطاء طبقة الترجمة بملء الشاشة في الألعاب</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 مارس 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">الكاتب: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; مهندس واجهات الألعاب, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">تم التحديث: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 مارس 2026<span class="reading-time">7 دقيقة قراءة</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">الكاتب: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; مهندس واجهات الألعاب, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">تم التحديث: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/ar/games.webp" alt="طبقة ترجمة حية أثناء مباراة لعبة تنافسية" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>حين تبدأ طبقة الترجمة في التصرف بشكل غير متوقع أثناء اللعب، يلجأ كثيرون إلى تجربة حلول عشوائية تستنزف الوقت دون أن تصل إلى الجذر الحقيقي للمشكلة. هذا الدليل يتبع منهج التشخيص المتسلسل: من وضع العرض، إلى تعارض الطبقات، وصولاً إلى إعدادات HDR. كل خطوة تُوقف ما قبلها إن كشفت عن السبب، فلا تضيع وقتاً في الخطوة التالية.</p>
 
-            <h2>لماذا "الترجمة لا تظهر في ملء الشاشة" نادراً ما تكون خللاً في تطبيق الترجمة</h2>
+            <details class="toc-mobile"><summary>المحتويات</summary><ol><li><a href="#sec-1">لماذا "الترجمة لا تظهر في ملء الشاشة" نادراً ما تكون خللاً في تطبيق الترجمة</a></li><li><a href="#sec-2">الخطوة الأولى: التحقق من وضع العرض</a></li><li><a href="#sec-3">الخطوة الثانية: التحقق من سلوك وضع Lock/Game Mode</a></li><li><a href="#sec-4">الخطوة الثالثة: فحص تخطيط الترجمة وكثافتها</a></li><li><a href="#sec-5">الخطوة الرابعة: معالجة تعارض الطبقات</a></li><li><a href="#sec-6">قائمة التشخيص السريع الموفّرة للوقت</a></li><li><a href="#sec-7">وصفات إصلاح لكل سبب</a></li><li><a href="#sec-8">قائمة الاسترداد السريع</a></li><li><a href="#sec-9">الأسئلة الخمسة الضرورية في كل تقرير خلل</a></li><li><a href="#sec-10">حين يكون الإصلاح "لا تفعل شيئاً"</a></li><li><a href="#sec-11">لماذا تؤثر الطبقة المتقطعة على الأداء التنافسي أكثر من المعطّلة كلياً</a></li><li><a href="#sec-12">نموذج لتوثيق المشاكل المتكررة</a></li><li><a href="#sec-13">موارد ذات صلة</a></li></ol></details>
+            <h2 id="sec-1">لماذا "الترجمة لا تظهر في ملء الشاشة" نادراً ما تكون خللاً في تطبيق الترجمة</h2>
             <p>عندما يشكو لاعب من اختفاء الترجمة أثناء اللعب، تكون ردة الفعل الطبيعية هي إلقاء اللوم على محرك الترجمة نفسه. لكن الواقع العملي يكشف أن أكثر من ٨٠٪ من الحالات التي تم فحصها ترجع إلى ثلاثة أسباب لا علاقة لها بخط معالجة الترجمة: <strong>وضع العرض الحصري (Exclusive Swap Chain)</strong>، أو <strong>مسار تكوين HDR</strong>، أو <strong>تعارض الطبقات المتعددة</strong>. ما لم تستبعد هذه الأسباب الثلاثة بالترتيب، فإن تغيير إعدادات الترجمة لن يُزيل المشكلة بل سيُحرّكها فحسب.</p>
 
-            <h2>الخطوة الأولى: التحقق من وضع العرض</h2>
+            <h2 id="sec-2">الخطوة الأولى: التحقق من وضع العرض</h2>
             <p>قبل أي شيء آخر، تحقق من وضع العرض الذي تستخدمه اللعبة. الوضع الحصري (Exclusive Fullscreen) يمنح اللعبة سيطرة كاملة على الشاشة، مما يحجب أي طبقة خارجية مهما كانت. الحل الأبسط والأكثر فاعلية هو التبديل إلى <strong>Borderless Fullscreen</strong>، الذي يجمع بين مظهر ملء الشاشة وقدرة نظام التشغيل على تركيب الطبقات فوق اللعبة.</p>
             <p>بالنسبة لمستخدمي Windows 11، الفرق في الأداء بين الوضعين أصبح ضئيلاً جداً — أقل من ٢٪ في معظم الألعاب الحديثة، وصفر في كثير منها. التضحية بهذا الهامش الصغير مقابل ترجمة مستقرة صفقة مربحة بكل معيار.</p>
 
-            <h2>الخطوة الثانية: التحقق من سلوك وضع Lock/Game Mode</h2>
+            <h2 id="sec-3">الخطوة الثانية: التحقق من سلوك وضع Lock/Game Mode</h2>
             <p>بعد التحقق من وضع العرض، تحقق من إعدادات وضع القفل. تطبيق "Live Subtitles" يوفر وضع <strong>Lock/Game Mode</strong> الذي يُمنع فيه نافذة الترجمة من اختطاف التركيز من اللعبة. إذا لم يكن هذا الوضع مفعّلاً، قد تُصبح نافذة الترجمة عائقاً أمام إدخالات الماوس أو لوحة المفاتيح.</p>
             <ul>
                 <li>فعّل وضع Lock/Game Mode باستخدام الاختصار <strong>Ctrl+Shift+L</strong>.</li>
@@ -113,11 +197,11 @@
                 <li>اختبر في جولة تدريبية لمدة لا تقل عن خمس دقائق قبل الحكم على النتيجة.</li>
             </ul>
 
-            <h2>الخطوة الثالثة: فحص تخطيط الترجمة وكثافتها</h2>
+            <h2 id="sec-4">الخطوة الثالثة: فحص تخطيط الترجمة وكثافتها</h2>
             <p>في بعض الأحيان لا توجد مشكلة تقنية أصلاً — المشكلة هي الإفراط في كثافة النص. كتلة ترجمة كبيرة في موضع سيء تبدو مشكلة رؤية حتى لو كان المحرك يعمل بشكل صحيح تماماً. استخدم عدداً أقل من السطور، وزد التباين، وثبّت الترجمة في منطقة أسفل الشاشة بعيداً عن مناطق العمل.</p>
             <p>القاعدة العملية: لا تعرض أكثر من ثلاثة أسطر في آن واحد. الترجمة المكثفة التي تغطي ربع الشاشة تُلهي عن اللعب أكثر مما تفيد.</p>
 
-            <h2>الخطوة الرابعة: معالجة تعارض الطبقات</h2>
+            <h2 id="sec-5">الخطوة الرابعة: معالجة تعارض الطبقات</h2>
             <p>Steam و Discord و GeForce Experience و Xbox Game Bar كلها تُسجّل طبقات عرض عامة في النظام. حين تعمل معاً، قد تتعارض هذه الطبقات مع بعضها وتُسبب وميضاً أو اختفاءً متقطعاً.</p>
             <p>الإجراء الصحيح هو تعطيل الطبقات الأخرى واحدة تلو الأخرى — مباراة لكل حالة — لعزل المشكلة:</p>
             <ul>
@@ -127,7 +211,7 @@
                 <li>GeForce Experience: الإعدادات العامة ← إيقاف تشغيل الطبقة داخل اللعبة.</li>
             </ul>
 
-            <h2>قائمة التشخيص السريع الموفّرة للوقت</h2>
+            <h2 id="sec-6">قائمة التشخيص السريع الموفّرة للوقت</h2>
             <p>نفّذ هذه الخطوات بالترتيب الدقيق. توقف عند أول طبقة تُعيد إنتاج المشكلة، فهذه هي السبب الجذري.</p>
             <ol>
                 <li><strong>استنسخ المشكلة في حلقة ٦٠ ثانية.</strong> أطلق اللعبة وشغّل قناة صوتية، وراقب الطبقة. إن كان الخلل متقطعاً، سجّل الأوقات.</li>
@@ -137,7 +221,7 @@
                 <li><strong>عطّل الطبقات الثانوية.</strong> Steam وDiscord وGeForce وXbox Bar، واحدة في كل مرة.</li>
             </ol>
 
-            <h2>وصفات إصلاح لكل سبب</h2>
+            <h2 id="sec-7">وصفات إصلاح لكل سبب</h2>
 
             <h3>السبب أ: وضع العرض الحصري (Exclusive Swap Chain)</h3>
             <p>يُشخَّص حين تعمل الترجمة على سطح المكتب وفي Borderless لكنها تختفي في Exclusive Fullscreen. الإصلاح: غيّر اللعبة إلى Borderless Fullscreen. برامج تشغيل GPU الحديثة تُعالج هذا الوضع بصورة مماثلة للوضع الحصري تقريباً، والفارق في الأداء يكاد يكون معدوماً على Windows 11.</p>
@@ -151,7 +235,7 @@
             <h3>السبب د: فقدان التركيز على شاشة متعددة</h3>
             <p>يُشخَّص حين تظهر الترجمة على الشاشة الثانوية بينما اللعبة على الشاشة الرئيسية. الإصلاح: ثبّت نافذة الترجمة على الشاشة الرئيسية عبر خيار "تثبيت على الشاشة" في التطبيق، ثم فعّل "التحسينات للألعاب المعلّقة" في (الإعدادات ← النظام ← الشاشة ← الرسومات).</p>
 
-            <h2>قائمة الاسترداد السريع</h2>
+            <h2 id="sec-8">قائمة الاسترداد السريع</h2>
             <div class="checklist">
                 <ul>
                     <li>حوّل اللعبة إلى وضع Borderless Fullscreen.</li>
@@ -163,7 +247,7 @@
                 </ul>
             </div>
 
-            <h2>الأسئلة الخمسة الضرورية في كل تقرير خلل</h2>
+            <h2 id="sec-9">الأسئلة الخمسة الضرورية في كل تقرير خلل</h2>
             <p>بدون هذه المعلومات أنت تخمّن. بها، يصبح السبب الجذري واضحاً في أقل من خمس دقائق.</p>
             <ol>
                 <li>عنوان اللعبة والإصدار الدقيق (رقم التصحيح، لا "الأحدث").</li>
@@ -173,28 +257,74 @@
                 <li>هل ظهر الخلل فور التشغيل أم بعد تبديل النافذة؟</li>
             </ol>
 
-            <h2>حين يكون الإصلاح "لا تفعل شيئاً"</h2>
+            <h2 id="sec-10">حين يكون الإصلاح "لا تفعل شيئاً"</h2>
             <p>مجموعة صغيرة من العناوين تحجب طبقات التكوين عمداً أثناء فحوصات مكافحة الغش. بعض الأوضاع التنافسية تُقفل Swap Chain تحديداً لمنع أدوات التقاط الشاشة. في هذه الألعاب، لا توجد أي أداة ترجمة ستعرض طبقتها في وضع Exclusive Fullscreen. الإجابة الصريحة: استخدم Borderless Fullscreen لهذا العنوان بعينه واقبل الفارق الهامشي في الأداء.</p>
 
-            <h2>لماذا تؤثر الطبقة المتقطعة على الأداء التنافسي أكثر من المعطّلة كلياً</h2>
+            <h2 id="sec-11">لماذا تؤثر الطبقة المتقطعة على الأداء التنافسي أكثر من المعطّلة كلياً</h2>
             <p>طبقة ترجمة تعمل ٩٠٪ من الوقت أسوأ من طبقة معطّلة بالكامل. مع الفشل الثابت تتكيّف وتضع خططاً بديلة. مع الفشل المتقطع تظل تمد يدك نحو نداء غير موجود وتفقد الإيقاع. الهدف من استكشاف الأخطاء ليس "جعلها تعمل معظم الوقت" — بل "جعلها قابلة للتنبؤ لدرجة أنك تتوقف عن التفكير فيها".</p>
 
-            <h2>نموذج لتوثيق المشاكل المتكررة</h2>
+            <h2 id="sec-12">نموذج لتوثيق المشاكل المتكررة</h2>
             <p>احتفظ بملف نصي قصير في رسائل Discord المثبّتة للفريق. عمودان: <em>عنوان اللعبة</em> و<em>القيد المعروف</em>. أمثلة: "Valorant — تتطلب Borderless"، "CS2 — تعمل في كلا الوضعين بعد تصحيح مارس ٢٠٢٦". هذا الملف أكثر قيمة من أي قاعدة بيانات استكشاف أخطاء لأنه يمثّل الحقيقة التجريبية لفريقك.</p>
 
-            <h2>موارد ذات صلة</h2>
+            <h2 id="sec-13">موارد ذات صلة</h2>
             <ul>
-                <li><a href="article-19.html" style="color:#00b8ff;">دليل إعداد وضع الألعاب للمنافسين</a></li>
-                <li><a href="article-21.html" style="color:#00b8ff;">الترجمة الفورية في اجتماعات الفرق عبر الإنترنت</a></li>
-                <li><a href="article-22.html" style="color:#00b8ff;">تخصيص مظهر الترجمة وموضعها</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">دليل إعداد وضع الألعاب للمنافسين</a></li>
+                <li><a href="article-21.html" style="color:#0b6ad1;">الترجمة الفورية في اجتماعات الفرق عبر الإنترنت</a></li>
+                <li><a href="article-22.html" style="color:#0b6ad1;">تخصيص مظهر الترجمة وموضعها</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">استقر على سير عمل ترجمة موثوق</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">إعداد ترجمة واحد ومتسق للألعاب والمحادثات والبث المباشر — جرّب تطبيق "Live Subtitles" الآن.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">تحميل من متجر مايكروسوفت</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">استقر على سير عمل ترجمة موثوق</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">إعداد ترجمة واحد ومتسق للألعاب والمحادثات والبث المباشر — جرّب تطبيق "Live Subtitles" الآن.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">تنزيل مجاني</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 تقييم</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>ترجمة حية لأي تطبيق</h3>
+                <div class="explore-cols"><div><h5>الاجتماعات والمكالمات</h5><a href="/ar/zoom-live-captions.html">Zoom</a><a href="/ar/teams-live-captions.html">Microsoft Teams</a><a href="/ar/google-meet-live-captions.html">Google Meet</a><a href="/ar/webex-live-captions.html">Webex</a><a href="/ar/skype-live-captions.html">Skype</a><a href="/ar/slack-live-captions.html">Slack</a><a href="/ar/whatsapp-live-translation.html">WhatsApp</a><a href="/ar/telegram-subtitles.html">Telegram</a></div><div><h5>البث والتواصل</h5><a href="/ar/youtube-dual-subtitles.html">YouTube</a><a href="/ar/netflix-subtitles.html">Netflix</a><a href="/ar/twitch-live-captions.html">Twitch</a><a href="/ar/discord-live-captions.html">Discord</a><a href="/ar/tiktok-live-captions.html">TikTok</a><a href="/ar/instagram-live-captions.html">Instagram</a><a href="/ar/facebook-live-subtitles.html">Facebook</a><a href="/ar/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>الألعاب والمبدعون</h5><a href="/ar/obs-subtitles.html">OBS</a><a href="/ar/game-mode-subtitles.html">Game Mode</a><a href="/ar/steam-subtitles.html">Steam</a><a href="/ar/restream-subtitles.html">Restream</a><a href="/ar/vimeo-subtitles.html">Vimeo</a><a href="/ar/vlc-subtitles.html">VLC</a></div><div><h5>التعلّم والعمل</h5><a href="/ar/coursera-subtitles.html">Coursera</a><a href="/ar/udemy-live-captions.html">Udemy</a><a href="/ar/google-classroom-subtitles.html">Google Classroom</a><a href="/ar/linkedin-live-captions.html">LinkedIn</a><a href="/ar/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ar/" style="font-weight:600;text-decoration:none;">← الصفحة الرئيسية لـ Live Subtitles</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>اقرأ أيضًا</h4>
+            <a class="s-item" href="article-1.html">كيف تساعد الترجمات المزدوجة في تعلم اللغات بشكل أسرع</a>
+            <a class="s-item" href="article-2.html">لماذا تعتبر الترجمة مهمة لتعلم اللغات</a>
+            <a class="s-item" href="article-3.html">الترجمة المزدوجة وتعلم اللغات للأطفال والمراهقين</a>
+            <a class="s-item" href="article-4.html">لماذا تعتبر الترجمة مفيدة حتى للمتحدثين الأصليين</a>
+            <a class="s-item" href="article-5.html">أفضل 10 أفلام بترجمة مزدوجة لتعلم الإنجليزية</a>
+            <a class="s-item" href="article-6.html">أخطاء يجب تجنبها عند تعلم اللغات من خلال الفيديوهات بالترج…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>ترجمة حية لأي تطبيق.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">تنزيل مجاني</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="إلى الأعلى" title="إلى الأعلى">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ar/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

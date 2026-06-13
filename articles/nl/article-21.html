@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="Discord voicechat-ondertitels voor internationale squads">
     <meta name="twitter:description" content="Discord-voicechat-ondertitels voor internationale squads: stel Game Mode, callout-sjablonen en een gedeelde woordenlijst in voor snellere comms. Probeer het nu.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/nl/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .note { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,18 +148,40 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Inhoud">
+        <div class="toc-inner">
+            <h4>Inhoud</h4>
+            <a href="#sec-1">Basisinstellingen voor een Discord…</a>
+            <a href="#sec-2">Een callout-structuur die samenwer…</a>
+            <a href="#sec-3">Checklist voor squad-onboarding</a>
+            <a href="#sec-4">De verborgen kosten van accentvers…</a>
+            <a href="#sec-5">Vier communicatiefouten die ondert…</a>
+            <a href="#sec-6">De gedeelde woordenlijst van de sq…</a>
+            <a href="#sec-7">Een nieuwe teamgenoot inwerken in …</a>
+            <a href="#sec-8">Waarom nauwkeurigheid in voicechat…</a>
+            <a href="#sec-9">De rol van de IGL in een meertalig…</a>
+            <a href="#sec-10">Wat je na elke ranked-avond logt</a>
+            <a href="#sec-11">KPI's om wekelijks te volgen</a>
+            <a href="#sec-12">Hoe de cijfers eruitzien na 3 weke…</a>
+            <a href="#sec-13">Gerelateerde bronnen</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Terug naar artikellijst</a>
         <h1 class="article-title" itemprop="headline">Discord voicechat-ondertitels voor internationale squads</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 maart 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Auteur: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; gaming overlay engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Bijgewerkt: 12 mei 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">5 maart 2026<span class="reading-time">7 min lezen</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Auteur: <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; gaming overlay engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Bijgewerkt: 12 mei 2026</div>
         <img class="article-hero" src="/articles/img/nl/games.webp" alt="Live-ondertitels tijdens een competitieve wedstrijd" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Internationale squads verliezen rondes zelden door slechte aim. Veel vaker verliezen ze door callouts die niet snel genoeg ontcijferd worden. Het probleem zit niet alleen in de audiokwaliteit, maar in de snelheid en consistentie waarmee iedereen begrijpt wat er geroepen wordt. Een ondertitellaag in Discord voegt een visuele bevestiging toe bovenop de stem: je leest de callout terwijl je hem hoort. Dat verkort de reactietijd, vermindert het aantal keren dat iemand "zeg dat nog eens?" moet vragen, en houdt een meertalige line-up op dezelfde golflengte wanneer elke seconde telt. In dit artikel zetten we een stabiele Discord-workflow neer, van de basisinstellingen tot de KPI's waarmee je meet of het echt werkt.</p>
 
-            <h2>Basisinstellingen voor een Discord-sessie</h2>
+            <details class="toc-mobile"><summary>Inhoud</summary><ol><li><a href="#sec-1">Basisinstellingen voor een Discord-sessie</a></li><li><a href="#sec-2">Een callout-structuur die samenwerkt met ondertitels</a></li><li><a href="#sec-3">Checklist voor squad-onboarding</a></li><li><a href="#sec-4">De verborgen kosten van accentverschillen in ranked</a></li><li><a href="#sec-5">Vier communicatiefouten die ondertitels oplossen</a></li><li><a href="#sec-6">De gedeelde woordenlijst van de squad</a></li><li><a href="#sec-7">Een nieuwe teamgenoot inwerken in 15 minuten</a></li><li><a href="#sec-8">Waarom nauwkeurigheid in voicechat zwaarder weegt dan in vergaderingen</a></li><li><a href="#sec-9">De rol van de IGL in een meertalige squad</a></li><li><a href="#sec-10">Wat je na elke ranked-avond logt</a></li><li><a href="#sec-11">KPI's om wekelijks te volgen</a></li><li><a href="#sec-12">Hoe de cijfers eruitzien na 3 weken discipline</a></li><li><a href="#sec-13">Gerelateerde bronnen</a></li></ol></details>
+            <h2 id="sec-1">Basisinstellingen voor een Discord-sessie</h2>
             <p>Voordat je de eerste ronde speelt, leg je de overlay vast zodat hij niet flikkert of verschuift midden in een gevecht. Doorloop deze stappen in vaste volgorde:</p>
             <ol>
                 <li>Schakel de Lock-modus of Game Mode in <strong>voordat</strong> je het voicekanaal binnenkomt, niet halverwege de wedstrijd.</li>
@@ -106,7 +190,7 @@
                 <li>Plaats de ondertitels onderaan in het midden van het scherm, met hoog contrast, ver weg van de minimap en de crosshair.</li>
             </ol>
 
-            <h2>Een callout-structuur die samenwerkt met ondertitels</h2>
+            <h2 id="sec-2">Een callout-structuur die samenwerkt met ondertitels</h2>
             <p>Ondertitels werken het best wanneer de gesproken taal kort en voorspelbaar is. Een lange uitleg vol bijzinnen is lastig te lezen en te horen tegelijk. Houd je daarom aan een vaste vorm:</p>
             <ul>
                 <li>Gebruik een kort patroon: <strong>actie + locatie + timing</strong>, bijvoorbeeld "push B, twee, nu".</li>
@@ -115,7 +199,7 @@
                 <li>Bevestig kritieke calls met één woord, zoals "copy" of "rotate", zodat de IGL weet dat de boodschap is aangekomen.</li>
             </ul>
 
-            <h2>Checklist voor squad-onboarding</h2>
+            <h2 id="sec-3">Checklist voor squad-onboarding</h2>
             <div class="note">
                 <ul>
                     <li>Stel een gedeelde woordenlijst op van 20 tot 30 maptermen.</li>
@@ -125,10 +209,10 @@
                 </ul>
             </div>
 
-            <h2>De verborgen kosten van accentverschillen in ranked</h2>
+            <h2 id="sec-4">De verborgen kosten van accentverschillen in ranked</h2>
             <p>Een squad van zes spelers, verspreid over drie tijdzones en twee moedertalen, verliest op een doorsnee ranked-avond vaak 2 tot 3 rondes — niet door mechanische fouten, maar door <strong>callout-decodeervertraging</strong>. De IGL spreekt op moedertaalsnelheid; een teamgenoot die in een tweede taal luistert, heeft per zin 200 tot 400 ms extra verwerkingstijd nodig. Over een wedstrijd van 30 rondes loopt dat op tot 6 à 12 seconden aan opgespaarde reactievertraging. Ranked-potjes worden op kleinere marges beslist dan dat. Een ondertitellaag haalt precies die verborgen vertraging weg, omdat het visuele de audio versterkt in plaats van ermee te concurreren.</p>
 
-            <h2>Vier communicatiefouten die ondertitels oplossen</h2>
+            <h2 id="sec-5">Vier communicatiefouten die ondertitels oplossen</h2>
             <ul>
                 <li><strong>Vertraging bij accenten.</strong> Een callout lezen terwijl je hem hoort, halveert vrijwel de decodeertijd voor niet-moedertaalsprekers. Het beeld bevestigt het geluid in plaats van ertegen te vechten.</li>
                 <li><strong>Dubbelzinnige afkortingen.</strong> "B2" kan in CS2 "B-site, twee hits" betekenen, of in Valorant "roteer naar B over twee seconden". Een geschreven callout neemt die auditieve dubbelzinnigheid weg, omdat afkortingen visueel afwijken van gewone woorden.</li>
@@ -136,11 +220,11 @@
                 <li><strong>Stemvermoeidheid.</strong> In het vierde uur van een stack-avond worden stemmen rauw en onduidelijk. De ondertitels blijven scherp.</li>
             </ul>
 
-            <h2>De gedeelde woordenlijst van de squad</h2>
+            <h2 id="sec-6">De gedeelde woordenlijst van de squad</h2>
             <p>De woordenlijst is het waardevolste hulpmiddel voor een meertalige squad. Pin één Discord-bericht met een tabel van 20 tot 30 rijen en verbied wijzigingen midden in de week. Een voorbeeldstructuur:</p>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
                         <th style="text-align:left; padding:8px;">Map / context</th>
                         <th style="text-align:left; padding:8px;">Term</th>
                         <th style="text-align:left; padding:8px;">Betekenis (1 regel)</th>
@@ -156,7 +240,7 @@
             </table>
             <p>De discipline is belangrijker dan de exacte inhoud. Twee synoniemen voor "Connector" — bijvoorbeeld "Mid-hall" naast "Connector" — kosten meer wedstrijden dan helemaal geen woordenlijst hebben.</p>
 
-            <h2>Een nieuwe teamgenoot inwerken in 15 minuten</h2>
+            <h2 id="sec-7">Een nieuwe teamgenoot inwerken in 15 minuten</h2>
             <ol>
                 <li>Deel de gepinde woordenlijst en eis dat de nieuwe speler hem één keer leest vóór de scrim.</li>
                 <li>Speel één scrim. Markeer in realtime elke callout die de nieuwkomer niet begreep (een Discord-reactie-emoji werkt prima).</li>
@@ -164,13 +248,13 @@
                 <li>Pas de woordenlijst aan of plan een tweede scrim. Ga pas naar ranked als de nieuwkomer bevestigt dat hij in de tweede scrim elke callout zonder hulp van ondertitels begreep.</li>
             </ol>
 
-            <h2>Waarom nauwkeurigheid in voicechat zwaarder weegt dan in vergaderingen</h2>
-            <p>Een zakelijke vergadering heeft redundantie: slides, een opvolgmail, een opgenomen transcript. Een ranked-wedstrijd heeft niets van dat alles. Een gemiste callout kun je niet terugspoelen. Daardoor verschuift de lat voor de vertraging van "goed genoeg" (1,5 tot 2 seconden in productiviteitstools) naar "onmerkbaar" (onder de 600 ms). Tools die meerdere seconden audio verzamelen voordat ze tekst tonen, zijn onbruikbaar voor ranked-communicatie, hoe nauwkeurig het eindresultaat ook is. Wie ondertitels in andere contexten gebruikt, vindt extra achtergrond in onze <a href="article-7.html" style="color:#00b8ff;">gids over realtime-ondertitels</a> en in het <a href="/nl/game-mode-subtitles.html" style="color:#00b8ff;">overzicht van de Game Mode</a>.</p>
+            <h2 id="sec-8">Waarom nauwkeurigheid in voicechat zwaarder weegt dan in vergaderingen</h2>
+            <p>Een zakelijke vergadering heeft redundantie: slides, een opvolgmail, een opgenomen transcript. Een ranked-wedstrijd heeft niets van dat alles. Een gemiste callout kun je niet terugspoelen. Daardoor verschuift de lat voor de vertraging van "goed genoeg" (1,5 tot 2 seconden in productiviteitstools) naar "onmerkbaar" (onder de 600 ms). Tools die meerdere seconden audio verzamelen voordat ze tekst tonen, zijn onbruikbaar voor ranked-communicatie, hoe nauwkeurig het eindresultaat ook is. Wie ondertitels in andere contexten gebruikt, vindt extra achtergrond in onze <a href="article-7.html" style="color:#0b6ad1;">gids over realtime-ondertitels</a> en in het <a href="/nl/game-mode-subtitles.html" style="color:#0b6ad1;">overzicht van de Game Mode</a>.</p>
 
-            <h2>De rol van de IGL in een meertalige squad</h2>
+            <h2 id="sec-9">De rol van de IGL in een meertalige squad</h2>
             <p>In een squad waar 4 spelers Engels als moedertaal hebben en 2 spelers Spaans, moet de IGL zich committeren aan één taal en die de hele wedstrijd aanhouden. Midden in een ronde wisselen ("rotate B, vamos a B") verdubbelt de cognitieve belasting voor elke luisteraar. Is de IGL tweetalig, kies dan vóór de wedstrijd de taal van de meerderheid en behandel die als bindend. De ondertitellaag verzacht het verschil tussen moedertaal en tweede taal, maar het is geen vervanging voor één heldere callingtaal.</p>
 
-            <h2>Wat je na elke ranked-avond logt</h2>
+            <h2 id="sec-10">Wat je na elke ranked-avond logt</h2>
             <ul>
                 <li><strong>Herhaalpercentage:</strong> het aantal keer "zeg dat nog eens?" of "wat?" per wedstrijd. Streef naar minder dan 2.</li>
                 <li><strong>Mis-rotaties:</strong> rotaties die in de verkeerde richting werden uitgevoerd. Streef naar 0 per avond.</li>
@@ -178,30 +262,76 @@
                 <li><strong>Terugval naar de moedertaal:</strong> gevallen waarin een niet-moedertaalspreker midden in een call terugviel op zijn eerste taal. Houd het bij, maar straf het niet af — vermoeidheid is reëel.</li>
             </ul>
 
-            <h2>KPI's om wekelijks te volgen</h2>
+            <h2 id="sec-11">KPI's om wekelijks te volgen</h2>
             <ul>
                 <li>Hoe vaak teamgenoten vragen om een callout te herhalen.</li>
                 <li>De gemiddelde vertraging tussen een callout en de actie van het team.</li>
                 <li>Mis-rotaties die ontstaan door verkeerd begrepen voicecomms.</li>
             </ul>
 
-            <h2>Hoe de cijfers eruitzien na 3 weken discipline</h2>
-            <p>Een patroon dat we bij veel squads zien: het herhaalpercentage halveert in de eerste week (de woordenlijst doet zijn werk), de mis-rotaties halveren in week twee (het vocabulaire komt nu overeen met de mentale map), en het ranked-winstpercentage stijgt in week drie met 5 tot 10 procentpunten (de nieuwe communicatiebasis stapelt zich op over alle rondes heen). De ondertitellaag versnelt die curve, maar vervangt de discipline niet. Wil je dezelfde aanpak voor streaming naast gamen, lees dan onze <a href="article-19.html" style="color:#00b8ff;">handleiding voor de Game Mode</a> en de <a href="article-20.html" style="color:#00b8ff;">oplossingen voor fullscreen-overlayproblemen</a>.</p>
+            <h2 id="sec-12">Hoe de cijfers eruitzien na 3 weken discipline</h2>
+            <p>Een patroon dat we bij veel squads zien: het herhaalpercentage halveert in de eerste week (de woordenlijst doet zijn werk), de mis-rotaties halveren in week twee (het vocabulaire komt nu overeen met de mentale map), en het ranked-winstpercentage stijgt in week drie met 5 tot 10 procentpunten (de nieuwe communicatiebasis stapelt zich op over alle rondes heen). De ondertitellaag versnelt die curve, maar vervangt de discipline niet. Wil je dezelfde aanpak voor streaming naast gamen, lees dan onze <a href="article-19.html" style="color:#0b6ad1;">handleiding voor de Game Mode</a> en de <a href="article-20.html" style="color:#0b6ad1;">oplossingen voor fullscreen-overlayproblemen</a>.</p>
 
-            <h2>Gerelateerde bronnen</h2>
+            <h2 id="sec-13">Gerelateerde bronnen</h2>
             <ul>
-                <li><a href="/nl/discord-twitch-subtitles.html" style="color:#00b8ff;">Pagina over Discord- en Twitch-ondertitels</a></li>
-                <li><a href="/nl/game-mode-subtitles.html" style="color:#00b8ff;">Pagina over Game Mode-ondertitels</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Handleiding voor het instellen van de Game Mode</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">Problemen met de fullscreen-overlay oplossen</a></li>
+                <li><a href="/nl/discord-twitch-subtitles.html" style="color:#0b6ad1;">Pagina over Discord- en Twitch-ondertitels</a></li>
+                <li><a href="/nl/game-mode-subtitles.html" style="color:#0b6ad1;">Pagina over Game Mode-ondertitels</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">Handleiding voor het instellen van de Game Mode</a></li>
+                <li><a href="article-20.html" style="color:#0b6ad1;">Problemen met de fullscreen-overlay oplossen</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Standaardiseer de teamcommunicatie in één keer</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Eén stabiele ondertitelworkflow in Discord met de Live Subtitles-app maakt elke speelavond beter.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download van Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Standaardiseer de teamcommunicatie in één keer</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Eén stabiele ondertitelworkflow in Discord met de Live Subtitles-app maakt elke speelavond beter.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Gratis downloaden</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live ondertitels voor elke app</h3>
+                <div class="explore-cols"><div><h5>Vergaderingen &amp; gesprekken</h5><a href="/nl/zoom-live-captions.html">Zoom</a><a href="/nl/teams-live-captions.html">Microsoft Teams</a><a href="/nl/google-meet-live-captions.html">Google Meet</a><a href="/nl/webex-live-captions.html">Webex</a><a href="/nl/skype-live-captions.html">Skype</a><a href="/nl/slack-live-captions.html">Slack</a><a href="/nl/whatsapp-live-translation.html">WhatsApp</a><a href="/nl/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/nl/youtube-dual-subtitles.html">YouTube</a><a href="/nl/netflix-subtitles.html">Netflix</a><a href="/nl/twitch-live-captions.html">Twitch</a><a href="/nl/discord-live-captions.html">Discord</a><a href="/nl/tiktok-live-captions.html">TikTok</a><a href="/nl/instagram-live-captions.html">Instagram</a><a href="/nl/facebook-live-subtitles.html">Facebook</a><a href="/nl/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/nl/obs-subtitles.html">OBS</a><a href="/nl/game-mode-subtitles.html">Game Mode</a><a href="/nl/steam-subtitles.html">Steam</a><a href="/nl/restream-subtitles.html">Restream</a><a href="/nl/vimeo-subtitles.html">Vimeo</a><a href="/nl/vlc-subtitles.html">VLC</a></div><div><h5>Leren &amp; werken</h5><a href="/nl/coursera-subtitles.html">Coursera</a><a href="/nl/udemy-live-captions.html">Udemy</a><a href="/nl/google-classroom-subtitles.html">Google Classroom</a><a href="/nl/linkedin-live-captions.html">LinkedIn</a><a href="/nl/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/nl/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Lees ook</h4>
+            <a class="s-item" href="article-1.html">Hoe dubbele ondertitels u helpen sneller talen te leren</a>
+            <a class="s-item" href="article-2.html">Waarom ondertiteling belangrijk is voor taalonderwijs</a>
+            <a class="s-item" href="article-3.html">Dubbele ondertiteling en het leren van uitspraak en accent</a>
+            <a class="s-item" href="article-4.html">Waarom ondertitels zelfs nuttig zijn voor moedertaalsprekers</a>
+            <a class="s-item" href="article-5.html">TOP-10 films met dubbele ondertitels voor het leren van En…</a>
+            <a class="s-item" href="article-6.html">Fouten te vermijden bij taalleren door video&amp;#39;s met dub…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live ondertitels voor elke app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Gratis downloaden</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Naar boven" title="Naar boven">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/nl/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

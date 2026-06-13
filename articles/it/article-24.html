@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="Trascrivere audio in testo 2026: trascrizione in tempo reale vs in batch">
     <meta name="twitter:description" content="Trascrivere audio in testo nel 2026: trascrizione in tempo reale o in batch? Otter, Rev, Notta e Live Subtitles scelti per caso d'uso, non per funzioni.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/it/learning.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,35 @@
     <link rel="preload" as="image" href="/articles/img/it/learning.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Indice">
+        <div class="toc-inner">
+            <h4>Indice</h4>
+            <a href="#sec-1">Trascrizione in tempo reale vs in …</a>
+            <a href="#sec-2">Snapshot comparativo 2026</a>
+            <a href="#sec-3">Come scegliere per caso d'uso</a>
+            <a href="#sec-4">Piano di valutazione di 14 giorni</a>
+            <a href="#sec-5">Cosa ignorare nel marketing delle …</a>
+            <a href="#sec-6">FAQ</a>
+            <a href="#sec-7">In sintesi</a>
+            <a href="#sec-8">Riferimenti</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← Torna agli articoli</a>
         <h1 class="article-title" itemprop="headline">Trascrivere audio in testo 2026: trascrizione in tempo reale vs in batch</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 maggio 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">Autrice: <a href="/about/team/mei-lin-chen.html" rel="author" style="color:#00b8ff; text-decoration:none;">Mei Lin Chen</a> &middot; ingegnera riconoscimento vocale, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Aggiornato: 28 maggio 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">28 maggio 2026<span class="reading-time">11 min di lettura</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">Autrice: <a href="/about/team/mei-lin-chen.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Mei Lin Chen</a> &middot; ingegnera riconoscimento vocale, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Aggiornato: 28 maggio 2026</div>
         <img class="article-hero" src="/articles/img/it/learning.webp" alt="Trascrizione audio in tempo reale con sottotitoli live su un laptop" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>I motori di ricerca mettono ogni strumento <strong>audio-in-testo</strong> in una sola categoria, ma i prodotti che escono sotto quell'etichetta si dividono in due workflow profondamente diversi. Sbagliare workflow è il motivo numero uno per cui le persone abbandonano uno strumento di trascrizione dopo appena una settimana: hanno scaricato un'app pensata per registrazioni archiviate quando in realtà avevano bisogno di leggere ciò che veniva detto in diretta — o viceversa. Questa guida non classifica i prodotti per quante funzioni mettono nella scheda commerciale, ma per il lavoro reale che riescono a fare. Prima decidi <em>come</em> devi usare il testo, poi scegli il brand.</p>
 
-            <h2>Trascrizione in tempo reale vs in batch</h2>
+            <details class="toc-mobile"><summary>Indice</summary><ol><li><a href="#sec-1">Trascrizione in tempo reale vs in batch</a></li><li><a href="#sec-2">Snapshot comparativo 2026</a></li><li><a href="#sec-3">Come scegliere per caso d'uso</a></li><li><a href="#sec-4">Piano di valutazione di 14 giorni</a></li><li><a href="#sec-5">Cosa ignorare nel marketing delle trascrizioni 2026</a></li><li><a href="#sec-6">FAQ</a></li><li><a href="#sec-7">In sintesi</a></li><li><a href="#sec-8">Riferimenti</a></li></ol></details>
+            <h2 id="sec-1">Trascrizione in tempo reale vs in batch</h2>
             <p>Entrambe convertono la voce in testo. La somiglianza finisce esattamente lì: tutto il resto — latenza, formato dell'output, modello di prezzo, persino il momento in cui il testo ti è utile — è diverso.</p>
             <ul>
                 <li><strong>Trascrizione in tempo reale:</strong> il testo compare entro 1–2 secondi dal parlato. Leggi mentre ascolti. L'output è un flusso di sottotitoli che scorre, non un documento modificabile. È pensato per essere consumato nel momento e poi dimenticato. Esempi: Windows Live Captions, Live Subtitles, Google Live Caption.</li>
@@ -110,7 +189,7 @@
             <h3>Perché la latenza cambia tutto</h3>
             <p>La differenza non è solo di velocità ma di natura del risultato. Un motore in tempo reale lavora su finestre audio brevissime e deve "indovinare" la frase prima ancora che chi parla la finisca, riscrivendola al volo man mano che arriva più contesto. Un motore in batch ha l'intera registrazione davanti: può tornare indietro, applicare la punteggiatura, distinguere i relatori e ottimizzare l'accuratezza senza la pressione del tempo. Per questo una stessa azienda può offrire entrambi i servizi con risultati molto diversi sullo stesso audio.</p>
 
-            <h2>Snapshot comparativo 2026</h2>
+            <h2 id="sec-2">Snapshot comparativo 2026</h2>
             <p>La tabella seguente confronta gli strumenti più diffusi per workflow, uso ideale e limite principale. Non guardare le righe come una classifica: leggile come una mappa per capire dove ciascuno strumento dà il meglio.</p>
             <table>
                 <thead>
@@ -161,11 +240,11 @@
                 </tbody>
             </table>
 
-            <h2>Come scegliere per caso d'uso</h2>
+            <h2 id="sec-3">Come scegliere per caso d'uso</h2>
             <p>La domanda giusta non è «qual è il miglior strumento di trascrizione» ma «cosa farò con il testo nei prossimi cinque minuti». Le quattro situazioni qui sotto coprono la quasi totalità degli utenti.</p>
 
             <h3>Caso A — Vuoi leggere ciò che si dice in questo momento</h3>
-            <p>Scegli uno strumento in tempo reale. Live Subtitles, Windows Live Captions e i sottotitoli nativi delle piattaforme (Zoom, Teams, Meet) rientrano tutti in questa categoria. Qui contano due cose, e in quest'ordine: una latenza stabile sotto i 2 secondi e una copertura coerente sulle app che usi davvero. Un'app che fa sottotitoli perfetti solo dentro un browser ma resta muta quando arriva una chiamata su un'altra piattaforma è inutile nella pratica. Se la maggior parte delle tue riunioni passa da un'unica piattaforma, parti da una soluzione che cattura l'audio di sistema così copri tutto in un colpo solo; per i dettagli specifici di una piattaforma vedi <a href="/it/zoom-live-captions.html" style="color:#00b8ff;">i sottotitoli live di Zoom</a> o l'articolo dedicato al confronto tra piattaforme.</p>
+            <p>Scegli uno strumento in tempo reale. Live Subtitles, Windows Live Captions e i sottotitoli nativi delle piattaforme (Zoom, Teams, Meet) rientrano tutti in questa categoria. Qui contano due cose, e in quest'ordine: una latenza stabile sotto i 2 secondi e una copertura coerente sulle app che usi davvero. Un'app che fa sottotitoli perfetti solo dentro un browser ma resta muta quando arriva una chiamata su un'altra piattaforma è inutile nella pratica. Se la maggior parte delle tue riunioni passa da un'unica piattaforma, parti da una soluzione che cattura l'audio di sistema così copri tutto in un colpo solo; per i dettagli specifici di una piattaforma vedi <a href="/it/zoom-live-captions.html" style="color:#0b6ad1;">i sottotitoli live di Zoom</a> o l'articolo dedicato al confronto tra piattaforme.</p>
 
             <h3>Caso B — Vuoi un archivio ricercabile di una conversazione registrata</h3>
             <p>Scegli uno strumento in batch con etichette dei relatori ed export delle marcature temporali. Otter, Notta e Rev sono le scelte ovvie. La regola d'oro è: non pagare per precisione che non ti serve. La revisione umana di Rev ha senso solo per prove legali, contenuti che verranno pubblicati o citazioni che devono essere letteralmente esatte; per i verbali interni di una riunione la trascrizione automatica più una rilettura veloce è più che sufficiente. Verifica sempre che l'export sia in un formato che puoi davvero riusare (testo, SRT, DOCX) e non bloccato dentro l'app.</p>
@@ -176,12 +255,12 @@
             <h3>Caso D — Note vocali e dettatura</h3>
             <p>Usa gli strumenti nativi del sistema operativo. I Memo Vocali di Apple e Google Recorder generano trascrizioni direttamente sul dispositivo, senza inviare nulla in cloud: questo è perfetto per appunti personali, idee al volo e promemoria. Fermati qui se non hai un problema di separazione tra più relatori. Nel momento in cui ti serve distinguere chi ha detto cosa in un gruppo, hai superato i limiti della dettatura e ricadi nel Caso B.</p>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Consiglio pratico</h3>
-                <p style="color:#eee; margin-bottom:0;">Prima di scegliere, fai un test di un'ora sul tuo audio peggiore, non su quello migliore: la riunione affollata con rumore di fondo, l'accento che ti mette in difficoltà, la connessione instabile. Lo strumento che regge nella condizione peggiore è quello che userai ogni giorno; quello che brilla solo in studio ti deluderà al primo lunedì mattina.</p>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Consiglio pratico</h3>
+                <p style="color:#2d333b; margin-bottom:0;">Prima di scegliere, fai un test di un'ora sul tuo audio peggiore, non su quello migliore: la riunione affollata con rumore di fondo, l'accento che ti mette in difficoltà, la connessione instabile. Lo strumento che regge nella condizione peggiore è quello che userai ogni giorno; quello che brilla solo in studio ti deluderà al primo lunedì mattina.</p>
             </div>
 
-            <h2>Piano di valutazione di 14 giorni</h2>
+            <h2 id="sec-4">Piano di valutazione di 14 giorni</h2>
             <p>Le recensioni e i confronti online ti dicono cosa fa uno strumento; solo il tuo audio ti dice se funziona <em>per te</em>. Due settimane sono sufficienti per smettere di indovinare e iniziare a decidere sui dati. Ecco un piano concreto.</p>
             <ol>
                 <li>Identifica il tuo workflow dominante (tempo reale o batch) in base ai quattro casi d'uso sopra. Non installare ancora entrambi: aggiungere troppi strumenti subito rende impossibile capire quale risolve davvero il problema.</li>
@@ -191,7 +270,7 @@
                 <li>Entro il quattordicesimo giorno fissa la tua configurazione. Per la maggior parte degli utenti il punto di equilibrio è al massimo due strumenti: uno in tempo reale e uno in batch. Oltre, il costo di gestione supera il beneficio.</li>
             </ol>
 
-            <h2>Cosa ignorare nel marketing delle trascrizioni 2026</h2>
+            <h2 id="sec-5">Cosa ignorare nel marketing delle trascrizioni 2026</h2>
             <p>Le schede commerciali del 2026 sono piene di numeri che impressionano e non significano nulla per il tuo uso quotidiano. Ecco le tre promesse da prendere con le pinze.</p>
             <ul>
                 <li><strong>«100+ lingue»:</strong> il numero di lingue supportate raramente correla con la qualità sulle 2–3 lingue che trascrivi davvero. Un motore può elencare cento lingue ed essere mediocre proprio sulla coppia che usi. Testa la tua combinazione specifica, non fidarti del totale.</li>
@@ -200,39 +279,85 @@
             </ul>
             <p>La privacy merita una riga in più: un motore in batch che lavora in cloud invia il tuo audio a un server, mentre molti strumenti in tempo reale e i registratori nativi elaborano sul dispositivo. Se trascrivi conversazioni riservate, questa differenza pesa più di qualsiasi punto percentuale di accuratezza.</p>
 
-            <h2>FAQ</h2>
+            <h2 id="sec-6">FAQ</h2>
             <p><strong>La trascrizione in tempo reale è abbastanza accurata da saltare la registrazione?</strong><br>Per la comprensione, sì: leggere i sottotitoli live ti permette di seguire perfettamente. Per prove legali o citazioni che devono essere esatte, no — la registrazione più un passaggio in batch resta l'archivio più sicuro, perché puoi sempre tornare alla fonte audio.</p>
             <p><strong>Serve davvero uno strumento a pagamento?</strong><br>Per uso personale gli strumenti nativi del sistema bastano quasi sempre. Vale la pena pagare quando hai bisogno di workflow di riunione condivisi, etichette affidabili per più relatori e integrazioni dirette con la piattaforma che usi ogni giorno.</p>
             <p><strong>Uno strumento in tempo reale può esportare una trascrizione finale?</strong><br>Alcuni lo permettono. L'output, però, è di solito un log di sottotitoli, non un documento curato con punteggiatura e relatori puliti. Se il risultato finale deve avere l'aspetto di un file Word, pianifica fin dall'inizio un passaggio in batch.</p>
             <p><strong>Posso trascrivere l'audio di un video o di un podcast che non ho registrato io?</strong><br>Sì: uno strumento in tempo reale che cattura l'audio di sistema ti dà i sottotitoli mentre riproduci il file, mentre uno strumento in batch ti dà la trascrizione modificabile se carichi il file audio. Scegli in base a cosa farai del testo, esattamente come per le riunioni.</p>
 
-            <h2>In sintesi</h2>
-            <p>La categoria «audio-in-testo» nasconde due mestieri diversi. Decidi prima se devi <strong>leggere ora</strong> o <strong>archiviare dopo</strong>, scegli un solo strumento per quel mestiere, mettilo alla prova due settimane sul tuo audio reale e aggiungi un secondo livello solo se i dati lo richiedono. Per approfondire i temi collegati, leggi <a href="article-25.html" style="color:#00b8ff;">come funzionano i sottotitoli live generati dall'IA</a>, il confronto tra <a href="article-18.html" style="color:#00b8ff;">i sottotitoli tradotti di Meet, Zoom e Teams</a> e la panoramica sulle <a href="article-23.html" style="color:#00b8ff;">app di traduzione vocale in tempo reale</a>.</p>
+            <h2 id="sec-7">In sintesi</h2>
+            <p>La categoria «audio-in-testo» nasconde due mestieri diversi. Decidi prima se devi <strong>leggere ora</strong> o <strong>archiviare dopo</strong>, scegli un solo strumento per quel mestiere, mettilo alla prova due settimane sul tuo audio reale e aggiungi un secondo livello solo se i dati lo richiedono. Per approfondire i temi collegati, leggi <a href="article-25.html" style="color:#0b6ad1;">come funzionano i sottotitoli live generati dall'IA</a>, il confronto tra <a href="article-18.html" style="color:#0b6ad1;">i sottotitoli tradotti di Meet, Zoom e Teams</a> e la panoramica sulle <a href="article-23.html" style="color:#0b6ad1;">app di traduzione vocale in tempo reale</a>.</p>
 
-            <h2>Riferimenti</h2>
+            <h2 id="sec-8">Riferimenti</h2>
             <ul>
-                <li><a href="https://otter.ai/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Otter.ai — trascrizione di riunioni</a></li>
-                <li><a href="https://www.rev.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Rev — trascrizione IA e umana</a></li>
-                <li><a href="https://www.notta.ai/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Notta — trascrizione audio e video</a></li>
-                <li><a href="https://support.microsoft.com/en-us/office/transcribe-your-recordings-7fc2efec-245e-45f0-b053-2a97531ecf57" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Microsoft 365 — trascrivere in Word</a></li>
-                <li><a href="https://support.apple.com/guide/voice-memos/transcribe-recordings-vmaa84d6a3f6/mac" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Apple — trascrivere i Memo Vocali</a></li>
+                <li><a href="https://otter.ai/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Otter.ai — trascrizione di riunioni</a></li>
+                <li><a href="https://www.rev.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Rev — trascrizione IA e umana</a></li>
+                <li><a href="https://www.notta.ai/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Notta — trascrizione audio e video</a></li>
+                <li><a href="https://support.microsoft.com/en-us/office/transcribe-your-recordings-7fc2efec-245e-45f0-b053-2a97531ecf57" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Microsoft 365 — trascrivere in Word</a></li>
+                <li><a href="https://support.apple.com/guide/voice-memos/transcribe-recordings-vmaa84d6a3f6/mac" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Apple — trascrivere i Memo Vocali</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Letture correlate</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Letture correlate</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">Traduzione vocale 2026: strumenti in tempo reale a confronto per caso d'uso</a></li>
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams: sottotitoli tradotti nel 2026</a></li>
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">Sottotitoli live 2026: come funzionano i sottotitoli IA e quando usarli</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">Traduzione vocale 2026: strumenti in tempo reale a confronto per caso d'uso</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">Google Meet vs Zoom vs Teams: sottotitoli tradotti nel 2026</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">Sottotitoli live 2026: come funzionano i sottotitoli IA e quando usarli</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Prova la trascrizione in tempo reale su qualsiasi audio desktop</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Sottotitoli e trascrizione live in riunioni, stream e qualsiasi fonte audio — senza upload in batch.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Scarica da Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Prova la trascrizione in tempo reale su qualsiasi audio desktop</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Sottotitoli e trascrizione live in riunioni, stream e qualsiasi fonte audio — senza upload in batch.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">Scarica gratis</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 recensioni</div>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Sottotitoli live per qualsiasi app</h3>
+                <div class="explore-cols"><div><h5>Riunioni e chiamate</h5><a href="/it/zoom-live-captions.html">Zoom</a><a href="/it/teams-live-captions.html">Microsoft Teams</a><a href="/it/google-meet-live-captions.html">Google Meet</a><a href="/it/webex-live-captions.html">Webex</a><a href="/it/skype-live-captions.html">Skype</a><a href="/it/slack-live-captions.html">Slack</a><a href="/it/whatsapp-live-translation.html">WhatsApp</a><a href="/it/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming e social</h5><a href="/it/youtube-dual-subtitles.html">YouTube</a><a href="/it/netflix-subtitles.html">Netflix</a><a href="/it/twitch-live-captions.html">Twitch</a><a href="/it/discord-live-captions.html">Discord</a><a href="/it/tiktok-live-captions.html">TikTok</a><a href="/it/instagram-live-captions.html">Instagram</a><a href="/it/facebook-live-subtitles.html">Facebook</a><a href="/it/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming e creator</h5><a href="/it/obs-subtitles.html">OBS</a><a href="/it/game-mode-subtitles.html">Game Mode</a><a href="/it/steam-subtitles.html">Steam</a><a href="/it/restream-subtitles.html">Restream</a><a href="/it/vimeo-subtitles.html">Vimeo</a><a href="/it/vlc-subtitles.html">VLC</a></div><div><h5>Studio e lavoro</h5><a href="/it/coursera-subtitles.html">Coursera</a><a href="/it/udemy-live-captions.html">Udemy</a><a href="/it/google-classroom-subtitles.html">Google Classroom</a><a href="/it/linkedin-live-captions.html">LinkedIn</a><a href="/it/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/it/" style="font-weight:600;text-decoration:none;">Home di Live Subtitles →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Da leggere</h4>
+            <a class="s-item" href="article-1.html">Come i sottotitoli doppi ti aiutano a imparare le lingue p…</a>
+            <a class="s-item" href="article-2.html">Perché i sottotitoli sono importanti per l'apprendimento d…</a>
+            <a class="s-item" href="article-3.html">I migliori contenuti per l'apprendimento delle lingue con …</a>
+            <a class="s-item" href="article-4.html">Perché i sottotitoli sono utili anche per i madrelingua</a>
+            <a class="s-item" href="article-5.html">TOP-10 film con sottotitoli doppi per imparare l&amp;#39;inglese</a>
+            <a class="s-item" href="article-6.html">Errori da evitare nell&amp;#39;apprendimento delle lingue tram…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Sottotitoli live per qualsiasi app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Scarica gratis</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Torna su" title="Torna su">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/it/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

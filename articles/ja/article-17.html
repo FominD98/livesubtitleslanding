@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="2026年のNetflixとYouTube向けLanguage Reactorの代替ツール">
     <meta name="twitter:description" content="Language Reactorの代替ツール2026年最新版を目的別に徹底比較しています。Netflix・YouTube字幕学習から多言語会議翻訳まで幅広く対応したツールを、レイテンシ・価格・プライバシーの3つの観点から詳しく評価しました。自分に最適なツールを今すぐ見つけましょう。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ja/movies.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,36 @@
     <link rel="preload" as="image" href="/articles/img/ja/movies.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目次">
+        <div class="toc-inner">
+            <h4>目次</h4>
+            <a href="#sec-1">このカテゴリで2026年に変わったこと</a>
+            <a href="#sec-2">本当に重要な評価基準</a>
+            <a href="#sec-3">2026年の主要ツール比較スナップショット</a>
+            <a href="#sec-4">各ツールの詳細：何が違うのか</a>
+            <a href="#sec-5">実際の目的別の選び方</a>
+            <a href="#sec-6">よくある失敗パターンと回避策</a>
+            <a href="#sec-7">30分のセットアップ設計図</a>
+            <a href="#sec-8">よくある質問</a>
+            <a href="#sec-9">参考資料</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 記事一覧へ戻る</a>
         <h1 class="article-title" itemprop="headline">2026年のNetflixとYouTube向けLanguage Reactorの代替ツール</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-02-18">2026年2月18日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/aarav-sharma.html" rel="author" style="color:#00b8ff; text-decoration:none;">Aarav Sharma</a> &middot; ストリーミングプラットフォーム エンジニア, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026年5月28日</div>
+        <div class="article-date" itemprop="datePublished" content="2026-02-18">2026年2月18日<span class="reading-time">12 分で読了</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">著者: <a href="/about/team/aarav-sharma.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Aarav Sharma</a> &middot; ストリーミングプラットフォーム エンジニア, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新日: 2026年5月28日</div>
         <img class="article-hero" src="/articles/img/ja/movies.webp" alt="語学学習のための映画のデュアル字幕" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p><strong>Language Reactorの代替ツール</strong>を探す動機は、大きく3つに分かれます。プラットフォームの対応範囲をもっと広げたい、毎日のワークフローの摩擦を減らしたい、そしてブラウザ学習だけに依存しない一貫した習慣を作りたい、というものです。2026年現在、この分野は急速に進化しており、以前は「Language Reactorで十分」だったユーザーも、仕事の会議や多様なストリーミングサービスをカバーするために別のアプローチを検討し始めています。本ガイドでは実用的な選択肢を比較し、宣伝文句ではなく目的に応じて選べるように整理します。</p>
 
-            <h2>このカテゴリで2026年に変わったこと</h2>
+            <details class="toc-mobile"><summary>目次</summary><ol><li><a href="#sec-1">このカテゴリで2026年に変わったこと</a></li><li><a href="#sec-2">本当に重要な評価基準</a></li><li><a href="#sec-3">2026年の主要ツール比較スナップショット</a></li><li><a href="#sec-4">各ツールの詳細：何が違うのか</a></li><li><a href="#sec-5">実際の目的別の選び方</a></li><li><a href="#sec-6">よくある失敗パターンと回避策</a></li><li><a href="#sec-7">30分のセットアップ設計図</a></li><li><a href="#sec-8">よくある質問</a></li><li><a href="#sec-9">参考資料</a></li></ol></details>
+            <h2 id="sec-1">このカテゴリで2026年に変わったこと</h2>
             <p>ブラウザ向け字幕学習ツールは依然として強力ですが、市場は今、2つの利用モデルに明確に分かれています。</p>
             <ul>
                 <li><strong>メディアファースト型：</strong> NetflixとYouTubeのセッションに最適化されたブラウザ拡張機能。字幕クリックによる辞書引き、デュアル字幕表示、フレーズ保存といった機能が揃っており、英語コンテンツを日本語字幕と並べて見るような典型的なユースケースに適しています。</li>
@@ -107,7 +187,7 @@
             </ul>
             <p>動画プラットフォーム1つだけを最適化するユーザーは早い成果を得られます。しかし、仕事のコミュニケーションとエンタメの両方で1つの習慣を保ちたいユーザーには、より広い対応範囲が求められます。ツールを切り替えるたびに生じる小さな摩擦が、長期的には学習継続の大きな障壁になるからです。</p>
 
-            <h2>本当に重要な評価基準</h2>
+            <h2 id="sec-2">本当に重要な評価基準</h2>
             <p>字幕学習ツールを選ぶ際、機能リストの長さよりも、以下の4つの軸で評価することを推奨します。</p>
             <ul>
                 <li><strong>対応範囲：</strong> 実際の日常利用でどのプラットフォームをカバーしているか？Netflix・YouTube・Amazon Prime・Twitch・Zoom・Microsoft Teamsなど、自分がよく使うサービスで動くかどうかを確認しましょう。</li>
@@ -116,7 +196,7 @@
                 <li><strong>一貫性：</strong> 同じ手法を学習コンテンツと実際のビジネスコミュニケーションの両方に使えるか？仕事で英語を使う機会がある人にとって、これは非常に重要な点です。</li>
             </ul>
 
-            <h2>2026年の主要ツール比較スナップショット</h2>
+            <h2 id="sec-3">2026年の主要ツール比較スナップショット</h2>
             <table>
                 <thead>
                     <tr>
@@ -154,7 +234,7 @@
                 </tbody>
             </table>
 
-            <h2>各ツールの詳細：何が違うのか</h2>
+            <h2 id="sec-4">各ツールの詳細：何が違うのか</h2>
 
             <h3>Language Reactor：ブラウザ学習のデファクトスタンダード</h3>
             <p>Language Reactorは、NetflixとYouTubeの字幕学習において最も広く使われているブラウザ拡張機能の1つです。字幕の各フレーズをクリックすると辞書が表示され、例文も確認できます。NetflixのUIに自然に統合されているため、動画を一時停止して別タブを開く必要がありません。フレーズをワンクリックで保存し、Anki形式でエクスポートする機能も充実しています。</p>
@@ -170,9 +250,10 @@
 
             <h3>Live Subtitles：システム全体をカバーする選択肢</h3>
             <p>「Live Subtitles」はWindowsデスクトップアプリとして動作し、PCで音声が流れているあらゆる場面でリアルタイム字幕を表示します。Netflixの映画を見ながら、Zoomの英語会議中に、YouTubeの英語解説動画を聞きながら、すべてで同じUIと同じ操作感で字幕が使えます。50言語以上に対応しており、母国語との2言語同時表示（デュアル字幕）も可能です。</p>
-            <p>仕事で英語を使う機会がある日本のビジネスパーソンにとって特に価値があります。学習と実務のコンテキストスイッチが不要になるため、学んだ表現を会議の場でそのまま確認できます。<a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Microsoft Storeからダウンロード</a>して無料で試せます。</p>
+            <p>仕事で英語を使う機会がある日本のビジネスパーソンにとって特に価値があります。学習と実務のコンテキストスイッチが不要になるため、学んだ表現を会議の場でそのまま確認できます。<a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">無料ダウンロード</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 件のレビュー</div>して無料で試せます。</p>
 
-            <h2>実際の目的別の選び方</h2>
+            <h2 id="sec-5">実際の目的別の選び方</h2>
 
             <h3>目的A：NetflixとYouTubeだけで学習する</h3>
             <p>ブラウザファーストの字幕ツールを選び、ルーティンの質を最適化します。具体的には、フレーズの記録、5〜10秒の短いリプレイのループ、週次の語彙レビューを習慣化することが大切です。リスニング力を素早く伸ばしたい場合、これが最も手軽で効果的な経路です。Language ReactorかTrancyを試してみて、UIの好みで選ぶのがよいでしょう。</p>
@@ -180,12 +261,12 @@
 
             <h3>目的B：メディアと会議に1つの方法を使う</h3>
             <p>システムレベルのアプローチを選びます。最大の改善効果は新機能の追加ではなく、学習時間と仕事のコミュニケーションの間にあったワークフロー切替を取り除くことから生まれます。「英語の映画を見る用のツール」と「会議で英語を聞く用のツール」が別々だと、脳の中で学習文脈と実務文脈が分離してしまいます。Live Subtitlesのようなシステム横断型ツールを1つ持つことで、このギャップを埋められます。</p>
-            <p>また、<a href="/ja/zoom-live-captions.html" style="color:#00b8ff;">ZoomやTeamsでのリアルタイム字幕の使い方</a>を合わせて確認しておくと、会議シーンでの活用がスムーズになります。</p>
+            <p>また、<a href="/ja/zoom-live-captions.html" style="color:#0b6ad1;">ZoomやTeamsでのリアルタイム字幕の使い方</a>を合わせて確認しておくと、会議シーンでの活用がスムーズになります。</p>
 
             <h3>目的C：受動的な視聴ではなく、長期的な定着を作る</h3>
             <p>どのツールを選んでも、固定の再利用ループを追加することが不可欠です。具体的には、1セッションで5〜7つのフレーズを記録し、そのうち3つで短い例文を書き、24時間後に見直す、というサイクルです。活性化なしでは字幕への接触はすぐに定着せずに減衰します。研究によると、新しい語彙は文脈の中で4〜7回遭遇して初めて長期記憶に移行します。字幕を「流す」だけでは、このループが回りません。</p>
 
-            <h2>よくある失敗パターンと回避策</h2>
+            <h2 id="sec-6">よくある失敗パターンと回避策</h2>
             <p>字幕学習ツールを使い始めても成果が出ない場合、多くはツールの問題ではなくワークフローの問題です。以下の典型的な失敗パターンを確認してください。</p>
             <ul>
                 <li><strong>コンテンツの難易度が高すぎる：</strong> 10分に10回以上巻き戻しが発生するなら、レベルを下げましょう。理解できる音声の中に知らない表現が混じる「i+1」状態が理想的です。</li>
@@ -194,7 +275,7 @@
                 <li><strong>ツールを頻繁に変える：</strong> 「もっと良いツールがあるのでは？」という気持ちはわかりますが、最低でも2〜4週間は同じツールで試してみてください。ツールの問題ではなく、習慣化の問題であることがほとんどです。</li>
             </ul>
 
-            <h2>30分のセットアップ設計図</h2>
+            <h2 id="sec-7">30分のセットアップ設計図</h2>
             <p>初日に完成するシンプルなワークフロー設定の手順です。ここに時間をかけすぎず、まず動かすことを優先してください。</p>
             <ol>
                 <li>14日間、コンテンツのジャンルを1つに決める（ビジネス英語なら「インタビュー」、日常英語なら「コメディドラマ」など）。複数ジャンルを同時に試すと語彙が散らばります。</li>
@@ -204,37 +285,82 @@
             </ol>
             <p>このシンプルな4ステップを守るだけで、機能をランダムに切り替えながら何となく見続けるよりも、多くの場合で明らかに良い結果が出ます。最初の14日間で「巻き戻し回数が減った」「知っているフレーズが増えた」という感覚があれば、そのまま継続してください。</p>
 
-            <h2>よくある質問</h2>
+            <h2 id="sec-8">よくある質問</h2>
             <p><strong>万人に最適な代替ツールはありますか？</strong><br>いいえ。最適な選択は、ブラウザのみで完結させるかアプリ横断の一貫性が必要かによって大きく異なります。NetflixとYouTube専用ならLanguage ReactorかTrancyが手軽です。会議や多様なアプリをカバーしたいならシステム横断型のLive Subtitlesが向いています。</p>
             <p><strong>素早く伸ばすために高機能が必要ですか？</strong><br>通常は不要です。一貫したセッション習慣と、覚えたフレーズの能動的な活性化（使ってみること）が、ほとんどの学習成果を生みます。複雑な機能を使いこなす時間があるなら、その時間を純粋なインプットと復習に使う方が効果的です。</p>
             <p><strong>ツールを頻繁に切り替えるべきですか？</strong><br>2〜4週間のサイクルでKPIを確認してから判断しましょう。巻き戻し回数、フレーズ保存数、実際に使ったフレーズ数を記録しておくと、切替の判断根拠が明確になります。頻繁な切替はワークフローの問題を解決するのではなく、隠してしまうことが多いです。</p>
-            <p><strong>日本語と英語のデュアル字幕は本当に効果的ですか？</strong><br>適切に使えば非常に効果的です。ポイントは、日本語字幕を「答え合わせ」として使うことです。まず英語字幕だけで理解を試み、わからないときだけ日本語を確認する習慣を作ると、受動的な視聴を防げます。関連して、<a href="article-20.html" style="color:#00b8ff;">デュアル字幕を使った効果的な学習方法</a>も参照してください。</p>
-            <p><strong>英語以外の言語学習にも使えますか？</strong><br>ここで紹介したツールのほとんどは多言語対応です。Live Subtitlesは50言語以上のリアルタイム認識に対応しており、韓国語ドラマや中国語コンテンツの学習にも活用できます。また、<a href="article-18.html" style="color:#00b8ff;">会議ツール別の翻訳字幕比較（Zoom・Teams・Meet）</a>も参考にしてください。</p>
+            <p><strong>日本語と英語のデュアル字幕は本当に効果的ですか？</strong><br>適切に使えば非常に効果的です。ポイントは、日本語字幕を「答え合わせ」として使うことです。まず英語字幕だけで理解を試み、わからないときだけ日本語を確認する習慣を作ると、受動的な視聴を防げます。関連して、<a href="article-20.html" style="color:#0b6ad1;">デュアル字幕を使った効果的な学習方法</a>も参照してください。</p>
+            <p><strong>英語以外の言語学習にも使えますか？</strong><br>ここで紹介したツールのほとんどは多言語対応です。Live Subtitlesは50言語以上のリアルタイム認識に対応しており、韓国語ドラマや中国語コンテンツの学習にも活用できます。また、<a href="article-18.html" style="color:#0b6ad1;">会議ツール別の翻訳字幕比較（Zoom・Teams・Meet）</a>も参考にしてください。</p>
 
-            <h2>参考資料</h2>
+            <h2 id="sec-9">参考資料</h2>
             <ul>
-                <li><a href="https://chromewebstore.google.com/detail/language-reactor/hoombieeljmmljlkjmnheibnpciblicm" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Language Reactor - Chrome Web Store</a></li>
-                <li><a href="https://chromewebstore.google.com/detail/trancy/aiimdkdngfcipjohbjenkahhlhccpdbc" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Trancy - Chrome Web Store</a></li>
-                <li><a href="https://migaku.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Migaku 公式サイト</a></li>
-                <li><a href="https://help.netflix.com/en/node/372" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Netflix ヘルプセンター - 字幕と言語オプション</a></li>
-                <li><a href="https://support.google.com/youtube/answer/6373554" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">YouTube ヘルプ - 自動字幕</a></li>
+                <li><a href="https://chromewebstore.google.com/detail/language-reactor/hoombieeljmmljlkjmnheibnpciblicm" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Language Reactor - Chrome Web Store</a></li>
+                <li><a href="https://chromewebstore.google.com/detail/trancy/aiimdkdngfcipjohbjenkahhlhccpdbc" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Trancy - Chrome Web Store</a></li>
+                <li><a href="https://migaku.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Migaku 公式サイト</a></li>
+                <li><a href="https://help.netflix.com/en/node/372" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Netflix ヘルプセンター - 字幕と言語オプション</a></li>
+                <li><a href="https://support.google.com/youtube/answer/6373554" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">YouTube ヘルプ - 自動字幕</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">関連記事</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">関連記事</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams 翻訳字幕の比較</a></li>
-                    <li><a href="article-20.html" style="color: #00b8ff; text-decoration: none;">デュアル字幕を使った効果的な語学学習ワークフロー</a></li>
-                    <li><a href="article-19.html" style="color: #00b8ff; text-decoration: none;">リアルタイム字幕でリスニング力を高める方法</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">Google Meet vs Zoom vs Teams 翻訳字幕の比較</a></li>
+                    <li><a href="article-20.html" style="color: #0b6ad1; text-decoration: none;">デュアル字幕を使った効果的な語学学習ワークフロー</a></li>
+                    <li><a href="article-19.html" style="color: #0b6ad1; text-decoration: none;">リアルタイム字幕でリスニング力を高める方法</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">1つの安定したワークフローを試す</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">学習コンテンツと日常のコミュニケーションで同じ字幕習慣を使いましょう。Live SubtitlesはWindows PC上で動作し、NetflixからZoom会議まで50言語以上のリアルタイム字幕を1つのアプリで提供します。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Microsoft Storeからダウンロード</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">1つの安定したワークフローを試す</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">学習コンテンツと日常のコミュニケーションで同じ字幕習慣を使いましょう。Live SubtitlesはWindows PC上で動作し、NetflixからZoom会議まで50言語以上のリアルタイム字幕を1つのアプリで提供します。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">無料ダウンロード</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>あらゆるアプリのライブ字幕</h3>
+                <div class="explore-cols"><div><h5>会議・通話</h5><a href="/ja/zoom-live-captions.html">Zoom</a><a href="/ja/teams-live-captions.html">Microsoft Teams</a><a href="/ja/google-meet-live-captions.html">Google Meet</a><a href="/ja/webex-live-captions.html">Webex</a><a href="/ja/skype-live-captions.html">Skype</a><a href="/ja/slack-live-captions.html">Slack</a><a href="/ja/whatsapp-live-translation.html">WhatsApp</a><a href="/ja/telegram-subtitles.html">Telegram</a></div><div><h5>配信・SNS</h5><a href="/ja/youtube-dual-subtitles.html">YouTube</a><a href="/ja/netflix-subtitles.html">Netflix</a><a href="/ja/twitch-live-captions.html">Twitch</a><a href="/ja/discord-live-captions.html">Discord</a><a href="/ja/tiktok-live-captions.html">TikTok</a><a href="/ja/instagram-live-captions.html">Instagram</a><a href="/ja/facebook-live-subtitles.html">Facebook</a><a href="/ja/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>ゲーム・配信者</h5><a href="/ja/obs-subtitles.html">OBS</a><a href="/ja/game-mode-subtitles.html">Game Mode</a><a href="/ja/steam-subtitles.html">Steam</a><a href="/ja/restream-subtitles.html">Restream</a><a href="/ja/vimeo-subtitles.html">Vimeo</a><a href="/ja/vlc-subtitles.html">VLC</a></div><div><h5>学習・仕事</h5><a href="/ja/coursera-subtitles.html">Coursera</a><a href="/ja/udemy-live-captions.html">Udemy</a><a href="/ja/google-classroom-subtitles.html">Google Classroom</a><a href="/ja/linkedin-live-captions.html">LinkedIn</a><a href="/ja/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ja/" style="font-weight:600;text-decoration:none;">Live Subtitles ホーム →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>あわせて読みたい</h4>
+            <a class="s-item" href="article-1.html">二重字幕が語学学習を加速する理由</a>
+            <a class="s-item" href="article-2.html">字幕が語学学習にとって重要な理由</a>
+            <a class="s-item" href="article-3.html">字幕を使った言語学習でよくある間違いとその回避法</a>
+            <a class="s-item" href="article-4.html">ネイティブスピーカーにとっても字幕が有用な理由</a>
+            <a class="s-item" href="article-5.html">英語学習のための二重字幕映画TOP-10</a>
+            <a class="s-item" href="article-6.html">二重字幕動画による語学学習で避けるべき間違い</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>あらゆるアプリのライブ字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">無料ダウンロード</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="トップへ" title="トップへ">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ja/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

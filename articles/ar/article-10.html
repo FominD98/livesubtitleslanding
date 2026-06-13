@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,29 +43,95 @@
     <meta name="twitter:title" content="مقارنة الترجمات بلغة الأم ولغة الهدف: ماذا تختار للمستويات المختلفة — Live Subtitles">
     <meta name="twitter:description" content="مقارنة الترجمات: لغة الأم أم لغة الهدف أم المزدوجة لتعلم اللغات؟ اكتشف الأسلوب الأمثل لمستواك الحالي وضاعف سرعة تحصيلك — جرّب Live Subtitles.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/ar/learning.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; direction: rtl; }
-        .article-container { max-width: 800px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; direction: rtl; }
+        .article-container { max-width: 800px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        h4 { color: #00d4ff; margin-top: 1.5rem; }
-        p, li { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        h4 { color: #0b6ad1; margin-top: 1.5rem; }
+        p, li { color: #2d333b; }
         .lang-switch { margin-bottom: 2rem; }
         .subtitle-type { margin-bottom: 2rem; padding: 1.5rem; border-radius: 8px; border-right: 4px solid; }
-        .native-lang { border-right-color: #51cf66; background: rgba(81,207,102,0.1); }
+        .native-lang { border-right-color: #2f9e44; background: rgba(81,207,102,0.1); }
         .target-lang { border-right-color: #339af0; background: rgba(51,154,240,0.1); }
-        .dual-sub { border-right-color: #ffc107; background: rgba(255,193,7,0.1); }
-        .comparison-table { background: rgba(255,255,255,0.02); border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
-        .level-recommendation { text-align: center; font-weight: bold; color: #00ff9d; margin: 1rem 0; }
-        .tool-item { margin-bottom: 1rem; padding: 1rem; background: rgba(255,255,255,0.02); border-radius: 6px; border-right: 3px solid #868e96; }
+        .dual-sub { border-right-color: #9a6700; background: rgba(255,193,7,0.1); }
+        .comparison-table { background: rgba(0,0,0,0.02); border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+        .level-recommendation { text-align: center; font-weight: bold; color: #0a7f55; margin: 1rem 0; }
+        .tool-item { margin-bottom: 1rem; padding: 1rem; background: rgba(0,0,0,0.02); border-radius: 6px; border-right: 3px solid #868e96; }
         .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
         .pros { background: rgba(81,207,102,0.1); padding: 1rem; border-radius: 6px; }
         .cons { background: rgba(255,107,107,0.1); padding: 1rem; border-radius: 6px; }
         .icon { font-size: 1.2rem; margin-left: 0.5rem; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-right: 2px solid #e6e8eb; padding-right: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-right: 2px solid transparent; margin-right: -1rem; padding-right: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-right-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <!-- Article Schema Markup -->
     <script type="application/ld+json">
@@ -116,24 +178,43 @@
     <link rel="preload" as="image" href="/articles/img/ar/learning.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="المحتويات">
+        <div class="toc-inner">
+            <h4>المحتويات</h4>
+            <a href="#sec-1">لماذا تُعدّ الترجمات أداةً فعّالة …</a>
+            <a href="#sec-2">🟢ترجمات لغة الأم: راحة المبتدئين و…</a>
+            <a href="#sec-3">🔵ترجمات لغة الهدف: بوابة الانغماس …</a>
+            <a href="#sec-4">🟡الترجمة المزدوجة (2 sub): التوازن…</a>
+            <a href="#sec-5">📊جدول التوصيات حسب المستوى اللغوي</a>
+            <a href="#sec-6">🛠️أدوات وتطبيقات لتفعيل الترجمة ال…</a>
+            <a href="#sec-7">💡استراتيجيات متقدمة لتعظيم الفائدة</a>
+            <a href="#sec-8">🎯اختيار المحتوى المناسب لكل مستوى</a>
+            <a href="#sec-9">🔄الترجمة الفورية في الاجتماعات: ام…</a>
+            <a href="#sec-10">⚡تجنّب الأخطاء الشائعة عند استخدام…</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <div class="lang-switch">
-            <a href="/" style="color:#00b8ff;">العودة إلى الموقع الرئيسي</a>
+            <a href="/" style="color:#0b6ad1;">العودة إلى الموقع الرئيسي</a>
         </div>
         <a href="index.html" class="back-link">← العودة إلى المقالات</a>
         <h1 class="article-title" itemprop="headline">مقارنة الترجمات بلغة الأم ولغة الهدف: ماذا تختار للمستويات المختلفة</h1>
-        <div class="article-date" itemprop="datePublished" content="2024-05-04">4 مايو 2024</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">الكاتب: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#00b8ff; text-decoration:none;">Sofia Almeida</a> &middot; قائد علم اللغة التطبيقي, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">تم التحديث: 2026-05-12</div>
+        <div class="article-date" itemprop="datePublished" content="2024-05-04">4 مايو 2024<span class="reading-time">9 دقيقة قراءة</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">الكاتب: <a href="/about/team/sofia-almeida.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Sofia Almeida</a> &middot; قائد علم اللغة التطبيقي, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">تم التحديث: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/ar/learning.webp" alt="ترجمات ثنائية على درس بالفيديو لتعلم اللغة" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         <div itemprop="articleBody">
             <p>تعلم اللغات الأجنبية من خلال مشاهدة الأفلام والمسلسلات بات من أكثر الأساليب انتشاراً بين المتعلمين العرب في العقد الأخير. وسط هذا الزخم يبرز تساؤل جوهري يواجهه كل متعلم: أيّ نوع من الترجمات يستخدم — ترجمات بلغة الأم العربية، أم بلغة الهدف، أم الترجمة المزدوجة التي تجمع اللغتين في آنٍ واحد (2 sub)؟ الإجابة ليست واحدة للجميع؛ فهي تتغيّر تبعاً لمستوى المتعلم وأهدافه ونوع المحتوى الذي يشاهده. في هذا المقال نستعرض بعمق مزايا وعيوب كل خيار، وندرج توصيات عملية للانتقال من مستوى إلى آخر.</p>
 
-            <h2>لماذا تُعدّ الترجمات أداةً فعّالة لتعلم اللغات؟</h2>
+            <details class="toc-mobile"><summary>المحتويات</summary><ol><li><a href="#sec-1">لماذا تُعدّ الترجمات أداةً فعّالة لتعلم اللغات؟</a></li><li><a href="#sec-2">🟢ترجمات لغة الأم: راحة المبتدئين وأوّل الخطوات</a></li><li><a href="#sec-3">🔵ترجمات لغة الهدف: بوابة الانغماس الحقيقي</a></li><li><a href="#sec-4">🟡الترجمة المزدوجة (2 sub): التوازن المثالي لمرحلة التطوير</a></li><li><a href="#sec-5">📊جدول التوصيات حسب المستوى اللغوي</a></li><li><a href="#sec-6">🛠️أدوات وتطبيقات لتفعيل الترجمة المزدوجة</a></li><li><a href="#sec-7">💡استراتيجيات متقدمة لتعظيم الفائدة</a></li><li><a href="#sec-8">🎯اختيار المحتوى المناسب لكل مستوى</a></li><li><a href="#sec-9">🔄الترجمة الفورية في الاجتماعات: امتداد طبيعي لمنهجية التعلم</a></li><li><a href="#sec-10">⚡تجنّب الأخطاء الشائعة عند استخدام الترجمات</a></li></ol></details>
+            <h2 id="sec-1">لماذا تُعدّ الترجمات أداةً فعّالة لتعلم اللغات؟</h2>
             <p>تشير دراسات اكتساب اللغة الثانية إلى أن التعرض المكثف للغة في سياقها الطبيعي يُرسّخ المفردات والتراكيب بفاعلية تفوق الحفظ التقليدي. الترجمات تحقق هذا التعرض وتضيف إليه جسراً ذهنياً بين ما يسمعه المتعلم وما يفهمه، مما يقلل الإحباط ويزيد الدافعية للاستمرار. وقد أظهرت أبحاث متعددة أن المشاهدة مع ترجمات مناسبة تُعرّض المتعلم لأكثر من 15 كلمة جديدة في السياق كل عشر دقائق مشاهدة، وهو معدل اكتساب يصعب تحقيقه بالكتب المدرسية وحدها.</p>
 
             <div class="subtitle-type native-lang">
-                <h2><span class="icon">🟢</span>ترجمات لغة الأم: راحة المبتدئين وأوّل الخطوات</h2>
+                <h2 id="sec-2"><span class="icon">🟢</span>ترجمات لغة الأم: راحة المبتدئين وأوّل الخطوات</h2>
                 <p>عندما يبدأ المتعلم رحلته مع لغة جديدة، تكون ترجمات لغة الأم — أي العربية في حالتنا — هي الملاذ الأكثر أماناً. فهي تُتيح فهم الحبكة والسياق الدرامي دون الشعور بالضياع، وتجعل تجربة المشاهدة ممتعة بدلاً من مُجهِدة. هذا الجانب النفسي بالغ الأهمية في المرحلة الأولى؛ لأن المتعلم الذي يستمتع بما يشاهده أكثر التزاماً بالاستمرار في التعلم.</p>
                 <p>غير أن الاتكاء على الترجمة العربية حصراً يحمل مخاطر حقيقية إذا طال أمده. يميل الدماغ بطبيعته إلى قراءة النص بدلاً من الإنصات الفعلي للصوت الأجنبي، ويصبح الفهم مرتكزاً على الكلمة المكتوبة لا على الصوت المسموع. والنتيجة أن مهارات الاستماع والإدراك السمعي تبقى متأخرة رغم ساعات المشاهدة الطويلة.</p>
 
@@ -160,7 +241,7 @@
             </div>
 
             <div class="subtitle-type target-lang">
-                <h2><span class="icon">🔵</span>ترجمات لغة الهدف: بوابة الانغماس الحقيقي</h2>
+                <h2 id="sec-3"><span class="icon">🔵</span>ترجمات لغة الهدف: بوابة الانغماس الحقيقي</h2>
                 <p>استخدام الترجمات بلغة التعلم — كالإنجليزية أو الفرنسية أو الألمانية — يمثّل قفزة نوعية في مسار المتعلم. حين يقرأ المتعلم الكلمة ويسمعها في الوقت نفسه، تتشكّل في ذهنه رابطة مباشرة بين الصوت والمعنى دون وساطة العربية. هذا ما يسميه علماء اللغة "الكودة الأحادية" (monocoding)، وهو ما يُميّز الناطقين الأصليين باللغة عن متعلميها.</p>
                 <p>إضافة إلى ذلك، فإن قراءة الترجمة بلغة الهدف تُعرّض المتعلم للتهجئة الصحيحة وعلامات الترقيم والتراكيب النحوية في وقت واحد، مما يُعزّز مهارات الكتابة جنباً إلى جنب مع الاستماع. تجربة مشاهدة مسلسل كامل بترجمات بلغة الهدف تُعادل من حيث التعرض اللغوي قراءة عشرات الصفحات من قصص متدرجة المستوى.</p>
 
@@ -187,7 +268,7 @@
             </div>
 
             <div class="subtitle-type dual-sub">
-                <h2><span class="icon">🟡</span>الترجمة المزدوجة (2 sub): التوازن المثالي لمرحلة التطوير</h2>
+                <h2 id="sec-4"><span class="icon">🟡</span>الترجمة المزدوجة (2 sub): التوازن المثالي لمرحلة التطوير</h2>
                 <p>الترجمة المزدوجة — أو ما بات يُعرف بـ 2 sub — تعرض نصين في آنٍ واحد: ترجمة بلغة الهدف في الأعلى وترجمة بالعربية في الأسفل (أو العكس). هذا النهج يمنح المتعلم أفضل ما في الخيارين: استيعاب المعنى الكامل عبر العربية، والتعرض المتزامن للغة الهدف في سياقها الطبيعي.</p>
                 <p>الفائدة الأعمق للترجمة المزدوجة تكمن في إمكانية مقارنة البنى النحوية بين اللغتين: كيف يُعبَّر عن الزمن المستقبل؟ أين يقع الفعل في الجملة؟ كيف تُتعامل اللغة مع نفي الماضي؟ هذه المقارنات الآنية تُبني حدساً لغوياً يصعب اكتسابه بأي طريقة تقليدية أخرى. وقد رصد الباحث اللغوي ستيفن كراشن أن هذا النوع من الاستيعاب الضمني يُرسّخ القواعد أسرع من الدراسة الصريحة لها.</p>
 
@@ -213,7 +294,7 @@
             </div>
 
             <div class="comparison-table">
-                <h2><span class="icon">📊</span>جدول التوصيات حسب المستوى اللغوي</h2>
+                <h2 id="sec-5"><span class="icon">📊</span>جدول التوصيات حسب المستوى اللغوي</h2>
                 <table class="table table-dark table-striped">
                     <thead>
                         <tr>
@@ -251,7 +332,7 @@
                 </div>
             </div>
 
-            <h2><span class="icon">🛠️</span>أدوات وتطبيقات لتفعيل الترجمة المزدوجة</h2>
+            <h2 id="sec-6"><span class="icon">🛠️</span>أدوات وتطبيقات لتفعيل الترجمة المزدوجة</h2>
             <p>لا تتوفر الترجمة المزدوجة بشكل افتراضي على معظم منصات البث، لكن هناك عدة أدوات تُتيحها بسهولة:</p>
 
             <div class="tool-item">
@@ -274,7 +355,7 @@
                 <p>إضافة Chrome مجانية تجمع بين الترجمة المزدوجة وأدوات التعلم التفاعلية على Netflix وYouTube. تُتيح ترجمة أي كلمة بالتمرير فوقها، وحفظها في قوائم مراجعة، ثم اختبار نفسك عليها لاحقاً.</p>
             </div>
 
-            <h2><span class="icon">💡</span>استراتيجيات متقدمة لتعظيم الفائدة</h2>
+            <h2 id="sec-7"><span class="icon">💡</span>استراتيجيات متقدمة لتعظيم الفائدة</h2>
             <p>الأداة وحدها لا تكفي؛ الطريقة التي تستخدمها بها تحدد مدى الاستفادة الفعلية. إليك ثلاث استراتيجيات يوصي بها المتخصصون في تعليم اللغات:</p>
             <ol>
                 <li><strong>أسلوب المشاهدة الثلاثية:</strong> شاهد المشهد أولاً بترجمة لغة الأم للفهم العام، ثم أعد مشاهدته بالترجمة المزدوجة للمقارنة، ثم شاهده ثالثة بترجمة لغة الهدف فقط للاختبار الذاتي. هذا الأسلوب مثالي للمشاهد القصيرة (3–5 دقائق) التي تستحق الاستثمار فيها.</li>
@@ -282,7 +363,7 @@
                 <li><strong>قائمة الكلمات السياقية:</strong> لا تتوقف عند كل كلمة غير معروفة، بل دوّن فقط الكلمات التي تكررت مرتين أو أكثر في الحلقة. هذه هي الكلمات عالية الأولوية التي يستحق تعلمها الجهد المبذول.</li>
             </ol>
 
-            <h2><span class="icon">🎯</span>اختيار المحتوى المناسب لكل مستوى</h2>
+            <h2 id="sec-8"><span class="icon">🎯</span>اختيار المحتوى المناسب لكل مستوى</h2>
             <p>ليس المحتوى الأسهل دائماً هو الأفضل للتعلم. إليك توجيهات عملية:</p>
             <ul>
                 <li><strong>المبتدئون:</strong> رسوم متحركة للأطفال (مفردات بسيطة، إيقاع متأنٍّ)، أو مسلسلات الطهي والطبيعة (تعليق وصفي واضح).</li>
@@ -291,10 +372,11 @@
             </ul>
             <p>بالنسبة للمتعلمين العرب الساعين لتعلم اللغة الإنجليزية تحديداً، تُعدّ مسلسلات من قبيل "Friends" و"The Office" مناسبة لمرحلة B1 بفضل حواراتها اليومية الواضحة، في حين تُعدّ "Sherlock" و"The Crown" أنسب لمرحلة B2 فأعلى.</p>
 
-            <h2><span class="icon">🔄</span>الترجمة الفورية في الاجتماعات: امتداد طبيعي لمنهجية التعلم</h2>
-            <p>منهجية الترجمة المزدوجة لا تقتصر على المحتوى الترفيهي المسجل؛ فهي تمتد أيضاً إلى سياقات التعلم الحيّة كالاجتماعات والمحاضرات عبر الإنترنت. عندما تحضر مؤتمراً بلغة أجنبية عبر Zoom أو Microsoft Teams، فإن وجود ترجمة فورية يؤدي الوظيفة ذاتها التي تؤديها الترجمة المزدوجة في الأفلام: يمنحك شبكة أمان من الفهم مع تعريضك المستمر للغة الهدف المنطوقة. تطبيق <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Live Subtitles</a> يوفر هذه الترجمة الفورية لأكثر من 50 لغة على نظام Windows، مما يجعل كل اجتماع أجنبي فرصة تعليمية لا مجرد لقاء عمل. يمكنك الاطلاع على مقالنا حول <a href="article-1.html" style="color:#00b8ff;">كيفية استخدام الترجمة المزدوجة لتسريع تعلم اللغات</a> لمزيد من التفاصيل.</p>
+            <h2 id="sec-9"><span class="icon">🔄</span>الترجمة الفورية في الاجتماعات: امتداد طبيعي لمنهجية التعلم</h2>
+            <p>منهجية الترجمة المزدوجة لا تقتصر على المحتوى الترفيهي المسجل؛ فهي تمتد أيضاً إلى سياقات التعلم الحيّة كالاجتماعات والمحاضرات عبر الإنترنت. عندما تحضر مؤتمراً بلغة أجنبية عبر Zoom أو Microsoft Teams، فإن وجود ترجمة فورية يؤدي الوظيفة ذاتها التي تؤديها الترجمة المزدوجة في الأفلام: يمنحك شبكة أمان من الفهم مع تعريضك المستمر للغة الهدف المنطوقة. تطبيق <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">تنزيل مجاني</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 تقييم</div> يوفر هذه الترجمة الفورية لأكثر من 50 لغة على نظام Windows، مما يجعل كل اجتماع أجنبي فرصة تعليمية لا مجرد لقاء عمل. يمكنك الاطلاع على مقالنا حول <a href="article-1.html" style="color:#0b6ad1;">كيفية استخدام الترجمة المزدوجة لتسريع تعلم اللغات</a> لمزيد من التفاصيل.</p>
 
-            <h2><span class="icon">⚡</span>تجنّب الأخطاء الشائعة عند استخدام الترجمات</h2>
+            <h2 id="sec-10"><span class="icon">⚡</span>تجنّب الأخطاء الشائعة عند استخدام الترجمات</h2>
             <p>كثير من المتعلمين يقعون في فخاخ تُبطئ تقدمهم رغم ساعات المشاهدة الطويلة. الأخطاء الأكثر شيوعاً:</p>
             <ul>
                 <li><strong>البقاء في منطقة الراحة طويلاً:</strong> الاستمرار في استخدام ترجمات لغة الأم بعد تجاوز مرحلة المبتدئين يُعيق التطور. كل ستة أشهر، راجع نوع الترجمة الذي تستخدمه وفكّر في التقدم نحو خيار أصعب.</li>
@@ -302,25 +384,70 @@
                 <li><strong>اختيار محتوى بعيد عن الاهتمامات:</strong> التعلم عبر محتوى لا يثير اهتمامك يُقلل كفاءة الاستيعاب بصرف النظر عن نوع الترجمة المستخدمة.</li>
                 <li><strong>إهمال ممارسة الكلام:</strong> الترجمات تُنمّي الفهم والقراءة بامتياز، لكنها لا تعوض ممارسة الحديث الفعلي مع ناطقين أصليين أو متعلمين آخرين.</li>
             </ul>
-            <p>للاطلاع على قائمة أكثر تفصيلاً، يمكنك قراءة مقالنا عن <a href="article-6.html" style="color:#00b8ff;">الأخطاء الشائعة عند تعلم اللغات عبر الفيديو</a>.</p>
+            <p>للاطلاع على قائمة أكثر تفصيلاً، يمكنك قراءة مقالنا عن <a href="article-6.html" style="color:#0b6ad1;">الأخطاء الشائعة عند تعلم اللغات عبر الفيديو</a>.</p>
 
             <p><strong>الخلاصة:</strong> اختيار نوع الترجمة المناسب هو قرار استراتيجي يتطور مع مستواك اللغوي. المبتدئون يبدؤون براحة لغة الأم، ثم ينتقلون إلى الترجمة المزدوجة لبناء جسر المقارنة، ليصلوا أخيراً إلى الانغماس الكامل بترجمة لغة الهدف. لا يوجد خيار خاطئ طالما أنه يخدم مستواك الحالي ويدفعك نحو التالي. الأهم هو ألا تتوقف عن المشاهدة، وأن تُعيد تقييم أسلوبك باستمرار كلما شعرت بأن الأمور باتت سهلة جداً.</p>
 
-            <div style="background: rgba(0,184,255,0.08); border-right: 4px solid #00b8ff; padding: 1.2rem; border-radius: 8px 0 0 8px; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">مقالات ذات صلة</h3>
+            <div style="background: rgba(0,184,255,0.08); border-right: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 8px 0 0 8px; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">مقالات ذات صلة</h3>
                 <ul style="list-style: none; padding-right: 0;">
-                    <li><a href="article-1.html" style="color: #00b8ff; text-decoration: none;">كيف تساعدك الترجمة المزدوجة على تعلم اللغات بشكل أسرع</a></li>
-                    <li><a href="article-7.html" style="color: #00b8ff; text-decoration: none;">كيفية استخدام الترجمة المزدوجة للتعلم السريع للغات</a></li>
-                    <li><a href="article-6.html" style="color: #00b8ff; text-decoration: none;">الأخطاء الشائعة عند تعلم اللغات عبر الفيديو وكيف تتجنبها</a></li>
+                    <li><a href="article-1.html" style="color: #0b6ad1; text-decoration: none;">كيف تساعدك الترجمة المزدوجة على تعلم اللغات بشكل أسرع</a></li>
+                    <li><a href="article-7.html" style="color: #0b6ad1; text-decoration: none;">كيفية استخدام الترجمة المزدوجة للتعلم السريع للغات</a></li>
+                    <li><a href="article-6.html" style="color: #0b6ad1; text-decoration: none;">الأخطاء الشائعة عند تعلم اللغات عبر الفيديو وكيف تتجنبها</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">جرّب Live Subtitles مجاناً</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">احصل على ترجمة مزدوجة وترجمة فورية للكلام في أي تطبيق — YouTube وNetflix وZoom وأكثر من 50 تطبيقاً آخر. أكثر من 350 مستخدم قيّموه بـ 4.7 نجمة على متجر مايكروسوفت.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">تنزيل من متجر Microsoft</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">جرّب Live Subtitles مجاناً</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">احصل على ترجمة مزدوجة وترجمة فورية للكلام في أي تطبيق — YouTube وNetflix وZoom وأكثر من 50 تطبيقاً آخر. أكثر من 350 مستخدم قيّموه بـ 4.7 نجمة على متجر مايكروسوفت.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">تنزيل مجاني</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>ترجمة حية لأي تطبيق</h3>
+                <div class="explore-cols"><div><h5>الاجتماعات والمكالمات</h5><a href="/ar/zoom-live-captions.html">Zoom</a><a href="/ar/teams-live-captions.html">Microsoft Teams</a><a href="/ar/google-meet-live-captions.html">Google Meet</a><a href="/ar/webex-live-captions.html">Webex</a><a href="/ar/skype-live-captions.html">Skype</a><a href="/ar/slack-live-captions.html">Slack</a><a href="/ar/whatsapp-live-translation.html">WhatsApp</a><a href="/ar/telegram-subtitles.html">Telegram</a></div><div><h5>البث والتواصل</h5><a href="/ar/youtube-dual-subtitles.html">YouTube</a><a href="/ar/netflix-subtitles.html">Netflix</a><a href="/ar/twitch-live-captions.html">Twitch</a><a href="/ar/discord-live-captions.html">Discord</a><a href="/ar/tiktok-live-captions.html">TikTok</a><a href="/ar/instagram-live-captions.html">Instagram</a><a href="/ar/facebook-live-subtitles.html">Facebook</a><a href="/ar/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>الألعاب والمبدعون</h5><a href="/ar/obs-subtitles.html">OBS</a><a href="/ar/game-mode-subtitles.html">Game Mode</a><a href="/ar/steam-subtitles.html">Steam</a><a href="/ar/restream-subtitles.html">Restream</a><a href="/ar/vimeo-subtitles.html">Vimeo</a><a href="/ar/vlc-subtitles.html">VLC</a></div><div><h5>التعلّم والعمل</h5><a href="/ar/coursera-subtitles.html">Coursera</a><a href="/ar/udemy-live-captions.html">Udemy</a><a href="/ar/google-classroom-subtitles.html">Google Classroom</a><a href="/ar/linkedin-live-captions.html">LinkedIn</a><a href="/ar/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/ar/" style="font-weight:600;text-decoration:none;">← الصفحة الرئيسية لـ Live Subtitles</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>اقرأ أيضًا</h4>
+            <a class="s-item" href="article-1.html">كيف تساعد الترجمات المزدوجة في تعلم اللغات بشكل أسرع</a>
+            <a class="s-item" href="article-2.html">لماذا تعتبر الترجمة مهمة لتعلم اللغات</a>
+            <a class="s-item" href="article-3.html">الترجمة المزدوجة وتعلم اللغات للأطفال والمراهقين</a>
+            <a class="s-item" href="article-4.html">لماذا تعتبر الترجمة مفيدة حتى للمتحدثين الأصليين</a>
+            <a class="s-item" href="article-5.html">أفضل 10 أفلام بترجمة مزدوجة لتعلم الإنجليزية</a>
+            <a class="s-item" href="article-6.html">أخطاء يجب تجنبها عند تعلم اللغات من خلال الفيديوهات بالترج…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>ترجمة حية لأي تطبيق.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">تنزيل مجاني</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="إلى الأعلى" title="إلى الأعلى">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/ar/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

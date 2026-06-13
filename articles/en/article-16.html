@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -32,16 +28,82 @@
     <meta name="twitter:title" content="Google Meet Captions Rollout: Multilingual Meeting Playbook">
     <meta name="twitter:description" content="Google Meet captions rollout playbook: structured meeting protocol, KPI tracking, and decision-quality safeguards for multilingual teams. Start here.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/meetings.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -71,22 +133,42 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">Why Google Meet captions alone are…</a>
+            <a href="#sec-2">High-ROI scenarios for Google Meet…</a>
+            <a href="#sec-3">Enabling Google Meet captions: set…</a>
+            <a href="#sec-4">Protocol design: what to standardize</a>
+            <a href="#sec-5">4-week rollout model</a>
+            <a href="#sec-6">KPI model for communication quality</a>
+            <a href="#sec-7">Risk controls for high-stakes meet…</a>
+            <a href="#sec-8">Comparing Google Meet captions to …</a>
+            <a href="#sec-9">FAQ</a>
+            <a href="#sec-10">References and platform docs</a>
+            <a href="#sec-11">Final takeaway</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Google Meet Captions Rollout: Multilingual Meeting Playbook</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-02-10">February 10, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#00b8ff; text-decoration:none;">Lukas Bergström</a> &middot; Real-time Pipelines Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-02-10">February 10, 2026<span class="reading-time">14 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/lukas-bergstrom.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Lukas Bergström</a> &middot; Real-time Pipelines Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/meetings.webp" alt="Live captions during a multilingual video meeting" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>Teams usually decide to adopt <strong>Google Meet live captions</strong> after repeated meeting friction: unclear decisions, owner confusion, and too much recap debt. The trigger is almost always the same — a consequential meeting ends, the recording goes unreviewed, and three days later two team members are acting on contradictory versions of the same decision. Captions are a partial remedy, but only when attached to explicit meeting protocol and measurable success criteria. This playbook gives you both: a concrete rollout model, a KPI framework you can apply in your first week, and the process design that turns passive transcription into an active communication tool for multilingual teams.</p>
 
-            <h2>Why Google Meet captions alone are not enough</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">Why Google Meet captions alone are not enough</a></li><li><a href="#sec-2">High-ROI scenarios for Google Meet captions</a></li><li><a href="#sec-3">Enabling Google Meet captions: setup checklist</a></li><li><a href="#sec-4">Protocol design: what to standardize</a></li><li><a href="#sec-5">4-week rollout model</a></li><li><a href="#sec-6">KPI model for communication quality</a></li><li><a href="#sec-7">Risk controls for high-stakes meetings</a></li><li><a href="#sec-8">Comparing Google Meet captions to Teams and Zoom</a></li><li><a href="#sec-9">FAQ</a></li><li><a href="#sec-10">References and platform docs</a></li><li><a href="#sec-11">Final takeaway</a></li></ol></details>
+            <h2 id="sec-1">Why Google Meet captions alone are not enough</h2>
             <p>Google Meet's built-in captions display live speech-to-text in real time and can be enabled by any participant at any time — no admin configuration required for most Workspace tiers. That accessibility is valuable. The limitation is that <strong>captions do not change speaking behavior</strong>. A speaker who buries the decision in a subordinate clause at the end of a long sentence produces a caption that is equally buried. A participant whose accent or pace exceeds the speech recognition engine's confidence threshold gets a fragmented caption. The technology surfaces what is said; it cannot improve how it is said.</p>
             <p>This is not a reason to skip captions. It is a reason to pair them with protocol. Teams that combine caption availability with structured meeting habits consistently report fewer post-meeting clarification threads, faster execution starts, and higher perceived meeting value among non-native speakers. The protocol is the multiplier on the technology investment.</p>
 
-            <h2>High-ROI scenarios for Google Meet captions</h2>
+            <h2 id="sec-2">High-ROI scenarios for Google Meet captions</h2>
             <p>Not every meeting benefits equally from captioning. The highest return comes from meetings where the cost of a single misunderstanding is concrete and measurable:</p>
             <ul>
                 <li><strong>Cross-border client calls</strong> where detail precision affects contract terms, support commitments, or trust in the relationship.</li>
@@ -97,7 +179,7 @@
             </ul>
             <p>Conversely, low-stakes social calls or brainstorming sessions with a single language do not need the overhead of the full protocol. Start where the misunderstanding cost is highest and work outward.</p>
 
-            <h2>Enabling Google Meet captions: setup checklist</h2>
+            <h2 id="sec-3">Enabling Google Meet captions: setup checklist</h2>
             <p>Before the protocol matters, the tooling has to be reliable. Run through this checklist before your first captioned meeting:</p>
             <ol>
                 <li><strong>Workspace edition check:</strong> Google Meet captions are available on all Workspace editions including the free tier. Translated captions (live translation to another language) require Business Standard or higher. Confirm your edition in the Admin Console under Apps &gt; Google Workspace &gt; Google Meet.</li>
@@ -107,11 +189,12 @@
                 <li><strong>Screen real estate:</strong> On smaller displays, captions overlap the video grid. Move the caption bar by clicking and dragging. Brief participants on repositioning it before the first meeting where it will be in use.</li>
             </ol>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">Tip:</strong> For Windows users who need captions across multiple apps — not just Google Meet — <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Live Subtitles</a> from the Microsoft Store adds a system-level overlay that works simultaneously with Meet, Zoom, Teams, and any other audio source. It is especially useful when you switch between platforms within the same workday.
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">Tip:</strong> For Windows users who need captions across multiple apps — not just Google Meet — <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div> from the Microsoft Store adds a system-level overlay that works simultaneously with Meet, Zoom, Teams, and any other audio source. It is especially useful when you switch between platforms within the same workday.
             </div>
 
-            <h2>Protocol design: what to standardize</h2>
+            <h2 id="sec-4">Protocol design: what to standardize</h2>
             <p>Meeting protocol is the behavioral framework that makes captions actionable. Without it, captions are a passive feature. With it, they become a communication audit trail. There are three elements worth standardizing in any team that holds ten or more meetings per week.</p>
 
             <h3>1. Decision phrasing</h3>
@@ -127,7 +210,7 @@
             <h3>4. Recap discipline</h3>
             <p>Designate one participant per meeting as the recap owner. Their job is to paste the three most important caption-sourced decisions into the meeting chat before the call ends. This creates a shared, time-stamped record and reduces the cognitive load of post-meeting note-taking for everyone else. The recap owner rotates each week so the skill spreads across the team.</p>
 
-            <h2>4-week rollout model</h2>
+            <h2 id="sec-5">4-week rollout model</h2>
             <p>Organizational change works best as a phased sequence. The following four-week model assumes a team of 8–30 people with 5–15 recurring meetings per week. Adjust timelines proportionally for larger organizations.</p>
 
             <h3>Week 1: baseline measurement</h3>
@@ -153,7 +236,7 @@
                 <li>Review the terminology glossary and add any terms that produced caption errors during the pilot weeks.</li>
             </ul>
 
-            <h2>KPI model for communication quality</h2>
+            <h2 id="sec-6">KPI model for communication quality</h2>
             <p>Measuring the impact of a process change is what separates a permanent improvement from a temporary initiative. The following four KPIs are practical to track with tools most teams already have (Slack, calendar, and a simple survey):</p>
             <ul>
                 <li><strong>Clarification ratio:</strong> Number of follow-up clarification messages (Slack threads, emails, or follow-up calls) per meeting per week. Target: reduce by 40% within 4 weeks of protocol adoption.</li>
@@ -162,7 +245,7 @@
                 <li><strong>Participation balance score:</strong> Ratio of contribution across native and non-native speakers. Measure by tracking how many distinct participants contribute a spoken decision or clarification per meeting. Target: non-native speakers should contribute at a rate at least 70% of that of native speakers. Captions are one of the most effective tools for closing this gap because they reduce the cognitive load of both speaking and listening in a second language simultaneously.</li>
             </ul>
 
-            <h2>Risk controls for high-stakes meetings</h2>
+            <h2 id="sec-7">Risk controls for high-stakes meetings</h2>
             <p>For legal, pricing, contractual, or compliance-relevant discussions, standard protocol is insufficient. The stakes justify a higher-friction confirmation process that creates a durable record.</p>
             <p>Use a three-step confirmation rule:</p>
             <ol>
@@ -173,10 +256,10 @@
             <p>For particularly sensitive discussions, export the meeting transcript (available in Google Meet for Workspace Business and Enterprise editions) and store it alongside the contract or compliance record. The caption log is not a legal transcript, but it provides a timestamped sequence of the spoken exchange that can resolve disputes about what was discussed.</p>
 
             <div style="background: rgba(255,160,0,0.07); border-left: 4px solid #ffa000; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#ffa000;">Important:</strong> Google Meet captions and transcripts are subject to your organization's data retention and privacy policies. Before using caption exports for compliance purposes, verify with your legal or compliance team that the export format meets your jurisdiction's evidentiary standards. Caption accuracy is typically 85–95% under good audio conditions — not 100%.
+                <strong style="color:#9a6700;">Important:</strong> Google Meet captions and transcripts are subject to your organization's data retention and privacy policies. Before using caption exports for compliance purposes, verify with your legal or compliance team that the export format meets your jurisdiction's evidentiary standards. Caption accuracy is typically 85–95% under good audio conditions — not 100%.
             </div>
 
-            <h2>Comparing Google Meet captions to Teams and Zoom</h2>
+            <h2 id="sec-8">Comparing Google Meet captions to Teams and Zoom</h2>
             <p>If your organization runs meetings across multiple platforms, it is worth understanding how Meet's captioning compares to alternatives. For a detailed side-by-side, see <a href="article-18.html">Google Meet vs Zoom vs Teams Translated Captions</a>. In brief:</p>
             <ul>
                 <li><strong>Google Meet</strong> has the lowest barrier to entry for captions — no admin enablement required, works on the free tier. Translated captions require Business Standard or higher.</li>
@@ -185,39 +268,84 @@
             </ul>
             <p>If your team frequently presents video content alongside meetings — for example, playing a recorded demo or training video during a call — you will also need captions on the video itself. The <a href="/netflix-subtitles.html">platform-level subtitle approach</a> described for streaming services applies here as well: system-level caption tools can surface subtitles from any audio source, not just the microphone.</p>
 
-            <h2>FAQ</h2>
+            <h2 id="sec-9">FAQ</h2>
             <p><strong>Can we deploy captions without changing meeting culture?</strong><br>You can start that way, and it is a reasonable first step — enabling captions with no protocol change has measurable positive effects for non-native speakers simply by reducing listening load. But the large gains (40%+ reduction in clarification threads, significant improvement in decision accuracy) only materialize when captions are paired with explicit behavioral protocol. The technology without the process is an improvement; the technology with the process is a transformation.</p>
             <p><strong>Which teams should adopt the full protocol first?</strong><br>Start with client-facing teams and cross-functional groups where misunderstanding cost is highest and most visible. Sales, customer success, and product-engineering interfaces are typical high-value starting points. Internal-only teams with single-language meetings are lower priority.</p>
             <p><strong>What should we do when caption accuracy is poor for a specific speaker?</strong><br>First, test the speaker's audio setup — a good USB microphone or wired headset typically improves accuracy by 8–15 percentage points over built-in laptop audio. Second, add that speaker's frequently-used terms to the terminology glossary. Third, have the speaker practice speaking at 85% of their normal pace on a test call. If accuracy remains below 80% after these steps, consider switching to a third-party ASR provider via a captioning extension.</p>
             <p><strong>Does captioning work in hybrid meetings where some participants are in a room?</strong><br>It works but with degraded accuracy. Room acoustics, distance from the microphone, and cross-talk between in-room speakers all reduce recognition quality. For hybrid meetings, the best setup is individual microphones at the table rather than a single room microphone. Many organizations use a meeting room bar (Logitech, Jabra, or Poly) that provides per-participant audio isolation — these dramatically improve caption quality in hybrid settings.</p>
             <p><strong>What if captions are not enough for critical decisions?</strong><br>Use the three-step confirmation process described in the risk controls section: spoken decision, caption read-back confirmation, written chat record during the call. For the highest-stakes discussions, export the full meeting transcript and store it with your compliance records.</p>
 
-            <h2>References and platform docs</h2>
+            <h2 id="sec-10">References and platform docs</h2>
             <ul>
-                <li><a href="https://support.google.com/meet/answer/10964115" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Google Meet Help: use captions in meetings</a></li>
-                <li><a href="https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0068967" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Zoom captions reference</a></li>
-                <li><a href="https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-4be2d304-f675-4b57-8347-cbd000a21260" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Teams captions reference</a></li>
+                <li><a href="https://support.google.com/meet/answer/10964115" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Google Meet Help: use captions in meetings</a></li>
+                <li><a href="https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0068967" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Zoom captions reference</a></li>
+                <li><a href="https://support.microsoft.com/en-us/office/use-live-captions-in-microsoft-teams-meetings-4be2d304-f675-4b57-8347-cbd000a21260" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Teams captions reference</a></li>
             </ul>
 
-            <h2>Final takeaway</h2>
+            <h2 id="sec-11">Final takeaway</h2>
             <p>Google Meet live captions are a low-friction, high-availability tool that every team should be using by default. But the difference between marginal improvement and meaningful communication transformation is protocol: structured decision phrasing, explicit clarification windows, a shared terminology glossary, and consistent recap discipline. Deploy captions first, measure your baseline, then introduce the protocol elements one at a time. By week four, most teams can demonstrate a measurable reduction in clarification overhead and a meaningful improvement in decision accuracy — outcomes that justify the modest investment of behavioral change and make the case for expanding the approach organization-wide.</p>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">Related Articles</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">Related Articles</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-18.html" style="color: #00b8ff; text-decoration: none;">Google Meet vs Zoom vs Teams Translated Captions</a></li>
-                    <li><a href="article-12.html" style="color: #00b8ff; text-decoration: none;">Zoom Live Captions for International Meetings</a></li>
-                    <li><a href="article-14.html" style="color: #00b8ff; text-decoration: none;">Microsoft Teams Captions: Practical Playbook</a></li>
-                    <li><a href="article-15.html" style="color: #00b8ff; text-decoration: none;">Discord and Twitch Subtitles in Real Time</a></li>
+                    <li><a href="article-18.html" style="color: #0b6ad1; text-decoration: none;">Google Meet vs Zoom vs Teams Translated Captions</a></li>
+                    <li><a href="article-12.html" style="color: #0b6ad1; text-decoration: none;">Zoom Live Captions for International Meetings</a></li>
+                    <li><a href="article-14.html" style="color: #0b6ad1; text-decoration: none;">Microsoft Teams Captions: Practical Playbook</a></li>
+                    <li><a href="article-15.html" style="color: #0b6ad1; text-decoration: none;">Discord and Twitch Subtitles in Real Time</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">Try Live Subtitles</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Need captions across Google Meet, Zoom, Teams, and every other app on Windows? Live Subtitles adds a system-level overlay that works anywhere — rated 4.7 stars by 351 users.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">Try Live Subtitles</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Need captions across Google Meet, Zoom, Teams, and every other app on Windows? Live Subtitles adds a system-level overlay that works anywhere — rated 4.7 stars by 351 users.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">Download free</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -34,22 +30,88 @@
     <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/articles/nl/article-6.html" />
     <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/articles/tr/article-6.html" />
     <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/articles/uk/article-6.html" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
         .article-container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1 { color: #00ff9d; margin-bottom: 2rem; }
-        h2 { color: #00b8ff; margin: 2rem 0 1rem; }
-        h3 { color: #00d4ff; margin: 1.5rem 0 0.8rem; }
-        .article-meta { color: #aaa; margin-bottom: 2rem; font-size: 0.9rem; }
+        h1 { color: #0a7f55; margin-bottom: 2rem; }
+        h2 { color: #0b6ad1; margin: 2rem 0 1rem; }
+        h3 { color: #0b6ad1; margin: 1.5rem 0 0.8rem; }
+        .article-meta { color: #5b6470; margin-bottom: 2rem; font-size: 0.9rem; }
         .article-content { line-height: 1.8; }
         p { margin-bottom: 1.5rem; }
-        li { margin-bottom: 0.5rem; line-height: 1.8; color: #eee; }
-        .highlight { background: rgba(0,255,157,0.1); padding: 2px 6px; border-radius: 4px; color: #00ff9d; }
-        .back-link { color: #00b8ff; text-decoration: none; }
-        .back-link:hover { color: #fff; }
-        .tip-box { background: rgba(0,255,157,0.08); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+        li { margin-bottom: 0.5rem; line-height: 1.8; color: #2d333b; }
+        .highlight { background: rgba(0,255,157,0.1); padding: 2px 6px; border-radius: 4px; color: #0a7f55; }
+        .back-link { color: #0b6ad1; text-decoration: none; }
+        .back-link:hover { color: #2d333b; }
+        .tip-box { background: rgba(0,255,157,0.08); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
         .warning-box { background: rgba(255,100,100,0.08); border-left: 4px solid #ff6b6b; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <!-- Article Schema -->
     <script type="application/ld+json">
@@ -95,12 +157,31 @@
     <link rel="preload" as="image" href="/articles/img/zh/learning.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目录">
+        <div class="toc-inner">
+            <h4>目录</h4>
+            <a href="#sec-1">错误一：过度依赖中文字幕</a>
+            <a href="#sec-2">错误二：选择难度不匹配的内容</a>
+            <a href="#sec-3">错误三：被动观看，缺乏主动参与</a>
+            <a href="#sec-4">错误四：忽视语音和语调</a>
+            <a href="#sec-5">错误五：贪多嚼不烂，内容杂乱无章</a>
+            <a href="#sec-6">错误六：把字幕学习当作唯一的学习方式</a>
+            <a href="#sec-7">错误七：忽视文化语境，逐字对照翻译</a>
+            <a href="#sec-8">错误八：没有明确的学习目标和进度追踪</a>
+            <a href="#sec-9">特别篇：中国学习者的独特挑战</a>
+            <a href="#sec-10">总结：从"看"到"学"的关键转变</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container">
         <a href="/" class="back-link">返回主站</a> | <a href="index.html" class="back-link">← 返回文章列表</a>
         <h1>通过双语字幕视频学习语言时要避免的错误</h1>
+        <div class="article-date"><span class="reading-time" style="margin:0">9 分钟阅读</span></div>
         <div class="article-meta">2024年4月30日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/mei-lin-chen.html" rel="author" style="color:#00b8ff; text-decoration:none;">Mei Lin Chen</a> &middot; 语音识别工程师, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">作者： <a href="/about/team/mei-lin-chen.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Mei Lin Chen</a> &middot; 语音识别工程师, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026-05-12</div>
         <img class="article-hero" src="/articles/img/zh/learning.webp" alt="用于语言学习的视频课程的双语字幕" width="1280" height="681" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
         <div class="article-content">
 
@@ -108,7 +189,8 @@
 
             <p>本文将深入剖析<span class="highlight">最常见的8个错误</span>，每个错误不仅会解释"为什么是错的"，更会给出具体可操作的纠正方案。如果你正在用双语字幕学外语，请务必对照检查。</p>
 
-            <h2>错误一：过度依赖中文字幕</h2>
+            <details class="toc-mobile"><summary>目录</summary><ol><li><a href="#sec-1">错误一：过度依赖中文字幕</a></li><li><a href="#sec-2">错误二：选择难度不匹配的内容</a></li><li><a href="#sec-3">错误三：被动观看，缺乏主动参与</a></li><li><a href="#sec-4">错误四：忽视语音和语调</a></li><li><a href="#sec-5">错误五：贪多嚼不烂，内容杂乱无章</a></li><li><a href="#sec-6">错误六：把字幕学习当作唯一的学习方式</a></li><li><a href="#sec-7">错误七：忽视文化语境，逐字对照翻译</a></li><li><a href="#sec-8">错误八：没有明确的学习目标和进度追踪</a></li><li><a href="#sec-9">特别篇：中国学习者的独特挑战</a></li><li><a href="#sec-10">总结：从"看"到"学"的关键转变</a></li></ol></details>
+            <h2 id="sec-1">错误一：过度依赖中文字幕</h2>
 
             <h3>问题表现</h3>
 
@@ -130,7 +212,7 @@
                 <li><strong>第三阶段</strong>（5周后）：尝试无字幕观看，定期开启英文字幕验证理解准确性</li>
             </ol>
 
-            <h2>错误二：选择难度不匹配的内容</h2>
+            <h2 id="sec-2">错误二：选择难度不匹配的内容</h2>
 
             <h3>问题表现</h3>
 
@@ -152,7 +234,7 @@
                 <strong>中国学习者的特殊考量：</strong>由于中英文的语系差异极大（远大于英语与法语、西语之间的差异），中国学习者在刚开始使用双语字幕时，难度感知会比欧洲语言学习者更强。不要因此气馁，适当降低起始难度是完全正常的。
             </div>
 
-            <h2>错误三：被动观看，缺乏主动参与</h2>
+            <h2 id="sec-3">错误三：被动观看，缺乏主动参与</h2>
 
             <h3>问题表现</h3>
 
@@ -170,7 +252,7 @@
                 <li><strong>场景模拟</strong>：看完一段对话后，想象自己在同样的场景中会怎么说</li>
             </ul>
 
-            <h2>错误四：忽视语音和语调</h2>
+            <h2 id="sec-4">错误四：忽视语音和语调</h2>
 
             <h3>问题表现</h3>
 
@@ -196,7 +278,7 @@
                 <li>使用Live Subtitles的字幕功能，把注意力更多放在耳朵上，字幕只作为辅助验证</li>
             </ol>
 
-            <h2>错误五：贪多嚼不烂，内容杂乱无章</h2>
+            <h2 id="sec-5">错误五：贪多嚼不烂，内容杂乱无章</h2>
 
             <h3>问题表现</h3>
 
@@ -220,7 +302,7 @@
                 <li>在完成一部作品之前，尽量不要开始新的作品</li>
             </ul>
 
-            <h2>错误六：把字幕学习当作唯一的学习方式</h2>
+            <h2 id="sec-6">错误六：把字幕学习当作唯一的学习方式</h2>
 
             <h3>问题表现</h3>
 
@@ -237,7 +319,7 @@
                 <li><strong>系统复习</strong>：整理生词本、使用Anki等间隔重复工具巩固词汇占<span class="highlight">10%-15%</span></li>
             </ul>
 
-            <h2>错误七：忽视文化语境，逐字对照翻译</h2>
+            <h2 id="sec-7">错误七：忽视文化语境，逐字对照翻译</h2>
 
             <h3>问题表现</h3>
 
@@ -263,7 +345,7 @@
                 <li>遇到不理解的表达时，搜索英英释义而非中文翻译，逐步建立英语思维</li>
             </ol>
 
-            <h2>错误八：没有明确的学习目标和进度追踪</h2>
+            <h2 id="sec-8">错误八：没有明确的学习目标和进度追踪</h2>
 
             <h3>问题表现</h3>
 
@@ -281,7 +363,7 @@
                 <li><strong>有时限（Time-bound）</strong>："一个月后进行一次口语自测，检验这50个表达的掌握情况"</li>
             </ul>
 
-            <h2>特别篇：中国学习者的独特挑战</h2>
+            <h2 id="sec-9">特别篇：中国学习者的独特挑战</h2>
 
             <p>除了以上8个通用错误外，中国英语学习者在使用双语字幕时还面临一些独特的挑战：</p>
 
@@ -299,7 +381,7 @@
 
             <p>对策：通过大量阅读和听力练习，逐步建立英语语序的直觉。开始时不要追求100%理解，先抓主干（主语+谓语），再逐步扩展到细节。</p>
 
-            <h2>总结：从"看"到"学"的关键转变</h2>
+            <h2 id="sec-10">总结：从"看"到"学"的关键转变</h2>
 
             <p>双语字幕视频学习的核心矛盾在于：<span class="highlight">它的便捷性恰恰容易让人忽视它的门槛</span>。看视频太舒服了，以至于我们忘了学习本身需要一定程度的"不舒服"——那种大脑被挑战、思维被拉伸的感觉。</p>
 
@@ -317,21 +399,67 @@
 
         
 <!-- Related Articles -->
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">相关文章</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">相关文章</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                <li><a href="article-7.html" style="color: #00b8ff; text-decoration: none;">如何使用双语字幕进行快速语言学习</a></li>
-                <li><a href="article-1.html" style="color: #00b8ff; text-decoration: none;">双语字幕如何帮助您更快学习语言</a></li>
-                <li><a href="article-10.html" style="color: #00b8ff; text-decoration: none;">母语字幕与目标语言字幕的比较</a></li>
+                <li><a href="article-7.html" style="color: #0b6ad1; text-decoration: none;">如何使用双语字幕进行快速语言学习</a></li>
+                <li><a href="article-1.html" style="color: #0b6ad1; text-decoration: none;">双语字幕如何帮助您更快学习语言</a></li>
+                <li><a href="article-10.html" style="color: #0b6ad1; text-decoration: none;">母语字幕与目标语言字幕的比较</a></li>
                 </ul>
             </div>
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">免费试用 Live Subtitles</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">在任何应用程序中获得双语字幕、实时语音识别和翻译功能。支持YouTube、Netflix、Zoom等50多个应用。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">从 Microsoft Store 下载</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">免费试用 Live Subtitles</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">在任何应用程序中获得双语字幕、实时语音识别和翻译功能。支持YouTube、Netflix、Zoom等50多个应用。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta" data-os-label="1">免费下载</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 条评价</div>
             </div>
 <!-- CTA -->
 </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>适用于任何应用的实时字幕</h3>
+                <div class="explore-cols"><div><h5>会议与通话</h5><a href="/zh/zoom-live-captions.html">Zoom</a><a href="/zh/teams-live-captions.html">Microsoft Teams</a><a href="/zh/google-meet-live-captions.html">Google Meet</a><a href="/zh/webex-live-captions.html">Webex</a><a href="/zh/skype-live-captions.html">Skype</a><a href="/zh/slack-live-captions.html">Slack</a><a href="/zh/whatsapp-live-translation.html">WhatsApp</a><a href="/zh/telegram-subtitles.html">Telegram</a></div><div><h5>流媒体与社交</h5><a href="/zh/youtube-dual-subtitles.html">YouTube</a><a href="/zh/netflix-subtitles.html">Netflix</a><a href="/zh/twitch-live-captions.html">Twitch</a><a href="/zh/discord-live-captions.html">Discord</a><a href="/zh/tiktok-live-captions.html">TikTok</a><a href="/zh/instagram-live-captions.html">Instagram</a><a href="/zh/facebook-live-subtitles.html">Facebook</a><a href="/zh/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>游戏与创作者</h5><a href="/zh/obs-subtitles.html">OBS</a><a href="/zh/game-mode-subtitles.html">Game Mode</a><a href="/zh/steam-subtitles.html">Steam</a><a href="/zh/restream-subtitles.html">Restream</a><a href="/zh/vimeo-subtitles.html">Vimeo</a><a href="/zh/vlc-subtitles.html">VLC</a></div><div><h5>学习与工作</h5><a href="/zh/coursera-subtitles.html">Coursera</a><a href="/zh/udemy-live-captions.html">Udemy</a><a href="/zh/google-classroom-subtitles.html">Google Classroom</a><a href="/zh/linkedin-live-captions.html">LinkedIn</a><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/zh/" style="font-weight:600;text-decoration:none;">Live Subtitles 首页 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>相关阅读</h4>
+            <a class="s-item" href="article-1.html">双语字幕如何帮助您更快学习语言</a>
+            <a class="s-item" href="article-2.html">为什么字幕对语言学习很重要</a>
+            <a class="s-item" href="article-3.html">双语字幕学习法的跨文化应用</a>
+            <a class="s-item" href="article-4.html">为什么字幕对母语使用者也有用</a>
+            <a class="s-item" href="article-5.html">学习英语的双语字幕电影TOP-10推荐</a>
+            <a class="s-item" href="article-7.html">如何使用双语字幕进行快速语言学习</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>适用于任何应用的实时字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">免费下载</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/zh/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

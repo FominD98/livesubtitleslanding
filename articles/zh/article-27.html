@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,19 +43,85 @@
     <meta name="twitter:title" content="2026 年主播字幕：OBS、Twitch、YouTube Live 工作流">
     <meta name="twitter:description" content="2026 年主播字幕完整实用指南：OBS 窗口捕获覆盖层、Twitch 原生 CC 协议、YouTube 自动字幕及第三方 AI 实时字幕工具逐项横向对比；分别为闲聊 IRL 直播、多类型游戏直播和面向多语言国际受众场景推荐延迟最低、跨平台兼容的最优字幕方案，附完整 OBS 配置步骤教程。">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/zh/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 920px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 920px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li, td, th { color: #eee; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li, td, th { color: #2d333b; }
         table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-        th, td { border: 1px solid rgba(255,255,255,0.18); padding: 0.65rem; vertical-align: top; }
-        th { background: rgba(0,255,157,0.08); color: #fff; }
+        th, td { border: 1px solid rgba(0,0,0,0.18); padding: 0.65rem; vertical-align: top; }
+        th { background: rgba(0,255,157,0.08); color: #2d333b; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -88,18 +150,37 @@
     <link rel="preload" as="image" href="/articles/img/zh/games.webp">
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="目录">
+        <div class="toc-inner">
+            <h4>目录</h4>
+            <a href="#sec-1">为什么主播字幕比你想象的更复杂</a>
+            <a href="#sec-2">三个音频源，三个字幕目的地</a>
+            <a href="#sec-3">2026 年主播字幕工具对比</a>
+            <a href="#sec-4">按直播类型选择最佳方案</a>
+            <a href="#sec-5">OBS + Live Subtitles 完整配置教程</a>
+            <a href="#sec-6">直播前 10 分钟设置清单</a>
+            <a href="#sec-7">主播字幕常见陷阱与解决方案</a>
+            <a href="#sec-8">字幕对观众留存率的实际影响</a>
+            <a href="#sec-9">常见问题解答</a>
+            <a href="#sec-10">参考资料</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">← 返回文章</a>
         <h1 class="article-title" itemprop="headline">2026 年主播字幕：OBS、Twitch、YouTube Live 工作流</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-05-28">2026 年 5 月 28 日</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">作者: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026 年 5 月 28 日</div>
+        <div class="article-date" itemprop="datePublished" content="2026-05-28">2026 年 5 月 28 日<span class="reading-time">11 分钟阅读</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">作者: <a href="https://live-subtitles.com/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; 游戏覆盖层工程师, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-28" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">更新: 2026 年 5 月 28 日</div>
         <img class="article-hero" src="/articles/img/zh/games.webp" alt="覆盖在 Twitch 直播设置上的实时字幕" width="1280" height="781" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>为直播添加<strong>主播字幕</strong>与为会议添加字幕是截然不同的挑战。直播环境中同时存在三个音频源（游戏音效、麦克风人声、系统提示音），字幕需要呈现在三个不同目的地（直播画面覆盖层、平台内置 CC、录像 VOD），一旦字幕出现明显滞后，关键时刻的节奏就会被完全破坏。更糟糕的是，错误的工作流会在最不合时宜的时刻让整个布局崩溃。本文将详细解析 2026 年主流方案的优劣，帮助你为不同直播类型选择最合适的字幕工作流。</p>
 
-            <h2>为什么主播字幕比你想象的更复杂</h2>
+            <details class="toc-mobile"><summary>目录</summary><ol><li><a href="#sec-1">为什么主播字幕比你想象的更复杂</a></li><li><a href="#sec-2">三个音频源，三个字幕目的地</a></li><li><a href="#sec-3">2026 年主播字幕工具对比</a></li><li><a href="#sec-4">按直播类型选择最佳方案</a></li><li><a href="#sec-5">OBS + Live Subtitles 完整配置教程</a></li><li><a href="#sec-6">直播前 10 分钟设置清单</a></li><li><a href="#sec-7">主播字幕常见陷阱与解决方案</a></li><li><a href="#sec-8">字幕对观众留存率的实际影响</a></li><li><a href="#sec-9">常见问题解答</a></li><li><a href="#sec-10">参考资料</a></li></ol></details>
+            <h2 id="sec-1">为什么主播字幕比你想象的更复杂</h2>
             <p>许多新手主播以为字幕只需"开启一个设置"就能搞定，但实际上直播字幕面临的技术难题远超会议场景：</p>
             <ul>
                 <li><strong>音频混合问题：</strong>游戏音效、背景音乐、麦克风人声同时存在，AI 语音识别引擎需要从混合信号中精准提取人声，否则准确率会大幅下降。</li>
@@ -108,7 +189,7 @@
                 <li><strong>跨平台兼容性：</strong>同一场直播可能同时推流到 Twitch、YouTube Live 和哔哩哔哩，每个平台的 CC 实现方式各不相同，需要统一的字幕解决方案。</li>
             </ul>
 
-            <h2>三个音频源，三个字幕目的地</h2>
+            <h2 id="sec-2">三个音频源，三个字幕目的地</h2>
             <p>在选择字幕工具之前，先搞清楚你的音频来源和字幕呈现位置。这两个维度的组合决定了适合你的方案。</p>
             <h3>音频源类型</h3>
             <ul>
@@ -123,7 +204,7 @@
                 <li><strong>后期 VOD 字幕：</strong>直播结束后为录像添加字幕文件（SRT/VTT），通常精度更高但无法在直播时实时提供。</li>
             </ul>
 
-            <h2>2026 年主播字幕工具对比</h2>
+            <h2 id="sec-3">2026 年主播字幕工具对比</h2>
             <table>
                 <thead>
                     <tr>
@@ -142,7 +223,7 @@
                 </tbody>
             </table>
 
-            <h2>按直播类型选择最佳方案</h2>
+            <h2 id="sec-4">按直播类型选择最佳方案</h2>
             <h3>闲聊 / IRL 直播主播</h3>
             <p>这类直播的核心是主播与观众的实时互动，字幕需要高度准确且低延迟。推荐方案：<strong>麦克风专用输入 + OBS 覆盖层</strong>。将麦克风单独作为字幕工具的输入源，排除所有游戏音效干扰，可以将字幕延迟控制在 1.5 秒以内。使用 Live Subtitles 的桌面浮层并通过 OBS 窗口捕获，能同时实现字幕呈现和跨平台兼容。</p>
             <p>Twitch 原生 CC 可作为辅助手段，但不要将其作为主要字幕方案，因为你无法控制它在观众端的显示效果，而且移动端切换 CC 的步骤对新观众来说并不直观。</p>
@@ -161,15 +242,16 @@
             <h3>合作直播与多主播场景</h3>
             <p>多人合作直播时，单一字幕流无法区分不同说话人，观众很难跟上对话节奏。推荐使用 OBS 分轨录制，将每位主播的麦克风分配到独立音轨，字幕工具分别处理每条音轨并加上说话人标签（例如"[玩家A]""[玩家B]"）。这需要一定的技术配置投入，但可以显著提升多人直播的观看体验。</p>
 
-            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #00ff9d; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <strong style="color:#00ff9d;">实用提示：</strong> 在 OBS 中创建两个场景——"带字幕场景"和"纯画面场景"，通过快捷键随时切换。当你不需要字幕时（如打开游戏菜单或暂停直播），快速切换到无字幕场景，避免字幕遮挡不必要的内容。
+            <div style="background: rgba(0,255,157,0.07); border-left: 4px solid #0a7f55; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <strong style="color:#0a7f55;">实用提示：</strong> 在 OBS 中创建两个场景——"带字幕场景"和"纯画面场景"，通过快捷键随时切换。当你不需要字幕时（如打开游戏菜单或暂停直播），快速切换到无字幕场景，避免字幕遮挡不必要的内容。
             </div>
 
-            <h2>OBS + Live Subtitles 完整配置教程</h2>
+            <h2 id="sec-5">OBS + Live Subtitles 完整配置教程</h2>
             <p>以下是使用 Live Subtitles 搭配 OBS 实现专业级主播字幕的完整配置步骤：</p>
             <h3>第一步：安装与配置 Live Subtitles</h3>
             <ol>
-                <li>从 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Microsoft Store</a> 下载并安装 Live Subtitles 应用。</li>
+                <li>从 <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">免费下载</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 条评价</div> 下载并安装 Live Subtitles 应用。</li>
                 <li>启动应用，在设置中选择音频源：麦克风或系统音频（"立体声混音"/"扬声器"选项）。</li>
                 <li>选择识别语言和目标翻译语言（如"中文→英文"双语模式）。</li>
                 <li>调整浮层窗口的字体大小和背景透明度，使其在游戏画面上清晰可读。</li>
@@ -192,7 +274,7 @@
                 <li>在 OBS 中开启"录制"而非"推流"，录制 1 分钟测试视频，播放确认字幕在录像中的效果。</li>
             </ol>
 
-            <h2>直播前 10 分钟设置清单</h2>
+            <h2 id="sec-6">直播前 10 分钟设置清单</h2>
             <ol>
                 <li>确认麦克风和游戏音频已在 OBS 中分配到不同音轨（音轨 1：主混音，音轨 2：仅麦克风，音轨 3：仅游戏音频）。</li>
                 <li>根据本次直播类型选择字幕音频源：互动直播选麦克风，游戏解说选系统音频。</li>
@@ -202,7 +284,7 @@
                 <li>如启用翻译功能，确认目标语言字幕显示正确，且中英文排版合理不重叠。</li>
             </ol>
 
-            <h2>主播字幕常见陷阱与解决方案</h2>
+            <h2 id="sec-7">主播字幕常见陷阱与解决方案</h2>
             <ul>
                 <li><strong>字幕遮挡游戏关键 HUD：</strong>最危险的错误之一。射击游戏中字幕挡住弹药显示，MOBA 中挡住技能冷却，在关键时刻会直接影响发挥和直播效果。解决方法：在不同游戏中分别截图检查 HUD 布局，为字幕找到所有游戏类型的"安全区域"，通常是屏幕正下方中央。</li>
                 <li><strong>长时间直播的延迟累积漂移：</strong>连续直播 3 小时以上后，部分 AI 字幕工具会出现字幕逐渐滞后音频的问题，最终延迟可能超过 5 秒。解决方法：每 2 小时在广告休息时重启字幕工具进程，或选择支持自动重置的工具。</li>
@@ -211,7 +293,7 @@
                 <li><strong>推流时字幕突然消失：</strong>通常是字幕工具进程崩溃或窗口捕获源丢失。解决方法：在 OBS 中为字幕来源添加"显示时播放"的可见性过渡动画，这样即使短暂消失也不会显得突兀；同时设置字幕工具的开机自启动和进程守护。</li>
             </ul>
 
-            <h2>字幕对观众留存率的实际影响</h2>
+            <h2 id="sec-8">字幕对观众留存率的实际影响</h2>
             <p>为什么值得花时间配置字幕？数据说话。有字幕的视频内容平均观看时长比无字幕高出 12–15%，这在竞争激烈的直播平台上是显著优势。具体原因包括：</p>
             <ul>
                 <li><strong>无声观看场景：</strong>大量观众在办公室、公共交通或睡前在静音状态下刷直播回放，字幕是他们理解内容的唯一途径。</li>
@@ -221,36 +303,81 @@
             </ul>
             <p>对于面向中国大陆观众的主播，在哔哩哔哩直播中使用中文字幕也有助于提升直播间推荐权重，因为平台算法会将"字幕完整度"作为内容质量评分的参考指标之一。</p>
 
-            <h2>常见问题解答</h2>
+            <h2 id="sec-9">常见问题解答</h2>
             <p><strong>Twitch 观众需要手动开启字幕才能看到吗？</strong><br>是的，如果使用 Twitch 原生 CC，观众需要在播放器中手动点击"CC"按钮才能看到字幕，且移动端操作步骤不够直观。绝大多数主播更倾向于使用 OBS 覆盖层方案，因为字幕直接烧录在画面中，所有观众无需任何操作即可看到，且在任何平台的任何设备上都有效。</p>
             <p><strong>字幕功能会导致直播卡顿或掉帧吗？</strong><br>在现代主流配置的电脑上，AI 字幕识别的 CPU 额外占用通常在 3–5% 以内。如果你的推流预算非常紧张（例如老款电脑同时推流和运行高画质游戏），可以选择更轻量的 ASR 模型，或者将字幕识别工作卸载到第二台设备（如备用笔记本）上运行，再通过网络将字幕数据传回主推流电脑。</p>
             <p><strong>能同时显示两种语言的字幕吗？</strong><br>可以。使用支持"源语言 + 目标语言"双行显示的桌面字幕工具（如 Live Subtitles），将双语字幕通过 OBS 窗口捕获烧录进推流画面。这样全球任何地方的观众都能看到对应语言的字幕，无需任何额外操作。这对同时面向中英文受众的主播来说是最高效的方案。</p>
             <p><strong>哔哩哔哩直播支持字幕覆盖层吗？</strong><br>哔哩哔哩不支持类似 Twitch 的 CEA-608/708 字幕协议，但 OBS 覆盖层方案完全适用：字幕已烧录在推流画面中，不依赖平台技术支持。只需正常配置 OBS + 字幕工具，推流到哔哩哔哩时字幕会自然出现在直播画面里。</p>
             <p><strong>如何为游戏直播中的游戏内台词加字幕？</strong><br>使用系统音频作为字幕输入源（而不是仅麦克风），字幕工具会同时识别游戏输出的所有声音，包括游戏内角色对白。需要注意的是，游戏背景音乐会干扰识别准确率，建议在游戏设置中适当降低背景音乐音量，提高人声（对白/语音）音量比例。</p>
 
-            <h2>参考资料</h2>
+            <h2 id="sec-10">参考资料</h2>
             <ul>
-                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">Twitch —— Closed Captions 官方文档</a></li>
-                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">OBS Studio 官方网站</a></li>
-                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#00b8ff;">YouTube 帮助中心 —— 自动字幕说明</a></li>
+                <li><a href="https://help.twitch.tv/s/article/closed-captions" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">Twitch —— Closed Captions 官方文档</a></li>
+                <li><a href="https://obsproject.com/" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">OBS Studio 官方网站</a></li>
+                <li><a href="https://support.google.com/youtube/answer/2734796" target="_blank" rel="noopener noreferrer" style="color:#0b6ad1;">YouTube 帮助中心 —— 自动字幕说明</a></li>
             </ul>
 
-            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
-                <h3 style="color: #00b8ff; margin-top: 0;">相关阅读</h3>
+            <div style="background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; padding: 1.2rem; border-radius: 0 8px 8px 0; margin: 2rem 0;">
+                <h3 style="color: #0b6ad1; margin-top: 0;">相关阅读</h3>
                 <ul style="list-style: none; padding-left: 0;">
-                    <li><a href="article-25.html" style="color: #00b8ff; text-decoration: none;">2026 年实时字幕：AI 字幕的工作原理及使用场景</a></li>
-                    <li><a href="article-24.html" style="color: #00b8ff; text-decoration: none;">2026 年音频转文字：实时 vs 批量转录对比</a></li>
-                    <li><a href="article-23.html" style="color: #00b8ff; text-decoration: none;">2026 年语音翻译应用：按使用场景比较实时工具</a></li>
-                    <li><a href="/zh/zoom-live-captions.html" style="color: #00b8ff; text-decoration: none;">Zoom 实时字幕配置指南</a></li>
+                    <li><a href="article-25.html" style="color: #0b6ad1; text-decoration: none;">2026 年实时字幕：AI 字幕的工作原理及使用场景</a></li>
+                    <li><a href="article-24.html" style="color: #0b6ad1; text-decoration: none;">2026 年音频转文字：实时 vs 批量转录对比</a></li>
+                    <li><a href="article-23.html" style="color: #0b6ad1; text-decoration: none;">2026 年语音翻译应用：按使用场景比较实时工具</a></li>
+                    <li><a href="/zh/zoom-live-captions.html" style="color: #0b6ad1; text-decoration: none;">Zoom 实时字幕配置指南</a></li>
                 </ul>
             </div>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">同时捕获游戏音频和人声的主播字幕工具</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Live Subtitles 支持系统音频字幕与实时翻译，通过 OBS 窗口捕获即可将双语字幕烧录进推流画面，几分钟完成配置，立即开始带字幕直播。Microsoft Store 好评率 4.7 星（351 条评价）。</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">从 Microsoft Store 免费下载</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">同时捕获游戏音频和人声的主播字幕工具</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Live Subtitles 支持系统音频字幕与实时翻译，通过 OBS 窗口捕获即可将双语字幕烧录进推流画面，几分钟完成配置，立即开始带字幕直播。Microsoft Store 好评率 4.7 星（351 条评价）。</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">免费下载</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>适用于任何应用的实时字幕</h3>
+                <div class="explore-cols"><div><h5>会议与通话</h5><a href="/zh/zoom-live-captions.html">Zoom</a><a href="/zh/teams-live-captions.html">Microsoft Teams</a><a href="/zh/google-meet-live-captions.html">Google Meet</a><a href="/zh/webex-live-captions.html">Webex</a><a href="/zh/skype-live-captions.html">Skype</a><a href="/zh/slack-live-captions.html">Slack</a><a href="/zh/whatsapp-live-translation.html">WhatsApp</a><a href="/zh/telegram-subtitles.html">Telegram</a></div><div><h5>流媒体与社交</h5><a href="/zh/youtube-dual-subtitles.html">YouTube</a><a href="/zh/netflix-subtitles.html">Netflix</a><a href="/zh/twitch-live-captions.html">Twitch</a><a href="/zh/discord-live-captions.html">Discord</a><a href="/zh/tiktok-live-captions.html">TikTok</a><a href="/zh/instagram-live-captions.html">Instagram</a><a href="/zh/facebook-live-subtitles.html">Facebook</a><a href="/zh/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>游戏与创作者</h5><a href="/zh/obs-subtitles.html">OBS</a><a href="/zh/game-mode-subtitles.html">Game Mode</a><a href="/zh/steam-subtitles.html">Steam</a><a href="/zh/restream-subtitles.html">Restream</a><a href="/zh/vimeo-subtitles.html">Vimeo</a><a href="/zh/vlc-subtitles.html">VLC</a></div><div><h5>学习与工作</h5><a href="/zh/coursera-subtitles.html">Coursera</a><a href="/zh/udemy-live-captions.html">Udemy</a><a href="/zh/google-classroom-subtitles.html">Google Classroom</a><a href="/zh/linkedin-live-captions.html">LinkedIn</a><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/zh/" style="font-weight:600;text-decoration:none;">Live Subtitles 首页 →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>相关阅读</h4>
+            <a class="s-item" href="article-1.html">双语字幕如何帮助您更快学习语言</a>
+            <a class="s-item" href="article-2.html">为什么字幕对语言学习很重要</a>
+            <a class="s-item" href="article-3.html">双语字幕学习法的跨文化应用</a>
+            <a class="s-item" href="article-4.html">为什么字幕对母语使用者也有用</a>
+            <a class="s-item" href="article-5.html">学习英语的双语字幕电影TOP-10推荐</a>
+            <a class="s-item" href="article-6.html">通过双语字幕视频学习语言时要避免的错误</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>适用于任何应用的实时字幕.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">免费下载</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="回到顶部" title="回到顶部">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/zh/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>

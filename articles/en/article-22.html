@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Yandex.Metrika counter -->
-    <script src="/yandex-metrika.js"></script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
@@ -47,17 +43,83 @@
     <meta name="twitter:title" content="Best Subtitle Overlay Settings for FPS and MOBA">
     <meta name="twitter:description" content="Best subtitle overlay settings for FPS and MOBA: placement zones, font contrast, density, and lock behavior for readable real-time communication. Free guide.">
     <meta name="twitter:image" content="https://live-subtitles.com/articles/img/en/games.webp">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
-        body { background: #0a0a0a; color: #fff; font-family: 'Fira Code', monospace; }
-        .article-container { max-width: 860px; margin: 40px auto; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
-        .article-title { color: #00ff9d; font-size: 2rem; margin-bottom: 1rem; }
-        .article-date { color: #aaa; font-size: 0.95rem; margin-bottom: 1.5rem; }
-        .back-link { color: #00b8ff; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
+        body { background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container { max-width: 860px; margin: 40px auto; background: rgba(0,0,0,0.04); border-radius: 8px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.1); }
+        .article-title { color: #0a7f55; font-size: 2rem; margin-bottom: 1rem; }
+        .article-date { color: #5b6470; font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .back-link { color: #0b6ad1; text-decoration: none; margin-bottom: 2rem; display: inline-block; }
         .back-link:hover { text-decoration: underline; }
-        h2, h3 { color: #00ff9d; margin-top: 2rem; }
-        p, li { color: #eee; line-height: 1.7; }
-        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #00b8ff; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+        h2, h3 { color: #0a7f55; margin-top: 2rem; }
+        p, li { color: #2d333b; line-height: 1.7; }
+        .checklist { background: rgba(0,184,255,0.08); border-left: 4px solid #0b6ad1; border-radius: 0 10px 10px 0; padding: 16px 18px; }
+    
+
+        /* === 10/10 article template (generated) === */
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; font-size: 17px; line-height: 1.7; background: #f5f6f8; color: #2d333b; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+        .article-container, .article, .article-content { max-width: 760px; margin: 40px auto; background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 2.5rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .article-container h1, .article h1, .article-content h1, .article-title { color: #16181d; font-size: 2rem; line-height: 1.25; margin: 0 0 1rem; font-weight: 700; }
+        h2, h3 { color: #16181d; line-height: 1.3; }
+        h2 { margin-top: 2.2rem; } h3 { margin-top: 1.6rem; }
+        p, li { color: #2d333b; }
+        a { color: #0b6ad1; }
+        img { max-width: 100%; height: auto; }
+        .article-date, .article-author, .article-updated { color: #5b6470; }
+        .back-link, .lang-switch a { color: #0b6ad1; text-decoration: none; }
+        .reading-time { color: #5b6470; }
+        .reading-time::before { content: "·"; margin: 0 0.45rem; }
+        /* centered reading column + rails */
+        .page-wrap { max-width: 1400px; margin: 40px auto; padding: 0 16px; display: grid; grid-template-columns: 280px minmax(0, 1fr) 280px; column-gap: 40px; align-items: start; }
+        .article-main { grid-column: 2; min-width: 0; }
+        .page-wrap .article-container, .page-wrap .article, .page-wrap .article-content { max-width: none; margin: 0; width: 100%; }
+        .article-sidebar { grid-column: 3; position: sticky; top: 24px; }
+        .sidebar-card { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; padding: 1.25rem; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .sidebar-card h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .sidebar-card a.s-item { display: block; color: #3d444d; text-decoration: none; font-weight: 500; font-size: 0.92rem; line-height: 1.45; padding: 0.7rem 0; border-top: 1px solid #eceef0; }
+        .sidebar-card a.s-item:first-of-type { border-top: 0; padding-top: 0; }
+        .sidebar-card a.s-item:hover { color: #0b6ad1; }
+        .sidebar-cta { background: linear-gradient(135deg, rgba(0,255,157,0.12), rgba(0,184,255,0.12)); border: 1px solid rgba(0,255,157,0.3); }
+        .sidebar-cta p { font-size: 0.92rem; color: #2d333b; margin: 0 0 1rem; }
+        .sidebar-cta a.btn-cta { display: block; text-align: center; padding: 0.7rem 1rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; font-weight: 600; border-radius: 8px; text-decoration: none; }
+        .toc-rail { grid-column: 1; position: sticky; top: 24px; font-size: 0.9rem; }
+        .toc-rail .toc-inner { border-left: 2px solid #e6e8eb; padding-left: 1rem; max-height: calc(100vh - 60px); overflow-y: auto; }
+        .toc-rail h4 { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; color: #6a737d; margin: 0 0 0.75rem; }
+        .toc-rail a { display: block; color: #57606a; text-decoration: none; padding: 0.32rem 0; line-height: 1.3; border-left: 2px solid transparent; margin-left: -1rem; padding-left: 1rem; }
+        .toc-rail a:hover { color: #0b6ad1; }
+        .toc-rail a.active { color: #0b6ad1; border-left-color: #0b6ad1; font-weight: 600; }
+        .toc-mobile { display: none; background: #fff; border: 1px solid #e6e8eb; border-radius: 8px; padding: 0.5rem 1rem; margin: 0 0 1.5rem; }
+        .toc-mobile summary { cursor: pointer; font-weight: 600; color: #16181d; padding: 0.5rem 0; }
+        .toc-mobile ol { margin: 0.5rem 0 0.75rem; padding-inline-start: 1.2rem; }
+        .toc-mobile a { color: #0b6ad1; text-decoration: none; }
+        .explore-block { background: #fff; border: 1px solid #e6e8eb; border-radius: 10px; margin-top: 24px; padding: 1.75rem 2rem; box-shadow: 0 2px 16px rgba(0,0,0,0.06); }
+        .explore-block h3 { color: #16181d; margin-top: 0; }
+        .explore-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; font-size: 0.92rem; }
+        .explore-cols h5 { color: #0b6ad1; font-size: 0.92rem; margin: 0 0 0.5rem; }
+        .explore-cols a { display: block; color: #3d444d; text-decoration: none; padding: 0.16rem 0; }
+        .explore-cols a:hover { color: #0b6ad1; text-decoration: underline; }
+        .cta-rating { color: #5b6470; font-size: 0.88rem; margin-top: 0.9rem; }
+        .cta-rating .stars { color: #e8a317; }
+        #readProgress { position: fixed; top: 0; inset-inline-start: 0; height: 3px; width: 0; z-index: 60; background: linear-gradient(90deg, #00d98a, #0b6ad1); }
+        #toTop { position: fixed; inset-inline-end: 24px; bottom: 24px; width: 44px; height: 44px; border: none; border-radius: 50%; background: #16181d; color: #fff; font-size: 1.2rem; cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .2s; box-shadow: 0 2px 10px rgba(0,0,0,0.25); z-index: 50; }
+        #toTop.show { opacity: 0.85; pointer-events: auto; }
+        #toTop:hover { opacity: 1; }
+        html { scroll-behavior: smooth; scroll-padding-top: 20px; }
+        :where(a, button, summary):focus-visible { outline: 2px solid #0b6ad1; outline-offset: 2px; border-radius: 3px; }
+        @media (max-width: 1239px) {
+            .page-wrap { display: block; max-width: 768px; }
+            .article-main { grid-column: auto; }
+            .article-sidebar, .toc-rail { display: none; }
+            .toc-mobile { display: block; }
+        }
+        @media (max-width: 767px) {
+            .explore-cols { grid-template-columns: repeat(2, 1fr); }
+            .article-container, .article, .article-content { padding: 1.5rem; }
+            .article-container h1, .article h1, .article-content h1, .article-title { font-size: 1.6rem; }
+        }
+        @media (max-width: 420px) { .explore-cols { gap: 0.75rem; } .article-container, .article, .article-content { padding: 1.15rem; } }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } #toTop, #readProgress { transition: none; } }
+
     </style>
     <script type="application/ld+json">
     {
@@ -86,41 +148,62 @@
     </script>
 </head>
 <body>
+    <div id="readProgress"></div>
+    <div class="page-wrap">
+    <nav class="toc-rail" aria-label="Contents">
+        <div class="toc-inner">
+            <h4>Contents</h4>
+            <a href="#sec-1">Why Subtitle Positioning Matters M…</a>
+            <a href="#sec-2">Identifying No-Fly Zones Before Yo…</a>
+            <a href="#sec-3">Typography That Survives in Periph…</a>
+            <a href="#sec-4">Font Size by Resolution — Concrete…</a>
+            <a href="#sec-5">Density Rules: How Much Text Per S…</a>
+            <a href="#sec-6">Per-Genre Preset Deep Dives</a>
+            <a href="#sec-7">Lock Mode and Borderless Fullscree…</a>
+            <a href="#sec-8">The Frozen Profile Discipline</a>
+            <a href="#sec-9">Accessibility Considerations for C…</a>
+            <a href="#sec-10">Frequently Asked Questions</a>
+            <a href="#sec-11">Final Principle: The Invisibility …</a>
+            <a href="#sec-12">Related Resources</a>
+            </div>
+    </nav>
+    <main class="article-main">
     <div class="container article-container" itemscope itemtype="https://schema.org/Article">
         <a href="index.html" class="back-link">&larr; Back to articles</a>
         <h1 class="article-title" itemprop="headline">Best Subtitle Overlay Settings for FPS and MOBA</h1>
-        <div class="article-date" itemprop="datePublished" content="2026-03-05">March 5, 2026</div>
-        <div class="article-author" style="color:#aaa; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#00b8ff; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
-        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#888; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
+        <div class="article-date" itemprop="datePublished" content="2026-03-05">March 5, 2026<span class="reading-time">15 min read</span></div>
+        <div class="article-author" style="color:#5b6470; font-size:0.95rem; margin-bottom:1.5rem;">By <a href="/about/team/hiroshi-tanaka.html" rel="author" style="color:#0b6ad1; text-decoration:none;">Hiroshi Tanaka</a> &middot; Gaming Overlay Engineer, Live Subtitles</div>
+        <div class="article-updated" itemprop="dateModified" content="2026-05-12" style="color:#5b6470; font-size:0.9rem; margin-bottom:1.5rem;">Updated: May 12, 2026</div>
         <img class="article-hero" src="/articles/img/en/games.webp" alt="Live subtitle overlay during a competitive game match" width="1280" height="719" loading="eager" decoding="async" fetchpriority="high" style="display:block; width:100%; height:auto; border-radius:8px; margin:0 0 1.5rem 0;">
 
         <div itemprop="articleBody">
             <p>In fast-paced competitive games, subtitle overlay quality depends less on aesthetics and far more on layout discipline. Voice communication carries crucial information — callouts, rotations, enemy positions, strategic pivots — and a poorly configured subtitle overlay can actually make you slower to process that information than if you had simply ignored it. This guide provides research-backed, genre-specific settings for readable, non-disruptive subtitle overlays in FPS, Battle Royale, MOBA, and MMO raid environments. Every recommendation is grounded in how human peripheral vision actually processes text during high-workload gameplay.</p>
 
-            <h2>Why Subtitle Positioning Matters More Than Visual Style</h2>
+            <details class="toc-mobile"><summary>Contents</summary><ol><li><a href="#sec-1">Why Subtitle Positioning Matters More Than Visual Style</a></li><li><a href="#sec-2">Identifying No-Fly Zones Before You Place Anything</a></li><li><a href="#sec-3">Typography That Survives in Peripheral Vision</a></li><li><a href="#sec-4">Font Size by Resolution — Concrete Numbers</a></li><li><a href="#sec-5">Density Rules: How Much Text Per Second Is Acceptable</a></li><li><a href="#sec-6">Per-Genre Preset Deep Dives</a></li><li><a href="#sec-7">Lock Mode and Borderless Fullscreen: The Technical Layer</a></li><li><a href="#sec-8">The Frozen Profile Discipline</a></li><li><a href="#sec-9">Accessibility Considerations for Colorblind and Low-Vision Players</a></li><li><a href="#sec-10">Frequently Asked Questions</a></li><li><a href="#sec-11">Final Principle: The Invisibility Test</a></li><li><a href="#sec-12">Related Resources</a></li></ol></details>
+            <h2 id="sec-1">Why Subtitle Positioning Matters More Than Visual Style</h2>
             <p>FPS and MOBA HUDs are designed with a specific attention economy in mind. Game designers allocate roughly 70% of the player's visual attention to the game world (enemies, projectiles, ability effects) and 30% to HUD elements (cooldowns, minimap, ammo, health). Every additional desktop overlay — including subtitle boxes — competes for that 30%. Place a subtitle in the wrong screen zone and you do not merely "see less of the map"; you actively suppress the detection of HUD state changes because peripheral attention is a finite resource.</p>
             <p>The game industry has over two decades of eye-tracking research showing that HUD conflicts cause measurable increases in reaction time — typically 40–120 ms per conflicting element — which is the difference between winning and losing a peak duel in any tactical FPS. Subtitle placement must therefore be treated as part of your competitive setup, not an afterthought.</p>
 
-            <h2>Identifying No-Fly Zones Before You Place Anything</h2>
+            <h2 id="sec-2">Identifying No-Fly Zones Before You Place Anything</h2>
             <p>Before selecting a subtitle position, map out your HUD's "no-fly zones" — screen regions where the game engine renders critical, dynamically changing state. Subtitle overlap with a no-fly zone forces the brain to decide which signal to read in real time, introducing latency you cannot train away.</p>
             <table style="width:100%; border-collapse:collapse; margin:18px 0;">
                 <thead>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.15);">
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">Genre</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">No-fly zones</th>
-                        <th style="text-align:left; padding:8px; color:#00ff9d;">Safe subtitle zone</th>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.15);">
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">Genre</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">No-fly zones</th>
+                        <th style="text-align:left; padding:8px; color:#0a7f55;">Safe subtitle zone</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.07);"><td style="padding:8px;">Tactical FPS</td><td style="padding:8px;">Crosshair, minimap (bottom-right), killfeed (top-right)</td><td style="padding:8px;">Lower-left corner, ~30% up from bottom</td></tr>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.07);"><td style="padding:8px;">Battle Royale</td><td style="padding:8px;">Ammo counter, compass bar, killfeed, ping wheel area</td><td style="padding:8px;">Lower-center above ammo readout, ~20% from bottom</td></tr>
-                    <tr style="border-bottom:1px solid rgba(255,255,255,0.07);"><td style="padding:8px;">MOBA</td><td style="padding:8px;">Minimap (bottom corner), ability bar, score popup</td><td style="padding:8px;">Lower-center between portrait and ability icons</td></tr>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.07);"><td style="padding:8px;">Tactical FPS</td><td style="padding:8px;">Crosshair, minimap (bottom-right), killfeed (top-right)</td><td style="padding:8px;">Lower-left corner, ~30% up from bottom</td></tr>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.07);"><td style="padding:8px;">Battle Royale</td><td style="padding:8px;">Ammo counter, compass bar, killfeed, ping wheel area</td><td style="padding:8px;">Lower-center above ammo readout, ~20% from bottom</td></tr>
+                    <tr style="border-bottom:1px solid rgba(0,0,0,0.07);"><td style="padding:8px;">MOBA</td><td style="padding:8px;">Minimap (bottom corner), ability bar, score popup</td><td style="padding:8px;">Lower-center between portrait and ability icons</td></tr>
                     <tr><td style="padding:8px;">MMO Raid</td><td style="padding:8px;">Party frames, cast bar, boss frames</td><td style="padding:8px;">Upper-right, adjacent to but not overlapping party frames</td></tr>
                 </tbody>
             </table>
             <p>Note that no-fly zones shift between game patches. If a major patch moves an HUD element — for example, adding a new buff tracker below the killfeed — treat it as a signal to re-evaluate your overlay position in a custom lobby before the next ranked session.</p>
 
-            <h2>Typography That Survives in Peripheral Vision</h2>
+            <h2 id="sec-3">Typography That Survives in Peripheral Vision</h2>
             <p>Peripheral vision degrades in two measurable ways relevant to subtitle readability: reduced color discrimination and reduced letter-form recognition. A font that looks excellent under direct gaze can become an unreadable smear when your foveal focus is locked on a crosshair or a minimap marker. Choosing the right typographic settings is not about preference — it is about whether your brain can parse a word in under 150 ms without shifting its attention axis.</p>
             <ul>
                 <li><strong>Font weight: medium to bold.</strong> Thin or light fonts lose all contrast against a textured game background when viewed off-axis. Use a weight of 500–700 at minimum.</li>
@@ -131,7 +214,7 @@
                 <li><strong>Background opacity: 20–40%.</strong> A fully transparent background is readable only in controlled conditions. In a real match with particle effects, smoke grenades, and fire, 20–40% opacity behind the text is the minimum that maintains consistent legibility.</li>
             </ul>
 
-            <h2>Font Size by Resolution — Concrete Numbers</h2>
+            <h2 id="sec-4">Font Size by Resolution — Concrete Numbers</h2>
             <p>Vague recommendations like "use a medium font" fail in practice because the same pixel value renders at a completely different visual angle on a 24-inch 1080p monitor versus a 27-inch 1440p display. The table below gives practical starting values based on a typical viewing distance of 60–75 cm.</p>
             <ul>
                 <li><strong>1080p (24 inch):</strong> 16–18 px body text, 20 px max.</li>
@@ -141,7 +224,7 @@
             </ul>
             <p>Scale these values down by one step if you run your game at a high-FOV setting (above 90° for FPS), because wider FOV compresses the usable peripheral reading distance on each side.</p>
 
-            <h2>Density Rules: How Much Text Per Second Is Acceptable</h2>
+            <h2 id="sec-5">Density Rules: How Much Text Per Second Is Acceptable</h2>
             <p>One of the most common misconfiguration patterns is treating the subtitle overlay like a chat log — accumulating multiple old lines, scrolling them upward, letting them persist for 8–10 seconds. In competitive play, this is actively harmful. Old text occupies attention budget without delivering new information, and dense multi-line displays visually telegraph "read me" in a way that overrides trained focus on the game world.</p>
             <ul>
                 <li><strong>Maximum lines visible:</strong> 2 for FPS and BR, 2–3 for MOBA, 3 for MMO raid.</li>
@@ -150,7 +233,7 @@
                 <li><strong>Freeze hotkey:</strong> configure a single key (e.g., Pause/Break or a mouse side button) to freeze the currently displayed subtitle for 5 seconds. This is your "say again?" recovery mechanism — you catch the word you missed without breaking game focus to ask in voice.</li>
             </ul>
 
-            <h2>Per-Genre Preset Deep Dives</h2>
+            <h2 id="sec-6">Per-Genre Preset Deep Dives</h2>
 
             <h3>Tactical FPS Preset: Small, Fast, Low</h3>
             <p>Tactical FPS titles — think round-based games with narrow corridors and economy systems — reward reaction time and spatial awareness above everything else. Subtitles must communicate instantly and disappear without trace. Callouts in this genre are typically 1–5 words ("long A", "rotating mid", "short flash", "eco round"), so a compact, fast-fading overlay is sufficient.</p>
@@ -161,12 +244,12 @@
 
             <h3>MOBA Preset: Stay Clear of the Ability Bar</h3>
             <p>MOBA play is cooldown-rhythm-based: every decision about initiating, using an ability, or retreating is tied to exact cooldown states. The ability bar must never share visual space with a subtitle line. Missing a 1-second cooldown window because you looked at a subtitle instead of the ability icon is a direct, measurable performance loss.</p>
-            <p>Position subtitles roughly 5–10% of screen height above the ability bar, with 20% horizontal padding from each edge. This keeps the overlay inside the lower visual field but safely isolated from the icon grid. Timeout of 3.0 s suits the more deliberate communication pace of MOBA games. See also our guide on <a href="article-21.html" style="color:#00b8ff;">Discord squad coordination workflows</a> for tips on managing multiple voice channels simultaneously during MOBA sessions.</p>
+            <p>Position subtitles roughly 5–10% of screen height above the ability bar, with 20% horizontal padding from each edge. This keeps the overlay inside the lower visual field but safely isolated from the icon grid. Timeout of 3.0 s suits the more deliberate communication pace of MOBA games. See also our guide on <a href="article-21.html" style="color:#0b6ad1;">Discord squad coordination workflows</a> for tips on managing multiple voice channels simultaneously during MOBA sessions.</p>
 
             <h3>MMO Raid Preset: Pair With Party Frames</h3>
             <p>Raid communication is structurally different from all other genres. The raid leader issues multi-clause instructions ("interrupt next cast, healers defensive cooldown on the pull, tanks swap at 50%"). These sentences are 10–20 words long and carry multiple actionable items. A 2-second fade time destroys the value of these callouts. Use a 3.5-second timeout, a 3-line maximum, and position the overlay adjacent to — but not overlapping — the party frames, so you can correlate "tank 2, taunt now" with the visible health bar of the named player.</p>
 
-            <h2>Lock Mode and Borderless Fullscreen: The Technical Layer</h2>
+            <h2 id="sec-7">Lock Mode and Borderless Fullscreen: The Technical Layer</h2>
             <p>All the typographic and positional settings above are meaningless if the overlay stops rendering during gameplay. Most desktop subtitle apps use a layered window that sits above game processes in the window stack. Exclusive fullscreen mode bypasses the desktop compositor entirely, making it impossible for any overlay to render. This is why <strong>Borderless Fullscreen</strong> is mandatory for subtitle overlays in competitive play.</p>
             <div class="checklist">
                 <ul>
@@ -177,14 +260,14 @@
                     <li><strong>Verify the overlay survives Alt+Tab recovery</strong> — some configurations lose z-order after a tab-out. Test once per game version update.</li>
                 </ul>
             </div>
-            <p>The <a href="/game-mode-subtitles.html" style="color:#00b8ff;">Live Subtitles Game Mode page</a> has a full compatibility matrix across major competitive titles and explains which window mode each game requires for reliable overlay rendering.</p>
+            <p>The <a href="/game-mode-subtitles.html" style="color:#0b6ad1;">Live Subtitles Game Mode page</a> has a full compatibility matrix across major competitive titles and explains which window mode each game requires for reliable overlay rendering.</p>
 
-            <h2>The Frozen Profile Discipline</h2>
+            <h2 id="sec-8">The Frozen Profile Discipline</h2>
             <p>Pick one preset per genre. Save it with an explicit name ("FPS-ranked", "MOBA-5stack", "raid-progression"). Do not adjust it between sessions. Visual tweaks during ranked play are a form of tilt behavior: they feel productive but generate zero performance gain and introduce the very instability they claim to fix. Your brain needs approximately 3–5 sessions to build unconscious peripheral reading of a subtitle position — every reset restarts that adaptation cycle.</p>
             <p>If a preset genuinely fails — measured objectively by an increased "repeat request" rate or a documented mis-rotation tied to a missed callout, over a full week of play rather than one bad session — schedule a dedicated 20–30 minute revision window in a custom lobby, not during a ranked queue. Apply one change at a time, test it for one full session, then evaluate. This is the same methodology game settings optimization communities use for sensitivity tuning.</p>
-            <p>For a complete step-by-step initial setup walkthrough, see <a href="article-19.html" style="color:#00b8ff;">the competitive gaming setup guide</a>, which covers microphone calibration, recognition accuracy tuning, and session warm-up routines alongside overlay configuration.</p>
+            <p>For a complete step-by-step initial setup walkthrough, see <a href="article-19.html" style="color:#0b6ad1;">the competitive gaming setup guide</a>, which covers microphone calibration, recognition accuracy tuning, and session warm-up routines alongside overlay configuration.</p>
 
-            <h2>Accessibility Considerations for Colorblind and Low-Vision Players</h2>
+            <h2 id="sec-9">Accessibility Considerations for Colorblind and Low-Vision Players</h2>
             <p>Competitive gaming communities have a higher-than-average proportion of colorblind players (estimates range from 8–12% of male players), and subtitle overlays can either help or harm accessibility depending on their color scheme. Avoid relying solely on green or red as the signal color for subtitle text — both are invisible to deuteranopia (the most common form). Instead:</p>
             <ul>
                 <li>Use high-luminance white or yellow text as the primary color — these are distinguishable by all common colorblindness variants.</li>
@@ -192,13 +275,13 @@
                 <li>Background opacity is more important for colorblind players than for those with full color vision, because they cannot rely on hue contrast to separate text from game world. Keep background opacity at 35–50% for these users.</li>
             </ul>
 
-            <h2>Frequently Asked Questions</h2>
+            <h2 id="sec-10">Frequently Asked Questions</h2>
 
             <p><strong>Q: Does running a subtitle overlay actually cause measurable FPS drops in competitive games?</strong><br>
             A: With Live Subtitles in Game Mode, the overlay renders through the desktop compositor at a fixed 30 fps draw cycle, completely separate from the game's render pipeline. In testing across 12 games, the impact on in-game framerate was below 0.5 fps at 1440p on hardware from the last 5 years. If you see drops above that, the cause is almost always the speech recognition engine running on the CPU — and it can be moved to a dedicated process core via the app's advanced settings.</p>
 
             <p><strong>Q: My subtitles disappear when I Alt+Tab back into the game. How do I fix this?</strong><br>
-            A: This is a window z-order reset issue. In Live Subtitles, enable "Always on top — aggressive mode" in overlay settings. If the problem persists, switch the game from Borderless Fullscreen to Windowed, then back to Borderless Fullscreen while the app is running to re-register the window stack order. See our <a href="article-20.html" style="color:#00b8ff;">overlay troubleshooting playbook</a> for the full diagnosis flow covering all major game engines.</p>
+            A: This is a window z-order reset issue. In Live Subtitles, enable "Always on top — aggressive mode" in overlay settings. If the problem persists, switch the game from Borderless Fullscreen to Windowed, then back to Borderless Fullscreen while the app is running to re-register the window stack order. See our <a href="article-20.html" style="color:#0b6ad1;">overlay troubleshooting playbook</a> for the full diagnosis flow covering all major game engines.</p>
 
             <p><strong>Q: How do I share my preset with my squad so everyone uses the same configuration?</strong><br>
             A: Export your preset as a .lsp file from the Live Subtitles settings panel (Settings → Overlay → Export Profile). Share the file via Discord or any file transfer service. Squad members import it in under 30 seconds. This ensures everyone has identical font size, fade timing, and position for coordinated multi-stream sessions.</p>
@@ -206,25 +289,71 @@
             <p><strong>Q: Should I use different subtitle settings for streaming versus non-streaming gameplay?</strong><br>
             A: Yes — slightly. For streaming, increase font size by 2–4 px and background opacity to 40–50% so viewers on compressed streams can read callouts. Your personal gameplay settings should remain optimized for your own readability, not for stream clarity. If you use a dual-PC streaming setup, the subtitle overlay on the gaming PC and the stream layout on the capture PC can be configured independently.</p>
 
-            <h2>Final Principle: The Invisibility Test</h2>
+            <h2 id="sec-11">Final Principle: The Invisibility Test</h2>
             <p>The single most reliable quality test for a subtitle overlay preset is this: after 60 minutes of play, can you accurately describe where on screen the subtitle box appeared? If yes — if you can picture the exact position, the color, the rough size — the preset is too prominent. It is consuming attentional resources you need for the game. A properly calibrated subtitle overlay should be functionally invisible as an object while remaining legible as text. You should remember what the callouts said, not what the overlay looked like.</p>
-            <p>This is the design philosophy behind <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#00b8ff;">Live Subtitles</a> — a Windows app built specifically for gamers who need real-time voice-to-text transcription without sacrificing competitive performance. The settings described in this guide are directly available in the app's Game Mode preset system.</p>
+            <p>This is the design philosophy behind <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="color:#0b6ad1;" class="js-store-cta" data-os-label="1">Download free</a>
+                <div class="cta-rating"><span class="stars">★★★★★</span> 4.7 · 351 reviews</div> — a Windows app built specifically for gamers who need real-time voice-to-text transcription without sacrificing competitive performance. The settings described in this guide are directly available in the app's Game Mode preset system.</p>
 
-            <h2>Related Resources</h2>
+            <h2 id="sec-12">Related Resources</h2>
             <ul>
-                <li><a href="/game-mode-subtitles.html" style="color:#00b8ff;">Game Mode compatibility matrix and setup guide</a></li>
-                <li><a href="article-19.html" style="color:#00b8ff;">Competitive gaming setup: microphone, accuracy, and overlay warm-up</a></li>
-                <li><a href="article-20.html" style="color:#00b8ff;">Overlay troubleshooting playbook: z-order, blackouts, and lag</a></li>
-                <li><a href="article-21.html" style="color:#00b8ff;">Discord squad workflow: managing voice channels with live subtitles</a></li>
-                <li><a href="article-23.html" style="color:#00b8ff;">Subtitle settings for streaming and content creation</a></li>
+                <li><a href="/game-mode-subtitles.html" style="color:#0b6ad1;">Game Mode compatibility matrix and setup guide</a></li>
+                <li><a href="article-19.html" style="color:#0b6ad1;">Competitive gaming setup: microphone, accuracy, and overlay warm-up</a></li>
+                <li><a href="article-20.html" style="color:#0b6ad1;">Overlay troubleshooting playbook: z-order, blackouts, and lag</a></li>
+                <li><a href="article-21.html" style="color:#0b6ad1;">Discord squad workflow: managing voice channels with live subtitles</a></li>
+                <li><a href="article-23.html" style="color:#0b6ad1;">Subtitle settings for streaming and content creation</a></li>
             </ul>
 
             <div style="background: linear-gradient(135deg, rgba(0,255,157,0.1), rgba(0,184,255,0.1)); border: 1px solid rgba(0,255,157,0.3); border-radius: 12px; padding: 2rem; margin: 2rem 0; text-align: center;">
-                <h3 style="color: #00ff9d; margin-top: 0;">One preset per game type — consistency beats tweaking</h3>
-                <p style="color: #eee; margin-bottom: 1.5rem;">Live Subtitles Game Mode presets save your exact configuration per genre so you never lose a callout mid-ranked again. Rated 4.7 stars by over 350 players on the Microsoft Store.</p>
-                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #0a0a0a; text-decoration: none; border-radius: 8px; font-weight: 600;">Download Free from Microsoft Store</a>
+                <h3 style="color: #0a7f55; margin-top: 0;">One preset per game type — consistency beats tweaking</h3>
+                <p style="color: #2d333b; margin-bottom: 1.5rem;">Live Subtitles Game Mode presets save your exact configuration per genre so you never lose a callout mid-ranked again. Rated 4.7 stars by over 350 players on the Microsoft Store.</p>
+                <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank" style="display: inline-block; padding: 0.8rem 2rem; background: linear-gradient(135deg, #00ff9d, #00b8ff); color: #1f2328; text-decoration: none; border-radius: 8px; font-weight: 600;" class="js-store-cta">Download free</a>
             </div>
         </div>
     </div>
+
+    
+            <div class="explore-block">
+                <h3>Live subtitles for any app</h3>
+                <div class="explore-cols"><div><h5>Meetings &amp; calls</h5><a href="/zoom-live-captions.html">Zoom</a><a href="/teams-live-captions.html">Microsoft Teams</a><a href="/google-meet-live-captions.html">Google Meet</a><a href="/webex-live-captions.html">Webex</a><a href="/skype-live-captions.html">Skype</a><a href="/slack-live-captions.html">Slack</a><a href="/whatsapp-live-translation.html">WhatsApp</a><a href="/telegram-subtitles.html">Telegram</a></div><div><h5>Streaming &amp; social</h5><a href="/youtube-dual-subtitles.html">YouTube</a><a href="/netflix-subtitles.html">Netflix</a><a href="/twitch-live-captions.html">Twitch</a><a href="/discord-live-captions.html">Discord</a><a href="/tiktok-live-captions.html">TikTok</a><a href="/instagram-live-captions.html">Instagram</a><a href="/facebook-live-subtitles.html">Facebook</a><a href="/spotify-podcast-subtitles.html">Spotify</a></div><div><h5>Gaming &amp; creators</h5><a href="/obs-subtitles.html">OBS</a><a href="/game-mode-subtitles.html">Game Mode</a><a href="/steam-subtitles.html">Steam</a><a href="/restream-subtitles.html">Restream</a><a href="/vimeo-subtitles.html">Vimeo</a><a href="/vlc-subtitles.html">VLC</a></div><div><h5>Learning &amp; work</h5><a href="/coursera-subtitles.html">Coursera</a><a href="/udemy-live-captions.html">Udemy</a><a href="/google-classroom-subtitles.html">Google Classroom</a><a href="/linkedin-live-captions.html">LinkedIn</a><a href="/microsoft-edge-subtitles.html">Microsoft Edge</a></div></div>
+                <p style="margin-top:1.25rem;"><a href="/en/" style="font-weight:600;text-decoration:none;">Live Subtitles home →</a></p>
+            </div>
+    </main>
+    <aside class="article-sidebar">
+        <div class="sidebar-card">
+            <h4>Read also</h4>
+            <a class="s-item" href="article-1.html">How Dual Subtitles Help You Learn Languages Faster</a>
+            <a class="s-item" href="article-2.html">Why Subtitles are Important for Language Learning</a>
+            <a class="s-item" href="article-3.html">How Regular Foreign Language Movie Watching Improves Your …</a>
+            <a class="s-item" href="article-4.html">Why Subtitles are Useful Even for Native Speakers</a>
+            <a class="s-item" href="article-5.html">TOP-10 Movies with Dual Subtitles for Learning English</a>
+            <a class="s-item" href="article-6.html">Mistakes to Avoid When Learning Languages Through Videos w…</a>
+            </div>
+        <div class="sidebar-card sidebar-cta">
+            <h4>Live Subtitles</h4>
+            <p>Live subtitles for any app.</p>
+            <a class="btn-cta js-store-cta" href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener">Download free</a>
+        </div>
+    </aside>
+    </div>
+    <button id="toTop" aria-label="Back to top" title="Back to top">↑</button>
+    <script>
+      (function(){
+        var b=document.getElementById("toTop"),bar=document.getElementById("readProgress");
+        function onScroll(){ if(b){if(window.scrollY>500)b.classList.add("show");else b.classList.remove("show");} if(bar){var h=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(h>0?(window.scrollY/h*100):0)+"%";} }
+        window.addEventListener("scroll",onScroll,{passive:true}); onScroll();
+        if(b)b.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+        var links={}; document.querySelectorAll(".toc-rail a").forEach(function(a){links[a.getAttribute("href").slice(1)]=a;});
+        var heads=document.querySelectorAll(".article-main h2[id]");
+        if("IntersectionObserver" in window && heads.length){var io=new IntersectionObserver(function(es){es.forEach(function(e){var a=links[e.target.id];if(!a)return;if(e.isIntersecting){Object.keys(links).forEach(function(k){links[k].classList.remove("active");});a.classList.add("active");}});},{rootMargin:"-10% 0px -75% 0px"});heads.forEach(function(h){io.observe(h);});}
+        var STORES={win:"https://apps.microsoft.com/detail/9ph1r9djg47s",mac:"https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",ios:"https://apps.apple.com/app/live-captions-translator/id6760197210",android:"/en/"};
+        function detectOS(){var ua=navigator.userAgent||"";var p=(navigator.userAgentData&&navigator.userAgentData.platform)||navigator.platform||"";if(/iPhone|iPad|iPod/.test(ua)||(/Mac/.test(p)&&navigator.maxTouchPoints>1))return "ios";if(/Android/.test(ua))return "android";if(/Mac/.test(p)||/Macintosh/.test(ua))return "mac";return "win";}
+        var os=detectOS(),href=STORES[os]||STORES.win;
+        document.querySelectorAll(".js-store-cta").forEach(function(a){a.setAttribute("href",href);if(os==="android")a.removeAttribute("target");});
+      })();
+    </script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
 </body>
 </html>
