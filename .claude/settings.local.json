@@ -41,7 +41,15 @@
       "Bash(powershell.exe -NoProfile -ExecutionPolicy Bypass -File generate-sitemap.ps1)",
       "Bash(command -v pwsh powershell powershell.exe node)",
       "Bash(node _add_navbar_faq.js)",
-      "Bash(node -e \"const fs=require\\('fs'\\); for \\(const f of ['translations.js','index.html']\\){let s=fs.readFileSync\\(f,'utf8'\\);const b=\\(s.match\\(/© 2024 Live Subtitles/g\\)||[]\\).length;s=s.split\\('© 2024 Live Subtitles'\\).join\\('© 2026 Live Subtitles'\\);fs.writeFileSync\\(f,s,'utf8'\\);console.log\\(f+': replaced '+b+' occurrence\\(s\\)'\\);}\")"
+      "Bash(node -e \"const fs=require\\('fs'\\); for \\(const f of ['translations.js','index.html']\\){let s=fs.readFileSync\\(f,'utf8'\\);const b=\\(s.match\\(/© 2024 Live Subtitles/g\\)||[]\\).length;s=s.split\\('© 2024 Live Subtitles'\\).join\\('© 2026 Live Subtitles'\\);fs.writeFileSync\\(f,s,'utf8'\\);console.log\\(f+': replaced '+b+' occurrence\\(s\\)'\\);}\")",
+      "Bash(python _fix_desc.py)",
+      "Bash(cat)",
+      "Bash(python /tmp/final.py)",
+      "Read(//c/tmp/**)",
+      "Bash(python3 -)",
+      "Bash(python -)",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"http.server 8765\")"
     ]
   }
 }
