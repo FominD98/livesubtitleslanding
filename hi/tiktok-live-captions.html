@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/hi/" style="color:#00b8ff; text-decoration:none;">होम</a> / TikTok लाइव कैप्शन</p>
+            <p class="muted"><a href="/hi/" style="color:#0b6ad1; text-decoration:none;">होम</a> / TikTok लाइव कैप्शन</p>
             <h1>TikTok लाइव कैप्शन — Windows के लिए AI रीयल-टाइम सबटाइटल</h1>
             <p>TikTok Live हर भाषा और हर निच के क्रिएटर्स के लिए एक वैश्विक मंच बन गया है — खाना पकाना, गेमिंग, फिटनेस, संगीत, समाचार टिप्पणी। लेकिन प्लेटफ़ॉर्म पर Windows पर कोई बिल्ट-इन कैप्शन समर्थन नहीं है। Live Subtitles के माध्यम से <strong>TikTok लाइव कैप्शन</strong> उस अंतर को भरते हैं: लाइव स्ट्रीम शुरू होते ही आपके ब्राउज़र पर एक फ्लोटिंग AI कैप्शन ओवरले दिखाई देता है, बिना किसी प्लगइन की आवश्यकता के, बिना किसी TikTok खाते की आवश्यकता के।</p>
 

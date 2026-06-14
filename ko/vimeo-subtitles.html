@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/ko/" style="color:#00b8ff; text-decoration:none;">홈</a> / Vimeo 실시간 캡션</p>
+            <p class="muted"><a href="/ko/" style="color:#0b6ad1; text-decoration:none;">홈</a> / Vimeo 실시간 캡션</p>
             <h1>Vimeo 실시간 캡션 및 웨비나용 인공지능 자막</h1>
             <p>Vimeo는 비즈니스 영상에 자주 선택되는 플랫폼입니다. 고품질 호스팅, 화이트 라벨 플레이어, 비밀번호 보호, 온라인 서밋과 웨비나를 위한 Vimeo Events를 제공합니다. Vimeo에는 호스트용 기본 캡션 도구가 있지만 업로드 쪽 기능입니다. 호스트가 영상마다 캡션 트랙을 생성, 편집, 업로드해야 하고 실시간 이벤트는 특정 플랜으로 제한됩니다. 참석자와 삽입 영상 시청자 입장에서는 실제 캡션 범위가 불균형합니다. Live Subtitles의 <strong>Vimeo 실시간 캡션</strong>은 시청자 쪽에서 문제를 해결합니다. 이 앱은 Windows PC에서 재생되는 모든 Vimeo 영상이나 실시간 이벤트를 50개 이상의 언어로 실시간 자막 처리하며 Vimeo 플러그인이나 호스트 작업이 필요 없습니다.</p>
 

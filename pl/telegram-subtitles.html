@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/pl/" style="color:#00b8ff; text-decoration:none;">Strona główna</a> / tłumaczenie na żywo Telegram</p>
+            <p class="muted"><a href="/pl/" style="color:#0b6ad1; text-decoration:none;">Strona główna</a> / tłumaczenie na żywo Telegram</p>
             <h1>Tłumaczenie na żywo Telegram i napisy AI do czatu głosowego</h1>
             <p>Telegram nie jest już tylko komunikatorem - to platforma nadawcza z kanałami publicznymi docierającymi do milionów, wielogodzinnymi czatami głosowymi i supergrupami, w których tysiące osób rozmawia jednocześnie w kilkudziesięciu językach. Rozmowa mocno przesunęła się w stronę audio: wiadomości głosowych, czatów głosowych w grupach i kanałach, rozmów wideo oraz dźwiękowych spotkań społeczności. Własne funkcje tłumaczenia Telegram całkiem dobrze obejmują tekst, ale zatrzymują się na audio - nie ma wbudowanego tłumaczenia na żywo dla czatów głosowych i wiadomości audio. <strong>Tłumaczenie na żywo Telegram</strong> przez Live Subtitles wypełnia tę lukę. Aplikacja tworzy napisy i tłumaczy dowolny dźwięk Telegram odtwarzany na komputerze z Windows w czasie rzeczywistym, w ponad 50 językach, bez zapraszania bota i bez uprawnień administratora kanału.</p>
 

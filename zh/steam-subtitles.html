@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/zh/" style="color:#00b8ff; text-decoration:none;">首页</a> / Steam 游戏字幕</p>
+            <p class="muted"><a href="/zh/" style="color:#0b6ad1; text-decoration:none;">首页</a> / Steam 游戏字幕</p>
             <h1>Steam 游戏字幕与电脑游戏 AI 翻译</h1>
             <p>Steam 的目录包含数十万款游戏，其中相当一部分，尤其是日式角色扮演游戏、韩式角色扮演游戏和视觉小说、独立剧情游戏以及冷门模拟游戏，没有字幕支持、没有英语配音，甚至完全没有本地化。对于热爱小众类型的玩家来说，这是一堵墙：音频就是故事，而故事使用的是你读不懂的语言。通过 Live Subtitles 添加 <strong>Steam 游戏字幕</strong>可以推倒这堵墙。该应用会在 Windows 上实时为游戏音频加字幕并翻译，游戏模式覆盖层可保持在全屏游戏上方，识别引擎也针对动漫粉丝、日式角色扮演游戏玩家和视觉小说读者真正需要的语言进行了优化。</p>
 

@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/zh/" style="color:#00b8ff; text-decoration:none;">首页</a> / Udemy 实时字幕</p>
+            <p class="muted"><a href="/zh/" style="color:#0b6ad1; text-decoration:none;">首页</a> / Udemy 实时字幕</p>
             <h1>Udemy 实时字幕与 AI 教程字幕</h1>
             <p>Udemy 是全球最大的商品化学习平台，拥有 200,000 多门课程，讲师来自从加州到卡拉奇的各个地方。广度是它的优势，也是它的一致性问题：字幕质量取决于课程制作者，讲师口音从美国中西部到东欧、印度、澳大利亚都有，最受欢迎的技术课程往往由非英语母语讲师教授，他们的技术能力很强，但发音不一定清晰。通过 Live Subtitles 添加 <strong>Udemy 实时字幕</strong>可以从学习者一侧解决音频理解问题。该应用覆盖 Windows 上任何课程视频，并提供 50 多种语言的实时 AI 字幕和翻译，不依赖讲师上传的内容。</p>
 

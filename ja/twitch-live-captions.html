@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/ja/" style="color:#00b8ff; text-decoration:none;">ホーム</a> / Twitch ライブキャプション</p>
+            <p class="muted"><a href="/ja/" style="color:#0b6ad1; text-decoration:none;">ホーム</a> / Twitch ライブキャプション</p>
             <h1>Twitchライブキャプション - 配信者向けAIリアルタイム字幕</h1>
             <p>Twitchには視聴者向けのネイティブライブキャプションがありません。しかし、多くの人は音が理想的でない環境で配信を見ています。騒がしい場所、深夜、聴覚の困難、または別言語の配信などです。Live Subtitlesの<strong>Twitchライブキャプション</strong>は、Windowsパソコン上の任意の配信にリアルタイムAI字幕層を追加します。Twitch拡張機能は不要です。</p>
 
@@ -159,7 +174,7 @@
                 <li>別言語のレイドゲストや共同配信者との音声通話を追えます。</li>
                 <li>マイクモードを使い、自分の発話を個人用プロンプターとしてキャプション化できます。</li>
             </ul>
-            <p>注: OBS配信出力へ直接キャプションを追加する場合は、<a href="/ja/obs-subtitles.html" style="color:#00b8ff;">OBS字幕ガイド</a>を参照してください。</p>
+            <p>注: OBS配信出力へ直接キャプションを追加する場合は、<a href="/ja/obs-subtitles.html" style="color:#0b6ad1;">OBS字幕ガイド</a>を参照してください。</p>
 
             <a class="cta" href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank">Live Subtitlesをダウンロード - 無料トライアル</a>
 

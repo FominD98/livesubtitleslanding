@@ -165,12 +165,27 @@
         .steps li { counter-increment: step; margin: 14px 0; padding-left: 44px; position: relative; }
         .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--a), var(--b)); color: #08120f; font-weight: 700; display: flex; align-items: center; justify-content: center; }
         .callout { background: rgba(255,0,110,0.08); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 18px 0; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/" style="color:#00b8ff; text-decoration:none;">Home</a> / Google Meet live captions</p>
+            <p class="muted"><a href="/" style="color:#0b6ad1; text-decoration:none;">Home</a> / Google Meet live captions</p>
             <h1>Google Meet Live Captions — AI Translation in 50+ Languages</h1>
             <p class="lead">Add AI-powered live captions and real-time translation to any <strong>Google Meet</strong> call in under two minutes. Live Subtitles works on every Google account — free Gmail, Workspace Individual, Business, Enterprise, Education — captures Meet audio locally, and supports 50+ languages with the original and translated lines on screen at the same time.</p>
 
@@ -198,7 +213,7 @@
 
             <h2>Setup: 4 steps, ~2 minutes</h2>
             <ol class="steps">
-                <li><strong>Install Live Subtitles.</strong> Get it from the <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" style="color:#00b8ff;">Microsoft Store</a> or the <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac" style="color:#00b8ff;">Mac App Store</a>. Free trial, no credit card.</li>
+                <li><strong>Install Live Subtitles.</strong> Get it from the <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" style="color:#0b6ad1;">Microsoft Store</a> or the <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac" style="color:#0b6ad1;">Mac App Store</a>. Free trial, no credit card.</li>
                 <li><strong>Set audio source to System Audio.</strong> Loopback works automatically on Windows 10/11 and macOS 13+ — no driver install, no admin rights needed.</li>
                 <li><strong>Choose languages.</strong> Pick the meeting language (or auto-detect) and your translation language. Enable dual subtitles to see both lines.</li>
                 <li><strong>Join the Meet call.</strong> Open meet.google.com or the Meet PWA from your Google Calendar invite. Captions appear in a draggable overlay above the Meet window.</li>

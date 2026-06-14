@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/zh/" style="color:#00b8ff; text-decoration:none;">首页</a> / Restream 实时字幕</p>
+            <p class="muted"><a href="/zh/" style="color:#0b6ad1; text-decoration:none;">首页</a> / Restream 实时字幕</p>
             <h1>Restream 实时字幕与 AI 多平台字幕</h1>
             <p>Restream 是多平台主播用来同时向 YouTube、Twitch、Facebook Live、LinkedIn Live、X (Twitter) 和数十个小众平台直播的工具，一路流，多个目的地。当你同时在所有平台直播时，触达会迅速扩大，但观众的语言分布也会扩大：一次多平台直播可能同时触达 YouTube 上的英语观众、Facebook 上的西班牙语观众、LinkedIn 上的葡萄牙语观众，以及 X 上的德语观众。通过 Live Subtitles 添加 <strong>Restream 实时字幕</strong>可以为这些观众解决语言和无障碍缺口。在导播电脑上运行它，你可以获得实时 AI 字幕和翻译，既可以作为个人监视器，也可以捕获进场景并广播到每个平台。</p>
 

@@ -101,12 +101,27 @@
         .steps { counter-reset: step; padding-left: 0; list-style: none; }
         .steps li { counter-increment: step; margin: 14px 0; padding-left: 44px; position: relative; }
         .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--a), var(--b)); color: #08120f; font-weight: 700; display: flex; align-items: center; justify-content: center; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/" style="color:#00b8ff; text-decoration:none;">Home</a> / Chinese to English live captions</p>
+            <p class="muted"><a href="/" style="color:#0b6ad1; text-decoration:none;">Home</a> / Chinese to English live captions</p>
             <h1>Chinese to English Live Captions — Mandarin & Cantonese AI Translation</h1>
             <p class="lead">Translate <strong>Chinese to English</strong> on screen as it's spoken. Live Subtitles is an AI captioning app for Windows and macOS that handles Mandarin and Cantonese, simplified and traditional characters, with real-time English translation. Works on iQiyi, Viki, Bilibili, YouTube, business Zoom calls, and any other audio source — including C-drama episodes without official English subtitles.</p>
 
@@ -121,7 +136,7 @@
 
             <h2>Setup: 4 steps, ~2 minutes</h2>
             <ol class="steps">
-                <li><strong>Install Live Subtitles.</strong> <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" style="color:#00b8ff;">Microsoft Store</a> or <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac" style="color:#00b8ff;">Mac App Store</a>. Free trial.</li>
+                <li><strong>Install Live Subtitles.</strong> <a href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" style="color:#0b6ad1;">Microsoft Store</a> or <a href="https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac" style="color:#0b6ad1;">Mac App Store</a>. Free trial.</li>
                 <li><strong>Pick your Chinese variant.</strong> Mandarin (simplified) for mainland content, Mandarin (traditional) for Taiwanese content, or Cantonese (traditional) for Hong Kong content.</li>
                 <li><strong>Enable dual subtitles.</strong> Chinese on top, English underneath, on the same overlay.</li>
                 <li><strong>Open any Chinese audio.</strong> iQiyi, Viki, Bilibili, YouTube, Zoom — captions appear above the active window.</li>

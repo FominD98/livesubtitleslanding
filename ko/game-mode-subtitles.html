@@ -83,12 +83,27 @@
         .links a:hover { text-decoration: underline; }
         .cta { display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; color: #08120f; background: linear-gradient(135deg, var(--a), var(--b)); }
         .faq { background: rgba(0,184,255,0.08); border-left: 4px solid var(--b); border-radius: 0 10px 10px 0; padding: 16px 18px; margin-top: 24px; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/ko/" style="color:#00b8ff; text-decoration:none;">홈</a> / 게임 모드 자막</p>
+            <p class="muted"><a href="/ko/" style="color:#0b6ad1; text-decoration:none;">홈</a> / 게임 모드 자막</p>
             <h1>전체 화면 게임용 게임 모드 자막</h1>
             <p>플레이어가 <strong>게임 모드 자막</strong>이나 <strong>게임용 자막</strong>을 찾을 때 실제 문제는 보통 텍스트 품질이 아닙니다. 문제는 상호작용 안정성입니다. 실수로 오버레이를 클릭하거나, 초점을 잃거나, 음성 채팅의 빠른 콜아웃을 읽기 어려운 상황이 핵심입니다.</p>
 

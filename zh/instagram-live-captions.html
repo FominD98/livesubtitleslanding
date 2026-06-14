@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/zh/" style="color:#00b8ff; text-decoration:none;">首页</a> / Instagram 实时字幕</p>
+            <p class="muted"><a href="/zh/" style="color:#0b6ad1; text-decoration:none;">首页</a> / Instagram 实时字幕</p>
             <h1>Instagram Live 字幕与 Reels 字幕</h1>
             <p>Instagram 是全球美妆、时尚、美食和健身创作者与受众相遇的平台，而受众本身也是全球化的。首尔拍摄的化妆教程可能被墨西哥城的新手观看；东京上线的街头服饰发布可能在一小时内流行到巴黎。Instagram 的原生字幕有帮助，但在 Live、Reels 和 IGTV 之间并不稳定，并且常常跳过热门语言之外的语言。通过 Live Subtitles 添加 <strong>Instagram Live 字幕</strong>可以从观看者一侧解决这个问题。在 Windows 上观看时，你可以为每个 Instagram 场景获得实时 AI 字幕，包括 Live 直播、Reels、IGTV 和带声音的 Stories，支持 50 多种语言，无需更改 Instagram 设置。</p>
 

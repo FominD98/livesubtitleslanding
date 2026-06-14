@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/ko/" style="color:#00b8ff; text-decoration:none;">홈</a> / VLC 실시간 캡션</p>
+            <p class="muted"><a href="/ko/" style="color:#0b6ad1; text-decoration:none;">홈</a> / VLC 실시간 캡션</p>
             <h1>VLC 실시간 캡션 및 로컬 영상용 인공지능 자막</h1>
             <p>VLC는 무엇이든 재생합니다. 이것이 정체성이자 동시에 문제입니다. 실제로 열리는 파일 형식은 디스크에 있었으면 하는 파일과 다를 때가 많습니다. 친구가 러시아어 오디오와 러시아어 자막이 있는 MKV를 보내고, 오래된 프랑스 영화 파일에는 자막이 전혀 없으며, 보관된 일본 방송에는 번역할 수 없는 일본어 자막이 영상에 박혀 있을 수 있습니다. 전통적인 방식으로 자막을 추가하려면 인터넷에서 SRT 파일을 찾고, 수동으로 싱크를 맞추고, 타이밍이 맞기를 바라야 합니다. Live Subtitles의 <strong>VLC 실시간 캡션</strong>은 이 과정을 건너뜁니다. VLC와 함께 앱을 실행하면 VLC가 재생하는 모든 오디오, 파일, 스트림, DVD가 50개 이상의 언어로 실시간 전사되고 선택적으로 번역됩니다.</p>
 

@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/ko/" style="color:#00b8ff; text-decoration:none;">홈</a> / 팟캐스트 실시간 캡션</p>
+            <p class="muted"><a href="/ko/" style="color:#0b6ad1; text-decoration:none;">홈</a> / 팟캐스트 실시간 캡션</p>
             <h1>팟캐스트 실시간 캡션 및 Spotify 인공지능 자막</h1>
             <p>Spotify에는 수십 개 언어의 수백만 개 팟캐스트가 있지만 자체 자동 전사 기능은 고르게 제공되지 않습니다. 많은 프로그램에는 전사문이 전혀 없고, 어떤 프로그램은 원래 언어의 전사문만 제공되며, Windows 데스크톱 클라이언트에서는 상위권 언어를 제외하면 대부분 기능을 쓰기 어렵습니다. 스페인어 뉴스 팟캐스트, 일본어 인터뷰 쇼, 아랍어 토크 라디오 아카이브를 따라가고 싶은 청취자에게 이 차이는 결정적입니다. Live Subtitles의 <strong>팟캐스트 실시간 캡션</strong>이 그 빈틈을 채웁니다. 이 앱은 Windows에서 Spotify 오디오를 50개 이상의 언어로 실시간 자막 처리하고 번역하며 API 접근이나 Spotify Premium이 필요 없습니다.</p>
 

@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/nl/" style="color:#00b8ff; text-decoration:none;">Home</a> / Udemy live ondertiteling</p>
+            <p class="muted"><a href="/nl/" style="color:#0b6ad1; text-decoration:none;">Home</a> / Udemy live ondertiteling</p>
             <h1>Udemy live ondertiteling en AI-tutorialondertitels</h1>
             <p>Udemy is het grootste brede leerplatform ter wereld: meer dan 200.000 cursussen, gegeven door een leger onafhankelijke docenten uit plaatsen van Californië tot Karachi. Die breedte is de kracht, maar ook het consistentieprobleem: de kwaliteit van ondertitels hangt af van degene die de cursus heeft gemaakt, docentenaccenten lopen uiteen van Amerikaans Midwest tot Oost-Europees, Indiaas en Australisch, en de populairste technische cursussen worden vaak gegeven door niet-moedertaalsprekers van het Engels wier technische talent niet altijd samengaat met heldere uitspraak. <strong>Udemy live ondertiteling</strong> via Live Subtitles lost het audiobegrip op aan de kant van de student. De app ligt bovenop elke cursusvideo op Windows en geeft realtime AI-ondertitels en vertaling in 50+ talen, onafhankelijk van wat de docent heeft geüpload.</p>
 

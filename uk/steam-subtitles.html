@@ -120,12 +120,27 @@
         .steps { counter-reset: step; list-style: none; padding: 0; }
         .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
         .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
-    </style>
+    
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li { border-left-color:rgba(10,127,85,0.35) !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+</style>
 </head>
 <body>
     <main class="wrap">
         <div class="card">
-            <p class="muted"><a href="/uk/" style="color:#00b8ff; text-decoration:none;">Головна</a> / субтитри для ігор Steam</p>
+            <p class="muted"><a href="/uk/" style="color:#0b6ad1; text-decoration:none;">Головна</a> / субтитри для ігор Steam</p>
             <h1>Субтитри для ігор Steam і ШІ-переклад для ігор на ПК</h1>
             <p>Каталог Steam налічує сотні тисяч ігор, і значна його частина - особливо японські рольові ігри, корейські рольові ігри та візуальні романи, сюжетні інді-ігри й маловідомі симулятори - виходить без підтримки субтитрів, без англійської озвучки або без локалізації взагалі. Для гравців, які люблять нішеві жанри, це стіна: аудіо несе сюжет, а сюжет звучить мовою, яку ви не читаєте. <strong>Субтитри для ігор Steam</strong> через Live Subtitles знімають цю стіну. Програма субтитрує й перекладає ігровий звук у реальному часі на Windows, має ігровий оверлей поверх повноекранних ігор і механізм розпізнавання, корисний для мов, які потрібні фанатам аніме, японських рольових ігор і візуальних романів.</p>
 
