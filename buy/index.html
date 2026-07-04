@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+  <title>Buy Minutes | Live Subtitles</title>
+  <meta name="description" content="Purchase Live Subtitles minutes securely by card.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://live-subtitles.com/buy/" />
+  <link rel="icon" href="/2sub.ico">
+
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f7f9fb;
+      color: #1c2733;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      max-width: 460px;
+      width: calc(100% - 2rem);
+      margin: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    .card img {
+      width: 56px;
+      height: 56px;
+    }
+    h1 {
+      font-size: 1.4em;
+      margin: 0.75rem 0 0.5rem;
+    }
+    p {
+      margin: 0.5rem 0;
+      color: #45566a;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      background: #0077cc;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .btn:hover { background: #005fa3; }
+    .paddle-note {
+      margin-top: 1.5rem;
+      font-size: 0.85em;
+      color: #8494a6;
+    }
+    .success { color: #1e8e3e; }
+    .error { color: #c5221f; }
+    .hidden { display: none; }
+    a { color: #0077cc; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/2sub.png" alt="Live Subtitles">
+
+    <div id="state-loading">
+      <h1>Preparing your checkout…</h1>
+      <p>The secure payment window will open in a moment.</p>
+    </div>
+
+    <div id="state-ready" class="hidden">
+      <h1>Buy minutes for Live Subtitles</h1>
+      <p>The payment window was closed. You can reopen it below.</p>
+      <button class="btn" id="reopen">Open checkout</button>
+    </div>
+
+    <div id="state-success" class="hidden">
+      <h1 class="success">Payment complete</h1>
+      <p>Thank you! Return to the Live Subtitles app on your PC — your minutes will arrive within a minute.</p>
+      <p>You can close this page.</p>
+    </div>
+
+    <div id="state-error" class="hidden">
+      <h1 class="error">Something is not right</h1>
+      <p id="error-text">This purchase link is invalid or incomplete.</p>
+      <p>Please reopen this page from the Live Subtitles app, or contact <a href="mailto:help@live-subtitles.com">help@live-subtitles.com</a>.</p>
+    </div>
+
+    <p class="paddle-note">Payments are processed securely by <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, our merchant of record. Prices include applicable taxes.</p>
+  </div>
+
+  <script>
+    // Client-side tokens: Paddle > Developer Tools > Authentication.
+    var PADDLE_TOKEN_LIVE = 'live_f8552070ee7e11c7bcb7a2b2e52';
+    var PADDLE_TOKEN_SANDBOX = 'REPLACE_WITH_SANDBOX_CLIENT_TOKEN';
+
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var priceId = params.get('sku') || '';
+      var fp = params.get('fp') || '';
+      var sandbox = params.get('sandbox') === '1';
+
+      function show(id, message) {
+        ['state-loading', 'state-ready', 'state-success', 'state-error'].forEach(function (s) {
+          document.getElementById(s).classList.toggle('hidden', s !== id);
+        });
+        if (id === 'state-error' && message) {
+          document.getElementById('error-text').textContent = message;
+        }
+      }
+
+      if (!/^pri_[a-z0-9]+$/i.test(priceId) || !fp || fp.length > 128) {
+        show('state-error');
+        return;
+      }
+
+      var token = sandbox ? PADDLE_TOKEN_SANDBOX : PADDLE_TOKEN_LIVE;
+      if (!token || token.indexOf('REPLACE_WITH') === 0) {
+        show('state-error', 'Payments are not available yet. Please try again later.');
+        return;
+      }
+
+      if (sandbox) {
+        Paddle.Environment.set('sandbox');
+      }
+
+      Paddle.Initialize({
+        token: token,
+        eventCallback: function (event) {
+          if (!event || !event.name) return;
+          if (event.name === 'checkout.completed') {
+            show('state-success');
+            if (typeof gtag === 'function') {
+              gtag('event', 'purchase_web', { method: 'paddle' });
+            }
+          } else if (event.name === 'checkout.closed') {
+            var success = document.getElementById('state-success');
+            if (success.classList.contains('hidden')) {
+              show('state-ready');
+            }
+          }
+        }
+      });
+
+      function openCheckout() {
+        show('state-loading');
+        Paddle.Checkout.open({
+          items: [{ priceId: priceId, quantity: 1 }],
+          customData: { fp: fp, platform: 'windows-wpf' },
+          settings: { displayMode: 'overlay', theme: 'light' }
+        });
+      }
+
+      document.getElementById('reopen').addEventListener('click', openCheckout);
+      openCheckout();
+    })();
+  </script>
+</body>
+</html>
