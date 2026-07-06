@@ -14,7 +14,7 @@ const translations = {
             ratingLabel: '4.7/5 · 351 ratings',
             watchDemo: 'Watch Demo',
             title: 'Live translator for meetings, calls and conversations on your PC',
-            lead: 'Translates speech in real time into 50+ languages. Works with Zoom, Teams, Skype, Google Meet and any app — no microphone.'
+            lead: 'Translates speech in real time into 60+ languages. Works with Zoom, Teams, Skype, Google Meet and any app — no microphone.'
         },
         downloadBtn: 'Download from Microsoft Store',
         androidBtn: 'Want an Android version',
@@ -80,10 +80,10 @@ const translations = {
             articles: 'Articles'
         },
         title: 'Live Subtitles — Live Captions & Dual Subtitles for Any App',
-        description: 'Live captions & dual subtitles for any app on Windows, Mac & iOS. Real-time AI translation in 50+ languages for Zoom, Teams & Netflix. Free trial, no mic.',
+        description: 'Live captions & dual subtitles for any app on Windows, Mac & iOS. Real-time AI translation in 60+ languages for Zoom, Teams & Netflix. Free trial, no mic.',
         download: 'Download Now',
         meta: {
-            description: 'Live captions & dual subtitles for any app on Windows, Mac & iOS. Real-time AI translation in 50+ languages for Zoom, Teams & Netflix. Free trial, no mic.',
+            description: 'Live captions & dual subtitles for any app on Windows, Mac & iOS. Real-time AI translation in 60+ languages for Zoom, Teams & Netflix. Free trial, no mic.',
             keywords: 'live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, language learning subtitles'
         },
         downloadModal: {
@@ -115,7 +115,7 @@ const translations = {
             q2: 'Does it work with all applications?',
             a2: 'Yes! Live Subtitles works with absolutely any applications: YouTube, Netflix, Zoom, Teams, Discord, browsers and even games. The app captures audio at the system level.',
             q3: 'What languages are supported?',
-            a3: 'Supports 16+ languages with dual subtitle display: English, French, Spanish, German, Italian, Japanese, Korean, Chinese (Simplified/Traditional), Arabic, Hindi, Portuguese, Polish, Dutch, Turkish, Russian, Ukrainian.',
+            a3: 'Supports 60+ languages with dual subtitle display: English, French, Spanish, German, Italian, Japanese, Korean, Chinese (Simplified/Traditional), Arabic, Hindi, Portuguese, Polish, Dutch, Turkish, Russian, Ukrainian, and more.',
             q4: 'Is an internet connection required?',
             a4: 'Yes, a stable internet connection is required for speech recognition and translation. The app uses cloud services to ensure high accuracy.',
             q5: 'Can I customize the appearance of subtitles?',
@@ -161,7 +161,7 @@ const translations = {
             ratingLabel: '4,7/5 · 351 оценок',
             watchDemo: 'Смотреть демо',
             title: 'Живой переводчик для встреч, звонков и разговоров на ПК',
-            lead: 'Переводит речь в реальном времени на 50+ языков. Работает с Zoom, Teams, Skype, Google Meet и любым приложением — без микрофона.'
+            lead: 'Переводит речь в реальном времени на 60+ языков. Работает с Zoom, Teams, Skype, Google Meet и любым приложением — без микрофона.'
         },
         downloadBtn: 'Скачать в Microsoft Store',
         androidBtn: 'Хочу версию для Android',
@@ -227,10 +227,10 @@ const translations = {
             articles: 'Статьи'
         },
         title: 'Live Subtitles — Двойные субтитры для любого приложения',
-        description: 'Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 50+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.',
+        description: 'Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 60+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.',
         download: 'Скачать сейчас',
         meta: {
-            description: 'Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 50+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.',
+            description: 'Живые субтитры и двойные субтитры поверх любого приложения: Windows, Mac, iOS. ИИ-перевод на 60+ языков для Zoom, Teams, Netflix. Пробный период, без микрофона.',
             keywords: 'двойные субтитры, субтитры для изучения языков, перевод речи, распознавание речи, субтитры онлайн, Live Subtitles, изучение английского, изучение языков, субтитры в реальном времени, понимание речи, переводчик для фильмов'
         },
         downloadModal: {
@@ -262,7 +262,7 @@ const translations = {
             q2: 'Работает ли с любыми приложениями?',
             a2: 'Да! Live Subtitles работает с абсолютно любыми приложениями: YouTube, Netflix, Zoom, Teams, Discord, браузерами и даже играми. Приложение захватывает звук на системном уровне.',
             q3: 'Какие языки поддерживаются?',
-            a3: 'Поддерживается 16+ языков с отображением двойных субтитров: английский, французский, испанский, немецкий, итальянский, японский, корейский, китайский (упрощенный/традиционный), арабский, хинди, португальский, польский, нидерландский, турецкий, русский, украинский.',
+            a3: 'Поддерживается 60+ языков с отображением двойных субтитров: английский, французский, испанский, немецкий, итальянский, японский, корейский, китайский (упрощенный/традиционный), арабский, хинди, португальский, польский, нидерландский, турецкий, русский, украинский и другие.',
             q4: 'Нужно ли подключение к интернету?',
             a4: 'Да, для работы распознавания и перевода речи требуется стабильное подключение к интернету. Приложение использует облачные сервисы для обеспечения высокой точности.',
             q5: 'Можно ли настроить внешний вид субтитров?',
@@ -369,10 +369,10 @@ const translations = {
             articles: 'Articles'
         },
         title: 'Live Subtitles — Sous-titres en direct et doubles, toute app',
-        description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac et iOS. Traduction IA en 50+ langues pour Zoom, Teams et Netflix. Essai gratuit, sans micro.',
+        description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac et iOS. Traduction IA en 60+ langues pour Zoom, Teams et Netflix. Essai gratuit, sans micro.',
         download: 'Télécharger maintenant',
         meta: {
-            description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac et iOS. Traduction IA en 50+ langues pour Zoom, Teams et Netflix. Essai gratuit, sans micro.',
+            description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac et iOS. Traduction IA en 60+ langues pour Zoom, Teams et Netflix. Essai gratuit, sans micro.',
             keywords: 'sous-titres doubles, sous-titres pour l\'apprentissage des langues, traduction vocale, reconnaissance vocale, sous-titres en ligne, Live Subtitles, apprentissage de l\'anglais, apprentissage des langues, sous-titres en temps réel, compréhension de la parole, traducteur de films'
         },
         downloadModal: {
@@ -404,7 +404,7 @@ const translations = {
             q2: 'Fonctionne-t-elle avec toutes les applications ?',
             a2: 'Oui ! Live Subtitles fonctionne avec absolument toutes les applications : YouTube, Netflix, Zoom, Teams, Discord, navigateurs et même jeux. L\'application capture l\'audio au niveau système.',
             q3: 'Quelles langues sont prises en charge ?',
-            a3: 'Prend en charge 16+ langues avec affichage de sous-titres doubles : anglais, français, espagnol, allemand, italien, japonais, coréen, chinois (simplifié/traditionnel), arabe, hindi, portugais, polonais, néerlandais, turc, russe, ukrainien.',
+            a3: 'Prend en charge 60+ langues avec affichage de sous-titres doubles : anglais, français, espagnol, allemand, italien, japonais, coréen, chinois (simplifié/traditionnel), arabe, hindi, portugais, polonais, néerlandais, turc, russe, ukrainien et plus encore.',
             q4: 'Une connexion Internet est-elle requise ?',
             a4: 'Oui, une connexion Internet stable est requise pour la reconnaissance et la traduction vocales. L\'application utilise des services cloud pour assurer une haute précision.',
             q5: 'Puis-je personnaliser l\'apparence des sous-titres ?',
@@ -511,10 +511,10 @@ const translations = {
             articles: 'Artículos'
         },
         title: 'Live Subtitles — Subtítulos en vivo y duales, cualquier app',
-        description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac e iOS. Traducción IA en tiempo real a 50+ idiomas en Zoom, Teams y Netflix. Prueba gratis.',
+        description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac e iOS. Traducción IA en tiempo real a 60+ idiomas en Zoom, Teams y Netflix. Prueba gratis.',
         download: 'Descargar ahora',
         meta: {
-            description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac e iOS. Traducción IA en tiempo real a 50+ idiomas en Zoom, Teams y Netflix. Prueba gratis.',
+            description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac e iOS. Traducción IA en tiempo real a 60+ idiomas en Zoom, Teams y Netflix. Prueba gratis.',
             keywords: 'subtítulos dobles, subtítulos para aprendizaje de idiomas, traducción de voz, reconocimiento de voz, subtítulos en línea, Live Subtitles, aprender inglés, aprendizaje de idiomas, subtítulos en tiempo real, comprensión del habla, traductor de películas'
         },
         downloadModal: {
@@ -546,7 +546,7 @@ const translations = {
             q2: '¿Funciona con todas las aplicaciones?',
             a2: '¡Sí! Live Subtitles funciona con absolutamente cualquier aplicación: YouTube, Netflix, Zoom, Teams, Discord, navegadores e incluso juegos. La aplicación captura el audio a nivel del sistema.',
             q3: '¿Qué idiomas son compatibles?',
-            a3: 'Admite 16+ idiomas con visualización de subtítulos dobles: inglés, francés, español, alemán, italiano, japonés, coreano, chino (simplificado/tradicional), árabe, hindi, portugués, polaco, holandés, turco, ruso, ucraniano.',
+            a3: 'Admite 60+ idiomas con visualización de subtítulos dobles: inglés, francés, español, alemán, italiano, japonés, coreano, chino (simplificado/tradicional), árabe, hindi, portugués, polaco, holandés, turco, ruso, ucraniano y más.',
             q4: '¿Se requiere conexión a Internet?',
             a4: 'Sí, se requiere una conexión estable a Internet para el reconocimiento y traducción de voz. La aplicación utiliza servicios en la nube para garantizar alta precisión.',
             q5: '¿Puedo personalizar la apariencia de los subtítulos?',
@@ -592,7 +592,7 @@ const translations = {
             ratingLabel: '4,7/5 · 351 Bewertungen',
             watchDemo: 'Demo ansehen',
             title: 'Live-Übersetzer für Meetings, Anrufe und Gespräche auf Ihrem PC',
-            lead: 'Übersetzt Sprache in Echtzeit in 50+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung — ohne Mikrofon.'
+            lead: 'Übersetzt Sprache in Echtzeit in 60+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung — ohne Mikrofon.'
         },
         downloadBtn: 'Aus dem Microsoft Store herunterladen',
         androidBtn: 'Ich möchte die Android-Version',
@@ -653,10 +653,10 @@ const translations = {
             articles: 'Artikel'
         },
         title: 'Live Subtitles — Live- & duale Untertitel für jede App',
-        description: 'Live-Untertitel & duale Untertitel für jede App auf Windows, Mac & iOS. KI-Übersetzung in 50+ Sprachen für Zoom, Teams & Netflix. Kostenlos testen, ohne Mikro.',
+        description: 'Live-Untertitel & duale Untertitel für jede App auf Windows, Mac & iOS. KI-Übersetzung in 60+ Sprachen für Zoom, Teams & Netflix. Kostenlos testen, ohne Mikro.',
         download: 'Jetzt herunterladen',
         meta: {
-            description: 'Live-Untertitel & duale Untertitel für jede App auf Windows, Mac & iOS. KI-Übersetzung in 50+ Sprachen für Zoom, Teams & Netflix. Kostenlos testen, ohne Mikro.',
+            description: 'Live-Untertitel & duale Untertitel für jede App auf Windows, Mac & iOS. KI-Übersetzung in 60+ Sprachen für Zoom, Teams & Netflix. Kostenlos testen, ohne Mikro.',
             keywords: 'Doppelte Untertitel, Untertitel für das Lernen von Sprachen, Sprachübersetzung, Spracherkennung, Online-Untertitel, Live Subtitles, Englisch lernen, Sprachen lernen, Untertitel im Zeitverlauf, Sprachverständnis, Filmübersetzer'
         },
         downloadModal: {
@@ -688,7 +688,7 @@ const translations = {
             q2: 'Funktioniert es mit allen Anwendungen?',
             a2: 'Ja! Live Subtitles funktioniert mit absolut allen Anwendungen: YouTube, Netflix, Zoom, Teams, Discord, Browsern und sogar Spielen. Die Anwendung erfasst Audio auf Systemebene.',
             q3: 'Welche Sprachen werden unterstützt?',
-            a3: 'Unterstützt 16+ Sprachen mit doppelter Untertitel-Anzeige: Englisch, Französisch, Spanisch, Deutsch, Italienisch, Japanisch, Koreanisch, Chinesisch (Vereinfacht/Traditionell), Arabisch, Hindi, Portugiesisch, Polnisch, Niederländisch, Türkisch, Russisch, Ukrainisch.',
+            a3: 'Unterstützt 60+ Sprachen mit doppelter Untertitel-Anzeige: Englisch, Französisch, Spanisch, Deutsch, Italienisch, Japanisch, Koreanisch, Chinesisch (Vereinfacht/Traditionell), Arabisch, Hindi, Portugiesisch, Polnisch, Niederländisch, Türkisch, Russisch, Ukrainisch und mehr.',
             q4: 'Ist eine Internetverbindung erforderlich?',
             a4: 'Ja, eine stabile Internetverbindung ist für Spracherkennung und -übersetzung erforderlich. Die Anwendung verwendet Cloud-Services, um hohe Genauigkeit zu gewährleisten.',
             q5: 'Kann ich das Aussehen der Untertitel anpassen?',
@@ -795,10 +795,10 @@ const translations = {
             articles: 'Articoli'
         },
         title: 'Live Subtitles — Sottotitoli doppi e live per ogni app',
-        description: 'Sottotitoli live e doppi per ogni app su Windows, Mac e iOS. Traduzione AI in tempo reale in 50+ lingue per Zoom, Teams e Netflix. Prova gratis senza microfono.',
+        description: 'Sottotitoli live e doppi per ogni app su Windows, Mac e iOS. Traduzione AI in tempo reale in 60+ lingue per Zoom, Teams e Netflix. Prova gratis senza microfono.',
         download: 'Scaricare adesso',
         meta: {
-            description: 'Sottotitoli live e doppi per ogni app su Windows, Mac e iOS. Traduzione AI in tempo reale in 50+ lingue per Zoom, Teams e Netflix. Prova gratis senza microfono.',
+            description: 'Sottotitoli live e doppi per ogni app su Windows, Mac e iOS. Traduzione AI in tempo reale in 60+ lingue per Zoom, Teams e Netflix. Prova gratis senza microfono.',
             keywords: 'sottotitoli doppi, sottotitoli per l\'apprendimento dei linguaggi, traduzione vocale, riconoscimento vocale, sottotitoli online, Live Subtitles, apprendimento dell\'inglese, apprendimento dei linguaggi, sottotitoli nel tempo, comprensione della parlata, traduttore di film'
         },
         downloadModal: {
@@ -830,7 +830,7 @@ const translations = {
             q2: 'Funziona con tutte le applicazioni?',
             a2: 'Sì! Live Subtitles funziona con assolutamente qualsiasi applicazione: YouTube, Netflix, Zoom, Teams, Discord, browser e persino giochi. L\'applicazione cattura l\'audio a livello di sistema.',
             q3: 'Quali lingue sono supportate?',
-            a3: 'Supporta 16+ lingue con visualizzazione di sottotitoli doppi: inglese, francese, spagnolo, tedesco, italiano, giapponese, coreano, cinese (semplificato/tradizionale), arabo, hindi, portoghese, polacco, olandese, turco, russo, ucraino.',
+            a3: 'Supporta 60+ lingue con visualizzazione di sottotitoli doppi: inglese, francese, spagnolo, tedesco, italiano, giapponese, coreano, cinese (semplificato/tradizionale), arabo, hindi, portoghese, polacco, olandese, turco, russo, ucraino e altre.',
             q4: 'È richiesta una connessione Internet?',
             a4: 'Sì, è richiesta una connessione Internet stabile per il riconoscimento e la traduzione vocale. L\'applicazione utilizza servizi cloud per garantire alta precisione.',
             q5: 'Posso personalizzare l\'aspetto dei sottotitoli?',
@@ -972,7 +972,7 @@ const translations = {
             q2: 'すべてのアプリケーションで動作しますか？',
             a2: 'はい！Live Subtitlesは絶対にすべてのアプリケーションで動作します：YouTube、Netflix、Zoom、Teams、Discord、ブラウザー、ゲームまで。アプリはシステムレベルで音声をキャプチャします。',
             q3: 'どの言語がサポートされていますか？',
-            a3: '二重字幕表示で16+言語をサポート：英語、フランス語、スペイン語、ドイツ語、イタリア語、日本語、韓国語、中国語（簡体字/繁体字）、アラビア語、ヒンディー語、ポルトガル語、ポーランド語、オランダ語、トルコ語、ロシア語、ウクライナ語。',
+            a3: '二重字幕表示で60+言語をサポート：英語、フランス語、スペイン語、ドイツ語、イタリア語、日本語、韓国語、中国語（簡体字/繁体字）、アラビア語、ヒンディー語、ポルトガル語、ポーランド語、オランダ語、トルコ語、ロシア語、ウクライナ語など。',
             q4: 'インターネット接続は必要ですか？',
             a4: 'はい、音声認識と翻訳には安定したインターネット接続が必要です。アプリは高精度を保証するためにクラウドサービスを使用します。',
             q5: '字幕の外観をカスタマイズできますか？',
@@ -1114,7 +1114,7 @@ const translations = {
             q2: '모든 애플리케이션에서 작동하나요?',
             a2: '예! Live Subtitles는 절대적으로 모든 애플리케이션에서 작동합니다: YouTube, Netflix, Zoom, Teams, Discord, 브라우저 및 게임까지. 앱은 시스템 수준에서 오디오를 캡처합니다.',
             q3: '어떤 언어가 지원되나요?',
-            a3: '이중 자막 표시로 16+ 언어 지원: 영어, 프랑스어, 스페인어, 독일어, 이탈리아어, 일본어, 한국어, 중국어(간체/번체), 아랍어, 힌디어, 포르투갈어, 폴란드어, 네덜란드어, 터키어, 러시아어, 우크라이나어.',
+            a3: '이중 자막 표시로 60+ 언어 지원: 영어, 프랑스어, 스페인어, 독일어, 이탈리아어, 일본어, 한국어, 중국어(간체/번체), 아랍어, 힌디어, 포르투갈어, 폴란드어, 네덜란드어, 터키어, 러시아어, 우크라이나어 등.',
             q4: '인터넷 연결이 필요한가요?',
             a4: '예, 음성 인식 및 번역을 위해 안정적인 인터넷 연결이 필요합니다. 앱은 높은 정확도를 보장하기 위해 클라우드 서비스를 사용합니다.',
             q5: '자막 모양을 사용자 정의할 수 있나요?',
@@ -1221,10 +1221,10 @@ const translations = {
             articles: '文章'
         },
         title: 'Live Subtitles — 实时字幕与双语字幕，任意应用',
-        description: 'Live Subtitles 在 Windows、Mac 和 iOS 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50+ 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏，无需麦克风。免费试用，立即体验无障碍沟通。',
+        description: 'Live Subtitles 在 Windows、Mac 和 iOS 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 60+ 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏，无需麦克风。免费试用，立即体验无障碍沟通。',
         download: '立即下载',
         meta: {
-            description: 'Live Subtitles 在 Windows、Mac 和 iOS 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50+ 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏，无需麦克风。免费试用，立即体验无障碍沟通。',
+            description: 'Live Subtitles 在 Windows、Mac 和 iOS 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 60+ 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏，无需麦克风。免费试用，立即体验无障碍沟通。',
             keywords: '双字幕, 语言学习字幕, 语音翻译, 语音识别, 在线字幕, Live Subtitles, 英语学习, 语言学习, 实时字幕, 语音理解, 电影翻译器'
         },
         downloadModal: {
@@ -1256,7 +1256,7 @@ const translations = {
             q2: '是否适用于所有应用程序？',
             a2: '是的！Live Subtitles绝对适用于所有应用程序：YouTube、Netflix、Zoom、Teams、Discord、浏览器甚至游戏。应用程序在系统级别捕获音频。',
             q3: '支持哪些语言？',
-            a3: '支持16+种语言的双字幕显示：英语、法语、西班牙语、德语、意大利语、日语、韩语、中文（简体/繁体）、阿拉伯语、印地语、葡萄牙语、波兰语、荷兰语、土耳其语、俄语、乌克兰语。',
+            a3: '支持60+种语言的双字幕显示：英语、法语、西班牙语、德语、意大利语、日语、韩语、中文（简体/繁体）、阿拉伯语、印地语、葡萄牙语、波兰语、荷兰语、土耳其语、俄语、乌克兰语等。',
             q4: '是否需要互联网连接？',
             a4: '是的，语音识别和翻译需要稳定的互联网连接。应用程序使用云服务确保高准确性。',
             q5: '我可以自定义字幕外观吗？',
@@ -1398,7 +1398,7 @@ const translations = {
             q2: 'هل يعمل مع جميع التطبيقات؟',
             a2: 'نعم! Live Subtitles يعمل مع جميع التطبيقات تماماً: YouTube، Netflix، Zoom، Teams، Discord، المتصفحات وحتى الألعاب. التطبيق يلتقط الصوت على مستوى النظام.',
             q3: 'ما هي اللغات المدعومة؟',
-            a3: 'يدعم 16+ لغة مع عرض ترجمة مزدوجة: الإنجليزية، الفرنسية، الإسبانية، الألمانية، الإيطالية، اليابانية، الكورية، الصينية (المبسطة/التقليدية)، العربية، الهندية، البرتغالية، البولندية، الهولندية، التركية، الروسية، الأوكرانية.',
+            a3: 'يدعم 60+ لغة مع عرض ترجمة مزدوجة: الإنجليزية، الفرنسية، الإسبانية، الألمانية، الإيطالية، اليابانية، الكورية، الصينية (المبسطة/التقليدية)، العربية، الهندية، البرتغالية، البولندية، الهولندية، التركية، الروسية، الأوكرانية وغيرها.',
             q4: 'هل يتطلب اتصال بالإنترنت؟',
             a4: 'نعم، يتطلب اتصال مستقر بالإنترنت للتعرف على الكلام والترجمة. التطبيق يستخدم خدمات سحابية لضمان الدقة العالية.',
             q5: 'هل يمكنني تخصيص مظهر الترجمة؟',
@@ -1444,7 +1444,7 @@ const translations = {
             ratingLabel: '4.7/5 · 351 रेटिंग',
             watchDemo: 'डेमो देखें',
             title: 'मीटिंग, कॉल और बातचीत के लिए आपके पीसी पर लाइव अनुवादक',
-            lead: 'भाषण का 50+ भाषाओं में रियल-टाइम अनुवाद। Zoom, Teams, Skype, Google Meet और किसी भी ऐप के साथ काम करता है — माइक्रोफ़ोन की ज़रूरत नहीं।'
+            lead: 'भाषण का 60+ भाषाओं में रियल-टाइम अनुवाद। Zoom, Teams, Skype, Google Meet और किसी भी ऐप के साथ काम करता है — माइक्रोफ़ोन की ज़रूरत नहीं।'
         },
         downloadBtn: 'Microsoft Store से डाउनलोड करें',
         androidBtn: 'Android संस्करण चाहिए',
@@ -1505,10 +1505,10 @@ const translations = {
             articles: 'लेख'
         },
         title: 'Live Subtitles — किसी भी ऐप के लिए लाइव कैप्शन और सबटाइटल',
-        description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac व iOS पर। Zoom, Teams, Netflix के लिए 50+ भाषाओं में रियल-टाइम AI अनुवाद। बिना माइक, फ्री ट्रायल।',
+        description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac व iOS पर। Zoom, Teams, Netflix के लिए 60+ भाषाओं में रियल-टाइम AI अनुवाद। बिना माइक, फ्री ट्रायल।',
         download: 'अभी डाउनलोड करें',
         meta: {
-            description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac व iOS पर। Zoom, Teams, Netflix के लिए 50+ भाषाओं में रियल-टाइम AI अनुवाद। बिना माइक, फ्री ट्रायल।',
+            description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac व iOS पर। Zoom, Teams, Netflix के लिए 60+ भाषाओं में रियल-टाइम AI अनुवाद। बिना माइक, फ्री ट्रायल।',
             keywords: 'दोहरे सबटाइटल, भाषा सीखने के लिए सबटाइटल, स्पीच ट्रांसलेशन, स्पीच रिकग्निशन, ऑनलाइन सबटाइटल, Live Subtitles, अंग्रेजी सीखना, भाषा सीखना, रियल-टाइम सबटाइटल, स्पीच समझना, मूवी ट्रांसलेटर'
         },
         downloadModal: {
@@ -1540,7 +1540,7 @@ const translations = {
             q2: 'क्या यह सभी एप्लिकेशन के साथ काम करता है?',
             a2: 'हां! Live Subtitles बिल्कुल सभी एप्लिकेशन के साथ काम करता है: YouTube, Netflix, Zoom, Teams, Discord, ब्राउज़र और यहां तक कि गेम भी। ऐप सिस्टम स्तर पर ऑडियो कैप्चर करता है।',
             q3: 'कौन सी भाषाएं समर्थित हैं?',
-            a3: 'दोहरे सबटाइटल डिस्प्ले के साथ 16+ भाषाओं का समर्थन: अंग्रेजी, फ्रेंच, स्पेनिश, जर्मन, इतालवी, जापानी, कोरियाई, चीनी (सरलीकृत/पारंपरिक), अरबी, हिंदी, पुर्तगाली, पोलिश, डच, तुर्की, रूसी, यूक्रेनी।',
+            a3: 'दोहरे सबटाइटल डिस्प्ले के साथ 60+ भाषाओं का समर्थन: अंग्रेजी, फ्रेंच, स्पेनिश, जर्मन, इतालवी, जापानी, कोरियाई, चीनी (सरलीकृत/पारंपरिक), अरबी, हिंदी, पुर्तगाली, पोलिश, डच, तुर्की, रूसी, यूक्रेनी। और अन्य.',
             q4: 'क्या इंटरनेट कनेक्शन आवश्यक है?',
             a4: 'हां, स्पीच रिकग्निशन और ट्रांसलेशन के लिए स्थिर इंटरनेट कनेक्शन आवश्यक है। ऐप उच्च सटीकता सुनिश्चित करने के लिए क्लाउड सेवाओं का उपयोग करता है।',
             q5: 'क्या मैं सबटाइटल की उपस्थिति को कस्टमाइज़ कर सकता हूं?',
@@ -1682,7 +1682,7 @@ const translations = {
             q2: 'Funciona com todas as aplicações?',
             a2: 'Sim! Live Subtitles funciona absolutamente com todas as aplicações: YouTube, Netflix, Zoom, Teams, Discord, navegadores e até jogos. O app captura áudio no nível do sistema.',
             q3: 'Quais idiomas são suportados?',
-            a3: 'Suporte a 16+ idiomas com exibição de duplas legendas: inglês, francês, espanhol, alemão, italiano, japonês, coreano, chinês (simplificado/tradicional), árabe, hindi, português, polonês, holandês, turco, russo, ucraniano.',
+            a3: 'Suporte a 60+ idiomas com exibição de duplas legendas: inglês, francês, espanhol, alemão, italiano, japonês, coreano, chinês (simplificado/tradicional), árabe, hindi, português, polonês, holandês, turco, russo, ucraniano e mais.',
             q4: 'É necessária conexão com a internet?',
             a4: 'Sim, é necessária uma conexão estável com a internet para reconhecimento de fala e tradução. O app usa serviços na nuvem para garantir alta precisão.',
             q5: 'Posso personalizar a aparência das legendas?',
@@ -1789,10 +1789,10 @@ const translations = {
             articles: 'Artykuły'
         },
         title: 'Live Subtitles — Podwójne napisy na żywo w każdej aplikacji',
-        description: 'Napisy na żywo i podwójne napisy do każdej aplikacji na Windows, Mac, iOS. Tłumaczenie AI w 50+ językach dla Zoom, Teams, Netflix. Bez mikrofonu, darmowy start.',
+        description: 'Napisy na żywo i podwójne napisy do każdej aplikacji na Windows, Mac, iOS. Tłumaczenie AI w 60+ językach dla Zoom, Teams, Netflix. Bez mikrofonu, darmowy start.',
         download: 'Pobierz teraz',
         meta: {
-            description: 'Napisy na żywo i podwójne napisy do każdej aplikacji na Windows, Mac, iOS. Tłumaczenie AI w 50+ językach dla Zoom, Teams, Netflix. Bez mikrofonu, darmowy start.',
+            description: 'Napisy na żywo i podwójne napisy do każdej aplikacji na Windows, Mac, iOS. Tłumaczenie AI w 60+ językach dla Zoom, Teams, Netflix. Bez mikrofonu, darmowy start.',
             keywords: 'podwójne napisy, napisy do nauki języków, tłumaczenie mowy, rozpoznawanie mowy, napisy online, Live Subtitles, nauka angielskiego, nauka języków, napisy w czasie rzeczywistym, rozumienie mowy, tłumacz filmów'
         },
         downloadModal: {
@@ -1824,7 +1824,7 @@ const translations = {
             q2: 'Czy działa ze wszystkimi aplikacjami?',
             a2: 'Tak! Live Subtitles działa absolutnie ze wszystkimi aplikacjami: YouTube, Netflix, Zoom, Teams, Discord, przeglądarkami, a nawet grami. Aplikacja przechwytuje dźwięk na poziomie systemu.',
             q3: 'Jakie języki są obsługiwane?',
-            a3: 'Obsługa 16+ języków z wyświetlaniem podwójnych napisów: angielski, francuski, hiszpański, niemiecki, włoski, japoński, koreański, chiński (uproszczony/tradycyjny), arabski, hindi, portugalski, polski, holenderski, turecki, rosyjski, ukraiński.',
+            a3: 'Obsługa 60+ języków z wyświetlaniem podwójnych napisów: angielski, francuski, hiszpański, niemiecki, włoski, japoński, koreański, chiński (uproszczony/tradycyjny), arabski, hindi, portugalski, polski, holenderski, turecki, rosyjski, ukraiński i inne.',
             q4: 'Czy potrzebne jest połączenie internetowe?',
             a4: 'Tak, stabilne połączenie internetowe jest potrzebne do rozpoznawania mowy i tłumaczenia. Aplikacja używa usług chmurowych, aby zapewnić wysoką dokładność.',
             q5: 'Czy mogę dostosować wygląd napisów?',
@@ -1870,7 +1870,7 @@ const translations = {
             ratingLabel: '4,7/5 · 351 beoordelingen',
             watchDemo: 'Bekijk demo',
             title: 'Live vertaler voor vergaderingen, gesprekken en oproepen op je pc',
-            lead: 'Vertaalt spraak in realtime naar 50+ talen. Werkt met Zoom, Teams, Skype, Google Meet en elke app — zonder microfoon.'
+            lead: 'Vertaalt spraak in realtime naar 60+ talen. Werkt met Zoom, Teams, Skype, Google Meet en elke app — zonder microfoon.'
         },
         downloadBtn: 'Download van Microsoft Store',
         androidBtn: 'Wil Android versie',
@@ -1931,10 +1931,10 @@ const translations = {
             articles: 'Artikelen'
         },
         title: 'Live Subtitles — Live ondertiteling & duale ondertitels',
-        description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac & iOS. AI-vertaling in 50+ talen voor Zoom, Teams en Netflix. Gratis proef, geen mic.',
+        description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac & iOS. AI-vertaling in 60+ talen voor Zoom, Teams en Netflix. Gratis proef, geen mic.',
         download: 'Nu downloaden',
         meta: {
-            description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac & iOS. AI-vertaling in 50+ talen voor Zoom, Teams en Netflix. Gratis proef, geen mic.',
+            description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac & iOS. AI-vertaling in 60+ talen voor Zoom, Teams en Netflix. Gratis proef, geen mic.',
             keywords: 'dubbele ondertitels, ondertitels voor taal leren, spraak vertaling, spraakherkenning, online ondertitels, Live Subtitles, Engels leren, taal leren, realtime ondertitels, spraak begrip, film vertaler'
         },
         downloadModal: {
@@ -1966,7 +1966,7 @@ const translations = {
             q2: 'Werkt het met alle applicaties?',
             a2: 'Ja! Live Subtitles werkt absoluut met alle applicaties: YouTube, Netflix, Zoom, Teams, Discord, browsers en zelfs games. De app vangt audio op systeemniveau.',
             q3: 'Welke talen worden ondersteund?',
-            a3: 'Ondersteunt 16+ talen met dubbele ondertitel weergave: Engels, Frans, Spaans, Duits, Italiaans, Japans, Koreaans, Chinees (vereenvoudigd/traditioneel), Arabisch, Hindi, Portugees, Pools, Nederlands, Turks, Russisch, Oekraïens.',
+            a3: 'Ondersteunt 60+ talen met dubbele ondertitel weergave: Engels, Frans, Spaans, Duits, Italiaans, Japans, Koreaans, Chinees (vereenvoudigd/traditioneel), Arabisch, Hindi, Portugees, Pools, Nederlands, Turks, Russisch, Oekraïens en meer.',
             q4: 'Is internetverbinding vereist?',
             a4: 'Ja, stabiele internetverbinding is vereist voor spraakherkenning en vertaling. De app gebruikt cloudservices om hoge nauwkeurigheid te garanderen.',
             q5: 'Kan ik het uiterlijk van ondertitels aanpassen?',
@@ -2073,10 +2073,10 @@ const translations = {
             articles: 'Makaleler'
         },
         title: 'Live Subtitles — Tüm Uygulamalar İçin Canlı & Çift Altyazı',
-        description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS. Zoom, Teams, Netflix için 50+ dilde gerçek zamanlı AI çeviri. Ücretsiz deneme, mikrofon yok.',
+        description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS. Zoom, Teams, Netflix için 60+ dilde gerçek zamanlı AI çeviri. Ücretsiz deneme, mikrofon yok.',
         download: 'Şimdi indir',
         meta: {
-            description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS. Zoom, Teams, Netflix için 50+ dilde gerçek zamanlı AI çeviri. Ücretsiz deneme, mikrofon yok.',
+            description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS. Zoom, Teams, Netflix için 60+ dilde gerçek zamanlı AI çeviri. Ücretsiz deneme, mikrofon yok.',
             keywords: 'çift altyazı, dil öğrenme altyazısı, konuşma çevirisi, konuşma tanıma, çevrimiçi altyazı, Live Subtitles, İngilizce öğrenme, dil öğrenimi, gerçek zamanlı altyazı, konuşma anlama, film çevirmen'
         },
         downloadModal: {
@@ -2108,7 +2108,7 @@ const translations = {
             q2: 'Tüm uygulamalarla çalışır mı?',
             a2: 'Evet! Live Subtitles kesinlikle tüm uygulamalarla çalışır: YouTube, Netflix, Zoom, Teams, Discord, tarayıcılar ve hatta oyunlar. Uygulama sistem seviyesinde ses yakalar.',
             q3: 'Hangi diller destekleniyor?',
-            a3: 'Çift altyazı gösterimi ile 16+ dil desteği: İngilizce, Fransızca, İspanyolca, Almanca, İtalyanca, Japonca, Korece, Çince (Basitleştirilmiş/Geleneksel), Arapça, Hintçe, Portekizce, Lehçe, Hollandaca, Türkçe, Rusça, Ukraynaca.',
+            a3: 'Çift altyazı gösterimi ile 60+ dil desteği: İngilizce, Fransızca, İspanyolca, Almanca, İtalyanca, Japonca, Korece, Çince (Basitleştirilmiş/Geleneksel), Arapça, Hintçe, Portekizce, Lehçe, Hollandaca, Türkçe, Rusça, Ukraynaca ve daha fazlası.',
             q4: 'İnternet bağlantısı gerekli mi?',
             a4: 'Evet, konuşma tanıma ve çeviri için kararlı internet bağlantısı gerekli. Uygulama yüksek doğruluk sağlamak için bulut hizmetleri kullanır.',
             q5: 'Altyazı görünümünü özelleştirebilir miyim?',
@@ -2154,7 +2154,7 @@ const translations = {
             ratingLabel: '4,7/5 · 351 оцінок',
             watchDemo: 'Дивитись демо',
             title: 'Живий перекладач для зустрічей, дзвінків і розмов на ПК',
-            lead: 'Перекладає мовлення в реальному часі на 50+ мов. Працює із Zoom, Teams, Skype, Google Meet і будь-яким додатком — без мікрофона.'
+            lead: 'Перекладає мовлення в реальному часі на 60+ мов. Працює із Zoom, Teams, Skype, Google Meet і будь-яким додатком — без мікрофона.'
         },
         downloadBtn: 'Завантажити з Microsoft Store',
         androidBtn: 'Хочу версію для Android',
@@ -2215,10 +2215,10 @@ const translations = {
             articles: 'Статті'
         },
         title: 'Live Subtitles — живі та подвійні субтитри для додатків',
-        description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac та iOS. AI-переклад у реальному часі 50+ мовами для Zoom, Teams і Netflix. Пробний доступ.',
+        description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac та iOS. AI-переклад у реальному часі 60+ мовами для Zoom, Teams і Netflix. Пробний доступ.',
         download: 'Завантажити зараз',
         meta: {
-            description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac та iOS. AI-переклад у реальному часі 50+ мовами для Zoom, Teams і Netflix. Пробний доступ.',
+            description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac та iOS. AI-переклад у реальному часі 60+ мовами для Zoom, Teams і Netflix. Пробний доступ.',
             keywords: 'подвійні субтитри, субтитри для вивчення мов, переклад мовлення, розпізнавання мовлення, онлайн субтитри, Live Subtitles, вивчення англійської, вивчення мов, субтитри в реальному часі, розуміння мовлення, перекладач фільмів'
         },
         downloadModal: {
@@ -2250,7 +2250,7 @@ const translations = {
             q2: 'Чи працює з усіма додатками?',
             a2: 'Так! Live Subtitles абсолютно працює з усіма додатками: YouTube, Netflix, Zoom, Teams, Discord, браузерами та навіть іграми. Додаток захоплює аудіо на системному рівні.',
             q3: 'Які мови підтримуються?',
-            a3: 'Підтримка 16+ мов з відображенням подвійних субтитрів: англійська, французька, іспанська, німецька, італійська, японська, корейська, китайська (спрощена/традиційна), арабська, хінді, португальська, польська, голландська, турецька, російська, українська.',
+            a3: 'Підтримка 60+ мов з відображенням подвійних субтитрів: англійська, французька, іспанська, німецька, італійська, японська, корейська, китайська (спрощена/традиційна), арабська, хінді, португальська, польська, голландська, турецька, російська, українська та інші.',
             q4: 'Чи потрібне підключення до інтернету?',
             a4: 'Так, стабільне підключення до інтернету потрібне для розпізнавання мовлення та перекладу. Додаток використовує хмарні сервіси для забезпечення високої точності.',
             q5: 'Чи можу я налаштувати зовнішній вигляд субтитрів?',
