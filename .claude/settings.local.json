@@ -51,5 +51,8 @@
       "Bash(kill %1)",
       "Bash(pkill -f \"http.server 8765\")"
     ]
-  }
+  },
+  "disabledMcpjsonServers": [
+    "deepgram-docs"
+  ]
 }
