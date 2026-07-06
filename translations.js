@@ -13,8 +13,8 @@ const translations = {
             downloadFree: 'Start Free Trial',
             ratingLabel: '4.7/5 · 351 ratings',
             watchDemo: 'Watch Demo',
-            title: 'Live translator for meetings, calls and conversations on your PC',
-            lead: 'Translates speech in real time into 60+ languages. Works with Zoom, Teams, Skype, Google Meet and any app — no microphone.'
+            title: 'Live Captions & Dual Subtitles for Any App',
+            lead: 'Translates speech in real time into 60+ languages. Works with Zoom, Teams, Skype, Google Meet and any app — no microphone. Available for Windows, macOS and iOS.'
         },
         downloadBtn: 'Download from Microsoft Store',
         androidBtn: 'Want an Android version',
@@ -160,8 +160,8 @@ const translations = {
             downloadFree: 'Попробовать бесплатно',
             ratingLabel: '4,7/5 · 351 оценок',
             watchDemo: 'Смотреть демо',
-            title: 'Живой переводчик для встреч, звонков и разговоров на ПК',
-            lead: 'Переводит речь в реальном времени на 60+ языков. Работает с Zoom, Teams, Skype, Google Meet и любым приложением — без микрофона.'
+            title: 'Субтитры и перевод в реальном времени для любого приложения',
+            lead: 'Переводит речь в реальном времени на 60+ языков. Работает с Zoom, Teams, Skype, Google Meet и любым приложением — без микрофона. Доступно для Windows, macOS и iOS.'
         },
         downloadBtn: 'Скачать в Microsoft Store',
         androidBtn: 'Хочу версию для Android',
@@ -307,8 +307,8 @@ const translations = {
             downloadFree: 'Essai gratuit',
             ratingLabel: '4,7/5 · 351 avis',
             watchDemo: 'Voir la démo',
-            title: 'Traducteur en direct pour réunions, appels et conversations sur votre PC',
-            lead: 'Traduit la parole en temps réel dans plus de 50 langues. Fonctionne avec Zoom, Teams, Skype, Google Meet et n\'importe quelle application — sans microphone.'
+            title: 'Sous-titres en direct et doubles sous-titres pour toute application',
+            lead: 'Traduit la parole en temps réel dans plus de 50 langues. Fonctionne avec Zoom, Teams, Skype, Google Meet et n\'importe quelle application — sans microphone. Disponible pour Windows, macOS et iOS.'
         },
         downloadBtn: 'Télécharger depuis Microsoft Store',
         androidBtn: 'Je veux la version Android',
@@ -449,8 +449,8 @@ const translations = {
             downloadFree: 'Prueba gratis',
             ratingLabel: '4,7/5 · 351 valoraciones',
             watchDemo: 'Ver demo',
-            title: 'Traductor en vivo para reuniones, llamadas y conversaciones en tu PC',
-            lead: 'Traduce voz en tiempo real a más de 50 idiomas. Funciona con Zoom, Teams, Skype, Google Meet y cualquier app — sin micrófono.'
+            title: 'Subtítulos en vivo y subtítulos dobles para cualquier aplicación',
+            lead: 'Traduce voz en tiempo real a más de 50 idiomas. Funciona con Zoom, Teams, Skype, Google Meet y cualquier app — sin micrófono. Disponible para Windows, macOS y iOS.'
         },
         downloadBtn: 'Descargar desde Microsoft Store',
         androidBtn: 'Quiero la versión para Android',
@@ -591,8 +591,8 @@ const translations = {
             downloadFree: 'Kostenlos testen',
             ratingLabel: '4,7/5 · 351 Bewertungen',
             watchDemo: 'Demo ansehen',
-            title: 'Live-Übersetzer für Meetings, Anrufe und Gespräche auf Ihrem PC',
-            lead: 'Übersetzt Sprache in Echtzeit in 60+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung — ohne Mikrofon.'
+            title: 'Live-Untertitel & doppelte Untertitel für jede App',
+            lead: 'Übersetzt Sprache in Echtzeit in 60+ Sprachen. Funktioniert mit Zoom, Teams, Skype, Google Meet und jeder Anwendung — ohne Mikrofon. Verfügbar für Windows, macOS und iOS.'
         },
         downloadBtn: 'Aus dem Microsoft Store herunterladen',
         androidBtn: 'Ich möchte die Android-Version',
@@ -733,8 +733,8 @@ const translations = {
             downloadFree: 'Inizia la prova gratuita',
             ratingLabel: '4,7/5 · 351 recensioni',
             watchDemo: 'Guarda la demo',
-            title: 'Traduttore in tempo reale per riunioni, chiamate e conversazioni sul tuo PC',
-            lead: 'Traduce la voce in tempo reale in oltre 50 lingue. Funziona con Zoom, Teams, Skype, Google Meet e qualsiasi app — senza microfono.'
+            title: 'Sottotitoli live e doppi sottotitoli per qualsiasi app',
+            lead: 'Traduce la voce in tempo reale in oltre 50 lingue. Funziona con Zoom, Teams, Skype, Google Meet e qualsiasi app — senza microfono. Disponibile per Windows, macOS e iOS.'
         },
         downloadBtn: 'Scarica da Microsoft Store',
         androidBtn: 'Voglio la versione per Android',
@@ -875,8 +875,8 @@ const translations = {
             downloadFree: '無料で試す',
             ratingLabel: '4.7/5 · 351件の評価',
             watchDemo: 'デモを見る',
-            title: '会議・通話・会話をPCでリアルタイム翻訳',
-            lead: '音声を50以上の言語にリアルタイムで翻訳。Zoom、Teams、Skype、Google Meet などあらゆるアプリに対応 — マイク不要。'
+            title: 'あらゆるアプリにリアルタイム字幕・二重字幕',
+            lead: '音声を50以上の言語にリアルタイムで翻訳。Zoom、Teams、Skype、Google Meet などあらゆるアプリに対応 — マイク不要。 Windows・macOS・iOS対応。'
         },
         downloadBtn: 'Microsoft Storeからダウンロード',
         androidBtn: 'Android版が欲しい',
@@ -1017,8 +1017,8 @@ const translations = {
             downloadFree: '무료로 시작하기',
             ratingLabel: '4.7/5 · 351개',
             watchDemo: '데모 보기',
-            title: '회의, 통화, 대화를 PC에서 실시간 번역',
-            lead: '음성을 50개 이상의 언어로 실시간 번역. Zoom, Teams, Skype, Google Meet 등 모든 앱에서 작동 — 마이크 불필요.'
+            title: '모든 앱을 위한 실시간 자막 & 이중 자막',
+            lead: '음성을 50개 이상의 언어로 실시간 번역. Zoom, Teams, Skype, Google Meet 등 모든 앱에서 작동 — 마이크 불필요. Windows, macOS, iOS 지원.'
         },
         downloadBtn: 'Microsoft Store에서 다운로드',
         androidBtn: 'Android 버전 원함',
@@ -1159,8 +1159,8 @@ const translations = {
             downloadFree: '免费试用',
             ratingLabel: '4.7/5 · 351 条评价',
             watchDemo: '观看演示',
-            title: '在电脑上实时翻译会议、通话和对话',
-            lead: '将语音实时翻译成 50 多种语言。支持 Zoom、Teams、Skype、Google Meet 等任何应用 — 无需麦克风。'
+            title: '任意应用的实时字幕与双语字幕',
+            lead: '将语音实时翻译成 50 多种语言。支持 Zoom、Teams、Skype、Google Meet 等任何应用 — 无需麦克风。 支持 Windows、macOS 和 iOS。'
         },
         downloadBtn: '从微软商店下载',
         androidBtn: '需要Android版本',
@@ -1301,8 +1301,8 @@ const translations = {
             downloadFree: 'ابدأ النسخة التجريبية المجانية',
             ratingLabel: '4.7/5 · 351 تقييم',
             watchDemo: 'شاهد العرض',
-            title: 'مترجم مباشر للاجتماعات والمكالمات والمحادثات على الكمبيوتر',
-            lead: 'يترجم الكلام فوريًا إلى أكثر من 50 لغة. يعمل مع Zoom وTeams وSkype وGoogle Meet وأي تطبيق — بدون ميكروفون.'
+            title: 'ترجمة فورية وترجمات مزدوجة لأي تطبيق',
+            lead: 'يترجم الكلام فوريًا إلى أكثر من 50 لغة. يعمل مع Zoom وTeams وSkype وGoogle Meet وأي تطبيق — بدون ميكروفون. متوفر لأنظمة Windows وmacOS وiOS.'
         },
         downloadBtn: 'تحميل من متجر مايكروسوفت',
         androidBtn: 'أريد إصدار Android',
@@ -1443,8 +1443,8 @@ const translations = {
             downloadFree: 'मुफ़्त ट्रायल शुरू करें',
             ratingLabel: '4.7/5 · 351 रेटिंग',
             watchDemo: 'डेमो देखें',
-            title: 'मीटिंग, कॉल और बातचीत के लिए आपके पीसी पर लाइव अनुवादक',
-            lead: 'भाषण का 60+ भाषाओं में रियल-टाइम अनुवाद। Zoom, Teams, Skype, Google Meet और किसी भी ऐप के साथ काम करता है — माइक्रोफ़ोन की ज़रूरत नहीं।'
+            title: 'किसी भी ऐप के लिए लाइव कैप्शन और डुअल सबटाइटल',
+            lead: 'भाषण का 60+ भाषाओं में रियल-टाइम अनुवाद। Zoom, Teams, Skype, Google Meet और किसी भी ऐप के साथ काम करता है — माइक्रोफ़ोन की ज़रूरत नहीं। Windows, macOS और iOS के लिए उपलब्ध।'
         },
         downloadBtn: 'Microsoft Store से डाउनलोड करें',
         androidBtn: 'Android संस्करण चाहिए',
@@ -1585,8 +1585,8 @@ const translations = {
             downloadFree: 'Comece o teste grátis',
             ratingLabel: '4,7/5 · 351 avaliações',
             watchDemo: 'Ver demo',
-            title: 'Tradutor ao vivo para reuniões, chamadas e conversas no seu PC',
-            lead: 'Traduz a fala em tempo real para mais de 50 idiomas. Funciona com Zoom, Teams, Skype, Google Meet e qualquer app — sem microfone.'
+            title: 'Legendas ao vivo e legendas duplas para qualquer app',
+            lead: 'Traduz a fala em tempo real para mais de 50 idiomas. Funciona com Zoom, Teams, Skype, Google Meet e qualquer app — sem microfone. Disponível para Windows, macOS e iOS.'
         },
         downloadBtn: 'Baixar da Microsoft Store',
         androidBtn: 'Quero versão Android',
@@ -1727,8 +1727,8 @@ const translations = {
             downloadFree: 'Wypróbuj za darmo',
             ratingLabel: '4,7/5 · 351 ocen',
             watchDemo: 'Zobacz demo',
-            title: 'Tłumacz na żywo do spotkań, rozmów i połączeń na Twoim komputerze',
-            lead: 'Tłumaczy mowę w czasie rzeczywistym na ponad 50 języków. Działa z Zoom, Teams, Skype, Google Meet i każdą aplikacją — bez mikrofonu.'
+            title: 'Napisy na żywo i podwójne napisy dla każdej aplikacji',
+            lead: 'Tłumaczy mowę w czasie rzeczywistym na ponad 50 języków. Działa z Zoom, Teams, Skype, Google Meet i każdą aplikacją — bez mikrofonu. Dostępne dla Windows, macOS i iOS.'
         },
         downloadBtn: 'Pobierz z Microsoft Store',
         androidBtn: 'Chcę wersję na Android',
@@ -1869,8 +1869,8 @@ const translations = {
             downloadFree: 'Gratis proberen',
             ratingLabel: '4,7/5 · 351 beoordelingen',
             watchDemo: 'Bekijk demo',
-            title: 'Live vertaler voor vergaderingen, gesprekken en oproepen op je pc',
-            lead: 'Vertaalt spraak in realtime naar 60+ talen. Werkt met Zoom, Teams, Skype, Google Meet en elke app — zonder microfoon.'
+            title: 'Live ondertiteling en dubbele ondertitels voor elke app',
+            lead: 'Vertaalt spraak in realtime naar 60+ talen. Werkt met Zoom, Teams, Skype, Google Meet en elke app — zonder microfoon. Beschikbaar voor Windows, macOS en iOS.'
         },
         downloadBtn: 'Download van Microsoft Store',
         androidBtn: 'Wil Android versie',
@@ -2011,8 +2011,8 @@ const translations = {
             downloadFree: 'Ücretsiz Deneyin',
             ratingLabel: '4,7/5 · 351 değerlendirme',
             watchDemo: 'Demoyu izle',
-            title: 'Toplantılar, aramalar ve konuşmalar için bilgisayarınızda canlı çevirmen',
-            lead: 'Konuşmayı gerçek zamanlı olarak 50\'den fazla dile çevirir. Zoom, Teams, Skype, Google Meet ve her uygulamayla çalışır — mikrofon gerekmez.'
+            title: 'Her uygulama için canlı altyazı ve çift altyazı',
+            lead: 'Konuşmayı gerçek zamanlı olarak 50\'den fazla dile çevirir. Zoom, Teams, Skype, Google Meet ve her uygulamayla çalışır — mikrofon gerekmez. Windows, macOS ve iOS için mevcut.'
         },
         downloadBtn: 'Microsoft Store\'dan İndir',
         androidBtn: 'Android sürümü istiyorum',
@@ -2153,8 +2153,8 @@ const translations = {
             downloadFree: 'Почати безкоштовно',
             ratingLabel: '4,7/5 · 351 оцінок',
             watchDemo: 'Дивитись демо',
-            title: 'Живий перекладач для зустрічей, дзвінків і розмов на ПК',
-            lead: 'Перекладає мовлення в реальному часі на 60+ мов. Працює із Zoom, Teams, Skype, Google Meet і будь-яким додатком — без мікрофона.'
+            title: 'Субтитри в реальному часі та подвійні субтитри для будь-якого додатка',
+            lead: 'Перекладає мовлення в реальному часі на 60+ мов. Працює із Zoom, Teams, Skype, Google Meet і будь-яким додатком — без мікрофона. Доступно для Windows, macOS та iOS.'
         },
         downloadBtn: 'Завантажити з Microsoft Store',
         androidBtn: 'Хочу версію для Android',

@@ -1,0 +1,34 @@
+# Live Subtitles
+
+> Live Subtitles is a desktop app for Windows, macOS and iOS that shows real-time
+> AI captions and dual (two-language) subtitles for any audio playing on the
+> device — Zoom, Microsoft Teams, Google Meet, Skype, YouTube, Netflix, games and
+> any other app. It captures system audio directly, so no microphone is needed.
+> Speech is transcribed and translated live into 60+ languages (69 translation
+> targets), with the original and translated line shown together.
+
+Key facts:
+- Product: Live Subtitles (publisher: 2Sub / getlivesubtitles.com)
+- Platforms: Windows (Microsoft Store), macOS and iOS (App Store); Android in development
+- Microsoft Store rating: 4.7/5 from 351+ ratings
+- Pricing: 3-day free trial, no credit card; paid plans from $5/month
+- Core features: real-time captions from system audio, dual subtitles
+  (original + translation), 60+ translation languages, ~66 recognition language
+  variants, works offline with local models or online providers, Game Mode overlay
+- Typical uses: multilingual meetings, watching foreign movies/videos, language
+  learning with dual subtitles, accessibility (deaf/hard-of-hearing), gaming
+
+## Main pages
+
+- [Home](https://live-subtitles.com/): overview, demo and download
+- [Pricing](https://live-subtitles.com/pricing.html): plans and trial
+- [Microsoft Store listing](https://apps.microsoft.com/detail/9ph1r9djg47s): Windows download
+
+## Guides
+
+- [Language Reactor alternatives 2026](https://live-subtitles.com/articles/en/article-17.html)
+- [Zoom live captions](https://live-subtitles.com/zoom-live-captions.html)
+- [Microsoft Teams live captions](https://live-subtitles.com/teams-live-captions.html)
+- [YouTube dual subtitles](https://live-subtitles.com/youtube-dual-subtitles.html)
+- [Netflix dual subtitles](https://live-subtitles.com/netflix-subtitles.html)
+- [All articles](https://live-subtitles.com/articles/en/)
