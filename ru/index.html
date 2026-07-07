@@ -1676,7 +1676,7 @@
             <h1 class="title" data-translate="header.title">Субтитры и перевод в реальном времени для любого приложения</h1>
             <p class="lead" data-translate="header.lead">Переводит речь в реальном времени на 60+ языков. Работает с Zoom, Teams, Skype, Google Meet и любым приложением — без микрофона. Доступно для Windows, macOS и iOS.</p>
             <div class="hero-cta">
-                <a href="#download" id="heroTryFree" class="btn-download-free" data-translate="header.downloadFree">Попробовать бесплатно</a>
+                <a href="#download" onclick="return gtag_report_conversion(this.href);" id="heroTryFree" class="btn-download-free" data-translate="header.downloadFree">Попробовать бесплатно</a>
                 <a href="#examples" class="btn-watch-demo" data-translate="header.watchDemo">Смотреть демо</a>
             </div>
             <a class="hero-rating" href="https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding" target="_blank" rel="noopener" aria-label="4.7 out of 5, 351 ratings on the Microsoft Store">
@@ -2595,10 +2595,10 @@
         function routeTryFree() {
             const os = detectOS();
             const store = TRYFREE_STORES[os];
-            ['navTryFree'].forEach(function (id) {
+            ['navTryFree', 'heroTryFree'].forEach(function (id) {
                 const el = document.getElementById(id);
                 if (!el) return;
-                if (os === 'android' || !store) { el.setAttribute('href', '#download'); el.removeAttribute('target'); }
+                if (os === 'android' || !store) { el.setAttribute('href', '#download'); el.removeAttribute('target'); el.removeAttribute('onclick'); }
                 else { el.setAttribute('href', store); el.setAttribute('target', '_blank'); el.setAttribute('rel', 'noopener'); }
             });
         }

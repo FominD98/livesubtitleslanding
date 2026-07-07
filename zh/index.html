@@ -1676,7 +1676,7 @@
             <h1 class="title" data-translate="header.title">任意应用的实时字幕与双语字幕</h1>
             <p class="lead" data-translate="header.lead">将语音实时翻译成 50 多种语言。支持 Zoom、Teams、Skype、Google Meet 等任何应用 — 无需麦克风。 支持 Windows、macOS 和 iOS。</p>
             <div class="hero-cta">
-                <a href="#download" id="heroTryFree" class="btn-download-free" data-translate="header.downloadFree">免费试用</a>
+                <a href="#download" onclick="return gtag_report_conversion(this.href);" id="heroTryFree" class="btn-download-free" data-translate="header.downloadFree">免费试用</a>
                 <a href="#examples" class="btn-watch-demo" data-translate="header.watchDemo">观看演示</a>
             </div>
             <a class="hero-rating" href="https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding" target="_blank" rel="noopener" aria-label="4.7 out of 5, 351 ratings on the Microsoft Store">
@@ -2595,10 +2595,10 @@
         function routeTryFree() {
             const os = detectOS();
             const store = TRYFREE_STORES[os];
-            ['navTryFree'].forEach(function (id) {
+            ['navTryFree', 'heroTryFree'].forEach(function (id) {
                 const el = document.getElementById(id);
                 if (!el) return;
-                if (os === 'android' || !store) { el.setAttribute('href', '#download'); el.removeAttribute('target'); }
+                if (os === 'android' || !store) { el.setAttribute('href', '#download'); el.removeAttribute('target'); el.removeAttribute('onclick'); }
                 else { el.setAttribute('href', store); el.setAttribute('target', '_blank'); el.setAttribute('rel', 'noopener'); }
             });
         }
