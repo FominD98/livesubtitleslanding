@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+  <title>You are invited to Live Subtitles</title>
+  <meta name="description" content="Get bonus minutes in Live Subtitles - real-time subtitles and translation for any app.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://live-subtitles.com/i/" />
+  <link rel="icon" href="/2sub.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="You are invited to Live Subtitles">
+  <meta property="og:description" content="Real-time subtitles and translation for any app. Install with this invite and get bonus minutes.">
+  <meta property="og:image" content="https://live-subtitles.com/2sub.png">
+  <meta property="og:url" content="https://live-subtitles.com/i/">
+  <meta name="twitter:card" content="summary">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f7f9fb;
+      color: #1c2733;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      max-width: 460px;
+      width: calc(100% - 2rem);
+      margin: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    .card img { width: 56px; height: 56px; }
+    h1 { font-size: 1.4em; margin: 0.75rem 0 0.5rem; }
+    p { margin: 0.5rem 0; color: #45566a; }
+    .code {
+      display: inline-block;
+      margin: 1rem 0 0.25rem;
+      padding: 0.6rem 1.4rem;
+      border: 1px dashed #b6c4d4;
+      border-radius: 8px;
+      background: #f2f6fa;
+      font-size: 1.6em;
+      font-weight: bold;
+      letter-spacing: 0.18em;
+      color: #1c2733;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      background: #0077cc;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover { background: #005fa3; }
+    .link-btn {
+      margin-top: 0.5rem;
+      background: none;
+      border: none;
+      color: #0077cc;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+    .note { margin-top: 1.5rem; font-size: 0.85em; color: #8494a6; }
+    .error { color: #c5221f; }
+    .hidden { display: none; }
+    a { color: #0077cc; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/2sub.png" alt="Live Subtitles">
+
+    <div id="state-ready" class="hidden">
+      <h1>Your friend invited you to Live Subtitles</h1>
+      <p>Real-time subtitles and translation for any app, meeting or video. Install with this invite and both of you get bonus minutes.</p>
+      <div class="code" id="code">------</div>
+      <div><button class="link-btn" id="copy">Copy invite code</button></div>
+      <a class="btn" id="install" href="#" rel="noopener">Install from Microsoft Store</a>
+      <p class="note">The code is applied automatically after installation. If it is not, open Settings in the app, choose "Invite friends" and enter the code manually.</p>
+    </div>
+
+    <div id="state-error" class="hidden">
+      <h1 class="error">This invite link is incomplete</h1>
+      <p>Ask your friend to send the link again, or install the app and enter the invite code manually.</p>
+      <a class="btn" href="https://apps.microsoft.com/detail/9ph1r9djg47s?cid=ref_invalid" rel="noopener">Open Microsoft Store</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var API = 'https://api.live-subtitles.com/v1/referral/click';
+      var STORE = 'https://apps.microsoft.com/detail/9ph1r9djg47s';
+      var params = new URLSearchParams(window.location.search);
+      var raw = (params.get('c') || params.get('code') || '').toUpperCase();
+      var code = raw.replace(/[^0-9A-Z]/g, '').slice(0, 6);
+
+      function show(id) {
+        ['state-ready', 'state-error'].forEach(function (s) {
+          document.getElementById(s).classList.toggle('hidden', s !== id);
+        });
+      }
+
+      if (code.length !== 6) {
+        show('state-error');
+        return;
+      }
+
+      document.getElementById('code').textContent = code;
+      document.getElementById('install').href = STORE + '?cid=ref_' + encodeURIComponent(code);
+      show('state-ready');
+
+      // Счётчик кликов по ссылке-приглашению: воронка code -> клик -> установка -> redeem.
+      try {
+        fetch(API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: code }),
+          keepalive: true,
+          mode: 'cors'
+        }).catch(function () { /* счётчик не критичен */ });
+      } catch (e) { /* старые браузеры без fetch */ }
+
+      if (typeof window.ym === 'function') {
+        try { window.ym(101009280, 'reachGoal', 'referral_invite_open'); } catch (e) { /* counter not ready */ }
+      }
+
+      document.getElementById('copy').addEventListener('click', function () {
+        var button = this;
+        function done() { button.textContent = 'Copied'; }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(done, function () { /* denied */ });
+        } else {
+          var input = document.createElement('input');
+          input.value = code;
+          document.body.appendChild(input);
+          input.select();
+          try { document.execCommand('copy'); done(); } catch (e) { /* unsupported */ }
+          document.body.removeChild(input);
+        }
+      });
+
+      document.getElementById('install').addEventListener('click', function () {
+        if (typeof window.ym === 'function') {
+          try { window.ym(101009280, 'reachGoal', 'referral_store_click'); } catch (e) { /* counter not ready */ }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
