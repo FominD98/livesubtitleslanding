@@ -107,7 +107,6 @@
     .share-btn.tg { background: #229ED9; }
     .share-btn.wa { background: #25D366; }
     .share-btn.x  { background: #111; }
-    .share-btn.vk { background: #0077FF; }
     .share-btn.copy { background: #eef2f7; color: #33475b; }
     .error { color: #c5221f; }
     .hidden { display: none; }
@@ -147,7 +146,6 @@
           <a class="share-btn tg" id="share-tg" href="#" target="_blank" rel="noopener">Telegram</a>
           <a class="share-btn wa" id="share-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
           <a class="share-btn x" id="share-x" href="#" target="_blank" rel="noopener">X</a>
-          <a class="share-btn vk" id="share-vk" href="#" target="_blank" rel="noopener">VK</a>
           <button class="share-btn copy" id="share-copy">Скопировать ссылку</button>
         </div>
       </div>
@@ -221,8 +219,7 @@
       var targets = {
         'share-tg': 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pitch),
         'share-wa': 'https://wa.me/?text=' + encodeURIComponent(pitch + ' ' + pageUrl),
-        'share-x': 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(pitch) + '&url=' + encodeURIComponent(pageUrl),
-        'share-vk': 'https://vk.com/share.php?url=' + encodeURIComponent(pageUrl) + '&title=' + encodeURIComponent(pitch)
+        'share-x': 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(pitch) + '&url=' + encodeURIComponent(pageUrl)
       };
       Object.keys(targets).forEach(function (id) {
         var node = document.getElementById(id);
