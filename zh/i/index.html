@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+  <title>让屏幕上的任何语言都能看懂</title>
+  <meta name="description" content="Live Subtitles 在任何应用之上实时显示字幕和翻译：通话、会议、视频、直播、游戏。支持 60+ 种语言，被观看的应用无需安装任何插件。此邀请附赠免费分钟数。">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://live-subtitles.com/zh/i/" />
+  <link rel="icon" href="/2sub.ico">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="让屏幕上的任何语言都能看懂">
+  <meta property="og:description" content="Live Subtitles 在任何应用之上实时显示字幕和翻译：通话、会议、视频、直播、游戏。支持 60+ 种语言，被观看的应用无需安装任何插件。此邀请附赠免费分钟数。">
+  <meta property="og:image" content="https://live-subtitles.com/img/live-subtitles-video-call-captions.jpg">
+  <meta property="og:image:width" content="960">
+  <meta property="og:image:height" content="524">
+  <meta property="og:image:alt" content="视频通话上的实时字幕">
+  <meta property="og:url" content="https://live-subtitles.com/zh/i/">
+  <meta property="og:site_name" content="Live Subtitles">
+  <meta property="og:locale" content="zh_CN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="让屏幕上的任何语言都能看懂">
+  <meta name="twitter:description" content="Live Subtitles 在任何应用之上实时显示字幕和翻译：通话、会议、视频、直播、游戏。支持 60+ 种语言，被观看的应用无需安装任何插件。此邀请附赠免费分钟数。">
+  <meta name="twitter:image" content="https://live-subtitles.com/img/live-subtitles-video-call-captions.jpg">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background: #f7f9fb;
+      color: #1c2733;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      max-width: 460px;
+      width: calc(100% - 2rem);
+      margin: 1rem;
+      padding: 2rem;
+      text-align: center;
+    }
+    .card img { width: 56px; height: 56px; }
+    h1 { font-size: 1.4em; margin: 0.75rem 0 0.5rem; }
+    p { margin: 0.5rem 0; color: #45566a; }
+    .code {
+      display: inline-block;
+      margin: 1rem 0 0.25rem;
+      padding: 0.6rem 1.4rem;
+      border: 1px dashed #b6c4d4;
+      border-radius: 8px;
+      background: #f2f6fa;
+      font-size: 1.6em;
+      font-weight: bold;
+      letter-spacing: 0.18em;
+      color: #1c2733;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.75rem 2rem;
+      border: none;
+      border-radius: 8px;
+      background: #0077cc;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn:hover { background: #005fa3; }
+    .link-btn {
+      margin-top: 0.5rem;
+      background: none;
+      border: none;
+      color: #0077cc;
+      font-size: 0.9em;
+      cursor: pointer;
+    }
+    .note { margin-top: 1.2rem; font-size: 0.85em; color: #8494a6; }
+    .lead { font-size: 1.05em; color: #33475b; }
+    .usp { text-align: left; margin: 1.4rem auto 0; padding: 0 0 0 1.1rem; max-width: 30rem; color: #33475b; }
+    .usp li { margin-bottom: 0.5rem; }
+    .gift { display: block; margin: 1.6rem 0 0.6rem; padding: 0.9rem 1rem; border-radius: 10px;
+            background: #f2ecff; border: 1px solid #ddd0ff; }
+    .gift-title { display: block; font-weight: 700; color: #4c1d95; }
+    .gift-sub { display: block; font-size: 0.9em; color: #6b5b95; margin-top: 0.15rem; }
+    .platforms { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+    .btn-alt { background: #fff; color: #4c1d95; border: 1px solid #cbb8ff; }
+    .share { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid #e6ecf2; }
+    .share-label { display: block; font-size: 0.9em; color: #56697c; margin-bottom: 0.7rem; }
+    .share-row { display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; }
+    .share-btn { display: inline-block; padding: 0.45rem 0.8rem; border-radius: 999px; font-size: 0.85em;
+                 text-decoration: none; color: #fff; border: 0; cursor: pointer; font-family: inherit; }
+    .share-btn.tg { background: #229ED9; }
+    .share-btn.wa { background: #25D366; }
+    .share-btn.x  { background: #111; }
+    .share-btn.vk { background: #0077FF; }
+    .share-btn.copy { background: #eef2f7; color: #33475b; }
+    .error { color: #c5221f; }
+    .hidden { display: none; }
+    a { color: #0077cc; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/2sub.png" alt="Live Subtitles">
+
+    <div id="state-ready" class="hidden">
+      <h1>让屏幕上的任何语言都能看懂</h1>
+      <p class="lead">Live Subtitles 在任何应用窗口之上显示字幕和即时翻译：视频通话、网课、直播、影片、游戏。被观看的应用无需插件、无需账号、无需设置。</p>
+
+      <ul class="usp">
+        <li><b>双行字幕</b> &mdash; 原文与译文同时显示。</li>
+        <li><b>适用于任何窗口</b> &mdash; Zoom、Teams、YouTube、Netflix、Steam，皆可。</li>
+        <li><b>60+ 种语言</b> &mdash; 实时语音识别与翻译。</li>
+      </ul>
+
+      <div class="gift">
+        <span class="gift-title">朋友的邀请附赠免费分钟数</span>
+        <span class="gift-sub">使用下方邀请码，你和朋友都能获得。</span>
+      </div>
+
+      <div class="code" id="code">------</div>
+      <div><button class="link-btn" id="copy">复制邀请码</button></div>
+
+      <div class="platforms">
+        <a class="btn" id="install" href="#" rel="noopener">免费下载 Windows 版</a>
+      </div>
+      <p class="note">安装后邀请码会自动生效，无需手动输入。如果没有生效，请在应用的设置中选择&ldquo;邀请好友&rdquo;并输入上方的邀请码。</p>
+
+      <div class="share">
+        <span class="share-label">觉得有用？分享给需要的人：</span>
+        <div class="share-row">
+          <a class="share-btn tg" id="share-tg" href="#" target="_blank" rel="noopener">Telegram</a>
+          <a class="share-btn wa" id="share-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="share-btn x" id="share-x" href="#" target="_blank" rel="noopener">X</a>
+          <a class="share-btn vk" id="share-vk" href="#" target="_blank" rel="noopener">VK</a>
+          <button class="share-btn copy" id="share-copy">复制链接</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="state-error" class="hidden">
+      <h1 class="error">邀请链接不完整</h1>
+      <p>请让朋友重新发送链接，或先安装应用再手动输入邀请码。</p>
+      <a class="btn" href="https://apps.microsoft.com/detail/9ph1r9djg47s?cid=ref_invalid" rel="noopener">打开 Microsoft Store</a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var API = 'https://api.live-subtitles.com/v1/referral/click';
+      var STORE = 'https://apps.microsoft.com/detail/9ph1r9djg47s';
+      var params = new URLSearchParams(window.location.search);
+      var raw = (params.get('c') || params.get('code') || '').toUpperCase();
+      var code = raw.replace(/[^0-9A-Z]/g, '').slice(0, 6);
+
+      function show(id) {
+        ['state-ready', 'state-error'].forEach(function (s) {
+          document.getElementById(s).classList.toggle('hidden', s !== id);
+        });
+      }
+
+      if (code.length !== 6) {
+        show('state-error');
+        return;
+      }
+
+      document.getElementById('code').textContent = code;
+      document.getElementById('install').href = STORE + '?cid=ref_' + encodeURIComponent(code);
+      show('state-ready');
+
+      // Счётчик кликов по ссылке-приглашению: воронка code -> клик -> установка -> redeem.
+      try {
+        fetch(API, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ code: code }),
+          keepalive: true,
+          mode: 'cors'
+        }).catch(function () { /* счётчик не критичен */ });
+      } catch (e) { /* старые браузеры без fetch */ }
+
+      if (typeof window.ym === 'function') {
+        try { window.ym(101009280, 'reachGoal', 'referral_invite_open'); } catch (e) { /* counter not ready */ }
+      }
+
+      document.getElementById('copy').addEventListener('click', function () {
+        var button = this;
+        function done() { button.textContent = '已复制'; }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(code).then(done, function () { /* denied */ });
+        } else {
+          var input = document.createElement('input');
+          input.value = code;
+          document.body.appendChild(input);
+          input.select();
+          try { document.execCommand('copy'); done(); } catch (e) { /* unsupported */ }
+          document.body.removeChild(input);
+        }
+      });
+
+      // Шаринг: передаём тот же URL с кодом, поэтому цепочка продолжает работать на
+      // того же пригласившего. Текст — про приложение, а не про бонус: получатель ещё
+      // не знает продукт, и «20 минут» без контекста ничего не значат.
+      var pageUrl = window.location.origin + window.location.pathname + '?c=' + code;
+      var pitch = '任何应用之上的实时字幕与翻译：通话、视频、直播、游戏。';
+      var targets = {
+        'share-tg': 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pitch),
+        'share-wa': 'https://wa.me/?text=' + encodeURIComponent(pitch + ' ' + pageUrl),
+        'share-x': 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(pitch) + '&url=' + encodeURIComponent(pageUrl),
+        'share-vk': 'https://vk.com/share.php?url=' + encodeURIComponent(pageUrl) + '&title=' + encodeURIComponent(pitch)
+      };
+      Object.keys(targets).forEach(function (id) {
+        var node = document.getElementById(id);
+        if (!node) return;
+        node.href = targets[id];
+        node.addEventListener('click', function () {
+          if (typeof window.ym === 'function') {
+            try { window.ym(101009280, 'reachGoal', 'referral_page_share'); } catch (e) { /* counter not ready */ }
+          }
+        });
+      });
+
+      var shareCopy = document.getElementById('share-copy');
+      if (shareCopy) {
+        shareCopy.addEventListener('click', function () {
+          var button = this;
+          function done() { button.textContent = '已复制'; }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(pageUrl).then(done, function () { /* denied */ });
+          } else {
+            var input = document.createElement('input');
+            input.value = pageUrl;
+            document.body.appendChild(input);
+            input.select();
+            try { document.execCommand('copy'); done(); } catch (e) { /* unsupported */ }
+            document.body.removeChild(input);
+          }
+        });
+      }
+
+      document.getElementById('install').addEventListener('click', function () {
+        if (typeof window.ym === 'function') {
+          try { window.ym(101009280, 'reachGoal', 'referral_store_click'); } catch (e) { /* counter not ready */ }
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
