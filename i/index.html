@@ -10,15 +10,15 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
-  <title>+20 free minutes in Live Subtitles</title>
-  <meta name="description" content="Live subtitles and translation for any app, call or video on Windows. Install with this invite link and your first 20 minutes are free.">
+  <title>Understand any language on your screen</title>
+  <meta name="description" content="Live Subtitles puts real-time captions and translation over any app - calls, meetings, videos, streams, games. 60+ languages, nothing to install in the app you are watching. This invite comes with free minutes.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://live-subtitles.com/i/" />
   <link rel="icon" href="/2sub.ico">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="+20 free minutes in Live Subtitles">
-  <meta property="og:description" content="Live subtitles and translation for any app, call or video on Windows. Install with this invite link and your first 20 minutes are free.">
+  <meta property="og:title" content="Understand any language on your screen">
+  <meta property="og:description" content="Live Subtitles puts real-time captions and translation over any app - calls, meetings, videos, streams, games. 60+ languages, nothing to install in the app you are watching. This invite comes with free minutes.">
   <meta property="og:image" content="https://live-subtitles.com/img/live-subtitles-video-call-captions.jpg">
   <meta property="og:image:width" content="960">
   <meta property="og:image:height" content="524">
@@ -27,8 +27,8 @@
   <meta property="og:site_name" content="Live Subtitles">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="+20 free minutes in Live Subtitles">
-  <meta name="twitter:description" content="Live subtitles and translation for any app, call or video on Windows. Install with this invite link and your first 20 minutes are free.">
+  <meta name="twitter:title" content="Understand any language on your screen">
+  <meta name="twitter:description" content="Live Subtitles puts real-time captions and translation over any app - calls, meetings, videos, streams, games. 60+ languages, nothing to install in the app you are watching. This invite comes with free minutes.">
   <meta name="twitter:image" content="https://live-subtitles.com/img/live-subtitles-video-call-captions.jpg">
 
   <style>
@@ -89,7 +89,26 @@
       font-size: 0.9em;
       cursor: pointer;
     }
-    .note { margin-top: 1.5rem; font-size: 0.85em; color: #8494a6; }
+    .note { margin-top: 1.2rem; font-size: 0.85em; color: #8494a6; }
+    .lead { font-size: 1.05em; color: #33475b; }
+    .usp { text-align: left; margin: 1.4rem auto 0; padding: 0 0 0 1.1rem; max-width: 30rem; color: #33475b; }
+    .usp li { margin-bottom: 0.5rem; }
+    .gift { display: block; margin: 1.6rem 0 0.6rem; padding: 0.9rem 1rem; border-radius: 10px;
+            background: #f2ecff; border: 1px solid #ddd0ff; }
+    .gift-title { display: block; font-weight: 700; color: #4c1d95; }
+    .gift-sub { display: block; font-size: 0.9em; color: #6b5b95; margin-top: 0.15rem; }
+    .platforms { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
+    .btn-alt { background: #fff; color: #4c1d95; border: 1px solid #cbb8ff; }
+    .share { margin-top: 1.8rem; padding-top: 1.2rem; border-top: 1px solid #e6ecf2; }
+    .share-label { display: block; font-size: 0.9em; color: #56697c; margin-bottom: 0.7rem; }
+    .share-row { display: flex; gap: 0.45rem; justify-content: center; flex-wrap: wrap; }
+    .share-btn { display: inline-block; padding: 0.45rem 0.8rem; border-radius: 999px; font-size: 0.85em;
+                 text-decoration: none; color: #fff; border: 0; cursor: pointer; font-family: inherit; }
+    .share-btn.tg { background: #229ED9; }
+    .share-btn.wa { background: #25D366; }
+    .share-btn.x  { background: #111; }
+    .share-btn.vk { background: #0077FF; }
+    .share-btn.copy { background: #eef2f7; color: #33475b; }
     .error { color: #c5221f; }
     .hidden { display: none; }
     a { color: #0077cc; }
@@ -100,12 +119,42 @@
     <img src="/2sub.png" alt="Live Subtitles">
 
     <div id="state-ready" class="hidden">
-      <h1>Your first 20 minutes are on us</h1>
-      <p>A friend invited you to Live Subtitles &mdash; live subtitles and translation for any app, call or video. Install with this invite: you get 20 free minutes, and so does your friend.</p>
+      <h1>Understand any language on your screen</h1>
+      <p class="lead">Live Subtitles shows subtitles and instant translation on top of any app &mdash;
+        video calls, lectures, streams, films, games. The app you are watching needs no plugins,
+        no accounts and no setup.</p>
+
+      <ul class="usp">
+        <li><b>Two lines at once</b> &mdash; the original and the translation, side by side.</li>
+        <li><b>Works over any window</b> &mdash; Zoom, Teams, YouTube, Netflix, Steam, anything.</li>
+        <li><b>60+ languages</b> &mdash; speech recognition and translation in real time.</li>
+      </ul>
+
+      <div class="gift">
+        <span class="gift-title">Your friend&rsquo;s invite includes free minutes</span>
+        <span class="gift-sub">Use the code below &mdash; both of you get them.</span>
+      </div>
+
       <div class="code" id="code">------</div>
       <div><button class="link-btn" id="copy">Copy invite code</button></div>
-      <a class="btn" id="install" href="#" rel="noopener">Install from Microsoft Store</a>
-      <p class="note">The code is applied automatically after installation. If it is not, open Settings in the app, choose "Invite friends" and enter the code manually.</p>
+
+      <div class="platforms">
+        <a class="btn" id="install" href="#" rel="noopener">Get it for Windows</a>
+        <a class="btn btn-alt" id="install-apple" href="https://apps.apple.com/app/live-captions-translator/id6760197210" rel="noopener">iPhone &amp; Mac</a>
+      </div>
+      <p class="note">On Windows the code applies itself after installation. On iPhone and Mac open
+        Settings in the app, choose &ldquo;Invite friends&rdquo; and enter the code.</p>
+
+      <div class="share">
+        <span class="share-label">Know someone who needs this? Pass it on:</span>
+        <div class="share-row">
+          <a class="share-btn tg" id="share-tg" href="#" target="_blank" rel="noopener">Telegram</a>
+          <a class="share-btn wa" id="share-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="share-btn x" id="share-x" href="#" target="_blank" rel="noopener">X</a>
+          <a class="share-btn vk" id="share-vk" href="#" target="_blank" rel="noopener">VK</a>
+          <button class="share-btn copy" id="share-copy">Copy link</button>
+        </div>
+      </div>
     </div>
 
     <div id="state-error" class="hidden">
@@ -167,6 +216,46 @@
           document.body.removeChild(input);
         }
       });
+
+      // Шаринг: передаём тот же URL с кодом, поэтому цепочка продолжает работать на
+      // того же пригласившего. Текст — про приложение, а не про бонус: получатель ещё
+      // не знает продукт, и «20 минут» без контекста ничего не значат.
+      var pageUrl = window.location.origin + window.location.pathname + '?c=' + code;
+      var pitch = 'Subtitles and instant translation over any app - calls, videos, streams, games.';
+      var targets = {
+        'share-tg': 'https://t.me/share/url?url=' + encodeURIComponent(pageUrl) + '&text=' + encodeURIComponent(pitch),
+        'share-wa': 'https://wa.me/?text=' + encodeURIComponent(pitch + ' ' + pageUrl),
+        'share-x': 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(pitch) + '&url=' + encodeURIComponent(pageUrl),
+        'share-vk': 'https://vk.com/share.php?url=' + encodeURIComponent(pageUrl) + '&title=' + encodeURIComponent(pitch)
+      };
+      Object.keys(targets).forEach(function (id) {
+        var node = document.getElementById(id);
+        if (!node) return;
+        node.href = targets[id];
+        node.addEventListener('click', function () {
+          if (typeof window.ym === 'function') {
+            try { window.ym(101009280, 'reachGoal', 'referral_page_share'); } catch (e) { /* counter not ready */ }
+          }
+        });
+      });
+
+      var shareCopy = document.getElementById('share-copy');
+      if (shareCopy) {
+        shareCopy.addEventListener('click', function () {
+          var button = this;
+          function done() { button.textContent = 'Copied'; }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(pageUrl).then(done, function () { /* denied */ });
+          } else {
+            var input = document.createElement('input');
+            input.value = pageUrl;
+            document.body.appendChild(input);
+            input.select();
+            try { document.execCommand('copy'); done(); } catch (e) { /* unsupported */ }
+            document.body.removeChild(input);
+          }
+        });
+      }
 
       document.getElementById('install').addEventListener('click', function () {
         if (typeof window.ym === 'function') {
