@@ -22,7 +22,7 @@
   <meta property="og:image" content="https://live-subtitles.com/img/invite-og.jpg">
   <meta property="og:image:width" content="2400">
   <meta property="og:image:height" content="1260">
-  <meta property="og:image:alt" content="视频通话上的实时字幕与翻译">
+  <meta property="og:image:alt" content="视频通话之上的实时字幕和翻译">
   <meta property="og:url" content="https://live-subtitles.com/zh/i/">
   <meta property="og:site_name" content="Live Subtitles">
   <meta property="og:locale" content="zh_CN">
@@ -30,7 +30,7 @@
   <meta name="twitter:title" content="让屏幕上的任何语言都能看懂">
   <meta name="twitter:description" content="Live Subtitles 在任何应用之上实时显示字幕和翻译：通话、会议、视频、直播、游戏。支持 60+ 种语言，被观看的应用无需安装任何插件。此邀请附赠免费分钟数。">
   <meta name="twitter:image" content="https://live-subtitles.com/img/invite-og.jpg">
-  <meta name="twitter:image:alt" content="视频通话上的实时字幕与翻译">
+  <meta name="twitter:image:alt" content="视频通话之上的实时字幕和翻译">
 
   <style>
     body {
@@ -68,6 +68,8 @@
       font-weight: bold;
       letter-spacing: 0.18em;
       color: #1c2733;
+      direction: ltr;
+      unicode-bidi: isolate;
     }
     .btn {
       display: inline-block;
@@ -89,11 +91,13 @@
       color: #0077cc;
       font-size: 0.9em;
       cursor: pointer;
+      font-family: inherit;
     }
     .note { margin-top: 1.2rem; font-size: 0.85em; color: #8494a6; }
     .lead { font-size: 1.05em; color: #33475b; }
     .usp { text-align: left; margin: 1.4rem auto 0; padding: 0 0 0 1.1rem; max-width: 30rem; color: #33475b; }
     .usp li { margin-bottom: 0.5rem; }
+    [dir="rtl"] .usp { text-align: right; padding: 0 1.1rem 0 0; }
     .gift { display: block; margin: 1.6rem 0 0.6rem; padding: 0.9rem 1rem; border-radius: 10px;
             background: #f2ecff; border: 1px solid #ddd0ff; }
     .gift-title { display: block; font-weight: 700; color: #4c1d95; }
@@ -123,7 +127,7 @@
       <p class="lead">Live Subtitles 在任何应用窗口之上显示字幕和即时翻译：视频通话、网课、直播、影片、游戏。被观看的应用无需插件、无需账号、无需设置。</p>
 
       <ul class="usp">
-        <li><b>双行字幕</b> &mdash; 原文与译文同时显示。</li>
+        <li><b>双行字幕</b> &mdash; 原文与译文上下对照，同时显示。</li>
         <li><b>适用于任何窗口</b> &mdash; Zoom、Teams、YouTube、Netflix、Steam，皆可。</li>
         <li><b>60+ 种语言</b> &mdash; 实时语音识别与翻译。</li>
       </ul>
@@ -139,7 +143,7 @@
       <div class="platforms">
         <a class="btn" id="install" href="#" rel="noopener">免费下载 Windows 版</a>
       </div>
-      <p class="note">安装后邀请码会自动生效，无需手动输入。如果没有生效，请在应用的设置中选择&ldquo;邀请好友&rdquo;并输入上方的邀请码。</p>
+      <p class="note">安装后邀请码通常会自动生效。如果没有生效，请在应用的设置中选择“邀请好友”并输入上方的邀请码。</p>
 
       <div class="share">
         <span class="share-label">觉得有用？分享给需要的人：</span>
@@ -163,6 +167,7 @@
     (function () {
       var API = 'https://api.live-subtitles.com/v1/referral/click';
       var STORE = 'https://apps.microsoft.com/detail/9ph1r9djg47s';
+      var COPIED = '已复制';
       var params = new URLSearchParams(window.location.search);
       var raw = (params.get('c') || params.get('code') || '').toUpperCase();
       var code = raw.replace(/[^0-9A-Z]/g, '').slice(0, 6);
@@ -197,19 +202,22 @@
         try { window.ym(101009280, 'reachGoal', 'referral_invite_open'); } catch (e) { /* counter not ready */ }
       }
 
-      document.getElementById('copy').addEventListener('click', function () {
-        var button = this;
-        function done() { button.textContent = '已复制'; }
+      function copyTo(button, value) {
+        function done() { button.textContent = COPIED; }
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(code).then(done, function () { /* denied */ });
-        } else {
-          var input = document.createElement('input');
-          input.value = code;
-          document.body.appendChild(input);
-          input.select();
-          try { document.execCommand('copy'); done(); } catch (e) { /* unsupported */ }
-          document.body.removeChild(input);
+          navigator.clipboard.writeText(value).then(done, function () { /* denied */ });
+          return;
         }
+        var input = document.createElement('input');
+        input.value = value;
+        document.body.appendChild(input);
+        input.select();
+        try { document.execCommand('copy'); done(); } catch (e) { /* unsupported */ }
+        document.body.removeChild(input);
+      }
+
+      document.getElementById('copy').addEventListener('click', function () {
+        copyTo(this, code);
       });
 
       // Шаринг: передаём тот же URL с кодом, поэтому цепочка продолжает работать на
@@ -236,18 +244,7 @@
       var shareCopy = document.getElementById('share-copy');
       if (shareCopy) {
         shareCopy.addEventListener('click', function () {
-          var button = this;
-          function done() { button.textContent = '已复制'; }
-          if (navigator.clipboard && navigator.clipboard.writeText) {
-            navigator.clipboard.writeText(pageUrl).then(done, function () { /* denied */ });
-          } else {
-            var input = document.createElement('input');
-            input.value = pageUrl;
-            document.body.appendChild(input);
-            input.select();
-            try { document.execCommand('copy'); done(); } catch (e) { /* unsupported */ }
-            document.body.removeChild(input);
-          }
+          copyTo(this, pageUrl);
         });
       }
 
