@@ -37,7 +37,7 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.">
+        content="ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS وأندرويد. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.">
     <meta name="keywords"
         content="live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, game mode subtitles, gaming subtitles, fullscreen subtitle overlay, language learning subtitles">
     <meta name="author" content="Live Subtitles">
@@ -66,13 +66,14 @@
         "name": "Live Subtitles",
         "applicationCategory": "UtilitiesApplication",
         "applicationSubCategory": "Live Captioning and Translation",
-        "operatingSystem": "Windows 10, Windows 11, macOS, iOS",
+        "operatingSystem": "Windows 10, Windows 11, macOS, iOS, Android",
         "url": "https://live-subtitles.com",
         "downloadUrl": "https://apps.microsoft.com/store/detail/9PH1R9DJG47S",
         "sameAs": [
             "https://apps.microsoft.com/store/detail/9PH1R9DJG47S",
             "https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac",
-            "https://apps.apple.com/app/live-captions-translator/id6760197210"
+            "https://apps.apple.com/app/live-captions-translator/id6760197210",
+            "https://play.google.com/store/apps/details?id=com.livesubtitles.android"
         ],
         "offers": {
             "@type": "AggregateOffer",
@@ -194,7 +195,7 @@
                 "name": "على أي منصات يتوفر Live Subtitles؟",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Live Subtitles متوفر على Windows و macOS و iOS. إصدار Android قيد التطوير حالياً. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً."
+                    "text": "Live Subtitles متوفر على Windows و macOS و iOS و Android. إصدار التلفزيون قيد التطوير حالياً. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً."
                 }
             }
         ]
@@ -237,7 +238,7 @@
     <!-- Open Graph Meta Tags (Telegram, LinkedIn, Facebook) -->
     <meta property="og:title" content="Live Subtitles — ترجمة حية ومزدوجة لأي تطبيق">
     <meta property="og:description"
-        content="ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.">
+        content="ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS وأندرويد. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.">
     <meta property="og:image" content="https://live-subtitles.com/2sub.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -255,7 +256,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Live Subtitles — ترجمة حية ومزدوجة لأي تطبيق">
     <meta name="twitter:description"
-        content="ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.">
+        content="ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS وأندرويد. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية بدون ميكروفون.">
     <meta name="twitter:image" content="https://live-subtitles.com/2sub.png">
     <meta name="twitter:image:alt" content="Live Subtitles - Dual Subtitles Application">
     <meta name="twitter:site" content="@livesubtitles">
@@ -1112,7 +1113,7 @@
             }
         }
 
-        #androidEmail::placeholder {
+        #tvEmail::placeholder {
             color: rgba(255, 255, 255, 0.6);
         }
 
@@ -1597,6 +1598,7 @@
             #download .col-6:nth-child(2) { order: 4; } /* macOS */
             #download .col-6:nth-child(3) { order: 1; } /* iOS */
             #download .col-6:nth-child(4) { order: 2; } /* Android */
+            #download .col-12 { order: 5; } /* TV */
         }
     </style>
     <!-- SEO: alternate language versions -->
@@ -1674,7 +1676,7 @@
           <div class="hero-grid">
             <div class="hero-copy">
             <h1 class="title" data-translate="header.title">ترجمة فورية وترجمات مزدوجة لأي تطبيق</h1>
-            <p class="lead" data-translate="header.lead">يترجم الكلام فوريًا إلى أكثر من 50 لغة. يعمل مع Zoom وTeams وSkype وGoogle Meet وأي تطبيق — بدون ميكروفون. متوفر لأنظمة Windows وmacOS وiOS.</p>
+            <p class="lead" data-translate="header.lead">يترجم الكلام فوريًا إلى أكثر من 50 لغة. يعمل مع Zoom وTeams وSkype وGoogle Meet وأي تطبيق — بدون ميكروفون. متوفر لأنظمة Windows وmacOS وiOS وAndroid.</p>
             <div class="hero-cta">
                 <a href="#download" onclick="return gtag_report_conversion(this.href);" id="heroTryFree" class="btn-download-free" data-translate="header.downloadFree">ابدأ النسخة التجريبية المجانية</a>
                 <a href="#examples" class="btn-watch-demo" data-translate="header.watchDemo">شاهد العرض</a>
@@ -2050,7 +2052,7 @@
                             </h2>
                             <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body" style="color: rgba(255, 255, 255, 0.8);">
-                                    <span data-translate="faq.a6">Live Subtitles متوفر على Windows و macOS و iOS. إصدار Android قيد التطوير حالياً. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً.</span>
+                                    <span data-translate="faq.a6">Live Subtitles متوفر على Windows و macOS و iOS و Android. إصدار التلفزيون قيد التطوير حالياً. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً.</span>
                                 </div>
                             </div>
                         </div>
@@ -2210,14 +2212,32 @@
                         onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(-5px)'"
                         onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
                         <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">Android</h5>
+                        <a href="https://play.google.com/store/apps/details?id=com.livesubtitles.android" target="_blank" rel="noopener"
+                            onclick="return gtag_report_conversion(this.href);"
+                            class="mt-auto d-flex align-items-center justify-content-center w-100"
+                            style="min-height: 84px; transition: transform 0.3s ease;"
+                            onmouseover="this.style.transform='scale(1.05)'"
+                            onmouseout="this.style.transform='scale(1)'">
+                            <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" width="646" height="250"
+                                alt="Get it on Google Play" style="height: 88px; width: auto; max-width: 100%;">
+                        </a>
+                    </div>
+                </div>
+                <!-- TV (waitlist) -->
+                <div class="col-12 mb-3">
+                    <div class="p-3 h-100 d-flex flex-column align-items-center justify-content-center platform-card"
+                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; transition: transform 0.3s ease, background 0.3s ease;"
+                        onmouseover="this.style.background='rgba(255,255,255,0.08)'; this.style.transform='translateY(-5px)'"
+                        onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)'">
+                        <h5 class="text-white mb-2" style="font-weight: 500; font-size: 1rem;">TV</h5>
                         <div class="mt-auto w-100 d-flex align-items-center justify-content-center"
                             style="min-height: 84px;">
-                            <a href="#" data-bs-toggle="modal" data-bs-target="#androidModal"
-                                style="height: 80px; width: 100%; max-width: 240px; border-radius: 12px; border: 1px solid rgba(0,255,157,0.5); color: #00ff9d; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center; background: rgba(0,255,157,0.05); font-size: 1.25rem; transition: all 0.3s ease;"
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#tvModal"
+                                style="height: 80px; width: 100%; max-width: 320px; border-radius: 12px; border: 1px solid rgba(0,255,157,0.5); color: #00ff9d; font-weight: 600; text-decoration: none; display: flex; align-items: center; justify-content: center; background: rgba(0,255,157,0.05); font-size: 1.25rem; transition: all 0.3s ease;"
                                 onmouseover="this.style.background='rgba(0,255,157,0.15)'; this.style.border='1px solid #00ff9d'"
                                 onmouseout="this.style.background='rgba(0,255,157,0.05)'; this.style.border='1px solid rgba(0,255,157,0.5)'"
-                                data-translate="androidBtn">
-                                أريد إصدار Android
+                                data-translate="tvBtn">
+                                أريد إصدار التلفزيون
                             </a>
                         </div>
                     </div>
@@ -2225,28 +2245,28 @@
             </div>
         </section>
 
-        <!-- Модальное окно для Android -->
-        <div class="modal fade" id="androidModal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="androidModalLabel" aria-hidden="true">
+        <!-- Модальное окно: лист ожидания версии для ТВ -->
+        <div class="modal fade" id="tvModal" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="tvModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content"
                     style="background: rgba(0, 0, 0, 0.8); color: white; border: 1px solid var(--primary);">
                     <div class="modal-header border-bottom border-secondary">
-                        <h5 class="modal-title" id="androidModalLabel" data-translate="androidModal.title">إصدار Android</h5>
+                        <h5 class="modal-title" id="tvModalLabel" data-translate="tvModal.title">إصدار التلفزيون</h5>
                         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p data-translate="androidModal.desc">نحن نعمل على إصدار Android. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً.</p>
-                        <form id="androidEmailForm">
+                        <p data-translate="tvModal.desc">نحن نعمل على إصدار للتلفزيون. اترك بريدك الإلكتروني وسنخبرك عندما يصبح جاهزاً.</p>
+                        <form id="tvEmailForm">
                             <div class="mb-3">
-                                <input type="email" class="form-control" id="androidEmail" placeholder="Your email" aria-label="Email address"
+                                <input type="email" class="form-control" id="tvEmail" placeholder="Your email" aria-label="Email address"
                                     required
                                     style="background: rgba(255, 255, 255, 0.1); border: 1px solid var(--primary); color: white;"
                                     >
                             </div>
                             <button type="submit" class="btn btn-primary submit-btn">
                                 <div class="loader"></div>
-                                <span class="submit-text" data-translate="androidModal.send">إرسال</span>
+                                <span class="submit-text" data-translate="tvModal.send">إرسال</span>
                             </button>
                         </form>
                     </div>
@@ -2265,7 +2285,7 @@
                             aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <p data-translate="successModal.desc">سنخبرك عندما يصبح إصدار Android جاهزاً.</p>
+                        <p data-translate="successModal.desc">سنخبرك عندما يصبح إصدار التلفزيون جاهزاً.</p>
                     </div>
                     <div class="modal-footer border-top border-secondary">
                         <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
@@ -2577,12 +2597,13 @@
             });
         }
 
-        // Route the navbar "Try Free" to the visitor's actual platform store (Win/Mac/iOS;
-        // Android has no app yet -> send to the #download section with the notify flow).
+        // Route the navbar "Try Free" to the visitor's actual platform store
+        // (Win/Mac/iOS/Android; unknown platform falls back to the #download section).
         const TRYFREE_STORES = {
             win: 'https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding',
             mac: 'https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac',
-            ios: 'https://apps.apple.com/app/live-captions-translator/id6760197210'
+            ios: 'https://apps.apple.com/app/live-captions-translator/id6760197210',
+            android: 'https://play.google.com/store/apps/details?id=com.livesubtitles.android'
         };
         function detectOS() {
             const ua = navigator.userAgent || '';
@@ -2598,7 +2619,7 @@
             ['navTryFree', 'heroTryFree'].forEach(function (id) {
                 const el = document.getElementById(id);
                 if (!el) return;
-                if (os === 'android' || !store) { el.setAttribute('href', '#download'); el.removeAttribute('target'); el.removeAttribute('onclick'); }
+                if (!store) { el.setAttribute('href', '#download'); el.removeAttribute('target'); el.removeAttribute('onclick'); }
                 else { el.setAttribute('href', store); el.setAttribute('target', '_blank'); el.setAttribute('rel', 'noopener'); }
             });
         }
@@ -2712,12 +2733,12 @@
             });
         });
 
-        // Обработка формы для Android
-        document.getElementById('androidEmailForm').addEventListener('submit', async function (e) {
+        // Обработка формы: лист ожидания версии для ТВ
+        document.getElementById('tvEmailForm').addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            const email = document.getElementById('androidEmail').value;
-            const androidModal = bootstrap.Modal.getInstance(document.getElementById('androidModal'));
+            const email = document.getElementById('tvEmail').value;
+            const tvModal = bootstrap.Modal.getInstance(document.getElementById('tvModal'));
             const successModal = new bootstrap.Modal(document.getElementById('successModal'));
             const form = this;
 
@@ -2733,14 +2754,14 @@
                     },
                     body: JSON.stringify({
                         email: email,
-                        subject: 'Новый запрос на версию для Android',
-                        message: `Пользователь ${email} хочет получить версию для Android`
+                        subject: 'Новый запрос на версию для ТВ',
+                        message: `Пользователь ${email} хочет получить версию для ТВ`
                     })
                 });
 
                 if (response.ok) {
-                    androidModal.hide();
-                    document.getElementById('androidEmail').value = '';
+                    tvModal.hide();
+                    document.getElementById('tvEmail').value = '';
                     successModal.show();
                 } else {
                     throw new Error('Ошибка отправки');

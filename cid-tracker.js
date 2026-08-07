@@ -67,11 +67,34 @@
             } catch (e) { /* malformed URL — skip */ }
         }
 
-        var androidTriggers = document.querySelectorAll('[data-bs-target="#androidModal"]');
-        for (var k = 0; k < androidTriggers.length; k++) {
-            androidTriggers[k].addEventListener('click', function () {
-                reachGoal('store_click_any');
-                reachGoal('store_click_android_interest');
+        var playLinks = document.querySelectorAll('a[href*="play.google.com/store/apps"]');
+        for (var k = 0; k < playLinks.length; k++) {
+            var g = playLinks[k];
+            try {
+                // Play Store install attribution rides on a single `referrer`
+                // param holding a urlencoded utm string. Play Console needs
+                // utm_source + utm_medium to attribute the install at all;
+                // utm_campaign carries our per-page cid.
+                var w = new URL(g.href, location.origin);
+                if (!w.searchParams.has('referrer')) {
+                    w.searchParams.set('referrer',
+                        'utm_source=live-subtitles.com&utm_medium=referral&utm_campaign=' + cidToSet);
+                    g.href = w.toString();
+                }
+                if (typeof gtag_report_conversion === 'function' && !g.getAttribute('onclick')) {
+                    g.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
+                }
+                g.addEventListener('click', function () {
+                    reachGoal('store_click_any');
+                    reachGoal('store_click_android');
+                });
+            } catch (e) { /* malformed URL — skip */ }
+        }
+
+        var tvTriggers = document.querySelectorAll('[data-bs-target="#tvModal"]');
+        for (var m = 0; m < tvTriggers.length; m++) {
+            tvTriggers[m].addEventListener('click', function () {
+                reachGoal('tv_interest');
             });
         }
     }
