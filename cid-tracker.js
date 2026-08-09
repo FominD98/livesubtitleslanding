@@ -1,3 +1,21 @@
+// Store-link instrumentation. Stamps every store link with a campaign id so the
+// store consoles can attribute the install back to the page it came from, and
+// fires Yandex Metrika goals for the click itself.
+//
+// Campaign id (`cidToSet`): incoming ?utm_campaign / ?cid if present, otherwise
+// derived from the pathname -> `site_organic_<page_slug>`.
+//
+// Per store:
+//   Microsoft Store  ?cid=<id>        -> Partner Center > Acquisitions > Custom campaign
+//   App Store        ?ct=<id>         -> App Store Connect > App Analytics > Campaigns
+//                                        (shortened to Apple's 40-char cap, see toAppleCt)
+//   Google Play      ?referrer=utm_source=...&utm_medium=...&utm_campaign=<id>
+//                                     -> Play Console > Acquisition reports > User acquisition,
+//                                        and the app can read it via the Install Referrer API
+//
+// Metrika goals fired here (create them in the counter or they record nothing):
+//   store_click_any, store_click_windows, store_click_mac, store_click_ios,
+//   store_click_android, tv_interest
 (function () {
     var YM_COUNTER = 101009280;
     var params = new URLSearchParams(location.search);
@@ -20,6 +38,18 @@
     }
 
     var cidToSet = campaign || pathToCid();
+
+    // Apple's App Analytics campaign token is capped at 40 chars; our ids run up
+    // to 49. Trading the `site_organic_` prefix for `org_` fits every current
+    // page (max 40, no collisions across 908 pages). A future page with a very
+    // long slug would get truncated on an underscore boundary.
+    var APPLE_CT_MAX = 40;
+    function toAppleCt(id) {
+        if (id === 'site_organic') return 'org';
+        var t = id.indexOf('site_organic_') === 0 ? 'org_' + id.slice(13) : id;
+        return t.length > APPLE_CT_MAX ? t.slice(0, APPLE_CT_MAX).replace(/_+$/, '') : t;
+    }
+    var appleCt = toAppleCt(cidToSet);
 
     function reachGoal(name) {
         if (typeof window.ym === 'function') {
@@ -49,12 +79,13 @@
         for (var j = 0; j < appleLinks.length; j++) {
             var b = appleLinks[j];
             try {
-                if (campaign) {
-                    var v = new URL(b.href, location.origin);
-                    if (!v.searchParams.has('ct')) {
-                        v.searchParams.set('ct', campaign);
-                        b.href = v.toString();
-                    }
+                // Tag organic traffic too, not just links arrived at with a
+                // ?utm_campaign — otherwise App Store Connect attributes every
+                // organic install to "unknown", unlike MS and Play.
+                var v = new URL(b.href, location.origin);
+                if (!v.searchParams.has('ct')) {
+                    v.searchParams.set('ct', appleCt);
+                    b.href = v.toString();
                 }
                 if (typeof gtag_report_conversion === 'function' && !b.getAttribute('onclick')) {
                     b.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
