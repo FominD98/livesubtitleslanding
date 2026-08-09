@@ -65,7 +65,10 @@ param(
         "best-dual-subtitle-app.html",
         "real-time-transcription-software.html",
         "live-translation-software-comparison.html",
-        # Legal
+        # Commercial / legal (EN-only, no locale copies)
+        # pricing.html was added to the sitemap by _prune_zero_impression_pages.py
+        # on 2026-07-06 but never here, so every regen silently dropped it again.
+        "pricing.html",
         "privacy.html"
     )
 )

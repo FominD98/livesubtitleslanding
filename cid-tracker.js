@@ -1,6 +1,7 @@
-// Store-link instrumentation. Stamps every store link with a campaign id so the
-// store consoles can attribute the install back to the page it came from, and
-// fires Yandex Metrika goals for the click itself.
+// Store-link instrumentation. Routes the primary CTA to the visitor's own
+// store, stamps every store link with a campaign id so the store consoles can
+// attribute the install back to the page it came from, and fires Yandex Metrika
+// goals for the click itself.
 //
 // Campaign id (`cidToSet`): incoming ?utm_campaign / ?cid if present, otherwise
 // derived from the pathname -> `site_organic_<page_slug>`.
@@ -57,7 +58,53 @@
         }
     }
 
+    var STORES = {
+        win: 'https://apps.microsoft.com/detail/9ph1r9djg47s',
+        mac: 'https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac',
+        ios: 'https://apps.apple.com/app/live-captions-translator/id6760197210',
+        android: 'https://play.google.com/store/apps/details?id=com.livesubtitles.android'
+    };
+    var STORE_LABEL = {
+        win: 'Microsoft Store', mac: 'Mac App Store', ios: 'App Store', android: 'Google Play'
+    };
+
+    function detectOS() {
+        var ua = navigator.userAgent || '';
+        var p = (navigator.userAgentData && navigator.userAgentData.platform) || navigator.platform || '';
+        if (/iPhone|iPad|iPod/.test(ua) || (/Mac/.test(p) && navigator.maxTouchPoints > 1)) return 'ios';
+        if (/Android/.test(ua)) return 'android';
+        if (/Mac/.test(p) || /Macintosh/.test(ua)) return 'mac';
+        return 'win';
+    }
+
+    // The platform/language pages hardcode their primary CTA to the Microsoft
+    // Store, so a Mac/iPhone/Android visitor is sent to a store they cannot
+    // install from. Point it at their own store instead. Windows is left alone,
+    // which keeps the pre-JS href correct for the majority and for crawlers.
+    // index.html and the articles route their own CTAs inline; this only touches
+    // `a.cta`, never the store names mentioned in body copy.
+    function routeStoreCta() {
+        var os = detectOS();
+        if (os === 'win') return;
+        var href = STORES[os];
+        if (!href) return;
+        var ctas = document.querySelectorAll('a.cta[href*="apps.microsoft.com"]');
+        for (var i = 0; i < ctas.length; i++) {
+            var a = ctas[i];
+            a.href = href;
+            a.setAttribute('rel', 'noopener');
+            // "Start free trial — Microsoft Store" would now be a lie.
+            if (a.textContent && a.textContent.indexOf('Microsoft Store') !== -1) {
+                a.textContent = a.textContent.replace('Microsoft Store', STORE_LABEL[os]);
+            }
+        }
+    }
+
     function instrument() {
+        // Must run first: the loops below stamp campaign params per store, so the
+        // CTA has to already point at its final store.
+        routeStoreCta();
+
         var msLinks = document.querySelectorAll('a[href*="apps.microsoft.com"]');
         for (var i = 0; i < msLinks.length; i++) {
             var a = msLinks[i];
