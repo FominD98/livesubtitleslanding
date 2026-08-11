@@ -13,7 +13,7 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
   <title>Privacy Policy | Live Subtitles</title>
-  <meta name="description" content="Privacy Policy for Live Subtitles. Learn what data we process, how third-party services are used, and how to contact us.">
+  <meta name="description" content="Privacy Policy for Live Subtitles. Learn what data we process, which identifiers we use, how third-party services are involved, and how to contact us.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://live-subtitles.com/privacy.html" />
   <link rel="alternate" hreflang="en" href="https://live-subtitles.com/privacy.html" />
@@ -21,13 +21,13 @@
 
   <meta property="og:type" content="website">
   <meta property="og:title" content="Privacy Policy | Live Subtitles">
-  <meta property="og:description" content="Privacy Policy for Live Subtitles. Learn what data we process, how third-party services are used, and how to contact us.">
+  <meta property="og:description" content="Privacy Policy for Live Subtitles. Learn what data we process, which identifiers we use, how third-party services are involved, and how to contact us.">
   <meta property="og:url" content="https://live-subtitles.com/privacy.html">
   <meta property="og:image" content="https://live-subtitles.com/2sub.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Privacy Policy | Live Subtitles">
-  <meta name="twitter:description" content="Privacy Policy for Live Subtitles. Learn what data we process, how third-party services are used, and how to contact us.">
+  <meta name="twitter:description" content="Privacy Policy for Live Subtitles. Learn what data we process, which identifiers we use, how third-party services are involved, and how to contact us.">
   <meta name="twitter:image" content="https://live-subtitles.com/2sub.png">
 
   <script type="application/ld+json">
@@ -36,7 +36,8 @@
     "@type": "WebPage",
     "name": "Privacy Policy",
     "url": "https://live-subtitles.com/privacy.html",
-    "description": "Privacy Policy for Live Subtitles"
+    "description": "Privacy Policy for Live Subtitles",
+    "dateModified": "2026-08-11"
   }
   </script>
 
@@ -55,6 +56,31 @@
       margin-top: 1.5em;
       font-size: 1.4em;
     }
+    h3 {
+      margin-top: 1.2em;
+      font-size: 1.1em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f5f5f5;
+    }
+    code {
+      background: #f5f5f5;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+    }
     .back-link {
       display: inline-block;
       margin-bottom: 1rem;
@@ -69,88 +95,196 @@
 <body>
 <a class="back-link" href="/">← Back to Home</a>
 <h1>Privacy Policy</h1>
-<p>Effective Date: April 2, 2026</p>
+<p>Effective Date: August 11, 2026</p>
 
 <h2>Overview</h2>
 <p>
-  Live Captions & Translator respects your privacy. This app is designed to process speech in real time while minimizing data collection.
+  Live Subtitles ("the App", "we") turns audio — from your microphone or from audio playing on your
+  device — into real-time captions and translation. This policy covers the Live Subtitles apps for
+  Windows, Android and iOS, as well as this website. The App is designed to process speech in real
+  time while minimizing data collection, and it does not require an account.
 </p>
 
 <h2>Information We Process</h2>
-<p>
-  To provide its functionality, the app may process the following data:
-</p>
-<ul>
-  <li><strong>Audio input (voice)</strong> – captured from your device microphone</li>
-  <li><strong>Transcribed text</strong> – generated from your speech</li>
-  <li><strong>Translated text</strong> – if translation is enabled</li>
-  <li><strong>Technical data</strong> – such as error logs for debugging and performance improvements</li>
-</ul>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Why</th>
+    <th>Where it goes</th>
+    <th>Stored?</th>
+  </tr>
+  <tr>
+    <td><strong>Audio</strong> — from your microphone, or audio played by your device when you choose system-audio capture</td>
+    <td>Live speech recognition</td>
+    <td>Our speech recognition providers (see Third-Party Services), or processed entirely on your device in offline / on-device modes</td>
+    <td>No — streamed while a session is active, not recorded by us</td>
+  </tr>
+  <tr>
+    <td><strong>Recognized and translated text</strong></td>
+    <td>Producing captions and translation</td>
+    <td>Our translation providers or our own backend</td>
+    <td>No persistent storage of your content by us</td>
+  </tr>
+  <tr>
+    <td><strong>Device identifier</strong> (see the section below)</td>
+    <td>Anti-abuse for free trial minutes, rating bonus, signing requests to our backend</td>
+    <td>Our backend</td>
+    <td>Yes — the identifier itself, on your device and on our backend</td>
+  </tr>
+  <tr>
+    <td><strong>Diagnostic logs</strong> — device model, OS version, app version, selected languages, error messages</td>
+    <td>Debugging, reliability, crash reports</td>
+    <td>Grafana Loki (our logging provider)</td>
+    <td>Yes — for a limited diagnostic period</td>
+  </tr>
+  <tr>
+    <td><strong>Analytics events</strong> — screens viewed, session start/stop, onboarding steps, paywall and purchase events, selected languages</td>
+    <td>Understanding which features are used and where users have trouble</td>
+    <td>Google Analytics for Firebase (mobile apps)</td>
+    <td>Yes — per Google's retention settings for our project</td>
+  </tr>
+  <tr>
+    <td><strong>Purchases and minute balance</strong> — which product or subscription you bought, its price, and your remaining minutes</td>
+    <td>Tracking remaining usage and subscription status; understanding which plans people choose</td>
+    <td>Payments are processed by Google Play Billing or the Apple App Store — we never receive your card details. The mobile apps send purchase events (product id, price, result) to Google Analytics for Firebase</td>
+    <td>On Android and iOS the balance is stored on your device; on Windows it is held on our backend against your device identifier</td>
+  </tr>
+</table>
 
 <p>
-  We do not store personal data on our servers.
+  We do <strong>not</strong> collect your name, email address, contacts, precise location, photos, or
+  payment details — card and billing information is handled entirely by Google Play or the App Store and
+  never reaches us.
 </p>
 
-<h2>How We Use Information</h2>
+<h2>Device and Other Identifiers</h2>
 <p>
-  The processed data is used solely to:
+  The App uses identifiers that relate to your device or app installation. In the Google Play Data
+  safety form these are declared under the <strong>Device or other IDs</strong> data type.
+</p>
+
+<h3>Device fingerprint</h3>
+<p>
+  To stop the same device from claiming free trial minutes or the rating bonus repeatedly, and to sign
+  requests to our backend, the App derives a stable identifier for your installation and sends it to
+  our backend. On Android it is a SHA-256 hash derived from the Android device identifier
+  (<code>Settings.Secure.ANDROID_ID</code>) combined with the app package name; where that identifier is
+  unavailable, a random per-installation id is generated and used instead. On other platforms it is a
+  stable per-installation identifier stored locally.
+</p>
+<p>
+  This value is an identifier only — it carries no name, email or contact information, and we cannot use
+  it to identify you personally. It is stored on your device and on our backend.
+</p>
+
+<h3>Analytics identifier</h3>
+<p>
+  Our Android and iOS apps use Google Analytics for Firebase, which assigns an <strong>app instance
+  ID</strong> (a Firebase installation ID) to your app installation and sends it with analytics events.
+</p>
+
+<h3>No advertising identifiers</h3>
+<p>
+  We show no ads and do not use advertising identifiers. The Android app explicitly removes the
+  <code>AD_ID</code> permission from its manifest and never reads the Android advertising ID. We do not
+  use your data for advertising, marketing, or personalization, and we do not sell it.
+</p>
+
+<h2>Microphone and System Audio Capture</h2>
+<p>
+  You choose the audio source for each session. Audio is captured <strong>only while a session is
+  active</strong>, and only to produce subtitles.
 </p>
 <ul>
-  <li>Provide real-time captions and translations</li>
-  <li>Improve app performance and stability</li>
+  <li><strong>Microphone</strong> — the App requests microphone permission and captures audio only during a session.</li>
+  <li><strong>System audio</strong> — the App captures audio played by your device. On Android this uses
+    MediaProjection's AudioPlaybackCapture and begins only after you grant the system screen-capture
+    consent dialog; DRM-protected audio is muted by the system and cannot be captured. On iOS this uses a
+    Broadcast Upload Extension that you start explicitly. On Windows it uses system loopback capture.
+    Capture stops when you end the session or revoke the permission.</li>
 </ul>
+<p>
+  On Android, the App can draw a floating subtitle overlay over other apps. That permission is used only
+  to draw the subtitle window; it does not read other apps' content.
+</p>
 
 <h2>Third-Party Services</h2>
 <p>
-  To provide speech recognition and translation, the app uses third-party services:
+  Depending on your platform and the recognition or translation engine you select, audio and text may be
+  transmitted to the following processors. Each handles data under its own privacy policy:
 </p>
 <ul>
-  <li>Google (speech recognition)</li>
-  <li>Yandex (speech recognition)</li>
-  <li>OpenAI (translation)</li>
+  <li><a href="https://deepgram.com/privacy" target="_blank" rel="noopener">Deepgram</a> — cloud speech recognition</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a> — cloud speech recognition and translation (Google Cloud Speech-to-Text and Cloud Translation)</li>
+  <li><a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener">Yandex</a> — speech recognition and translation (desktop engine options)</li>
+  <li><a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI</a> — translation (desktop engine option)</li>
+  <li><a href="https://fish.audio/" target="_blank" rel="noopener">Fish Audio</a> — voice synthesis for the desktop live-voice feature</li>
+  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> — product analytics (mobile apps)</li>
+  <li><a href="https://grafana.com/legal/privacy-policy/" target="_blank" rel="noopener">Grafana Loki</a> — diagnostic logs and crash reports</li>
+  <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Billing</a> and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple App Store</a> — purchases and subscriptions</li>
 </ul>
-
 <p>
-  Audio and text data may be transmitted to these services for processing. These services handle data according to their own privacy policies:
+  On iOS, Apple's on-device speech recognition can be used, and on Windows an offline Whisper model can
+  be downloaded and run locally. In those modes your audio is processed on your device and is not sent to
+  a speech recognition provider.
 </p>
-<ul>
-  <li><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-  <li><a href="https://yandex.com/legal/confidential/" target="_blank">Yandex Privacy Policy</a></li>
-  <li><a href="https://openai.com/privacy" target="_blank">OpenAI Privacy Policy</a></li>
-</ul>
 
 <h2>User Consent</h2>
 <p>
-  By using the app, you consent to the processing of audio and text data as described in this policy, including transmission to third-party services.
+  By using the App, you consent to the processing described in this policy, including transmission of
+  audio and text to the third-party services listed above while a session is active.
 </p>
 
-<h2>Data Storage</h2>
+<h2>Data Storage and Retention</h2>
 <p>
-  We do not store your audio or text data on our servers. Processing is performed in real time.
+  We do not record or store your audio, transcripts, or translations on our servers — they are processed
+  in real time and discarded. What we do retain is limited to: your device identifier (for as long as
+  anti-abuse protection requires), diagnostic logs and crash reports (for a limited diagnostic period),
+  analytics events including purchase events (per the retention period configured for our Firebase
+  project), and — on Windows — your minute balance, held against your device identifier. App preferences
+  are stored locally on your device, as is the minute balance on Android and iOS.
+</p>
+<p>
+  All data is encrypted in transit.
 </p>
 
 <h2>Your Rights (GDPR)</h2>
 <p>
-  If you are located in the European Economic Area (EEA), you have the right to:
+  If you are located in the European Economic Area or the UK, you have the right to request access to
+  your data, request its deletion, and withdraw consent at any time.
 </p>
-<ul>
-  <li>Request access to your data</li>
-  <li>Request deletion of your data</li>
-  <li>Withdraw consent at any time</li>
-</ul>
-
 <p>
-  Since we do not store personal data, we may not be able to provide or delete stored data.
+  Because we do not store your audio or transcripts, there is nothing of that kind to retrieve or delete.
+  For the data we do retain — your device identifier, diagnostic logs, and analytics events — contact us
+  at the address below and we will delete the records associated with your installation. You can stop all
+  further processing at any time by uninstalling the App.
 </p>
 
-<h2>Local Storage</h2>
+<h2>This Website</h2>
 <p>
-  App preferences and settings are stored locally on your device and are not transmitted to our servers.
+  live-subtitles.com uses Google Analytics / Google Ads tags and Yandex Metrica to measure traffic and
+  campaign performance. These set cookies and collect standard web analytics data, including your IP
+  address and browser information, under their own privacy policies
+  (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google</a>,
+  <a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener">Yandex</a>).
+  This is separate from the data the App processes.
+</p>
+
+<h2>Children</h2>
+<p>
+  The App is not directed to children under 13 and we do not knowingly collect data from them.
+</p>
+
+<h2>Changes</h2>
+<p>
+  We may update this policy; the Effective Date above will change accordingly.
 </p>
 
 <h2>Contact</h2>
 <p>
-  If you have questions about this Privacy Policy, contact us at:
+  If you have questions about this Privacy Policy, or want to request deletion of data associated with
+  your device identifier, contact us at:
 </p>
 <p><strong>help@live-subtitles.com</strong></p>
 </body>
