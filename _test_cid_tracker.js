@@ -41,6 +41,8 @@ function run(pathname, search, os, ctaText) {
 
     const tv = makeLink('#');
     const store = {};
+    const goals = [];
+    const ga4 = [];
     const sandbox = {
         URL, URLSearchParams, console,
         navigator: { userAgent: UA[os].ua, platform: UA[os].platform, maxTouchPoints: UA[os].touch },
@@ -66,10 +68,21 @@ function run(pathname, search, os, ctaText) {
                 return [];
             },
         },
-        window: {},
+        window: {
+            ym: (id, action, name) => { if (action === 'reachGoal') goals.push(name); },
+            gtag: (kind, name, params) => ga4.push({ kind, name, params }),
+        },
     };
     vm.runInNewContext(SRC, sandbox);
-    return { links, tv, cta, prose };
+    return { links, tv, cta, prose, goals, ga4 };
+}
+
+// Клик по ссылке. _listeners хранит пары [тип, обработчик]; вызываем как браузер —
+// с this, указывающим на саму ссылку.
+function click(link) {
+    (link._listeners || [])
+        .filter(([type]) => type === 'click')
+        .forEach(([, fn]) => fn.call(link));
 }
 
 function param(href, key) {
@@ -129,9 +142,11 @@ const EXPECT = {
     android: 'https://play.google.com/store/apps/details?id=com.livesubtitles.android',
 };
 // Compare the link with the campaign params stripped — those are asserted below.
+// pt/mt ride along with the Apple ct: App Analytics ignores a campaign token
+// that arrives without the provider token.
 function withoutCampaign(href) {
     const u = new URL(href);
-    ['cid', 'ct', 'referrer'].forEach(k => u.searchParams.delete(k));
+    ['cid', 'ct', 'referrer', 'pt', 'mt'].forEach(k => u.searchParams.delete(k));
     return u.toString().replace(/\?$/, '');
 }
 for (const os of ['win', 'mac', 'ios', 'android']) {
@@ -147,6 +162,11 @@ eq(param(r.cta.href, 'referrer'),
 eq(param(r.cta.href, 'cid'), null, 'android: чужой cid не прилип');
 r = run('/zoom-live-captions.html', '', 'mac');
 eq(param(r.cta.href, 'ct'), 'org_zoom_live_captions', 'mac: ct проставлен');
+eq(param(r.cta.href, 'pt'), '128624979', 'mac: pt проставлен');
+eq(param(r.cta.href, 'mt'), '8', 'mac: mt проставлен');
+r = run('/zoom-live-captions.html', '', 'ios');
+eq(param(r.cta.href, 'pt'), '128624979', 'ios: pt проставлен');
+eq(param(r.cta.href, 'cid'), null, 'ios: cid не прилип к Apple-ссылке');
 r = run('/zoom-live-captions.html', '', 'win');
 eq(param(r.cta.href, 'cid'), 'site_organic_zoom_live_captions', 'win: cid проставлен');
 
@@ -160,6 +180,23 @@ eq(r.cta.textContent, 'Скачать Live Subtitles', 'нейтральная �
 r = run('/zoom-live-captions.html', '', 'mac');
 eq(r.prose.textContent, 'Microsoft Store', 'упоминание стора в тексте не тронуто');
 eq(r.prose.href.indexOf('apps.microsoft.com') > -1 ? 'ms' : 'изменена', 'ms', 'ссылка в тексте осталась на MS');
+
+console.log('\n— клик шлёт цель Метрики и событие GA4 —');
+r = run('/zoom-live-captions.html', '', 'win');
+click(r.links.ms);
+eq(String(r.goals.includes('store_click_any') && r.goals.includes('store_click_windows')),
+    'true', 'win: цели Метрики отправлены');
+const ev = r.ga4.find(e => e.name === 'store_click');
+eq(String(!!ev), 'true', 'win: событие GA4 store_click отправлено');
+eq(ev && ev.params.store, 'microsoft', 'win: GA4 знает стор');
+eq(ev && ev.params.campaign_id, 'site_organic_zoom_live_captions', 'win: GA4 несёт campaign_id');
+
+r = run('/', '', 'win');
+click(r.links.play);
+eq((r.ga4.find(e => e.name === 'store_click') || {}).params.store, 'google_play', 'play: GA4 знает стор');
+r = run('/', '', 'win');
+click(r.links.mac);
+eq((r.ga4.find(e => e.name === 'store_click') || {}).params.store, 'mac_app_store', 'mac: GA4 знает стор');
 
 console.log(fail ? `\n${fail} проверок провалено` : '\nВсе проверки прошли.');
 process.exit(fail ? 1 : 0);

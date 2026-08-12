@@ -19,6 +19,7 @@
 //   store_click_android, tv_interest
 (function () {
     var YM_COUNTER = 101009280;
+    var APPLE_PT = '128624979';
     var params = new URLSearchParams(location.search);
     var incoming = params.get('utm_campaign') || params.get('cid');
     if (incoming) {
@@ -56,6 +57,20 @@
         if (typeof window.ym === 'function') {
             try { window.ym(YM_COUNTER, 'reachGoal', name); } catch (e) { /* counter not ready */ }
         }
+    }
+
+    // GA4 получает одно событие store_click с параметрами вместо пяти отдельных
+    // целей: в отчётах GA4 разрез по параметру удобнее, чем зоопарк имён.
+    function ga4StoreClick(store, url) {
+        if (typeof window.gtag !== 'function') return;
+        try {
+            window.gtag('event', 'store_click', {
+                store: store,
+                campaign_id: cidToSet,
+                page_path: location.pathname,
+                link_url: url || ''
+            });
+        } catch (e) { /* gtag not ready */ }
     }
 
     var STORES = {
@@ -118,6 +133,7 @@
                 a.addEventListener('click', function () {
                     reachGoal('store_click_any');
                     reachGoal('store_click_windows');
+                    ga4StoreClick('microsoft', this.href);
                 });
             } catch (e) { /* malformed URL — skip */ }
         }
@@ -132,8 +148,14 @@
                 var v = new URL(b.href, location.origin);
                 if (!v.searchParams.has('ct')) {
                     v.searchParams.set('ct', appleCt);
-                    b.href = v.toString();
                 }
+                // Без pt (Provider Token из App Store Connect) кампания в App
+                // Analytics не регистрируется — один ct сам по себе не считается.
+                if (!v.searchParams.has('pt')) {
+                    v.searchParams.set('pt', APPLE_PT);
+                    v.searchParams.set('mt', '8');
+                }
+                b.href = v.toString();
                 if (typeof gtag_report_conversion === 'function' && !b.getAttribute('onclick')) {
                     b.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
                 }
@@ -141,6 +163,7 @@
                     var isMac = this.href.indexOf('platform=mac') !== -1;
                     reachGoal('store_click_any');
                     reachGoal(isMac ? 'store_click_mac' : 'store_click_ios');
+                    ga4StoreClick(isMac ? 'mac_app_store' : 'app_store', this.href);
                 });
             } catch (e) { /* malformed URL — skip */ }
         }
@@ -165,6 +188,7 @@
                 g.addEventListener('click', function () {
                     reachGoal('store_click_any');
                     reachGoal('store_click_android');
+                    ga4StoreClick('google_play', this.href);
                 });
             } catch (e) { /* malformed URL — skip */ }
         }
