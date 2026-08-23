@@ -39,6 +39,13 @@ foreach ($lang in $Languages) {
         $content = $content.Replace('/img/live-subtitles-video-call-captions.jpg', '/img/live-subtitles-video-call-captions-asia.jpg')
     }
 
+    # These locales have their own use-case stills (captions burnt into the image).
+    # Point at them statically so the pre-JS HTML already shows the right language
+    # and the runtime swap in landing.js has nothing left to re-fetch (R1/R9/R10).
+    if ($lang -in @('ru', 'fr', 'es', 'de', 'it', 'ja', 'ko', 'zh', 'ar', 'pt', 'uk')) {
+        $content = $content.Replace('/img/example/usecase-', "/img/example/$lang/usecase-")
+    }
+
     $langDir = Join-Path (Get-Location) $lang
     if (-not (Test-Path $langDir)) {
         New-Item -Path $langDir -ItemType Directory | Out-Null

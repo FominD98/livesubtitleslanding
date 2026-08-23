@@ -1,0 +1,472 @@
+/* landing.css — Live Subtitles
+ *
+ * One stylesheet for the homepage across all 16 locales (previously 1343 lines of
+ * <style> duplicated into every locale folder). Replaces Bootstrap 5 + Swiper:
+ * the page needs a nav, a grid, an accordion and one dialog, all of which are
+ * ~200 lines of CSS and a <details>/<dialog> element.
+ *
+ * Identity follows the mobile store assets (docs/google-play/assets): brand blue
+ * #005495 on white. The only other accent is the product's own translation-line
+ * orange, used exclusively inside subtitle visuals so the page and the app agree.
+ */
+
+:root {
+    --brand: #005495;
+    --brand-dark: #003f71;
+    --brand-tint: #eaf2f8;
+    --ink: #0c1826;
+    --ink-soft: #3b4a5c;
+    --muted: #667689;
+    --line: #e3e8ef;
+    --bg: #ffffff;
+    --bg-alt: #f6f8fb;
+    --sub-orange: #ff9500;   /* product translation line, on dark only */
+    --yes: #0f7b4f;
+    --no: #b03a3a;
+    --radius: 12px;
+    --radius-lg: 18px;
+    --shadow-sm: 0 1px 2px rgba(12, 24, 38, .06), 0 1px 3px rgba(12, 24, 38, .04);
+    --shadow-md: 0 4px 16px rgba(12, 24, 38, .08);
+    --shadow-lg: 0 18px 48px rgba(12, 24, 38, .14);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+/* .site-header is sticky over a 64px nav, so anchor targets have to clear it or
+ * the heading they scroll to lands underneath the bar. */
+section[id], .section__head[id] { scroll-margin-top: 80px; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img, svg { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 { margin: 0 0 .6em; font-weight: 700; letter-spacing: -.02em; line-height: 1.15; }
+h1 { font-size: clamp(2.05rem, 4.4vw, 3.15rem); line-height: 1.08; }
+h2 { font-size: clamp(1.6rem, 2.8vw, 2.25rem); }
+h3 { font-size: 1.125rem; letter-spacing: -.01em; }
+p { margin: 0 0 1em; }
+p:last-child { margin-bottom: 0; }
+
+.wrap { max-width: 1120px; margin-inline: auto; padding-inline: 24px; }
+.section { padding: 84px 0; }
+.section--alt { background: var(--bg-alt); border-block: 1px solid var(--line); }
+.section__head { max-width: 660px; margin-bottom: 44px; }
+.section__head--center { margin-inline: auto; text-align: center; }
+.section__head p { color: var(--ink-soft); font-size: 1.0625rem; margin: 0; }
+
+.sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* ── Buttons ───────────────────────────────────────────────────────────── */
+
+.btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    padding: .82rem 1.55rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font: inherit; font-weight: 600; font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color .18s ease, border-color .18s ease, color .18s ease;
+}
+.btn:hover { text-decoration: none; }
+.btn--primary { background: var(--brand); color: #fff; }
+.btn--primary:hover { background: var(--brand-dark); color: #fff; }
+.btn--ghost { background: #fff; color: var(--ink); border-color: var(--line); }
+.btn--ghost:hover { border-color: #c3cddb; background: #fbfcfe; }
+.btn--sm { padding: .5rem 1.05rem; font-size: .9375rem; border-radius: 8px; }
+.btn:focus-visible, a:focus-visible, summary:focus-visible, select:focus-visible, input:focus-visible {
+    outline: 2px solid var(--brand); outline-offset: 2px;
+}
+
+/* ── Header ────────────────────────────────────────────────────────────── */
+
+.site-header {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(255, 255, 255, .92);
+    border-bottom: 1px solid var(--line);
+}
+@supports (backdrop-filter: blur(8px)) {
+    .site-header { backdrop-filter: blur(8px); }
+}
+.nav { display: flex; align-items: center; gap: 1.5rem; min-height: 64px; }
+.nav__brand {
+    display: inline-flex; align-items: center; gap: .5rem;
+    font-weight: 700; font-size: 1.0625rem; color: var(--ink); letter-spacing: -.01em;
+}
+.nav__brand:hover { text-decoration: none; }
+.nav__brand img { width: 26px; height: 26px; border-radius: 6px; }
+.nav__links { display: flex; gap: 1.4rem; margin-left: auto; }
+.nav__links a { color: var(--ink-soft); font-size: .9375rem; font-weight: 500; }
+.nav__links a:hover { color: var(--ink); text-decoration: none; }
+.nav__side { display: flex; align-items: center; gap: .75rem; }
+
+.lang-select {
+    appearance: none;
+    padding: .45rem 1.9rem .45rem .7rem;
+    border: 1px solid var(--line); border-radius: 8px;
+    background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4.5 6 8.5l4-4' fill='none' stroke='%23667689' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right .6rem center;
+    color: var(--ink-soft); font: inherit; font-size: .875rem; cursor: pointer;
+}
+
+.nav__toggle {
+    display: none;
+    margin-left: auto;
+    padding: .45rem; border: 1px solid var(--line); border-radius: 8px;
+    background: #fff; cursor: pointer;
+}
+
+@media (max-width: 860px) {
+    .nav__links { display: none; }
+    .nav__toggle { display: inline-flex; }
+    .nav__side { display: none; }
+    .nav.is-open { flex-wrap: wrap; padding-bottom: 1rem; }
+    .nav.is-open .nav__links {
+        display: flex; flex-direction: column; gap: .9rem;
+        width: 100%; order: 3; margin-left: 0; padding-top: 1rem;
+        border-top: 1px solid var(--line);
+    }
+    .nav.is-open .nav__side { display: flex; order: 4; width: 100%; }
+    .nav.is-open .nav__side .btn { flex: 1; }
+}
+
+/* ── Hero ──────────────────────────────────────────────────────────────── */
+
+.hero { padding: 68px 0 76px; }
+.hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 56px; align-items: center; }
+.hero__lead { font-size: 1.1875rem; color: var(--ink-soft); max-width: 34em; margin-bottom: 1.75rem; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1.1rem; }
+.hero__note { font-size: .9375rem; color: var(--muted); margin: 0 0 1.5rem; }
+
+.rating { display: inline-flex; align-items: center; gap: .5rem; font-size: .9375rem; color: var(--ink-soft); }
+.rating:hover { text-decoration: none; }
+.rating__stars { color: #f0a202; letter-spacing: .08em; }
+.rating__src { color: var(--muted); }
+
+.proof { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; margin: 0; padding: 0; list-style: none; }
+.proof li {
+    display: flex; align-items: center; gap: .45rem;
+    font-size: .9375rem; font-weight: 500; color: var(--ink-soft);
+}
+.proof svg { flex: none; width: 17px; height: 17px; color: var(--brand); }
+
+.apps-line { margin-top: 1.75rem; }
+.apps-line__label { font-size: .8125rem; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin: 0 0 .6rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin: 0; padding: 0; list-style: none; }
+.chips li {
+    padding: .3rem .65rem;
+    border: 1px solid var(--line); border-radius: 999px;
+    background: #fff;
+    font-size: .8125rem; font-weight: 500; color: var(--ink-soft);
+}
+
+/* App logo grid. The name stays as real text under each logo: it reads better than a
+ * hover tooltip and keeps the app names in the HTML rather than only in alt text. */
+.applogos {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr));
+    gap: 12px; margin: 0; padding: 0; list-style: none;
+}
+.applogos li {
+    display: flex; flex-direction: column; align-items: center; gap: .5rem;
+    padding: 1rem .5rem .85rem;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    text-align: center;
+}
+.applogos img { width: 34px; height: 34px; object-fit: contain; }
+.applogos span { font-size: .8125rem; font-weight: 500; color: var(--ink-soft); line-height: 1.25; }
+@media (max-width: 560px) {
+    .applogos { grid-template-columns: repeat(auto-fill, minmax(88px, 1fr)); gap: 8px; }
+    .applogos img { width: 28px; height: 28px; }
+    .applogos span { font-size: .75rem; }
+}
+
+/* Product frame — mirrors the real app: title bar, scene, control row, dual lines. */
+.frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: #0d1117;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(12, 24, 38, .12);
+}
+.frame__bar {
+    display: flex; align-items: center; gap: .5rem;
+    padding: .55rem .8rem;
+    background: #161b22;
+    color: #c9d3df; font-size: .8125rem;
+}
+.frame__dots { display: flex; gap: .3rem; }
+.frame__dots span { width: 10px; height: 10px; border-radius: 50%; background: #2f3742; }
+.frame__scene { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+.frame__scene img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 26%; }
+.frame__scene::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, .62) 0%, rgba(0, 0, 0, .06) 46%, transparent 64%);
+}
+.frame__live {
+    position: absolute; top: 12px; left: 12px; z-index: 2;
+    display: inline-flex; align-items: center; gap: .4rem;
+    padding: .2rem .5rem; border-radius: 5px;
+    background: rgba(0, 0, 0, .58);
+    color: #fff; font-size: .6875rem; font-weight: 700; letter-spacing: .06em;
+}
+.frame__live i { width: 7px; height: 7px; border-radius: 50%; background: #e5484d; }
+.subs { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); width: min(560px, 90%); z-index: 2; }
+.subs div {
+    padding: .5rem .8rem; border-radius: 5px;
+    background: rgba(0, 0, 0, .74);
+    text-align: center; font-weight: 600;
+    font-size: clamp(.9375rem, 1.6vw, 1.0625rem); line-height: 1.35;
+    min-height: 1.9em;
+}
+.subs .orig { color: #fff; }
+.subs .trans { color: var(--sub-orange); margin-top: 6px; }
+.subs .typing::after {
+    content: ''; display: inline-block; width: 2px; height: 1em;
+    margin-left: 2px; background: currentColor; vertical-align: -.12em;
+    animation: caret .75s steps(1) infinite;
+}
+@keyframes caret { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+.frame__controls {
+    display: flex; align-items: center; gap: .6rem; flex-wrap: wrap;
+    padding: .6rem .8rem;
+    background: #161b22; border-top: 1px solid #232a34;
+    font-size: .8125rem; color: #c9d3df;
+}
+.frame__lang { padding: .25rem .55rem; border: 1px solid #2f3742; border-radius: 6px; background: #0d1117; }
+.frame__swap { color: #7d8b9c; }
+.frame__online {
+    margin-left: auto;
+    display: inline-flex; align-items: center; gap: .35rem;
+    padding: .2rem .5rem; border-radius: 5px;
+    background: rgba(37, 155, 96, .16); color: #4ac68a; font-weight: 600; font-size: .75rem;
+}
+.frame__online i { width: 6px; height: 6px; border-radius: 50%; background: #3fbf7f; }
+
+@media (max-width: 940px) {
+    .hero { padding: 40px 0 52px; }
+    .hero__grid { grid-template-columns: 1fr; gap: 34px; }
+}
+
+/* ── Steps ─────────────────────────────────────────────────────────────── */
+
+.steps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; counter-reset: step; max-width: 900px; }
+.step { counter-increment: step; }
+.step__n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 30px; height: 30px; margin-bottom: .85rem;
+    border-radius: 8px; background: var(--brand-tint);
+    color: var(--brand); font-weight: 700; font-size: .9375rem;
+}
+.step__n::before { content: counter(step); }
+.step h3 { margin-bottom: .35rem; }
+.step p { color: var(--ink-soft); font-size: .9688rem; }
+@media (max-width: 800px) { .steps { grid-template-columns: 1fr; gap: 24px; } }
+
+/* ── Comparison table ──────────────────────────────────────────────────── */
+
+.cmp-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.cmp {
+    width: 100%; min-width: 620px;
+    border-collapse: separate; border-spacing: 0;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    font-size: .9375rem;
+}
+.cmp th, .cmp td { padding: .95rem 1.1rem; text-align: left; border-bottom: 1px solid var(--line); }
+.cmp thead th {
+    font-size: .8125rem; font-weight: 600; color: var(--muted);
+    text-transform: uppercase; letter-spacing: .05em; vertical-align: bottom;
+}
+.cmp tbody th { font-weight: 600; color: var(--ink); }
+.cmp td { text-align: center; width: 20%; }
+.cmp tbody tr:last-child th, .cmp tbody tr:last-child td { border-bottom: 0; }
+.cmp tbody tr.is-us { background: var(--brand-tint); }
+.cmp tbody tr.is-us th { color: var(--brand-dark); }
+/* Narrow screens: let the table shrink and wrap instead of scrolling sideways —
+ * a side-scrolling comparison is the one people never scroll. */
+@media (max-width: 720px) {
+    .cmp { min-width: 0; font-size: .8125rem; }
+    .cmp th, .cmp td { padding: .6rem .45rem; }
+    .cmp thead th { font-size: .6875rem; letter-spacing: .03em; }
+    .cmp td { width: 17%; }
+}
+
+.mark { display: inline-flex; }
+.mark svg { width: 19px; height: 19px; }
+.mark.yes { color: var(--yes); }
+.mark.no { color: var(--no); }
+
+/* ── Cards / use cases / features ──────────────────────────────────────── */
+
+.grid { display: grid; gap: 24px; }
+.grid--2 { grid-template-columns: repeat(2, 1fr); }
+.grid--3 { grid-template-columns: repeat(3, 1fr); }
+.grid--4 { grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 900px) { .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 620px) { .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; } }
+
+/* The stills are different heights per locale (see the note on .case img), so the
+ * caption is pushed to the bottom of the card instead of sitting right under the
+ * image — that keeps captions on one line across a row. */
+.case { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+/* The use-case stills have a marketing headline composited *into* the frame, not
+ * as a band above it, and its height varies per locale (files run 506–607px tall
+ * for the same 960px width). So no single crop can remove it: the ratio that
+ * clears a two-line Russian headline also eats the top row of the Zoom grid.
+ * Show the frame whole and let the card heights be ragged — the headline then
+ * duplicates the <h3> below, which is the lesser defect until clean stills land. */
+.case img { display: block; width: 100%; height: auto; }
+.case__body { margin-top: auto; padding: 1rem 1.15rem 1.15rem; }
+.case__body h3 { margin-bottom: .3rem; font-size: 1.0625rem; }
+.case__body p { color: var(--ink-soft); font-size: .9375rem; margin: 0; }
+
+.feature__icon { width: 26px; height: 26px; margin-bottom: .8rem; color: var(--brand); }
+.feature h3 { margin-bottom: .3rem; }
+.feature p { color: var(--ink-soft); font-size: .9375rem; margin: 0; }
+
+/* ── Video facades ─────────────────────────────────────────────────────── */
+
+/* One large demo up front, two supporting ones beneath: three equal thumbnails in a
+ * row end up too small to read the subtitles in, which is the whole point. */
+.videos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.videos > :first-child { grid-column: 1 / -1; }
+@media (max-width: 860px) { .videos { grid-template-columns: 1fr; } }
+.video {
+    position: relative; display: block;
+    aspect-ratio: 16 / 9; overflow: hidden;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    background: #0d1117; cursor: pointer; padding: 0;
+}
+.video img { width: 100%; height: 100%; object-fit: cover; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.video__play {
+    position: absolute; inset: 0; display: grid; place-items: center;
+    background: rgba(6, 12, 20, .3);
+}
+.video__play span {
+    display: grid; place-items: center;
+    width: 54px; height: 54px; border-radius: 50%;
+    background: rgba(255, 255, 255, .94); color: var(--brand);
+}
+.video:hover .video__play { background: rgba(6, 12, 20, .18); }
+
+/* ── Reviews ───────────────────────────────────────────────────────────── */
+
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+@media (max-width: 900px) { .reviews { grid-template-columns: 1fr; } }
+.review { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 1.4rem 1.5rem; }
+.review__stars { color: #f0a202; font-size: .875rem; letter-spacing: .1em; margin-bottom: .6rem; }
+.review p { font-size: .9688rem; color: var(--ink); margin-bottom: .9rem; }
+.review footer { font-size: .875rem; color: var(--muted); }
+.review footer b { color: var(--ink); font-weight: 600; }
+
+/* ── Privacy note ──────────────────────────────────────────────────────── */
+
+.note {
+    display: grid; grid-template-columns: 26px 1fr; gap: 1rem;
+    max-width: 760px;
+    padding: 1.5rem 1.7rem;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+}
+.note svg { width: 26px; height: 26px; color: var(--brand); }
+.note h2 { font-size: 1.1875rem; margin-bottom: .4rem; }
+.note p { color: var(--ink-soft); font-size: .9688rem; }
+
+/* ── FAQ ───────────────────────────────────────────────────────────────── */
+
+.faq { max-width: 760px; margin-inline: auto; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1.15rem 0; cursor: pointer;
+    font-weight: 600; font-size: 1.0313rem;
+    list-style: none;
+}
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+    content: ''; flex: none;
+    width: 10px; height: 10px; margin-right: 4px;
+    border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted);
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform .18s ease;
+}
+.faq details[open] summary::after { transform: rotate(225deg) translateY(-2px); }
+.faq details > div { padding: 0 0 1.15rem; color: var(--ink-soft); font-size: .9688rem; max-width: 62ch; }
+
+/* ── Download ──────────────────────────────────────────────────────────── */
+
+.stores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 900px; margin-inline: auto; }
+@media (max-width: 860px) { .stores { grid-template-columns: repeat(2, 1fr); } }
+.store {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .85rem;
+    padding: 1.25rem .9rem;
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+}
+/* No uppercase here: it would render the platform names as "MACOS" and "IOS". */
+.store span { font-size: .875rem; font-weight: 600; color: var(--ink-soft); }
+.store a { display: flex; align-items: center; justify-content: center; min-height: 50px; }
+/* Official badges may not be redrawn, and they do not share a trim. The Microsoft and
+ * Apple SVGs are full-bleed (161x44, 156x40, 120x40), while Google's PNG is 646x250 with
+ * 41px of transparent padding top and bottom — its artwork is only 67% of the file height.
+ * So a single CSS height renders Google's badge a third smaller. Scale it by 1/0.672 to
+ * make the visible badges optically equal. */
+.store img { height: 48px; width: auto; }
+.store img[src*="play.google"] { height: 71px; }
+@media (max-width: 620px) {
+    .store img { height: 44px; }
+    .store img[src*="play.google"] { height: 65px; }
+}
+.tv { max-width: 900px; margin: 18px auto 0; text-align: center; }
+
+/* ── Dialog ────────────────────────────────────────────────────────────── */
+
+dialog {
+    width: min(420px, calc(100vw - 32px));
+    padding: 1.7rem;
+    border: 1px solid var(--line); border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    color: var(--ink);
+}
+dialog::backdrop { background: rgba(9, 18, 30, .5); }
+dialog h2 { font-size: 1.25rem; }
+dialog p { color: var(--ink-soft); font-size: .9688rem; }
+dialog input[type="email"] {
+    width: 100%; padding: .7rem .8rem; margin-bottom: .9rem;
+    border: 1px solid var(--line); border-radius: 9px;
+    font: inherit; font-size: 1rem; color: var(--ink);
+}
+.dialog__row { display: flex; gap: .6rem; justify-content: flex-end; }
+.dialog__close { position: absolute; top: .8rem; right: .8rem; border: 0; background: none; cursor: pointer; color: var(--muted); font-size: 1.25rem; line-height: 1; padding: .2rem .35rem; }
+
+/* ── Footer + SEO links ────────────────────────────────────────────────── */
+
+.links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; font-size: .875rem; }
+@media (max-width: 860px) { .links { grid-template-columns: repeat(2, 1fr); } }
+.links h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin-bottom: .7rem; }
+.links a { display: block; color: var(--ink-soft); padding: .17rem 0; }
+.links a:hover { color: var(--brand); }
+
+.site-footer { padding: 32px 0 44px; border-top: 1px solid var(--line); font-size: .875rem; color: var(--muted); }
+.site-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; justify-content: space-between; }
+.site-footer a { color: var(--ink-soft); }
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}

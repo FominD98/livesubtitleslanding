@@ -3,7 +3,8 @@
 > Live Subtitles is an app for Windows, macOS, iOS and Android that shows real-time
 > AI captions and dual (two-language) subtitles for any audio playing on the
 > device — Zoom, Microsoft Teams, Google Meet, Skype, YouTube, Netflix, games and
-> any other app. It captures system audio directly, so no microphone is needed.
+> any other app. The audio source is switchable: it captures system audio directly,
+> or listens through the microphone for talks, lectures and in-person conversations.
 > Speech is transcribed and translated live into 60+ languages (69 translation
 > targets), with the original and translated line shown together.
 
@@ -12,7 +13,7 @@ Key facts:
 - Platforms: Windows (Microsoft Store), macOS and iOS (App Store), Android (Google Play); a TV version is in development
 - Microsoft Store rating: 4.7/5 from 351+ ratings
 - Pricing: 3-day free trial, no credit card; paid plans from $5/month
-- Core features: real-time captions from system audio, dual subtitles
+- Core features: real-time captions from system audio or the microphone, dual subtitles
   (original + translation), 60+ translation languages, ~66 recognition language
   variants, works offline with local models or online providers, Game Mode overlay
 - Typical uses: multilingual meetings, watching foreign movies/videos, language
