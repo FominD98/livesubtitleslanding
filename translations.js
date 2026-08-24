@@ -41,6 +41,7 @@ const translations = {
             comparison: 'Comparison',
             faq: 'FAQ',
             download: 'Download',
+            pricing: 'Pricing',
                 howItWorks: 'How it works'
             },
         header: {
@@ -231,6 +232,7 @@ const translations = {
             comparison: 'Сравнение',
             faq: 'Вопросы',
             download: 'Скачать',
+            pricing: 'Цены',
                 howItWorks: 'Как это работает'
             },
         header: {
@@ -421,6 +423,7 @@ const translations = {
             comparison: 'Comparaison',
             faq: 'FAQ',
             download: 'Télécharger',
+            pricing: 'Tarifs',
                 howItWorks: 'Comment ça marche'
             },
         header: {
@@ -607,6 +610,7 @@ const translations = {
             comparison: 'Comparación',
             faq: 'FAQ',
             download: 'Descargar',
+            pricing: 'Precios',
                 howItWorks: 'Cómo funciona'
             },
         header: {
@@ -793,6 +797,7 @@ const translations = {
             comparison: 'Vergleich',
             faq: 'FAQ',
             download: 'Herunterladen',
+            pricing: 'Preise',
                 howItWorks: 'So funktioniert es'
             },
         header: {
@@ -979,6 +984,7 @@ const translations = {
             comparison: 'Confronto',
             faq: 'FAQ',
             download: 'Scaricare',
+            pricing: 'Prezzi',
                 howItWorks: 'Come funziona'
             },
         header: {
@@ -1165,6 +1171,7 @@ const translations = {
             comparison: '比較',
             faq: 'よくある質問',
             download: 'ダウンロード',
+            pricing: '料金',
                 howItWorks: '使い方'
             },
         header: {
@@ -1351,6 +1358,7 @@ const translations = {
             comparison: '비교',
             faq: '자주 묻는 질문',
             download: '다운로드',
+            pricing: '요금',
                 howItWorks: '사용 방법'
             },
         header: {
@@ -1537,6 +1545,7 @@ const translations = {
             comparison: '对比',
             faq: '常见问题',
             download: '下载',
+            pricing: '价格',
                 howItWorks: '工作原理'
             },
         header: {
@@ -1723,6 +1732,7 @@ const translations = {
             comparison: 'مقارنة',
             faq: 'الأسئلة الشائعة',
             download: 'تحميل',
+            pricing: 'الأسعار',
                 howItWorks: 'كيف يعمل'
             },
         header: {
@@ -1909,6 +1919,7 @@ const translations = {
             comparison: 'तुलना',
             faq: 'सामान्य प्रश्न',
             download: 'डाउनलोड',
+            pricing: 'मूल्य',
                 howItWorks: 'यह कैसे काम करता है'
             },
         header: {
@@ -2095,6 +2106,7 @@ const translations = {
             comparison: 'Comparação',
             faq: 'FAQ',
             download: 'Download',
+            pricing: 'Preços',
                 howItWorks: 'Como funciona'
             },
         header: {
@@ -2281,6 +2293,7 @@ const translations = {
             comparison: 'Porównanie',
             faq: 'FAQ',
             download: 'Pobierz',
+            pricing: 'Cennik',
                 howItWorks: 'Jak to działa'
             },
         header: {
@@ -2467,6 +2480,7 @@ const translations = {
             comparison: 'Vergelijking',
             faq: 'FAQ',
             download: 'Download',
+            pricing: 'Prijzen',
                 howItWorks: 'Hoe het werkt'
             },
         header: {
@@ -2653,6 +2667,7 @@ const translations = {
             comparison: 'Karşılaştırma',
             faq: 'SSS',
             download: 'İndir',
+            pricing: 'Fiyatlar',
                 howItWorks: 'Nasıl çalışır'
             },
         header: {
@@ -2839,6 +2854,7 @@ const translations = {
             comparison: 'Порівняння',
             faq: 'Питання',
             download: 'Завантажити',
+            pricing: 'Ціни',
                 howItWorks: 'Як це працює'
             },
         header: {
