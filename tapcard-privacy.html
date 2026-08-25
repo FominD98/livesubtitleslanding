@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | TapCard</title>
+  <meta name="description" content="Privacy Policy for the TapCard Android app. What leaves your device, which third-party services are involved, and how to contact us.">
+  <!-- noindex: страница обслуживает Google Play, а не поиск, и не должна размывать выдачу лендинга Live Subtitles. -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://live-subtitles.com/tapcard-privacy.html" />
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Privacy Policy | TapCard">
+  <meta property="og:description" content="Privacy Policy for the TapCard Android app.">
+  <meta property="og:url" content="https://live-subtitles.com/tapcard-privacy.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "TapCard Privacy Policy",
+    "url": "https://live-subtitles.com/tapcard-privacy.html",
+    "description": "Privacy Policy for the TapCard Android app",
+    "dateModified": "2026-08-25"
+  }
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+      line-height: 1.6;
+      max-width: 900px;
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      margin-top: 1.5em;
+      font-size: 1.4em;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+      display: block;
+      overflow-x: auto;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem 0.6rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #f5f5f5;
+    }
+    code {
+      background: #f5f5f5;
+      padding: 0.1em 0.3em;
+      border-radius: 3px;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #0077cc;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<a class="back-link" href="/">← Back to Home</a>
+<h1>TapCard Privacy Policy</h1>
+<p>Effective Date: August 25, 2026</p>
+
+<h2>Overview</h2>
+<p>
+  TapCard ("the App", "we") shows a translation card for a word you tap inside another app on your
+  Android device. To read that word, the App captures the screen <strong>on your device</strong> and
+  recognises text locally. <strong>The screen image never leaves your device.</strong> To fill the
+  card in, the App sends only the word you tapped and the sentence around it to dictionary,
+  translation and picture services.
+</p>
+<p>
+  There are no accounts, no ads, no advertising identifiers and no analytics in the App.
+</p>
+
+<h2>Information We Process</h2>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Why</th>
+    <th>Where it goes</th>
+    <th>Stored?</th>
+  </tr>
+  <tr>
+    <td><strong>Screen image</strong>, captured through Android MediaProjection while the mode is on</td>
+    <td>Recognising the words shown on screen</td>
+    <td>Nowhere. Text recognition runs on the device with Google ML Kit; the frame is discarded immediately afterwards</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td><strong>The word you tapped</strong></td>
+    <td>Looking up meanings, transcription, pronunciation and an illustration</td>
+    <td>freedictionaryapi.com, api.dictionaryapi.dev, api.pexels.com and our translation backend at api.live-subtitles.com</td>
+    <td>Not stored by us; held in memory for the session only</td>
+  </tr>
+  <tr>
+    <td><strong>The sentence the word came from</strong></td>
+    <td>Translating the word in its context</td>
+    <td>Our translation backend at api.live-subtitles.com</td>
+    <td>Not stored by us</td>
+  </tr>
+  <tr>
+    <td><strong>Device fingerprint</strong> — a SHA-256 hash derived from the Android device identifier <code>Settings.Secure.ANDROID_ID</code></td>
+    <td>Signing requests to our translation backend and limiting abuse</td>
+    <td>Our backend API</td>
+    <td>The identifier only, on the backend</td>
+  </tr>
+  <tr>
+    <td><strong>App version</strong></td>
+    <td>Telling client builds apart in backend logs</td>
+    <td>Our backend API</td>
+    <td>In server logs</td>
+  </tr>
+</table>
+
+<p>
+  In the Google Play Data safety form, the device fingerprint is declared under
+  <strong>Device or other IDs</strong>.
+</p>
+<p>
+  We do <strong>not</strong> collect your name, email address, contacts, location or advertising
+  identifiers. The App contains no analytics SDK and no crash reporting.
+</p>
+
+<h2>Screen Capture</h2>
+<p>
+  Android shows a system consent dialog before any capture begins — every time you turn the mode on.
+  That consent cannot be cached. While the mode is running, Android shows a persistent notification
+  and a recording indicator.
+</p>
+<p>
+  The App grabs a single frame at the moment you tap the floating bubble. That frame is handed to
+  on-device text recognition, used to place the highlight boxes over the words, and then discarded.
+  It is never uploaded, never written to storage and never shown to anyone.
+</p>
+<p>
+  Capture stops when you turn the mode off, when the screen locks, or when you revoke the permission.
+</p>
+
+<h2>Display Over Other Apps</h2>
+<p>
+  The App draws a floating bubble and the word card above whatever you are reading. The overlay only
+  draws — by itself it reads nothing from other apps.
+</p>
+
+<h2>Diagnostics Log</h2>
+<p>
+  The App keeps a short in-memory log of the last few hundred events — scan timings, dictionary
+  lookups, network failures — so that problems can be diagnosed. It contains the words you looked up.
+  It is not written to storage and is never sent anywhere automatically; it is cleared when the App
+  stops. You can view it inside the App and choose to share it yourself, in which case it goes only
+  where you send it.
+</p>
+
+<h2>Third-Party Services</h2>
+
+<table>
+  <tr>
+    <th>Service</th>
+    <th>What it receives</th>
+    <th>Their policy</th>
+  </tr>
+  <tr>
+    <td>freedictionaryapi.com (Wiktionary data)</td>
+    <td>The word</td>
+    <td><a href="https://freedictionaryapi.com" target="_blank" rel="noopener">freedictionaryapi.com</a></td>
+  </tr>
+  <tr>
+    <td>api.dictionaryapi.dev</td>
+    <td>The word</td>
+    <td><a href="https://dictionaryapi.dev" target="_blank" rel="noopener">dictionaryapi.dev</a></td>
+  </tr>
+  <tr>
+    <td>Pexels</td>
+    <td>The word, used as an image search query</td>
+    <td><a href="https://www.pexels.com/privacy-policy/" target="_blank" rel="noopener">pexels.com</a></td>
+  </tr>
+  <tr>
+    <td>Our backend (api.live-subtitles.com)</td>
+    <td>The word, its sentence, the device fingerprint, the app version</td>
+    <td>This document</td>
+  </tr>
+</table>
+
+<p>
+  Pronunciation uses the text-to-speech engine built into your device, or a recording supplied by the
+  dictionary service. Nothing is sent to us for it.
+</p>
+
+<h2>Children</h2>
+<p>
+  TapCard is not directed to children. Dictionary entries come from Wiktionary and illustrations come
+  from Pexels; neither is filtered by us, so definitions and images may be unsuitable for minors.
+</p>
+
+<h2>Data Deletion</h2>
+<p>
+  We hold no account and no profile for you. The word and its sentence are processed in transit and
+  are not retained. To have the device fingerprint removed from our backend, write to the address
+  below and include the fingerprint shown in the App's diagnostics log.
+</p>
+
+<h2>Changes</h2>
+<p>
+  We may update this policy; the Effective Date above will change accordingly.
+</p>
+
+<h2>Contact</h2>
+<p>
+  If you have questions about this Privacy Policy, or want to request deletion of data associated with
+  your device identifier, contact us at:
+</p>
+<p><strong>help@live-subtitles.com</strong></p>
+</body>
+</html>
