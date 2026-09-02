@@ -24,7 +24,9 @@ const UA = {
     android: { ua: 'Mozilla/5.0 (Linux; Android 14; Pixel 8)', platform: 'Linux armv8l', touch: 5 },
 };
 
-function run(pathname, search, os, ctaText) {
+// `preset` заполняет sessionStorage до прогона — так проверяется переход
+// внутри сайта, где метка приезжает не из URL, а из предыдущей страницы.
+function run(pathname, search, os, ctaText, preset) {
     os = os || 'win';
     const links = {
         ms: makeLink('https://apps.microsoft.com/detail/9ph1r9djg47s'),
@@ -40,14 +42,18 @@ function run(pathname, search, os, ctaText) {
     prose.textContent = 'Microsoft Store';
 
     const tv = makeLink('#');
-    const store = {};
+    const store = Object.assign({}, preset || {});
     const goals = [];
     const ga4 = [];
     const sandbox = {
         URL, URLSearchParams, console,
         navigator: { userAgent: UA[os].ua, platform: UA[os].platform, maxTouchPoints: UA[os].touch },
         location: { search, pathname, origin: 'https://live-subtitles.com' },
-        sessionStorage: { getItem: k => store[k] || null, setItem: (k, v) => { store[k] = v; } },
+        sessionStorage: {
+            getItem: k => store[k] || null,
+            setItem: (k, v) => { store[k] = v; },
+            removeItem: k => { delete store[k]; },
+        },
         document: {
             readyState: 'complete',
             addEventListener() {},
@@ -74,7 +80,7 @@ function run(pathname, search, os, ctaText) {
         },
     };
     vm.runInNewContext(SRC, sandbox);
-    return { links, tv, cta, prose, goals, ga4 };
+    return { links, tv, cta, prose, goals, ga4, store };
 }
 
 // Клик по ссылке. _listeners хранит пары [тип, обработчик]; вызываем как браузер —
@@ -122,6 +128,43 @@ eq(param(r.links.ms.href, 'cid'), 'yt_review_jan', 'MS cid');
 eq(param(r.links.ios.href, 'ct'), 'yt_review_jan', 'Apple ct');
 eq(param(r.links.play.href, 'referrer'),
     'utm_source=live-subtitles.com&utm_medium=referral&utm_campaign=yt_review_jan', 'Play referrer');
+
+console.log('\n— платный переход: source/medium едут в Play из ссылки —');
+r = run('/', '?utm_source=google&utm_medium=cpc&utm_campaign=gads_us_captions');
+eq(param(r.links.play.href, 'referrer'),
+    'utm_source=google&utm_medium=cpc&utm_campaign=gads_us_captions', 'Play referrer');
+eq(param(r.links.ms.href, 'cid'), 'gads_us_captions', 'MS берёт только кампанию');
+eq(param(r.links.ios.href, 'ct'), 'gads_us_captions', 'Apple берёт только кампанию');
+eq(JSON.stringify(r.store),
+    '{"lsCid":"gads_us_captions","lsUtmSource":"google","lsUtmMedium":"cpc"}', 'вся тройка в сессии');
+
+console.log('\n— метка держится при переходе на другую страницу сайта —');
+r = run('/pricing.html', '', 'win', null,
+    { lsCid: 'gads_us_captions', lsUtmSource: 'google', lsUtmMedium: 'cpc' });
+eq(param(r.links.play.href, 'referrer'),
+    'utm_source=google&utm_medium=cpc&utm_campaign=gads_us_captions', 'Play referrer из сессии');
+
+console.log('\n— source без кампании: канал известен, кампания органическая —');
+r = run('/', '?utm_source=reddit&utm_medium=social');
+eq(param(r.links.play.href, 'referrer'),
+    'utm_source=reddit&utm_medium=social&utm_campaign=site_organic', 'Play referrer');
+
+console.log('\n— новая кампания без source не наследует прежний канал —');
+r = run('/', '?utm_campaign=newsletter_sep', 'win', null,
+    { lsCid: 'gads_us_captions', lsUtmSource: 'google', lsUtmMedium: 'cpc' });
+eq(param(r.links.play.href, 'referrer'),
+    'utm_source=live-subtitles.com&utm_medium=referral&utm_campaign=newsletter_sep', 'Play referrer');
+
+console.log('\n— грязные значения нормализуются, а не уезжают в отчёты как есть —');
+r = run('/', '?utm_source=Yandex%20Ads&utm_medium=%7Bsource_type%7D&utm_campaign=promo%20sale');
+eq(param(r.links.play.href, 'referrer'),
+    'utm_source=yandex_ads&utm_medium=source_type&utm_campaign=promo_sale', 'Play referrer');
+eq(param(r.links.ms.href, 'cid'), 'promo_sale', 'MS cid без пробела');
+
+console.log('\n— & в кампании не подделывает лишние utm-ключи —');
+r = run('/', '?utm_source=partner&utm_medium=email&utm_campaign=a%26utm_source%3Dhacked');
+eq(param(r.links.play.href, 'referrer'),
+    'utm_source=partner&utm_medium=email&utm_campaign=a_utm_source_hacked', 'Play referrer');
 
 console.log('\n— повторный прогон не должен дублировать параметры —');
 r = run('/', '');

@@ -5,6 +5,9 @@
 //
 // Campaign id (`cidToSet`): incoming ?utm_campaign / ?cid if present, otherwise
 // derived from the pathname -> `site_organic_<page_slug>`.
+// Source/medium (`playSource` / `playMedium`): incoming ?utm_source /
+// ?utm_medium if present, otherwise the organic `live-subtitles.com` /
+// `referral` pair. Only Play carries them; MS and Apple take a campaign only.
 //
 // Per store:
 //   Microsoft Store  ?cid=<id>        -> Partner Center > Acquisitions > Custom campaign
@@ -22,11 +25,35 @@
     var APPLE_PT = '128624979';
     var params = new URLSearchParams(location.search);
     var incoming = params.get('utm_campaign') || params.get('cid');
-    if (incoming) {
-        try { sessionStorage.setItem('lsCid', incoming); } catch (e) { /* private mode */ }
+    var incomingSource = params.get('utm_source');
+    var incomingMedium = params.get('utm_medium');
+    // Any utm-bearing entry is a fresh touch, so the whole triple is rewritten
+    // at once: pairing a new campaign with the previous visit's source would
+    // file the install under a channel it did not come from.
+    if (incoming || incomingSource || incomingMedium) {
+        try {
+            setOrClear('lsCid', incoming);
+            setOrClear('lsUtmSource', incomingSource);
+            setOrClear('lsUtmMedium', incomingMedium);
+        } catch (e) { /* private mode */ }
     }
+    function setOrClear(key, value) {
+        if (value) sessionStorage.setItem(key, value);
+        else sessionStorage.removeItem(key);
+    }
+
     var campaign = '';
-    try { campaign = sessionStorage.getItem('lsCid') || ''; } catch (e) { campaign = incoming || ''; }
+    var utmSource = '';
+    var utmMedium = '';
+    try {
+        campaign = sessionStorage.getItem('lsCid') || '';
+        utmSource = sessionStorage.getItem('lsUtmSource') || '';
+        utmMedium = sessionStorage.getItem('lsUtmMedium') || '';
+    } catch (e) {
+        campaign = incoming || '';
+        utmSource = incomingSource || '';
+        utmMedium = incomingMedium || '';
+    }
 
     function pathToCid() {
         var p = location.pathname || '/';
@@ -39,7 +66,22 @@
         return cid.length > 64 ? cid.slice(0, 64).replace(/_+$/, '') : cid;
     }
 
-    var cidToSet = campaign || pathToCid();
+    // The incoming campaign reaches three store consoles verbatim, so the same
+    // charset rule as the organic ids applies to it: a space, cyrillic or an
+    // unexpanded ad-platform macro would otherwise show up percent-encoded in
+    // the reports, and a bare `&` inside it would forge extra utm keys in the
+    // Play referrer. Case is preserved — live campaigns are already named.
+    var CID_MAX = 64;
+    function toCampaignId(raw) {
+        if (!raw) return '';
+        var v = String(raw).trim()
+            .replace(/[^A-Za-z0-9._-]+/g, '_')
+            .replace(/^[._-]+|[._-]+$/g, '');
+        if (!v) return '';
+        return v.length > CID_MAX ? v.slice(0, CID_MAX).replace(/[._-]+$/, '') : v;
+    }
+
+    var cidToSet = toCampaignId(campaign) || pathToCid();
 
     // Apple's App Analytics campaign token is capped at 40 chars; our ids run up
     // to 49. Trading the `site_organic_` prefix for `org_` fits every current
@@ -52,6 +94,22 @@
         return t.length > APPLE_CT_MAX ? t.slice(0, APPLE_CT_MAX).replace(/_+$/, '') : t;
     }
     var appleCt = toAppleCt(cidToSet);
+
+    // Play Console shows source/medium verbatim, so an unsanitised value from
+    // the ad link (spaces, cyrillic, an unexpanded {source_type} macro) would
+    // land in the report as percent-encoded noise and split one channel across
+    // several rows. Anything outside the utm charset collapses to `_`.
+    var UTM_VALUE_MAX = 64;
+    function toUtmValue(raw, fallback) {
+        if (!raw) return fallback;
+        var v = String(raw).trim().toLowerCase()
+            .replace(/[^a-z0-9._-]+/g, '_')
+            .replace(/^[._-]+|[._-]+$/g, '');
+        if (!v) return fallback;
+        return v.length > UTM_VALUE_MAX ? v.slice(0, UTM_VALUE_MAX).replace(/[._-]+$/, '') : v;
+    }
+    var playSource = toUtmValue(utmSource, 'live-subtitles.com');
+    var playMedium = toUtmValue(utmMedium, 'referral');
 
     function reachGoal(name) {
         if (typeof window.ym === 'function') {
@@ -175,11 +233,18 @@
                 // Play Store install attribution rides on a single `referrer`
                 // param holding a urlencoded utm string. Play Console needs
                 // utm_source + utm_medium to attribute the install at all;
-                // utm_campaign carries our per-page cid.
+                // utm_campaign carries our per-page cid. Paid traffic passes
+                // its own source/medium through so Play Console separates the
+                // ad networks instead of filing them all as our referral.
+                // Built through URLSearchParams: a raw `&` or `=` inside a
+                // campaign name would otherwise forge extra utm keys.
                 var w = new URL(g.href, location.origin);
                 if (!w.searchParams.has('referrer')) {
-                    w.searchParams.set('referrer',
-                        'utm_source=live-subtitles.com&utm_medium=referral&utm_campaign=' + cidToSet);
+                    var ref = new URLSearchParams();
+                    ref.set('utm_source', playSource);
+                    ref.set('utm_medium', playMedium);
+                    ref.set('utm_campaign', cidToSet);
+                    w.searchParams.set('referrer', ref.toString());
                     g.href = w.toString();
                 }
                 if (typeof gtag_report_conversion === 'function' && !g.getAttribute('onclick')) {
