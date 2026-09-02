@@ -80,7 +80,7 @@ function run(pathname, search, os, ctaText, preset) {
         },
     };
     vm.runInNewContext(SRC, sandbox);
-    return { links, tv, cta, prose, goals, ga4, store };
+    return { links, tv, cta, prose, goals, ga4, store, stamp: sandbox.window.lsStampStoreUrl };
 }
 
 // Клик по ссылке. _listeners хранит пары [тип, обработчик]; вызываем как браузер —
@@ -240,6 +240,29 @@ eq((r.ga4.find(e => e.name === 'store_click') || {}).params.store, 'google_play'
 r = run('/', '', 'win');
 click(r.links.mac);
 eq((r.ga4.find(e => e.name === 'store_click') || {}).params.store, 'mac_app_store', 'mac: GA4 знает стор');
+
+// js/landing.js перенаправляет кнопки навбара и героя главной на свой стор уже
+// после этого скрипта, поэтому разметку он берёт отсюда. Без экспорта кнопка
+// теряла кампанию: на Windows затиралась захардкоженным cid, на Mac/iOS/Android
+// уезжала вообще без ct/referrer.
+console.log('\n— lsStampStoreUrl: перенаправленную кнопку можно разметить заново —');
+r = run('/', '?utm_source=google&utm_medium=cpc&utm_campaign=gads_us_captions');
+eq(typeof r.stamp, 'function', 'функция экспортирована в window');
+eq(param(r.stamp('https://apps.microsoft.com/detail/9ph1r9djg47s'), 'cid'),
+    'gads_us_captions', 'MS: cid проставлен');
+eq(param(r.stamp('https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac'), 'pt'),
+    '128624979', 'Mac: pt проставлен');
+eq(param(r.stamp('https://play.google.com/store/apps/details?id=com.livesubtitles.android'), 'referrer'),
+    'utm_source=google&utm_medium=cpc&utm_campaign=gads_us_captions', 'Play: referrer проставлен');
+eq(r.stamp('#download'), '#download', 'не-сторовая ссылка не тронута');
+
+console.log('\n— стор определяется в момент клика, а не при навешивании —');
+r = run('/', '', 'win');
+r.links.ms.href = r.stamp('https://play.google.com/store/apps/details?id=com.livesubtitles.android');
+click(r.links.ms);
+eq((r.ga4.find(e => e.name === 'store_click') || {}).params.store,
+    'google_play', 'GA4 видит стор после перенаправления');
+eq(String(r.goals.includes('store_click_android')), 'true', 'цель Метрики — Android, а не Windows');
 
 console.log(fail ? `\n${fail} проверок провалено` : '\nВсе проверки прошли.');
 process.exit(fail ? 1 : 0);

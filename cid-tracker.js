@@ -173,63 +173,27 @@
         }
     }
 
-    function instrument() {
-        // Must run first: the loops below stamp campaign params per store, so the
-        // CTA has to already point at its final store.
-        routeStoreCta();
+    function storeKind(href) {
+        if (href.indexOf('apps.microsoft.com') !== -1) return 'ms';
+        if (href.indexOf('apps.apple.com') !== -1) {
+            return href.indexOf('platform=mac') !== -1 ? 'mac' : 'ios';
+        }
+        if (href.indexOf('play.google.com/store/apps') !== -1) return 'play';
+        return '';
+    }
 
-        var msLinks = document.querySelectorAll('a[href*="apps.microsoft.com"]');
-        for (var i = 0; i < msLinks.length; i++) {
-            var a = msLinks[i];
-            try {
-                var u = new URL(a.href, location.origin);
+    // Adds the store's own campaign params to a store URL. Exported below,
+    // because js/landing.js re-points the homepage CTAs to the visitor's store
+    // after this script has run — it has to re-stamp what it rewrites, or the
+    // main button on the site loses its attribution entirely.
+    function stampStoreUrl(href) {
+        var kind = storeKind(href || '');
+        if (!kind) return href;
+        try {
+            var u = new URL(href, location.origin);
+            if (kind === 'ms') {
                 u.searchParams.set('cid', cidToSet);
-                a.href = u.toString();
-                if (typeof gtag_report_conversion === 'function' && !a.getAttribute('onclick')) {
-                    a.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
-                }
-                a.addEventListener('click', function () {
-                    reachGoal('store_click_any');
-                    reachGoal('store_click_windows');
-                    ga4StoreClick('microsoft', this.href);
-                });
-            } catch (e) { /* malformed URL — skip */ }
-        }
-
-        var appleLinks = document.querySelectorAll('a[href*="apps.apple.com"]');
-        for (var j = 0; j < appleLinks.length; j++) {
-            var b = appleLinks[j];
-            try {
-                // Tag organic traffic too, not just links arrived at with a
-                // ?utm_campaign — otherwise App Store Connect attributes every
-                // organic install to "unknown", unlike MS and Play.
-                var v = new URL(b.href, location.origin);
-                if (!v.searchParams.has('ct')) {
-                    v.searchParams.set('ct', appleCt);
-                }
-                // Без pt (Provider Token из App Store Connect) кампания в App
-                // Analytics не регистрируется — один ct сам по себе не считается.
-                if (!v.searchParams.has('pt')) {
-                    v.searchParams.set('pt', APPLE_PT);
-                    v.searchParams.set('mt', '8');
-                }
-                b.href = v.toString();
-                if (typeof gtag_report_conversion === 'function' && !b.getAttribute('onclick')) {
-                    b.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
-                }
-                b.addEventListener('click', function () {
-                    var isMac = this.href.indexOf('platform=mac') !== -1;
-                    reachGoal('store_click_any');
-                    reachGoal(isMac ? 'store_click_mac' : 'store_click_ios');
-                    ga4StoreClick(isMac ? 'mac_app_store' : 'app_store', this.href);
-                });
-            } catch (e) { /* malformed URL — skip */ }
-        }
-
-        var playLinks = document.querySelectorAll('a[href*="play.google.com/store/apps"]');
-        for (var k = 0; k < playLinks.length; k++) {
-            var g = playLinks[k];
-            try {
+            } else if (kind === 'play') {
                 // Play Store install attribution rides on a single `referrer`
                 // param holding a urlencoded utm string. Play Console needs
                 // utm_source + utm_medium to attribute the install at all;
@@ -238,25 +202,71 @@
                 // ad networks instead of filing them all as our referral.
                 // Built through URLSearchParams: a raw `&` or `=` inside a
                 // campaign name would otherwise forge extra utm keys.
-                var w = new URL(g.href, location.origin);
-                if (!w.searchParams.has('referrer')) {
+                if (!u.searchParams.has('referrer')) {
                     var ref = new URLSearchParams();
                     ref.set('utm_source', playSource);
                     ref.set('utm_medium', playMedium);
                     ref.set('utm_campaign', cidToSet);
-                    w.searchParams.set('referrer', ref.toString());
-                    g.href = w.toString();
+                    u.searchParams.set('referrer', ref.toString());
                 }
-                if (typeof gtag_report_conversion === 'function' && !g.getAttribute('onclick')) {
-                    g.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
+            } else {
+                // Tag organic traffic too, not just links arrived at with a
+                // ?utm_campaign — otherwise App Store Connect attributes every
+                // organic install to "unknown", unlike MS and Play.
+                if (!u.searchParams.has('ct')) {
+                    u.searchParams.set('ct', appleCt);
                 }
-                g.addEventListener('click', function () {
-                    reachGoal('store_click_any');
-                    reachGoal('store_click_android');
-                    ga4StoreClick('google_play', this.href);
-                });
-            } catch (e) { /* malformed URL — skip */ }
+                // Без pt (Provider Token из App Store Connect) кампания в App
+                // Analytics не регистрируется — один ct сам по себе не считается.
+                if (!u.searchParams.has('pt')) {
+                    u.searchParams.set('pt', APPLE_PT);
+                    u.searchParams.set('mt', '8');
+                }
+            }
+            return u.toString();
+        } catch (e) {
+            return href; /* malformed URL — leave it alone */
         }
+    }
+    window.lsStampStoreUrl = stampStoreUrl;
+
+    var CLICK_GOAL = {
+        ms: 'store_click_windows', mac: 'store_click_mac',
+        ios: 'store_click_ios', play: 'store_click_android'
+    };
+    var GA4_STORE = {
+        ms: 'microsoft', mac: 'mac_app_store', ios: 'app_store', play: 'google_play'
+    };
+    // The store is read off the href at click time, not at bind time: a link
+    // bound as Microsoft may since have been re-pointed at another store.
+    function onStoreClick() {
+        var kind = storeKind(this.href || '');
+        if (!kind) return;
+        reachGoal('store_click_any');
+        reachGoal(CLICK_GOAL[kind]);
+        ga4StoreClick(GA4_STORE[kind], this.href);
+    }
+
+    function instrumentLinks(selector) {
+        var links = document.querySelectorAll(selector);
+        for (var i = 0; i < links.length; i++) {
+            var a = links[i];
+            a.href = stampStoreUrl(a.href);
+            if (typeof gtag_report_conversion === 'function' && !a.getAttribute('onclick')) {
+                a.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
+            }
+            a.addEventListener('click', onStoreClick);
+        }
+    }
+
+    function instrument() {
+        // Must run first: the stamping below is per store, so the CTA has to
+        // already point at its final store.
+        routeStoreCta();
+
+        instrumentLinks('a[href*="apps.microsoft.com"]');
+        instrumentLinks('a[href*="apps.apple.com"]');
+        instrumentLinks('a[href*="play.google.com/store/apps"]');
 
         var tvTriggers = document.querySelectorAll('[data-bs-target="#tvModal"]');
         for (var m = 0; m < tvTriggers.length; m++) {

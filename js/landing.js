@@ -144,8 +144,10 @@ document.querySelectorAll('img[data-usecase]').forEach(img => {
 
 // Route the navbar + hero CTAs to the visitor's own store. The pre-JS href stays
 // on the Microsoft Store, which is correct for the majority and for crawlers.
+// No campaign params here: cid-tracker.js owns those and re-stamps the link
+// below, so a ?utm_campaign visit keeps its attribution through the reroute.
 const TRYFREE_STORES = {
-win: 'https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding',
+win: 'https://apps.microsoft.com/detail/9ph1r9djg47s',
 mac: 'https://apps.apple.com/app/live-captions-translator/id6760197210?platform=mac',
 ios: 'https://apps.apple.com/app/live-captions-translator/id6760197210',
 android: 'https://play.google.com/store/apps/details?id=com.livesubtitles.android'
@@ -168,7 +170,8 @@ const store = TRYFREE_STORES[detectOS()];
         el.removeAttribute('target');
         el.removeAttribute('onclick');
     } else {
-        el.setAttribute('href', store);
+        el.setAttribute('href',
+            typeof window.lsStampStoreUrl === 'function' ? window.lsStampStoreUrl(store) : store);
         el.setAttribute('target', '_blank');
         el.setAttribute('rel', 'noopener');
     }
