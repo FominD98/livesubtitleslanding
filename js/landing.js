@@ -131,15 +131,33 @@ function applyFrameLanguages(lang) {
     }
 }
 
-// Localized use-case examples (EN default; these locales have baked-in captions)
-const USECASE_LOCALES = ['ru', 'fr', 'es', 'de', 'it', 'ja', 'ko', 'zh', 'ar', 'pt', 'uk'];
-function applyUsecaseImages(lang) {
-const code = (lang || '').split('-')[0];
-const dir = USECASE_LOCALES.includes(code) ? `example/${code}/` : 'example/';
-const root = window.location.protocol === 'file:' ? 'img/' : '/img/';
-document.querySelectorAll('img[data-usecase]').forEach(img => {
-    img.src = `${root}${dir}usecase-${img.getAttribute('data-usecase')}.jpg`;
-});
+// ── Store-listing gallery: phones only, per platform ──────────────
+// Both sets sit in <template>s and one is cloned into the page when the
+// viewport is a phone. Templates rather than markup + display:none, because
+// Chrome downloads a loading="lazy" image inside a hidden block anyway — the
+// strip in the document cost every desktop visitor ~400KB of phone screenshots
+// for a band that is never shown. Googlebot crawls with a phone viewport, so it
+// still gets the gallery.
+// Apple visitors get the iOS shots, everyone else the Android ones. Mac counts
+// as Apple: someone on a Mac is likelier to also carry an iPhone.
+const SHOTS_MQ = '(max-width: 720px)';
+function mountShots() {
+const holder = document.getElementById('shotsHolder');
+if (!holder || holder.firstElementChild) return;
+const os = detectOS();
+const tpl = document.getElementById(os === 'ios' || os === 'mac' ? 'shotsIos' : 'shotsAndroid');
+if (tpl) holder.appendChild(tpl.content.cloneNode(true));
+}
+function watchShots() {
+if (!window.matchMedia) return;
+const mq = window.matchMedia(SHOTS_MQ);
+if (mq.matches) { mountShots(); return; }
+// Resized into phone width later (or a desktop window dragged narrow): mount
+// it then, once. addListener is the Safari-13-and-older spelling; without it an
+// iPhone on iOS 13 that starts in landscape never gets the band on rotation.
+function onNarrow(e) { if (e.matches) mountShots(); }
+if (mq.addEventListener) mq.addEventListener('change', onNarrow);
+else if (mq.addListener) mq.addListener(onNarrow);
 }
 
 // Route the navbar + hero CTAs to the visitor's own store. The pre-JS href stays
@@ -162,7 +180,7 @@ return 'win';
 }
 function routeTryFree() {
 const store = TRYFREE_STORES[detectOS()];
-['navTryFree', 'heroTryFree'].forEach(function (id) {
+['navTryFree', 'heroTryFree', 'stickyTryFree'].forEach(function (id) {
     const el = document.getElementById(id);
     if (!el) return;
     if (!store) {
@@ -177,6 +195,26 @@ const store = TRYFREE_STORES[detectOS()];
     }
 });
 }
+
+// ── Sticky CTA (phones) ───────────────────────────────────────────
+// Raised once the hero's own button has scrolled off the top, so the page never
+// shows two primary buttons at once, and nothing covers the hero. An
+// IntersectionObserver rather than a scroll listener: no per-frame work.
+// It is only ever visible below 860px — above that the CSS keeps it hidden.
+(function () {
+const bar = document.getElementById('stickyCta');
+const heroCta = document.querySelector('.hero__cta');
+if (!bar || !heroCta || !('IntersectionObserver' in window)) return;
+const io = new IntersectionObserver(function (entries) {
+    const e = entries[0];
+    // Above the viewport, not merely out of it: without the top check the bar
+    // would also appear when the hero button is still further down the page.
+    const scrolledPast = !e.isIntersecting && e.boundingClientRect.top < 0;
+    bar.hidden = !scrolledPast;
+    document.body.classList.toggle('has-stickycta', scrolledPast);
+}, { threshold: 0 });
+io.observe(heroCta);
+})();
 
 // ── Mobile nav ────────────────────────────────────────────────────
 document.getElementById('navToggle').addEventListener('click', function () {
@@ -275,7 +313,7 @@ if (lang) {
     if (languageSelector) languageSelector.value = lang;
     startSubtitles(lang);
     applyFrameLanguages(lang);
-    applyUsecaseImages(lang);
+    watchShots();
     routeTryFree();
     updateFooterArticlesLink();
 })();

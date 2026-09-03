@@ -303,7 +303,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/landing.css">
-    <link rel="preload" as="image" href="/img/live-subtitles-video-call-captions.jpg" fetchpriority="high">
+    <!-- Two hero images, one download each way: phones get the app screenshot,
+         wider screens the photo in the desktop window frame (see .frame in
+         css/landing.css). The media attributes have to match that 720px
+         breakpoint, or the preload fetches the image the page will not use. -->
+    <link rel="preload" as="image" href="/img/live-subtitles-video-call-captions.jpg" media="(min-width: 721px)" fetchpriority="high">
+    <link rel="preload" as="image" href="/img/hero-app-screen.jpg" media="(max-width: 720px)" fetchpriority="high">
     <!-- SEO: alternate language versions -->
     <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/" />
     <link rel="alternate" hreflang="en" href="https://live-subtitles.com/" />
@@ -388,7 +393,7 @@
                     </div>
                     <p class="hero__note">
                         <span data-translate="proof.trial">Primi 20 minuti gratis, senza carta</span>
-                        &nbsp;·&nbsp;
+                        <span class="hero__note-sep">&nbsp;·&nbsp;</span>
                         <a class="rating" href="https://apps.microsoft.com/detail/9ph1r9djg47s?cid=site_organic_livesubtitleslanding"
                             target="_blank" rel="noopener"
                             aria-label="4.7 out of 5, 351 ratings on the Microsoft Store"><span
@@ -438,8 +443,15 @@
                         <span>Live Subtitles</span>
                     </div>
                     <div class="frame__scene">
-                        <img src="/img/live-subtitles-video-call-captions.jpg" width="960" height="600"
-                            alt="Live Subtitles adding real-time dual captions to a video call" fetchpriority="high">
+                        <picture>
+                            <!-- On a phone the frame is a phone, and a photo on a black screen reads
+                                 as a mockup. This is a real screenshot of the app over YouTube, with
+                                 its own status bar and chrome; .subs is placed exactly over the
+                                 caption band in it, so the live pair replaces the baked-in one. -->
+                            <source media="(max-width: 720px)" srcset="/img/hero-app-screen.jpg" width="572" height="849">
+                            <img src="/img/live-subtitles-video-call-captions.jpg" width="960" height="524"
+                                alt="Live Subtitles adding real-time dual captions to a video call" fetchpriority="high">
+                        </picture>
                         <span class="frame__live"><i aria-hidden="true"></i>LIVE</span>
                         <div class="subs">
                             <div class="orig" id="subtitle1">Let's get started with today's meeting</div>
@@ -453,6 +465,54 @@
                         <span class="frame__online"><i aria-hidden="true"></i>Online</span>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Store screenshots, phones only - hidden by CSS above 720px, where the
+             page has the room to explain in words instead. On a phone this is the
+             quickest answer to "what does it look like", so it sits right under the
+             hero, before any of the prose.
+
+             Both sets sit in <template>s and js/landing.js clones one of them into
+             #shotsHolder on a phone viewport - the iOS strip for Apple visitors,
+             Android for everyone else. Left in the document, either set would cost
+             every desktop visitor its images (Chrome fetches a loading="lazy" image
+             inside a display:none block) for a band that is never shown there. The
+             price of the templates is that the strip needs JS, a crawler that does
+             not run scripts included. File numbers are the Figma slice
+             numbers, and slides that make up one panorama (android 1-2 and 6-7, ios
+             1-2 and 7-8) have to stay adjacent and in order. The trailing half of a
+             panorama gets an empty alt: on its own it says nothing. -->
+        <section class="shots-band" id="shots">
+            <div class="wrap">
+                <div class="section__head">
+                    <h2 data-translate="mediaExamples.heading">Sottotitoli dal vivo in qualsiasi app</h2>
+                </div>
+                <div id="shotsHolder"></div>
+                <template id="shotsAndroid">
+                    <div class="shots" data-shots="android">
+                        <img src="/img/shots/android-1.jpg" width="520" height="925" alt="Live Captions for Any App" loading="lazy">
+                        <img src="/img/shots/android-2.jpg" width="520" height="925" alt="System Audio or Microphone" loading="lazy">
+                        <img src="/img/shots/android-3.jpg" width="520" height="925" alt="Use Your Microphone" loading="lazy">
+                        <img src="/img/shots/android-4.jpg" width="520" height="925" alt="Subtitles Over Any App" loading="lazy">
+                        <img src="/img/shots/android-5.jpg" width="520" height="925" alt="Translate 40+ Languages" loading="lazy">
+                        <img src="/img/shots/android-6.jpg" width="520" height="925" alt="Customize Your Subtitles" loading="lazy">
+                        <img src="/img/shots/android-7.jpg" width="520" height="925" alt="" loading="lazy">
+                    </div>
+                </template>
+                <template id="shotsIos">
+                    <div class="shots" data-shots="ios">
+                        <img src="/img/shots/ios-1.jpg" width="520" height="1129" alt="Live Captions for Any App" loading="lazy">
+                        <img src="/img/shots/ios-2.jpg" width="520" height="1129" alt="" loading="lazy">
+                        <img src="/img/shots/ios-3.jpg" width="520" height="1129" alt="System Audio or Microphone" loading="lazy">
+                        <img src="/img/shots/ios-4.jpg" width="520" height="1129" alt="Use Your Microphone" loading="lazy">
+                        <img src="/img/shots/ios-5.jpg" width="520" height="1129" alt="Subtitles Over Any App, with Picture-in-Picture" loading="lazy">
+                        <img src="/img/shots/ios-6.jpg" width="520" height="1129" alt="Translate 40+ Languages" loading="lazy">
+                        <img src="/img/shots/ios-7.jpg" width="520" height="1129" alt="Customize Your Subtitles" loading="lazy">
+                        <img src="/img/shots/ios-8.jpg" width="520" height="1129" alt="" loading="lazy">
+                        <img src="/img/shots/ios-9.jpg" width="520" height="1129" alt="Choose your plan: subscribe or pay as you go" loading="lazy">
+                    </div>
+                </template>
             </div>
         </section>
 
@@ -593,41 +653,7 @@
 
         <section class="section section--alt" id="examples">
             <div class="wrap">
-                <div class="section__head">
-                    <h2 data-translate="mediaExamples.heading">Sottotitoli dal vivo in qualsiasi app</h2>
-                </div>
-                <div class="grid grid--2">
-                    <div class="case">
-                        <img src="/img/example/it/usecase-meetings.jpg" data-usecase="meetings" width="960" height="586"
-                            alt="Live dual captions on a video meeting in any accent" loading="lazy">
-                        <div class="case__body">
-                            <h3 data-translate="mediaExamples.useMeetings">Ogni riunione, ogni accento</h3>
-                        </div>
-                    </div>
-                    <div class="case">
-                        <img src="/img/example/it/usecase-movies.jpg" data-usecase="movies" width="960" height="531"
-                            alt="Dual subtitles on a movie in any language" loading="lazy">
-                        <div class="case__body">
-                            <h3 data-translate="mediaExamples.useMovies">Ogni film, ogni lingua</h3>
-                        </div>
-                    </div>
-                    <div class="case">
-                        <img src="/img/example/it/usecase-games.jpg" data-usecase="games" width="960" height="542"
-                            alt="Live captions overlay on a game without pausing" loading="lazy">
-                        <div class="case__body">
-                            <h3 data-translate="mediaExamples.useGames">Ogni gioco, senza pause</h3>
-                        </div>
-                    </div>
-                    <div class="case">
-                        <img src="/img/example/it/usecase-learning.jpg" data-usecase="learning" width="960" height="534"
-                            alt="Dual subtitles on a YouTube video for language learning" loading="lazy">
-                        <div class="case__body">
-                            <h3 data-translate="mediaExamples.useLearning">Ogni video — impara guardando</h3>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section__head" id="demo" style="margin-top:56px">
+                <div class="section__head" id="demo">
                     <h2 data-translate="mediaExamples.title">Guardalo in azione</h2>
                 </div>
                 <div class="videos">
@@ -1008,6 +1034,16 @@
             </span>
         </div>
     </footer>
+
+    <!-- Sticky CTA, phones only: the navbar button is behind the burger and the
+         hero one scrolls away, so from the second screen down there is nothing
+         left to tap. js/landing.js unhides it once the hero button is gone. -->
+    <div class="stickycta" id="stickyCta" hidden>
+        <a class="btn btn--primary" id="stickyTryFree"
+            href="https://apps.microsoft.com/detail/9ph1r9djg47s" target="_blank" rel="noopener"
+            onclick="return gtag_report_conversion(this.href);"
+            data-translate="header.downloadFree">Inizia la prova gratuita</a>
+    </div>
 
     <!-- TV waitlist -->
     <dialog id="tvModal">

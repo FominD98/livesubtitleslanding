@@ -230,6 +230,29 @@
     }
     window.lsStampStoreUrl = stampStoreUrl;
 
+    // The download grid is authored Windows-first — right for the crawler and
+    // for most visitors, but it leaves an Android visitor scanning past three
+    // badges they cannot install from. Put their own store first, using CSS
+    // `order` rather than moving nodes: the DOM stays as authored, so the
+    // reading order and what a crawler sees do not change. Runs on the 16
+    // homepages and on pricing.html, which share this markup.
+    var OS_KIND = { win: 'ms', mac: 'mac', ios: 'ios', android: 'play' };
+    // Same vendor, same account: on either Apple platform the other one is the
+    // likeliest second choice.
+    var KIND_SIBLING = { ios: 'mac', mac: 'ios' };
+    function orderStoreCards() {
+        var want = OS_KIND[detectOS()];
+        var cards = document.querySelectorAll('.stores .store');
+        for (var i = 0; i < cards.length; i++) {
+            var link = cards[i].querySelector('a[href]');
+            if (!link) continue;
+            var kind = storeKind(link.getAttribute('href') || '');
+            if (!kind) continue;
+            cards[i].style.order = kind === want ? '-2'
+                : (kind === KIND_SIBLING[want] ? '-1' : '0');
+        }
+    }
+
     var CLICK_GOAL = {
         ms: 'store_click_windows', mac: 'store_click_mac',
         ios: 'store_click_ios', play: 'store_click_android'
@@ -267,6 +290,8 @@
         instrumentLinks('a[href*="apps.microsoft.com"]');
         instrumentLinks('a[href*="apps.apple.com"]');
         instrumentLinks('a[href*="play.google.com/store/apps"]');
+
+        orderStoreCards();
 
         var tvTriggers = document.querySelectorAll('[data-bs-target="#tvModal"]');
         for (var m = 0; m < tvTriggers.length; m++) {

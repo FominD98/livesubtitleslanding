@@ -59,10 +59,6 @@ const translations = {
         },
         mediaExamples: {
             heading: 'Live captions on any app',
-            useMeetings: 'Any meeting, any accent',
-            useMovies: 'Any movie, any language',
-            useGames: 'Any game, no pausing',
-            useLearning: 'Any video, learn as you watch',
             title: 'See it in action',
             home: 'Main Interface',
             settings: 'Application Settings',
@@ -250,10 +246,6 @@ const translations = {
         },
         mediaExamples: {
             heading: 'Живые субтитры в любом приложении',
-            useMeetings: 'Любая встреча, любой акцент',
-            useMovies: 'Любой фильм, любой язык',
-            useGames: 'Любая игра, без пауз',
-            useLearning: 'Любое видео — учитесь во время просмотра',
             title: 'Как это выглядит',
             home: 'Главный интерфейс',
             settings: 'Настройки приложения',
@@ -438,10 +430,6 @@ const translations = {
         tvBtn: 'Je veux la version TV',
         mediaExamples: {
             heading: 'Sous-titres en direct dans toute app',
-            useMeetings: 'Toute réunion, tout accent',
-            useMovies: 'Tout film, toute langue',
-            useGames: 'Tout jeu, sans pause',
-            useLearning: 'Toute vidéo — apprenez en regardant',
                 title: 'Voir en action'
             },
         platforms: {
@@ -625,10 +613,6 @@ const translations = {
         tvBtn: 'Quiero la versión para TV',
         mediaExamples: {
             heading: 'Subtítulos en vivo en cualquier app',
-            useMeetings: 'Cualquier reunión, cualquier acento',
-            useMovies: 'Cualquier película, cualquier idioma',
-            useGames: 'Cualquier juego, sin pausas',
-            useLearning: 'Cualquier video — aprende mientras miras',
                 title: 'Míralo en acción'
             },
         platforms: {
@@ -812,10 +796,6 @@ const translations = {
         tvBtn: 'Ich möchte die TV-Version',
         mediaExamples: {
             heading: 'Live-Untertitel in jeder App',
-            useMeetings: 'Jedes Meeting, jeder Akzent',
-            useMovies: 'Jeder Film, jede Sprache',
-            useGames: 'Jedes Spiel, ohne Pause',
-            useLearning: 'Jedes Video — lernen beim Zuschauen',
                 title: 'In Aktion sehen'
             },
         platforms: {
@@ -999,10 +979,6 @@ const translations = {
         tvBtn: 'Voglio la versione per TV',
         mediaExamples: {
             heading: 'Sottotitoli dal vivo in qualsiasi app',
-            useMeetings: 'Ogni riunione, ogni accento',
-            useMovies: 'Ogni film, ogni lingua',
-            useGames: 'Ogni gioco, senza pause',
-            useLearning: 'Ogni video — impara guardando',
                 title: 'Guardalo in azione'
             },
         platforms: {
@@ -1186,10 +1162,6 @@ const translations = {
         tvBtn: 'テレビ版が欲しい',
         mediaExamples: {
             heading: 'あらゆるアプリでライブ字幕',
-            useMeetings: 'どんな会議も、どんな訛りも',
-            useMovies: 'どんな映画も、どんな言語も',
-            useGames: 'どんなゲームも、一時停止なし',
-            useLearning: 'どんな動画でも、見ながら学ぶ',
                 title: '実際の動作を見る'
             },
         platforms: {
@@ -1373,10 +1345,6 @@ const translations = {
         tvBtn: 'TV 버전 원함',
         mediaExamples: {
             heading: '모든 앱에서 실시간 자막',
-            useMeetings: '어떤 회의든, 어떤 억양이든',
-            useMovies: '어떤 영화든, 어떤 언어든',
-            useGames: '어떤 게임이든, 일시정지 없이',
-            useLearning: '어떤 영상이든, 보면서 배우기',
                 title: '실제 작동 모습'
             },
         platforms: {
@@ -1560,10 +1528,6 @@ const translations = {
         tvBtn: '需要电视版本',
         mediaExamples: {
             heading: '在任何应用中实时字幕',
-            useMeetings: '任何会议，任何口音',
-            useMovies: '任何电影，任何语言',
-            useGames: '任何游戏，无需暂停',
-            useLearning: '任何视频，边看边学',
                 title: '实际效果'
             },
         platforms: {
@@ -1747,10 +1711,6 @@ const translations = {
         tvBtn: 'أريد إصدار التلفزيون',
         mediaExamples: {
             heading: 'ترجمة حية في أي تطبيق',
-            useMeetings: 'أي اجتماع، أي لهجة',
-            useMovies: 'أي فيلم، أي لغة',
-            useGames: 'أي لعبة، بدون إيقاف',
-            useLearning: 'أي فيديو — تعلّم وأنت تشاهد',
                 title: 'شاهده أثناء العمل'
             },
         platforms: {
@@ -1934,10 +1894,6 @@ const translations = {
         tvBtn: 'टीवी संस्करण चाहिए',
         mediaExamples: {
             heading: 'किसी भी ऐप में लाइव कैप्शन',
-            useMeetings: 'कोई भी मीटिंग, कोई भी लहजा',
-            useMovies: 'कोई भी फ़िल्म, कोई भी भाषा',
-            useGames: 'कोई भी गेम, बिना रुके',
-            useLearning: 'कोई भी वीडियो — देखते हुए सीखें',
                 title: 'इसे चलते हुए देखें'
             },
         platforms: {
@@ -2121,10 +2077,6 @@ const translations = {
         tvBtn: 'Quero versão para TV',
         mediaExamples: {
             heading: 'Legendas ao vivo em qualquer app',
-            useMeetings: 'Qualquer reunião, qualquer sotaque',
-            useMovies: 'Qualquer filme, qualquer idioma',
-            useGames: 'Qualquer jogo, sem pausar',
-            useLearning: 'Qualquer vídeo — aprenda assistindo',
                 title: 'Veja em ação'
             },
         platforms: {
@@ -2308,10 +2260,6 @@ const translations = {
         tvBtn: 'Chcę wersję na TV',
         mediaExamples: {
             heading: 'Napisy na żywo w każdej aplikacji',
-            useMeetings: 'Każde spotkanie, każdy akcent',
-            useMovies: 'Każdy film, każdy język',
-            useGames: 'Każda gra, bez pauzy',
-            useLearning: 'Każde wideo — ucz się oglądając',
                 title: 'Zobacz w działaniu'
             },
         platforms: {
@@ -2495,10 +2443,6 @@ const translations = {
         tvBtn: 'Wil tv-versie',
         mediaExamples: {
             heading: 'Live ondertiteling in elke app',
-            useMeetings: 'Elke meeting, elk accent',
-            useMovies: 'Elke film, elke taal',
-            useGames: 'Elke game, zonder pauze',
-            useLearning: 'Elke video — leer terwijl je kijkt',
                 title: 'Bekijk het in actie'
             },
         platforms: {
@@ -2682,10 +2626,6 @@ const translations = {
         tvBtn: 'TV sürümü istiyorum',
         mediaExamples: {
             heading: 'Her uygulamada canlı altyazı',
-            useMeetings: 'Her toplantı, her aksan',
-            useMovies: 'Her film, her dil',
-            useGames: 'Her oyun, durdurmadan',
-            useLearning: 'Her video — izlerken öğren',
                 title: 'İş başında görün'
             },
         platforms: {
@@ -2869,10 +2809,6 @@ const translations = {
         tvBtn: 'Хочу версію для ТВ',
         mediaExamples: {
             heading: 'Живі субтитри в будь-якому застосунку',
-            useMeetings: 'Будь-яка зустріч, будь-який акцент',
-            useMovies: 'Будь-який фільм, будь-яка мова',
-            useGames: 'Будь-яка гра, без пауз',
-            useLearning: 'Будь-яке відео — навчайтесь дивлячись',
                 title: 'Як це виглядає'
             },
         platforms: {

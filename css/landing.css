@@ -321,20 +321,37 @@ p:last-child { margin-bottom: 0; }
 @media (max-width: 900px) { .grid--3, .grid--4 { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 620px) { .grid--2, .grid--3, .grid--4 { grid-template-columns: 1fr; } }
 
-/* The stills are different heights per locale (see the note on .case img), so the
- * caption is pushed to the bottom of the card instead of sitting right under the
- * image — that keeps captions on one line across a row. */
-.case { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
-/* The use-case stills have a marketing headline composited *into* the frame, not
- * as a band above it, and its height varies per locale (files run 506–607px tall
- * for the same 960px width). So no single crop can remove it: the ratio that
- * clears a two-line Russian headline also eats the top row of the Zoom grid.
- * Show the frame whole and let the card heights be ragged — the headline then
- * duplicates the <h3> below, which is the lesser defect until clean stills land. */
-.case img { display: block; width: 100%; height: auto; }
-.case__body { margin-top: auto; padding: 1rem 1.15rem 1.15rem; }
-.case__body h3 { margin-bottom: .3rem; font-size: 1.0625rem; }
-.case__body p { color: var(--ink-soft); font-size: .9375rem; margin: 0; }
+/* ── Store-listing gallery (phones) ────────────────────────────────────────
+ *
+ * Replaces the four use-case stills that used to sit in #examples: those had a
+ * marketing headline composited into the frame at a per-locale height, so no
+ * crop could remove it, and at phone width the app UI inside them was too
+ * small to read. These are the store screenshots — drawn for a phone screen,
+ * so they stay legible at any size the page gives them, and shown the way both
+ * stores show them: a horizontal snap strip.
+ *
+ * The band itself is phone-only. On a desktop it would be a row of phone
+ * screenshots too small to read, next to a page that has the room to explain
+ * the same things in words; the media query at the bottom of the file is what
+ * turns it on.
+ *
+ * Slides keep their own aspect ratio off the width/height attributes, so the
+ * 9/16 Android set and the 9/19.5 iOS set both sit right with one rule. */
+.shots-band { display: none; }
+.shots {
+    display: flex; gap: 12px;
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    /* No scrollbar: it is swiped, and the half-visible next slide is the hint
+     * that there is more. */
+    scrollbar-width: none;
+}
+.shots::-webkit-scrollbar { display: none; }
+.shots img {
+    flex: none; width: 216px; height: auto;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    scroll-snap-align: start;
+}
 
 .feature__icon { width: 26px; height: 26px; margin-bottom: .8rem; color: var(--brand); }
 .feature h3 { margin-bottom: .3rem; }
@@ -487,6 +504,13 @@ p:last-child { margin-bottom: 0; }
 }
 .tv { max-width: 900px; margin: 18px auto 0; text-align: center; }
 
+/* ── Sticky CTA (phones) ───────────────────────────────────────────────── */
+
+/* Desktop keeps the navbar button in view the whole way down, so the bar is a
+ * phone-only thing — see the media query at the bottom of the file, which is
+ * also where it starts existing at all. */
+.stickycta { display: none; }
+
 /* ── Dialog ────────────────────────────────────────────────────────────── */
 
 dialog {
@@ -518,6 +542,266 @@ dialog input[type="email"] {
 .site-footer { padding: 32px 0 44px; border-top: 1px solid var(--line); font-size: .875rem; color: var(--muted); }
 .site-footer .wrap { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; align-items: center; justify-content: space-between; }
 .site-footer a { color: var(--ink-soft); }
+
+/* ── Phone layout ──────────────────────────────────────────────────────────
+ *
+ * Everything above is the desktop page reflowing into one column, which reads
+ * as a shrunken desktop page rather than a phone one: desktop type sizes and
+ * 84px section gaps, and a hero visual drawn as a *desktop window* — a titlebar
+ * with three dots — on a device that has no windows.
+ *
+ * Below 720px the same markup is restyled, almost entirely in CSS, so the 16
+ * locale homepages stay identical apart from one wrapped separator:
+ *   - type and vertical rhythm step down;
+ *   - the hero is reordered so the demo comes before the CTA and the lead;
+ *   - .frame becomes a phone — camera cutout instead of window dots, the video
+ *     docked under the status bar, the subtitle pair on black below it, and the
+ *     device running off the bottom of the hero.
+ *
+ * Then 620px for the reviews carousel, and 560px for what only breaks at actual
+ * phone width — stacked CTAs, the proof list, the comparison table.
+ */
+
+@media (max-width: 720px) {
+    h1 { font-size: 1.9rem; }
+    h2 { font-size: 1.5rem; }
+    .section { padding: 56px 0; }
+    .section__head { margin-bottom: 26px; }
+    .section__head p { font-size: 1rem; }
+
+    .hero { padding: 26px 0 44px; }
+    .hero__lead { font-size: 1.0625rem; margin-bottom: 1.5rem; }
+    .hero__note { font-size: .875rem; margin-bottom: 1.25rem; }
+
+    /* Show it, then ask for the click, then explain. In source order the lead
+     * paragraph sits between the headline and the visual — right on a wide
+     * screen, where they are side by side, and wrong on a phone: eight lines of
+     * prose pushed the demo off the first screen entirely. display:contents
+     * lifts the text column's children into the hero grid so each can be
+     * ordered; browsers without it (Safari < 11.1) keep the source order, which
+     * is the layout as it was. */
+    .hero__grid { display: grid; gap: 0; }
+    .hero__grid > div:not(.frame) { display: contents; }
+    .hero h1 { order: 1; margin-bottom: 1rem; }
+    .frame { order: 2; }
+    .hero__cta { order: 3; }
+    .hero__note { order: 4; }
+    .hero__lead { order: 5; }
+    .proof { order: 6; }
+
+    /* — the phone —
+     * Below 720px the same markup becomes a phone showing a real screenshot of
+     * the app (see the <picture> in the hero): the screenshot brings its own
+     * status bar, YouTube chrome and caption band, so nothing here is invented.
+     * Earlier passes drew the parts by hand — a fake status bar, a LIVE badge, a
+     * language strip, a photo floating on black — and it read as a mockup, which
+     * is exactly what it was.
+     *
+     * The device runs off the bottom of the hero rather than ending: a whole
+     * phone would be twice this tall and push the CTA off the first screen. */
+    .frame {
+        width: min(300px, 78%);
+        margin-inline: auto;
+        margin-bottom: 1rem;
+        border: 7px solid #050709;
+        border-bottom: 0;
+        border-radius: 40px 40px 0 0;
+        background: #000;
+        /* Dissolves instead of ending in a hard edge, which read as a black card
+         * rather than a device carrying on past the hero. Measured from the
+         * bottom rather than in percent, because the frame's height moves with
+         * the caption box: what the fade has to land on is the white run under
+         * that box (the scene's padding), and that run is a fixed 18px. */
+        -webkit-mask-image: linear-gradient(to bottom, #000 calc(100% - 18px), transparent 100%);
+        mask-image: linear-gradient(to bottom, #000 calc(100% - 18px), transparent 100%);
+    }
+    /* The screenshot has a real status bar; a second one drawn above it would be
+     * two. Same for the LIVE badge and the language strip — the app draws
+     * neither, and inventing them was the whole problem. */
+    .frame__bar, .frame__live, .frame__controls { display: none; }
+
+    /* The screenshot is cut just above the caption band it carries and the live
+     * caption box takes the rest of the frame, rather than the box being laid
+     * over the whole screenshot.
+     *
+     * Laid over, the box had to be as tall as the baked-in band it was hiding —
+     * three lines per language — while the live pair runs one or two. The
+     * remainder showed as a band of white between the captions and the video
+     * list, and the box's bottom edge cut the list's first row in half.
+     *
+     * Nothing of the screenshot is kept below the cut. The app's caption box
+     * overlaps the first row of the video list and fades out over it, so there
+     * is no horizontal line down there to cut on: every candidate takes the top
+     * off the row's thumbnail or its title. What follows the box is the white
+     * the frame fades out over — the same white the list sits on. */
+    .frame__scene {
+        aspect-ratio: auto;
+        background: #fff;
+        /* Runway for the mask to dissolve the two side rails over, and nothing
+         * more: white here reads as a gap between the captions and the CTA, so
+         * it is kept to what the fade actually needs. */
+        padding-bottom: 18px;
+    }
+    /* The cut: status bar, video and chip row, ending on the last clean white
+     * row of the source at y=444 of 849 — 445 is the caption band's antialiased
+     * top edge and shows as a pink hairline. The image keeps its natural height
+     * and the ratio here does the cropping. */
+    .frame__scene picture {
+        display: block; overflow: hidden;
+        aspect-ratio: 572 / 444;
+    }
+    .frame__scene img {
+        display: block; position: static;
+        width: 100%; height: auto;
+        aspect-ratio: auto; object-fit: fill;
+    }
+    /* Nothing to fade into: the screenshot is not a photo needing a scrim. */
+    .frame__scene::after { display: none; }
+
+    /* In flow under the cut: the caption box *is* the app's box now, not
+     * something floating over it — full-bleed with a rounded bottom, the way the
+     * app draws it. */
+    .subs {
+        position: static;
+        width: auto; transform: none;
+        display: block; padding: 0;
+        border-radius: 0 0 10px 10px; overflow: hidden;
+        background: #fff;
+    }
+    /* Full-bleed black rows, left aligned like the band they replace. The pair
+     * is the one thing in the frame that has to be readable, so it is sized as
+     * large as two lines allow rather than by the desktop clamp.
+     *
+     * Two lines tall, always: 2.6em of text plus the .3em padding either side.
+     * The phrases run to one line or two depending on the language, and in flow
+     * a row that grew mid-typing would move the CTA below the hero while someone
+     * was reaching for it. A one-line phrase leaves its second line black, which
+     * is what the app's own box does.
+     *
+     * Two lines is only a safe fixture if the text scales with the frame, which
+     * is itself a share of the viewport below ~385px: at a flat 15px the longest
+     * phrases (pt, es, de) took a third line on a 360px phone and a fourth on a
+     * 320px one. The vw term keeps every phrase in all 16 locales inside two
+     * lines from 320px up, and the app's own UI in the screenshot above is
+     * scaling with the frame in exactly the same way. */
+    .subs div {
+        background: #000; padding: .3em 4%;
+        /* The desktop rows are separate rounded plates; here they are one box,
+         * and the 5px corners left white notches down both edges at the seam.
+         * The rounding that is left belongs to .subs, at the bottom only. */
+        border-radius: 0;
+        height: 3.2em; overflow: hidden;
+        text-align: left; line-height: 1.3;
+        font-size: clamp(.6875rem, 3.8vw, .9375rem);
+    }
+    /* No gap: the two rows have to read as one box, not two plates. */
+    .subs .trans { margin-top: 0; padding-top: 0; }
+
+    .steps { gap: 22px; }
+    .grid { gap: 14px; }
+    /* Features are plain text on desktop, where three columns give them shape.
+     * Stacked, they need their own edges to stay scannable. */
+    .feature {
+        padding: 1.15rem 1.2rem;
+        background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    }
+    .feature__icon { margin-bottom: .55rem; }
+
+    /* Sits directly under the hero, so no top padding of its own — the hero's
+     * bottom padding is the gap. */
+    .shots-band { display: block; padding: 0 0 48px; }
+    .shots-band .section__head { margin-bottom: 18px; }
+    /* Full-bleed, with the next slide peeking in. */
+    .shots { margin-inline: -24px; padding-inline: 24px; gap: 10px; }
+    .shots img { width: 62%; }
+
+    .apps-line { margin-top: 1.4rem; }
+    .note { grid-template-columns: 1fr; gap: .7rem; padding: 1.3rem 1.35rem; }
+    .videos { gap: 14px; }
+    .video__play span { width: 46px; height: 46px; }
+    .faq summary { font-size: 1rem; padding: 1rem 0; }
+    .stores { gap: 12px; }
+    .site-footer { padding: 26px 0 34px; }
+    .site-footer .wrap { flex-direction: column; align-items: flex-start; gap: .4rem; }
+}
+
+/* The navbar's Try Free button is behind the burger below 860px, so past the
+ * hero there is no button on screen for the rest of the page. This one appears
+ * when the hero's own button scrolls out of sight (js/landing.js), so the two
+ * are never up at the same time. */
+@media (max-width: 860px) {
+    .stickycta {
+        position: fixed; z-index: 60; inset: auto 0 0 0;
+        display: flex;
+        padding: .55rem 18px;
+        /* Clears the iPhone home-indicator strip, which would otherwise sit on
+         * top of the button. */
+        padding-bottom: calc(.55rem + env(safe-area-inset-bottom, 0px));
+        background: rgba(255, 255, 255, .94);
+        border-top: 1px solid var(--line);
+        box-shadow: 0 -6px 20px rgba(12, 24, 38, .07);
+    }
+    @supports (backdrop-filter: blur(8px)) {
+        .stickycta { backdrop-filter: blur(8px); }
+    }
+    /* display:flex above would otherwise beat the hidden attribute. */
+    .stickycta[hidden] { display: none; }
+    .stickycta .btn { flex: 1; }
+    /* Only while the bar is up: reserving the space always would leave a gap
+     * under the footer through the whole first screen. */
+    body.has-stickycta .site-footer { padding-bottom: 104px; }
+}
+
+/* Six stacked review cards add ~1000px of scrolling for content nobody reads in
+ * full. As a snap carousel the next card peeks in, which shows there are more. */
+@media (max-width: 620px) {
+    .reviews {
+        display: flex; gap: 12px;
+        margin-inline: -24px; padding: 2px 24px;
+        overflow-x: auto; -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory; scrollbar-width: none;
+    }
+    .reviews::-webkit-scrollbar { display: none; }
+    .review { flex: 0 0 82%; scroll-snap-align: center; padding: 1.2rem 1.3rem; }
+}
+
+/* Phone-width only: at 600px the hero CTAs still fit side by side, and a
+ * 600px-wide button is worse than two honest ones. */
+@media (max-width: 560px) {
+    /* Two buttons of different widths stacked left look like a mistake; at this
+     * width they read as one CTA block. */
+    .hero__cta { flex-direction: column; align-items: stretch; gap: .6rem; }
+    .hero__cta .btn { width: 100%; }
+    /* The trial line and the store rating are two facts, not one sentence: they
+     * no longer fit on one line, and the wrap left the separator dangling at the
+     * end of the first one. */
+    .hero__note-sep { display: none; }
+    .hero__note .rating { display: flex; margin-top: .3rem; }
+    /* One fact per line: the long ones ("Under a second of delay") wrap inside a
+     * two-column flex row and the list loses its baseline. */
+    .proof { flex-direction: column; gap: .5rem; }
+
+    /* The comparison is four columns of prose in 342px. Left to scroll sideways
+     * it is never read; so: no uppercase (it cannot hyphenate), fixed layout so
+     * the tool names get the room, and the ✓/✗ columns squeezed to a glyph. */
+    .cmp { table-layout: fixed; font-size: .75rem; }
+    .cmp th, .cmp td { padding: .55rem .3rem; }
+    .cmp thead th {
+        text-transform: none; font-size: .6875rem; letter-spacing: 0;
+        line-height: 1.25; hyphens: auto;
+    }
+    .cmp tbody th { font-size: .75rem; line-height: 1.3; hyphens: auto; padding-left: .7rem; }
+    .cmp td { width: 19%; }
+    .mark svg { width: 17px; height: 17px; }
+}
+
+@media (max-width: 420px) {
+    body { font-size: 16px; }
+    h1 { font-size: 1.7rem; }
+    .wrap { padding-inline: 18px; }
+    .reviews, .shots { margin-inline: -18px; padding-inline: 18px; }
+    .links { gap: 18px; font-size: .8125rem; }
+}
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
