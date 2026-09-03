@@ -152,7 +152,27 @@ p:last-child { margin-bottom: 0; }
 .hero__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 56px; align-items: center; }
 .hero__lead { font-size: 1.1875rem; color: var(--ink-soft); max-width: 34em; margin-bottom: 1.75rem; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1.1rem; }
-.hero__note { font-size: .9375rem; color: var(--muted); margin: 0 0 1.5rem; }
+/* The trial line and the store rating are two facts, not one sentence, and they
+ * only fit on one line in the single-column hero — in the two-column one the
+ * text column is too narrow, in every locale, so the rating always wraps. A
+ * literal separator between them is then stranded at the end of the first line.
+ * So: a wrapping flex row whose column-gap is the room for a separator, and the
+ * separator itself hangs to the left of the rating as a pseudo-element. When
+ * the rating starts a line the mark hangs outside the paragraph, where the clip
+ * takes it away — which is also what puts the rating on its own line unaided on
+ * a phone. */
+.hero__note {
+    display: flex; flex-wrap: wrap; align-items: baseline;
+    column-gap: .9rem; row-gap: .3rem;
+    overflow: hidden;
+    font-size: .9375rem; color: var(--muted); margin: 0 0 1.5rem;
+}
+.hero__note .rating { position: relative; }
+.hero__note .rating::before {
+    content: '\B7';
+    position: absolute; left: -.55rem; top: 0; bottom: 0;
+    display: flex; align-items: center;
+}
 
 .rating { display: inline-flex; align-items: center; gap: .5rem; font-size: .9375rem; color: var(--ink-soft); }
 .rating:hover { text-decoration: none; }
@@ -772,11 +792,6 @@ dialog input[type="email"] {
      * width they read as one CTA block. */
     .hero__cta { flex-direction: column; align-items: stretch; gap: .6rem; }
     .hero__cta .btn { width: 100%; }
-    /* The trial line and the store rating are two facts, not one sentence: they
-     * no longer fit on one line, and the wrap left the separator dangling at the
-     * end of the first one. */
-    .hero__note-sep { display: none; }
-    .hero__note .rating { display: flex; margin-top: .3rem; }
     /* One fact per line: the long ones ("Under a second of delay") wrap inside a
      * two-column flex row and the list loses its baseline. */
     .proof { flex-direction: column; gap: .5rem; }
