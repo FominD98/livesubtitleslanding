@@ -464,6 +464,8 @@ function render(dir, s) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta pixel (LiveSubtitles Web) -->
+    <script src="/meta-pixel.js" defer><\/script>
     <!-- Yandex.Metrika counter -->
     <script src="/yandex-metrika.js"><\/script>
     <noscript><div><img src="https://mc.yandex.ru/watch/${YM_ID}" style="position:absolute; left:-9999px;" alt="" /></div></noscript>

@@ -10,6 +10,9 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
     <script src="/gtag-init.js"></script>
+    <!-- Meta pixel (LiveSubtitles Web). Без defer, в отличие от остальных страниц: скрипт
+         внизу открывает чекаут синхронно, а ему нужны fbq и metaAttribution. -->
+    <script src="/meta-pixel.js"></script>
   <title>Buy Minutes | Live Subtitles</title>
   <meta name="description" content="Purchase Live Subtitles minutes securely by card.">
   <meta name="robots" content="noindex, nofollow">
@@ -158,11 +161,36 @@
         }
       });
 
+      // fp и platform не трогаем: по ним бэкенд находит отпечаток покупателя и платформу,
+      // на них завязаны зачисление минут и разрезы аналитики. fbp/fbc — куки клика по
+      // объявлению, ими бэкенд связывает серверную покупку с рекламой; читаем их при каждом
+      // открытии, а не один раз: пиксель мог дописать куку уже после загрузки страницы.
+      function buildCustomData() {
+        var data = { fp: fp, platform: 'windows-wpf' };
+        // Аналитика не имеет права уронить оплату: что бы ни случилось при чтении кук,
+        // чекаут открывается — просто без привязки к объявлению.
+        try {
+          var meta = (typeof window.metaAttribution === 'function') ? window.metaAttribution() : null;
+          if (meta && meta.fbp) data.fbp = meta.fbp;
+          if (meta && meta.fbc) data.fbc = meta.fbc;
+        } catch (e) { /* meta attribution unavailable */ }
+        return data;
+      }
+
+      var initiateSent = false;
+
       function openCheckout() {
         show('state-loading');
+        // Середина воронки для Meta, один раз на загрузку страницы: повторное открытие по
+        // кнопке — та же попытка покупки, а не новая. Purchase из браузера не шлём — его
+        // отправляет бэкенд по вебхуку Paddle с event_id транзакции, дубль удвоил бы выручку.
+        if (!initiateSent && typeof fbq === 'function') {
+          initiateSent = true;
+          fbq('track', 'InitiateCheckout');
+        }
         Paddle.Checkout.open({
           items: [{ priceId: priceId, quantity: 1 }],
-          customData: { fp: fp, platform: 'windows-wpf' },
+          customData: buildCustomData(),
           settings: { displayMode: 'overlay', theme: 'light' }
         });
       }
