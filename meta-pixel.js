@@ -1,5 +1,8 @@
-// Meta pixel. Набор LiveSubtitles Web, id 2867436680278739 — тот же, куда бэкенд шлёт
+// Meta pixel. Набор LiveSubtitles Web, id 2479887015853166 — тот же, куда бэкенд шлёт
 // серверный Purchase через Conversions API, поэтому браузер и сервер видят одну воронку.
+// Прежний набор с тем же именем (2867436680278739) создавался вне бизнес-портфолио: токен
+// Conversions API его не видит (Graph API отвечает "(#100) Missing perms"), поэтому серверные
+// события туда не доходят и склейки с браузерными не было бы.
 // Набор приложения (Live Subtitles, id 1705137643905426) — не он: у приложений другой
 // эндпоинт и другой формат события, веб-события туда слать нельзя.
 !function (f, b, e, v, n, t, s) {
@@ -12,7 +15,7 @@
     s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
 }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '2867436680278739');
+fbq('init', '2479887015853166');
 fbq('track', 'PageView');
 
 function readMetaCookie(name) {
