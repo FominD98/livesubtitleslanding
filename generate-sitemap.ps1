@@ -39,6 +39,8 @@ param(
         "telegram-subtitles.html",
         "discord-live-captions.html",
         "any-app-live-captions.html",
+        # Streaming hub (EN-only, no locale copies)
+        "live-stream-subtitles.html",
         # Cluster B: language-pair pages (EN-only, no locale copies)
         "spanish-to-english-live-subtitles.html",
         "chinese-to-english-live-captions.html",
@@ -117,6 +119,20 @@ $script:GitLastCommit = @{}
 $script:GitAvailable = $false
 $todayISO = (Get-Date).ToString("yyyy-MM-dd")
 
+# Commits that touched page files without changing their content — analytics
+# tags, tracking pixels and the like. They must not move <lastmod>: R5 says
+# Google trusts lastmod until you lie once, and "all 900 pages changed today"
+# because a pixel was injected is exactly the low-trust pattern to avoid.
+# When a file's newest commit is one of these, we fall back to the newest
+# commit before it that did change content. Add new entries here whenever a
+# site-wide tracking/meta commit lands.
+$script:NonContentCommits = @{
+    '35f8bb9' = 'meta: add the pixel site-wide (911 files, 2-line script tag)'
+    'a41797a' = 'meta: point the pixel at the dataset the backend actually uses'
+    '52a7ad2' = 'fix tracker'
+    '680ab1e' = 'analytics: keep the campaign on the homepage CTA through the store reroute'
+}
+
 try {
     $null = & git rev-parse --is-inside-work-tree 2>$null
     if ($LASTEXITCODE -eq 0) {
@@ -133,19 +149,34 @@ try {
         }
 
         # Last-commit date per file: walk `git log --name-only` in reverse-chrono order.
-        # First sighting of a path is its newest commit date.
-        $logLines = & git log --name-only --format='@@DATE@@%cs' 2>$null
+        # First sighting of a path is its newest commit date. Commits listed in
+        # $NonContentCommits are skipped, so a file's lastmod reflects its newest
+        # real content change rather than a site-wide tracking-tag injection.
+        $logLines = & git log --name-only --format='@@DATE@@%cs%x09%H' 2>$null
         $curDate = ''
+        $skipCommit = $false
+        $skipped = 0
         foreach ($line in $logLines) {
             if ($line.StartsWith('@@DATE@@')) {
-                $curDate = $line.Substring(8).Trim()
+                $parts = $line.Substring(8).Split("`t")
+                $curDate = $parts[0].Trim()
+                $sha = if ($parts.Count -gt 1) { $parts[1].Trim() } else { '' }
+                # keys are abbreviated hashes; match them as prefixes of the full sha
+                $skipCommit = $false
+                foreach ($k in $script:NonContentCommits.Keys) {
+                    if ($sha -and $sha.StartsWith($k)) { $skipCommit = $true; break }
+                }
+                if ($skipCommit) { $skipped++ }
             }
-            elseif ($curDate -and $line.Trim() -ne '') {
+            elseif ($curDate -and -not $skipCommit -and $line.Trim() -ne '') {
                 $norm = $line.Trim() -replace '\\', '/'
                 if (-not $script:GitLastCommit.ContainsKey($norm)) {
                     $script:GitLastCommit[$norm] = $curDate
                 }
             }
+        }
+        if ($skipped -gt 0) {
+            Write-Host "Skipped $skipped non-content commit(s) for lastmod" -ForegroundColor DarkGray
         }
 
         Write-Host "Git stats: $($script:GitDirty.Count) dirty, $($script:GitLastCommit.Count) tracked" -ForegroundColor DarkGray
