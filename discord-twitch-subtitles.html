@@ -15,7 +15,7 @@
     <!-- cid passthrough + auto conversion onclick on Store links -->
     <script src="/cid-tracker.js" defer></script>
     <title>Discord & Twitch Live Captions — Real-Time AI Subtitles for Windows</title>
-    <meta name="description" content="Real-time AI captions for Discord voice chat and Twitch streams. Live subtitles stay visible during gameplay. Game Mode for fullscreen apps on Windows.">
+    <meta name="description" content="Real-time AI captions for Discord voice chat and Twitch streams on Windows. No bot to invite, no streamer setup — works on any server or channel. 50+ languages.">
     <meta name="keywords" content="discord subtitles, twitch subtitles, live subtitles for discord, subtitles for twitch, gaming voice chat captions">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://live-subtitles.com/discord-twitch-subtitles.html" />
@@ -88,18 +88,28 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Why use subtitles in Discord voice chat?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Discord voice chat is often fast and multilingual. Subtitles help users follow callouts and context without repeated questions." }
+          "name": "Do Discord or Twitch have built-in live captions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Neither platform has first-party live transcription in 2026. Discord's Accessibility settings cover reduced motion and text-to-speech, and Twitch relies entirely on third-party tools the streamer installs." }
         },
         {
           "@type": "Question",
-          "name": "Are Twitch subtitles useful for viewers and creators?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Viewers understand streams faster, and creators can improve engagement quality in diverse audiences." }
+          "name": "Do I need a Discord bot or server permissions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Live Subtitles runs locally on your PC and captions the audio you already hear, so it works even on servers that ban third-party voice bots." }
         },
         {
           "@type": "Question",
-          "name": "Can this help language learning too?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Streaming and voice chat expose users to natural language, slang, and real speaking speed, which is valuable for practical listening growth." }
+          "name": "Does it work on streams that have no captions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Captioning happens on your own machine, so the streamer's setup is irrelevant. It also covers VODs and clips, which Twitch caption extensions do not." }
+        },
+        {
+          "@type": "Question",
+          "name": "Do captions stay visible during fullscreen games?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Game Mode (Ctrl+Shift+L) locks the overlay in a click-through state above fullscreen and borderless games without intercepting mouse input." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will my viewers see these captions if I stream?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. This is a viewer-side overlay on your own screen. To caption a broadcast for your audience you need a broadcaster-side tool such as the OBS captions plugin or a Twitch caption extension." }
         }
       ]
     }
@@ -118,7 +128,10 @@
         .links a:hover { text-decoration: underline; }
         .cta { display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; color: #08120f; background: linear-gradient(135deg, var(--a), var(--b)); }
         .faq { background: rgba(0,184,255,0.08); border-left: 4px solid var(--b); border-radius: 0 10px 10px 0; padding: 16px 18px; margin-top: 24px; }
-    
+        .steps { counter-reset: step; list-style: none; padding: 0; }
+        .steps li { counter-increment: step; padding: 12px 16px 12px 52px; position: relative; border-left: 2px solid rgba(0,255,157,0.3); margin-bottom: 8px; }
+        .steps li::before { content: counter(step); position: absolute; left: 12px; top: 12px; width: 24px; height: 24px; background: var(--a); color: #08120f; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; }
+
         /* light theme override (generated) */
         *, *::before, *::after { box-sizing: border-box; }
         :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
@@ -140,30 +153,68 @@
         <div class="card">
             <p class="muted"><a href="/" style="color:#0b6ad1; text-decoration:none;">Home</a> / Discord and Twitch subtitles</p>
             <h1>Discord & Twitch Live Captions — Real-Time AI Subtitles</h1>
-            <p>Gaming and streaming conversations are fast, dynamic, and often multilingual. Users searching for <strong>Discord subtitles</strong> or <strong>Twitch subtitles</strong> want clearer understanding without slowing down the experience.</p>
+            <p>Gaming audio is the hardest kind of speech to follow: fast, overlapping, full of jargon, and increasingly multilingual. Neither <strong>Discord</strong> nor <strong>Twitch</strong> will caption it for you — as of 2026 neither platform has any first-party live transcription. Live Subtitles adds a real-time AI caption overlay on your own Windows PC that covers both at once, with no bot to invite and nothing for a streamer to install.</p>
 
-            <h2>Where real-time subtitles help most</h2>
+            <h2>Two different problems, one overlay</h2>
+            <p>Discord and Twitch look like the same use case and are not, which is why tools built for one rarely handle the other.</p>
+            <p><strong>Discord is a conversation you are in.</strong> Several people talk at once, on wildly different microphones, in a channel where missing one callout loses the round. What you need is text fast enough to act on, positioned where you can read it without leaving the game.</p>
+            <p><strong>Twitch is a broadcast you are watching.</strong> One voice usually dominates, the audio is compressed and mixed with game sound and music, and you have no control over any of it because it is somebody else's stream.</p>
+            <p>What makes a single overlay work for both is that it captions <em>system audio</em> — whatever is coming out of your headphones — rather than integrating with either platform. Discord voice chat, a Twitch stream in a browser tab, a Go Live screen share, and a YouTube video in the background are all just audio, and all get the same treatment with nothing to reconfigure.</p>
+
+            <h2>Discord voice chat, stage channels and Go Live</h2>
+            <p>Discord's Accessibility settings contain reduced motion and text-to-speech; there is no setting anywhere that transcribes a voice channel, and live captioning has sat on Discord's feedback board as a top request for years.</p>
+            <p>The alternative most people find first is a transcription bot. Bots can label speakers, which is genuinely useful for a meeting-style call — but they need Manage Server permission, they log everyone's speech into a text channel, and a lot of communities ban third-party voice bots for exactly that reason. A local overlay avoids all of it: nothing joins the channel, nothing is stored server-side, and other members cannot tell it is running.</p>
+            <p>It also covers what bots handle worst — audio from Go Live streams, screen shares and watch-together sessions, which never passes through a participant's microphone stream at all. See the <a href="/discord-live-captions.html" style="color:#0b6ad1;">full Discord live captions guide</a> for setup, bot comparison and privacy considerations.</p>
+
+            <h2>Twitch streams as a viewer</h2>
+            <p>Twitch is the largest live platform with no first-party automatic captions. Text reaches a Twitch stream only if the streamer installed something — the OBS captions plugin, a caption extension, or a paid browser-source service. On the overwhelming majority of channels, none of that is running, and you cannot install anything on somebody else's stream.</p>
+            <p>Captioning on your own machine sidesteps the problem entirely: every channel is captioned, including VODs and clips, which extension overlays never cover. The <a href="/twitch-live-captions.html" style="color:#0b6ad1;">Twitch live captions guide</a> goes through this in detail, and <a href="/articles/en/article-28.html" style="color:#0b6ad1;">Twitch Closed Captions in 2026</a> compares every broadcaster-side and viewer-side option side by side.</p>
+
+            <h2>Game Mode — captions over fullscreen games</h2>
+            <p>An overlay is useless if a fullscreen game hides it or it eats your clicks mid-fight. Game Mode (Ctrl+Shift+L) locks the caption window in a click-through state so it stays readable above fullscreen and borderless games while passing every mouse input through to the game underneath.</p>
+            <p>In practice this is what makes the Discord case work at all — you read callouts without alt-tabbing — and it covers the very common Twitch pattern of watching a stream on a second monitor while playing something else. Position the overlay under the HUD, or move it to another display entirely.</p>
+
+            <h2>Translation for international squads and foreign streamers</h2>
+            <p>The multilingual case is where both platforms fall down hardest. Discord bots translate narrowly if at all; Twitch's caption extensions historically cover a handful of languages behind a Bits unlock. Meanwhile a mid-size squad or channel is routinely spread across a dozen languages.</p>
+            <p>This is much easier from the viewer's side, because you only need one language — your own. Dual subtitle mode shows the original speech on the top line and your translation beneath it, both live, across 50+ language pairs. That works equally for a teammate calling plays in Portuguese and a Korean streamer you would otherwise never be able to watch.</p>
+            <p>Keeping the original line visible rather than replacing it matters here. Callouts and stream chat run on shorthand that translates badly in isolation, and seeing both lines lets you catch the term itself even when the translation of it is clumsy. It is also why language learners tend to leave dual mode on permanently instead of switching to translation only.</p>
+
+            <h2>Accuracy in gaming audio — what to expect</h2>
+            <p>Gaming audio is close to the worst case for speech recognition, so it is worth knowing where the errors come from rather than being surprised by them.</p>
+            <p>The dominant factor is the mix. Game sound effects and music sitting near voice level will pull accuracy down on any captioning system, platform-native ones included. In a Discord channel the equivalent problem is people talking over each other — a single mixed audio stream cannot separate two simultaneous speakers, so overlapping speech produces interleaved text. This is the one place a transcription bot genuinely wins, because it receives each participant separately.</p>
+            <p>The second factor is vocabulary. Champion names, map callouts, item abbreviations, emote spellings and clan tags are exactly what a general speech model has least reason to predict, and exactly what you notice getting mangled. Expect ordinary conversation to transcribe well and dense in-game shorthand to be the weak spot.</p>
+            <p>Latency sits around a second behind the speech, which is inherent to recognising a word from audio rather than a property of any particular app. Nothing is added to the stream or the call itself — the audio is already playing on your machine, so the text simply trails it.</p>
+            <p>Two adjustments help more than any setting: raise voice level relative to game audio in your own mix where you control it, and set the source language explicitly instead of leaving auto-detection on when you already know what language the channel or streamer is in.</p>
+
+            <h2>If captions don't appear</h2>
+            <p>Almost every case is audio routing rather than the captioning itself:</p>
             <ul>
-                <li>Ranked voice chat and tactical callouts.</li>
-                <li>Large Discord channels with overlapping speakers.</li>
-                <li>Twitch streams with fast commentary and slang.</li>
-                <li>International communities with mixed accents.</li>
+                <li><strong>The source is set to Microphone.</strong> That captions you, not the channel or the stream. For both use cases you want System Audio.</li>
+                <li><strong>Output devices don't match.</strong> If Discord or your browser is playing to a headset while the app listens to desktop speakers, there is nothing to transcribe. Check Discord's Voice &amp; Video settings specifically — it keeps its own output device separate from the Windows default.</li>
+                <li><strong>Everyone is on push-to-talk.</strong> Nothing is broken; there is simply no audio between transmissions.</li>
+                <li><strong>A muted browser tab.</strong> Mute cuts the signal at source; turning the volume down instead keeps it.</li>
+                <li><strong>Exclusive fullscreen hides the overlay.</strong> Game Mode (Ctrl+Shift+L) fixes this, and a second display sidesteps it entirely.</li>
             </ul>
 
-            <h2>Viewer and creator value</h2>
-            <p>Viewers can follow streams with less friction, while creators improve clarity for broader audiences. Better comprehension often means higher engagement quality and longer attention across live sessions.</p>
+            <h2>Setup in 3 steps</h2>
+            <ol class="steps">
+                <li><strong>Download Live Subtitles</strong> from the Microsoft Store and launch it.</li>
+                <li><strong>Select "System Audio"</strong> so it captions Discord voice chat or stream audio rather than your microphone.</li>
+                <li><strong>Join a channel or open a stream</strong> — captions appear in a floating overlay you can drag anywhere, including over a fullscreen game.</li>
+            </ol>
 
-            <h2>Practical growth angle</h2>
-            <p>Streaming is one of the most natural ways to build listening skills. Real-time subtitles turn passive watching into active language exposure with lower cognitive load.</p>
+            <h2>What this does not do</h2>
+            <p>It is a <strong>viewer-side</strong> overlay: captions appear on your screen, for you. If you stream, your audience will not see them, and they are not recorded into your VOD. To caption a broadcast for viewers you need a broadcaster-side tool — the OBS captions plugin or a Twitch caption extension. Many streamers run both layers, because they solve different problems: one for the audience, one so they can follow a co-streamer or a foreign-language game themselves. The <a href="/obs-subtitles.html" style="color:#0b6ad1;">OBS subtitles guide</a> covers where that line falls.</p>
 
             <h2>Related resources</h2>
             <div class="links">
+                <p><a href="/discord-live-captions.html">Discord Live Captions — voice chat and stage channels</a></p>
+                <p><a href="/twitch-live-captions.html">Twitch Live Captions — subtitles for any stream</a></p>
+                <p><a href="/live-stream-subtitles.html">Live Stream Subtitles — every platform</a></p>
                 <p><a href="/game-mode-subtitles.html">Game Mode Subtitles for Fullscreen Games</a></p>
+                <p><a href="/articles/en/article-28.html">Twitch Closed Captions in 2026: Every Option Compared</a></p>
                 <p><a href="/articles/en/article-19.html">Game Mode Subtitles for Competitive Games: Setup Guide 2026</a></p>
                 <p><a href="/articles/en/article-21.html">Discord Voice Chat Subtitles for International Squads</a></p>
-                <p><a href="/google-meet-live-captions.html">Google Meet live captions for team calls</a></p>
-                <p><a href="/youtube-dual-subtitles.html">YouTube dual subtitles for daily learning</a></p>
-                <p><a href="/zoom-live-captions.html">Zoom live captions for global meetings</a></p>
                 <p><a href="/articles/en/article-20.html">Fullscreen Subtitle Overlay Troubleshooting for Games</a></p>
                 <p><a href="/articles/en/article-22.html">Best Subtitle Overlay Settings for FPS and MOBA</a></p>
             </div>
@@ -184,9 +235,11 @@
 
             <div class="faq">
                 <h2 style="margin-top:0;">FAQ</h2>
-                <p><strong>Why use subtitles in Discord voice chat?</strong><br>They help users follow fast multilingual callouts with fewer repeats.</p>
-                <p><strong>Are Twitch subtitles useful for viewers and creators?</strong><br>Yes. They improve clarity for viewers and can increase quality of engagement.</p>
-                <p><strong>Can this help language learning too?</strong><br>Yes. It supports practical listening growth in real, fast conversation contexts.</p>
+                <p><strong>Do Discord or Twitch have built-in live captions?</strong><br>No. Neither platform has first-party live transcription in 2026. Discord's Accessibility tab covers reduced motion and text-to-speech; Twitch relies entirely on third-party tools the streamer installs.</p>
+                <p><strong>Do I need a Discord bot or server permissions?</strong><br>No. Live Subtitles runs locally on your PC and captions the audio you already hear, so it works on servers that ban third-party voice bots.</p>
+                <p><strong>Does it work on streams that have no captions?</strong><br>Yes. Captioning happens on your machine, so the streamer's setup is irrelevant — including on VODs and clips, which caption extensions never cover.</p>
+                <p><strong>Do captions stay visible during fullscreen games?</strong><br>Yes. Game Mode (Ctrl+Shift+L) locks the overlay click-through above fullscreen and borderless games without intercepting mouse input.</p>
+                <p><strong>Will my viewers see these captions if I stream?</strong><br>No. This is a viewer-side overlay on your own screen. To caption a broadcast for your audience you need a broadcaster-side tool such as the OBS captions plugin.</p>
             </div>
         </div>
     </main>

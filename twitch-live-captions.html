@@ -96,7 +96,12 @@
         {
           "@type": "Question",
           "name": "Can streamers use this to caption their own streams?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Streamers can use Live Subtitles to read game chat in another language or to add a personal caption layer while streaming. For adding captions to your broadcast output, use the microphone source mode." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Only for themselves. Live Subtitles is a viewer-side overlay on your own screen and is not sent to your audience. To caption your broadcast for viewers, use a broadcaster-side tool such as the OBS captions plugin or a Twitch caption extension." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does Twitch have automatic captions?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Twitch has no first-party automatic captioning. Every caption on a Twitch stream comes from a third-party tool the streamer installed, such as the OBS captions plugin or a caption extension." }
         }
       ]
     }
@@ -172,7 +177,48 @@
                 <li>Follow voice calls with raid guests or co-streamers in other languages.</li>
                 <li>Use microphone mode to caption your own speech as a personal prompter.</li>
             </ul>
-            <p>Note: for adding captions directly into your OBS broadcast output, see the <a href="/obs-subtitles.html" style="color:#0b6ad1;">OBS subtitles guide</a>.</p>
+            <p>To be clear about the limit: this is a <strong>viewer-side</strong> overlay on your own screen. Your audience does not see it. For captions your viewers can read, you need a broadcaster-side tool — see the <a href="/obs-subtitles.html" style="color:#0b6ad1;">OBS subtitles guide</a> and our comparison of <a href="/articles/en/article-28.html" style="color:#0b6ad1;">every Twitch closed-caption option</a>.</p>
+
+            <h2>Watching streamers who don't speak your language</h2>
+            <p>Twitch discovery is heavily regional — the front page you see is shaped by your language settings, and most viewers never leave it. But the interesting parts of a category are often somewhere else entirely: the Korean and Chinese scenes in competitive titles, the Japanese art and music streams, the Brazilian variety channels that run when your own timezone is asleep.</p>
+            <p>The barrier there is never the video, it is the commentary. Dual subtitle mode is aimed exactly at this: the streamer's speech stays on the top line in the original language, your language appears directly beneath it, and both update live. You keep the streamer's actual voice and delivery while reading what they mean — which is also why language learners use this setup deliberately rather than reluctantly.</p>
+            <p>It also handles the case native captions cannot touch at all: a stream where the host switches between two languages mid-sentence, which is normal on bilingual channels and completely defeats a single-language caption track.</p>
+
+            <h2>Captions for VODs, clips and co-streams</h2>
+            <p>Nothing about this approach is specific to live video. Because the app captions whatever audio is playing, the same overlay works on a Twitch VOD you are catching up on, on a clip compilation, or on a co-stream where two channels are running side by side in separate tabs.</p>
+            <p>That matters more than it sounds, because caption coverage on VODs is worse than on live streams. Extension overlays do not survive into the recording at all, so even a channel that captions its live broadcasts usually has entirely uncaptioned VODs and clips. A viewer-side overlay does not distinguish between them.</p>
+
+            <h2>What Twitch gives you natively — and what it doesn't</h2>
+            <p>Twitch is the largest live platform with <strong>no first-party automatic captions</strong>. Unlike YouTube Live, which can generate captions itself (in English only, on normal-latency streams), Twitch has no setting that produces captions for you. Everything that puts text on a Twitch stream is third-party, and all of it is installed by the streamer:</p>
+            <ul>
+                <li><strong>The OBS captions plugin</strong> feeds Twitch's native caption track. Viewers can toggle it, and it survives into the VOD — but it only works if the streamer runs OBS.</li>
+                <li><strong>Caption extensions</strong> such as Stream Closed Captioner draw an overlay on the player. They work with any encoder, but the text is not part of the video, so VODs and clips are uncaptioned.</li>
+                <li><strong>Browser-source services</strong> burn captions into the frame. Everyone sees them, nobody can turn them off, and they cost a monthly fee.</li>
+            </ul>
+            <p>The practical consequence for a viewer is simple: on the overwhelming majority of channels, none of the above is running. You cannot install anything on someone else's stream, and waiting for thousands of individual streamers to each set up captioning is not a plan. That is the entire reason viewer-side captioning exists.</p>
+
+            <h2>Latency and accuracy on stream audio</h2>
+            <p>Captions appear roughly a second behind the speech. That delay is inherent to speech recognition — the system needs enough audio to commit to a word — and it does <strong>not</strong> slow the stream down. Live Subtitles reads audio that is already playing on your machine, so the video runs at normal speed with the text trailing slightly behind, the way broadcast captions work on television.</p>
+            <p>Accuracy on Twitch audio depends less on the app than on what the streamer's mix looks like. A host on a decent microphone in a quiet room transcribes cleanly. What degrades it is specific and predictable:</p>
+            <ul>
+                <li>Loud game audio or music sitting close to voice level in the mix.</li>
+                <li>Several people talking over each other during a collab or a raid.</li>
+                <li>Heavy stream compression on a low-bitrate mobile broadcast.</li>
+                <li>Dense in-game jargon and proper nouns — champion names, map callouts, emote spellings — which every speech model handles worst.</li>
+            </ul>
+            <p>Two adjustments help more than any setting: nudge the stream volume up relative to other system sounds, and set the source language explicitly instead of leaving auto-detection on when you already know what the streamer speaks.</p>
+
+            <h2>Does the streamer or chat see anything?</h2>
+            <p>No. The overlay is drawn on your own desktop by an app running locally — it is not injected into the Twitch player, it is not a browser extension, and it sends nothing to the channel. The streamer sees no indicator, chat sees no message, and nothing appears in your VOD or clips of the stream. From Twitch's perspective you are an ordinary viewer watching a stream with the sound on.</p>
+
+            <h2>If captions don't appear</h2>
+            <p>Nearly every "no captions" case comes down to one of four things:</p>
+            <ul>
+                <li><strong>The source is set to Microphone.</strong> Microphone mode captions you, not the stream. Switch it to System Audio.</li>
+                <li><strong>The browser is playing to a different output device.</strong> If Twitch is going to a headset while the app listens to desktop speakers, there is no signal. Match them.</li>
+                <li><strong>The tab is muted.</strong> Muting removes the audio entirely; lowering the volume is fine.</li>
+                <li><strong>Exclusive fullscreen is covering the overlay.</strong> Press Ctrl+Shift+L for Game Mode, or move the overlay to a second monitor.</li>
+            </ul>
 
             <a class="cta" href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank">Download Live Subtitles — Free Trial</a>
 
@@ -190,12 +236,14 @@
 
             <h2>Related guides</h2>
             <div class="links">
+                <p><a href="/live-stream-subtitles.html">Live Stream Subtitles — every platform</a></p>
                 <p><a href="/discord-twitch-subtitles.html">Discord & Twitch Live Captions — Combined Guide</a></p>
                 <p><a href="/game-mode-subtitles.html">Game Mode Subtitles for Fullscreen Games</a></p>
                 <p><a href="/youtube-dual-subtitles.html">YouTube Dual Subtitles</a></p>
-                <p><a href="/articles/en/article-7.html">Discord and Twitch Subtitles: Real-Time Community Workflow</a></p>
-                <p><a href="/articles/en/article-11.html">Game Mode Subtitles for Competitive Games: Setup Guide 2026</a></p>
-                <p><a href="/articles/en/article-13.html">Fullscreen Subtitle Overlay Troubleshooting for Games</a></p>
+                <p><a href="/articles/en/article-28.html">Twitch Closed Captions in 2026: Every Option Compared</a></p>
+                <p><a href="/articles/en/article-15.html">Discord and Twitch Subtitles: Real-Time Community Workflow</a></p>
+                <p><a href="/articles/en/article-19.html">Game Mode Subtitles for Competitive Games: Setup Guide 2026</a></p>
+                <p><a href="/articles/en/article-20.html">Fullscreen Subtitle Overlay Troubleshooting for Games</a></p>
             </div>
 
             <div class="faq">
@@ -203,7 +251,8 @@
                 <p><strong>Can I add live captions to Twitch streams on Windows?</strong><br>Yes — Live Subtitles captures system audio and works with any Twitch stream in a browser or the Twitch app. No Twitch Extension needed.</p>
                 <p><strong>Can I translate a Twitch stream into my language?</strong><br>Yes. Dual subtitle mode shows the original speech and your chosen translation simultaneously in 50+ language pairs.</p>
                 <p><strong>Does Game Mode work with fullscreen Twitch streams?</strong><br>Yes — use Ctrl+Shift+L to lock captions in a click-through overlay over any fullscreen content.</p>
-                <p><strong>Can streamers use this to caption their own streams?</strong><br>Yes — use microphone mode to caption your own voice during a session, or translate incoming chat and co-streamer audio.</p>
+                <p><strong>Can streamers use this to caption their own streams?</strong><br>Only for themselves — it is a viewer-side overlay your audience never sees. Use it to follow a co-streamer or a foreign-language game; to caption the broadcast for viewers you need a broadcaster-side tool such as the OBS captions plugin.</p>
+                <p><strong>Does Twitch have automatic captions?</strong><br>No. Twitch has no first-party automatic captioning — every caption on Twitch comes from a third-party tool the streamer installed.</p>
             </div>
         </div>
     </main>

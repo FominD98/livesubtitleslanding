@@ -171,6 +171,33 @@
             <h2>No bot, no server admin, no Discord plugin</h2>
             <p>Live Subtitles is a standalone Windows app. It does not join your voice channel as a bot user, does not appear in the Discord member list, and does not need any manage-server or manage-roles permission on the server. This matters: many community servers ban third-party voice bots outright because of privacy and trust concerns. Live Subtitles sidesteps that completely — it is just an audio reader on your own PC, captioning what you can already hear, and other members of the call have no way to know you are using it.</p>
 
+            <h2>Go Live, screen share and watch-together</h2>
+            <p>Discord is not only voice chat. Go Live streams a game or a window to the channel, screen share carries the audio of whatever is playing, and watch-together sessions run video for the whole group. All of it arrives at your machine as ordinary system audio, which means it is all captioned by the same setup with nothing to change.</p>
+            <p>That covers a case bots handle badly: a friend sharing a foreign-language video, a tutorial, or a game with heavy story dialogue. A bot receives participants' microphone streams, so shared media audio is largely invisible to it. An overlay reading system audio captions the shared content and the people talking over it alike.</p>
+
+            <h2>Discord has no native live captions</h2>
+            <p>This surprises people, because Discord does have an Accessibility tab. What lives there is reduced motion and the <code>/tts</code> text-to-speech command — which reads typed messages aloud, the opposite direction from captioning. As of 2026 there is still <strong>no Discord setting that transcribes voice channels</strong>, despite live captioning being one of the longest-standing requests on Discord's own feedback board.</p>
+            <p>So every option is third-party, and they split into two families with very different trade-offs.</p>
+
+            <h2>Transcription bots vs. a desktop overlay</h2>
+            <p><strong>Bots</strong> such as Scripty join the voice channel as a member and post transcripts into a text channel. Their real advantage is <em>speaker labels</em>: because the bot receives each participant's audio stream separately, it can attribute every line to a person. That is genuinely useful for a meeting-style call you want a record of.</p>
+            <p>The costs are equally real. A bot needs someone with Manage Server permission to invite it, it transcribes <em>everyone</em> in the channel into a log that persists, and plenty of community servers ban third-party voice bots outright over exactly that. It also puts the transcript in a text channel you have to look away from the game to read.</p>
+            <p><strong>Desktop overlays</strong> like Live Subtitles work the other way round. They caption the mixed audio coming out of your headphones, so there are no speaker labels — but there is no bot in the member list, no permission to request, no server-side log, and the text appears on top of your game instead of in a channel you have to alt-tab to. Windows also ships a basic version of this idea in Live Captions (Win+Ctrl+L), which is free but English-first and has no translation.</p>
+            <p>The short version: pick a bot if you want an attributed written record of a call, and a desktop overlay if you want to follow the conversation in real time while doing something else.</p>
+
+            <h2>Privacy in a shared voice channel</h2>
+            <p>Worth stating plainly, because the two approaches are not equivalent here. A desktop overlay captions audio that has already been played to you, on your own machine, and nothing leaves it — there is no transcript stored on a server, nothing posted to a channel, and no way for other members to see that you are using it. That is why it is viable on servers where voice bots are banned.</p>
+            <p>A transcription bot is a different proposition: it creates a persistent record of what everyone said, usually visible to the whole channel. That may be exactly what you want for a study group or a team call, and exactly what you should not deploy on a casual server without telling people. Norms about recording vary a lot between communities — and in some jurisdictions so does the law — so the honest default is to say what you are running before you run it.</p>
+
+            <h2>If captions don't appear</h2>
+            <p>Discord's audio routing causes nearly all of these:</p>
+            <ul>
+                <li><strong>The source is set to Microphone.</strong> That captions you, not the channel. For voice chat you want System Audio.</li>
+                <li><strong>Discord is sending audio to a different device.</strong> Check Discord's Voice &amp; Video settings — the output device there must match what the app is capturing. A headset selected in Discord while the app listens to desktop speakers produces silence.</li>
+                <li><strong>Everyone is on push-to-talk.</strong> Nothing is wrong; there is simply no audio between transmissions. Captions resume as people speak.</li>
+                <li><strong>The overlay is behind a fullscreen game.</strong> Game Mode (Ctrl+Shift+L) makes it click-through and keeps it on top; a second display avoids the conflict altogether.</li>
+            </ul>
+
             <a class="cta" href="https://apps.microsoft.com/store/detail/9PH1R9DJG47S" target="_blank">Download Live Subtitles — Free Trial</a>
 
             <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center;">
@@ -189,9 +216,12 @@
             <div class="links">
                 <p><a href="/twitch-live-captions.html">Twitch Live Captions & AI Translation</a></p>
                 <p><a href="/discord-twitch-subtitles.html">Discord & Twitch Combined Captions</a></p>
+                <p><a href="/live-stream-subtitles.html">Live Stream Subtitles — every platform</a></p>
                 <p><a href="/game-mode-subtitles.html">Game Mode Subtitles for Windows</a></p>
                 <p><a href="/obs-subtitles.html">OBS Live Captions for Streamers</a></p>
                 <p><a href="/slack-live-captions.html">Slack Live Captions & AI Translation</a></p>
+                <p><a href="/articles/en/article-21.html">Discord Voice Chat Subtitles for International Squads</a></p>
+                <p><a href="/articles/en/article-15.html">Discord and Twitch Subtitles: Real-Time Community Workflow</a></p>
             </div>
 
             <div class="faq">

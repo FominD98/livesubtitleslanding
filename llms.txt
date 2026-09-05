@@ -30,6 +30,9 @@ Key facts:
 ## Guides
 
 - [Language Reactor alternatives 2026](https://live-subtitles.com/articles/en/article-17.html)
+- [Web Captioner alternatives 2026](https://live-subtitles.com/articles/en/article-29.html)
+- [Twitch closed captions 2026, every option compared](https://live-subtitles.com/articles/en/article-28.html)
+- [Live stream subtitles (Twitch, YouTube Live, Kick, TikTok Live)](https://live-subtitles.com/live-stream-subtitles.html)
 - [Zoom live captions](https://live-subtitles.com/zoom-live-captions.html)
 - [Microsoft Teams live captions](https://live-subtitles.com/teams-live-captions.html)
 - [YouTube dual subtitles](https://live-subtitles.com/youtube-dual-subtitles.html)
