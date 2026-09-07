@@ -165,6 +165,31 @@
       // на них завязаны зачисление минут и разрезы аналитики. fbp/fbc — куки клика по
       // объявлению, ими бэкенд связывает серверную покупку с рекламой; читаем их при каждом
       // открытии, а не один раз: пиксель мог дописать куку уже после загрузки страницы.
+      // Метка кампании. Сначала из адреса — эту страницу открывает приложение, и метку
+      // подставляет оно; потом из sessionStorage, куда её кладёт cid-tracker.js, если человек
+      // пришёл на чекаут по ссылке с сайта. Имена ключей те же, что читает бэкенд
+      // (AddCampaign в PaddleWebhookService), и тот же лимит длины в 100 символов.
+      // Без метки веб-покупка приезжает в GA4 с пустым источником: она уходит с сервера, у неё
+      // нет ни сессии браузера, ни его кук, и связать её с рекламой больше нечем.
+      var CAMPAIGN_KEYS = [
+        ['utm_campaign', 'lsCid'],
+        ['utm_source', 'lsUtmSource'],
+        ['utm_medium', 'lsUtmMedium']
+      ];
+
+      function campaignFields() {
+        var out = {};
+        CAMPAIGN_KEYS.forEach(function (pair) {
+          var value = params.get(pair[0]) || '';
+          if (!value) {
+            try { value = sessionStorage.getItem(pair[1]) || ''; } catch (e) { value = ''; }
+          }
+          value = value.trim().slice(0, 100);
+          if (value) out[pair[0]] = value;
+        });
+        return out;
+      }
+
       function buildCustomData() {
         var data = { fp: fp, platform: 'windows-wpf' };
         // Аналитика не имеет права уронить оплату: что бы ни случилось при чтении кук,
@@ -174,6 +199,10 @@
           if (meta && meta.fbp) data.fbp = meta.fbp;
           if (meta && meta.fbc) data.fbc = meta.fbc;
         } catch (e) { /* meta attribution unavailable */ }
+        try {
+          var campaign = campaignFields();
+          Object.keys(campaign).forEach(function (key) { data[key] = campaign[key]; });
+        } catch (e) { /* campaign unavailable */ }
         return data;
       }
 
