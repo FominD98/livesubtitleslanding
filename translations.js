@@ -1,7 +1,7 @@
 const translations = {
     'en-US': {
             proof: {
-                trial: 'First 20 minutes free, no card',
+                trial: 'Free to try, no card',
                 langs: '50 languages',
                 latency: 'Under a second of delay',
                 noMic: 'No bot joins your call'
@@ -145,7 +145,7 @@ const translations = {
         faq: {
             title: 'Frequently Asked Questions',
             q1: 'How much does the app cost?',
-            a1: 'The first 20 minutes are free and no card is needed. After that you can top up minutes or take a subscription right inside the app — the current options are shown there and in your app store.',
+            a1: 'You can try it for free, and no card is needed to start. After that you can top up minutes or take a subscription right inside the app — the current options are shown there and in your app store.',
             q2: 'Does it work with all applications?',
             a2: 'Yes! Live Subtitles works with absolutely any applications: YouTube, Netflix, Zoom, Teams, Discord, browsers and even games. The app captures audio at the system level.',
             q3: 'What languages are supported?',
@@ -175,7 +175,7 @@ const translations = {
         download: {
             title: 'Try it free right now',
             subtitle: 'Install it and choose two languages — it takes it from there.',
-            guarantee: '20 minutes free · No credit card required'
+            guarantee: 'Free to try · No credit card required'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ru: "Давайте начнём сегодняшнюю встречу", es: "Empecemos con la reunión de hoy", de: "Lassen Sie uns mit dem heutigen Meeting beginnen", it: "Iniziamo la riunione di oggi", ja: "それでは、本日のミーティングを始めましょう", ko: "오늘 회의를 시작하겠습니다", zh: "那我们开始今天的会议吧", ar: "لنبدأ اجتماع اليوم", hi: "चलिए आज की मीटिंग शुरू करते हैं", pt: "Vamos começar a reunião de hoje", pl: "Zaczynajmy dzisiejsze spotkanie", nl: "Laten we beginnen met de meeting van vandaag", tr: "Hadi bugünkü toplantımıza başlayalım", uk: "Розпочнімо нашу сьогоднішню зустріч" },
@@ -188,7 +188,7 @@ const translations = {
     },
     'ru-RU': {
             proof: {
-                trial: 'Первые 20 минут бесплатно, без карты',
+                trial: 'Попробовать бесплатно, без карты',
                 langs: '50 языков',
                 latency: 'Задержка меньше секунды',
                 noMic: 'В звонок не заходит бот'
@@ -332,7 +332,7 @@ const translations = {
         faq: {
             title: 'Часто задаваемые вопросы',
             q1: 'Сколько стоит приложение?',
-            a1: 'Первые 20 минут бесплатны, карта не нужна. Дальше можно докупить минуты или оформить подписку прямо в приложении — актуальные варианты видны там же и в магазине приложений.',
+            a1: 'Попробовать можно бесплатно, карта для старта не нужна. Дальше можно докупить минуты или оформить подписку прямо в приложении — актуальные варианты видны там же и в магазине приложений.',
             q2: 'Работает ли с любыми приложениями?',
             a2: 'Да! Live Subtitles работает с абсолютно любыми приложениями: YouTube, Netflix, Zoom, Teams, Discord, браузерами и даже играми. Приложение захватывает звук на системном уровне.',
             q3: 'Какие языки поддерживаются?',
@@ -362,7 +362,7 @@ const translations = {
         download: {
             title: 'Попробуйте бесплатно прямо сейчас',
             subtitle: 'Установите и выберите два языка — дальше он сам.',
-            guarantee: '20 минут бесплатно · Без банковской карты'
+            guarantee: 'Попробовать бесплатно · Без банковской карты'
         },
         examples: [
             { en: "Let's get started with today's meeting", ru: "Давайте начнём сегодняшнюю встречу" },
@@ -375,7 +375,7 @@ const translations = {
     },
     'fr-FR': {
             proof: {
-                trial: '20 premières minutes gratuites, sans carte',
+                trial: 'Essai gratuit, sans carte',
                 langs: '50 langues',
                 latency: 'Moins d’une seconde de latence',
                 noMic: 'Aucun robot dans votre appel'
@@ -515,7 +515,7 @@ const translations = {
         faq: {
             title: 'Questions fréquemment posées',
             q1: 'Combien coûte l\'application ?',
-            a1: 'Les 20 premières minutes sont gratuites, sans carte bancaire. Ensuite, vous pouvez recharger des minutes ou prendre un abonnement directement dans l’application — les options actuelles y sont affichées, ainsi que dans votre magasin d’applications.',
+            a1: 'Vous pouvez l’essayer gratuitement, sans carte bancaire pour démarrer. Ensuite, vous pouvez recharger des minutes ou prendre un abonnement directement dans l’application — les options actuelles y sont affichées, ainsi que dans votre magasin d’applications.',
             q2: 'Fonctionne-t-elle avec toutes les applications ?',
             a2: 'Oui ! Live Subtitles fonctionne avec absolument toutes les applications : YouTube, Netflix, Zoom, Teams, Discord, navigateurs et même jeux. L\'application capture l\'audio au niveau système.',
             q3: 'Quelles langues sont prises en charge ?',
@@ -545,7 +545,7 @@ const translations = {
         download: {
             title: 'Essayez gratuitement dès maintenant',
             subtitle: 'Installez-le et choisissez deux langues — il prend le relais.',
-            guarantee: '20 minutes gratuites · Sans carte bancaire'
+            guarantee: 'Essai gratuit · Sans carte bancaire'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", fr: "Commençons la réunion d'aujourd'hui" },
@@ -558,7 +558,7 @@ const translations = {
     },
     'es-ES': {
             proof: {
-                trial: 'Primeros 20 minutos gratis, sin tarjeta',
+                trial: 'Pruébalo gratis, sin tarjeta',
                 langs: '50 idiomas',
                 latency: 'Menos de un segundo de retardo',
                 noMic: 'Ningún bot entra en tu llamada'
@@ -698,7 +698,7 @@ const translations = {
         faq: {
             title: 'Preguntas frecuentes',
             q1: '¿Cuánto cuesta la aplicación?',
-            a1: 'Los primeros 20 minutos son gratis y no hace falta tarjeta. Después puedes recargar minutos o contratar una suscripción dentro de la propia app — las opciones actuales se muestran allí y en tu tienda de aplicaciones.',
+            a1: 'Puedes probarla gratis y no hace falta tarjeta para empezar. Después puedes recargar minutos o contratar una suscripción dentro de la propia app — las opciones actuales se muestran allí y en tu tienda de aplicaciones.',
             q2: '¿Funciona con todas las aplicaciones?',
             a2: '¡Sí! Live Subtitles funciona con absolutamente cualquier aplicación: YouTube, Netflix, Zoom, Teams, Discord, navegadores e incluso juegos. La aplicación captura el audio a nivel del sistema.',
             q3: '¿Qué idiomas son compatibles?',
@@ -728,7 +728,7 @@ const translations = {
         download: {
             title: 'Pruébalo gratis ahora mismo',
             subtitle: 'Instálalo y elige dos idiomas: el resto lo hace él.',
-            guarantee: '20 minutos gratis · Sin tarjeta de crédito'
+            guarantee: 'Prueba gratis · Sin tarjeta de crédito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", es: "Empecemos con la reunión de hoy" },
@@ -741,7 +741,7 @@ const translations = {
     },
     'de-DE': {
             proof: {
-                trial: 'Erste 20 Minuten kostenlos, ohne Karte',
+                trial: 'Kostenlos testen, ohne Karte',
                 langs: '50 Sprachen',
                 latency: 'Weniger als eine Sekunde Verzögerung',
                 noMic: 'Kein Bot in Ihrem Call'
@@ -881,7 +881,7 @@ const translations = {
         faq: {
             title: 'Häufig gestellte Fragen',
             q1: 'Wie viel kostet die Anwendung?',
-            a1: 'Die ersten 20 Minuten sind kostenlos, ohne Kreditkarte. Danach können Sie Minuten direkt in der App aufladen oder ein Abo abschließen — die aktuellen Optionen sehen Sie dort und in Ihrem App-Store.',
+            a1: 'Sie können die App kostenlos testen, für den Start ist keine Karte nötig. Danach können Sie Minuten direkt in der App aufladen oder ein Abo abschließen — die aktuellen Optionen sehen Sie dort und in Ihrem App-Store.',
             q2: 'Funktioniert es mit allen Anwendungen?',
             a2: 'Ja! Live Subtitles funktioniert mit absolut allen Anwendungen: YouTube, Netflix, Zoom, Teams, Discord, Browsern und sogar Spielen. Die Anwendung erfasst Audio auf Systemebene.',
             q3: 'Welche Sprachen werden unterstützt?',
@@ -911,7 +911,7 @@ const translations = {
         download: {
             title: 'Probieren Sie es jetzt kostenlos aus',
             subtitle: 'Installieren und zwei Sprachen wählen — den Rest macht es selbst.',
-            guarantee: '20 Minuten kostenlos · Ohne Kreditkarte'
+            guarantee: 'Kostenlos testen · Ohne Kreditkarte'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", de: "Lassen Sie uns mit dem heutigen Meeting beginnen" },
@@ -924,7 +924,7 @@ const translations = {
     },
     'it-IT': {
             proof: {
-                trial: 'Primi 20 minuti gratis, senza carta',
+                trial: 'Prova gratis, senza carta',
                 langs: '50 lingue',
                 latency: 'Meno di un secondo di ritardo',
                 noMic: 'Nessun bot nella tua chiamata'
@@ -1064,7 +1064,7 @@ const translations = {
         faq: {
             title: 'Domande frequenti',
             q1: 'Quanto costa l\'applicazione?',
-            a1: 'I primi 20 minuti sono gratuiti e non serve la carta. Poi puoi ricaricare minuti o attivare un abbonamento direttamente nell’app — le opzioni attuali sono mostrate lì e nel tuo store.',
+            a1: 'Puoi provarla gratis e per iniziare non serve la carta. Poi puoi ricaricare minuti o attivare un abbonamento direttamente nell’app — le opzioni attuali sono mostrate lì e nel tuo store.',
             q2: 'Funziona con tutte le applicazioni?',
             a2: 'Sì! Live Subtitles funziona con assolutamente qualsiasi applicazione: YouTube, Netflix, Zoom, Teams, Discord, browser e persino giochi. L\'applicazione cattura l\'audio a livello di sistema.',
             q3: 'Quali lingue sono supportate?',
@@ -1094,7 +1094,7 @@ const translations = {
         download: {
             title: 'Provalo gratis ora',
             subtitle: 'Installalo e scegli due lingue: al resto pensa lui.',
-            guarantee: '20 minuti gratis · Senza carta di credito'
+            guarantee: 'Prova gratis · Senza carta di credito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", it: "Iniziamo la riunione di oggi" },
@@ -1107,7 +1107,7 @@ const translations = {
     },
     'ja-JP': {
             proof: {
-                trial: '最初の20分は無料、カード不要',
+                trial: '無料でお試し、カード不要',
                 langs: '50言語',
                 latency: '遅延は1秒未満',
                 noMic: '通話にボットは入らない'
@@ -1247,7 +1247,7 @@ const translations = {
         faq: {
             title: 'よくある質問',
             q1: 'アプリの料金はいくらですか？',
-            a1: '最初の20分は無料で、カード登録は不要です。その後はアプリ内で分数を追加購入するか、サブスクリプションを利用できます。現在の選択肢はアプリ内とアプリストアで確認できます。',
+            a1: '無料でお試しいただけます。開始にカード登録は不要です。その後はアプリ内で分数を追加購入するか、サブスクリプションを利用できます。現在の選択肢はアプリ内とアプリストアで確認できます。',
             q2: 'すべてのアプリケーションで動作しますか？',
             a2: 'はい！Live Subtitlesは絶対にすべてのアプリケーションで動作します：YouTube、Netflix、Zoom、Teams、Discord、ブラウザー、ゲームまで。アプリはシステムレベルで音声をキャプチャします。',
             q3: 'どの言語がサポートされていますか？',
@@ -1277,7 +1277,7 @@ const translations = {
         download: {
             title: '今すぐ無料でお試し',
             subtitle: 'インストールして2つの言語を選ぶだけ。あとは自動です。',
-            guarantee: '20分無料 · クレジットカード不要'
+            guarantee: '無料でお試し · クレジットカード不要'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ja: "それでは、本日のミーティングを始めましょう" },
@@ -1290,7 +1290,7 @@ const translations = {
     },
     'ko-KR': {
             proof: {
-                trial: '처음 20분 무료, 카드 불필요',
+                trial: '무료로 체험, 카드 불필요',
                 langs: '50개 언어',
                 latency: '1초 미만의 지연',
                 noMic: '통화에 봇이 들어오지 않음'
@@ -1430,7 +1430,7 @@ const translations = {
         faq: {
             title: '자주 묻는 질문',
             q1: '앱 비용은 얼마인가요?',
-            a1: '처음 20분은 무료이며 카드가 필요하지 않습니다. 이후에는 앱 안에서 시간을 충전하거나 구독을 이용할 수 있습니다. 현재 옵션은 앱과 앱 스토어에서 확인할 수 있습니다.',
+            a1: '무료로 사용해 볼 수 있고, 시작할 때 카드가 필요하지 않습니다. 이후에는 앱 안에서 시간을 충전하거나 구독을 이용할 수 있습니다. 현재 옵션은 앱과 앱 스토어에서 확인할 수 있습니다.',
             q2: '모든 애플리케이션에서 작동하나요?',
             a2: '예! Live Subtitles는 절대적으로 모든 애플리케이션에서 작동합니다: YouTube, Netflix, Zoom, Teams, Discord, 브라우저 및 게임까지. 앱은 시스템 수준에서 오디오를 캡처합니다.',
             q3: '어떤 언어가 지원되나요?',
@@ -1460,7 +1460,7 @@ const translations = {
         download: {
             title: '지금 무료로 사용해보세요',
             subtitle: '설치하고 두 가지 언어만 고르세요. 나머지는 알아서 합니다.',
-            guarantee: '20분 무료 · 신용카드 불필요'
+            guarantee: '무료 체험 · 신용카드 불필요'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ko: "오늘 회의를 시작하겠습니다" },
@@ -1473,7 +1473,7 @@ const translations = {
     },
     'zh-CN': {
             proof: {
-                trial: '前 20 分钟免费，无需银行卡',
+                trial: '免费试用，无需银行卡',
                 langs: '50 种语言',
                 latency: '延迟不到一秒',
                 noMic: '通话里不会出现机器人'
@@ -1613,7 +1613,7 @@ const translations = {
         faq: {
             title: '常见问题',
             q1: '应用程序的费用是多少？',
-            a1: '前 20 分钟免费，无需绑定银行卡。之后可以在应用内充值分钟数或订阅，当前可选方案会显示在应用内和应用商店中。',
+            a1: '可以先免费试用，开始时无需绑定银行卡。之后可以在应用内充值分钟数或订阅，当前可选方案会显示在应用内和应用商店中。',
             q2: '是否适用于所有应用程序？',
             a2: '是的！Live Subtitles绝对适用于所有应用程序：YouTube、Netflix、Zoom、Teams、Discord、浏览器甚至游戏。应用程序在系统级别捕获音频。',
             q3: '支持哪些语言？',
@@ -1643,7 +1643,7 @@ const translations = {
         download: {
             title: '立即免费试用',
             subtitle: '安装后选择两种语言，剩下的它自己来。',
-            guarantee: '20 分钟免费 · 无需信用卡'
+            guarantee: '免费试用 · 无需信用卡'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", zh: "那我们开始今天的会议吧" },
@@ -1656,7 +1656,7 @@ const translations = {
     },
     'ar-SA': {
             proof: {
-                trial: 'أول 20 دقيقة مجانًا، بدون بطاقة',
+                trial: 'جرّبه مجانًا، بدون بطاقة',
                 langs: '50 لغة',
                 latency: 'تأخير أقل من ثانية',
                 noMic: 'لا روبوت ينضم إلى مكالمتك'
@@ -1796,7 +1796,7 @@ const translations = {
         faq: {
             title: 'الأسئلة الشائعة',
             q1: 'كم تكلفة التطبيق؟',
-            a1: 'أول 20 دقيقة مجانية ولا تحتاج إلى بطاقة. بعد ذلك يمكنك شراء دقائق إضافية أو الاشتراك من داخل التطبيق — الخيارات الحالية معروضة هناك وفي متجر التطبيقات.',
+            a1: 'يمكنك تجربته مجانًا، ولا تحتاج إلى بطاقة للبدء. بعد ذلك يمكنك شراء دقائق إضافية أو الاشتراك من داخل التطبيق — الخيارات الحالية معروضة هناك وفي متجر التطبيقات.',
             q2: 'هل يعمل مع جميع التطبيقات؟',
             a2: 'نعم! Live Subtitles يعمل مع جميع التطبيقات تماماً: YouTube، Netflix، Zoom، Teams، Discord، المتصفحات وحتى الألعاب. التطبيق يلتقط الصوت على مستوى النظام.',
             q3: 'ما هي اللغات المدعومة؟',
@@ -1826,7 +1826,7 @@ const translations = {
         download: {
             title: 'جرب مجاناً الآن',
             subtitle: 'ثبّته واختر لغتين — والباقي يتولاه بنفسه.',
-            guarantee: '20 دقيقة مجانًا · بدون بطاقة ائتمان'
+            guarantee: 'جرّبه مجانًا · بدون بطاقة ائتمان'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ar: "لنبدأ اجتماع اليوم" },
@@ -1839,7 +1839,7 @@ const translations = {
     },
     'hi-IN': {
             proof: {
-                trial: 'पहले 20 मिनट मुफ़्त, कार्ड नहीं चाहिए',
+                trial: 'मुफ़्त आज़माएँ, कार्ड नहीं चाहिए',
                 langs: '50 भाषाएँ',
                 latency: 'एक सेकंड से कम देरी',
                 noMic: 'आपकी कॉल में कोई बॉट नहीं जुड़ता'
@@ -1979,7 +1979,7 @@ const translations = {
         faq: {
             title: 'अक्सर पूछे जाने वाले प्रश्न',
             q1: 'ऐप की लागत कितनी है?',
-            a1: 'पहले 20 मिनट मुफ़्त हैं और कार्ड की ज़रूरत नहीं। इसके बाद आप ऐप में ही मिनट खरीद सकते हैं या सब्सक्रिप्शन ले सकते हैं — मौजूदा विकल्प वहीं और आपके ऐप स्टोर में दिखते हैं।',
+            a1: 'आप इसे मुफ़्त आज़मा सकते हैं और शुरू करने के लिए कार्ड की ज़रूरत नहीं। इसके बाद आप ऐप में ही मिनट खरीद सकते हैं या सब्सक्रिप्शन ले सकते हैं — मौजूदा विकल्प वहीं और आपके ऐप स्टोर में दिखते हैं।',
             q2: 'क्या यह सभी एप्लिकेशन के साथ काम करता है?',
             a2: 'हां! Live Subtitles बिल्कुल सभी एप्लिकेशन के साथ काम करता है: YouTube, Netflix, Zoom, Teams, Discord, ब्राउज़र और यहां तक कि गेम भी। ऐप सिस्टम स्तर पर ऑडियो कैप्चर करता है।',
             q3: 'कौन सी भाषाएं समर्थित हैं?',
@@ -2009,7 +2009,7 @@ const translations = {
         download: {
             title: 'अभी मुफ्त में आज़माएं',
             subtitle: 'इंस्टॉल करें और दो भाषाएँ चुनें — आगे यह खुद संभाल लेता है।',
-            guarantee: '20 मिनट मुफ़्त · क्रेडिट कार्ड की ज़रूरत नहीं'
+            guarantee: 'मुफ़्त आज़माएँ · क्रेडिट कार्ड की ज़रूरत नहीं'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", hi: "चलिए आज की मीटिंग शुरू करते हैं" },
@@ -2022,7 +2022,7 @@ const translations = {
     },
     'pt-BR': {
             proof: {
-                trial: 'Primeiros 20 minutos grátis, sem cartão',
+                trial: 'Experimente grátis, sem cartão',
                 langs: '50 idiomas',
                 latency: 'Menos de um segundo de atraso',
                 noMic: 'Nenhum bot entra na sua chamada'
@@ -2162,7 +2162,7 @@ const translations = {
         faq: {
             title: 'Perguntas Frequentes',
             q1: 'Quanto custa o app?',
-            a1: 'Os primeiros 20 minutos são gratuitos e não é preciso cartão. Depois você pode recarregar minutos ou assinar dentro do próprio app — as opções atuais aparecem lá e na sua loja de aplicativos.',
+            a1: 'Você pode experimentar de graça e não é preciso cartão para começar. Depois você pode recarregar minutos ou assinar dentro do próprio app — as opções atuais aparecem lá e na sua loja de aplicativos.',
             q2: 'Funciona com todas as aplicações?',
             a2: 'Sim! Live Subtitles funciona absolutamente com todas as aplicações: YouTube, Netflix, Zoom, Teams, Discord, navegadores e até jogos. O app captura áudio no nível do sistema.',
             q3: 'Quais idiomas são suportados?',
@@ -2192,7 +2192,7 @@ const translations = {
         download: {
             title: 'Experimente grátis agora',
             subtitle: 'Instale e escolha dois idiomas — o resto ele faz sozinho.',
-            guarantee: '20 minutos grátis · Sem cartão de crédito'
+            guarantee: 'Experimente grátis · Sem cartão de crédito'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pt: "Vamos começar a reunião de hoje" },
@@ -2205,7 +2205,7 @@ const translations = {
     },
     'pl-PL': {
             proof: {
-                trial: 'Pierwsze 20 minut bezpłatnie, bez karty',
+                trial: 'Wypróbuj bezpłatnie, bez karty',
                 langs: '50 języków',
                 latency: 'Opóźnienie poniżej sekundy',
                 noMic: 'Do rozmowy nie dołącza bot'
@@ -2345,7 +2345,7 @@ const translations = {
         faq: {
             title: 'Często zadawane pytania',
             q1: 'Ile kosztuje aplikacja?',
-            a1: 'Pierwsze 20 minut jest bezpłatne i nie trzeba podawać karty. Później możesz doładować minuty lub wykupić subskrypcję w samej aplikacji — aktualne opcje są widoczne tam i w sklepie z aplikacjami.',
+            a1: 'Możesz wypróbować ją bezpłatnie, a do startu nie trzeba podawać karty. Później możesz doładować minuty lub wykupić subskrypcję w samej aplikacji — aktualne opcje są widoczne tam i w sklepie z aplikacjami.',
             q2: 'Czy działa ze wszystkimi aplikacjami?',
             a2: 'Tak! Live Subtitles działa absolutnie ze wszystkimi aplikacjami: YouTube, Netflix, Zoom, Teams, Discord, przeglądarkami, a nawet grami. Aplikacja przechwytuje dźwięk na poziomie systemu.',
             q3: 'Jakie języki są obsługiwane?',
@@ -2375,7 +2375,7 @@ const translations = {
         download: {
             title: 'Wypróbuj za darmo teraz',
             subtitle: 'Zainstaluj i wybierz dwa języki — dalej zajmie się tym sam.',
-            guarantee: '20 minut bezpłatnie · Bez karty kredytowej'
+            guarantee: 'Wypróbuj bezpłatnie · Bez karty kredytowej'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pl: "Zaczynajmy dzisiejsze spotkanie" },
@@ -2388,7 +2388,7 @@ const translations = {
     },
     'nl-NL': {
             proof: {
-                trial: 'Eerste 20 minuten gratis, geen kaart',
+                trial: 'Gratis uitproberen, geen kaart',
                 langs: '50 talen',
                 latency: 'Minder dan een seconde vertraging',
                 noMic: 'Geen bot in je gesprek'
@@ -2528,7 +2528,7 @@ const translations = {
         faq: {
             title: 'Veelgestelde vragen',
             q1: 'Hoeveel kost de app?',
-            a1: 'De eerste 20 minuten zijn gratis en je hebt geen creditcard nodig. Daarna kun je minuten bijkopen of een abonnement nemen in de app zelf — de huidige opties staan daar en in je app store.',
+            a1: 'Je kunt het gratis uitproberen en je hebt geen creditcard nodig om te beginnen. Daarna kun je minuten bijkopen of een abonnement nemen in de app zelf — de huidige opties staan daar en in je app store.',
             q2: 'Werkt het met alle applicaties?',
             a2: 'Ja! Live Subtitles werkt absoluut met alle applicaties: YouTube, Netflix, Zoom, Teams, Discord, browsers en zelfs games. De app vangt audio op systeemniveau.',
             q3: 'Welke talen worden ondersteund?',
@@ -2558,7 +2558,7 @@ const translations = {
         download: {
             title: 'Probeer nu gratis',
             subtitle: 'Installeer en kies twee talen — de rest doet het zelf.',
-            guarantee: '20 minuten gratis · Geen creditcard nodig'
+            guarantee: 'Gratis uitproberen · Geen creditcard nodig'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", nl: "Laten we beginnen met de meeting van vandaag" },
@@ -2571,7 +2571,7 @@ const translations = {
     },
     'tr-TR': {
             proof: {
-                trial: 'İlk 20 dakika ücretsiz, kart gerekmez',
+                trial: 'Ücretsiz deneyin, kart gerekmez',
                 langs: '50 dil',
                 latency: 'Bir saniyeden az gecikme',
                 noMic: 'Görüşmenize bot katılmaz'
@@ -2711,7 +2711,7 @@ const translations = {
         faq: {
             title: 'Sıkça Sorulan Sorular',
             q1: 'Uygulamanın maliyeti nedir?',
-            a1: 'İlk 20 dakika ücretsiz ve kart gerekmiyor. Sonrasında uygulamanın içinden dakika yükleyebilir veya abonelik alabilirsiniz — güncel seçenekler orada ve uygulama mağazanızda görünür.',
+            a1: 'Uygulamayı ücretsiz deneyebilirsiniz, başlamak için kart gerekmiyor. Sonrasında uygulamanın içinden dakika yükleyebilir veya abonelik alabilirsiniz — güncel seçenekler orada ve uygulama mağazanızda görünür.',
             q2: 'Tüm uygulamalarla çalışır mı?',
             a2: 'Evet! Live Subtitles kesinlikle tüm uygulamalarla çalışır: YouTube, Netflix, Zoom, Teams, Discord, tarayıcılar ve hatta oyunlar. Uygulama sistem seviyesinde ses yakalar.',
             q3: 'Hangi diller destekleniyor?',
@@ -2741,7 +2741,7 @@ const translations = {
         download: {
             title: 'Şimdi ücretsiz dene',
             subtitle: 'Kurun ve iki dil seçin — gerisini kendi yapar.',
-            guarantee: '20 dakika ücretsiz · Kredi kartı gerekmez'
+            guarantee: 'Ücretsiz deneyin · Kredi kartı gerekmez'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", tr: "Hadi bugünkü toplantımıza başlayalım" },
@@ -2754,7 +2754,7 @@ const translations = {
     },
     'uk-UA': {
             proof: {
-                trial: 'Перші 20 хвилин безкоштовно, без картки',
+                trial: 'Спробувати безкоштовно, без картки',
                 langs: '50 мов',
                 latency: 'Затримка менше секунди',
                 noMic: 'У дзвінок не заходить бот'
@@ -2894,7 +2894,7 @@ const translations = {
         faq: {
             title: 'Часті запитання',
             q1: 'Скільки коштує додаток?',
-            a1: 'Перші 20 хвилин безкоштовні, картка не потрібна. Далі можна докупити хвилини або оформити підписку просто в застосунку — актуальні варіанти видно там і в магазині застосунків.',
+            a1: 'Спробувати можна безкоштовно, картка для старту не потрібна. Далі можна докупити хвилини або оформити підписку просто в застосунку — актуальні варіанти видно там і в магазині застосунків.',
             q2: 'Чи працює з усіма додатками?',
             a2: 'Так! Live Subtitles абсолютно працює з усіма додатками: YouTube, Netflix, Zoom, Teams, Discord, браузерами та навіть іграми. Додаток захоплює аудіо на системному рівні.',
             q3: 'Які мови підтримуються?',
@@ -2924,7 +2924,7 @@ const translations = {
         download: {
             title: 'Спробуйте безкоштовно зараз',
             subtitle: 'Встановіть і виберіть дві мови — далі він сам.',
-            guarantee: '20 хвилин безкоштовно · Без банківської картки'
+            guarantee: 'Спробувати безкоштовно · Без банківської картки'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", uk: "Розпочнімо нашу сьогоднішню зустріч" },
