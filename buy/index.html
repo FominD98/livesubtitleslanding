@@ -95,7 +95,7 @@
 
     <div id="state-success" class="hidden">
       <h1 class="success">Payment complete</h1>
-      <p>Thank you! Return to the Live Subtitles app on your PC — your minutes will arrive within a minute.</p>
+      <p id="success-text">Thank you! Return to the Live Subtitles app on your PC — your minutes will arrive within a minute.</p>
       <p>You can close this page.</p>
     </div>
 
@@ -124,6 +124,13 @@
       var priceId = params.get('sku') || '';
       var fp = params.get('fp') || '';
       var sandbox = params.get('sandbox') === '1';
+      // Платформу подставляет приложение. Белый список: значение уходит в custom_data и дальше
+      // в разрезы GA4, а без параметра страницу открывают десктопные сборки.
+      var platform = params.get('platform') === 'android' ? 'android' : 'windows-wpf';
+      if (platform === 'android') {
+        document.getElementById('success-text').textContent =
+          'Thank you! Return to the Live Subtitles app on your phone — your minutes will arrive within a minute.';
+      }
 
       function show(id, message) {
         ['state-loading', 'state-ready', 'state-success', 'state-error'].forEach(function (s) {
@@ -233,7 +240,7 @@
       }
 
       function buildCustomData() {
-        var data = { fp: fp, platform: 'windows-wpf' };
+        var data = { fp: fp, platform: platform };
         // Аналитика не имеет права уронить оплату: что бы ни случилось при чтении кук,
         // чекаут открывается — просто без привязки к объявлению.
         try {
