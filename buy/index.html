@@ -248,6 +248,13 @@
           if (meta && meta.fbp) data.fbp = meta.fbp;
           if (meta && meta.fbc) data.fbc = meta.fbc;
         } catch (e) { /* meta attribution unavailable */ }
+        // User-Agent и адрес страницы нужны серверному Purchase в Meta: у событий с сайта она
+        // требует оба, а у вебхука Paddle браузера нет. Адрес без query — там отпечаток покупателя.
+        // Лимит 512 тот же, что читает бэкенд: длиннее он выбросит поле целиком.
+        try {
+          if (navigator.userAgent) data.ua = navigator.userAgent.slice(0, 512);
+          data.page = (location.origin + location.pathname).slice(0, 512);
+        } catch (e) { /* navigator unavailable */ }
         // gclid едет на сервер рядом с fbc по той же причине: продление подписки происходит
         // без браузера, и браузерный тег его не увидит. Первую оплату засчитает тег на этой
         // странице, а продления сможет дослать вебхук — идентификатор клика у него уже будет.
