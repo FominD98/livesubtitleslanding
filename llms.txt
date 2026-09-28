@@ -26,6 +26,7 @@ Key facts:
 - [Microsoft Store listing](https://apps.microsoft.com/detail/9ph1r9djg47s): Windows download
 - [App Store listing](https://apps.apple.com/app/live-captions-translator/id6760197210): macOS and iOS download
 - [Google Play listing](https://play.google.com/store/apps/details?id=com.livesubtitles.android): Android download
+- [Live Captions](https://live-subtitles.com/captions/): sister app for Windows 10/11 — real-time captions in the spoken language (no translation), large text, speaker colors, transcript history with TXT/SRT export
 
 ## Guides
 

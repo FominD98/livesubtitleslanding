@@ -17,7 +17,7 @@
   <meta name="description" content="Purchase Live Subtitles minutes securely by card.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="canonical" href="https://live-subtitles.com/buy/" />
-  <link rel="icon" href="/2sub.ico">
+  <link rel="icon" href="/2sub.ico" id="favicon">
 
   <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
 
@@ -80,7 +80,7 @@
 </head>
 <body>
   <div class="card">
-    <img src="/2sub.png" alt="Live Subtitles">
+    <img src="/2sub.png" alt="Live Subtitles" id="brand-logo">
 
     <div id="state-loading">
       <h1>Preparing your checkout…</h1>
@@ -88,7 +88,7 @@
     </div>
 
     <div id="state-ready" class="hidden">
-      <h1>Buy minutes for Live Subtitles</h1>
+      <h1 id="ready-title">Buy minutes for Live Subtitles</h1>
       <p>The payment window was closed. You can reopen it below.</p>
       <button class="btn" id="reopen">Open checkout</button>
     </div>
@@ -102,10 +102,17 @@
     <div id="state-error" class="hidden">
       <h1 class="error">Something is not right</h1>
       <p id="error-text">This purchase link is invalid or incomplete.</p>
-      <p>Please reopen this page from the Live Subtitles app, or contact <a href="mailto:help@live-subtitles.com">help@live-subtitles.com</a>.</p>
+      <p id="error-help">Please reopen this page from the Live Subtitles app, or contact <a href="mailto:help@live-subtitles.com">help@live-subtitles.com</a>.</p>
     </div>
 
     <p class="paddle-note">Payments are processed securely by <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, our merchant of record. Prices include applicable taxes.</p>
+    <!-- Ссылки на условия Live Captions. Показываются только для platform=captioning-wpf,
+         у Live Subtitles страница как была. -->
+    <p class="paddle-note hidden" id="captions-legal">
+      <a href="/captions/terms.html" target="_blank" rel="noopener">Terms</a> ·
+      <a href="/captions/refund.html" target="_blank" rel="noopener">Refunds</a> ·
+      <a href="/captions/privacy.html" target="_blank" rel="noopener">Privacy</a>
+    </p>
   </div>
 
   <script>
@@ -125,11 +132,37 @@
       var fp = params.get('fp') || '';
       var sandbox = params.get('sandbox') === '1';
       // Платформу подставляет приложение. Белый список: значение уходит в custom_data и дальше
-      // в разрезы GA4, а без параметра страницу открывают десктопные сборки.
-      var platform = params.get('platform') === 'android' ? 'android' : 'windows-wpf';
+      // в разрезы GA4, а без параметра страницу открывают десктопные сборки Live Subtitles.
+      // captioning-wpf — отдельный продукт Live Captions (без перевода): свой логотип, тексты,
+      // почта поддержки и ссылки на его условия; в custom_data уходит как есть, по нему бэкенд
+      // зачисляет минуты нужному продукту.
+      var PLATFORMS = ['windows-wpf', 'captioning-wpf', 'android'];
+      var platformParam = params.get('platform') || '';
+      var platform = PLATFORMS.indexOf(platformParam) !== -1 ? platformParam : 'windows-wpf';
       if (platform === 'android') {
         document.getElementById('success-text').textContent =
           'Thank you! Return to the Live Subtitles app on your phone — your minutes will arrive within a minute.';
+      } else if (platform === 'captioning-wpf') {
+        applyLiveCaptionsBranding();
+      }
+
+      function applyLiveCaptionsBranding() {
+        document.title = 'Buy Minutes | Live Captions';
+        var logo = document.getElementById('brand-logo');
+        logo.src = '/captions/img/livecaptions-96.png';
+        logo.alt = 'Live Captions';
+        document.getElementById('favicon').href = '/captions/img/favicon.ico';
+        document.getElementById('ready-title').textContent = 'Buy minutes for Live Captions';
+        document.getElementById('success-text').textContent =
+          'Thank you! Return to the Live Captions app on your PC — your minutes will arrive within a minute.';
+        var help = document.getElementById('error-help');
+        help.textContent = 'Please reopen this page from the Live Captions app, or contact ';
+        var mail = document.createElement('a');
+        mail.href = 'mailto:captions@live-subtitles.com';
+        mail.textContent = 'captions@live-subtitles.com';
+        help.appendChild(mail);
+        help.appendChild(document.createTextNode('.'));
+        document.getElementById('captions-legal').classList.remove('hidden');
       }
 
       function show(id, message) {

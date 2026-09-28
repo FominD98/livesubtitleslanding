@@ -303,6 +303,38 @@ $staticHreflang    </url>
     }
 }
 
+# Live Captions (sister product, /captions/ + /ru/captions/). Folder URLs rather than
+# StaticPages entries: the landing is served as /captions/, and the generic loop would
+# emit /captions/index.html and look for /xx/captions/... in every locale.
+$captionsPages = @(
+    @{ Slug = '';             File = 'index.html';   En = '0.9'; Ru = '0.8'; Freq = 'weekly' },
+    @{ Slug = 'privacy.html'; File = 'privacy.html'; En = '0.5'; Ru = '0.4'; Freq = 'monthly' },
+    @{ Slug = 'terms.html';   File = 'terms.html';   En = '0.5'; Ru = '0.4'; Freq = 'monthly' },
+    @{ Slug = 'refund.html';  File = 'refund.html';  En = '0.5'; Ru = '0.4'; Freq = 'monthly' }
+)
+foreach ($cp in $captionsPages) {
+    $enPath = Join-Path 'captions' $cp.File
+    $ruPath = Join-Path (Join-Path 'ru' 'captions') $cp.File
+    $capHrefMap = @{}
+    if (Test-IsIndexable -Path $enPath) { $capHrefMap['en'] = "$Domain/captions/$($cp.Slug)" }
+    if (Test-IsIndexable -Path $ruPath) { $capHrefMap['ru'] = "$Domain/ru/captions/$($cp.Slug)" }
+    if (-not $capHrefMap.ContainsKey('en')) { continue }
+    $capHreflang = New-HreflangLinks -LanguageToHref $capHrefMap -XDefaultHref $capHrefMap['en']
+    foreach ($lang in ($capHrefMap.Keys | Sort-Object)) {
+        $capPath = if ($lang -eq 'en') { $enPath } else { $ruPath }
+        $capPriority = if ($lang -eq 'en') { $cp.En } else { $cp.Ru }
+        $capLastMod = Get-IsoLastMod -Path $capPath -FallbackDate $currentDate
+        $xml += @"
+    <url>
+        <loc>$($capHrefMap[$lang])</loc>
+        <lastmod>$capLastMod</lastmod>
+        <changefreq>$($cp.Freq)</changefreq>
+        <priority>$capPriority</priority>
+$capHreflang    </url>
+"@
+    }
+}
+
 # Article index pages by language
 $indexLanguages = @($allLanguages | Where-Object {
     Test-IsIndexable -Path (Join-Path -Path (Join-Path $ArticlesPath $_) -ChildPath "index.html")

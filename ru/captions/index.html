@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Аналитика: те же GA4 / Google tag и Яндекс Метрика, что и на остальном сайте.
+         Пиксель Meta (набор LiveSubtitles Web) не подключён намеренно: он добавил бы
+         посетителей Live Captions в аудитории Live Subtitles. -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid на ссылках в Store + событие GA4 store_click. У ссылок на Store ниже свой onclick,
+         поэтому cid-tracker не вешает на них конверсию скачивания Live Subtitles. -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>Live Captions — живые субтитры в реальном времени для Windows</title>
+    <meta name="description" content="Живые субтитры в реальном времени для звонков, видео и лекций на компьютере: крупный текст, 60+ языков, цвета собеседников, выгрузка в TXT и SRT. 20 минут бесплатно.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/ru/captions/" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <meta name="application-name" content="Live Captions">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="Live Captions — живые субтитры в реальном времени для Windows">
+    <meta property="og:description" content="Крупные субтитры в реальном времени для звонков, видео, фильмов и лекций на компьютере. 60+ языков, цвета собеседников, история и выгрузка. 20 минут бесплатно.">
+    <meta property="og:url" content="https://live-subtitles.com/ru/captions/">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Значок Live Captions и надпись: живые субтитры для Windows">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Live Captions — живые субтитры в реальном времени для Windows">
+    <meta name="twitter:description" content="Крупные субтитры в реальном времени для звонков, видео, фильмов и лекций на компьютере. 60+ языков, цвета собеседников, история и выгрузка.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Live Captions",
+        "alternateName": "Live Captions — живые субтитры и расшифровка речи в текст",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Живые субтитры и расшифровка речи",
+        "operatingSystem": "Windows 10, Windows 11",
+        "url": "https://live-subtitles.com/ru/captions/",
+        "image": "https://live-subtitles.com/captions/img/livecaptions-512.png",
+        "inLanguage": "ru",
+        "description": "Субтитры в реальном времени для любого звука на компьютере с Windows или для микрофона: звонки, видео, фильмы, лекции и телетрансляции. Более 60 языков распознавания с автоопределением, свой цвет для каждого собеседника, история расшифровок с поиском и выгрузкой в TXT и SRT, крупный текст до 64 пт. Только субтитры, без перевода.",
+        "featureList": [
+            "Субтитры в реальном времени для любого звука на компьютере или для микрофона",
+            "Более 60 языков распознавания речи с автоопределением языка",
+            "Подписи собеседников разными цветами, каждый с новой строки",
+            "История расшифровок: поиск, переименование собеседников, копирование, выгрузка в TXT и SRT",
+            "Крупный текст до 64 пт, светлое, тёмное и контрастное оформление",
+            "Окно поверх всех программ, режим «клики сквозь окно»"
+        ],
+        "offers": [
+            { "@type": "Offer", "name": "Пробный период: 20 минут", "price": "0", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "300 минут (разовый пакет)", "price": "6.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "1000 минут (разовый пакет)", "price": "14.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "10 000 минут (разовый пакет)", "price": "119.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Basic: 400 минут в месяц, помесячно", "price": "4.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Basic: 400 минут в месяц, на год", "price": "49.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro: 1200 минут в месяц, помесячно", "price": "11.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro: 1200 минут в месяц, на год", "price": "99.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Max: 3000 минут в месяц, помесячно", "price": "21.99", "priceCurrency": "USD" }
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com",
+            "email": "captions@live-subtitles.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Чем это отличается от живых субтитров, встроенных в Windows 11?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Встроенная функция бесплатна, но работает только в Windows 11 и знает ограниченный набор языков, который зависит от версии Windows. Live Captions работает и в Windows 10, распознаёт более 60 языков и сам определяет язык, показывает каждого собеседника своим цветом с новой строки, хранит историю с поиском и выгрузкой в TXT или SRT и позволяет сделать текст очень крупным — до 64 пт." }
+            },
+            {
+                "@type": "Question",
+                "name": "Работает ли с Zoom, Teams, WhatsApp и YouTube?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да. Live Captions слушает звук, который воспроизводит компьютер, поэтому работает с любой программой: звонки в Zoom, Microsoft Teams, Google Meet, WhatsApp и Skype, YouTube, фильмы, телетрансляции и онлайн-лекции. В эти программы ничего ставить не нужно, к звонку никто не подключается." }
+            },
+            {
+                "@type": "Question",
+                "name": "Увидят ли собеседники мои субтитры?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Субтитры видны только на вашем экране. Собеседники ничего не видят и никаких уведомлений не получают." }
+            },
+            {
+                "@type": "Question",
+                "name": "Live Captions переводит речь?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Live Captions записывает сказанное на том же языке, на котором говорят. Приложение сделано для того, чтобы читать речь, а не переводить её." }
+            },
+            {
+                "@type": "Question",
+                "name": "Сколько это стоит?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Первые 20 минут бесплатно, карта не нужна. Дальше можно купить пакет минут (300 минут за $6.99, 1000 за $14.99, 10 000 за $119.99) или подписку: Basic — 400 минут в месяц за $4.99 ($49.99 в год), Pro — 1200 минут в месяц за $11.99 ($99.99 в год), Max — 3000 минут в месяц за $21.99. Налоги включены в цену. Минуты расходуются только пока идут субтитры." }
+            },
+            {
+                "@type": "Question",
+                "name": "Записывается ли мой звук?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Мы не записываем и не храним ваш звук. Пока идут субтитры, звук передаётся сервису распознавания речи, чтобы превратить его в текст. История расшифровок хранится только на вашем компьютере, её можно удалить." }
+            },
+            {
+                "@type": "Question",
+                "name": "Что нужно для работы?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Компьютер с Windows 10 или Windows 11 и интернет. Микрофон нужен, только если вы хотите субтитры для людей, которые говорят рядом с вами." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">Перейти к содержанию</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/ru/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="Основное меню">
+                <a class="lc-nav__extra" href="#how">Как работает</a>
+                <a class="lc-nav__extra" href="#features">Возможности</a>
+                <a href="#pricing">Цены</a>
+                <a class="lc-nav__extra" href="#faq">Вопросы</a>
+                <a class="lc-lang" href="/captions/" hreflang="en" lang="en">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="wrap hero__grid">
+                <div>
+                    <h1>Live Captions — живые субтитры для всего, что звучит на компьютере</h1>
+                    <p class="hero__lead">Субтитры в реальном времени для видеозвонков, YouTube, фильмов, лекций и телепередач. Крупный чёткий текст поверх любой программы, свой цвет для каждого собеседника и история с поиском. Для Windows 10 и 11.</p>
+                    <div class="hero__cta">
+                        <!-- TODO: заменить LIVE_CAPTIONS_STORE_ID на настоящий ID приложения в Microsoft Store (во всех ссылках на странице). -->
+                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/LIVE_CAPTIONS_STORE_ID" target="_blank" rel="noopener" onclick="return true;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
+                            Скачать для Windows
+                        </a>
+                        <a class="btn btn--ghost" href="#pricing">Посмотреть цены</a>
+                    </div>
+                    <p class="hero__note">20 минут бесплатно. Карта не нужна.</p>
+                    <ul class="checks">
+                        <li>Звонки в Zoom, Teams, Meet, WhatsApp и Skype</li>
+                        <li>Более 60 языков, язык определяется сам</li>
+                        <li>Размер текста до 64 пт</li>
+                    </ul>
+                </div>
+                <div class="mock" role="img" aria-label="Окно Live Captions: два собеседника разными цветами, каждый с новой строки">
+                    <div class="mock__bar">
+                        <span class="mock__dot"></span>
+                        <span class="mock__state">Слушаю</span>
+                        <span>· звук компьютера</span>
+                        <span class="mock__pill">Пауза</span>
+                    </div>
+                    <div class="mock__body">
+                        <span class="mock__who mock__who--1">Говорящий 1</span>
+                        <p class="mock__line mock__line--old">Добрый вечер. Сегодня мы поговорим о том, как подготовить сад к зиме.</p>
+                        <span class="mock__who mock__who--2">Говорящий 2</span>
+                        <p class="mock__line">Первое, что нужно сделать, — укрыть розы до первых заморозков</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="what">
+            <div class="wrap">
+                <h2>Что умеет Live Captions</h2>
+                <p class="section__lead">Приложение слушает звук компьютера или микрофон и примерно через секунду показывает сказанное крупным текстом. Это расшифровка речи в текст для всего компьютера, а не для одной программы.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <h3>Видеозвонки</h3>
+                        <p>Следите за разговором в Zoom, Microsoft Teams, Google Meet, WhatsApp или Skype и не переспрашивайте. К звонку никто не подключается, ваши субтитры видны только вам.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Видео, фильмы и ТВ</h3>
+                        <p>Субтитры для YouTube, фильмов, телетрансляций, подкастов, вебинаров и онлайн-лекций — даже если у видео нет своих субтитров.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Люди рядом</h3>
+                        <p>Включите микрофон и читайте, что говорит человек рядом с вами: у врача, на занятии, за семейным столом.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>Для кого</h2>
+                <div class="grid grid--2">
+                    <div class="card">
+                        <h3>Для людей со сниженным слухом</h3>
+                        <p>Читайте звонки и видео, а не напрягайте слух. Крупный текст и контрастное оформление помогут и тем, у кого слабое зрение.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Для семьи</h3>
+                        <p>Установите приложение на компьютер родителей, бабушек и дедушек — чтобы они снова участвовали в семейных видеозвонках.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Для всех, кому трудно разбирать речь</h3>
+                        <p>Тихий голос, быстрая речь, акцент или плохой звук: когда речь идёт текстом на экране, ничего не пропустишь.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Для студентов и работы</h3>
+                        <p>Расшифровка лекций и долгих совещаний в реальном времени — потом текст можно найти по словам и сохранить в файл.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="how">
+            <div class="wrap">
+                <h2>Как пользоваться</h2>
+                <p class="section__lead">Ничего настраивать не нужно. Второй телефон или плагины для Zoom и браузера тоже не нужны.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>Откройте Live Captions</h3>
+                        <p>Установите приложение из Microsoft Store и откройте его. Окно субтитров появится поверх других программ.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>Выберите, что слушать</h3>
+                        <p>Звук компьютера — для звонков и видео, микрофон — для людей рядом.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>Нажмите «Старт» и читайте</h3>
+                        <p>Субтитры в реальном времени появляются по ходу речи. Паузу можно поставить в любой момент: минуты расходуются, только пока идут субтитры.</p>
+                    </div>
+                </div>
+                <figure class="shot">
+                    <img src="/captions/img/bar-dark-ru.webp" width="1400" height="520" loading="lazy" alt="Окно субтитров в тёмном оформлении: реплики двух говорящих разными цветами">
+                    <figcaption>Тёмное оформление: у каждого говорящего свой цвет.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="wrap">
+                <h2>Возможности</h2>
+                <p class="section__lead">Всё сделано так, чтобы было легко читать и легко пользоваться: крупные кнопки и понятные слова.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <h3>Кто что сказал</h3>
+                        <p>Каждый собеседник подписан — «Говорящий 1», «Говорящий 2» — и выделен своим цветом, а новая реплика начинается с новой строки.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Крупный чёткий текст</h3>
+                        <p>Сделайте текст таким крупным, как нужно, — до 64 пт. Окно можно двигать и растягивать, например поставить под видео.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Светлое, тёмное или контрастное</h3>
+                        <p>Выберите оформление и цвет текста, удобные для ваших глаз.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Более 60 языков</h3>
+                        <p>Русский, украинский, английский, немецкий, французский, испанский, итальянский, польский, китайский, японский, арабский и многие другие. Язык определяется автоматически.</p>
+                    </div>
+                    <div class="card">
+                        <h3>История расшифровок</h3>
+                        <p>Каждый сеанс сохраняется на вашем компьютере. Листайте назад, ищите по словам, переименовывайте собеседников, копируйте текст или сохраняйте его в TXT и SRT.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Не мешает работать</h3>
+                        <p>Окно держится поверх других программ. В режиме «клики сквозь окно» мышь нажимает на то, что под ним.</p>
+                    </div>
+                </div>
+                <figure class="shot">
+                    <img src="/captions/img/hist-ru.webp" width="1400" height="900" loading="lazy" alt="Окно истории Live Captions: список сеансов, поиск по словам, кнопки «Копировать» и «Сохранить в файл»; рядом меню с выбором звука и оформления">
+                    <figcaption>История: поиск по словам, копирование и сохранение в файл. Справа — меню: звук компьютера или микрофон, язык, оформление.</figcaption>
+                </figure>
+                <p class="note"><strong>Только субтитры.</strong> Live Captions записывает сказанное на том языке, на котором говорят, и не переводит.</p>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="pricing">
+            <div class="wrap">
+                <h2>Цены</h2>
+                <p class="section__lead">Начните с 20 бесплатных минут. Потом купите минуты один раз или оформите подписку с запасом минут на месяц. Цены в долларах США, налоги включены; в вашей валюте цена показывается перед оплатой.</p>
+
+                <div class="trial">
+                    <p><strong>Бесплатно:</strong> 20 минут субтитров, карта не нужна.</p>
+                    <!-- TODO: заменить LIVE_CAPTIONS_STORE_ID на настоящий ID приложения в Microsoft Store. -->
+                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/LIVE_CAPTIONS_STORE_ID" target="_blank" rel="noopener" onclick="return true;">Попробовать бесплатно</a>
+                </div>
+
+                <div class="price-block">
+                    <h3>Пакеты минут</h3>
+                    <p>Платите один раз и тратите минуты, когда удобно.</p>
+                    <div class="plans">
+                        <div class="plan">
+                            <p class="plan__name">300 минут</p>
+                            <p class="plan__mins">5 часов субтитров</p>
+                            <p class="plan__price">$6.99</p>
+                            <p class="plan__per">около 2,3 цента за минуту</p>
+                        </div>
+                        <div class="plan plan--best">
+                            <span class="plan__tag">Чаще выбирают</span>
+                            <p class="plan__name">1000 минут</p>
+                            <p class="plan__mins">около 16,5 часа</p>
+                            <p class="plan__price">$14.99</p>
+                            <p class="plan__per">около 1,5 цента за минуту</p>
+                        </div>
+                        <div class="plan">
+                            <p class="plan__name">10 000 минут</p>
+                            <p class="plan__mins">около 166 часов</p>
+                            <p class="plan__price">$119.99</p>
+                            <p class="plan__per">около 1,2 цента за минуту</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-block">
+                    <h3>Подписки</h3>
+                    <p>Каждый месяц — новый запас минут. Отменить можно в любой момент.</p>
+                    <div class="plans">
+                        <div class="plan">
+                            <p class="plan__name">Basic</p>
+                            <p class="plan__mins">400 минут в месяц</p>
+                            <p class="plan__price">$4.99 <small>/ месяц</small></p>
+                            <p class="plan__alt">или $49.99 в год</p>
+                        </div>
+                        <div class="plan plan--best">
+                            <span class="plan__tag">Для ежедневных звонков</span>
+                            <p class="plan__name">Pro</p>
+                            <p class="plan__mins">1200 минут в месяц</p>
+                            <p class="plan__price">$11.99 <small>/ месяц</small></p>
+                            <p class="plan__alt">или $99.99 в год</p>
+                        </div>
+                        <div class="plan">
+                            <p class="plan__name">Max</p>
+                            <p class="plan__mins">3000 минут в месяц</p>
+                            <p class="plan__price">$21.99 <small>/ месяц</small></p>
+                            <p class="plan__alt">только помесячно</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="note">Минуты считаются, только пока идут субтитры. Платежи принимает <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a> — наш официальный продавец (merchant of record). Условия возврата — в <a href="/ru/captions/refund.html">политике возврата</a>.</p>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="wrap wrap--narrow">
+                <h2>Вопросы и ответы</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Чем это отличается от живых субтитров, встроенных в Windows 11?</summary>
+                        <div>Встроенная функция бесплатна, но работает только в Windows 11 и знает ограниченный набор языков, который зависит от версии Windows. Live Captions работает и в Windows 10, распознаёт более 60 языков и сам определяет язык, показывает каждого собеседника своим цветом с новой строки, хранит историю с поиском и выгрузкой в TXT или SRT и позволяет сделать текст очень крупным — до 64 пт.</div>
+                    </details>
+                    <details>
+                        <summary>Работает ли с Zoom, Teams, WhatsApp и YouTube?</summary>
+                        <div>Да. Live Captions слушает звук, который воспроизводит компьютер, поэтому работает с любой программой: звонки в Zoom, Microsoft Teams, Google Meet, WhatsApp и Skype, YouTube, фильмы, телетрансляции и онлайн-лекции. В эти программы ничего ставить не нужно, к звонку никто не подключается.</div>
+                    </details>
+                    <details>
+                        <summary>Увидят ли собеседники мои субтитры?</summary>
+                        <div>Нет. Субтитры видны только на вашем экране. Собеседники ничего не видят и никаких уведомлений не получают.</div>
+                    </details>
+                    <details>
+                        <summary>Live Captions переводит речь?</summary>
+                        <div>Нет. Live Captions записывает сказанное на том же языке, на котором говорят. Приложение сделано для того, чтобы читать речь, а не переводить её.</div>
+                    </details>
+                    <details>
+                        <summary>Сколько это стоит?</summary>
+                        <div>Первые 20 минут бесплатно, карта не нужна. Дальше можно купить пакет минут (300 минут за $6.99, 1000 за $14.99, 10 000 за $119.99) или подписку: Basic — 400 минут в месяц за $4.99 ($49.99 в год), Pro — 1200 минут в месяц за $11.99 ($99.99 в год), Max — 3000 минут в месяц за $21.99. Налоги включены в цену. Минуты расходуются только пока идут субтитры.</div>
+                    </details>
+                    <details>
+                        <summary>Записывается ли мой звук?</summary>
+                        <div>Мы не записываем и не храним ваш звук. Пока идут субтитры, звук передаётся сервису распознавания речи, чтобы превратить его в текст. История расшифровок хранится только на вашем компьютере, её можно удалить. Подробнее — в <a href="/ru/captions/privacy.html">политике конфиденциальности</a>.</div>
+                    </details>
+                    <details>
+                        <summary>Что нужно для работы?</summary>
+                        <div>Компьютер с Windows 10 или Windows 11 и интернет. Микрофон нужен, только если вы хотите субтитры для людей, которые говорят рядом с вами.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt cta-final" id="download">
+            <div class="wrap wrap--narrow">
+                <h2>Попробуйте Live Captions бесплатно</h2>
+                <p class="section__lead" style="margin-left:auto;margin-right:auto">20 минут субтитров в реальном времени, карта не нужна. Есть вопросы? Пишите на <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a> — мы отвечаем на каждое письмо.</p>
+                <div class="hero__cta">
+                    <!-- TODO: заменить LIVE_CAPTIONS_STORE_ID на настоящий ID приложения в Microsoft Store. -->
+                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/LIVE_CAPTIONS_STORE_ID" target="_blank" rel="noopener" onclick="return true;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
+                        Скачать для Windows
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> для Windows 10 и 11
+                <small>© 2026 Live Subtitles. Все права защищены.</small>
+            </div>
+            <nav aria-label="Нижнее меню">
+                <a href="/ru/captions/privacy.html">Конфиденциальность</a>
+                <a href="/ru/captions/terms.html">Условия использования</a>
+                <a href="/ru/captions/refund.html">Возврат</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/ru/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
