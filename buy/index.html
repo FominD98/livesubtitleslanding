@@ -139,6 +139,9 @@
       var PLATFORMS = ['windows-wpf', 'captioning-wpf', 'android'];
       var platformParam = params.get('platform') || '';
       var platform = PLATFORMS.indexOf(platformParam) !== -1 ? platformParam : 'windows-wpf';
+      // Пиксели и конверсии на этой странице - аккаунтов Live Subtitles. Покупки Live Captions
+      // туда не шлём: иначе кампании Live Subtitles учились бы на чужих оплатах.
+      var sendAdEvents = platform !== 'captioning-wpf';
       if (platform === 'android') {
         document.getElementById('success-text').textContent =
           'Thank you! Return to the Live Subtitles app on your phone — your minutes will arrive within a minute.';
@@ -195,7 +198,7 @@
           if (!event || !event.name) return;
           if (event.name === 'checkout.completed') {
             show('state-success');
-            if (typeof gtag === 'function') {
+            if (sendAdEvents && typeof gtag === 'function') {
               gtag('event', 'purchase_web', { method: 'paddle' });
               reportAdsPurchase(event.data);
             }
@@ -309,7 +312,7 @@
         // Середина воронки для Meta, один раз на загрузку страницы: повторное открытие по
         // кнопке — та же попытка покупки, а не новая. Purchase из браузера не шлём — его
         // отправляет бэкенд по вебхуку Paddle с event_id транзакции, дубль удвоил бы выручку.
-        if (!initiateSent && typeof fbq === 'function') {
+        if (sendAdEvents && !initiateSent && typeof fbq === 'function') {
           initiateSent = true;
           fbq('track', 'InitiateCheckout');
         }
