@@ -313,11 +313,15 @@
           initiateSent = true;
           fbq('track', 'InitiateCheckout');
         }
-        Paddle.Checkout.open({
+        var options = {
           items: [{ priceId: priceId, quantity: 1 }],
           customData: buildCustomData(),
           settings: { displayMode: 'overlay', theme: 'light' }
-        });
+        };
+        // Промокод ссылкой (?discount=CODE): поле «Add discount» Paddle показывает не всегда.
+        var discount = params.get('discount') || '';
+        if (/^[A-Za-z0-9]{3,32}$/.test(discount)) options.discountCode = discount;
+        Paddle.Checkout.open(options);
       }
 
       document.getElementById('reopen').addEventListener('click', openCheckout);
