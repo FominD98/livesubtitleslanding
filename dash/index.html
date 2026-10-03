@@ -15,9 +15,12 @@
     <a id="login-link" class="btn" href="#">Sign in</a>
   </section>
 
-  <main id="app" hidden>
+  <div id="app" hidden>
     <header class="top">
-      <h1>Sales &amp; ASO</h1>
+      <nav class="tabs" role="tablist">
+        <button role="tab" data-tab="sales" aria-selected="true">Sales</button>
+        <button role="tab" data-tab="aso" aria-selected="false">ASO</button>
+      </nav>
       <div class="filters" role="group" aria-label="Period">
         <button data-days="7">7d</button>
         <button data-days="30" aria-pressed="true">30d</button>
@@ -27,51 +30,98 @@
       <span id="user" class="muted"></span>
     </header>
 
-    <section class="tiles" id="tiles"></section>
+    <main id="tab-sales" class="tab-panel">
+      <section class="tiles" id="tiles"></section>
 
-    <section class="card">
-      <h2>Net revenue by day, USD</h2>
-      <div class="chart"><canvas id="chart-daily"></canvas></div>
-      <table class="tbl" id="tbl-platforms"></table>
-    </section>
-
-    <div class="grid2">
       <section class="card">
-        <h2>Countries, net USD</h2>
-        <div class="chart tall"><canvas id="chart-countries"></canvas></div>
-      </section>
-      <section class="card">
-        <h2>Products</h2>
-        <div class="scroll"><table class="tbl" id="tbl-products"></table></div>
-      </section>
-    </div>
-
-    <section class="card">
-      <h2>ASO: keywords in top 10</h2>
-      <div class="chart"><canvas id="chart-aso-trend"></canvas></div>
-    </section>
-
-    <section class="card">
-      <h2>ASO: keyword rankings</h2>
-      <div class="filters" id="aso-filters">
-        <select id="aso-store" aria-label="Store"></select>
-        <select id="aso-country" aria-label="Country"></select>
-      </div>
-      <div class="grid2">
-        <div class="scroll"><table class="tbl" id="tbl-aso"></table></div>
-        <div>
-          <h3 id="aso-history-title" class="muted">Click a keyword to see its history</h3>
-          <div class="chart"><canvas id="chart-aso-history"></canvas></div>
+        <div class="card-head">
+          <h2>Net revenue, USD</h2>
+          <span class="muted" id="daily-note"></span>
         </div>
-      </div>
-    </section>
+        <div class="chart"><canvas id="chart-daily"></canvas></div>
+      </section>
 
-    <section class="card">
-      <h2>Data freshness</h2>
-      <table class="tbl" id="tbl-sources"></table>
-      <p class="muted">* estimate: today's FX rates; Google Play's open month assumes a 15% fee.</p>
-    </section>
-  </main>
+      <div class="grid2 split-1-2">
+        <section class="card">
+          <h2>Platform share</h2>
+          <div class="chart donut"><canvas id="chart-platforms"></canvas></div>
+        </section>
+        <section class="card">
+          <h2>Platforms</h2>
+          <table class="tbl" id="tbl-platforms"></table>
+        </section>
+      </div>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>New vs renewals</h2>
+          <div class="chart"><canvas id="chart-channels"></canvas></div>
+        </section>
+        <section class="card">
+          <h2>Where web checkouts start (Paddle)</h2>
+          <div class="chart"><canvas id="chart-entries"></canvas></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Traffic sources</h2>
+          <span class="muted">GA4 counts. Revenue comes from the stores, not GA4.</span>
+        </div>
+        <div class="grid2">
+          <div class="scroll"><table class="tbl" id="tbl-acq-users"></table></div>
+          <div class="scroll"><table class="tbl" id="tbl-acq-purchases"></table></div>
+        </div>
+        <table class="tbl" id="tbl-campaigns"></table>
+      </section>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>Countries</h2>
+          <div class="chart tall"><canvas id="chart-countries"></canvas></div>
+        </section>
+        <section class="card">
+          <h2>Products</h2>
+          <div class="scroll"><table class="tbl" id="tbl-products"></table></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>Data freshness</h2>
+        <table class="tbl" id="tbl-sources"></table>
+        <p class="muted">* estimate: today's FX rates; Google Play's open month assumes a 15% fee.</p>
+      </section>
+    </main>
+
+    <main id="tab-aso" class="tab-panel" hidden>
+      <section class="tiles" id="aso-tiles"></section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Keywords ranked in top 10</h2>
+          <span class="muted" id="aso-trend-note"></span>
+        </div>
+        <div class="chart"><canvas id="chart-aso-trend"></canvas></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Keyword rankings</h2>
+          <div class="filters">
+            <select id="aso-store" aria-label="Store"></select>
+            <select id="aso-country" aria-label="Country"></select>
+          </div>
+        </div>
+        <div class="grid2">
+          <div class="scroll"><table class="tbl" id="tbl-aso"></table></div>
+          <div>
+            <h3 id="aso-history-title" class="muted">Click a keyword to see its history</h3>
+            <div class="chart"><canvas id="chart-aso-history"></canvas></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </div>
 <script src="chart.umd.min.js"></script>
 <script src="app.js"></script>
