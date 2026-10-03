@@ -422,40 +422,71 @@ function renderSources(target, sources) {
 
 /* ---------- ASO ---------- */
 
+const OUR_IDS = { msstore: "9PH1R9DJG47S", appstore: "6760197210", play: "com.livesubtitles.android" };
+const RANK_BUCKETS = [
+    { label: "Top 3", test: (r) => r !== null && r <= 3, cls: "r1", color: "--rank-1" },
+    { label: "4–10", test: (r) => r !== null && r > 3 && r <= 10, cls: "r2", color: "--rank-2" },
+    { label: "11–20", test: (r) => r !== null && r > 10 && r <= 20, cls: "r3", color: "--rank-3" },
+    { label: "21+", test: (r) => r !== null && r > 20, cls: "r4", color: "--rank-4" },
+    { label: "Not ranked", test: (r) => r === null, cls: "r0", color: "--neutral" },
+];
+const compact = (v) => v >= 1000 ? `${(v / 1000).toFixed(v >= 10000 ? 0 : 1)}k` : String(v);
+
 function renderAso() {
     const { aso, asoTrend } = state.aso;
-    renderTileRow("aso-tiles", STORES.map((s) => {
+    const visibility = {};
+    for (const r of asoTrend) visibility[r.day] = (visibility[r.day] || 0) + r.visibility;
+    const visDays = Object.keys(visibility).sort();
+    const tiles = STORES.map((s) => {
         const rows = aso.filter((r) => r.store === s.id);
         const top10 = rows.filter((r) => r.rank !== null && r.rank <= 10).length;
         const hasBefore = rows.some((r) => r.rank_7d !== null);
         const before = rows.filter((r) => r.rank_7d !== null && r.rank_7d !== -1 && r.rank_7d <= 10).length;
         return {
-            label: `${s.name}: keywords in top 10`,
+            label: `${s.name}: in top 10`,
             value: top10,
             fmt: int,
-            delta: hasBefore ? deltaPct(top10, before) : el("span", { class: "muted" }, `of ${rows.length} tracked`),
+            delta: hasBefore ? deltaPct(top10, before) : el("span", { class: "muted" }, `of ${rows.length} keywords`),
             spark: asoTrend.filter((r) => r.store === s.id).map((r) => r.top10),
         };
-    }));
-    renderAsoTrend();
-    renderAsoTable();
+    });
+    const visNow = visibility[visDays[visDays.length - 1]] ?? 0;
+    const visWeekAgo = visDays.length > 7 ? visibility[visDays[visDays.length - 8]] : 0;
+    tiles.push({
+        label: "Visibility index, all stores",
+        value: visNow,
+        fmt: (v) => compact(Math.round(v)),
+        delta: visWeekAgo ? deltaPct(visNow, visWeekAgo) : el("span", { class: "muted" }, "weekly change after 7 days"),
+        spark: visDays.map((d) => visibility[d]),
+    });
+    renderTileRow("aso-tiles", tiles);
+    document.getElementById("aso-trend-note").textContent =
+        visDays.length < 7 ? `History started ${visDays[0] ?? "today"}, one point per day` : "";
+    renderVisibility();
+    renderDistribution();
+    renderAsoFilters();
+    renderAsoSelection();
 }
 
-function renderAsoTrend() {
+function renderAsoSelection() {
+    renderAsoTable();
+    renderOpportunities();
+    renderHeatmap();
+    renderCompetitors();
+}
+
+function renderVisibility() {
     const rows = state.aso.asoTrend;
     const labels = [...new Set(rows.map((r) => r.day))].sort();
-    document.getElementById("aso-trend-note").textContent = labels.length < 7 ? `History started ${labels[0] ?? "today"}, one point per day` : "";
-    const byStoreDay = {};
-    draw("chart-aso-trend", {
+    draw("chart-aso-visibility", {
         type: "line",
         data: {
             labels,
             datasets: STORES.map((s) => {
-                const map = Object.fromEntries(rows.filter((r) => r.store === s.id).map((r) => [r.day, r]));
-                byStoreDay[s.name] = map;
+                const map = Object.fromEntries(rows.filter((r) => r.store === s.id).map((r) => [r.day, r.visibility]));
                 return {
                     label: s.name,
-                    data: labels.map((d) => map[d]?.top10 ?? null),
+                    data: labels.map((d) => map[d] ?? null),
                     borderColor: color(s.id),
                     backgroundColor: gradient(color(s.id), 0.25, 0),
                     fill: "origin",
@@ -471,20 +502,49 @@ function renderAsoTrend() {
         options: {
             maintainAspectRatio: false,
             interaction: { mode: "index", intersect: false },
-            scales: { x: timeX, y: { beginAtZero: true, ticks: { precision: 0 } } },
-            plugins: {
-                legend,
-                tooltip: {
-                    callbacks: {
-                        label: (c) => {
-                            const r = byStoreDay[c.dataset.label][c.label];
-                            return r ? `${c.dataset.label}: top 10 ${r.top10}, top 3 ${r.top3}, ranked ${r.found} of ${r.total}` : "";
-                        },
-                    },
-                },
-            },
+            scales: { x: timeX, y: { beginAtZero: true, ticks: { callback: (v) => compact(v) } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${compact(Math.round(c.parsed.y))}` } } },
         },
     });
+}
+
+function renderDistribution() {
+    const aso = state.aso.aso;
+    draw("chart-aso-dist", {
+        type: "bar",
+        data: {
+            labels: STORES.map((s) => s.name),
+            datasets: RANK_BUCKETS.map((b) => ({
+                label: b.label,
+                data: STORES.map((s) => aso.filter((r) => r.store === s.id && b.test(r.rank)).length),
+                backgroundColor: css(b.color),
+                borderColor: css("--surface-1"),
+                borderWidth: { right: 2 },
+                borderRadius: 4,
+                borderSkipped: false,
+                maxBarThickness: 34,
+            })),
+        },
+        options: {
+            indexAxis: "y",
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false, axis: "y" },
+            scales: { x: { stacked: true, ticks: { precision: 0 } }, y: { stacked: true, grid: { display: false } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.x} keywords` } } },
+        },
+    });
+}
+
+function renderAsoFilters() {
+    const aso = state.aso.aso;
+    const storeSel = document.getElementById("aso-store");
+    const countrySel = document.getElementById("aso-country");
+    storeSel.replaceChildren(...STORES.map((s) => el("option", { value: s.id }, s.name)));
+    storeSel.value = state.asoSel.store;
+    const countries = [...new Set(aso.map((r) => r.country))];
+    if (!countries.includes(state.asoSel.country)) state.asoSel.country = countries.includes("US") ? "US" : countries[0] ?? null;
+    countrySel.replaceChildren(...countries.map((c) => el("option", { value: c }, c)));
+    countrySel.value = state.asoSel.country ?? "";
 }
 
 function rankText(rank, depth) {
@@ -500,25 +560,115 @@ function rankDelta(now, before, depth) {
 }
 
 function renderAsoTable() {
-    const aso = state.aso.aso;
-    const storeSel = document.getElementById("aso-store");
-    const countrySel = document.getElementById("aso-country");
-    storeSel.replaceChildren(...STORES.map((s) => el("option", { value: s.id }, s.name)));
-    storeSel.value = state.asoSel.store;
-    const countries = [...new Set(aso.map((r) => r.country))];
-    if (!countries.includes(state.asoSel.country)) state.asoSel.country = countries.includes("US") ? "US" : countries[0] ?? null;
-    countrySel.replaceChildren(...countries.map((c) => el("option", { value: c }, c)));
-    countrySel.value = state.asoSel.country ?? "";
-
-    const rows = aso
+    const rows = state.aso.aso
         .filter((r) => r.store === state.asoSel.store && r.country === state.asoSel.country)
-        .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
-    table("tbl-aso", [["Keyword"], ["Rank", 1], ["7d", 1], ["30d", 1]], rows.map((r) =>
+        .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999) || (b.volume ?? 0) - (a.volume ?? 0));
+    table("tbl-aso", [["Keyword"], ["Searches/mo", 1], ["Rank", 1], ["7d", 1], ["30d", 1]], rows.map((r) =>
         el("tr", { class: "clickable", onclick: (e) => selectKeyword(r, e.currentTarget) },
             td(r.keyword),
+            td(r.volume ? compact(r.volume) : "", true),
             td(rankText(r.rank, r.depth), true),
             td(rankDelta(r.rank, r.rank_7d, r.depth), true),
             td(rankDelta(r.rank, r.rank_30d, r.depth), true))));
+}
+
+function renderOpportunities() {
+    const store = state.asoSel.store;
+    const rows = state.aso.aso.filter((r) => r.store === store && r.volume);
+    document.getElementById("opp-store").textContent = `${byId[store].name}, all countries`;
+    const point = (r) => ({ x: r.volume, y: r.rank ?? r.depth + 5, r });
+    const good = rows.filter((r) => r.rank !== null && r.rank <= 10);
+    const weak = rows.filter((r) => r.rank === null || r.rank > 10);
+    const dot = { borderColor: css("--surface-1"), borderWidth: 2, pointRadius: 6, pointHoverRadius: 8 };
+    draw("chart-aso-opps", {
+        type: "scatter",
+        data: {
+            datasets: [
+                { label: "Top 10", data: good.map(point), backgroundColor: color(store), ...dot },
+                { label: "Below top 10 / not ranked", data: weak.map(point), backgroundColor: css("--neutral"), ...dot },
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: {
+                x: {
+                    type: "logarithmic",
+                    title: { display: true, text: "Google searches / month" },
+                    ticks: { callback: (v) => [10, 100, 1000, 10000, 100000].includes(v) ? compact(v) : "" },
+                },
+                y: { reverse: true, min: 0, title: { display: true, text: "our rank (bottom = not ranked)" }, ticks: { precision: 0 } },
+            },
+            plugins: {
+                legend,
+                tooltip: {
+                    callbacks: {
+                        label: (c) => {
+                            const r = c.raw.r;
+                            return `${r.keyword} (${r.country}): ${compact(r.volume)}/mo, rank ${rankText(r.rank, r.depth)}`;
+                        },
+                    },
+                },
+            },
+        },
+    });
+    const opps = [...weak].sort((a, b) => b.volume - a.volume).slice(0, 15);
+    table("tbl-aso-opps", [["Keyword"], ["Country"], ["Searches/mo", 1], ["Rank", 1]], opps.map((r) => el("tr", {},
+        td(r.keyword), td(r.country), td(compact(r.volume), true), td(rankText(r.rank, r.depth), true))),
+        "Every keyword with known volume is already in the top 10");
+}
+
+function renderHeatmap() {
+    const rows = state.aso.aso.filter((r) => r.store === state.asoSel.store);
+    const countries = [...new Set(rows.map((r) => r.country))];
+    const at = Object.fromEntries(rows.map((r) => [`${r.keyword}|${r.country}`, r]));
+    const best = (k) => Math.min(...countries.map((c) => at[`${k}|${c}`]?.rank ?? 999));
+    const keywords = [...new Set(rows.map((r) => r.keyword))].sort((a, b) => best(a) - best(b));
+    table("tbl-aso-heat", [["Keyword"], ...countries.map((c) => [c, 1])], keywords.map((k) => el("tr", {},
+        td(k),
+        countries.map((c) => {
+            const r = at[`${k}|${c}`];
+            if (!r) return el("td", {});
+            const bucket = RANK_BUCKETS.find((b) => b.test(r.rank));
+            return el("td", { class: `cell ${bucket.cls}`, title: `${k} · ${c} · rank ${rankText(r.rank, r.depth)}` }, r.rank ?? "—");
+        }))));
+}
+
+function renderCompetitors() {
+    const store = state.asoSel.store;
+    const rows = state.aso.competitors.filter((r) => r.store === store);
+    draw("chart-aso-comp", {
+        type: "bar",
+        data: {
+            labels: rows.map((r) => r.name.length > 34 ? `${r.name.slice(0, 33)}…` : r.name),
+            datasets: [{
+                label: "Appearances in top 5",
+                data: rows.map((r) => r.hits),
+                backgroundColor: rows.map((r) => r.app_id === OUR_IDS[store] ? color(store) : css("--neutral")),
+                borderRadius: 4,
+                borderSkipped: "left",
+                maxBarThickness: 20,
+            }],
+        },
+        options: {
+            indexAxis: "y",
+            maintainAspectRatio: false,
+            scales: {
+                x: { ticks: { precision: 0 }, title: { display: true, text: `top-5 slots across all keywords and countries, ${byId[store].name}` } },
+                y: { grid: { display: false } },
+            },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: (c) => {
+                            const r = rows[c.dataIndex];
+                            return `${r.hits} times in top 5, #1 ${r.firsts} times, avg position ${r.avg_pos.toFixed(1)}`;
+                        },
+                    },
+                },
+            },
+        },
+    });
 }
 
 async function selectKeyword(r, row) {
@@ -598,7 +748,7 @@ document.querySelectorAll(".top .filters button").forEach((b) => b.addEventListe
 }));
 document.getElementById("aso-store").addEventListener("change", (e) => {
     state.asoSel.store = e.target.value;
-    renderAsoTable();
+    renderAsoSelection();
 });
 document.getElementById("aso-country").addEventListener("change", (e) => {
     state.asoSel.country = e.target.value;

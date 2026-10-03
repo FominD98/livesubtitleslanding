@@ -14,6 +14,11 @@
     --series-6: #008300;
     --series-7: #4a3aa7;
     --neutral: #a3a29b;
+    --rank-1: #104281;
+    --rank-2: #256abf;
+    --rank-3: #5598e7;
+    --rank-4: #86b6ef;
+    --rank-0: #e6e5e1;
     --good: #0f7b3a;
     --critical: #c62828;
 }
@@ -34,6 +39,11 @@
         --series-6: #008300;
         --series-7: #9085e9;
         --neutral: #6b6a64;
+        --rank-1: #9ec5f4;
+        --rank-2: #5598e7;
+        --rank-3: #2a78d6;
+        --rank-4: #1c5cab;
+        --rank-0: #2c2c2a;
         --good: #4cc27a;
         --critical: #ef6b6b;
     }
@@ -144,3 +154,19 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 .tile .spark { position: absolute; left: 0; right: 0; bottom: 0; height: 34px; opacity: .9; }
 .tile .label, .tile .value, .tile .delta { position: relative; }
 .tile { padding-bottom: 44px; }
+
+.small { font-size: 12px; margin: 8px 0 0; }
+.scroll.wide { max-height: 520px; }
+.heat td.cell, .legend-ramp .cell { text-align: center; font-variant-numeric: tabular-nums; border-radius: 4px; min-width: 44px; }
+.heat td.cell { border: 2px solid var(--surface-1); }
+.cell.r1 { background: var(--rank-1); color: #fff; }
+.cell.r2 { background: var(--rank-2); color: #fff; }
+.cell.r3 { background: var(--rank-3); color: #0b0b0b; }
+.cell.r4 { background: var(--rank-4); color: #0b0b0b; }
+.cell.r0 { background: var(--rank-0); color: var(--text-muted); }
+.legend-ramp { display: inline-flex; gap: 4px; font-size: 12px; }
+.legend-ramp .cell { padding: 2px 8px; }
+@media (prefers-color-scheme: dark) {
+    .cell.r1, .cell.r2 { color: #0b0b0b; }
+    .cell.r3, .cell.r4 { color: #fff; }
+}

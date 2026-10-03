@@ -96,17 +96,24 @@
     <main id="tab-aso" class="tab-panel" hidden>
       <section class="tiles" id="aso-tiles"></section>
 
-      <section class="card">
-        <div class="card-head">
-          <h2>Keywords ranked in top 10</h2>
-          <span class="muted" id="aso-trend-note"></span>
-        </div>
-        <div class="chart"><canvas id="chart-aso-trend"></canvas></div>
-      </section>
+      <div class="grid2">
+        <section class="card">
+          <div class="card-head">
+            <h2>Visibility index</h2>
+            <span class="muted" id="aso-trend-note"></span>
+          </div>
+          <div class="chart"><canvas id="chart-aso-visibility"></canvas></div>
+          <p class="muted small">Σ Google monthly searches × share of clicks at our rank. For comparing over time, not an install forecast.</p>
+        </section>
+        <section class="card">
+          <h2>Rank distribution</h2>
+          <div class="chart"><canvas id="chart-aso-dist"></canvas></div>
+        </section>
+      </div>
 
       <section class="card">
         <div class="card-head">
-          <h2>Keyword rankings</h2>
+          <h2>Keywords</h2>
           <div class="filters">
             <select id="aso-store" aria-label="Store"></select>
             <select id="aso-country" aria-label="Country"></select>
@@ -119,6 +126,33 @@
             <div class="chart"><canvas id="chart-aso-history"></canvas></div>
           </div>
         </div>
+      </section>
+
+      <div class="grid2">
+        <section class="card">
+          <div class="card-head">
+            <h2>Opportunity map</h2>
+            <span class="muted" id="opp-store"></span>
+          </div>
+          <div class="chart tall"><canvas id="chart-aso-opps"></canvas></div>
+        </section>
+        <section class="card">
+          <h2>Biggest untapped keywords</h2>
+          <div class="scroll"><table class="tbl" id="tbl-aso-opps"></table></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Rank by country</h2>
+          <span class="legend-ramp"><span class="cell r1">1–3</span><span class="cell r2">4–10</span><span class="cell r3">11–20</span><span class="cell r4">21+</span><span class="cell r0">—</span></span>
+        </div>
+        <div class="scroll wide"><table class="tbl heat" id="tbl-aso-heat"></table></div>
+      </section>
+
+      <section class="card">
+        <h2>Who owns the top 5</h2>
+        <div class="chart tall"><canvas id="chart-aso-comp"></canvas></div>
       </section>
     </main>
   </div>
