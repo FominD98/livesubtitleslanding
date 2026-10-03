@@ -259,9 +259,14 @@ function renderSales() {
     const windows = Object.fromEntries(PLATFORMS.map((p) => [p.id, aligned(p.id)]));
     const lagging = PLATFORMS.filter((p) => windows[p.id].lagging);
     const note = document.getElementById("lag-note");
-    note.hidden = !lagging.length;
-    note.textContent = lagging.map((p) => `${p.name} data until ${windows[p.id].end}`).join(" · ")
-        + " — changes vs previous period compare windows ending on that date.";
+    // сборщик идёт раз в сутки с компьютера: если он не запускался дольше полутора суток, цифры устарели
+    const lastRun = state.sales.sources.reduce((m, s) => (s.updated_at > m ? s.updated_at : m), "");
+    const staleHours = lastRun ? (Date.now() - Date.parse(lastRun)) / 3600000 : 0;
+    const parts = lagging.map((p) => `${p.name} data until ${windows[p.id].end}`);
+    if (parts.length) parts[parts.length - 1] += " — changes vs previous period compare windows ending on that date.";
+    if (staleHours > 36) parts.unshift(`⚠ The daily collector last ran ${Math.round(staleHours / 24)} days ago — numbers are stale.`);
+    note.hidden = !parts.length;
+    note.textContent = parts.join(" · ");
     renderTiles(cur, windows);
     renderDaily(cur);
     renderPlatforms(cur, windows);
@@ -520,8 +525,8 @@ function renderCountries() {
 }
 
 function renderProducts() {
-    table("tbl-products", [["Product"], ["Net", 1], ["Units", 1], ["Refunded", 1]], state.sales.products.map((r) => el("tr", {},
-        td([swatch(r.platform), r.product]),
+    table("tbl-products", [["Product"], ["Store"], ["Net", 1], ["Units", 1], ["Refunded", 1]], state.sales.products.map((r) => el("tr", {},
+        td([swatch(r.platform), r.product]), td(byId[r.platform].name, false, "muted"),
         td(usd(r.net), true),
         td(int(r.units), true),
         td(r.refunded ? int(r.refunded) : "", true))));
@@ -985,14 +990,16 @@ function renderSubs() {
     const firstDay = filled.days.find((d) => d > cut) ?? filled.days[0];
     const baseActive = sum(plats, (p) => filled.get(p.id, firstDay, "active"));
     const baseMrr = sum(plats, (p) => filled.get(p.id, firstDay, "mrr"));
-    const avgActive = filled.days.filter((d) => d > cut).length
-        ? sum(filled.days.filter((d) => d > cut), (d) => sum(plats, (p) => filled.get(p.id, d, "active"))) / filled.days.filter((d) => d > cut).length
-        : active;
+    const recentDays = filled.days.filter((d) => d > cut);
+    const avgMonthly = recentDays.length
+        ? sum(recentDays, (d) => sum(plats, (p) => filled.get(p.id, d, "active_monthly"))) / recentDays.length : 0;
+    const cancelledMonthly = sum(recent, (r) => r.cancelled_monthly);
     renderTileRow("subs-tiles", [
         { label: "MRR, net", value: mrr, fmt: usd, delta: deltaPct(mrr, baseMrr), spark: filled.days.map((d) => sum(plats, (p) => filled.get(p.id, d, "mrr"))) },
         { label: "Active paid subscriptions", value: active, fmt: int, delta: deltaPct(active, baseActive), spark: filled.days.map((d) => sum(plats, (p) => filled.get(p.id, d, "active"))) },
         { label: "New, last 30 days", value: newSubs, fmt: int, delta: el("span", { class: "muted" }, `${int(cancelled)} cancelled`) },
-        { label: "Monthly churn", value: avgActive ? cancelled / avgActive : 0, fmt: (v) => pct(v), delta: el("span", { class: "muted" }, "cancelled in 30 days ÷ average active") },
+        { label: "Monthly churn, monthly plans", value: avgMonthly ? cancelledMonthly / avgMonthly : 0, fmt: (v) => pct(v),
+          delta: el("span", { class: "muted" }, `${int(cancelledMonthly)} cancelled ÷ ${int(avgMonthly)} average active, 30 days`) },
     ]);
     document.getElementById("subs-note").textContent = plats.map((p) => `${p.name} data until ${latest[p.id].day}`).join(" · ");
 
@@ -1035,8 +1042,8 @@ function renderSubs() {
             plugins: { legend, tooltip: { callbacks: { title: (items) => weekly ? `Week of ${items[0].label}` : items[0].label, label: (c) => `${c.dataset.label}: ${Math.abs(c.parsed.y)}` } } },
         },
     });
-    table("tbl-subs-products", [["Plan"], ["Billing"], ["Active", 1], ["MRR", 1], ["As of"]], products.filter((r) => r.active > 0).map((r) => el("tr", {},
-        td([swatch(r.platform), r.product]),
+    table("tbl-subs-products", [["Plan"], ["Store"], ["Billing"], ["Active", 1], ["MRR", 1], ["As of"]], products.filter((r) => r.active > 0).map((r) => el("tr", {},
+        td([swatch(r.platform), r.product]), td(byId[r.platform].name, false, "muted"),
         td(r.period_months === 12 ? "yearly" : r.period_months === 1 ? "monthly" : `${r.period_months} months`),
         td(int(r.active), true), td(usd(r.mrr), true), td(r.day, false, "muted"))));
 }

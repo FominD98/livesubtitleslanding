@@ -185,7 +185,8 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 @media (max-width: 600px) {
     .viz-root { padding: 10px 10px 32px; font-size: 13px; }
     .top { gap: 8px; margin-bottom: 10px; }
-    .tabs { width: 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+    .tabs { width: 100%; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+        -webkit-mask-image: linear-gradient(to right, #000 85%, transparent); mask-image: linear-gradient(to right, #000 85%, transparent); }
     .tabs::-webkit-scrollbar { display: none; }
     .tabs button { padding: 8px 12px; font-size: 14px; white-space: nowrap; }
     .top .filters { width: 100%; }
