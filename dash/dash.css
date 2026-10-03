@@ -32,7 +32,10 @@
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; }
+body { margin: 0; background: #f4f3f0; }
+@media (prefers-color-scheme: dark) {
+    body { background: #111110; }
+}
 .viz-root {
     min-height: 100vh;
     background: var(--page);
