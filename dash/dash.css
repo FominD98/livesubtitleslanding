@@ -50,6 +50,7 @@
 }
 
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 body { margin: 0; background: #f4f3f0; }
 @media (prefers-color-scheme: dark) {
     body { background: #111110; }
@@ -102,7 +103,7 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 .tile .value { font-size: 26px; font-weight: 600; margin-top: 2px; font-variant-numeric: tabular-nums; }
 .tile .delta { font-size: 12px; margin-top: 2px; }
 
-.card { background: var(--surface-1); border-radius: 10px; padding: 16px; margin-bottom: 16px; }
+.card { background: var(--surface-1); border-radius: 10px; padding: 16px; margin-bottom: 16px; overflow-x: auto; }
 .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 16px; }
 .grid2 > * { min-width: 0; }
 .grid2 > .card { margin-bottom: 0; }
@@ -169,4 +170,23 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 @media (prefers-color-scheme: dark) {
     .cell.r1, .cell.r2 { color: #0b0b0b; }
     .cell.r3, .cell.r4 { color: #fff; }
+}
+
+.tbl.reviews td { white-space: normal; vertical-align: top; }
+.tbl.reviews td.stars { white-space: nowrap; color: var(--text-secondary); }
+.tabs { flex-wrap: wrap; }
+.pulse { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--good); margin-right: 6px; animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: .25; } }
+
+.tab-panel.loading { opacity: .45; pointer-events: none; transition: opacity .2s; }
+.tab-panel.loading::before { content: "Loading…"; position: fixed; top: 16px; left: 50%; transform: translateX(-50%); z-index: 5;
+    background: var(--surface-1); color: var(--text-secondary); padding: 6px 14px; border-radius: 8px; font-size: 13px; }
+
+@media (max-width: 600px) {
+    .viz-root { padding: 12px 10px 32px; }
+    .tiles { grid-template-columns: repeat(2, 1fr); }
+    .tile .value { font-size: 22px; }
+    .grid2, .split-1-2 { grid-template-columns: 1fr; }
+    .chart { height: 240px; }
+    .chart.tall { height: 360px; }
 }

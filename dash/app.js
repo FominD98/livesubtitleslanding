@@ -30,7 +30,7 @@ const usd = (v) => (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString("en-US", 
 const int = (v) => Math.round(v).toLocaleString("en-US");
 const sum = (rows, f) => rows.reduce((a, r) => a + (f(r) || 0), 0);
 
-const state = { tab: "sales", days: 30, sales: null, aso: null, charts: {}, asoSel: { store: "msstore", country: null } };
+const state = { tab: "sales", days: 30, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
 
 function el(tag, attrs = {}, ...children) {
     const node = document.createElement(tag);
@@ -61,10 +61,12 @@ function swatch(platform) {
     return el("span", { class: `swatch sw-${byId[platform].slot}`, "aria-hidden": "true" });
 }
 
-function deltaPct(cur, prev) {
+// higherIsBetter=false для метрик-проблем (ошибки, отказы): рост красный
+function deltaPct(cur, prev, higherIsBetter = true) {
     if (!prev) return el("span", { class: "muted" }, "—");
     const d = (cur - prev) / Math.abs(prev) * 100;
-    return el("span", { class: d >= 0 ? "up" : "down" }, `${d >= 0 ? "▲" : "▼"} ${Math.abs(d).toFixed(0)}%`);
+    const good = (d >= 0) === higherIsBetter;
+    return el("span", { class: good ? "up" : "down" }, `${d >= 0 ? "▲" : "▼"} ${Math.abs(d).toFixed(0)}%`);
 }
 
 function alpha(hex, a) {
@@ -129,15 +131,20 @@ function showLogin() {
 
 async function load() {
     const tab = state.tab;
-    const data = await api(`/api/${tab}?days=${state.days}`);
+    const panel = document.getElementById(`tab-${tab}`);
+    panel.classList.add("loading");
+    const days = state.days;
+    const data = await api(`/api/${tab}?days=${days}`);
+    if (days !== state.days) return;
+    panel.classList.remove("loading");
     if (!data) return;
     state[tab] = data;
     document.getElementById("login").hidden = true;
     document.getElementById("app").hidden = false;
     document.getElementById("user").textContent = data.user;
     if (tab !== state.tab) return;
-    if (tab === "sales") renderSales();
-    else renderAso();
+    RENDER[tab]();
+    if (tab === "live") scheduleLive();
 }
 
 function isoDay(d) {
@@ -207,6 +214,14 @@ function renderSales() {
     renderSources("tbl-sources", state.sales.sources);
 }
 
+// Среднее в день — по дням, за которые данные уже есть: у года данные начинаются с февраля, а не 365 дней назад
+function coveredDays(rows) {
+    const first = rows.reduce((m, r) => (m && m < r.day ? m : r.day), null);
+    if (!first) return state.days;
+    const span = Math.round((Date.parse(isoDay(new Date())) - Date.parse(first)) / 86400000) + 1;
+    return Math.max(1, Math.min(state.days, span));
+}
+
 function alignedSum(windows, key, f) {
     return sum(PLATFORMS, (p) => sum(windows[p.id][key], f));
 }
@@ -224,7 +239,7 @@ function renderTiles(cur, windows) {
         { label: "Units sold", value: unitsTotal, fmt: int,
           delta: deltaPct(alignedSum(windows, "cur", (r) => r.units), alignedSum(windows, "prev", (r) => r.units)),
           spark: units.labels.map((l) => units.value("all", l)) },
-        { label: "Daily average", value: netTotal / state.days, fmt: usd,
+        { label: "Daily average", value: netTotal / coveredDays(cur), fmt: usd,
           delta: deltaPct(alignedSum(windows, "cur", (r) => r.net), alignedSum(windows, "prev", (r) => r.net)) },
         { label: "Refunds", value: refunds, fmt: usd,
           delta: el("span", { class: "muted" }, netTotal ? `${(Math.abs(refunds) / (netTotal - refunds) * 100).toFixed(1)}% of revenue` : "") },
@@ -255,7 +270,7 @@ function renderTileRow(target, tiles) {
 
 function renderDaily(cur) {
     const { labels, value } = series(cur, (r) => r.platform, (r) => r.net);
-    document.getElementById("daily-note").textContent = state.days > 90 ? "weekly" : "daily";
+    document.getElementById("daily-note").textContent = state.days > 90 ? "weekly · the last week is still in progress" : "daily";
     draw("chart-daily", {
         type: "line",
         data: {
@@ -452,7 +467,8 @@ function renderProducts() {
 }
 
 function renderSources(target, sources) {
-    const names = { ...Object.fromEntries(PLATFORMS.map((p) => [p.id, p.name])), aso: "ASO", ga4: "GA4" };
+    const names = { ...Object.fromEntries(PLATFORMS.map((p) => [p.id, p.name])), aso: "ASO", ga4: "GA4 traffic sources",
+        funnel: "GA4 funnel", health: "Health (logs, store stats)", subs: "Subscriptions" };
     table(target, [["Source"], ["Updated"], ["Covers"], ["Note"]], sources.map((s) => el("tr", {},
         td(names[s.name] ?? s.name),
         td(new Date(s.updated_at).toLocaleString("en-GB")),
@@ -750,20 +766,498 @@ async function selectKeyword(r, row) {
     });
 }
 
+/* ---------- shared for app-level tabs ---------- */
+
+const APPS = [
+    { id: "windows", name: "Windows", color: "--series-1" },
+    { id: "android", name: "Android", color: "--series-3" },
+    { id: "apple", name: "iOS", color: "--series-2" },
+    { id: "mac", name: "Mac", color: "--series-7" },
+];
+const appById = Object.fromEntries(APPS.map((a) => [a.id, a]));
+const appColor = (id) => css(appById[id].color);
+const pct = (v, digits = 1) => `${(v * 100).toFixed(digits)}%`;
+
+function appSelect(id, apps, selected, onChange) {
+    const sel = document.getElementById(id);
+    sel.replaceChildren(...apps.map((a) => el("option", { value: a.id }, a.name)));
+    sel.value = selected;
+    sel.onchange = (e) => onChange(e.target.value);
+}
+
+function lineDataset(label, data, hex, fill = false) {
+    return {
+        label, data, borderColor: hex, backgroundColor: fill ? gradient(hex, 0.3, 0.02) : hex, fill: fill ? "origin" : false,
+        borderWidth: 2, pointRadius: data.length > 40 ? 0 : 3, pointHoverRadius: 5,
+        pointBorderColor: css("--surface-1"), pointBorderWidth: 2, tension: 0.35, spanGaps: true,
+    };
+}
+
+/* ---------- Funnel ---------- */
+
+const RETENTION_APPS = APPS.filter((a) => a.id === "android" || a.id === "apple");
+state.funnelSel = { retentionApp: "android" };
+
+function renderFunnel() {
+    const { latest, trend, window } = state.funnel;
+    const apps = APPS.filter((a) => latest.some((r) => r.app === a.id));
+    const steps = [...new Map(latest.map((r) => [r.step, r.name])).entries()].sort((a, b) => a[0] - b[0]);
+    const users = (app, step) => latest.find((r) => r.app === app && r.step === step)?.users ?? 0;
+    const last = steps.length ? steps[steps.length - 1][0] : 0;
+    document.getElementById("funnel-window").textContent = `last ${window} days`;
+
+    renderTileRow("funnel-tiles", apps.map((a) => ({
+        label: `${a.name}: onboarding → purchase`,
+        value: users(a.id, 1) ? users(a.id, last) / users(a.id, 1) : 0,
+        fmt: (v) => pct(v, 2),
+        delta: el("span", { class: "muted" }, `${int(users(a.id, last))} of ${int(users(a.id, 1))}`),
+    })));
+
+    draw("chart-funnel", {
+        type: "bar",
+        data: {
+            labels: steps.map(([, name]) => name),
+            datasets: apps.map((a) => ({
+                label: a.name,
+                data: steps.map(([s]) => users(a.id, 1) ? users(a.id, s) / users(a.id, 1) * 100 : 0),
+                backgroundColor: appColor(a.id),
+                borderRadius: 4,
+                borderSkipped: "left",
+                maxBarThickness: 16,
+            })),
+        },
+        options: {
+            indexAxis: "y",
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false, axis: "y" },
+            scales: { x: { max: 100, ticks: { callback: (v) => `${v}%` } }, y: { grid: { display: false } } },
+            plugins: {
+                legend,
+                tooltip: {
+                    callbacks: {
+                        label: (c) => {
+                            const a = apps[c.datasetIndex];
+                            const s = steps[c.dataIndex][0];
+                            const prev = s > 1 ? users(a.id, s - 1) : 0;
+                            const step = prev ? ` · ${pct(users(a.id, s) / prev)} of previous step` : "";
+                            return `${a.name}: ${int(users(a.id, s))} (${c.parsed.x.toFixed(1)}% of start)${step}`;
+                        },
+                    },
+                },
+            },
+        },
+    });
+
+    table("tbl-funnel", [["Step"], ...apps.flatMap((a) => [[a.name, 1], ["→", 1]])], steps.map(([s, name]) => el("tr", {},
+        td(name),
+        apps.flatMap((a) => {
+            const prev = s > 1 ? users(a.id, s - 1) : 0;
+            return [td(int(users(a.id, s)), true), td(prev ? pct(users(a.id, s) / prev) : "", true, "muted")];
+        }))));
+
+    const days = [...new Set(trend.map((r) => r.day))].sort();
+    document.getElementById("funnel-trend-note").textContent =
+        days.length < 7 ? `History started ${days[0] ?? "today"}, one point per day` : `${window}-day rolling window`;
+    const conv = (app, day) => {
+        const first = trend.find((r) => r.app === app && r.day === day && r.step === 1)?.users;
+        const lastStep = trend.find((r) => r.app === app && r.day === day && r.step === last)?.users;
+        return first ? lastStep / first * 100 : null;
+    };
+    draw("chart-funnel-trend", {
+        type: "line",
+        data: { labels: days, datasets: apps.map((a) => lineDataset(a.name, days.map((d) => conv(a.id, d)), appColor(a.id))) },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { beginAtZero: true, ticks: { callback: (v) => `${v}%` } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y?.toFixed(2)}%` } } },
+        },
+    });
+    appSelect("retention-app", RETENTION_APPS, state.funnelSel.retentionApp, (v) => {
+        state.funnelSel.retentionApp = v;
+        renderRetention();
+    });
+    renderRetention();
+}
+
+function renderRetention() {
+    const rows = state.funnel.retention.filter((r) => r.app === state.funnelSel.retentionApp);
+    const cohorts = [...new Set(rows.map((r) => r.cohort))].sort().reverse();
+    const weeks = [...new Set(rows.map((r) => r.week))].sort((a, b) => a - b);
+    const at = Object.fromEntries(rows.map((r) => [`${r.cohort}|${r.week}`, r.users]));
+    const bucket = (share) => share >= 0.2 ? "r1" : share >= 0.1 ? "r2" : share >= 0.05 ? "r3" : share > 0 ? "r4" : "r0";
+    table("tbl-retention", [["Cohort (week of)"], ["Users", 1], ...weeks.filter((w) => w > 0).map((w) => [`W${w}`, 1])],
+        cohorts.map((c) => {
+            const base = at[`${c}|0`] || 0;
+            return el("tr", {},
+                td(c), td(int(base), true),
+                weeks.filter((w) => w > 0).map((w) => {
+                    const v = at[`${c}|${w}`];
+                    if (v === undefined) return el("td", {});
+                    const share = base ? v / base : 0;
+                    return el("td", { class: `cell ${bucket(share)}`, title: `${int(v)} users` }, pct(share, 1));
+                }));
+        }));
+}
+
+/* ---------- Subscriptions ---------- */
+
+function latestPerPlatform(rows) {
+    const out = {};
+    for (const r of rows) {
+        if (!out[r.platform] || r.day > out[r.platform].day) out[r.platform] = r;
+    }
+    return out;
+}
+
+function renderSubs() {
+    const { daily, products } = state.subs;
+    const latest = latestPerPlatform(daily);
+    const plats = PLATFORMS.filter((p) => daily.some((r) => r.platform === p.id));
+    const mrr = sum(Object.values(latest), (r) => r.mrr);
+    const active = sum(Object.values(latest), (r) => r.active);
+    const cut = shiftDay(isoDay(new Date()), -30);
+    const recent = daily.filter((r) => r.day > cut);
+    const newSubs = sum(recent, (r) => r.new);
+    const cancelled = sum(recent, (r) => r.cancelled);
+    const filled = carryForward(daily, plats);
+    const firstDay = filled.days.find((d) => d > cut) ?? filled.days[0];
+    const baseActive = sum(plats, (p) => filled.get(p.id, firstDay, "active"));
+    const baseMrr = sum(plats, (p) => filled.get(p.id, firstDay, "mrr"));
+    const avgActive = filled.days.filter((d) => d > cut).length
+        ? sum(filled.days.filter((d) => d > cut), (d) => sum(plats, (p) => filled.get(p.id, d, "active"))) / filled.days.filter((d) => d > cut).length
+        : active;
+    renderTileRow("subs-tiles", [
+        { label: "MRR, net", value: mrr, fmt: usd, delta: deltaPct(mrr, baseMrr), spark: filled.days.map((d) => sum(plats, (p) => filled.get(p.id, d, "mrr"))) },
+        { label: "Active paid subscriptions", value: active, fmt: int, delta: deltaPct(active, baseActive), spark: filled.days.map((d) => sum(plats, (p) => filled.get(p.id, d, "active"))) },
+        { label: "New, last 30 days", value: newSubs, fmt: int, delta: el("span", { class: "muted" }, `${int(cancelled)} cancelled`) },
+        { label: "Monthly churn", value: avgActive ? cancelled / avgActive : 0, fmt: (v) => pct(v), delta: el("span", { class: "muted" }, "cancelled in 30 days ÷ average active") },
+    ]);
+    document.getElementById("subs-note").textContent = plats.map((p) => `${p.name} data until ${latest[p.id].day}`).join(" · ");
+
+    const days = filled.days;
+    const val = (p, d, k) => filled.get(p, d, k);
+    draw("chart-mrr", {
+        type: "line",
+        data: {
+            labels: days,
+            datasets: plats.map((p, i) => ({ ...lineDataset(p.name, days.map((d) => val(p.id, d, "mrr")), color(p.id), true), fill: i === 0 ? "origin" : "-1" })),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { stacked: true, ticks: { callback: (v) => usd(v) } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${usd(c.parsed.y ?? 0)}`, footer: (items) => `Total: ${usd(items.reduce((a, i) => a + (i.parsed.y ?? 0), 0))}` } } },
+        },
+    });
+    draw("chart-subs-active", {
+        type: "line",
+        data: { labels: days, datasets: plats.map((p) => lineDataset(p.name, days.map((d) => val(p.id, d, "active")), color(p.id))) },
+        options: { maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, scales: { x: timeX, y: { beginAtZero: true, ticks: { precision: 0 } } }, plugins: { legend } },
+    });
+    const weekly = state.days > 90;
+    const flow = series(daily, () => "x", (r) => r.new);
+    const lost = series(daily, () => "x", (r) => r.cancelled);
+    draw("chart-subs-flow", {
+        type: "bar",
+        data: {
+            labels: flow.labels,
+            datasets: [
+                { label: "New", data: flow.labels.map((l) => flow.value("x", l)), backgroundColor: css("--series-6"), borderRadius: 3, maxBarThickness: 16 },
+                { label: "Cancelled", data: lost.labels.map((l) => -lost.value("x", l)), backgroundColor: css("--neutral"), borderRadius: 3, maxBarThickness: 16 },
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: { ...timeX, stacked: true }, y: { stacked: true, ticks: { precision: 0, callback: (v) => Math.abs(v) } } },
+            plugins: { legend, tooltip: { callbacks: { title: (items) => weekly ? `Week of ${items[0].label}` : items[0].label, label: (c) => `${c.dataset.label}: ${Math.abs(c.parsed.y)}` } } },
+        },
+    });
+    table("tbl-subs-products", [["Plan"], ["Billing"], ["Active", 1], ["MRR", 1], ["As of"]], products.filter((r) => r.active > 0).map((r) => el("tr", {},
+        td([swatch(r.platform), r.product]),
+        td(r.period_months === 12 ? "yearly" : r.period_months === 1 ? "monthly" : `${r.period_months} months`),
+        td(int(r.active), true), td(usd(r.mrr), true), td(r.day, false, "muted"))));
+}
+
+// Площадки отдают данные с разной задержкой (Play ~2 недели): после последнего дня держим последнее значение,
+// иначе сумма MRR «проваливается» в конце графика
+function carryForward(rows, plats) {
+    const days = [...new Set(rows.map((r) => r.day))].sort();
+    const by = {};
+    for (const r of rows) by[`${r.platform}|${r.day}`] = r;
+    const filled = {};
+    for (const p of plats) {
+        let last = null;
+        for (const d of days) {
+            last = by[`${p.id}|${d}`] ?? last;
+            filled[`${p.id}|${d}`] = last;
+        }
+    }
+    return { days, get: (p, d, k) => filled[`${p}|${d}`]?.[k] ?? 0 };
+}
+
+/* ---------- Health ---------- */
+
+const HEALTH = {
+    windows: {
+        base: "sessions",
+        rates: [
+            { metric: "sessions_no_subtitles", label: "Sessions: audio but no subtitles", color: "--series-5" },
+            { metric: "sessions_stalled", label: "Sessions with an STT stall", color: "--series-7" },
+            { metric: "start_failures", label: "Recording start failures", color: "--series-2" },
+        ],
+        perSession: [
+            { metric: "ui_freezes", label: "UI freezes per session" },
+            { metric: "errors", label: "Errors per session" },
+        ],
+        adoption: "sessions",
+    },
+    android: {
+        base: "sessions",
+        rates: [
+            { metric: "start_blocked", label: "Start blocked (no minutes / offline)", color: "--series-5" },
+            { metric: "crashes_logged", label: "Crashes in logs", color: "--series-2" },
+            { metric: "stt_errors", label: "STT reconnect failures", color: "--series-7" },
+        ],
+        perSession: [],
+        adoption: "active_users",
+        extra: [{ metric: "crashes", label: "Play crashes" }, { metric: "anrs", label: "Play ANRs" }],
+    },
+    apple: { base: "sessions", rates: [{ metric: "stt_errors", label: "STT errors", color: "--series-2" }], perSession: [], adoption: "active_users" },
+    mac: { base: "sessions", rates: [{ metric: "errors", label: "Errors", color: "--series-2" }], perSession: [], adoption: "sessions" },
+};
+state.healthSel = { app: "windows" };
+
+function healthSum(rows, app, metric, days) {
+    return sum(rows.filter((r) => r.app === app && r.metric === metric && days.includes(r.day)), (r) => r.value);
+}
+
+function renderHealth() {
+    const rows = state.health.rows;
+    appSelect("health-app", APPS, state.healthSel.app, (v) => {
+        state.healthSel.app = v;
+        renderHealth();
+    });
+    const app = state.healthSel.app;
+    const cfg = HEALTH[app];
+    const days = [...new Set(rows.filter((r) => r.app === app && r.metric === cfg.base).map((r) => r.day))].sort();
+    const lastDay = days[days.length - 1];
+    const week = days.slice(-8, -1);
+    document.getElementById("health-note").textContent = lastDay ? `per ${cfg.base === "sessions" ? "100 sessions" : "day"}, last full day ${lastDay}` : "no data yet";
+
+    const rate = (metric, ds) => {
+        const base = healthSum(rows, app, cfg.base, ds);
+        return base ? healthSum(rows, app, metric, ds) / base : 0;
+    };
+    const tiles = [{
+        label: "Sessions, last day", value: healthSum(rows, app, cfg.base, [lastDay]), fmt: int,
+        delta: week.length ? deltaPct(healthSum(rows, app, cfg.base, [lastDay]), healthSum(rows, app, cfg.base, week) / week.length) : null,
+        spark: days.map((d) => healthSum(rows, app, cfg.base, [d])),
+    }];
+    for (const r of [...cfg.rates, ...cfg.perSession]) {
+        const now = rate(r.metric, [lastDay]);
+        const before = rate(r.metric, week);
+        const perSession = cfg.perSession.includes(r);
+        tiles.push({
+            label: perSession ? r.label : `${r.label}, per 100 sessions`, value: perSession ? now : now * 100, fmt: (v) => perSession ? v.toFixed(2) : v.toFixed(1),
+            delta: before ? deltaPct(now, before, false) : null,
+        });
+    }
+    for (const x of cfg.extra || []) {
+        tiles.push({ label: `${x.label}, 7 days`, value: healthSum(rows, app, x.metric, days.slice(-7)), fmt: int });
+    }
+    renderTileRow("health-tiles", tiles.slice(0, 6));
+
+    draw("chart-health", {
+        type: "line",
+        data: { labels: days, datasets: cfg.rates.map((r) => lineDataset(r.label, days.map((d) => rate(r.metric, [d]) * 100), css(r.color))) },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { beginAtZero: true } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y.toFixed(2)} per 100 sessions` } } },
+        },
+    });
+    renderVersions(app, cfg);
+    renderVersionTable(app, cfg, days.slice(-7));
+    renderRatings();
+}
+
+function renderVersions(app, cfg) {
+    const rows = state.health.rows.filter((r) => r.app === app && r.metric === cfg.adoption && r.version !== "(not set)");
+    const days = [...new Set(rows.map((r) => r.day))].sort().slice(-30);
+    const totals = {};
+    const recent = days.slice(-7);
+    for (const r of rows) {
+        if (recent.includes(r.day)) totals[r.version] = (totals[r.version] || 0) + r.value;
+    }
+    const top = Object.keys(totals).sort((a, b) => totals[b] - totals[a]).slice(0, 4);
+    const ramp = ["--rank-1", "--rank-2", "--rank-3", "--rank-4"];
+    const share = (v, d) => {
+        const all = sum(rows.filter((r) => r.day === d), (r) => r.value);
+        const mine = v === "other" ? sum(rows.filter((r) => r.day === d && !chosen.includes(r.version)), (r) => r.value)
+            : sum(rows.filter((r) => r.day === d && r.version === v), (r) => r.value);
+        return all ? mine / all * 100 : 0;
+    };
+    const chosen = [...top].sort((a, b) => b.localeCompare(a, undefined, { numeric: true })).slice(0, 4);
+    const labels = [...chosen, ...(new Set(rows.map((r) => r.version)).size > chosen.length ? ["other"] : [])];
+    draw("chart-versions", {
+        type: "bar",
+        data: {
+            labels: days,
+            datasets: labels.map((v, i) => ({
+                label: v === "other" ? "Older / other" : v,
+                data: days.map((d) => share(v, d)),
+                backgroundColor: v === "other" ? css("--neutral") : css(ramp[i] ?? "--rank-4"),
+                borderColor: css("--surface-1"), borderWidth: { top: 1 }, maxBarThickness: 18,
+            })),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: { ...timeX, stacked: true }, y: { stacked: true, max: 100, ticks: { callback: (v) => `${v}%` } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y.toFixed(1)}%` } } },
+        },
+    });
+}
+
+function renderVersionTable(app, cfg, days) {
+    const rows = state.health.rows.filter((r) => r.app === app && days.includes(r.day));
+    const versions = [...new Set(rows.filter((r) => r.metric === cfg.base).map((r) => r.version))]
+        .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
+    const v = (version, metric) => sum(rows.filter((r) => r.version === version && r.metric === metric), (r) => r.value);
+    const cols = [...cfg.rates, ...cfg.perSession];
+    table("tbl-health-versions", [["Version"], ["Sessions", 1], ...cols.map((c) => [`${c.label.replace(/^Sessions: /, "")}${cfg.perSession.includes(c) ? "" : " /100"}`, 1])],
+        versions.filter((x) => v(x, cfg.base) >= 5).map((x) => {
+            const base = v(x, cfg.base);
+            return el("tr", {}, td(x), td(int(base), true), cols.map((c) =>
+                td(cfg.perSession.includes(c) ? (v(x, c.metric) / base).toFixed(2) : (v(x, c.metric) / base * 100).toFixed(1), true)));
+        }));
+}
+
+function renderRatings() {
+    const { ratings, reviews } = state.health;
+    const days = [...new Set(ratings.map((r) => r.day))].sort();
+    const appleByDay = {};
+    for (const r of reviews.filter((x) => x.store === "appstore")) (appleByDay[r.day] ??= []).push(r.rating);
+    draw("chart-ratings", {
+        type: "line",
+        data: {
+            labels: days,
+            datasets: [
+                lineDataset("Google Play, overall", days.map((d) => ratings.find((r) => r.day === d && r.store === "play")?.total_avg ?? null), css("--series-3")),
+                { ...lineDataset("Google Play, that day", days.map((d) => ratings.find((r) => r.day === d && r.store === "play")?.daily_avg ?? null), css("--series-3")), showLine: false, pointRadius: 4 },
+                { ...lineDataset("App Store reviews, that day", days.map((d) => appleByDay[d] ? sum(appleByDay[d], (x) => x) / appleByDay[d].length : null), css("--series-2")), showLine: false, pointRadius: 4 },
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { min: 1, max: 5, ticks: { stepSize: 1 } } },
+            plugins: { legend },
+        },
+    });
+    table("tbl-reviews", [["Stars"], ["Store"], ["Date"], ["Review"]], reviews.slice(0, 40).map((r) => el("tr", {},
+        td("★".repeat(r.rating) + "☆".repeat(5 - r.rating), false, "stars"),
+        td(r.store === "play" ? "Google Play" : "App Store"),
+        td([r.day, r.version ? el("div", { class: "muted" }, r.version) : null]),
+        td([r.title ? el("strong", {}, r.title) : null, r.title && r.body ? el("br") : null, r.body || el("span", { class: "muted" }, "(no text)")]))));
+}
+
+/* ---------- Live ---------- */
+
+let liveTimer = null;
+
+function renderLive() {
+    const { byMinute, byCountry, byEvent, byVersion, at } = state.live;
+    const apps = APPS.filter((a) => byCountry.some((r) => r.app === a.id));
+    const activeNow = (app) => sum(byCountry.filter((r) => r.app === app), (r) => r.value);
+    renderTileRow("live-tiles", [
+        { label: "Active users, last 30 min", value: sum(byCountry, (r) => r.value), fmt: int },
+        ...apps.map((a) => ({ label: a.name, value: activeNow(a.id), fmt: int })),
+    ]);
+    document.getElementById("live-note").replaceChildren(el("span", { class: "pulse", "aria-hidden": "true" }),
+        `GA4 realtime, updated ${new Date(at).toLocaleTimeString("en-GB")}, refreshes every 30 s while this tab is open. Windows sends events server-side, so GA4 has no country or version for it.`);
+
+    const minutes = [...Array(30).keys()].reverse();
+    draw("chart-live", {
+        type: "line",
+        data: {
+            labels: minutes.map((m) => m === 0 ? "now" : `-${m}m`),
+            datasets: apps.map((a, i) => ({
+                ...lineDataset(a.name, minutes.map((m) => byMinute.find((r) => r.app === a.id && Number(r.key) === m)?.value ?? 0), appColor(a.id), true),
+                fill: i === 0 ? "origin" : "-1",
+            })),
+        },
+        options: {
+            animation: false,
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: { ...timeX, ticks: { maxRotation: 0, autoSkipPadding: 20 } }, y: { stacked: true, beginAtZero: true, ticks: { precision: 0 } } },
+            plugins: { legend },
+        },
+    });
+    const events = ["onboarding_start", "recording_start", "first_subtitle_shown", "paywall_view", "purchase_start", "web_checkout_opened", "purchase", "purchase_web"];
+    const ev = (name, app) => byEvent.find((r) => r.key === name && r.app === app)?.value ?? 0;
+    table("tbl-live-events", [["Event"], ...apps.map((a) => [a.name, 1])],
+        events.filter((e) => apps.some((a) => ev(e, a.id))).map((e) => el("tr", {}, td(e), apps.map((a) => td(ev(e, a.id) ? int(ev(e, a.id)) : "", true)))),
+        "No tracked events in the last 30 minutes");
+
+    const countries = {};
+    for (const r of byCountry) countries[r.key] = (countries[r.key] || 0) + r.value;
+    const countryName = (c) => c || "Unknown";
+    const top = Object.keys(countries).sort((a, b) => countries[b] - countries[a]).slice(0, 12);
+    draw("chart-live-countries", {
+        type: "bar",
+        data: {
+            labels: top.map(countryName),
+            datasets: apps.map((a) => ({
+                label: a.name,
+                data: top.map((c) => byCountry.find((r) => r.key === c && r.app === a.id)?.value ?? 0),
+                backgroundColor: appColor(a.id), borderColor: css("--surface-1"), borderWidth: { right: 2 }, borderRadius: 4, borderSkipped: "left", maxBarThickness: 18,
+            })),
+        },
+        options: {
+            animation: false,
+            indexAxis: "y",
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false, axis: "y" },
+            scales: { x: { stacked: true, ticks: { precision: 0 } }, y: { stacked: true, grid: { display: false } } },
+            plugins: { legend },
+        },
+    });
+    table("tbl-live-versions", [["App"], ["Version"], ["Active users", 1]],
+        [...byVersion].sort((a, b) => b.value - a.value).slice(0, 15).map((r) => el("tr", {}, td(appById[r.app].name), td(r.key || "Unknown"), td(int(r.value), true))));
+}
+
+function scheduleLive() {
+    clearTimeout(liveTimer);
+    if (state.tab !== "live") return;
+    liveTimer = setTimeout(async () => {
+        if (state.tab !== "live") return;
+        if (!document.hidden) {
+            state.live = null;
+            await load();
+        }
+        scheduleLive();
+    }, 30000);
+}
+
 /* ---------- wiring ---------- */
 
+const RENDER = { sales: renderSales, aso: renderAso, funnel: renderFunnel, subs: renderSubs, health: renderHealth, live: renderLive };
+
 function switchTab(tab) {
-    state.tab = tab;
-    document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === tab)));
-    document.getElementById("tab-sales").hidden = tab !== "sales";
-    document.getElementById("tab-aso").hidden = tab !== "aso";
-    history.replaceState(null, "", `#${tab}`);
-    if (!state[tab]) {
+    state.tab = RENDER[tab] ? tab : "sales";
+    document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
+    for (const name of Object.keys(RENDER)) document.getElementById(`tab-${name}`).hidden = name !== state.tab;
+    document.querySelector(".top .filters").hidden = state.tab === "live";
+    history.replaceState(null, "", `#${state.tab}`);
+    if (state.tab === "live" || !state[state.tab]) {
         load();
-    } else if (tab === "sales") {
-        renderSales();
     } else {
-        renderAso();
+        RENDER[state.tab]();
     }
 }
 
@@ -782,8 +1276,7 @@ document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("cli
 document.querySelectorAll(".top .filters button").forEach((b) => b.addEventListener("click", () => {
     document.querySelectorAll(".top .filters button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
     state.days = Number(b.dataset.days);
-    state.sales = null;
-    state.aso = null;
+    for (const name of Object.keys(RENDER)) state[name] = null;
     load();
 }));
 document.getElementById("aso-store").addEventListener("change", (e) => {
@@ -799,5 +1292,9 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
     switchTab(state.tab);
 });
 
+window.addEventListener("hashchange", () => {
+    if (location.hash.slice(1) !== state.tab) switchTab(location.hash.slice(1));
+});
+
 chartDefaults();
-switchTab(location.hash === "#aso" ? "aso" : "sales");
+switchTab(location.hash.slice(1));

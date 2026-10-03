@@ -20,6 +20,10 @@
       <nav class="tabs" role="tablist">
         <button role="tab" data-tab="sales" aria-selected="true">Sales</button>
         <button role="tab" data-tab="aso" aria-selected="false">ASO</button>
+        <button role="tab" data-tab="funnel" aria-selected="false">Funnel</button>
+        <button role="tab" data-tab="subs" aria-selected="false">Subscriptions</button>
+        <button role="tab" data-tab="health" aria-selected="false">Health</button>
+        <button role="tab" data-tab="live" aria-selected="false">Live</button>
       </nav>
       <div class="filters" role="group" aria-label="Period">
         <button data-days="7">7d</button>
@@ -151,6 +155,126 @@
       <section class="card">
         <h2>Who owns the top 5</h2>
         <div class="chart tall"><canvas id="chart-aso-comp"></canvas></div>
+      </section>
+    </main>
+    <main id="tab-funnel" class="tab-panel" hidden>
+      <section class="tiles" id="funnel-tiles"></section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Funnel: onboarding to purchase</h2>
+          <span class="muted" id="funnel-window"></span>
+        </div>
+        <div class="chart tall"><canvas id="chart-funnel"></canvas></div>
+        <table class="tbl" id="tbl-funnel"></table>
+        <p class="muted small">Closed funnel over unique users who started onboarding in the window. Buyers who installed earlier are not in it — compare with Sales for total purchases.</p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Install → purchase conversion over time</h2>
+          <span class="muted" id="funnel-trend-note"></span>
+        </div>
+        <div class="chart"><canvas id="chart-funnel-trend"></canvas></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Weekly retention</h2>
+          <div class="filters"><select id="retention-app" aria-label="App"></select></div>
+        </div>
+        <div class="scroll wide"><table class="tbl heat" id="tbl-retention"></table></div>
+        <p class="muted small">Share of a weekly install cohort active N weeks later (GA4). Windows is left out: its GA4 cohorts are unreliable.</p>
+      </section>
+    </main>
+
+    <main id="tab-subs" class="tab-panel" hidden>
+      <section class="tiles" id="subs-tiles"></section>
+      <p class="muted small lag" id="subs-note"></p>
+
+      <section class="card">
+        <h2>MRR, net USD</h2>
+        <div class="chart"><canvas id="chart-mrr"></canvas></div>
+      </section>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>Active paid subscriptions</h2>
+          <div class="chart"><canvas id="chart-subs-active"></canvas></div>
+        </section>
+        <section class="card">
+          <h2>New vs cancelled</h2>
+          <div class="chart"><canvas id="chart-subs-flow"></canvas></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>Plans</h2>
+        <div class="scroll"><table class="tbl" id="tbl-subs-products"></table></div>
+        <p class="muted small">MRR = recurring net revenue per month (annual plans ÷ 12). Paddle: last real payment of each subscription. App Store: today's FX. Google Play: active × average net price over 90 days, stats arrive ~2 weeks late.</p>
+      </section>
+    </main>
+
+    <main id="tab-health" class="tab-panel" hidden>
+      <div class="filters">
+        <select id="health-app" aria-label="App"></select>
+      </div>
+      <section class="tiles" id="health-tiles"></section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Quality per day</h2>
+          <span class="muted" id="health-note"></span>
+        </div>
+        <div class="chart"><canvas id="chart-health"></canvas></div>
+      </section>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>Version adoption</h2>
+          <div class="chart"><canvas id="chart-versions"></canvas></div>
+        </section>
+        <section class="card">
+          <h2>By version, last 7 days</h2>
+          <div class="scroll"><table class="tbl" id="tbl-health-versions"></table></div>
+        </section>
+      </div>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>Store rating</h2>
+          <div class="chart"><canvas id="chart-ratings"></canvas></div>
+        </section>
+        <section class="card">
+          <h2>Latest reviews</h2>
+          <div class="scroll"><table class="tbl reviews" id="tbl-reviews"></table></div>
+        </section>
+      </div>
+    </main>
+
+    <main id="tab-live" class="tab-panel" hidden>
+      <section class="tiles" id="live-tiles"></section>
+      <p class="muted small" id="live-note"></p>
+
+      <section class="card">
+        <h2>Active users per minute, last 30 minutes</h2>
+        <div class="chart"><canvas id="chart-live"></canvas></div>
+      </section>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>Events, last 30 minutes</h2>
+          <table class="tbl" id="tbl-live-events"></table>
+        </section>
+        <section class="card">
+          <h2>Countries right now</h2>
+          <div class="chart tall"><canvas id="chart-live-countries"></canvas></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>Versions right now</h2>
+        <table class="tbl" id="tbl-live-versions"></table>
       </section>
     </main>
   </div>
