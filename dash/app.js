@@ -2,7 +2,7 @@
 
 const API = "https://dash-api.live-subtitles.com";
 const PLATFORMS = [
-    { id: "paddle", name: "Paddle (веб)", slot: 1 },
+    { id: "paddle", name: "Paddle (web)", slot: 1 },
     { id: "appstore", name: "App Store", slot: 2 },
     { id: "play", name: "Google Play", slot: 3 },
     { id: "msstore", name: "Microsoft Store", slot: 4 },
@@ -13,7 +13,7 @@ const byId = Object.fromEntries(PLATFORMS.map((p) => [p.id, p]));
 const css = (name) => getComputedStyle(document.querySelector(".viz-root")).getPropertyValue(name).trim();
 const color = (platform) => css(`--series-${byId[platform].slot}`);
 const usd = (v) => (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString("en-US", { maximumFractionDigits: 0 });
-const int = (v) => Math.round(v).toLocaleString("ru-RU");
+const int = (v) => Math.round(v).toLocaleString("en-US");
 const sum = (rows, f) => rows.reduce((a, r) => a + (f(r) || 0), 0);
 
 let state = { days: 30, data: null, charts: {}, aso: { store: "msstore", country: null } };
@@ -64,6 +64,7 @@ async function load() {
         return;
     }
     state.data = await res.json();
+    sessionStorage.removeItem("loginTried");
     document.getElementById("login").hidden = true;
     document.getElementById("app").hidden = false;
     document.getElementById("user").textContent = state.data.user;
@@ -72,6 +73,11 @@ async function load() {
 
 function showLogin() {
     document.getElementById("app").hidden = true;
+    if (!sessionStorage.getItem("loginTried")) {
+        sessionStorage.setItem("loginTried", "1");
+        location.replace(`${API}/login`);
+        return;
+    }
     document.getElementById("login").hidden = false;
     document.getElementById("login-link").href = `${API}/login`;
 }
@@ -98,11 +104,11 @@ function render() {
 function renderTiles(cur, prev) {
     const net = sum(cur, (r) => r.net);
     const tiles = [
-        ["Нетто за период", usd(net), deltaPct(net, sum(prev, (r) => r.net))],
-        ["Продаж, шт", int(sum(cur, (r) => r.units)), deltaPct(sum(cur, (r) => r.units), sum(prev, (r) => r.units))],
-        ["В среднем в день", usd(net / state.days), null],
-        ["Возвраты", usd(sum(cur, (r) => r.refunds)), el("span", { class: "muted" },
-            net ? `${(Math.abs(sum(cur, (r) => r.refunds)) / (net - sum(cur, (r) => r.refunds)) * 100).toFixed(1)}% от выручки` : "")],
+        ["Net revenue", usd(net), deltaPct(net, sum(prev, (r) => r.net))],
+        ["Units sold", int(sum(cur, (r) => r.units)), deltaPct(sum(cur, (r) => r.units), sum(prev, (r) => r.units))],
+        ["Daily average", usd(net / state.days), null],
+        ["Refunds", usd(sum(cur, (r) => r.refunds)), el("span", { class: "muted" },
+            net ? `${(Math.abs(sum(cur, (r) => r.refunds)) / (net - sum(cur, (r) => r.refunds)) * 100).toFixed(1)}% of revenue` : "")],
     ];
     document.getElementById("tiles").replaceChildren(...tiles.map(([label, value, delta]) =>
         el("div", { class: "tile" },
@@ -162,9 +168,9 @@ function renderDaily(cur) {
                 legend: { position: "top", align: "start", labels: { boxWidth: 10, boxHeight: 10 } },
                 tooltip: {
                     callbacks: {
-                        title: (items) => state.days > 90 ? `Неделя с ${items[0].label}` : items[0].label,
+                        title: (items) => state.days > 90 ? `Week of ${items[0].label}` : items[0].label,
                         label: (c) => `${c.dataset.label}: ${usd(c.parsed.y)}`,
-                        footer: (items) => `Всего: ${usd(items.reduce((a, i) => a + i.parsed.y, 0))}`,
+                        footer: (items) => `Total: ${usd(items.reduce((a, i) => a + i.parsed.y, 0))}`,
                     },
                 },
             },
@@ -187,8 +193,8 @@ function renderPlatforms(cur, prev) {
             td(usd(sum(c, (r) => r.refunds)), true),
             td(deltaPct(net, sum(pr, (r) => r.net)), true));
     });
-    table("tbl-platforms", [["Площадка"], ["Нетто", 1], ["Доля", 1], ["Продаж", 1], ["Возвраты", 1],
-        ["К прошлому периоду", 1]], rows);
+    table("tbl-platforms", [["Platform"], ["Net", 1], ["Share", 1], ["Units", 1], ["Refunds", 1],
+        ["vs previous period", 1]], rows);
 }
 
 function renderCountries() {
@@ -221,7 +227,7 @@ function renderCountries() {
                 tooltip: {
                     callbacks: {
                         label: (c) => `${c.dataset.label}: ${usd(c.parsed.x)}`,
-                        footer: (items) => `Всего: ${usd(items.reduce((a, i) => a + i.parsed.x, 0))}`,
+                        footer: (items) => `Total: ${usd(items.reduce((a, i) => a + i.parsed.x, 0))}`,
                     },
                 },
             },
@@ -235,7 +241,7 @@ function renderProducts() {
         td(usd(r.net), true),
         td(int(r.units), true),
         td(r.refunded ? int(r.refunded) : "", true)));
-    table("tbl-products", [["Продукт"], ["Нетто", 1], ["Продаж", 1], ["Возвратов", 1]], rows);
+    table("tbl-products", [["Product"], ["Net", 1], ["Units", 1], ["Refunded", 1]], rows);
 }
 
 function renderAsoTrend() {
@@ -271,7 +277,7 @@ function renderAsoTrend() {
                     callbacks: {
                         label: (c) => {
                             const r = byStoreDay[c.dataset.label][c.label];
-                            return r ? `${c.dataset.label}: топ-10 ${r.top10}, топ-3 ${r.top3}, найдено ${r.found} из ${r.total}` : "";
+                            return r ? `${c.dataset.label}: top 10 ${r.top10}, top 3 ${r.top3}, ranked ${r.found} of ${r.total}` : "";
                         },
                     },
                 },
@@ -306,14 +312,14 @@ function renderAsoTable() {
     const rows = aso
         .filter((r) => r.store === state.aso.store && r.country === state.aso.country)
         .sort((a, b) => (a.rank ?? 999) - (b.rank ?? 999));
-    table("tbl-aso", [["Ключ"], ["Позиция", 1], ["За 7 дн", 1], ["За 30 дн", 1]], rows.map((r) =>
+    table("tbl-aso", [["Keyword"], ["Rank", 1], ["7d", 1], ["30d", 1]], rows.map((r) =>
         el("tr", { class: "clickable", onclick: (e) => selectKeyword(r, e.currentTarget) },
             td(r.keyword),
             td(rankText(r.rank, r.depth), true),
             td(rankDelta(r.rank, r.rank_7d, r.depth), true),
             td(rankDelta(r.rank, r.rank_30d, r.depth), true))));
     if (!rows.length) {
-        document.getElementById("tbl-aso").append(el("tr", {}, el("td", { colspan: "4", class: "muted" }, "Нет данных")));
+        document.getElementById("tbl-aso").append(el("tr", {}, el("td", { colspan: "4", class: "muted" }, "No data")));
     }
 }
 
@@ -324,7 +330,7 @@ async function selectKeyword(r, row) {
     const res = await fetch(`${API}/api/aso/history?${q}`, { credentials: "include" });
     if (!res.ok) return;
     const hist = await res.json();
-    document.getElementById("aso-history-title").textContent = `«${r.keyword}» — ${byId[r.store].name}, ${r.country}`;
+    document.getElementById("aso-history-title").textContent = `"${r.keyword}" — ${byId[r.store].name}, ${r.country}`;
     draw("chart-aso-history", {
         type: "line",
         data: {
@@ -346,11 +352,11 @@ async function selectKeyword(r, row) {
             interaction: { mode: "index", intersect: false },
             scales: {
                 x: { grid: { display: false }, ticks: { maxRotation: 0, autoSkipPadding: 12 } },
-                y: { reverse: true, min: 1, suggestedMax: 20, ticks: { precision: 0 }, title: { display: true, text: "позиция" } },
+                y: { reverse: true, min: 1, suggestedMax: 20, ticks: { precision: 0 }, title: { display: true, text: "rank" } },
             },
             plugins: {
                 legend: { display: false },
-                tooltip: { callbacks: { label: (c) => `позиция ${rankText(hist[c.dataIndex].rank, hist[c.dataIndex].depth)}` } },
+                tooltip: { callbacks: { label: (c) => `rank ${rankText(hist[c.dataIndex].rank, hist[c.dataIndex].depth)}` } },
             },
         },
     });
@@ -358,10 +364,10 @@ async function selectKeyword(r, row) {
 
 function renderSources() {
     const names = { ...Object.fromEntries(PLATFORMS.map((p) => [p.id, p.name])), aso: "ASO" };
-    table("tbl-sources", [["Источник"], ["Обновлено"], ["Данные за"], ["Примечание"]], state.data.sources.map((s) =>
+    table("tbl-sources", [["Source"], ["Updated"], ["Covers"], ["Note"]], state.data.sources.map((s) =>
         el("tr", {},
             td(names[s.name] ?? s.name),
-            td(new Date(s.updated_at).toLocaleString("ru-RU")),
+            td(new Date(s.updated_at).toLocaleString("en-GB")),
             td(s.covered_from === s.covered_to ? s.covered_from : `${s.covered_from} — ${s.covered_to}`),
             td(s.note ?? ""))));
 }

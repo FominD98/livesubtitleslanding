@@ -1,76 +1,75 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dash-api.live-subtitles.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
-<title>Live Subtitles — продажи и ASO</title>
+<title>Dashboard</title>
 <link rel="stylesheet" href="dash.css">
 </head>
 <body>
 <div class="viz-root">
-  <header class="top">
-    <h1>Продажи и ASO</h1>
-    <div class="filters" role="group" aria-label="Период">
-      <button data-days="7">7 дн</button>
-      <button data-days="30" aria-pressed="true">30 дн</button>
-      <button data-days="90">90 дн</button>
-      <button data-days="365">год</button>
-    </div>
-    <span id="user" class="muted"></span>
-  </header>
-
   <section id="login" hidden>
-    <p>Нужен вход. Доступ выдаётся по приглашению — код придёт на почту.</p>
-    <a id="login-link" class="btn" href="#">Войти</a>
+    <a id="login-link" class="btn" href="#">Sign in</a>
   </section>
 
   <main id="app" hidden>
+    <header class="top">
+      <h1>Sales &amp; ASO</h1>
+      <div class="filters" role="group" aria-label="Period">
+        <button data-days="7">7d</button>
+        <button data-days="30" aria-pressed="true">30d</button>
+        <button data-days="90">90d</button>
+        <button data-days="365">1y</button>
+      </div>
+      <span id="user" class="muted"></span>
+    </header>
+
     <section class="tiles" id="tiles"></section>
 
     <section class="card">
-      <h2>Выручка нетто по дням, USD</h2>
+      <h2>Net revenue by day, USD</h2>
       <div class="chart"><canvas id="chart-daily"></canvas></div>
       <table class="tbl" id="tbl-platforms"></table>
     </section>
 
     <div class="grid2">
       <section class="card">
-        <h2>Страны, нетто USD</h2>
+        <h2>Countries, net USD</h2>
         <div class="chart tall"><canvas id="chart-countries"></canvas></div>
       </section>
       <section class="card">
-        <h2>Продукты</h2>
+        <h2>Products</h2>
         <div class="scroll"><table class="tbl" id="tbl-products"></table></div>
       </section>
     </div>
 
     <section class="card">
-      <h2>ASO: ключей в топ-10 поиска</h2>
+      <h2>ASO: keywords in top 10</h2>
       <div class="chart"><canvas id="chart-aso-trend"></canvas></div>
     </section>
 
     <section class="card">
-      <h2>ASO: позиции по ключевым словам</h2>
+      <h2>ASO: keyword rankings</h2>
       <div class="filters" id="aso-filters">
-        <select id="aso-store" aria-label="Магазин"></select>
-        <select id="aso-country" aria-label="Страна"></select>
+        <select id="aso-store" aria-label="Store"></select>
+        <select id="aso-country" aria-label="Country"></select>
       </div>
       <div class="grid2">
         <div class="scroll"><table class="tbl" id="tbl-aso"></table></div>
         <div>
-          <h3 id="aso-history-title" class="muted">Нажми на ключ, чтобы увидеть историю</h3>
+          <h3 id="aso-history-title" class="muted">Click a keyword to see its history</h3>
           <div class="chart"><canvas id="chart-aso-history"></canvas></div>
         </div>
       </div>
     </section>
 
     <section class="card">
-      <h2>Свежесть данных</h2>
+      <h2>Data freshness</h2>
       <table class="tbl" id="tbl-sources"></table>
-      <p class="muted">* — оценка: курс валют на сегодня, у Play за незакрытый месяц комиссия принята 15%.</p>
+      <p class="muted">* estimate: today's FX rates; Google Play's open month assumes a 15% fee.</p>
     </section>
   </main>
 </div>
