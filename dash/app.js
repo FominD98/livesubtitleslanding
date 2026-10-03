@@ -168,6 +168,65 @@ function series(rows, keyOf, valueOf) {
     return { labels, value: (key, label) => by[`${key}|${label}`] ?? 0 };
 }
 
+/* ---------- country flags ---------- */
+
+const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+const flagCache = {};
+
+function countryName(code) {
+    if (!code || code === "??") return "Unknown";
+    try {
+        return regionNames.of(code.toUpperCase()) || code;
+    } catch {
+        return code;
+    }
+}
+
+function flagImg(code) {
+    if (!code || code.length !== 2 || code === "??") return null;
+    return el("img", { class: "flag", src: `flags/${code.toLowerCase()}.png`, alt: "", width: "20", height: "15", loading: "lazy" });
+}
+
+function withFlag(code, text = code) {
+    return el("span", { class: "with-flag", title: countryName(code) }, flagImg(code), text);
+}
+
+function flagImage(code, chart) {
+    const key = code.toLowerCase();
+    if (!flagCache[key]) {
+        const img = new Image();
+        img.onload = () => chart.draw();
+        img.src = `flags/${key}.png`;
+        flagCache[key] = img;
+    }
+    return flagCache[key];
+}
+
+// Флаги слева от подписей оси Y у горизонтальных графиков стран: подписи — ISO-коды, отступ под флаг даёт ticks.padding
+const FLAG_GAP = 28;
+Chart.register({
+    id: "countryFlags",
+    afterDraw(chart, args, opts) {
+        if (!opts || !opts.enabled) return;
+        const axis = chart.scales.y;
+        const { ctx } = chart;
+        axis.ticks.forEach((tick, i) => {
+            const code = chart.data.labels[tick.value ?? i];
+            if (!code || code.length !== 2) return;
+            const img = flagImage(code, chart);
+            if (!img.complete || !img.naturalWidth) return;
+            const y = axis.getPixelForTick(i);
+            ctx.drawImage(img, axis.right - FLAG_GAP + 4, y - 7, 18, 13.5);
+        });
+    },
+});
+
+function countryAxis(extra = {}) {
+    return { stacked: true, grid: { display: false }, ticks: { padding: FLAG_GAP }, ...extra };
+}
+
+const countryTooltipTitle = (items) => countryName(items[0].label);
+
 /* ---------- Sales ---------- */
 
 function shiftDay(day, n) {
@@ -321,7 +380,7 @@ function renderPlatforms(cur, windows) {
             maintainAspectRatio: false,
             cutout: "68%",
             plugins: {
-                legend: { position: "right", labels: { boxWidth: 10, boxHeight: 10, usePointStyle: true, pointStyle: "rectRounded" } },
+                legend: { position: isPhone() ? "bottom" : "right", labels: { boxWidth: 10, boxHeight: 10, usePointStyle: true, pointStyle: "rectRounded" } },
                 tooltip: { callbacks: { label: (c) => `${c.label}: ${usd(c.parsed)} (${total ? (c.parsed / total * 100).toFixed(0) : 0}%)` } },
             },
         },
@@ -444,11 +503,13 @@ function renderCountries() {
             indexAxis: "y",
             maintainAspectRatio: false,
             interaction: { mode: "index", intersect: false, axis: "y" },
-            scales: { x: { stacked: true, ticks: { callback: (v) => usd(v) } }, y: { stacked: true, grid: { display: false } } },
+            scales: { x: { stacked: true, ticks: { callback: (v) => usd(v) } }, y: countryAxis() },
             plugins: {
                 legend,
+                countryFlags: { enabled: true },
                 tooltip: {
                     callbacks: {
+                        title: countryTooltipTitle,
                         label: (c) => `${c.dataset.label}: ${usd(c.parsed.x)}`,
                         footer: (items) => `Total: ${usd(items.reduce((a, i) => a + i.parsed.x, 0))}`,
                     },
@@ -599,7 +660,7 @@ function renderAsoFilters() {
     storeSel.value = state.asoSel.store;
     const countries = [...new Set(aso.map((r) => r.country))];
     if (!countries.includes(state.asoSel.country)) state.asoSel.country = countries.includes("US") ? "US" : countries[0] ?? null;
-    countrySel.replaceChildren(...countries.map((c) => el("option", { value: c }, c)));
+    countrySel.replaceChildren(...countries.map((c) => el("option", { value: c }, `${countryName(c)} (${c})`)));
     countrySel.value = state.asoSel.country ?? "";
 }
 
@@ -669,7 +730,7 @@ function renderOpportunities() {
     });
     const opps = [...weak].sort((a, b) => b.volume - a.volume).slice(0, 15);
     table("tbl-aso-opps", [["Keyword"], ["Country"], ["Searches/mo", 1], ["Rank", 1]], opps.map((r) => el("tr", {},
-        td(r.keyword), td(r.country), td(compact(r.volume), true), td(rankText(r.rank, r.depth), true))),
+        td(r.keyword), td(withFlag(r.country)), td(compact(r.volume), true), td(rankText(r.rank, r.depth), true))),
         "Every keyword with known volume is already in the top 10");
 }
 
@@ -679,7 +740,7 @@ function renderHeatmap() {
     const at = Object.fromEntries(rows.map((r) => [`${r.keyword}|${r.country}`, r]));
     const best = (k) => Math.min(...countries.map((c) => at[`${k}|${c}`]?.rank ?? 999));
     const keywords = [...new Set(rows.map((r) => r.keyword))].sort((a, b) => best(a) - best(b));
-    table("tbl-aso-heat", [["Keyword"], ...countries.map((c) => [c, 1])], keywords.map((k) => el("tr", {},
+    table("tbl-aso-heat", [["Keyword"], ...countries.map((c) => [withFlag(c), 1])], keywords.map((k) => el("tr", {},
         td(k),
         countries.map((c) => {
             const r = at[`${k}|${c}`];
@@ -1206,12 +1267,12 @@ function renderLive() {
 
     const countries = {};
     for (const r of byCountry) countries[r.key] = (countries[r.key] || 0) + r.value;
-    const countryName = (c) => c || "Unknown";
+
     const top = Object.keys(countries).sort((a, b) => countries[b] - countries[a]).slice(0, 12);
     draw("chart-live-countries", {
         type: "bar",
         data: {
-            labels: top.map(countryName),
+            labels: top.map((c) => c || "Unknown"),
             datasets: apps.map((a) => ({
                 label: a.name,
                 data: top.map((c) => byCountry.find((r) => r.key === c && r.app === a.id)?.value ?? 0),
@@ -1223,8 +1284,8 @@ function renderLive() {
             indexAxis: "y",
             maintainAspectRatio: false,
             interaction: { mode: "index", intersect: false, axis: "y" },
-            scales: { x: { stacked: true, ticks: { precision: 0 } }, y: { stacked: true, grid: { display: false } } },
-            plugins: { legend },
+            scales: { x: { stacked: true, ticks: { precision: 0 } }, y: countryAxis() },
+            plugins: { legend, countryFlags: { enabled: true }, tooltip: { callbacks: { title: countryTooltipTitle } } },
         },
     });
     table("tbl-live-versions", [["App"], ["Version"], ["Active users", 1]],
@@ -1261,6 +1322,10 @@ function switchTab(tab) {
     }
 }
 
+function isPhone() {
+    return window.matchMedia("(max-width: 600px)").matches;
+}
+
 function chartDefaults() {
     Chart.defaults.font.family = getComputedStyle(root).fontFamily;
     Chart.defaults.color = css("--text-secondary");
@@ -1270,6 +1335,7 @@ function chartDefaults() {
     Chart.defaults.plugins.tooltip.padding = 10;
     Chart.defaults.plugins.tooltip.cornerRadius = 8;
     Chart.defaults.plugins.tooltip.boxPadding = 4;
+    Chart.defaults.font.size = isPhone() ? 11 : 12;
 }
 
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => switchTab(b.dataset.tab)));
