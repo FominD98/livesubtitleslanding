@@ -151,9 +151,9 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 .chart.donut { height: 240px; }
 
 .tile { position: relative; overflow: hidden; }
-.tile .spark { position: absolute; left: 0; right: 0; bottom: 0; height: 34px; opacity: .9; }
+.tile .spark { position: absolute; left: 0; right: 0; bottom: 0; height: 30px; opacity: .9; }
 .tile .label, .tile .value, .tile .delta { position: relative; }
-.tile { padding-bottom: 44px; }
+.tile { padding-bottom: 54px; }
 
 .small { font-size: 12px; margin: 8px 0 0; }
 .scroll.wide { max-height: 520px; }

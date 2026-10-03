@@ -163,14 +163,42 @@ function series(rows, keyOf, valueOf) {
 
 /* ---------- Sales ---------- */
 
+function shiftDay(day, n) {
+    const d = new Date(day + "T00:00:00Z");
+    d.setUTCDate(d.getUTCDate() + n);
+    return isoDay(d);
+}
+
+// Окна сравнения по площадке заканчиваются на последнем дне, за который у неё есть данные:
+// иначе отставшая выгрузка (MS Store) выглядит как падение продаж
+function aligned(platform) {
+    const today = isoDay(new Date());
+    const src = state.sales.sources.find((s) => s.name === platform);
+    const end = src && src.covered_to < today ? src.covered_to : today;
+    const rows = state.sales.daily.filter((r) => r.platform === platform);
+    const from = shiftDay(end, -state.days);
+    const prevFrom = shiftDay(end, -2 * state.days);
+    return {
+        end,
+        lagging: end < shiftDay(today, -2),
+        cur: rows.filter((r) => r.day > from && r.day <= end),
+        prev: rows.filter((r) => r.day > prevFrom && r.day <= from),
+    };
+}
+
 function renderSales() {
     const { daily } = state.sales;
-    const cutoff = isoDay(new Date(Date.now() - state.days * 86400000));
+    const cutoff = shiftDay(isoDay(new Date()), -state.days);
     const cur = daily.filter((r) => r.day > cutoff);
-    const prev = daily.filter((r) => r.day <= cutoff);
-    renderTiles(cur, prev);
+    const windows = Object.fromEntries(PLATFORMS.map((p) => [p.id, aligned(p.id)]));
+    const lagging = PLATFORMS.filter((p) => windows[p.id].lagging);
+    const note = document.getElementById("lag-note");
+    note.hidden = !lagging.length;
+    note.textContent = lagging.map((p) => `${p.name} data until ${windows[p.id].end}`).join(" · ")
+        + " — changes vs previous period compare windows ending on that date.";
+    renderTiles(cur, windows);
     renderDaily(cur);
-    renderPlatforms(cur, prev);
+    renderPlatforms(cur, windows);
     renderChannels();
     renderEntries();
     renderAcquisition();
@@ -179,18 +207,25 @@ function renderSales() {
     renderSources("tbl-sources", state.sales.sources);
 }
 
-function renderTiles(cur, prev) {
+function alignedSum(windows, key, f) {
+    return sum(PLATFORMS, (p) => sum(windows[p.id][key], f));
+}
+
+function renderTiles(cur, windows) {
     const net = series(cur, () => "all", (r) => r.net);
     const units = series(cur, () => "all", (r) => r.units);
     const netTotal = sum(cur, (r) => r.net);
     const unitsTotal = sum(cur, (r) => r.units);
     const refunds = sum(cur, (r) => r.refunds);
     renderTileRow("tiles", [
-        { label: "Net revenue", value: netTotal, fmt: usd, delta: deltaPct(netTotal, sum(prev, (r) => r.net)),
+        { label: "Net revenue", value: netTotal, fmt: usd,
+          delta: deltaPct(alignedSum(windows, "cur", (r) => r.net), alignedSum(windows, "prev", (r) => r.net)),
           spark: net.labels.map((l) => net.value("all", l)) },
-        { label: "Units sold", value: unitsTotal, fmt: int, delta: deltaPct(unitsTotal, sum(prev, (r) => r.units)),
+        { label: "Units sold", value: unitsTotal, fmt: int,
+          delta: deltaPct(alignedSum(windows, "cur", (r) => r.units), alignedSum(windows, "prev", (r) => r.units)),
           spark: units.labels.map((l) => units.value("all", l)) },
-        { label: "Daily average", value: netTotal / state.days, fmt: usd, delta: deltaPct(netTotal, sum(prev, (r) => r.net)) },
+        { label: "Daily average", value: netTotal / state.days, fmt: usd,
+          delta: deltaPct(alignedSum(windows, "cur", (r) => r.net), alignedSum(windows, "prev", (r) => r.net)) },
         { label: "Refunds", value: refunds, fmt: usd,
           delta: el("span", { class: "muted" }, netTotal ? `${(Math.abs(refunds) / (netTotal - refunds) * 100).toFixed(1)}% of revenue` : "") },
     ]);
@@ -257,7 +292,7 @@ function renderDaily(cur) {
     });
 }
 
-function renderPlatforms(cur, prev) {
+function renderPlatforms(cur, windows) {
     const total = sum(cur, (r) => r.net);
     const nets = PLATFORMS.map((p) => sum(cur.filter((r) => r.platform === p.id), (r) => r.net));
     draw("chart-platforms", {
@@ -278,16 +313,17 @@ function renderPlatforms(cur, prev) {
     });
     const rows = PLATFORMS.map((p, i) => {
         const c = cur.filter((r) => r.platform === p.id);
-        const pr = prev.filter((r) => r.platform === p.id);
+        const w = windows[p.id];
         return el("tr", {},
             td([swatch(p.id), p.name + (c.some((r) => r.estimated) ? " *" : "")]),
             td(usd(nets[i]), true),
             td(total ? `${(nets[i] / total * 100).toFixed(0)}%` : "—", true),
             td(int(sum(c, (r) => r.units)), true),
             td(usd(sum(c, (r) => r.refunds)), true),
-            td(deltaPct(nets[i], sum(pr, (r) => r.net)), true));
+            td(deltaPct(sum(w.cur, (r) => r.net), sum(w.prev, (r) => r.net)), true),
+            td(w.lagging ? w.end : "", false, "muted"));
     });
-    table("tbl-platforms", [["Platform"], ["Net", 1], ["Share", 1], ["Units", 1], ["Refunds", 1], ["vs prev.", 1]], rows);
+    table("tbl-platforms", [["Platform"], ["Net", 1], ["Share", 1], ["Units", 1], ["Refunds", 1], ["vs prev.", 1], ["Data until"]], rows);
 }
 
 function renderChannels() {
@@ -348,17 +384,21 @@ function sourceLabel(source, campaign) {
 }
 
 function renderAcquisition() {
-    const acq = state.sales.acquisition;
-    const block = (metric, target, title) => {
-        const rows = acq.filter((r) => r.metric === metric);
-        const total = sum(rows, (r) => r.value);
-        table(target, [[title], ["Count", 1], ["Share", 1]], rows.slice(0, 25).map((r) => el("tr", {},
-            td(sourceLabel(r.source, r.campaign)),
-            td(int(r.value), true),
-            td(total ? `${(r.value / total * 100).toFixed(1)}%` : "", true))));
-    };
-    block("new_users", "tbl-acq-users", "New users by first source");
-    block("purchases", "tbl-acq-purchases", "Purchases by session source");
+    const apps = [["windows", "Windows"], ["android", "Android"], ["apple", "iOS / Mac"]];
+    const by = {};
+    for (const r of state.sales.acquisition) {
+        const key = sourceLabel(r.source, r.campaign);
+        by[key] ??= { total: 0 };
+        by[key][r.app] = (by[key][r.app] || 0) + r.value;
+        by[key].total += r.value;
+    }
+    const total = sum(Object.values(by), (v) => v.total);
+    const rows = Object.entries(by).sort((a, b) => b[1].total - a[1].total).slice(0, 30);
+    table("tbl-acq-users", [["Source"], ...apps.map(([, n]) => [n, 1]), ["Total", 1], ["Share", 1]], rows.map(([k, v]) => el("tr", {},
+        td(k),
+        apps.map(([id]) => td(v[id] ? int(v[id]) : "", true)),
+        td(int(v.total), true),
+        td(total ? `${(v.total / total * 100).toFixed(1)}%` : "", true))));
     table("tbl-campaigns", [["UTM campaign (Paddle)"], ["Platform"], ["Net", 1], ["Units", 1]],
         state.sales.campaigns.map((r) => el("tr", {}, td(r.campaign), td([swatch(r.platform), byId[r.platform].name]),
             td(usd(r.net), true), td(int(r.units), true))),

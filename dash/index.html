@@ -32,6 +32,7 @@
 
     <main id="tab-sales" class="tab-panel">
       <section class="tiles" id="tiles"></section>
+      <p class="muted small lag" id="lag-note" hidden></p>
 
       <section class="card">
         <div class="card-head">
@@ -65,13 +66,10 @@
 
       <section class="card">
         <div class="card-head">
-          <h2>Traffic sources</h2>
-          <span class="muted">GA4 counts. Revenue comes from the stores, not GA4.</span>
+          <h2>New users by first source (GA4)</h2>
+          <span class="muted">Installs only. GA4 purchases overcount 3–5× and are not used.</span>
         </div>
-        <div class="grid2">
-          <div class="scroll"><table class="tbl" id="tbl-acq-users"></table></div>
-          <div class="scroll"><table class="tbl" id="tbl-acq-purchases"></table></div>
-        </div>
+        <div class="scroll"><table class="tbl" id="tbl-acq-users"></table></div>
         <table class="tbl" id="tbl-campaigns"></table>
       </section>
 
@@ -89,7 +87,7 @@
       <section class="card">
         <h2>Data freshness</h2>
         <table class="tbl" id="tbl-sources"></table>
-        <p class="muted">* estimate: today's FX rates; Google Play's open month assumes a 15% fee.</p>
+        <p class="muted">* estimate. App Store: Apple sales report converted at today's FX, ±10% vs Apple's own USD figures. Google Play: the open month assumes a 15% fee and becomes exact when the monthly earnings report arrives. Paddle and Microsoft Store are exact.</p>
       </section>
     </main>
 
@@ -103,7 +101,7 @@
             <span class="muted" id="aso-trend-note"></span>
           </div>
           <div class="chart"><canvas id="chart-aso-visibility"></canvas></div>
-          <p class="muted small">Σ Google monthly searches × share of clicks at our rank. For comparing over time, not an install forecast.</p>
+          <p class="muted small">Σ Google monthly searches × share of clicks at our rank, over listing and curated keywords (market-wide Planner terms excluded). For comparing over time, not an install forecast.</p>
         </section>
         <section class="card">
           <h2>Rank distribution</h2>
