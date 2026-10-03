@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dash-api.live-subtitles.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <title>Dashboard</title>
-<link rel="stylesheet" href="dash.css?v=cbf1219423">
+<link rel="stylesheet" href="dash.css?v=754aed976e">
 </head>
 <body>
 <div class="viz-root">
@@ -33,6 +33,7 @@
       </div>
       <span id="user" class="muted"></span>
     </header>
+    <section class="summary" id="summary" hidden></section>
 
     <main id="tab-sales" class="tab-panel">
       <section class="tiles" id="tiles"></section>
@@ -167,7 +168,20 @@
         </div>
         <div class="chart tall"><canvas id="chart-funnel"></canvas></div>
         <table class="tbl" id="tbl-funnel"></table>
-        <p class="muted small">Closed funnel over unique users who started onboarding in the window. Buyers who installed earlier are not in it — compare with Sales for total purchases.</p>
+        <p class="muted small">Closed funnel over unique users who started onboarding in the window. Buyers who installed earlier are not in it — compare with Sales for total purchases. Windows purchases are undercounted in GA4 (web checkout events get lost): the real checkout → paid rate is in the Paddle block below.</p>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Paddle checkout: opened → paid</h2>
+          <span class="muted">every checkout opened from the Windows app or the website</span>
+        </div>
+        <div class="grid2">
+          <div class="chart"><canvas id="chart-checkout"></canvas></div>
+          <div><table class="tbl" id="tbl-checkout-uplift"></table>
+            <p class="muted small">Tax added on top = how much Paddle's total exceeds the item price after discount (VAT/GST added on top in some countries).</p></div>
+        </div>
+        <div class="scroll"><table class="tbl" id="tbl-checkout-products"></table></div>
       </section>
 
       <section class="card">
@@ -211,7 +225,7 @@
       <section class="card">
         <h2>Plans</h2>
         <div class="scroll"><table class="tbl" id="tbl-subs-products"></table></div>
-        <p class="muted small">MRR = recurring net revenue per month (annual plans ÷ 12). Paddle: last real payment of each subscription. App Store: today's FX. Google Play: active × average net price over 90 days, stats arrive ~2 weeks late.</p>
+        <p class="muted small">MRR = recurring net revenue per month (annual plans ÷ 12). Paddle: last real payment of each subscription. App Store: today's FX. Google Play: active × average net price over 90 days, stats arrive ~2 weeks late, and its "new" counts include started free trials. LTV = revenue per monthly subscriber ÷ monthly churn.</p>
       </section>
     </main>
 
@@ -280,6 +294,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=a63192f4c7"></script>
+<script src="app.js?v=9b70061e1c"></script>
 </body>
 </html>

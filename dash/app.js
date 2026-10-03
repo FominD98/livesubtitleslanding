@@ -103,19 +103,39 @@ function draw(id, config) {
 const legend = { position: "top", align: "start", labels: { boxWidth: 10, boxHeight: 10, usePointStyle: true, pointStyle: "rectRounded" } };
 const timeX = { grid: { display: false }, ticks: { maxRotation: 0, autoSkipPadding: 16 } };
 
-async function api(path) {
+// Без входа Access отвечает редиректом на чужой домен — fetch падает целиком (нет ответа): это вход.
+// Ответ с кодом ошибки — сбой сервера: показываем ошибку, а не логин. quiet — для необязательных блоков.
+async function api(path, { quiet = false } = {}) {
     let res;
     try {
         res = await fetch(`${API}${path}`, { credentials: "include" });
     } catch {
         res = null;
     }
-    if (!res || !res.ok) {
-        showLogin();
+    if (!res) {
+        if (!quiet) showLogin();
+        return null;
+    }
+    if (!res.ok) {
+        if (!quiet) showError(`Couldn't load data (${res.status}). Try again in a minute.`);
         return null;
     }
     sessionStorage.removeItem("loginTried");
+    document.getElementById("load-error")?.setAttribute("hidden", "");
     return res.json();
+}
+
+function showError(text) {
+    const panel = document.getElementById(`tab-${state.tab}`);
+    panel.classList.remove("loading");
+    let box = document.getElementById("load-error");
+    if (!box) {
+        box = el("p", { id: "load-error", class: "card down" });
+        document.getElementById("app").insertBefore(box, document.getElementById("summary"));
+    }
+    box.textContent = text;
+    box.hidden = false;
+    document.getElementById("app").hidden = false;
 }
 
 function showLogin() {
@@ -142,6 +162,7 @@ async function load() {
     document.getElementById("login").hidden = true;
     document.getElementById("app").hidden = false;
     document.getElementById("user").textContent = data.user;
+    loadSummary();
     if (tab !== state.tab) return;
     RENDER[tab]();
     if (tab === "live") scheduleLive();
@@ -305,6 +326,8 @@ function renderTiles(cur, windows) {
           spark: units.labels.map((l) => units.value("all", l)) },
         { label: "Daily average", value: netTotal / coveredDays(cur), fmt: usd,
           delta: deltaPct(alignedSum(windows, "cur", (r) => r.net), alignedSum(windows, "prev", (r) => r.net)) },
+        { label: "Average order", value: unitsTotal ? (netTotal - refunds) / unitsTotal : 0, fmt: (v) => `$${v.toFixed(2)}`,
+          delta: el("span", { class: "muted" }, "net before refunds ÷ units") },
         { label: "Refunds", value: refunds, fmt: usd,
           delta: el("span", { class: "muted" }, netTotal ? `${(Math.abs(refunds) / (netTotal - refunds) * 100).toFixed(1)}% of revenue` : "") },
     ]);
@@ -939,6 +962,7 @@ function renderFunnel() {
             plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y?.toFixed(2)}%` } } },
         },
     });
+    renderCheckout();
     appSelect("retention-app", RETENTION_APPS, state.funnelSel.retentionApp, (v) => {
         state.funnelSel.retentionApp = v;
         renderRetention();
@@ -990,16 +1014,27 @@ function renderSubs() {
     const firstDay = filled.days.find((d) => d > cut) ?? filled.days[0];
     const baseActive = sum(plats, (p) => filled.get(p.id, firstDay, "active"));
     const baseMrr = sum(plats, (p) => filled.get(p.id, firstDay, "mrr"));
-    const recentDays = filled.days.filter((d) => d > cut);
-    const avgMonthly = recentDays.length
-        ? sum(recentDays, (d) => sum(plats, (p) => filled.get(p.id, d, "active_monthly"))) / recentDays.length : 0;
+    // как в сводке: среднее по каждой площадке за дни, где у неё есть данные (Play отстаёт), потом сумма
+    const avgMonthly = sum(plats, (p) => {
+        const rows = recent.filter((r) => r.platform === p.id);
+        return rows.length ? sum(rows, (r) => r.active_monthly) / rows.length : 0;
+    });
     const cancelledMonthly = sum(recent, (r) => r.cancelled_monthly);
+    const lastDay = filled.days[filled.days.length - 1];
+    const mrrMonthly = sum(plats, (p) => filled.get(p.id, lastDay, "mrr_monthly"));
+    const activeMonthly = sum(plats, (p) => filled.get(p.id, lastDay, "active_monthly"));
+    const churnMonthly = avgMonthly ? cancelledMonthly / avgMonthly : 0;
+    const ltvMonthly = churnMonthly && activeMonthly ? mrrMonthly / activeMonthly / churnMonthly : 0;
     renderTileRow("subs-tiles", [
         { label: "MRR, net", value: mrr, fmt: usd, delta: deltaPct(mrr, baseMrr), spark: filled.days.map((d) => sum(plats, (p) => filled.get(p.id, d, "mrr"))) },
         { label: "Active paid subscriptions", value: active, fmt: int, delta: deltaPct(active, baseActive), spark: filled.days.map((d) => sum(plats, (p) => filled.get(p.id, d, "active"))) },
         { label: "New, last 30 days", value: newSubs, fmt: int, delta: el("span", { class: "muted" }, `${int(cancelled)} cancelled`) },
         { label: "Monthly churn, monthly plans", value: avgMonthly ? cancelledMonthly / avgMonthly : 0, fmt: (v) => pct(v),
           delta: el("span", { class: "muted" }, `${int(cancelledMonthly)} cancelled ÷ ${int(avgMonthly)} average active, 30 days`) },
+        { label: "Revenue per subscriber, month", value: active ? mrr / active : 0, fmt: (v) => `$${v.toFixed(2)}`,
+          delta: el("span", { class: "muted" }, "MRR ÷ paid subscriptions") },
+        { label: "LTV, monthly plans", value: ltvMonthly, fmt: usd,
+          delta: el("span", { class: "muted" }, "net per month ÷ monthly churn") },
     ]);
     document.getElementById("subs-note").textContent = plats.map((p) => `${p.name} data until ${latest[p.id].day}`).join(" · ");
 
@@ -1312,6 +1347,69 @@ function scheduleLive() {
     }, 30000);
 }
 
+/* ---------- Summary strip (always last 30 days) ---------- */
+
+let summaryLoaded = false;
+
+async function loadSummary() {
+    if (summaryLoaded) return;
+    summaryLoaded = true;
+    const s = await api("/api/summary", { quiet: true });
+    if (!s) return;
+    const box = document.getElementById("summary");
+    const item = (label, value, sub, warn = false) => el("div", { class: `s-item${warn ? " s-warn" : ""}` },
+        el("div", { class: "s-label" }, label), el("div", { class: "s-value" }, value), sub ? el("div", { class: "s-sub" }, sub) : null);
+    const rev = s.revenue || {};
+    const churn = s.churn?.avg_active ? s.churn.cancelled / s.churn.avg_active : null;
+    const conv = s.funnel?.started ? s.funnel.purchased / s.funnel.started : null;
+    const checkout = s.checkout?.opened ? s.checkout.paid / s.checkout.opened : null;
+    const staleHours = s.lastRun ? (Date.now() - Date.parse(s.lastRun)) / 3600000 : 0;
+    const change = rev.prev ? (rev.cur - rev.prev) / Math.abs(rev.prev) * 100 : null;
+    box.replaceChildren(
+        item("Net revenue, 30 days", usd(rev.cur || 0), change === null ? null : `${change >= 0 ? "▲" : "▼"} ${Math.abs(change).toFixed(0)}% vs previous 30`),
+        item("MRR", usd(s.mrr?.mrr || 0), `${int(s.mrr?.active || 0)} paid subscriptions`),
+        item("Monthly churn", churn === null ? "—" : pct(churn), "monthly plans"),
+        item("Onboarding → purchase", conv === null ? "—" : pct(conv, 2), "all apps, 30 days"),
+        item("Paddle checkout → paid", checkout === null ? "—" : pct(checkout), `${int(s.checkout?.opened || 0)} checkouts opened`),
+        item("Active right now", s.activeNow === null ? "—" : int(s.activeNow), "last 30 minutes"),
+        ...(staleHours > 36 ? [item("Data", `${Math.round(staleHours / 24)} days old`, "daily collector did not run", true)] : []),
+    );
+    box.hidden = false;
+}
+
+/* ---------- Funnel: Paddle checkout ---------- */
+
+const UPLIFT_LABELS = ["No tax on top", "Tax on top 1–10%", "Tax on top 10–20%", "Tax on top over 20%"];
+
+function renderCheckout() {
+    const { checkout, uplift, checkoutProducts } = state.funnel;
+    const n = (status) => checkout.find((r) => r.status === status)?.n ?? 0;
+    const opened = sum(checkout, (r) => r.n);
+    const details = n("left_after_details") + n("paid");
+    const paid = n("paid");
+    draw("chart-checkout", {
+        type: "bar",
+        data: {
+            labels: ["Opened checkout", "Entered details", "Paid"],
+            datasets: [{ data: [opened, details, paid], backgroundColor: [css("--rank-3"), css("--rank-2"), css("--rank-1")], borderRadius: 4, maxBarThickness: 56 }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            scales: { x: { grid: { display: false } }, y: { beginAtZero: true, ticks: { precision: 0 } } },
+            plugins: {
+                legend: { display: false },
+                tooltip: { callbacks: { label: (c) => `${int(c.parsed.y)} · ${opened ? pct(c.parsed.y / opened) : ""} of opened` } },
+            },
+        },
+    });
+    table("tbl-checkout-uplift", [["Price at checkout"], ["Opened", 1], ["Left at first screen", 1], ["Paid", 1]],
+        uplift.map((r) => el("tr", {}, td(UPLIFT_LABELS[r.bucket]), td(int(r.opened), true),
+            td(pct(r.left_first / r.opened, 0), true), td(pct(r.paid / r.opened), true))));
+    table("tbl-checkout-products", [["Product"], ["Opened", 1], ["Paid", 1], ["Conversion", 1], ["Avg. tax on top", 1]],
+        checkoutProducts.map((r) => el("tr", {}, td(r.product), td(int(r.opened), true), td(int(r.paid), true),
+            td(pct(r.paid / r.opened), true, r.opened >= 20 && r.paid / r.opened < 0.05 ? "down" : ""), td(`${r.uplift.toFixed(1)}%`, true))));
+}
+
 /* ---------- wiring ---------- */
 
 const RENDER = { sales: renderSales, aso: renderAso, funnel: renderFunnel, subs: renderSubs, health: renderHealth, live: renderLive };
@@ -1343,6 +1441,7 @@ function chartDefaults() {
     Chart.defaults.plugins.tooltip.cornerRadius = 8;
     Chart.defaults.plugins.tooltip.boxPadding = 4;
     Chart.defaults.font.size = isPhone() ? 11 : 12;
+    Chart.defaults.locale = "en-US";
 }
 
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => switchTab(b.dataset.tab)));
