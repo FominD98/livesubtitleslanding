@@ -30,7 +30,8 @@ const usd = (v) => (v < 0 ? "−$" : "$") + Math.abs(v).toLocaleString("en-US", 
 const int = (v) => Math.round(v).toLocaleString("en-US");
 const sum = (rows, f) => rows.reduce((a, r) => a + (f(r) || 0), 0);
 
-const state = { tab: "sales", days: 30, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
+const M = () => state.salesMetric;
+const state = { salesMetric: localStorage.getItem("salesMetric") || "net", ga4: null, tab: "sales", days: 30, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
 
 function el(tag, attrs = {}, ...children) {
     const node = document.createElement(tag);
@@ -154,7 +155,7 @@ async function load() {
     const panel = document.getElementById(`tab-${tab}`);
     panel.classList.add("loading");
     const days = state.days;
-    const data = await api(`/api/${tab}?days=${days}`);
+    const data = await api(tab === "ga4" ? ga4Path() : `/api/${tab}?days=${days}`);
     if (days !== state.days) return;
     panel.classList.remove("loading");
     if (!data) return;
@@ -275,6 +276,7 @@ function aligned(platform) {
 
 function renderSales() {
     const { daily } = state.sales;
+    document.querySelectorAll("#metric-toggle button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.metric === M())));
     const cutoff = shiftDay(isoDay(new Date()), -state.days);
     const cur = daily.filter((r) => r.day > cutoff);
     const windows = Object.fromEntries(PLATFORMS.map((p) => [p.id, aligned(p.id)]));
@@ -312,20 +314,20 @@ function alignedSum(windows, key, f) {
 }
 
 function renderTiles(cur, windows) {
-    const net = series(cur, () => "all", (r) => r.net);
+    const net = series(cur, () => "all", (r) => r[M()]);
     const units = series(cur, () => "all", (r) => r.units);
-    const netTotal = sum(cur, (r) => r.net);
+    const netTotal = sum(cur, (r) => r[M()]);
     const unitsTotal = sum(cur, (r) => r.units);
     const refunds = sum(cur, (r) => r.refunds);
     renderTileRow("tiles", [
-        { label: "Net revenue", value: netTotal, fmt: usd,
-          delta: deltaPct(alignedSum(windows, "cur", (r) => r.net), alignedSum(windows, "prev", (r) => r.net)),
+        { label: M() === "net" ? "Net revenue" : "Gross revenue", value: netTotal, fmt: usd,
+          delta: deltaPct(alignedSum(windows, "cur", (r) => r[M()]), alignedSum(windows, "prev", (r) => r[M()])),
           spark: net.labels.map((l) => net.value("all", l)) },
         { label: "Units sold", value: unitsTotal, fmt: int,
           delta: deltaPct(alignedSum(windows, "cur", (r) => r.units), alignedSum(windows, "prev", (r) => r.units)),
           spark: units.labels.map((l) => units.value("all", l)) },
         { label: "Daily average", value: netTotal / coveredDays(cur), fmt: usd,
-          delta: deltaPct(alignedSum(windows, "cur", (r) => r.net), alignedSum(windows, "prev", (r) => r.net)) },
+          delta: deltaPct(alignedSum(windows, "cur", (r) => r[M()]), alignedSum(windows, "prev", (r) => r[M()])) },
         { label: "Average order", value: unitsTotal ? (netTotal - refunds) / unitsTotal : 0, fmt: (v) => `$${v.toFixed(2)}`,
           delta: el("span", { class: "muted" }, "net before refunds ÷ units") },
         { label: "Refunds", value: refunds, fmt: usd,
@@ -356,7 +358,7 @@ function renderTileRow(target, tiles) {
 }
 
 function renderDaily(cur) {
-    const { labels, value } = series(cur, (r) => r.platform, (r) => r.net);
+    const { labels, value } = series(cur, (r) => r.platform, (r) => r[M()]);
     document.getElementById("daily-note").textContent = state.days > 90 ? "weekly · the last week is still in progress" : "daily";
     draw("chart-daily", {
         type: "line",
@@ -395,8 +397,8 @@ function renderDaily(cur) {
 }
 
 function renderPlatforms(cur, windows) {
-    const total = sum(cur, (r) => r.net);
-    const nets = PLATFORMS.map((p) => sum(cur.filter((r) => r.platform === p.id), (r) => r.net));
+    const total = sum(cur, (r) => r[M()]);
+    const nets = PLATFORMS.map((p) => sum(cur.filter((r) => r.platform === p.id), (r) => r[M()]));
     draw("chart-platforms", {
         type: "doughnut",
         data: {
@@ -422,10 +424,10 @@ function renderPlatforms(cur, windows) {
             td(total ? `${(nets[i] / total * 100).toFixed(0)}%` : "—", true),
             td(int(sum(c, (r) => r.units)), true),
             td(usd(sum(c, (r) => r.refunds)), true),
-            td(deltaPct(sum(w.cur, (r) => r.net), sum(w.prev, (r) => r.net)), true),
+            td(deltaPct(sum(w.cur, (r) => r[M()]), sum(w.prev, (r) => r[M()])), true),
             td(w.lagging ? w.end : "", false, "muted"));
     });
-    table("tbl-platforms", [["Platform"], ["Net", 1], ["Share", 1], ["Units", 1], ["Refunds", 1], ["vs prev.", 1], ["Data until"]], rows);
+    table("tbl-platforms", [["Platform"], [M() === "net" ? "Net" : "Gross", 1], ["Share", 1], ["Units", 1], ["Refunds", 1], ["vs prev.", 1], ["Data until"]], rows);
 }
 
 function renderChannels() {
@@ -510,7 +512,7 @@ function renderAcquisition() {
 function renderCountries() {
     const rows = state.sales.countries;
     const totals = {};
-    for (const r of rows) totals[r.country] = (totals[r.country] || 0) + r.net;
+    for (const r of rows) totals[r.country] = (totals[r.country] || 0) + r[M()];
     const top = Object.entries(totals).sort((a, b) => b[1] - a[1]).slice(0, 15).map(([c]) => c);
     draw("chart-countries", {
         type: "bar",
@@ -518,7 +520,7 @@ function renderCountries() {
             labels: top,
             datasets: PLATFORMS.map((p) => ({
                 label: p.name,
-                data: top.map((c) => sum(rows.filter((r) => r.country === c && r.platform === p.id), (r) => r.net)),
+                data: top.map((c) => sum(rows.filter((r) => r.country === c && r.platform === p.id), (r) => r[M()])),
                 backgroundColor: color(p.id),
                 borderColor: css("--surface-1"),
                 borderWidth: { right: 2 },
@@ -548,9 +550,9 @@ function renderCountries() {
 }
 
 function renderProducts() {
-    table("tbl-products", [["Product"], ["Store"], ["Net", 1], ["Units", 1], ["Refunded", 1]], state.sales.products.map((r) => el("tr", {},
+    table("tbl-products", [["Product"], ["Store"], [M() === "net" ? "Net" : "Gross", 1], ["Units", 1], ["Refunded", 1]], state.sales.products.map((r) => el("tr", {},
         td([swatch(r.platform), r.product]), td(byId[r.platform].name, false, "muted"),
-        td(usd(r.net), true),
+        td(usd(r[M()]), true),
         td(int(r.units), true),
         td(r.refunded ? int(r.refunded) : "", true))));
 }
@@ -1422,15 +1424,110 @@ function renderCheckout() {
             td(pct(r.paid / r.opened), true, r.opened >= 20 && r.paid / r.opened < 0.05 ? "down" : ""), td(`${r.uplift.toFixed(1)}%`, true))));
 }
 
+/* ---------- GA4 explorer ---------- */
+
+state.ga4Sel = { range: "7d", app: "all", country: "all" };
+
+function ga4Path() {
+    const q = new URLSearchParams(state.ga4Sel);
+    return `/api/ga4?${q}`;
+}
+
+function ga4Label(t) {
+    // dateHour = YYYYMMDDHH, date = YYYYMMDD (часовой пояс ресурса GA4)
+    return t.length === 10 ? `${t.slice(8)}:00` : `${t.slice(4, 6)}-${t.slice(6)}`;
+}
+
+function renderGa4() {
+    const g = state.ga4;
+    const apps = APPS.filter((a) => g.series.some((r) => r.app === a.id));
+    const times = [...new Set(g.series.map((r) => r.t))].sort();
+    const val = (app, t, k) => g.series.find((r) => r.app === app && r.t === t)?.[k] ?? 0;
+    const total = (k) => sum(g.series, (r) => r[k]);
+
+    document.getElementById("ga4-note").textContent =
+        `Straight from GA4 (cached 5 min, updated ${new Date(g.at).toLocaleTimeString("en-GB")}). Today's numbers keep filling in for a few hours. ` +
+        "GA4 purchases and revenue are overcounted: Android up to 1.0.37 re-sends purchases on every launch, iOS test (sandbox) renewals are counted, " +
+        "Windows web checkouts are partly lost. Real money is on the Sales tab. Windows has no country in GA4 (shown as Unknown).";
+
+    const countrySel = document.getElementById("ga4-country");
+    const keep = state.ga4Sel.country;
+    const isCode = (c) => /^[A-Z]{2}$/.test(c || "");
+    const codes = g.countries.map((c) => c.code).filter(isCode);
+    if (keep !== "all" && !codes.includes(keep)) codes.unshift(keep);
+    countrySel.replaceChildren(el("option", { value: "all" }, "All countries"),
+        ...codes.map((c) => el("option", { value: c }, `${countryName(c)} (${c})`)));
+    countrySel.value = keep;
+
+    renderTileRow("ga4-tiles", [
+        { label: "Active users", value: sum(g.countries, (c) => c.active), fmt: int },
+        { label: "New users", value: total("new"), fmt: int },
+        { label: "Purchases (GA4)", value: total("purchases"), fmt: int },
+        { label: "Revenue (GA4)", value: total("revenue"), fmt: usd, delta: el("span", { class: "muted" }, "overcounted") },
+    ]);
+
+    draw("chart-ga4-users", {
+        type: "line",
+        data: { labels: times.map(ga4Label), datasets: apps.map((a) => lineDataset(a.name, times.map((t) => val(a.id, t, "active")), appColor(a.id), true)) },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { beginAtZero: true, ticks: { precision: 0 } } },
+            plugins: { legend },
+        },
+    });
+    draw("chart-ga4-purchases", {
+        type: "bar",
+        data: {
+            labels: times.map(ga4Label),
+            datasets: apps.map((a) => ({
+                label: a.name, data: times.map((t) => val(a.id, t, "purchases")), backgroundColor: appColor(a.id),
+                borderColor: css("--surface-1"), borderWidth: { top: 2 }, borderRadius: 4, borderSkipped: "bottom", maxBarThickness: 22,
+            })),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: { ...timeX, stacked: true }, y: { stacked: true, beginAtZero: true, ticks: { precision: 0 } } },
+            plugins: {
+                legend,
+                tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y} purchases, ${usd(val(apps[c.datasetIndex].id, times[c.dataIndex], "revenue"))}` } },
+            },
+        },
+    });
+    table("tbl-ga4-events", [["Event"], ["Users", 1], ["Count", 1]],
+        g.events.map((e) => el("tr", {}, td(e.name), td(int(e.users), true), td(int(e.count), true))));
+    table("tbl-ga4-countries", [["Country"], ["Active", 1], ["New", 1], ["Purchases", 1], ["Revenue", 1]],
+        g.countries.map((c) => el("tr", { class: "clickable", onclick: () => setGa4({ country: isCode(c.code) ? c.code : "all" }) },
+            td(isCode(c.code) ? withFlag(c.code, countryName(c.code)) : "Unknown (Windows / not set)"), td(int(c.active), true), td(int(c.new), true),
+            td(int(c.purchases), true), td(usd(c.revenue), true))));
+    table("tbl-ga4-sources", [["Source"], ["New users", 1], ["Purchases", 1]],
+        g.sources.map((x) => el("tr", {}, td(x.source), td(int(x.new), true), td(int(x.purchases), true))));
+    table("tbl-ga4-items", [["Item"], ["Units", 1], ["Revenue", 1]],
+        g.items.map((x) => el("tr", {}, td(x.name), td(int(x.units), true), td(usd(x.revenue), true))),
+        "No item data in GA4 for this filter");
+}
+
+function setGa4(change) {
+    Object.assign(state.ga4Sel, change);
+    for (const [k, v] of Object.entries(state.ga4Sel)) document.getElementById(`ga4-${k}`).value = v;
+    state.ga4 = null;
+    load();
+}
+
+for (const key of ["range", "app", "country"]) {
+    document.getElementById(`ga4-${key}`).addEventListener("change", (e) => setGa4({ [key]: e.target.value }));
+}
+
 /* ---------- wiring ---------- */
 
-const RENDER = { sales: renderSales, aso: renderAso, funnel: renderFunnel, subs: renderSubs, health: renderHealth, live: renderLive };
+const RENDER = { sales: renderSales, aso: renderAso, funnel: renderFunnel, subs: renderSubs, health: renderHealth, live: renderLive, ga4: renderGa4 };
 
 function switchTab(tab) {
     state.tab = RENDER[tab] ? tab : "sales";
     document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
     for (const name of Object.keys(RENDER)) document.getElementById(`tab-${name}`).hidden = name !== state.tab;
-    document.querySelector(".top .filters").hidden = state.tab === "live";
+    document.querySelector(".top .filters").hidden = state.tab === "live" || state.tab === "ga4";
     history.replaceState(null, "", `#${state.tab}`);
     if (state.tab === "live" || !state[state.tab]) {
         load();
@@ -1457,6 +1554,11 @@ function chartDefaults() {
 }
 
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => switchTab(b.dataset.tab)));
+document.querySelectorAll("#metric-toggle button").forEach((b) => b.addEventListener("click", () => {
+    state.salesMetric = b.dataset.metric;
+    localStorage.setItem("salesMetric", state.salesMetric);
+    if (state.sales) renderSales();
+}));
 document.querySelectorAll(".top .filters button").forEach((b) => b.addEventListener("click", () => {
     document.querySelectorAll(".top .filters button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
     state.days = Number(b.dataset.days);

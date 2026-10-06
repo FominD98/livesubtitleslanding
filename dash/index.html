@@ -24,6 +24,7 @@
         <button role="tab" data-tab="subs" aria-selected="false">Subscriptions</button>
         <button role="tab" data-tab="health" aria-selected="false">Health</button>
         <button role="tab" data-tab="live" aria-selected="false">Live</button>
+        <button role="tab" data-tab="ga4" aria-selected="false">GA4</button>
       </nav>
       <div class="filters" role="group" aria-label="Period">
         <button data-days="7">7d</button>
@@ -36,12 +37,16 @@
     <section class="summary" id="summary" hidden></section>
 
     <main id="tab-sales" class="tab-panel">
+      <div class="filters" id="metric-toggle" role="group" aria-label="Revenue">
+        <button data-metric="net" aria-pressed="true" title="What you receive: after store commission and tax">Net · after store fees</button>
+        <button data-metric="gross" aria-pressed="false" title="What customers paid before the store's commission — compare with Paddle / Play consoles">Gross · before fees</button>
+      </div>
       <section class="tiles" id="tiles"></section>
       <p class="muted small lag" id="lag-note" hidden></p>
 
       <section class="card">
         <div class="card-head">
-          <h2>Net revenue, USD</h2>
+          <h2>Revenue, USD</h2>
           <span class="muted" id="daily-note"></span>
         </div>
         <div class="chart"><canvas id="chart-daily"></canvas></div>
@@ -291,9 +296,64 @@
         <table class="tbl" id="tbl-live-versions"></table>
       </section>
     </main>
+    <main id="tab-ga4" class="tab-panel" hidden>
+      <div class="filters">
+        <select id="ga4-range" aria-label="Period">
+          <option value="today">Today (hourly)</option>
+          <option value="yesterday">Yesterday (hourly)</option>
+          <option value="7d" selected>Last 7 days</option>
+          <option value="30d">Last 30 days</option>
+          <option value="90d">Last 90 days</option>
+        </select>
+        <select id="ga4-app" aria-label="App">
+          <option value="all">All apps</option>
+          <option value="windows">Windows</option>
+          <option value="android">Android</option>
+          <option value="apple">iOS</option>
+        </select>
+        <select id="ga4-country" aria-label="Country"><option value="all">All countries</option></select>
+      </div>
+      <p class="muted small" id="ga4-note"></p>
+      <section class="tiles" id="ga4-tiles"></section>
+
+      <section class="card">
+        <h2>Active users</h2>
+        <div class="chart"><canvas id="chart-ga4-users"></canvas></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Purchases reported to GA4</h2>
+          <span class="muted">overcounted — see note above</span>
+        </div>
+        <div class="chart"><canvas id="chart-ga4-purchases"></canvas></div>
+      </section>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>Events</h2>
+          <div class="scroll"><table class="tbl" id="tbl-ga4-events"></table></div>
+        </section>
+        <section class="card">
+          <h2>Countries</h2>
+          <div class="scroll"><table class="tbl" id="tbl-ga4-countries"></table></div>
+        </section>
+      </div>
+
+      <div class="grid2">
+        <section class="card">
+          <h2>First source of new users</h2>
+          <div class="scroll"><table class="tbl" id="tbl-ga4-sources"></table></div>
+        </section>
+        <section class="card">
+          <h2>Purchased items (GA4)</h2>
+          <div class="scroll"><table class="tbl" id="tbl-ga4-items"></table></div>
+        </section>
+      </div>
+    </main>
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=4a3f80ba5d"></script>
+<script src="app.js?v=927cde9f7d"></script>
 </body>
 </html>
