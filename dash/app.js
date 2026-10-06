@@ -939,12 +939,20 @@ function renderFunnel() {
         },
     });
 
-    table("tbl-funnel", [["Step"], ...apps.flatMap((a) => [[a.name, 1], ["→", 1]])], steps.map(([s, name]) => el("tr", {},
-        td(name),
+    // реальные покупки из отчётов магазинов: Windows = Paddle + Microsoft Store, Android = Play, iOS = App Store
+    const STORES_OF = { windows: ["paddle", "msstore"], android: ["play"], apple: ["appstore"] };
+    const storeUnits = (app, key) => sum((state.funnel.storeSales || []).filter((r) => STORES_OF[app]?.includes(r.platform)), (r) => r[key]);
+    const rows = steps.map(([s, name]) => el("tr", {},
+        td(s === last ? `${name} (new users only)` : name),
         apps.flatMap((a) => {
             const prev = s > 1 ? users(a.id, s - 1) : 0;
             return [td(int(users(a.id, s)), true), td(prev ? pct(users(a.id, s) / prev) : "", true, "muted")];
-        }))));
+        })));
+    rows.push(el("tr", { class: "store-row" },
+        td("All purchases in the stores, same days"),
+        apps.flatMap((a) => [td(int(storeUnits(a.id, "units")), true),
+            td(`${int(storeUnits(a.id, "new_units"))} new`, true, "muted")])));
+    table("tbl-funnel", [["Step"], ...apps.flatMap((a) => [[a.name, 1], ["→", 1]])], rows);
 
     const days = [...new Set(trend.map((r) => r.day))].sort();
     document.getElementById("funnel-trend-note").textContent =

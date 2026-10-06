@@ -220,3 +220,5 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 .summary .s-sub { font-size: 11px; color: var(--text-muted); }
 .summary .s-warn { border-left-color: var(--critical); }
 @media (max-width: 600px) { .summary { grid-template-columns: repeat(2, 1fr); } .summary .s-value { font-size: 16px; } }
+
+.tbl tr.store-row td { border-top: 2px solid var(--grid); font-weight: 600; }
