@@ -14,13 +14,6 @@ const CHANNELS = [
     { id: "upgrade", name: "Plan change", color: "--series-7" },
     { id: "unknown", name: "Not reported", color: "--neutral" },
 ];
-const ENTRIES = {
-    "app-windows": "In-app checkout (Windows)",
-    "app-android": "In-app checkout (Android)",
-    "app-captions": "In-app checkout (Live Captions)",
-    website: "Website /buy/ page",
-    unknown: "Unknown",
-};
 const byId = Object.fromEntries(PLATFORMS.map((p) => [p.id, p]));
 
 const root = document.querySelector(".viz-root");
@@ -372,7 +365,7 @@ function renderSales() {
     renderDaily(cur);
     renderPlatforms(cur, windows);
     renderChannels();
-    renderEntries();
+    renderTags();
     renderAcquisition();
     renderCountries();
     renderProducts();
@@ -567,18 +560,26 @@ function renderChannels() {
     });
 }
 
-function renderEntries() {
+// Метку кампании оплате Paddle ставит страница /buy/: из адреса (приложение передаёт campaign id установки
+// из Microsoft Store) или из сессии сайта; gclid/fbc — клик по рекламе без utm. Продления метку не несут.
+function renderTags() {
     const totals = {};
-    for (const r of state.sales.entries) {
-        if (r.net > 0) totals[r.entry] = (totals[r.entry] || 0) + r.net;
+    const units = {};
+    for (const r of state.sales.campaigns) {
+        const key = r.campaign || "No UTM tag";
+        totals[key] = (totals[key] || 0) + r.net;
+        units[key] = (units[key] || 0) + r.units;
     }
-    const keys = Object.keys(totals).sort((a, b) => totals[b] - totals[a]);
-    const all = sum(keys, (k) => totals[k]);
-    draw("chart-entries", {
+    const keys = Object.keys(totals).filter((k) => totals[k] > 0).sort((a, b) => totals[b] - totals[a]).slice(0, 10);
+    const all = sum(Object.values(totals), (v) => v);
+    const tagged = all - (totals["No UTM tag"] || 0);
+    document.getElementById("tags-note").textContent = all ? `${(tagged / all * 100).toFixed(1)}% of Paddle revenue is tagged` : "";
+    draw("chart-tags", {
         type: "bar",
         data: {
-            labels: keys.map((k) => ENTRIES[k] ?? k),
-            datasets: [{ data: keys.map((k) => totals[k]), backgroundColor: css("--series-1"), borderRadius: 4, borderSkipped: "left", maxBarThickness: 26 }],
+            labels: keys,
+            datasets: [{ data: keys.map((k) => totals[k]), backgroundColor: keys.map((k) => (k === "No UTM tag" ? css("--neutral") : css("--series-1"))),
+                borderRadius: 4, borderSkipped: "left", maxBarThickness: 26 }],
         },
         options: {
             indexAxis: "y",
@@ -586,7 +587,7 @@ function renderEntries() {
             scales: { x: { ticks: { callback: (v) => usd(v) } }, y: { grid: { display: false } } },
             plugins: {
                 legend: { display: false },
-                tooltip: { callbacks: { label: (ctx) => `${usd(ctx.parsed.x)} · ${all ? (ctx.parsed.x / all * 100).toFixed(0) : 0}%` } },
+                tooltip: { callbacks: { label: (ctx) => `${usd(ctx.parsed.x)} · ${all ? (ctx.parsed.x / all * 100).toFixed(1) : 0}% · ${int(units[ctx.label])} purchases` } },
             },
         },
     });
@@ -613,10 +614,6 @@ function renderAcquisition() {
         apps.map(([id]) => td(v[id] ? int(v[id]) : "", true)),
         td(int(v.total), true),
         td(total ? `${(v.total / total * 100).toFixed(1)}%` : "", true))));
-    table("tbl-campaigns", [["UTM campaign (Paddle)"], ["Platform"], ["Net", 1], ["Units", 1]],
-        state.sales.campaigns.map((r) => el("tr", {}, td(r.campaign), td([swatch(r.platform), byId[r.platform].name]),
-            td(usd(r.net), true), td(int(r.units), true))),
-        "No tagged campaigns in this period");
 }
 
 function renderCountries() {
@@ -669,7 +666,8 @@ function renderProducts() {
 
 function renderSources(target, sources) {
     const names = { ...Object.fromEntries(PLATFORMS.map((p) => [p.id, p.name])), aso: "ASO", ga4: "GA4 traffic sources",
-        funnel: "GA4 funnel", health: "Health (logs, store stats)", subs: "Subscriptions" };
+        funnel: "GA4 funnel", health: "Health (logs, store stats)", subs: "Subscriptions", checkouts: "Paddle checkouts",
+        ads_google: "Google Ads spend", ads_meta: "Meta Ads spend" };
     table(target, [["Source"], ["Updated"], ["Covers"], ["Note"]], sources.map((s) => el("tr", {},
         td(names[s.name] ?? s.name),
         td(new Date(s.updated_at).toLocaleString("en-GB")),
@@ -1751,7 +1749,8 @@ function renderCampaigns() {
         r.network.add(a.source);
         r.newUsers += a.new_users;
         r.buyers += a.purchasers;
-        r.ga4Revenue += a.revenue;
+        // Windows-покупки в GA4 — те же оплаты Paddle (их досылает вебхук): с Paddle net они бы задвоились
+        if (a.app !== "windows") r.ga4Revenue += a.revenue;
     }
     for (const p of c.paddle) {
         const name = p.campaign.includes(" / ") ? p.campaign.split(" / ").slice(1).join(" / ") : p.campaign;
@@ -1772,7 +1771,7 @@ function renderCampaigns() {
         { label: "Paddle revenue from campaigns (exact)", value: paddle, fmt: usd },
         { label: "Buyers from campaigns (GA4)", value: sum(list, (r) => r.buyers), fmt: int },
         { label: "ROAS, estimate", value: spend ? paidRevenue / spend : 0, fmt: (v) => (spend ? `${v.toFixed(2)}×` : "no spend"),
-          delta: el("span", { class: "muted" }, "(Paddle + GA4 revenue of paid campaigns) ÷ spend") },
+          delta: el("span", { class: "muted" }, "(Paddle + GA4 mobile revenue of paid campaigns) ÷ spend; GA4 part is approximate") },
     ]);
     const days = [...new Set(c.daily.map((r) => r.day))].sort();
     const canvas = document.getElementById("chart-campaign-spend");
@@ -1800,7 +1799,7 @@ function renderCampaigns() {
         },
     });
     table("tbl-campaigns-all", [["Campaign"], ["Source"], ["Spend", 1], ["Clicks", 1], ["New users", 1], ["Buyers", 1],
-        ["GA4 revenue", 1], ["Paddle net", 1], ["Cost / buyer", 1], ["ROAS", 1]],
+        ["GA4 mobile revenue ≈", 1], ["Paddle net", 1], ["Cost / buyer", 1], ["ROAS", 1]],
         list.map((r) => {
             const revenue = r.paddleNet + r.ga4Revenue;
             return el("tr", {},
@@ -1860,8 +1859,12 @@ function applyRange(change) {
     if (change.preset && change.preset !== "custom") Object.assign(state.range, presetRange(change.preset));
     if (state.range.from > state.range.to) [state.range.from, state.range.to] = [state.range.to, state.range.from];
     writeRange();
-    for (const name of Object.keys(RENDER)) if (name !== "weekly" && name !== "live" && name !== "ga4") state[name] = null;
+    dropRangeData();
     load();
+}
+
+function dropRangeData() {
+    for (const name of Object.keys(RENDER)) if (name !== "weekly" && name !== "live" && name !== "ga4") state[name] = null;
 }
 
 document.getElementById("range-preset").addEventListener("change", (e) => applyRange({ preset: e.target.value }));
@@ -1896,9 +1899,20 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
     switchTab(state.tab);
 });
 
+// Вставленная в открытую вкладку ссылка с другим периодом должна его применить, а не только сменить вкладку
 window.addEventListener("hashchange", () => {
     const tab = location.hash.slice(1).split("?")[0];
+    const next = location.hash.includes("?") ? readRange() : null;
+    const changed = next && ["preset", "from", "to", "grain", "compare"].some((k) => next[k] !== state.range[k]);
+    if (changed) {
+        state.range = next;
+        dropRangeData();
+    }
     if (tab !== state.tab) switchTab(tab);
+    else if (changed) {
+        writeRange();
+        load();
+    }
 });
 
 chartDefaults();

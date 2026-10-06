@@ -101,8 +101,11 @@
           <div class="chart"><canvas id="chart-channels"></canvas></div>
         </section>
         <section class="card">
-          <h2>Where web checkouts start (Paddle)</h2>
-          <div class="chart"><canvas id="chart-entries"></canvas></div>
+          <div class="card-head">
+            <h2>Paddle revenue by UTM tag</h2>
+            <span class="muted" id="tags-note"></span>
+          </div>
+          <div class="chart"><canvas id="chart-tags"></canvas></div>
         </section>
       </div>
 
@@ -112,7 +115,6 @@
           <span class="muted">Installs only. GA4 purchases overcount 3–5× and are not used.</span>
         </div>
         <div class="scroll"><table class="tbl" id="tbl-acq-users"></table></div>
-        <table class="tbl" id="tbl-campaigns"></table>
       </section>
 
       <div class="grid2">
@@ -421,6 +423,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=dfc229f5f5"></script>
+<script src="app.js?v=b7afbba68f"></script>
 </body>
 </html>
