@@ -207,13 +207,13 @@
         </div>
         <div class="chart tall"><canvas id="chart-funnel"></canvas></div>
         <table class="tbl" id="tbl-funnel"></table>
-        <p class="muted small">Closed funnel over unique users who started onboarding in the window. Buyers who installed earlier are not in it — compare with Sales for total purchases. Windows purchases are undercounted in GA4 (web checkout events get lost): the real checkout → paid rate is in the Paddle block below.</p>
+        <p class="muted small">Closed funnel over unique users who started onboarding in the window. Buyers who installed earlier are not in it — compare with Sales for total purchases. Windows “Purchased” is matched by machine id: new users from this window who paid in Paddle or the Microsoft Store (GA4 alone loses most Windows payments), so it is not nested inside “Checkout started”.</p>
       </section>
 
       <section class="card">
         <div class="card-head">
           <h2>Paddle checkout: opened → paid</h2>
-          <span class="muted">every checkout opened from the Windows app or the website</span>
+          <span class="muted">every checkout opened from the Windows app</span>
         </div>
         <div class="grid2">
           <div class="chart"><canvas id="chart-checkout"></canvas></div>
