@@ -31,7 +31,7 @@ const int = (v) => Math.round(v).toLocaleString("en-US");
 const sum = (rows, f) => rows.reduce((a, r) => a + (f(r) || 0), 0);
 
 const M = () => state.salesMetric;
-const state = { salesMetric: localStorage.getItem("salesMetric") || "net", ga4: null, weekly: null, campaigns: null, tab: "sales", days: 30, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
+const state = { salesMetric: localStorage.getItem("salesMetric") || "net", ga4: null, weekly: null, campaigns: null, tab: "sales", range: null, salesFilter: { platform: "", country: "" }, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
 
 function el(tag, attrs = {}, ...children) {
     const node = document.createElement(tag);
@@ -154,9 +154,10 @@ async function load() {
     const tab = state.tab;
     const panel = document.getElementById(`tab-${tab}`);
     panel.classList.add("loading");
-    const days = state.days;
-    const data = await api(tab === "ga4" ? ga4Path() : `/api/${tab}?days=${days}`);
-    if (days !== state.days) return;
+    const query = tab === "ga4" ? ga4Path() : `/api/${tab}?${rangeQuery()}${tab === "sales" ? salesQuery() : ""}`;
+    state.pending = query;
+    const data = await api(query);
+    if (state.pending !== query) return;
     panel.classList.remove("loading");
     if (!data) return;
     state[tab] = data;
@@ -173,11 +174,80 @@ function isoDay(d) {
     return d.toISOString().slice(0, 10);
 }
 
+/* ---------- период, шаг, сравнение (живут в адресе: #tab?preset=…&from=…&to=…&grain=…&compare=…) ---------- */
+
+function dayDiff(a, b) {
+    return Math.round((Date.parse(b) - Date.parse(a)) / 86400000);
+}
+
+function presetRange(preset) {
+    const today = isoDay(new Date());
+    const last = (n) => ({ from: shiftDay(today, -(n - 1)), to: today });
+    const month = today.slice(0, 8) + "01";
+    switch (preset) {
+        case "7d": return last(7);
+        case "90d": return last(90);
+        case "365d": return last(365);
+        case "mtd": return { from: month, to: today };
+        case "last-month": return { from: shiftDay(month, -1).slice(0, 8) + "01", to: shiftDay(month, -1) };
+        case "ytd": return { from: today.slice(0, 4) + "-01-01", to: today };
+        default: return last(30);
+    }
+}
+
+function readRange() {
+    const q = new URLSearchParams(location.hash.split("?")[1] || "");
+    const saved = JSON.parse(localStorage.getItem("dashRange") || "{}");
+    const pick = (k, def) => q.get(k) || saved[k] || def;
+    const preset = pick("preset", "30d");
+    const r = { preset, grain: pick("grain", "auto"), compare: pick("compare", "prev") };
+    Object.assign(r, preset === "custom" ? { from: pick("from", presetRange("30d").from), to: pick("to", presetRange("30d").to) } : presetRange(preset));
+    return r;
+}
+
+function writeRange() {
+    const r = state.range;
+    localStorage.setItem("dashRange", JSON.stringify(r));
+    const q = new URLSearchParams({ preset: r.preset, grain: r.grain, compare: r.compare });
+    if (r.preset === "custom") { q.set("from", r.from); q.set("to", r.to); }
+    history.replaceState(null, "", `#${state.tab}?${q}`);
+    for (const k of ["preset", "from", "to", "grain", "compare"]) document.getElementById(`range-${k}`).value = r[k];
+}
+
+function rangeQuery() {
+    const r = state.range;
+    return new URLSearchParams({ from: r.from, to: r.to, compare: r.compare }).toString();
+}
+
+function salesQuery() {
+    const f = state.salesFilter;
+    return (f.platform ? `&platforms=${f.platform}` : "") + (f.country ? `&country=${f.country}` : "");
+}
+
+function periodLen() {
+    return dayDiff(state.range.from, state.range.to) + 1;
+}
+
+function grain() {
+    const g = state.range.grain;
+    if (g !== "auto") return g;
+    const n = periodLen();
+    return n <= 92 ? "day" : n <= 400 ? "week" : "month";
+}
+
 function bucketKey(day) {
-    if (state.days <= 90) return day;
+    const g = grain();
+    if (g === "month") return day.slice(0, 8) + "01";
+    if (g === "day") return day;
     const d = new Date(day + "T00:00:00Z");
     d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
     return isoDay(d);
+}
+
+function bucketTitle(label) {
+    const g = grain();
+    if (g === "month") return new Date(label + "T00:00:00Z").toLocaleString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
+    return g === "week" ? `Week of ${label}` : label;
 }
 
 function series(rows, keyOf, valueOf) {
@@ -259,26 +329,33 @@ function shiftDay(day, n) {
 
 // Окна сравнения по площадке заканчиваются на последнем дне, за который у неё есть данные:
 // иначе отставшая выгрузка (MS Store) выглядит как падение продаж
+// Сравнение: те же дни периода сравнения (предыдущий такой же длины или год назад), обрезанные по последнему дню,
+// за который у площадки есть данные: иначе отставшая выгрузка (MS Store) выглядит как падение продаж
 function aligned(platform) {
+    const R = state.sales.range;
     const today = isoDay(new Date());
     const src = state.sales.sources.find((s) => s.name === platform);
-    const end = src && src.covered_to < today ? src.covered_to : today;
-    const rows = state.sales.daily.filter((r) => r.platform === platform);
-    const from = shiftDay(end, -state.days);
-    const prevFrom = shiftDay(end, -2 * state.days);
+    const end = src && src.covered_to < R.to ? src.covered_to : R.to;
+    const offset = dayDiff(R.cFrom, R.from);
     return {
         end,
-        lagging: end < shiftDay(today, -2),
-        cur: rows.filter((r) => r.day > from && r.day <= end),
-        prev: rows.filter((r) => r.day > prevFrom && r.day <= from),
+        lagging: end < shiftDay(R.to, -2) && end < shiftDay(today, -2),
+        cur: state.sales.daily.filter((r) => r.platform === platform && r.day <= end),
+        prev: (state.sales.prev || []).filter((r) => r.platform === platform && shiftDay(r.day, offset) <= end),
     };
 }
 
 function renderSales() {
     const { daily } = state.sales;
     document.querySelectorAll("#metric-toggle button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.metric === M())));
-    const cutoff = shiftDay(isoDay(new Date()), -state.days);
-    const cur = daily.filter((r) => r.day > cutoff);
+    const cur = daily;
+    const R = state.sales.range;
+    const countrySel = document.getElementById("f-country");
+    const codes = [...new Set(state.sales.countries.map((c) => c.country))].filter((c) => /^[A-Z]{2}$/.test(c)).sort();
+    if (state.salesFilter.country && !codes.includes(state.salesFilter.country)) codes.unshift(state.salesFilter.country);
+    countrySel.replaceChildren(el("option", { value: "" }, "All countries"), ...codes.map((c) => el("option", { value: c }, `${countryName(c)} (${c})`)));
+    countrySel.value = state.salesFilter.country;
+    document.getElementById("f-platform").value = state.salesFilter.platform;
     const windows = Object.fromEntries(PLATFORMS.map((p) => [p.id, aligned(p.id)]));
     const lagging = PLATFORMS.filter((p) => windows[p.id].lagging);
     const note = document.getElementById("lag-note");
@@ -286,7 +363,8 @@ function renderSales() {
     const lastRun = state.sales.sources.reduce((m, s) => (s.updated_at > m ? s.updated_at : m), "");
     const staleHours = lastRun ? (Date.now() - Date.parse(lastRun)) / 3600000 : 0;
     const parts = lagging.map((p) => `${p.name} data until ${windows[p.id].end}`);
-    if (parts.length) parts[parts.length - 1] += " — changes vs previous period compare windows ending on that date.";
+    if (parts.length) parts[parts.length - 1] += " — comparisons use the same days of the other period up to that date.";
+    if (R.compare !== "none") parts.push(`Compared with ${R.cFrom} — ${R.cTo}`);
     if (staleHours > 36) parts.unshift(`⚠ The daily collector last ran ${Math.round(staleHours / 24)} days ago — numbers are stale.`);
     note.hidden = !parts.length;
     note.textContent = parts.join(" · ");
@@ -304,9 +382,9 @@ function renderSales() {
 // Среднее в день — по дням, за которые данные уже есть: у года данные начинаются с февраля, а не 365 дней назад
 function coveredDays(rows) {
     const first = rows.reduce((m, r) => (m && m < r.day ? m : r.day), null);
-    if (!first) return state.days;
-    const span = Math.round((Date.parse(isoDay(new Date())) - Date.parse(first)) / 86400000) + 1;
-    return Math.max(1, Math.min(state.days, span));
+    const end = state.range.to < isoDay(new Date()) ? state.range.to : isoDay(new Date());
+    if (!first) return periodLen();
+    return Math.max(1, Math.min(periodLen(), dayDiff(first, end) + 1));
 }
 
 function alignedSum(windows, key, f) {
@@ -319,6 +397,7 @@ function renderTiles(cur, windows) {
     const netTotal = sum(cur, (r) => r[M()]);
     const unitsTotal = sum(cur, (r) => r.units);
     const refunds = sum(cur, (r) => r.refunds);
+    const netOnly = sum(cur, (r) => r.net);
     renderTileRow("tiles", [
         { label: M() === "net" ? "Net revenue" : "Gross revenue", value: netTotal, fmt: usd,
           delta: deltaPct(alignedSum(windows, "cur", (r) => r[M()]), alignedSum(windows, "prev", (r) => r[M()])),
@@ -328,10 +407,11 @@ function renderTiles(cur, windows) {
           spark: units.labels.map((l) => units.value("all", l)) },
         { label: "Daily average", value: netTotal / coveredDays(cur), fmt: usd,
           delta: deltaPct(alignedSum(windows, "cur", (r) => r[M()]), alignedSum(windows, "prev", (r) => r[M()])) },
-        { label: "Average order", value: unitsTotal ? (netTotal - refunds) / unitsTotal : 0, fmt: (v) => `$${v.toFixed(2)}`,
+        // средний чек и доля возвратов — всегда по нетто: в gross возвраты не входят, вычитать их там нельзя
+        { label: "Average order", value: unitsTotal ? (netOnly - refunds) / unitsTotal : 0, fmt: (v) => `$${v.toFixed(2)}`,
           delta: el("span", { class: "muted" }, "net before refunds ÷ units") },
         { label: "Refunds", value: refunds, fmt: usd,
-          delta: el("span", { class: "muted" }, netTotal ? `${(Math.abs(refunds) / (netTotal - refunds) * 100).toFixed(1)}% of revenue` : "") },
+          delta: el("span", { class: "muted" }, netOnly - refunds ? `${(Math.abs(refunds) / (netOnly - refunds) * 100).toFixed(1)}% of net revenue` : "") },
     ]);
 }
 
@@ -357,36 +437,66 @@ function renderTileRow(target, tiles) {
     });
 }
 
+// Неделя/месяц обрезаны началом или концом периода (или ещё не закончились) — помечаем, чтобы провал на краю
+// не читался как падение продаж
+function bucketPartial(label) {
+    const g = grain();
+    if (g === "day") return false;
+    const end = g === "week" ? shiftDay(label, 6) : shiftDay(shiftDay(label, 32).slice(0, 8) + "01", -1);
+    const today = isoDay(new Date());
+    return label < state.range.from || end > (state.range.to < today ? state.range.to : today);
+}
+
+function bucketLabel(label) {
+    const g = grain();
+    const text = g === "month" ? new Date(label + "T00:00:00Z").toLocaleString("en-GB", { month: "short", year: "numeric", timeZone: "UTC" }) : label;
+    return bucketPartial(label) ? `${text}*` : text;
+}
+
 function renderDaily(cur) {
     const { labels, value } = series(cur, (r) => r.platform, (r) => r[M()]);
-    document.getElementById("daily-note").textContent = state.days > 90 ? "weekly · the last week is still in progress" : "daily";
+    const byDay = grain() === "day";
+    const partial = labels.some(bucketPartial);
+    document.getElementById("daily-note").textContent =
+        `${byDay ? "daily" : grain() === "week" ? "weekly" : "monthly"} · ${state.range.from} — ${state.range.to}` +
+        (partial ? " · * incomplete week/month" : "");
+    const datasets = PLATFORMS.map((p, i) => byDay ? {
+        label: p.name,
+        data: labels.map((l) => value(p.id, l)),
+        borderColor: color(p.id),
+        backgroundColor: gradient(color(p.id), 0.55, 0.08),
+        fill: i === 0 ? "origin" : "-1",
+        borderWidth: 2,
+        pointRadius: 0,
+        pointHoverRadius: 5,
+        pointHoverBorderColor: css("--surface-1"),
+        pointHoverBorderWidth: 2,
+        tension: 0.35,
+    } : {
+        label: p.name,
+        data: labels.map((l) => value(p.id, l)),
+        backgroundColor: labels.map((l) => (bucketPartial(l) ? alpha(color(p.id), 0.45) : color(p.id))),
+        borderColor: css("--surface-1"),
+        borderWidth: { top: 2 },
+        borderRadius: 4,
+        borderSkipped: "bottom",
+        maxBarThickness: 48,
+    });
     draw("chart-daily", {
-        type: "line",
-        data: {
-            labels,
-            datasets: PLATFORMS.map((p, i) => ({
-                label: p.name,
-                data: labels.map((l) => value(p.id, l)),
-                borderColor: color(p.id),
-                backgroundColor: gradient(color(p.id), 0.55, 0.08),
-                fill: i === 0 ? "origin" : "-1",
-                borderWidth: 2,
-                pointRadius: 0,
-                pointHoverRadius: 5,
-                pointHoverBorderColor: css("--surface-1"),
-                pointHoverBorderWidth: 2,
-                tension: 0.35,
-            })),
-        },
+        type: byDay ? "line" : "bar",
+        data: { labels, datasets },
         options: {
             maintainAspectRatio: false,
             interaction: { mode: "index", intersect: false },
-            scales: { x: timeX, y: { stacked: true, ticks: { callback: (v) => usd(v) } } },
+            scales: {
+                x: { ...timeX, stacked: !byDay, ticks: { ...timeX.ticks, callback(v) { return bucketLabel(this.getLabelForValue(v)); } } },
+                y: { stacked: true, ticks: { callback: (v) => usd(v) } },
+            },
             plugins: {
                 legend,
                 tooltip: {
                     callbacks: {
-                        title: (items) => state.days > 90 ? `Week of ${items[0].label}` : items[0].label,
+                        title: (items) => bucketTitle(items[0].label) + (bucketPartial(items[0].label) ? " (incomplete)" : ""),
                         label: (c) => `${c.dataset.label}: ${usd(c.parsed.y)}`,
                         footer: (items) => `Total: ${usd(items.reduce((a, i) => a + i.parsed.y, 0))}`,
                     },
@@ -821,8 +931,8 @@ function renderCompetitors() {
 async function selectKeyword(r, row) {
     document.querySelectorAll("#tbl-aso tr.active").forEach((x) => x.classList.remove("active"));
     row.classList.add("active");
-    const q = new URLSearchParams({ store: r.store, country: r.country, keyword: r.keyword, days: Math.max(state.days, 90) });
-    const hist = await api(`/api/aso/history?${q}`);
+    const q = new URLSearchParams({ store: r.store, country: r.country, keyword: r.keyword });
+    const hist = await api(`/api/aso/history?${q}&${rangeQuery()}`);
     if (!hist) return;
     document.getElementById("aso-history-title").textContent = `"${r.keyword}" — ${byId[r.store].name}, ${r.country}`;
     const c = color(r.store);
@@ -1016,7 +1126,7 @@ function renderSubs() {
     const plats = PLATFORMS.filter((p) => daily.some((r) => r.platform === p.id));
     const mrr = sum(Object.values(latest), (r) => r.mrr);
     const active = sum(Object.values(latest), (r) => r.active);
-    const cut = shiftDay(isoDay(new Date()), -30);
+    const cut = shiftDay(state.subs.range.to, -30);
     const recent = daily.filter((r) => r.day > cut);
     const newSubs = sum(recent, (r) => r.new);
     const cancelled = sum(recent, (r) => r.cancelled);
@@ -1068,7 +1178,7 @@ function renderSubs() {
         data: { labels: days, datasets: plats.map((p) => lineDataset(p.name, days.map((d) => val(p.id, d, "active")), color(p.id))) },
         options: { maintainAspectRatio: false, interaction: { mode: "index", intersect: false }, scales: { x: timeX, y: { beginAtZero: true, ticks: { precision: 0 } } }, plugins: { legend } },
     });
-    const weekly = state.days > 90;
+    const weekly = grain() !== "day";
     const flow = series(daily, () => "x", (r) => r.new);
     const lost = series(daily, () => "x", (r) => r.cancelled);
     draw("chart-subs-flow", {
@@ -1084,7 +1194,7 @@ function renderSubs() {
             maintainAspectRatio: false,
             interaction: { mode: "index", intersect: false },
             scales: { x: { ...timeX, stacked: true }, y: { stacked: true, ticks: { precision: 0, callback: (v) => Math.abs(v) } } },
-            plugins: { legend, tooltip: { callbacks: { title: (items) => weekly ? `Week of ${items[0].label}` : items[0].label, label: (c) => `${c.dataset.label}: ${Math.abs(c.parsed.y)}` } } },
+            plugins: { legend, tooltip: { callbacks: { title: (items) => (weekly ? bucketTitle(items[0].label) : items[0].label), label: (c) => `${c.dataset.label}: ${Math.abs(c.parsed.y)}` } } },
         },
     });
     table("tbl-subs-products", [["Plan"], ["Store"], ["Billing"], ["Active", 1], ["MRR", 1], ["As of"]], products.filter((r) => r.active > 0).map((r) => el("tr", {},
@@ -1374,9 +1484,10 @@ async function loadSummary() {
     const conv = s.funnel?.started ? s.funnel.purchased / s.funnel.started : null;
     const checkout = s.checkout?.opened ? s.checkout.paid / s.checkout.opened : null;
     // Часовой сбор: Paddle, Play, App Store, оплаты; суточный: остальное. MS Store — ручной CSV.
-    const LIMITS = { paddle: 3, play: 3, appstore: 3, checkouts: 3, ga4: 30, funnel: 30, subs: 30, health: 30, aso: 30 };
+    const LIMITS = { paddle: 3, play: 3, appstore: 3, checkouts: 3, ga4: 30, funnel: 30, subs: 30, health: 30, aso: 30,
+        ads_google: 30, ads_meta: 30 };
     const NAMES = { paddle: "Paddle", play: "Google Play", appstore: "App Store", checkouts: "Paddle checkouts", ga4: "GA4",
-        funnel: "Funnel", subs: "Subscriptions", health: "Health", aso: "ASO" };
+        funnel: "Funnel", subs: "Subscriptions", health: "Health", aso: "ASO", ads_google: "Google Ads spend", ads_meta: "Meta Ads spend" };
     const warnings = [];
     for (const src of s.sources || []) {
         const hours = (Date.now() - Date.parse(src.updated_at)) / 3600000;
@@ -1650,15 +1761,18 @@ function renderCampaigns() {
         r.paddleUnits += p.units;
     }
     const list = Object.values(rows).sort((a, b) => b.spend - a.spend || b.paddleNet - a.paddleNet || b.newUsers - a.newUsers);
-    const spend = sum(list, (r) => r.spend);
+    // ROAS — только по кампаниям с расходом: выручка органики и рассылок к рекламному бюджету отношения не имеет
+    const paid = list.filter((r) => r.spend > 0);
+    const spend = sum(paid, (r) => r.spend);
     const paddle = sum(list, (r) => r.paddleNet);
-    const ga4Rev = sum(list, (r) => r.ga4Revenue);
+    const ga4Rev = sum(paid, (r) => r.ga4Revenue);
+    const paidRevenue = sum(paid, (r) => r.paddleNet + r.ga4Revenue);
     renderTileRow("campaign-tiles", [
         { label: "Ad spend", value: spend, fmt: usd },
         { label: "Paddle revenue from campaigns (exact)", value: paddle, fmt: usd },
         { label: "Buyers from campaigns (GA4)", value: sum(list, (r) => r.buyers), fmt: int },
-        { label: "ROAS, estimate", value: spend ? (paddle + ga4Rev) / spend : 0, fmt: (v) => (spend ? `${v.toFixed(2)}×` : "no spend"),
-          delta: el("span", { class: "muted" }, "(Paddle + GA4 revenue) ÷ spend") },
+        { label: "ROAS, estimate", value: spend ? paidRevenue / spend : 0, fmt: (v) => (spend ? `${v.toFixed(2)}×` : "no spend"),
+          delta: el("span", { class: "muted" }, "(Paddle + GA4 revenue of paid campaigns) ÷ spend") },
     ]);
     const days = [...new Set(c.daily.map((r) => r.day))].sort();
     const canvas = document.getElementById("chart-campaign-spend");
@@ -1709,8 +1823,8 @@ function switchTab(tab) {
     state.tab = RENDER[tab] ? tab : "sales";
     document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
     for (const name of Object.keys(RENDER)) document.getElementById(`tab-${name}`).hidden = name !== state.tab;
-    document.querySelector(".top .filters").hidden = ["live", "ga4", "weekly"].includes(state.tab);
-    history.replaceState(null, "", `#${state.tab}`);
+    document.getElementById("range-bar").hidden = ["live", "ga4", "weekly"].includes(state.tab);
+    writeRange();
     if (state.tab === "live" || !state[state.tab]) {
         load();
     } else {
@@ -1741,12 +1855,34 @@ document.querySelectorAll("#metric-toggle button").forEach((b) => b.addEventList
     localStorage.setItem("salesMetric", state.salesMetric);
     if (state.sales) renderSales();
 }));
-document.querySelectorAll(".top .filters button").forEach((b) => b.addEventListener("click", () => {
-    document.querySelectorAll(".top .filters button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
-    state.days = Number(b.dataset.days);
-    for (const name of Object.keys(RENDER)) state[name] = null;
+function applyRange(change) {
+    Object.assign(state.range, change);
+    if (change.preset && change.preset !== "custom") Object.assign(state.range, presetRange(change.preset));
+    if (state.range.from > state.range.to) [state.range.from, state.range.to] = [state.range.to, state.range.from];
+    writeRange();
+    for (const name of Object.keys(RENDER)) if (name !== "weekly" && name !== "live" && name !== "ga4") state[name] = null;
     load();
-}));
+}
+
+document.getElementById("range-preset").addEventListener("change", (e) => applyRange({ preset: e.target.value }));
+for (const k of ["from", "to"]) {
+    document.getElementById(`range-${k}`).addEventListener("change", (e) => {
+        if (e.target.value) applyRange({ preset: "custom", [k]: e.target.value });
+    });
+}
+document.getElementById("range-grain").addEventListener("change", (e) => {
+    state.range.grain = e.target.value;
+    writeRange();
+    if (state[state.tab]) RENDER[state.tab]();
+});
+document.getElementById("range-compare").addEventListener("change", (e) => applyRange({ compare: e.target.value }));
+for (const [id, key] of [["f-platform", "platform"], ["f-country", "country"]]) {
+    document.getElementById(id).addEventListener("change", (e) => {
+        state.salesFilter[key] = e.target.value;
+        state.sales = null;
+        load();
+    });
+}
 document.getElementById("aso-store").addEventListener("change", (e) => {
     state.asoSel.store = e.target.value;
     renderAsoSelection();
@@ -1761,8 +1897,10 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
 });
 
 window.addEventListener("hashchange", () => {
-    if (location.hash.slice(1) !== state.tab) switchTab(location.hash.slice(1));
+    const tab = location.hash.slice(1).split("?")[0];
+    if (tab !== state.tab) switchTab(tab);
 });
 
 chartDefaults();
-switchTab(location.hash.slice(1));
+state.range = readRange();
+switchTab(location.hash.slice(1).split("?")[0]);

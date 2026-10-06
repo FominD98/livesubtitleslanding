@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dash-api.live-subtitles.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <title>Dashboard</title>
-<link rel="stylesheet" href="dash.css?v=87fdd3d02f">
+<link rel="stylesheet" href="dash.css?v=f2225a4eb6">
 </head>
 <body>
 <div class="viz-root">
@@ -28,17 +28,47 @@
         <button role="tab" data-tab="live" aria-selected="false">Live</button>
         <button role="tab" data-tab="ga4" aria-selected="false">GA4</button>
       </nav>
-      <div class="filters" role="group" aria-label="Period">
-        <button data-days="7">7d</button>
-        <button data-days="30" aria-pressed="true">30d</button>
-        <button data-days="90">90d</button>
-        <button data-days="365">1y</button>
+      <div class="filters range" id="range-bar" role="group" aria-label="Period">
+        <select id="range-preset" aria-label="Period">
+          <option value="7d">Last 7 days</option>
+          <option value="30d">Last 30 days</option>
+          <option value="90d">Last 90 days</option>
+          <option value="mtd">This month</option>
+          <option value="last-month">Last month</option>
+          <option value="ytd">This year</option>
+          <option value="365d">Last 12 months</option>
+          <option value="custom">Custom dates</option>
+        </select>
+        <input type="date" id="range-from" aria-label="From">
+        <span class="muted">—</span>
+        <input type="date" id="range-to" aria-label="To">
+        <select id="range-grain" aria-label="Step">
+          <option value="auto">Auto step</option>
+          <option value="day">By day</option>
+          <option value="week">By week</option>
+          <option value="month">By month</option>
+        </select>
+        <select id="range-compare" aria-label="Compare with">
+          <option value="prev">vs previous period</option>
+          <option value="yoy">vs same dates last year</option>
+          <option value="none">no comparison</option>
+        </select>
       </div>
       <span id="user" class="muted"></span>
     </header>
     <section class="summary" id="summary" hidden></section>
 
     <main id="tab-sales" class="tab-panel">
+      <div class="filters">
+        <select id="f-platform" aria-label="Platform">
+          <option value="">All platforms</option>
+          <option value="paddle">Paddle (web)</option>
+          <option value="appstore">App Store</option>
+          <option value="play">Google Play</option>
+          <option value="msstore">Microsoft Store</option>
+        </select>
+        <select id="f-country" aria-label="Country"><option value="">All countries</option></select>
+      </div>
       <div class="filters" id="metric-toggle" role="group" aria-label="Revenue">
         <button data-metric="net" aria-pressed="true" title="What you receive: after store commission and tax">Net · after store fees</button>
         <button data-metric="gross" aria-pressed="false" title="What customers paid before the store's commission — compare with Paddle / Play consoles">Gross · before fees</button>
@@ -391,6 +421,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=6c1605bb96"></script>
+<script src="app.js?v=dfc229f5f5"></script>
 </body>
 </html>

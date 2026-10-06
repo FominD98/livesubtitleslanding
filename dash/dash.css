@@ -227,3 +227,18 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 .tbl tr.group td { font-weight: 600; color: var(--text-secondary); background: var(--page); padding-top: 10px; }
 .tbl tr.sub td:first-child { padding-left: 22px; color: var(--text-secondary); }
 code { font-size: 12px; background: var(--page); padding: 1px 4px; border-radius: 4px; }
+
+.filters input[type="date"] {
+    font: inherit;
+    font-size: 13px;
+    padding: 4px 8px;
+    border: 1px solid var(--grid);
+    border-radius: 6px;
+    background: var(--surface-1);
+    color: var(--text-primary);
+}
+.filters.range { align-items: center; }
+@media (max-width: 600px) {
+    .filters.range input[type="date"] { flex: 1; min-width: 0; }
+    .filters.range > span { display: none; }
+}
