@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dash-api.live-subtitles.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <title>Dashboard</title>
-<link rel="stylesheet" href="dash.css?v=473c29ee8e">
+<link rel="stylesheet" href="dash.css?v=87fdd3d02f">
 </head>
 <body>
 <div class="viz-root">
@@ -20,9 +20,11 @@
       <nav class="tabs" role="tablist">
         <button role="tab" data-tab="sales" aria-selected="true">Sales</button>
         <button role="tab" data-tab="aso" aria-selected="false">ASO</button>
+        <button role="tab" data-tab="weekly" aria-selected="false">Weekly</button>
         <button role="tab" data-tab="funnel" aria-selected="false">Funnel</button>
         <button role="tab" data-tab="subs" aria-selected="false">Subscriptions</button>
         <button role="tab" data-tab="health" aria-selected="false">Health</button>
+        <button role="tab" data-tab="campaigns" aria-selected="false">Campaigns</button>
         <button role="tab" data-tab="live" aria-selected="false">Live</button>
         <button role="tab" data-tab="ga4" aria-selected="false">GA4</button>
       </nav>
@@ -351,9 +353,44 @@
         </section>
       </div>
     </main>
+    <main id="tab-weekly" class="tab-panel" hidden>
+      <section class="card">
+        <div class="card-head">
+          <h2>Net revenue by week</h2>
+          <span class="muted">weeks start on Monday · the current week is still in progress</span>
+        </div>
+        <div class="chart"><canvas id="chart-weekly"></canvas></div>
+      </section>
+      <section class="card">
+        <div class="card-head">
+          <h2>Week by week</h2>
+          <span class="muted">last column: last full week vs the week before</span>
+        </div>
+        <div class="scroll wide"><table class="tbl weekly" id="tbl-weekly"></table></div>
+      </section>
+    </main>
+
+    <main id="tab-campaigns" class="tab-panel" hidden>
+      <section class="tiles" id="campaign-tiles"></section>
+      <section class="card">
+        <h2>Ad spend per day</h2>
+        <div class="chart"><canvas id="chart-campaign-spend"></canvas></div>
+      </section>
+      <section class="card">
+        <div class="card-head">
+          <h2>Campaigns</h2>
+          <span class="muted">matched by campaign name across Google Ads / Meta, GA4 and Paddle</span>
+        </div>
+        <div class="scroll wide"><table class="tbl" id="tbl-campaigns-all"></table></div>
+        <p class="muted small">Spend: Google Ads and Meta APIs. New users and buyers: GA4, by the user's first campaign (first touch).
+          GA4 revenue is an estimate. Paddle revenue is exact: utm_campaign passed by the site or the app, or the click id (gclid = Google Ads, fbc = Meta).
+          To get campaigns here: keep Google Ads auto-tagging on, add <code>utm_source=meta&amp;utm_medium=paid&amp;utm_campaign={{campaign.name}}</code> to Meta ads,
+          and use <code>?cid=&lt;campaign&gt;</code> on Microsoft Store links (the Windows app carries it into Paddle checkout).</p>
+      </section>
+    </main>
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=3540cefac9"></script>
+<script src="app.js?v=6c1605bb96"></script>
 </body>
 </html>

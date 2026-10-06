@@ -31,7 +31,7 @@ const int = (v) => Math.round(v).toLocaleString("en-US");
 const sum = (rows, f) => rows.reduce((a, r) => a + (f(r) || 0), 0);
 
 const M = () => state.salesMetric;
-const state = { salesMetric: localStorage.getItem("salesMetric") || "net", ga4: null, tab: "sales", days: 30, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
+const state = { salesMetric: localStorage.getItem("salesMetric") || "net", ga4: null, weekly: null, campaigns: null, tab: "sales", days: 30, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
 
 function el(tag, attrs = {}, ...children) {
     const node = document.createElement(tag);
@@ -1527,15 +1527,189 @@ for (const key of ["range", "app", "country"]) {
     document.getElementById(`ga4-${key}`).addEventListener("change", (e) => setGa4({ [key]: e.target.value }));
 }
 
+/* ---------- Weekly ---------- */
+
+function renderWeekly() {
+    const w = state.weekly;
+    const weeks = [...new Set(w.sales.map((r) => r.week))].sort().slice(-12);
+    const current = shiftDay(isoDay(new Date()), -((new Date().getUTCDay() + 6) % 7));
+    const at = (rows, week, f, filter = () => true) => sum(rows.filter((r) => r.week === week && filter(r)), f);
+
+    draw("chart-weekly", {
+        type: "bar",
+        data: {
+            labels: weeks.map((x) => (x === current ? `${x} (now)` : x)),
+            datasets: PLATFORMS.map((p) => ({
+                label: p.name, data: weeks.map((wk) => at(w.sales, wk, (r) => r.net, (r) => r.platform === p.id)),
+                backgroundColor: color(p.id), borderColor: css("--surface-1"), borderWidth: { top: 2 },
+                borderRadius: 4, borderSkipped: "bottom", maxBarThickness: 36,
+            })),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: { ...timeX, stacked: true }, y: { stacked: true, ticks: { callback: (v) => usd(v) } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${usd(c.parsed.y)}`,
+                footer: (items) => `Total: ${usd(items.reduce((a, i) => a + i.parsed.y, 0))}` } } },
+        },
+    });
+
+    const coveredTo = (name) => w.sources.find((s) => s.name === name)?.covered_to;
+    const funnelRate = (wk, app, num, den) => {
+        const a = w.funnel.find((r) => r.week === wk && r.app === app && r.step === den)?.users;
+        const b = w.funnel.find((r) => r.week === wk && r.app === app && r.step === num)?.users;
+        return a ? b / a : null;
+    };
+    // MRR на конец недели: у площадки, чья статистика ещё не пришла (Play), берём последнее известное
+    const mrrAt = (wk, key) => sum(PLATFORMS, (p) => {
+        const rows = w.mrr.filter((r) => r.platform === p.id && r.week <= wk).sort((a, b) => a.week.localeCompare(b.week));
+        return rows.length ? rows[rows.length - 1][key] : 0;
+    });
+    const checkoutRate = (wk) => {
+        const c = w.checkouts.find((r) => r.week === wk);
+        return c && c.opened ? c.paid / c.opened : null;
+    };
+    const money = (v) => usd(v);
+    const count = (v) => int(v);
+    const share = (v) => (v === null ? "—" : pct(v, 1));
+    const ROWS = [
+        { group: "Money" },
+        { label: "Net revenue, all stores", value: (wk) => at(w.sales, wk, (r) => r.net), fmt: money },
+        // неделя после последнего дня с данными площадки (выгрузка MS Store) — прочерк, а не ложный ноль
+        ...PLATFORMS.map((p) => ({ label: `  ${p.name}`, fmt: money, sub: true,
+            value: (wk) => (coveredTo(p.id) && wk > coveredTo(p.id) ? null : at(w.sales, wk, (r) => r.net, (r) => r.platform === p.id)) })),
+        { label: "Gross (before store fees)", value: (wk) => at(w.sales, wk, (r) => r.gross), fmt: money },
+        { label: "Refunds", value: (wk) => at(w.sales, wk, (r) => r.refunds), fmt: money, good: "down" },
+        { label: "Purchases", value: (wk) => at(w.sales, wk, (r) => r.units), fmt: count },
+        { label: "  of them new (not renewals)", value: (wk) => at(w.sales, wk, (r) => r.new_units), fmt: count, sub: true },
+        { group: "Subscriptions" },
+        { label: "MRR at week end", value: (wk) => mrrAt(wk, "mrr"), fmt: money },
+        { label: "Active paid subscriptions", value: (wk) => mrrAt(wk, "active"), fmt: count },
+        { label: "New subscriptions", value: (wk) => at(w.subs, wk, (r) => r.new), fmt: count },
+        { label: "Cancelled", value: (wk) => at(w.subs, wk, (r) => r.cancelled), fmt: count, good: "down" },
+        { group: "Paddle checkout" },
+        { label: "Checkouts opened", value: (wk) => at(w.checkouts, wk, (r) => r.opened), fmt: count },
+        { label: "Paid", value: (wk) => at(w.checkouts, wk, (r) => r.paid), fmt: count },
+        { label: "Checkout → paid", value: checkoutRate, fmt: share },
+        { group: "Users (GA4)" },
+        ...APPS.filter((a) => a.id !== "mac").map((a) => ({ label: `New users, ${a.name}`, value: (wk) => at(w.acquisition, wk, (r) => r.new_users, (r) => r.app === a.id), fmt: count })),
+        ...APPS.filter((a) => a.id !== "mac").map((a) => ({ label: `Onboarding → recording, ${a.name}`, value: (wk) => funnelRate(wk, a.id, 3, 1), fmt: share })),
+        ...APPS.filter((a) => a.id !== "mac").map((a) => ({ label: `Onboarding → purchase, ${a.name}`, value: (wk) => funnelRate(wk, a.id, 7, 1), fmt: (v) => (v === null ? "—" : pct(v, 2)) })),
+        { group: "Ads" },
+        { label: "Ad spend", value: (wk) => at(w.spend, wk, (r) => r.spend), fmt: money, good: "down" },
+        { label: "Ad clicks", value: (wk) => at(w.spend, wk, (r) => r.clicks), fmt: count },
+    ];
+    const full = weeks.filter((x) => x !== current);
+    const [prevWk, lastWk] = full.slice(-2);
+    const head = [["Metric"], ...weeks.map((x) => [x === current ? `${x.slice(5)} now` : x.slice(5), 1]), ["Δ last week", 1]];
+    table("tbl-weekly", head, ROWS.map((row) => {
+        if (row.group) return el("tr", { class: "group" }, el("td", { colspan: String(weeks.length + 2) }, row.group));
+        const vals = weeks.map((wk) => row.value(wk));
+        const a = row.value(lastWk);
+        const b = row.value(prevWk);
+        return el("tr", { class: row.sub ? "sub" : "" },
+            td(row.label.trim()),
+            vals.map((v, i) => td(v === null ? "—" : row.fmt(v), true, weeks[i] === current ? "muted" : "")),
+            td(a !== null && b ? deltaPct(a, b, row.good !== "down") : "", true));
+    }));
+}
+
+/* ---------- Campaigns ---------- */
+
+const NOT_CAMPAIGN = /^\(.*\)$/;
+
+function campaignKey(name) {
+    return (name || "").trim().toLowerCase();
+}
+
+function renderCampaigns() {
+    const c = state.campaigns;
+    const rows = {};
+    const row = (key, label) => (rows[key] ??= { label, network: new Set(), spend: 0, clicks: 0, newUsers: 0, buyers: 0, ga4Revenue: 0, paddleNet: 0, paddleUnits: 0 });
+    for (const s of c.spend) {
+        const r = row(campaignKey(s.campaign), s.campaign);
+        r.network.add(s.network === "google-ads" ? "Google Ads" : "Meta");
+        r.spend += s.spend;
+        r.clicks += s.clicks;
+    }
+    for (const a of c.acquisition) {
+        const paid = /cpc|paid|ads/i.test(a.source);
+        if (NOT_CAMPAIGN.test(a.campaign) && !paid) continue;
+        const name = NOT_CAMPAIGN.test(a.campaign) ? `${a.source} (no campaign name)` : a.campaign;
+        const r = row(campaignKey(name), name);
+        r.network.add(a.source);
+        r.newUsers += a.new_users;
+        r.buyers += a.purchasers;
+        r.ga4Revenue += a.revenue;
+    }
+    for (const p of c.paddle) {
+        const name = p.campaign.includes(" / ") ? p.campaign.split(" / ").slice(1).join(" / ") : p.campaign;
+        const r = row(campaignKey(name), name);
+        r.network.add(p.campaign.includes(" / ") ? p.campaign.split(" / ")[0] : "site / app");
+        r.paddleNet += p.net;
+        r.paddleUnits += p.units;
+    }
+    const list = Object.values(rows).sort((a, b) => b.spend - a.spend || b.paddleNet - a.paddleNet || b.newUsers - a.newUsers);
+    const spend = sum(list, (r) => r.spend);
+    const paddle = sum(list, (r) => r.paddleNet);
+    const ga4Rev = sum(list, (r) => r.ga4Revenue);
+    renderTileRow("campaign-tiles", [
+        { label: "Ad spend", value: spend, fmt: usd },
+        { label: "Paddle revenue from campaigns (exact)", value: paddle, fmt: usd },
+        { label: "Buyers from campaigns (GA4)", value: sum(list, (r) => r.buyers), fmt: int },
+        { label: "ROAS, estimate", value: spend ? (paddle + ga4Rev) / spend : 0, fmt: (v) => (spend ? `${v.toFixed(2)}×` : "no spend"),
+          delta: el("span", { class: "muted" }, "(Paddle + GA4 revenue) ÷ spend") },
+    ]);
+    const days = [...new Set(c.daily.map((r) => r.day))].sort();
+    const canvas = document.getElementById("chart-campaign-spend");
+    canvas.parentElement.hidden = !days.length;
+    let empty = document.getElementById("campaign-spend-empty");
+    if (!empty) {
+        empty = el("p", { id: "campaign-spend-empty", class: "muted" }, "No ad spend in this period: Google Ads and Meta campaigns are paused.");
+        canvas.parentElement.after(empty);
+    }
+    empty.hidden = !!days.length;
+    draw("chart-campaign-spend", {
+        type: "bar",
+        data: {
+            labels: days,
+            datasets: [["google-ads", "Google Ads", "--series-1"], ["meta", "Meta", "--series-7"]].map(([id, name, col]) => ({
+                label: name, data: days.map((d) => sum(c.daily.filter((r) => r.day === d && r.network === id), (r) => r.spend)),
+                backgroundColor: css(col), borderRadius: 4, maxBarThickness: 20,
+            })),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: { ...timeX, stacked: true }, y: { stacked: true, ticks: { callback: (v) => usd(v) } } },
+            plugins: { legend },
+        },
+    });
+    table("tbl-campaigns-all", [["Campaign"], ["Source"], ["Spend", 1], ["Clicks", 1], ["New users", 1], ["Buyers", 1],
+        ["GA4 revenue", 1], ["Paddle net", 1], ["Cost / buyer", 1], ["ROAS", 1]],
+        list.map((r) => {
+            const revenue = r.paddleNet + r.ga4Revenue;
+            return el("tr", {},
+                td(r.label), td([...r.network].join(", "), false, "muted"),
+                td(r.spend ? usd(r.spend) : "", true), td(r.clicks ? int(r.clicks) : "", true),
+                td(r.newUsers ? int(r.newUsers) : "", true), td(r.buyers ? int(r.buyers) : "", true),
+                td(r.ga4Revenue ? usd(r.ga4Revenue) : "", true), td(r.paddleNet ? usd(r.paddleNet) : "", true),
+                td(r.spend && r.buyers ? usd(r.spend / r.buyers) : "", true),
+                td(r.spend ? `${(revenue / r.spend).toFixed(2)}×` : "", true, r.spend && revenue < r.spend ? "down" : r.spend ? "up" : ""));
+        }),
+        "No campaign traffic, tagged purchases or ad spend in this period");
+}
+
 /* ---------- wiring ---------- */
 
-const RENDER = { sales: renderSales, aso: renderAso, funnel: renderFunnel, subs: renderSubs, health: renderHealth, live: renderLive, ga4: renderGa4 };
+const RENDER = { sales: renderSales, aso: renderAso, weekly: renderWeekly, funnel: renderFunnel, subs: renderSubs, health: renderHealth,
+    campaigns: renderCampaigns, live: renderLive, ga4: renderGa4 };
 
 function switchTab(tab) {
     state.tab = RENDER[tab] ? tab : "sales";
     document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
     for (const name of Object.keys(RENDER)) document.getElementById(`tab-${name}`).hidden = name !== state.tab;
-    document.querySelector(".top .filters").hidden = state.tab === "live" || state.tab === "ga4";
+    document.querySelector(".top .filters").hidden = ["live", "ga4", "weekly"].includes(state.tab);
     history.replaceState(null, "", `#${state.tab}`);
     if (state.tab === "live" || !state[state.tab]) {
         load();
