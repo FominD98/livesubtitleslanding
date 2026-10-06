@@ -1363,7 +1363,19 @@ async function loadSummary() {
     const churn = s.churn?.avg_active ? s.churn.cancelled / s.churn.avg_active : null;
     const conv = s.funnel?.started ? s.funnel.purchased / s.funnel.started : null;
     const checkout = s.checkout?.opened ? s.checkout.paid / s.checkout.opened : null;
-    const staleHours = s.lastRun ? (Date.now() - Date.parse(s.lastRun)) / 3600000 : 0;
+    // Часовой сбор: Paddle, Play, App Store, оплаты; суточный: остальное. MS Store — ручной CSV.
+    const LIMITS = { paddle: 3, play: 3, appstore: 3, checkouts: 3, ga4: 30, funnel: 30, subs: 30, health: 30, aso: 30 };
+    const NAMES = { paddle: "Paddle", play: "Google Play", appstore: "App Store", checkouts: "Paddle checkouts", ga4: "GA4",
+        funnel: "Funnel", subs: "Subscriptions", health: "Health", aso: "ASO" };
+    const warnings = [];
+    for (const src of s.sources || []) {
+        const hours = (Date.now() - Date.parse(src.updated_at)) / 3600000;
+        if (LIMITS[src.name] && hours > LIMITS[src.name]) warnings.push(`${NAMES[src.name]}: not updated for ${hours < 48 ? `${Math.round(hours)} h` : `${Math.round(hours / 24)} days`}`);
+        if (src.name === "msstore") {
+            const age = (Date.now() - Date.parse(src.covered_to)) / 86400000;
+            if (age > 10) warnings.push(`Microsoft Store: data until ${src.covered_to} — download a fresh Earnings CSV into docs/`);
+        }
+    }
     const change = rev.prev ? (rev.cur - rev.prev) / Math.abs(rev.prev) * 100 : null;
     box.replaceChildren(
         item("Net revenue, 30 days", usd(rev.cur || 0), change === null ? null : `${change >= 0 ? "▲" : "▼"} ${Math.abs(change).toFixed(0)}% vs previous 30`),
@@ -1372,7 +1384,7 @@ async function loadSummary() {
         item("Onboarding → purchase", conv === null ? "—" : pct(conv, 2), "all apps, 30 days"),
         item("Paddle checkout → paid", checkout === null ? "—" : pct(checkout), `${int(s.checkout?.opened || 0)} checkouts opened`),
         item("Active right now", s.activeNow === null ? "—" : int(s.activeNow), "last 30 minutes"),
-        ...(staleHours > 36 ? [item("Data", `${Math.round(staleHours / 24)} days old`, "daily collector did not run", true)] : []),
+        ...warnings.map((w) => item("Needs attention", w.split(":")[0], w.slice(w.indexOf(":") + 2), true)),
     );
     box.hidden = false;
 }
