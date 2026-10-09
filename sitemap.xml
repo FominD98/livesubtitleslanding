@@ -5238,4 +5238,202 @@
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
     </url>
+    <url>
+        <loc>https://live-subtitles.com/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/de/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/es/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/fr/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/it/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/ja/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/ko/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/nl/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/pl/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/pt/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/ru/android-live-captions.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
+    </url>
 </urlset>
