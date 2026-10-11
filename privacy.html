@@ -97,7 +97,7 @@
 <body>
 <a class="back-link" href="/">← Back to Home</a>
 <h1>Privacy Policy</h1>
-<p>Effective Date: August 11, 2026</p>
+<p>Effective Date: October 11, 2026</p>
 
 <h2>Overview</h2>
 <p>
@@ -225,12 +225,36 @@
   <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> — product analytics (mobile apps)</li>
   <li><a href="https://grafana.com/legal/privacy-policy/" target="_blank" rel="noopener">Grafana Loki</a> — diagnostic logs and crash reports</li>
   <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Billing</a> and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple App Store</a> — purchases and subscriptions</li>
+  <li><a href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener">Paddle</a> — merchant of record for purchases made on this website (desktop app and browser extension); Paddle collects your email and payment details, we receive only the order and subscription status</li>
+  <li><a href="https://soniox.com/privacy" target="_blank" rel="noopener">Soniox</a> — cloud speech recognition and translation (desktop app and the browser extension's Live feature)</li>
+  <li><a href="https://www.deepseek.com/" target="_blank" rel="noopener">DeepSeek</a> — AI translation option and AI explanations of words and phrases</li>
+  <li><a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare</a> — hosting of our API endpoints</li>
+  <li>Free Dictionary API, dictionaryapi.dev and <a href="https://www.pexels.com/privacy-policy/" target="_blank" rel="noopener">Pexels</a> — dictionary entries, pronunciation and illustrative images for a word you look up</li>
 </ul>
 <p>
   On iOS, Apple's on-device speech recognition can be used, and on Windows an offline Whisper model can
   be downloaded and run locally. In those modes your audio is processed on your device and is not sent to
   a speech recognition provider.
 </p>
+
+<h2>Browser Extension (LiveSubtitles for Web)</h2>
+<p>
+  The Chrome extension shows dual subtitles on web video and helps you learn words. It does not require an account.
+</p>
+<ul>
+  <li><strong>Caption text, words and phrases you look up</strong> are sent to Google's translation service or to our backend
+    only to translate them, and to the dictionary services listed above to show a word card. We do not store this content.</li>
+  <li><strong>Tab audio</strong> is captured only after you start <em>Live</em> from the extension button or context menu, and only for the
+    tab you chose. It is streamed to Soniox for speech recognition and translation while Live runs, and is not recorded by us.</li>
+  <li><strong>AI explanations</strong>: the word or phrase and its sentence are sent to DeepSeek through our API to produce the explanation.</li>
+  <li><strong>Stored in your browser</strong>: settings, saved words, daily usage counters, a random installation id and,
+    after a purchase, the Paddle order or subscription id that unlocks Pro/Live. These sync between your own Chrome
+    profiles if Chrome sync is on. Uninstalling the extension removes the local data.</li>
+  <li><strong>Diagnostic logs</strong> (extension version, the website's host name where it activated, feature events and errors,
+    the random installation id) are sent to Grafana Loki. They never include page paths, page content or what you watch.</li>
+  <li><strong>Payments</strong> are made on live-subtitles.com through Paddle, who processes your email and card details as merchant
+    of record. Our API reads the status of your order from Paddle to unlock paid features.</li>
+</ul>
 
 <h2>User Consent</h2>
 <p>

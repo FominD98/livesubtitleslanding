@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Unlock LiveSubtitles for Web</title>
+  <meta name="description" content="Upgrade LiveSubtitles for Web to Pro or Live.">
+  <link rel="icon" href="../icon128.png">
+
+  <!-- Google tag (gtag.js) — shared GA4 property, custom event only (no Ads conversion label
+       exists for the browser-extension product; inventing one would misattribute spend from
+       the WPF/Android campaigns this account already tracks). -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+  <script src="/gtag-init.js"></script>
+  <!-- Meta pixel (LiveSubtitles Web), same pixel the backend's server-side Purchase events use. -->
+  <script src="/meta-pixel.js"></script>
+
+  <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+
+  <link rel="stylesheet" href="ext-buy.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="../icon128.png" alt="LiveSubtitles for Web" class="logo">
+      <div>
+        <div class="title" id="page-title">Unlock LiveSubtitles for Web</div>
+        <div class="sub">Secure checkout by Paddle, our merchant of record.</div>
+      </div>
+    </header>
+
+    <div id="state-missing-install" class="card hidden">
+      <div class="state-title" id="missing-install-title"></div>
+      <p class="muted" id="missing-install-body"></p>
+    </div>
+
+    <div id="state-error" class="card hidden">
+      <div class="state-title err" id="error-title"></div>
+      <p class="muted" id="error-text"></p>
+      <button class="btn" id="retry-btn"></button>
+    </div>
+
+    <div id="state-loading" class="card hidden">
+      <div class="state-title" id="loading-title"></div>
+      <p class="muted" id="loading-body"></p>
+    </div>
+
+    <div id="state-ready" class="hidden">
+      <div class="tabs" id="family-tabs"></div>
+
+      <div class="card" id="plan-card">
+        <div class="cycle-toggle hidden" id="cycle-toggle">
+          <button type="button" class="cycle-btn" data-cycle="month">Monthly</button>
+          <button type="button" class="cycle-btn" data-cycle="year">Yearly</button>
+        </div>
+
+        <div class="plan-headline">
+          <div class="plan-name" id="plan-name">—</div>
+          <div class="plan-price" id="plan-price">—</div>
+          <div class="plan-price-sub" id="plan-price-sub"></div>
+        </div>
+
+        <ul class="features" id="plan-features"></ul>
+
+        <div class="qty-row hidden" id="qty-row">
+          <label for="qty-input" id="qty-label"></label>
+          <div class="qty-stepper">
+            <button type="button" id="qty-minus" aria-label="Decrease quantity">−</button>
+            <input type="number" id="qty-input" min="1" max="10" value="1" inputmode="numeric">
+            <button type="button" id="qty-plus" aria-label="Increase quantity">+</button>
+          </div>
+        </div>
+
+        <button class="btn btn-primary" id="checkout-btn"></button>
+        <div class="cancel-note hidden" id="cancel-note"></div>
+        <div class="unavailable-note hidden" id="unavailable-note"></div>
+      </div>
+
+      <p class="paddle-note">Payments are processed securely by
+        <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, our merchant of
+        record. Prices include applicable taxes.</p>
+    </div>
+
+    <div id="state-success" class="card hidden">
+      <div class="state-title ok" id="success-title"></div>
+      <p class="muted" id="your-key-label"></p>
+      <div class="key-box">
+        <code id="license-key">—</code>
+        <button class="btn btn-small" id="copy-key-btn"></button>
+      </div>
+      <p class="muted" id="restore-hint"></p>
+      <p class="muted" id="close-tab"></p>
+    </div>
+  </div>
+
+  <script src="ext-buy.js"></script>
+</body>
+</html>
