@@ -60,10 +60,9 @@
   var FAMILY_NAME = { pro: "Pro", live: "Live", pack: "5-Hour Live Pack" };
   var FAMILY_FEATURES = {
     pro: [
-      "No daily limits",
-      "Saved words + Anki export",
-      "AI explanations",
-      "Study mode"
+      "Unlimited AI explanations",
+      "Unlimited saved words + Anki / CSV export",
+      "Saved words highlighted in every video"
     ],
     live: [
       "Everything in Pro",
