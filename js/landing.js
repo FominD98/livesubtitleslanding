@@ -308,8 +308,21 @@ if (lang) {
 }
 })();
 
+// The root page is translated to Russian in place, but its static links lead to the
+// English USD pricing page. Russian visitors get the rouble pricing page and the
+// seller details link, which only exist under /ru/.
+function routeRussianLinks(lang) {
+    if (lang !== 'ru-RU') return;
+    document.querySelectorAll('a[href="/pricing.html"]').forEach(function (a) {
+        a.setAttribute('href', '/ru/pricing.html');
+    });
+    const requisites = document.getElementById('footerRequisites');
+    if (requisites) requisites.hidden = false;
+}
+
 (function init() {
     const lang = getUserLanguage();
+    routeRussianLinks(lang);
     if (languageSelector) languageSelector.value = lang;
     startSubtitles(lang);
     applyFrameLanguages(lang);
