@@ -714,16 +714,16 @@ const translations = {
                 q8: '¿En qué se diferencia de los subtítulos que ya trae Windows?',
                 a8: 'Los subtítulos integrados transcriben lo que se dice en el mismo idioma. Live Subtitles muestra la línea original y la traducción debajo, en 50 idiomas, y mantiene las dos a la vista a la vez.',
                 q9: '¿Puede leer la traducción en voz alta?',
-                a9: 'Sí, eso es Live Voice. La traducción se pronuncia en voz alta mientras el audio original sigue de fondo, así puedes seguir una llamada o un vídeo de oído. Está en Windows, pide una vez instalar un controlador de audio y cubre los idiomas que admite Live Voice, no los 50.'
+                a9: 'Sí, eso es Live Voice. La traducción se pronuncia en voz alta mientras el audio original sigue de fondo, así puedes seguir una llamada o un video de oído. Está en Windows, pide una vez instalar un controlador de audio y cubre los idiomas que admite Live Voice, no los 50.'
             },
         testimonials: {
             title: 'Reseñas de usuarios',
-            review1: '"Es la mejor app de subtítulos en directo para Windows. ¡Una pasada!"',
-            review2: '"No pensaba que pudiera funcionar tan bien. ¡Enhorabuena a los desarrolladores!"',
+            review1: '"Es la mejor app de subtítulos en directo para Windows. ¡Buenísima!"',
+            review2: '"No pensaba que pudiera funcionar tan bien. ¡Felicitaciones a los desarrolladores!"',
             review3: '"Me encanta. Tras probar otros programas, con este me siento cómodo: ligero y eficaz."',
-            review4: '"La traducción al inglés es clavada y me ha ayudado muchísimo con mi grupo de estudio. ¡Gracias al equipo!"',
+            review4: '"La traducción al inglés es muy precisa y me ayudó muchísimo con mi grupo de estudio. ¡Gracias al equipo!"',
             review5: '"Ayudan mucho a entender el contexto y es más fácil llevar la charla. ¡Y los planes son funcionales!"',
-            review6: '"Si eres fan del K-pop y andas sin un duro, te la recomiendo para los directos de Weverse."'
+            review6: '"Si eres fan del K-pop y andas sin plata, te la recomiendo para los directos de Weverse."'
         },
         download: {
             title: 'Pruébalo gratis ahora mismo',

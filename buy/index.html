@@ -83,35 +83,35 @@
     <img src="/2sub.png" alt="Live Subtitles" id="brand-logo">
 
     <div id="state-loading">
-      <h1>Preparing your checkout…</h1>
-      <p>The secure payment window will open in a moment.</p>
+      <h1 data-i18n="loadingTitle">Preparing your checkout…</h1>
+      <p data-i18n="loadingText">The secure payment window will open in a moment.</p>
     </div>
 
     <div id="state-ready" class="hidden">
       <h1 id="ready-title">Buy minutes for Live Subtitles</h1>
-      <p>The payment window was closed. You can reopen it below.</p>
-      <button class="btn" id="reopen">Open checkout</button>
+      <p data-i18n="readyText">The payment window was closed. You can reopen it below.</p>
+      <button class="btn" id="reopen" data-i18n="reopen">Open checkout</button>
     </div>
 
     <div id="state-success" class="hidden">
-      <h1 class="success">Payment complete</h1>
+      <h1 class="success" data-i18n="successTitle">Payment complete</h1>
       <p id="success-text">Thank you! Return to the Live Subtitles app on your PC — your minutes will arrive within a minute.</p>
-      <p>You can close this page.</p>
+      <p data-i18n="successClose">You can close this page.</p>
     </div>
 
     <div id="state-error" class="hidden">
-      <h1 class="error">Something is not right</h1>
-      <p id="error-text">This purchase link is invalid or incomplete.</p>
+      <h1 class="error" data-i18n="errorTitle">Something is not right</h1>
+      <p id="error-text" data-i18n="errorInvalid">This purchase link is invalid or incomplete.</p>
       <p id="error-help">Please reopen this page from the Live Subtitles app, or contact <a href="mailto:help@live-subtitles.com">help@live-subtitles.com</a>.</p>
     </div>
 
-    <p class="paddle-note">Payments are processed securely by <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, our merchant of record. Prices include applicable taxes.</p>
+    <p class="paddle-note" id="paddle-note">Payments are processed securely by <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, our merchant of record. Prices include applicable taxes.</p>
     <!-- Ссылки на условия Live Captions. Показываются только для platform=captioning-wpf,
          у Live Subtitles страница как была. -->
     <p class="paddle-note hidden" id="captions-legal">
-      <a href="/captions/terms.html" target="_blank" rel="noopener">Terms</a> ·
-      <a href="/captions/refund.html" target="_blank" rel="noopener">Refunds</a> ·
-      <a href="/captions/privacy.html" target="_blank" rel="noopener">Privacy</a>
+      <a href="/captions/terms.html" target="_blank" rel="noopener" data-i18n="terms">Terms</a> ·
+      <a href="/captions/refund.html" target="_blank" rel="noopener" data-i18n="refunds">Refunds</a> ·
+      <a href="/captions/privacy.html" target="_blank" rel="noopener" data-i18n="privacy">Privacy</a>
     </p>
   </div>
 
@@ -125,6 +125,358 @@
     // в основном репозитории печатает готовую строку. Пустое значение = тег молчит: чужой
     // или выдуманный ярлык уехал бы в чужое действие и испортил бы оптимизацию кампании.
     var AW_PURCHASE_SEND_TO = 'AW-17344614830/PZ-OCO63svgcEK6jx85A';
+
+    // Тексты страницы на языках сайта. {brand} — Live Subtitles или Live Captions,
+    // {email} и {paddle} становятся ссылками. Регистр как в остальных переводах:
+    // es/it/nl/pl/pt — на «ты», остальные — на «вы»; es — латиноамериканский.
+    var I18N = {
+      en: {
+        title: 'Buy Minutes | {brand}',
+        loadingTitle: 'Preparing your checkout…',
+        loadingText: 'The secure payment window will open in a moment.',
+        readyTitle: 'Buy minutes for {brand}',
+        readyText: 'The payment window was closed. You can reopen it below.',
+        reopen: 'Open checkout',
+        successTitle: 'Payment complete',
+        successPc: 'Thank you! Return to the {brand} app on your PC — your minutes will arrive within a minute.',
+        successPhone: 'Thank you! Return to the {brand} app on your phone — your minutes will arrive within a minute.',
+        successClose: 'You can close this page.',
+        errorTitle: 'Something is not right',
+        errorInvalid: 'This purchase link is invalid or incomplete.',
+        errorUnavailable: 'Payments are not available yet. Please try again later.',
+        errorHelp: 'Please reopen this page from the {brand} app, or contact {email}.',
+        paddleNote: 'Payments are processed securely by {paddle}, our merchant of record. Prices include applicable taxes.',
+        terms: 'Terms',
+        refunds: 'Refunds',
+        privacy: 'Privacy'
+      },
+      es: {
+        title: 'Comprar minutos | {brand}',
+        loadingTitle: 'Preparando tu pago…',
+        loadingText: 'La ventana de pago seguro se abrirá en un momento.',
+        readyTitle: 'Compra minutos para {brand}',
+        readyText: 'Cerraste la ventana de pago. Puedes volver a abrirla aquí abajo.',
+        reopen: 'Ir al pago',
+        successTitle: 'Pago completado',
+        successPc: '¡Gracias! Vuelve a la app {brand} en tu computadora: tus minutos llegarán en menos de un minuto.',
+        successPhone: '¡Gracias! Vuelve a la app {brand} en tu celular: tus minutos llegarán en menos de un minuto.',
+        successClose: 'Ya puedes cerrar esta página.',
+        errorTitle: 'Algo salió mal',
+        errorInvalid: 'Este enlace de compra no es válido o está incompleto.',
+        errorUnavailable: 'Los pagos todavía no están disponibles. Inténtalo de nuevo más tarde.',
+        errorHelp: 'Vuelve a abrir esta página desde la app {brand} o escríbenos a {email}.',
+        paddleNote: 'El pago lo procesa de forma segura {paddle}, nuestro revendedor oficial. Los precios incluyen los impuestos aplicables.',
+        terms: 'Términos',
+        refunds: 'Reembolsos',
+        privacy: 'Privacidad'
+      },
+      pt: {
+        title: 'Comprar minutos | {brand}',
+        loadingTitle: 'Preparando seu pagamento…',
+        loadingText: 'A janela de pagamento seguro vai abrir em instantes.',
+        readyTitle: 'Compre minutos para o {brand}',
+        readyText: 'A janela de pagamento foi fechada. Você pode abri-la de novo logo abaixo.',
+        reopen: 'Ir para o pagamento',
+        successTitle: 'Pagamento concluído',
+        successPc: 'Obrigado! Volte ao app {brand} no seu computador; seus minutos chegam em até um minuto.',
+        successPhone: 'Obrigado! Volte ao app {brand} no seu celular; seus minutos chegam em até um minuto.',
+        successClose: 'Você já pode fechar esta página.',
+        errorTitle: 'Algo deu errado',
+        errorInvalid: 'Este link de compra é inválido ou está incompleto.',
+        errorUnavailable: 'Os pagamentos ainda não estão disponíveis. Tente novamente mais tarde.',
+        errorHelp: 'Abra esta página novamente pelo app {brand} ou escreva para {email}.',
+        paddleNote: 'O pagamento é processado com segurança pela {paddle}, nossa revendedora oficial. Os preços incluem os impostos aplicáveis.',
+        terms: 'Termos',
+        refunds: 'Reembolsos',
+        privacy: 'Privacidade'
+      },
+      fr: {
+        title: 'Acheter des minutes | {brand}',
+        loadingTitle: 'Préparation du paiement…',
+        loadingText: 'La fenêtre de paiement sécurisé va s’ouvrir dans un instant.',
+        readyTitle: 'Acheter des minutes pour {brand}',
+        readyText: 'La fenêtre de paiement a été fermée. Vous pouvez la rouvrir ci-dessous.',
+        reopen: 'Ouvrir le paiement',
+        successTitle: 'Paiement effectué',
+        successPc: 'Merci ! Revenez dans l’application {brand} sur votre PC ; vos minutes arriveront d’ici une minute.',
+        successPhone: 'Merci ! Revenez dans l’application {brand} sur votre téléphone ; vos minutes arriveront d’ici une minute.',
+        successClose: 'Vous pouvez fermer cette page.',
+        errorTitle: 'Un problème est survenu',
+        errorInvalid: 'Ce lien d’achat est invalide ou incomplet.',
+        errorUnavailable: 'Les paiements ne sont pas encore disponibles. Veuillez réessayer plus tard.',
+        errorHelp: 'Rouvrez cette page depuis l’application {brand} ou écrivez-nous à {email}.',
+        paddleNote: 'Les paiements sont traités en toute sécurité par {paddle}, notre revendeur officiel. Les prix incluent les taxes applicables.',
+        terms: 'Conditions',
+        refunds: 'Remboursements',
+        privacy: 'Confidentialité'
+      },
+      de: {
+        title: 'Minuten kaufen | {brand}',
+        loadingTitle: 'Zahlung wird vorbereitet…',
+        loadingText: 'Das sichere Zahlungsfenster öffnet sich gleich.',
+        readyTitle: 'Minuten für {brand} kaufen',
+        readyText: 'Das Zahlungsfenster wurde geschlossen. Sie können es unten erneut öffnen.',
+        reopen: 'Zur Zahlung',
+        successTitle: 'Zahlung abgeschlossen',
+        successPc: 'Vielen Dank! Kehren Sie zur App {brand} auf Ihrem PC zurück – Ihre Minuten sind in spätestens einer Minute da.',
+        successPhone: 'Vielen Dank! Kehren Sie zur App {brand} auf Ihrem Smartphone zurück – Ihre Minuten sind in spätestens einer Minute da.',
+        successClose: 'Sie können diese Seite jetzt schließen.',
+        errorTitle: 'Etwas stimmt nicht',
+        errorInvalid: 'Dieser Kauflink ist ungültig oder unvollständig.',
+        errorUnavailable: 'Zahlungen sind noch nicht verfügbar. Bitte versuchen Sie es später erneut.',
+        errorHelp: 'Bitte öffnen Sie diese Seite erneut aus der App {brand} oder schreiben Sie an {email}.',
+        paddleNote: 'Die Zahlung wird sicher von {paddle} abgewickelt, unserem offiziellen Wiederverkäufer. Die Preise enthalten die anfallenden Steuern.',
+        terms: 'AGB',
+        refunds: 'Erstattungen',
+        privacy: 'Datenschutz'
+      },
+      it: {
+        title: 'Acquista minuti | {brand}',
+        loadingTitle: 'Stiamo preparando il pagamento…',
+        loadingText: 'La finestra di pagamento sicuro si aprirà tra un attimo.',
+        readyTitle: 'Acquista minuti per {brand}',
+        readyText: 'Hai chiuso la finestra di pagamento. Puoi riaprirla qui sotto.',
+        reopen: 'Vai al pagamento',
+        successTitle: 'Pagamento completato',
+        successPc: 'Grazie! Torna all’app {brand} sul tuo PC: i minuti arriveranno entro un minuto.',
+        successPhone: 'Grazie! Torna all’app {brand} sul tuo telefono: i minuti arriveranno entro un minuto.',
+        successClose: 'Puoi chiudere questa pagina.',
+        errorTitle: 'Qualcosa non va',
+        errorInvalid: 'Questo link di acquisto non è valido o è incompleto.',
+        errorUnavailable: 'I pagamenti non sono ancora disponibili. Riprova più tardi.',
+        errorHelp: 'Riapri questa pagina dall’app {brand} oppure scrivi a {email}.',
+        paddleNote: 'I pagamenti sono gestiti in modo sicuro da {paddle}, il nostro rivenditore ufficiale. I prezzi includono le imposte applicabili.',
+        terms: 'Termini',
+        refunds: 'Rimborsi',
+        privacy: 'Privacy'
+      },
+      ru: {
+        title: 'Купить минуты | {brand}',
+        loadingTitle: 'Готовим оплату…',
+        loadingText: 'Защищённое окно оплаты откроется через пару секунд.',
+        readyTitle: 'Купить минуты для {brand}',
+        readyText: 'Окно оплаты закрыто. Его можно открыть снова кнопкой ниже.',
+        reopen: 'Перейти к оплате',
+        successTitle: 'Оплата прошла',
+        successPc: 'Спасибо! Вернитесь в приложение {brand} на компьютере — минуты появятся на балансе в течение минуты.',
+        successPhone: 'Спасибо! Вернитесь в приложение {brand} на телефоне — минуты появятся на балансе в течение минуты.',
+        successClose: 'Эту страницу можно закрыть.',
+        errorTitle: 'Что-то пошло не так',
+        errorInvalid: 'Ссылка на покупку неверная или неполная.',
+        errorUnavailable: 'Оплата пока недоступна. Попробуйте позже.',
+        errorHelp: 'Откройте эту страницу заново из приложения {brand} или напишите нам на {email}.',
+        paddleNote: 'Платёж безопасно обрабатывает {paddle} — наш официальный реселлер. Цены указаны с учётом налогов.',
+        terms: 'Условия',
+        refunds: 'Возврат',
+        privacy: 'Конфиденциальность'
+      },
+      uk: {
+        title: 'Купити хвилини | {brand}',
+        loadingTitle: 'Готуємо оплату…',
+        loadingText: 'Захищене вікно оплати відкриється за мить.',
+        readyTitle: 'Купити хвилини для {brand}',
+        readyText: 'Вікно оплати закрито. Ви можете відкрити його знову кнопкою нижче.',
+        reopen: 'Перейти до оплати',
+        successTitle: 'Оплату завершено',
+        successPc: 'Дякуємо! Поверніться до застосунку {brand} на комп’ютері — хвилини з’являться на балансі протягом хвилини.',
+        successPhone: 'Дякуємо! Поверніться до застосунку {brand} на телефоні — хвилини з’являться на балансі протягом хвилини.',
+        successClose: 'Цю сторінку можна закрити.',
+        errorTitle: 'Щось пішло не так',
+        errorInvalid: 'Посилання на покупку недійсне або неповне.',
+        errorUnavailable: 'Оплата поки недоступна. Спробуйте пізніше.',
+        errorHelp: 'Відкрийте цю сторінку знову із застосунку {brand} або напишіть нам на {email}.',
+        paddleNote: 'Платіж безпечно обробляє {paddle} — наш офіційний реселер. Ціни вказано з урахуванням податків.',
+        terms: 'Умови',
+        refunds: 'Повернення коштів',
+        privacy: 'Конфіденційність'
+      },
+      pl: {
+        title: 'Kup minuty | {brand}',
+        loadingTitle: 'Przygotowujemy płatność…',
+        loadingText: 'Bezpieczne okno płatności otworzy się za chwilę.',
+        readyTitle: 'Kup minuty do {brand}',
+        readyText: 'Okno płatności zostało zamknięte. Możesz otworzyć je ponownie poniżej.',
+        reopen: 'Przejdź do płatności',
+        successTitle: 'Płatność zakończona',
+        successPc: 'Dziękujemy! Wróć do aplikacji {brand} na komputerze — minuty pojawią się w ciągu minuty.',
+        successPhone: 'Dziękujemy! Wróć do aplikacji {brand} na telefonie — minuty pojawią się w ciągu minuty.',
+        successClose: 'Możesz zamknąć tę stronę.',
+        errorTitle: 'Coś jest nie tak',
+        errorInvalid: 'Ten link zakupu jest nieprawidłowy lub niepełny.',
+        errorUnavailable: 'Płatności nie są jeszcze dostępne. Spróbuj ponownie później.',
+        errorHelp: 'Otwórz tę stronę ponownie z aplikacji {brand} lub napisz na {email}.',
+        paddleNote: 'Płatności bezpiecznie obsługuje {paddle}, nasz oficjalny sprzedawca. Ceny zawierają należne podatki.',
+        terms: 'Regulamin',
+        refunds: 'Zwroty',
+        privacy: 'Prywatność'
+      },
+      nl: {
+        title: 'Minuten kopen | {brand}',
+        loadingTitle: 'Je betaling wordt voorbereid…',
+        loadingText: 'Het beveiligde betaalvenster opent zo.',
+        readyTitle: 'Minuten kopen voor {brand}',
+        readyText: 'Het betaalvenster is gesloten. Je kunt het hieronder opnieuw openen.',
+        reopen: 'Naar betalen',
+        successTitle: 'Betaling voltooid',
+        successPc: 'Bedankt! Ga terug naar de app {brand} op je pc; je minuten staan er binnen een minuut op.',
+        successPhone: 'Bedankt! Ga terug naar de app {brand} op je telefoon; je minuten staan er binnen een minuut op.',
+        successClose: 'Je kunt deze pagina sluiten.',
+        errorTitle: 'Er klopt iets niet',
+        errorInvalid: 'Deze aankooplink is ongeldig of onvolledig.',
+        errorUnavailable: 'Betalen is nog niet mogelijk. Probeer het later opnieuw.',
+        errorHelp: 'Open deze pagina opnieuw vanuit de app {brand} of mail naar {email}.',
+        paddleNote: 'Betalingen worden veilig verwerkt door {paddle}, onze officiële wederverkoper. Prijzen zijn inclusief toepasselijke belastingen.',
+        terms: 'Voorwaarden',
+        refunds: 'Terugbetalingen',
+        privacy: 'Privacy'
+      },
+      tr: {
+        title: 'Dakika satın al | {brand}',
+        loadingTitle: 'Ödemeniz hazırlanıyor…',
+        loadingText: 'Güvenli ödeme penceresi birazdan açılacak.',
+        readyTitle: '{brand} için dakika satın alın',
+        readyText: 'Ödeme penceresi kapatıldı. Aşağıdan yeniden açabilirsiniz.',
+        reopen: 'Ödemeye geç',
+        successTitle: 'Ödeme tamamlandı',
+        successPc: 'Teşekkürler! Bilgisayarınızdaki {brand} uygulamasına dönün; dakikalarınız bir dakika içinde yüklenecek.',
+        successPhone: 'Teşekkürler! Telefonunuzdaki {brand} uygulamasına dönün; dakikalarınız bir dakika içinde yüklenecek.',
+        successClose: 'Bu sayfayı kapatabilirsiniz.',
+        errorTitle: 'Bir sorun var',
+        errorInvalid: 'Bu satın alma bağlantısı geçersiz veya eksik.',
+        errorUnavailable: 'Ödemeler henüz kullanılamıyor. Lütfen daha sonra tekrar deneyin.',
+        errorHelp: 'Lütfen bu sayfayı {brand} uygulamasından yeniden açın veya {email} adresine yazın.',
+        paddleNote: 'Ödemeler, resmi satıcımız {paddle} tarafından güvenle işlenir. Fiyatlara geçerli vergiler dahildir.',
+        terms: 'Koşullar',
+        refunds: 'İadeler',
+        privacy: 'Gizlilik'
+      },
+      ja: {
+        title: '利用時間を購入 | {brand}',
+        loadingTitle: 'お支払いの準備をしています…',
+        loadingText: '安全な決済画面がまもなく開きます。',
+        readyTitle: '{brand} の利用時間を購入',
+        readyText: '決済画面が閉じられました。下のボタンからもう一度開けます。',
+        reopen: '決済画面を開く',
+        successTitle: 'お支払いが完了しました',
+        successPc: 'ありがとうございます！PC の {brand} アプリに戻ってください。1 分以内に利用時間が追加されます。',
+        successPhone: 'ありがとうございます！スマートフォンの {brand} アプリに戻ってください。1 分以内に利用時間が追加されます。',
+        successClose: 'このページは閉じてかまいません。',
+        errorTitle: '問題が発生しました',
+        errorInvalid: 'この購入リンクは無効か、不完全です。',
+        errorUnavailable: '現在、お支払いはご利用いただけません。しばらくしてから再度お試しください。',
+        errorHelp: '{brand} アプリからこのページを開き直すか、{email} までお問い合わせください。',
+        paddleNote: 'お支払いは、当社の正規販売代理店である {paddle} が安全に処理します。価格には該当する税金が含まれています。',
+        terms: '利用規約',
+        refunds: '返金',
+        privacy: 'プライバシー'
+      },
+      ko: {
+        title: '이용 시간 구매 | {brand}',
+        loadingTitle: '결제를 준비하고 있습니다…',
+        loadingText: '안전한 결제 창이 곧 열립니다.',
+        readyTitle: '{brand} 이용 시간 구매',
+        readyText: '결제 창이 닫혔습니다. 아래 버튼으로 다시 열 수 있습니다.',
+        reopen: '결제 창 열기',
+        successTitle: '결제가 완료되었습니다',
+        successPc: '감사합니다! PC의 {brand} 앱으로 돌아가세요. 1분 안에 이용 시간이 충전됩니다.',
+        successPhone: '감사합니다! 휴대폰의 {brand} 앱으로 돌아가세요. 1분 안에 이용 시간이 충전됩니다.',
+        successClose: '이 페이지는 닫으셔도 됩니다.',
+        errorTitle: '문제가 발생했습니다',
+        errorInvalid: '구매 링크가 잘못되었거나 불완전합니다.',
+        errorUnavailable: '아직 결제를 이용할 수 없습니다. 잠시 후 다시 시도해 주세요.',
+        errorHelp: '{brand} 앱에서 이 페이지를 다시 열거나 {email}로 문의해 주세요.',
+        paddleNote: '결제는 공식 판매 대행사인 {paddle}에서 안전하게 처리합니다. 가격에는 해당 세금이 포함되어 있습니다.',
+        terms: '이용약관',
+        refunds: '환불',
+        privacy: '개인정보처리방침'
+      },
+      zh: {
+        title: '购买时长 | {brand}',
+        loadingTitle: '正在准备支付…',
+        loadingText: '安全支付窗口即将打开。',
+        readyTitle: '为 {brand} 购买时长',
+        readyText: '支付窗口已关闭，可点击下方按钮重新打开。',
+        reopen: '继续支付',
+        successTitle: '支付成功',
+        successPc: '谢谢！请返回电脑上的 {brand} 应用，时长将在一分钟内到账。',
+        successPhone: '谢谢！请返回手机上的 {brand} 应用，时长将在一分钟内到账。',
+        successClose: '现在可以关闭此页面。',
+        errorTitle: '出了点问题',
+        errorInvalid: '此购买链接无效或不完整。',
+        errorUnavailable: '暂时无法付款，请稍后再试。',
+        errorHelp: '请从 {brand} 应用重新打开此页面，或发送邮件至 {email}。',
+        paddleNote: '付款由我们的官方经销商 {paddle} 安全处理。价格已包含相关税费。',
+        terms: '条款',
+        refunds: '退款',
+        privacy: '隐私'
+      },
+      'zh-TW': {
+        title: '購買時數 | {brand}',
+        loadingTitle: '正在準備付款…',
+        loadingText: '安全付款視窗即將開啟。',
+        readyTitle: '為 {brand} 購買時數',
+        readyText: '付款視窗已關閉，可點選下方按鈕重新開啟。',
+        reopen: '繼續付款',
+        successTitle: '付款完成',
+        successPc: '謝謝！請回到電腦上的 {brand} 應用程式，時數將在一分鐘內入帳。',
+        successPhone: '謝謝！請回到手機上的 {brand} 應用程式，時數將在一分鐘內入帳。',
+        successClose: '現在可以關閉此頁面。',
+        errorTitle: '發生問題',
+        errorInvalid: '此購買連結無效或不完整。',
+        errorUnavailable: '目前無法付款，請稍後再試。',
+        errorHelp: '請從 {brand} 應用程式重新開啟此頁面，或寄信至 {email}。',
+        paddleNote: '付款由我們的官方經銷商 {paddle} 安全處理。價格已含相關稅費。',
+        terms: '條款',
+        refunds: '退款',
+        privacy: '隱私權'
+      },
+      ar: {
+        title: 'شراء دقائق | {brand}',
+        loadingTitle: 'جارٍ تجهيز الدفع…',
+        loadingText: 'ستُفتح نافذة الدفع الآمنة بعد لحظات.',
+        readyTitle: 'شراء دقائق لـ {brand}',
+        readyText: 'تم إغلاق نافذة الدفع. يمكنك فتحها مجددًا من الزر أدناه.',
+        reopen: 'متابعة الدفع',
+        successTitle: 'تم الدفع بنجاح',
+        successPc: 'شكرًا لك! عُد إلى تطبيق {brand} على الكمبيوتر، وستصل دقائقك خلال دقيقة.',
+        successPhone: 'شكرًا لك! عُد إلى تطبيق {brand} على الهاتف، وستصل دقائقك خلال دقيقة.',
+        successClose: 'يمكنك إغلاق هذه الصفحة.',
+        errorTitle: 'حدث خطأ ما',
+        errorInvalid: 'رابط الشراء هذا غير صالح أو غير مكتمل.',
+        errorUnavailable: 'الدفع غير متاح بعد. يُرجى المحاولة لاحقًا.',
+        errorHelp: 'يُرجى فتح هذه الصفحة مجددًا من تطبيق {brand}، أو مراسلتنا على {email}.',
+        paddleNote: 'تتم معالجة المدفوعات بأمان عبر {paddle}، الموزّع الرسمي لدينا. الأسعار تشمل الضرائب المطبقة.',
+        terms: 'الشروط',
+        refunds: 'الاسترداد',
+        privacy: 'الخصوصية'
+      },
+      hi: {
+        title: 'मिनट खरीदें | {brand}',
+        loadingTitle: 'आपका भुगतान तैयार हो रहा है…',
+        loadingText: 'सुरक्षित भुगतान विंडो कुछ ही पलों में खुलेगी।',
+        readyTitle: '{brand} के लिए मिनट खरीदें',
+        readyText: 'भुगतान विंडो बंद हो गई है। आप इसे नीचे दिए बटन से फिर खोल सकते हैं।',
+        reopen: 'भुगतान पर जाएं',
+        successTitle: 'भुगतान पूरा हुआ',
+        successPc: 'धन्यवाद! अपने PC पर {brand} ऐप पर वापस जाएं — आपके मिनट एक मिनट के अंदर जुड़ जाएंगे।',
+        successPhone: 'धन्यवाद! अपने फ़ोन पर {brand} ऐप पर वापस जाएं — आपके मिनट एक मिनट के अंदर जुड़ जाएंगे।',
+        successClose: 'अब आप यह पेज बंद कर सकते हैं।',
+        errorTitle: 'कुछ गड़बड़ है',
+        errorInvalid: 'यह खरीद लिंक अमान्य या अधूरा है।',
+        errorUnavailable: 'भुगतान अभी उपलब्ध नहीं है। कृपया बाद में फिर कोशिश करें।',
+        errorHelp: 'कृपया यह पेज {brand} ऐप से फिर खोलें, या {email} पर लिखें।',
+        paddleNote: 'भुगतान हमारे आधिकारिक विक्रेता {paddle} द्वारा सुरक्षित रूप से प्रोसेस किया जाता है। कीमतों में लागू टैक्स शामिल हैं।',
+        terms: 'शर्तें',
+        refunds: 'रिफ़ंड',
+        privacy: 'गोपनीयता'
+      }
+    };
+
+    // Наши коды -> settings.locale Paddle.js v2. hi и uk у Paddle нет.
+    var PADDLE_LOCALES = {
+      en: 'en', es: 'es', pt: 'pt-BR', fr: 'fr', de: 'de', it: 'it', ru: 'ru', pl: 'pl',
+      nl: 'nl', tr: 'tr', ja: 'ja', ko: 'ko', zh: 'zh-Hans', 'zh-TW': 'zh-TW', ar: 'ar'
+    };
 
     (function () {
       var params = new URLSearchParams(window.location.search);
@@ -142,29 +494,82 @@
       // Пиксели и конверсии на этой странице - аккаунтов Live Subtitles. Покупки Live Captions
       // туда не шлём: иначе кампании Live Subtitles учились бы на чужих оплатах.
       var sendAdEvents = platform !== 'captioning-wpf';
-      if (platform === 'android') {
-        document.getElementById('success-text').textContent =
-          'Thank you! Return to the Live Subtitles app on your phone — your minutes will arrive within a minute.';
-      } else if (platform === 'captioning-wpf') {
-        applyLiveCaptionsBranding();
+      var isCaptions = platform === 'captioning-wpf';
+      var brand = isCaptions ? 'Live Captions' : 'Live Subtitles';
+      var supportEmail = isCaptions ? 'captions@live-subtitles.com' : 'help@live-subtitles.com';
+      var locale = resolveLocale();
+      var t = I18N[locale.lang];
+
+      document.documentElement.lang = locale.lang;
+      if (locale.lang === 'ar') document.documentElement.dir = 'rtl';
+      if (isCaptions) applyLiveCaptionsBranding();
+      applyTexts();
+
+      // Язык страницы: ?lang= / ?locale= (если его передаст приложение), затем выбор на сайте
+      // (preferredLanguage — тот же ключ, что пишет js/landing.js), затем языки браузера.
+      // matched=false — язык не опознан: страница на английском, а чекаут Paddle сам
+      // подбирает язык по браузеру.
+      function resolveLocale() {
+        var candidates = [params.get('lang'), params.get('locale')];
+        try { candidates.push(localStorage.getItem('preferredLanguage')); } catch (e) { /* storage blocked */ }
+        candidates = candidates.concat(navigator.languages || [], [navigator.language]);
+        for (var i = 0; i < candidates.length; i++) {
+          var code = normalizeLang(candidates[i]);
+          if (code) return { lang: code, matched: true };
+        }
+        return { lang: 'en', matched: false };
+      }
+
+      function normalizeLang(value) {
+        if (!value || typeof value !== 'string') return null;
+        var code = value.trim().toLowerCase().replace('_', '-');
+        if (code.indexOf('zh') === 0) {
+          return /-(tw|hk|mo|hant)/.test(code) ? 'zh-TW' : 'zh';
+        }
+        code = code.split('-')[0];
+        return Object.prototype.hasOwnProperty.call(I18N, code) ? code : null;
+      }
+
+      // Подставляет {brand}, {email} и {paddle}; почта и Paddle — ссылками.
+      function fill(el, template) {
+        el.textContent = '';
+        template.split(/(\{\w+\})/).forEach(function (part) {
+          var node;
+          if (part === '{brand}') {
+            node = document.createTextNode(brand);
+          } else if (part === '{email}') {
+            node = document.createElement('a');
+            node.href = 'mailto:' + supportEmail;
+            node.textContent = supportEmail;
+          } else if (part === '{paddle}') {
+            node = document.createElement('a');
+            node.href = 'https://www.paddle.com';
+            node.target = '_blank';
+            node.rel = 'noopener';
+            node.textContent = 'Paddle';
+          } else {
+            node = document.createTextNode(part);
+          }
+          el.appendChild(node);
+        });
+      }
+
+      function applyTexts() {
+        document.title = t.title.replace('{brand}', brand);
+        Array.prototype.forEach.call(document.querySelectorAll('[data-i18n]'), function (el) {
+          el.textContent = t[el.getAttribute('data-i18n')];
+        });
+        fill(document.getElementById('ready-title'), t.readyTitle);
+        fill(document.getElementById('success-text'), platform === 'android' ? t.successPhone : t.successPc);
+        fill(document.getElementById('error-help'), t.errorHelp);
+        fill(document.getElementById('paddle-note'), t.paddleNote);
       }
 
       function applyLiveCaptionsBranding() {
-        document.title = 'Buy Minutes | Live Captions';
         var logo = document.getElementById('brand-logo');
         logo.src = '/captions/img/livecaptions-96.png';
         logo.alt = 'Live Captions';
         document.getElementById('favicon').href = '/captions/img/favicon.ico';
-        document.getElementById('ready-title').textContent = 'Buy minutes for Live Captions';
-        document.getElementById('success-text').textContent =
-          'Thank you! Return to the Live Captions app on your PC — your minutes will arrive within a minute.';
-        var help = document.getElementById('error-help');
-        help.textContent = 'Please reopen this page from the Live Captions app, or contact ';
-        var mail = document.createElement('a');
-        mail.href = 'mailto:captions@live-subtitles.com';
-        mail.textContent = 'captions@live-subtitles.com';
-        help.appendChild(mail);
-        help.appendChild(document.createTextNode('.'));
         document.getElementById('captions-legal').classList.remove('hidden');
       }
 
@@ -184,7 +589,7 @@
 
       var token = sandbox ? PADDLE_TOKEN_SANDBOX : PADDLE_TOKEN_LIVE;
       if (!token || token.indexOf('REPLACE_WITH') === 0) {
-        show('state-error', 'Payments are not available yet. Please try again later.');
+        show('state-error', t.errorUnavailable);
         return;
       }
 
@@ -321,6 +726,9 @@
           customData: buildCustomData(),
           settings: { displayMode: 'overlay', theme: 'light' }
         };
+        // Язык самого окна Paddle; hi и uk Paddle не поддерживает — там он выберет сам.
+        var paddleLocale = locale.matched && PADDLE_LOCALES[locale.lang];
+        if (paddleLocale) options.settings.locale = paddleLocale;
         // Промокод ссылкой (?discount=CODE): поле «Add discount» Paddle показывает не всегда.
         var discount = params.get('discount') || '';
         if (/^[A-Za-z0-9]{3,32}$/.test(discount)) options.discountCode = discount;
