@@ -5,17 +5,17 @@
 > device — Zoom, Microsoft Teams, Google Meet, Skype, YouTube, Netflix, games and
 > any other app. The audio source is switchable: it captures system audio directly,
 > or listens through the microphone for talks, lectures and in-person conversations.
-> Speech is transcribed and translated live into 60+ languages (69 translation
-> targets), with the original and translated line shown together.
+> Speech is transcribed and translated live into 50+ languages, with the
+> original and translated line shown together.
 
 Key facts:
 - Product: Live Subtitles (publisher: 2Sub / getlivesubtitles.com)
 - Platforms: Windows (Microsoft Store), macOS and iOS (App Store), Android (Google Play); a TV version is in development
 - Microsoft Store rating: 4.7/5 from 351+ ratings
-- Pricing: 3-day free trial, no credit card; paid plans from $5/month
+- Pricing: 20 free minutes on install (plus 10 Live Voice minutes), no credit card; subscriptions from $5.83/month (Basic annual) or $6.99/month; one-time minute packs that never expire; Pro annual starts with a 7-day free trial (https://live-subtitles.com/pricing.html)
 - Core features: real-time captions from system audio or the microphone, dual subtitles
-  (original + translation), 60+ translation languages, ~66 recognition language
-  variants, works offline with local models or online providers, Game Mode overlay
+  (original + translation), 50+ languages for recognition and translation,
+  works offline with local models or online providers, Game Mode overlay
 - Typical uses: multilingual meetings, watching foreign movies/videos, language
   learning with dual subtitles, accessibility (deaf/hard-of-hearing), gaming
 

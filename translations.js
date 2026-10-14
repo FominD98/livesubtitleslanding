@@ -114,10 +114,10 @@ const translations = {
             articles: 'Articles'
         },
         title: 'Live Subtitles — Live Captions & Dual Subtitles for Any App',
-        description: 'Live captions & dual subtitles for any app on Windows, Mac, iOS & Android. Real-time AI translation in 50 languages for Zoom, Teams & Netflix. Free trial.',
+        description: 'Live Subtitles official site: download live captions & dual subtitles for any app on Windows, Mac, iOS & Android. AI translation in 50 languages. Free trial.',
         download: 'Download Now',
         meta: {
-            description: 'Live captions & dual subtitles for any app on Windows, Mac, iOS & Android. Real-time AI translation in 50 languages for Zoom, Teams & Netflix. Free trial.',
+            description: 'Live Subtitles official site: download live captions & dual subtitles for any app on Windows, Mac, iOS & Android. AI translation in 50 languages. Free trial.',
             keywords: 'live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, language learning subtitles'
         },
         downloadModal: {
@@ -175,7 +175,8 @@ const translations = {
         download: {
             title: 'Try it free right now',
             subtitle: 'Install it and choose two languages — it takes it from there.',
-            guarantee: 'Free to try · No credit card required'
+            guarantee: 'Free to try · No credit card required',
+            android: 'Live captions & dual subtitles on Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ru: "Давайте начнём сегодняшнюю встречу", es: "Empecemos con la reunión de hoy", de: "Lassen Sie uns mit dem heutigen Meeting beginnen", it: "Iniziamo la riunione di oggi", ja: "それでは、本日のミーティングを始めましょう", ko: "오늘 회의를 시작하겠습니다", zh: "那我们开始今天的会议吧", ar: "لنبدأ اجتماع اليوم", hi: "चलिए आज की मीटिंग शुरू करते हैं", pt: "Vamos começar a reunião de hoje", pl: "Zaczynajmy dzisiejsze spotkanie", nl: "Laten we beginnen met de meeting van vandaag", tr: "Hadi bugünkü toplantımıza başlayalım", uk: "Розпочнімо нашу сьогоднішню зустріч" },
@@ -362,7 +363,8 @@ const translations = {
         download: {
             title: 'Попробуйте бесплатно прямо сейчас',
             subtitle: 'Установите и выберите два языка — дальше он сам.',
-            guarantee: 'Попробовать бесплатно · Без банковской карты'
+            guarantee: 'Попробовать бесплатно · Без банковской карты',
+            android: 'Живые и двойные субтитры на Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", ru: "Давайте начнём сегодняшнюю встречу" },
@@ -545,7 +547,8 @@ const translations = {
         download: {
             title: 'Essayez gratuitement dès maintenant',
             subtitle: 'Installez-le et choisissez deux langues — il prend le relais.',
-            guarantee: 'Essai gratuit · Sans carte bancaire'
+            guarantee: 'Essai gratuit · Sans carte bancaire',
+            android: 'Sous-titres en direct et doubles sur Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", fr: "Commençons la réunion d'aujourd'hui" },
@@ -728,7 +731,8 @@ const translations = {
         download: {
             title: 'Pruébalo gratis ahora mismo',
             subtitle: 'Instálalo y elige dos idiomas: el resto lo hace él.',
-            guarantee: 'Prueba gratis · Sin tarjeta de crédito'
+            guarantee: 'Prueba gratis · Sin tarjeta de crédito',
+            android: 'Subtítulos en vivo y duales en Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", es: "Empecemos con la reunión de hoy" },
@@ -911,7 +915,8 @@ const translations = {
         download: {
             title: 'Probieren Sie es jetzt kostenlos aus',
             subtitle: 'Installieren und zwei Sprachen wählen — den Rest macht es selbst.',
-            guarantee: 'Kostenlos testen · Ohne Kreditkarte'
+            guarantee: 'Kostenlos testen · Ohne Kreditkarte',
+            android: 'Live- & duale Untertitel auf Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", de: "Lassen Sie uns mit dem heutigen Meeting beginnen" },
@@ -1094,7 +1099,8 @@ const translations = {
         download: {
             title: 'Provalo gratis ora',
             subtitle: 'Installalo e scegli due lingue: al resto pensa lui.',
-            guarantee: 'Prova gratis · Senza carta di credito'
+            guarantee: 'Prova gratis · Senza carta di credito',
+            android: 'Sottotitoli live e doppi su Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", it: "Iniziamo la riunione di oggi" },
@@ -1277,7 +1283,8 @@ const translations = {
         download: {
             title: '今すぐ無料でお試し',
             subtitle: 'インストールして2つの言語を選ぶだけ。あとは自動です。',
-            guarantee: '無料でお試し · クレジットカード不要'
+            guarantee: '無料でお試し · クレジットカード不要',
+            android: 'Androidでリアルタイム字幕・二重字幕 →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ja: "それでは、本日のミーティングを始めましょう" },
@@ -1460,7 +1467,8 @@ const translations = {
         download: {
             title: '지금 무료로 사용해보세요',
             subtitle: '설치하고 두 가지 언어만 고르세요. 나머지는 알아서 합니다.',
-            guarantee: '무료 체험 · 신용카드 불필요'
+            guarantee: '무료 체험 · 신용카드 불필요',
+            android: 'Android에서 실시간 자막 & 이중 자막 →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ko: "오늘 회의를 시작하겠습니다" },
@@ -1581,11 +1589,11 @@ const translations = {
             email: 'help@live-subtitles.com',
             articles: '文章'
         },
-        title: 'Live Subtitles — 实时字幕与双语字幕，任意应用',
-        description: 'Live Subtitles 在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏。免费试用，立即体验无障碍沟通。',
+        title: 'Live Subtitles 官网 — 实时字幕与双语字幕，任意应用下载',
+        description: 'Live Subtitles 官网下载：在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube、电影与游戏。免费试用。',
         download: '立即下载',
         meta: {
-            description: 'Live Subtitles 在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube 视频通话、电影与游戏。免费试用，立即体验无障碍沟通。',
+            description: 'Live Subtitles 官网下载：在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube、电影与游戏。免费试用。',
             keywords: '双字幕, 语言学习字幕, 语音翻译, 语音识别, 在线字幕, Live Subtitles, 英语学习, 语言学习, 实时字幕, 语音理解, 电影翻译器'
         },
         downloadModal: {
@@ -1643,7 +1651,8 @@ const translations = {
         download: {
             title: '立即免费试用',
             subtitle: '安装后选择两种语言，剩下的它自己来。',
-            guarantee: '免费试用 · 无需信用卡'
+            guarantee: '免费试用 · 无需信用卡',
+            android: '在 Android 上使用实时字幕与双语字幕 →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", zh: "那我们开始今天的会议吧" },
@@ -1826,7 +1835,8 @@ const translations = {
         download: {
             title: 'جرب مجاناً الآن',
             subtitle: 'ثبّته واختر لغتين — والباقي يتولاه بنفسه.',
-            guarantee: 'جرّبه مجانًا · بدون بطاقة ائتمان'
+            guarantee: 'جرّبه مجانًا · بدون بطاقة ائتمان',
+            android: 'ترجمة حية ومزدوجة على أندرويد ←'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ar: "لنبدأ اجتماع اليوم" },
@@ -2009,7 +2019,8 @@ const translations = {
         download: {
             title: 'अभी मुफ्त में आज़माएं',
             subtitle: 'इंस्टॉल करें और दो भाषाएँ चुनें — आगे यह खुद संभाल लेता है।',
-            guarantee: 'मुफ़्त आज़माएँ · क्रेडिट कार्ड की ज़रूरत नहीं'
+            guarantee: 'मुफ़्त आज़माएँ · क्रेडिट कार्ड की ज़रूरत नहीं',
+            android: 'Android पर लाइव कैप्शन और डुअल सबटाइटल →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", hi: "चलिए आज की मीटिंग शुरू करते हैं" },
@@ -2192,7 +2203,8 @@ const translations = {
         download: {
             title: 'Experimente grátis agora',
             subtitle: 'Instale e escolha dois idiomas — o resto ele faz sozinho.',
-            guarantee: 'Experimente grátis · Sem cartão de crédito'
+            guarantee: 'Experimente grátis · Sem cartão de crédito',
+            android: 'Legendas ao vivo e duplas no Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pt: "Vamos começar a reunião de hoje" },
@@ -2375,7 +2387,8 @@ const translations = {
         download: {
             title: 'Wypróbuj za darmo teraz',
             subtitle: 'Zainstaluj i wybierz dwa języki — dalej zajmie się tym sam.',
-            guarantee: 'Wypróbuj bezpłatnie · Bez karty kredytowej'
+            guarantee: 'Wypróbuj bezpłatnie · Bez karty kredytowej',
+            android: 'Napisy na żywo i podwójne na Androidzie →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pl: "Zaczynajmy dzisiejsze spotkanie" },
@@ -2558,7 +2571,8 @@ const translations = {
         download: {
             title: 'Probeer nu gratis',
             subtitle: 'Installeer en kies twee talen — de rest doet het zelf.',
-            guarantee: 'Gratis uitproberen · Geen creditcard nodig'
+            guarantee: 'Gratis uitproberen · Geen creditcard nodig',
+            android: 'Live en duale ondertitels op Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", nl: "Laten we beginnen met de meeting van vandaag" },
@@ -2741,7 +2755,8 @@ const translations = {
         download: {
             title: 'Şimdi ücretsiz dene',
             subtitle: 'Kurun ve iki dil seçin — gerisini kendi yapar.',
-            guarantee: 'Ücretsiz deneyin · Kredi kartı gerekmez'
+            guarantee: 'Ücretsiz deneyin · Kredi kartı gerekmez',
+            android: 'Android\'de canlı ve çift altyazı →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", tr: "Hadi bugünkü toplantımıza başlayalım" },
@@ -2924,7 +2939,8 @@ const translations = {
         download: {
             title: 'Спробуйте безкоштовно зараз',
             subtitle: 'Встановіть і виберіть дві мови — далі він сам.',
-            guarantee: 'Спробувати безкоштовно · Без банківської картки'
+            guarantee: 'Спробувати безкоштовно · Без банківської картки',
+            android: 'Живі та подвійні субтитри на Android →'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", uk: "Розпочнімо нашу сьогоднішню зустріч" },
