@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dash-api.live-subtitles.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <title>Dashboard</title>
-<link rel="stylesheet" href="dash.css?v=2fea44e0f7">
+<link rel="stylesheet" href="dash.css?v=03d7782da6">
 </head>
 <body>
 <div class="viz-root">
@@ -54,6 +54,10 @@
           <option value="yoy">vs same dates last year</option>
           <option value="none">no comparison</option>
         </select>
+      </div>
+      <div class="filters" id="refresh-box">
+        <span class="muted small" id="refresh-note"></span>
+        <button id="refresh-btn" type="button" disabled>Update now</button>
       </div>
       <div class="filters" id="product-toggle" role="group" aria-label="App">
         <button data-product="livesubs" aria-pressed="true">Live Subtitles</button>
@@ -450,6 +454,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=52fe85589a"></script>
+<script src="app.js?v=ee1a454084"></script>
 </body>
 </html>

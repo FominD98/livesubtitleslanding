@@ -70,7 +70,8 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 .muted { color: var(--text-muted); }
 
 .top { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
-.top #product-toggle { margin-left: auto; }
+.top #refresh-box { margin-left: auto; align-items: center; }
+.top #refresh-box button:disabled { opacity: 0.5; cursor: default; }
 .top #user { font-size: 12px; }
 
 .filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }

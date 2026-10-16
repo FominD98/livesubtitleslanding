@@ -1603,11 +1603,12 @@ async function loadSummary() {
     const churn = s.churn?.avg_active ? s.churn.cancelled / s.churn.avg_active : null;
     const conv = s.funnel?.started ? s.funnel.purchased / s.funnel.started : null;
     const checkout = s.checkout?.opened ? s.checkout.paid / s.checkout.opened : null;
-    // Часовой сбор: Paddle, Play, App Store, оплаты; суточный: остальное. MS Store — ручной CSV.
-    const LIMITS = { paddle: 3, play: 3, appstore: 3, checkouts: 3, ga4: 30, funnel: 30, subs: 30, health: 30, aso: 30,
-        ads_google: 30, ads_meta: 30 };
+    // Сбор раз в сутки в GitHub Actions (и по кнопке Update now). MS Store — ручной CSV.
+    const LIMITS = { paddle: 30, play: 30, appstore: 30, checkouts: 30, ga4: 30, funnel: 30, subs: 30, health: 30, aso: 30,
+        ads_google: 30, ads_meta: 30, serp: 30 };
     const NAMES = { paddle: "Paddle", play: "Google Play", appstore: "App Store", checkouts: "Paddle checkouts", ga4: "GA4",
-        funnel: "Funnel", subs: "Subscriptions", health: "Health", aso: "ASO", ads_google: "Google Ads spend", ads_meta: "Meta Ads spend" };
+        funnel: "Funnel", subs: "Subscriptions", health: "Health", aso: "ASO", ads_google: "Google Ads spend", ads_meta: "Meta Ads spend",
+        serp: "Google positions" };
     const warnings = [];
     for (const src of s.sources || []) {
         const hours = (Date.now() - Date.parse(src.updated_at)) / 3600000;
@@ -1945,6 +1946,55 @@ function renderCampaigns() {
         "No campaign traffic, tagged purchases or ad spend in this period");
 }
 
+/* ---------- Update now: запуск сборщика (GitHub Actions) ---------- */
+
+let refreshTimer = null;
+let refreshRunning = false;
+
+function ago(iso) {
+    const min = Math.round((Date.now() - Date.parse(iso)) / 60000);
+    return min < 60 ? `${min} min ago` : min < 48 * 60 ? `${Math.round(min / 60)} h ago` : `${Math.round(min / 1440)} days ago`;
+}
+
+function showRefresh(st) {
+    const btn = document.getElementById("refresh-btn");
+    const note = document.getElementById("refresh-note");
+    btn.disabled = !st.canStart;
+    btn.textContent = st.running ? "Updating…" : "Update now";
+    const failed = st.run && st.run.status === "completed" && st.run.conclusion !== "success";
+    note.textContent = st.running ? `started ${ago(st.run?.startedAt ?? new Date().toISOString())}, takes ~40 min`
+        : `${st.lastUpdate ? `Updated ${ago(st.lastUpdate)}` : "Never updated"}${failed ? " · last run had errors" : ""}`;
+    btn.title = st.running ? "Collecting data from all sources" : st.canStart ? "Collect fresh data from all sources now"
+        : "Available an hour after the last update";
+    clearTimeout(refreshTimer);
+    if (st.running) refreshTimer = setTimeout(pollRefresh, 60000);
+    // сбор закончился, пока страница открыта — перечитать данные открытой вкладки и сводку
+    if (refreshRunning && !st.running) {
+        for (const name of Object.keys(RENDER)) state[name] = null;
+        summaryLoaded = false;
+        load();
+    }
+    refreshRunning = st.running;
+}
+
+async function pollRefresh() {
+    const st = await api("/api/refresh", { quiet: true });
+    if (st) showRefresh(st);
+}
+
+document.getElementById("refresh-btn").addEventListener("click", async () => {
+    const btn = document.getElementById("refresh-btn");
+    btn.disabled = true;
+    const res = await fetch(`${API}/api/refresh`, { method: "POST", credentials: "include" }).catch(() => null);
+    const st = res && res.ok ? await res.json() : null;
+    if (!st) {
+        document.getElementById("refresh-note").textContent = "Couldn't start the update";
+        btn.disabled = false;
+        return;
+    }
+    showRefresh(st);
+});
+
 /* ---------- wiring ---------- */
 
 const RENDER = { sales: renderSales, aso: renderAso, search: renderSearch, weekly: renderWeekly, funnel: renderFunnel, subs: renderSubs, health: renderHealth,
@@ -2063,3 +2113,4 @@ chartDefaults();
 state.range = readRange();
 applyProduct(readProduct());
 switchTab(location.hash.slice(1).split("?")[0]);
+api("/api/refresh", { quiet: true }).then((st) => st && showRefresh(st));
