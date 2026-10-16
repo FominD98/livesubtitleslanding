@@ -20,6 +20,7 @@
       <nav class="tabs" role="tablist">
         <button role="tab" data-tab="sales" aria-selected="true">Sales</button>
         <button role="tab" data-tab="aso" aria-selected="false">ASO</button>
+        <button role="tab" data-tab="search" aria-selected="false">Google</button>
         <button role="tab" data-tab="weekly" aria-selected="false">Weekly</button>
         <button role="tab" data-tab="funnel" aria-selected="false">Funnel</button>
         <button role="tab" data-tab="subs" aria-selected="false">Subscriptions</button>
@@ -136,6 +137,28 @@
         <h2>Data freshness</h2>
         <table class="tbl" id="tbl-sources"></table>
         <p class="muted">* estimate. App Store: Apple sales report converted at today's FX, ±10% vs Apple's own USD figures. Google Play: the open month assumes a 15% fee and becomes exact when the monthly earnings report arrives. Paddle and Microsoft Store are exact.</p>
+      </section>
+    </main>
+
+    <main id="tab-search" class="tab-panel" hidden>
+      <section class="tiles" id="search-tiles"></section>
+      <p class="muted small" id="search-note"></p>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>In Google top 10</h2>
+          <span class="muted" id="search-trend-note"></span>
+        </div>
+        <div class="chart"><canvas id="chart-search-trend"></canvas></div>
+      </section>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Keywords</h2>
+          <div class="filters"><select id="search-country" aria-label="Country"></select></div>
+        </div>
+        <div class="scroll wide"><table class="tbl" id="tbl-search"></table></div>
+        <p class="muted small">Rank among regular Google results, first page only (&gt;10 = not on page 1). Arrows: change vs 7 days ago. AI answer: ✓ cites us, ✗ answer shown but not citing us, · no AI answer for this query. Keywords: Live Subtitles from docs/seo/rank-tracking.md (P1/P2), Live Captions from its Store listing.</p>
       </section>
     </main>
 
@@ -427,6 +450,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=d44747f5ea"></script>
+<script src="app.js?v=52fe85589a"></script>
 </body>
 </html>

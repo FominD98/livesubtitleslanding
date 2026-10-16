@@ -13,11 +13,13 @@ const PRODUCTS = {
         name: "Live Subtitles", platforms: ["paddle", "appstore", "play", "msstore"], apps: ["windows", "android", "apple", "mac"],
         ids: { msstore: "9PH1R9DJG47S", appstore: "6760197210", play: "com.livesubtitles.android" },
         funnel: { start: "onboarding", recording: 3, purchase: 7 },
+        serp: [["site", "Site"], ["msstore", "Microsoft Store"], ["play", "Google Play"], ["appstore", "App Store"]],
     },
     captions: {
         name: "Live Captions", platforms: ["paddle", "msstore"], apps: ["captions"],
         ids: { msstore: "9NJHDV2W6999" },
         funnel: { start: "first launch", recording: 2, purchase: 6 },
+        serp: [["msstore", "Microsoft Store"]],
     },
 };
 let PLATFORMS = ALL_PLATFORMS;
@@ -1008,6 +1010,72 @@ async function selectKeyword(r, row) {
     });
 }
 
+/* ---------- Google: позиции сайта и карточек в выдаче ---------- */
+
+state.searchSel = { country: "" };
+
+// rank NULL — не на первой странице; before: null — замера не было, 0 — был, но не в топ-10
+function serpCell(rank, before) {
+    const shown = rank ? String(rank) : el("span", { class: "muted" }, ">10");
+    let move = null;
+    if (before === 0 && rank) move = el("span", { class: "up" }, " new");
+    else if (before > 0 && !rank) move = el("span", { class: "down" }, " out");
+    else if (before > 0 && rank && before !== rank) move = el("span", { class: rank < before ? "up" : "down" }, ` ${rank < before ? "▲" : "▼"}${Math.abs(before - rank)}`);
+    return td([shown, move], true);
+}
+
+function renderSearch() {
+    const { ranks, trend, top, sources } = state.search;
+    const targets = product().serp;
+    const rows = {};
+    for (const r of ranks) (rows[`${r.country}|${r.keyword}`] ??= { country: r.country, keyword: r.keyword })[r.target] = r;
+    const list = Object.values(rows);
+    const best = (x) => Math.min(...targets.map(([t]) => x[t]?.rank || 99));
+    const last = trend[trend.length - 1] || {};
+    const weekAgo = trend.length > 7 ? trend[trend.length - 8] : null;
+    renderTileRow("search-tiles", [
+        { label: "Keywords with us in top 10", value: last.top10 || 0, fmt: int, spark: trend.map((t) => t.top10),
+          delta: weekAgo ? deltaPct(last.top10, weekAgo.top10) : el("span", { class: "muted" }, `of ${int(last.total || 0)} keywords`) },
+        { label: "Cited in Google's AI answer", value: last.ai || 0, fmt: int,
+          delta: el("span", { class: "muted" }, `of ${int(last.with_ai || 0)} queries with an AI answer`) },
+        ...targets.map(([t, name]) => ({ label: `${name}: in top 10`, value: list.filter((x) => x[t]?.rank).length, fmt: int })),
+    ]);
+    const src = sources[0];
+    document.getElementById("search-note").textContent = src
+        ? `Google via Bright Data, checked ${new Date(src.updated_at).toLocaleString("en-GB")} (${src.note}). Daily, 5,000 free queries a month.`
+        : "No checks yet.";
+    document.getElementById("search-trend-note").textContent =
+        trend.length < 7 ? `History started ${trend[0]?.day ?? "today"}, one point per day` : "keywords per day";
+    const days = trend.map((t) => t.day);
+    draw("chart-search-trend", {
+        type: "line",
+        data: { labels: days, datasets: [
+            lineDataset("In top 10", trend.map((t) => t.top10), css("--series-1"), true),
+            lineDataset("In top 3", trend.map((t) => t.top3), css("--series-6")),
+            lineDataset("Cited in AI answer", trend.map((t) => t.ai), css("--series-7")),
+        ] },
+        options: { maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { beginAtZero: true, ticks: { precision: 0 } } }, plugins: { legend } },
+    });
+
+    const countrySel = document.getElementById("search-country");
+    const countries = [...new Set(list.map((x) => x.country))].sort();
+    if (!countries.includes(state.searchSel.country)) state.searchSel.country = "";
+    countrySel.replaceChildren(el("option", { value: "" }, "All countries"), ...countries.map((c) => el("option", { value: c }, `${countryName(c)} (${c})`)));
+    countrySel.value = state.searchSel.country;
+    const shown = list.filter((x) => !state.searchSel.country || x.country === state.searchSel.country)
+        .sort((a, b) => best(a) - best(b) || a.country.localeCompare(b.country) || a.keyword.localeCompare(b.keyword));
+    const aiCell = (r) => (!r || r.rank === -1 ? td(el("span", { class: "muted" }, "·"), true)
+        : r.rank === 1 ? td(el("span", { class: "up" }, "✓"), true) : td(el("span", { class: "muted" }, "✗"), true));
+    table("tbl-search", [["Keyword"], ["Country"], ...targets.map(([, name]) => [name, 1]), ["AI answer", 1], ["Google top 3"]],
+        shown.map((x) => el("tr", {},
+            td(x.keyword), td(withFlag(x.country)),
+            targets.map(([t]) => serpCell(x[t]?.rank, x[t]?.rank_7d)),
+            aiCell(x.ai),
+            td(top.filter((t) => t.country === x.country && t.keyword === x.keyword).slice(0, 3).map((t) => t.domain).join(", "), false, "muted"))),
+        "No checks yet");
+}
+
 /* ---------- shared for app-level tabs ---------- */
 
 const APPS = [
@@ -1879,7 +1947,7 @@ function renderCampaigns() {
 
 /* ---------- wiring ---------- */
 
-const RENDER = { sales: renderSales, aso: renderAso, weekly: renderWeekly, funnel: renderFunnel, subs: renderSubs, health: renderHealth,
+const RENDER = { sales: renderSales, aso: renderAso, search: renderSearch, weekly: renderWeekly, funnel: renderFunnel, subs: renderSubs, health: renderHealth,
     campaigns: renderCampaigns, live: renderLive, ga4: renderGa4 };
 
 function switchTab(tab) {
@@ -1958,6 +2026,10 @@ for (const [id, key] of [["f-platform", "platform"], ["f-country", "country"]]) 
 document.getElementById("aso-store").addEventListener("change", (e) => {
     state.asoSel.store = e.target.value;
     renderAsoSelection();
+});
+document.getElementById("search-country").addEventListener("change", (e) => {
+    state.searchSel.country = e.target.value;
+    renderSearch();
 });
 document.getElementById("aso-country").addEventListener("change", (e) => {
     state.asoSel.country = e.target.value;
