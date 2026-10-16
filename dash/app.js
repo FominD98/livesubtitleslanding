@@ -1,20 +1,35 @@
 "use strict";
 
 const API = "https://dash-api.live-subtitles.com";
-const PLATFORMS = [
+const ALL_PLATFORMS = [
     { id: "paddle", name: "Paddle (web)", slot: 1 },
     { id: "appstore", name: "App Store", slot: 2 },
     { id: "play", name: "Google Play", slot: 3 },
     { id: "msstore", name: "Microsoft Store", slot: 4 },
 ];
-const STORES = PLATFORMS.filter((p) => p.id !== "paddle");
+// Live Captions продаётся только через Paddle и Microsoft Store, а в GA4 — одно приложение
+const PRODUCTS = {
+    livesubs: {
+        name: "Live Subtitles", platforms: ["paddle", "appstore", "play", "msstore"], apps: ["windows", "android", "apple", "mac"],
+        ids: { msstore: "9PH1R9DJG47S", appstore: "6760197210", play: "com.livesubtitles.android" },
+        funnel: { start: "onboarding", recording: 3, purchase: 7 },
+    },
+    captions: {
+        name: "Live Captions", platforms: ["paddle", "msstore"], apps: ["captions"],
+        ids: { msstore: "9NJHDV2W6999" },
+        funnel: { start: "first launch", recording: 2, purchase: 6 },
+    },
+};
+let PLATFORMS = ALL_PLATFORMS;
+let STORES = PLATFORMS.filter((p) => p.id !== "paddle");
+const product = () => PRODUCTS[state.product];
 const CHANNELS = [
     { id: "new", name: "New purchase", color: "--series-5" },
     { id: "renewal", name: "Renewal", color: "--series-6" },
     { id: "upgrade", name: "Plan change", color: "--series-7" },
     { id: "unknown", name: "Not reported", color: "--neutral" },
 ];
-const byId = Object.fromEntries(PLATFORMS.map((p) => [p.id, p]));
+const byId = Object.fromEntries(ALL_PLATFORMS.map((p) => [p.id, p]));
 
 const root = document.querySelector(".viz-root");
 const css = (name) => getComputedStyle(root).getPropertyValue(name).trim();
@@ -24,7 +39,7 @@ const int = (v) => Math.round(v).toLocaleString("en-US");
 const sum = (rows, f) => rows.reduce((a, r) => a + (f(r) || 0), 0);
 
 const M = () => state.salesMetric;
-const state = { salesMetric: localStorage.getItem("salesMetric") || "net", ga4: null, weekly: null, campaigns: null, tab: "sales", range: null, salesFilter: { platform: "", country: "" }, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
+const state = { product: "livesubs", salesMetric: localStorage.getItem("salesMetric") || "net", ga4: null, weekly: null, campaigns: null, tab: "sales", range: null, salesFilter: { platform: "", country: "" }, sales: null, aso: null, funnel: null, subs: null, health: null, live: null, charts: {}, asoSel: { store: "msstore", country: null } };
 
 function el(tag, attrs = {}, ...children) {
     const node = document.createElement(tag);
@@ -201,7 +216,7 @@ function readRange() {
 function writeRange() {
     const r = state.range;
     localStorage.setItem("dashRange", JSON.stringify(r));
-    const q = new URLSearchParams({ preset: r.preset, grain: r.grain, compare: r.compare });
+    const q = new URLSearchParams({ app: state.product, preset: r.preset, grain: r.grain, compare: r.compare });
     if (r.preset === "custom") { q.set("from", r.from); q.set("to", r.to); }
     history.replaceState(null, "", `#${state.tab}?${q}`);
     for (const k of ["preset", "from", "to", "grain", "compare"]) document.getElementById(`range-${k}`).value = r[k];
@@ -209,7 +224,36 @@ function writeRange() {
 
 function rangeQuery() {
     const r = state.range;
-    return new URLSearchParams({ from: r.from, to: r.to, compare: r.compare }).toString();
+    return new URLSearchParams({ from: r.from, to: r.to, compare: r.compare, app: state.product }).toString();
+}
+
+function readProduct() {
+    const q = new URLSearchParams(location.hash.split("?")[1] || "");
+    const p = q.get("app") || localStorage.getItem("dashProduct");
+    return PRODUCTS[p] ? p : "livesubs";
+}
+
+function applyProduct(p) {
+    state.product = p;
+    localStorage.setItem("dashProduct", p);
+    const cfg = product();
+    PLATFORMS = ALL_PLATFORMS.filter((x) => cfg.platforms.includes(x.id));
+    STORES = PLATFORMS.filter((x) => x.id !== "paddle");
+    document.title = `${cfg.name} · Dashboard`;
+    document.querySelectorAll("#product-toggle button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.product === p)));
+    document.querySelectorAll("#f-platform option").forEach((o) => { o.hidden = !!o.value && !cfg.platforms.includes(o.value); });
+    document.getElementById("ga4-app").hidden = p === "captions";
+    document.getElementById("retention-card").hidden = !RETENTION_APPS().length;
+    document.getElementById("ratings-block").hidden = p === "captions";
+    document.getElementById("funnel-title").textContent = `Funnel: ${cfg.funnel.start} to purchase`;
+    state.salesFilter.platform = "";
+    state.asoSel.store = "msstore";
+    state.healthSel.app = cfg.apps[0];
+    state.funnelSel.retentionApp = RETENTION_APPS()[0]?.id;
+    state.ga4Sel.app = "all";
+    document.getElementById("ga4-app").value = "all";
+    for (const name of Object.keys(RENDER)) state[name] = null;
+    summaryLoaded = false;
 }
 
 function salesQuery() {
@@ -599,7 +643,7 @@ function sourceLabel(source, campaign) {
 }
 
 function renderAcquisition() {
-    const apps = [["windows", "Windows"], ["android", "Android"], ["apple", "iOS / Mac"]];
+    const apps = state.product === "captions" ? [["captions", "Live Captions"]] : [["windows", "Windows"], ["android", "Android"], ["apple", "iOS / Mac"]];
     const by = {};
     for (const r of state.sales.acquisition) {
         const key = sourceLabel(r.source, r.campaign);
@@ -677,7 +721,6 @@ function renderSources(target, sources) {
 
 /* ---------- ASO ---------- */
 
-const OUR_IDS = { msstore: "9PH1R9DJG47S", appstore: "6760197210", play: "com.livesubtitles.android" };
 const RANK_BUCKETS = [
     { label: "Top 3", test: (r) => r !== null && r <= 3, cls: "r1", color: "--rank-1" },
     { label: "4–10", test: (r) => r !== null && r > 3 && r <= 10, cls: "r2", color: "--rank-2" },
@@ -898,7 +941,7 @@ function renderCompetitors() {
             datasets: [{
                 label: "Appearances in top 5",
                 data: rows.map((r) => r.hits),
-                backgroundColor: rows.map((r) => r.app_id === OUR_IDS[store] ? color(store) : css("--neutral")),
+                backgroundColor: rows.map((r) => r.app_id === product().ids[store] ? color(store) : css("--neutral")),
                 borderRadius: 4,
                 borderSkipped: "left",
                 maxBarThickness: 20,
@@ -972,8 +1015,10 @@ const APPS = [
     { id: "android", name: "Android", color: "--series-3" },
     { id: "apple", name: "iOS", color: "--series-2" },
     { id: "mac", name: "Mac", color: "--series-7" },
+    { id: "captions", name: "Live Captions", color: "--series-1" },
 ];
 const appById = Object.fromEntries(APPS.map((a) => [a.id, a]));
+const productApps = () => APPS.filter((a) => product().apps.includes(a.id));
 const appColor = (id) => css(appById[id].color);
 const pct = (v, digits = 1) => `${(v * 100).toFixed(digits)}%`;
 
@@ -994,7 +1039,8 @@ function lineDataset(label, data, hex, fill = false) {
 
 /* ---------- Funnel ---------- */
 
-const RETENTION_APPS = APPS.filter((a) => a.id === "android" || a.id === "apple");
+// GA4 не делит когорты по параметру события, поэтому у Live Captions (поток Windows) удержания нет
+const RETENTION_APPS = () => productApps().filter((a) => a.id === "android" || a.id === "apple");
 state.funnelSel = { retentionApp: "android" };
 
 function renderFunnel() {
@@ -1006,7 +1052,7 @@ function renderFunnel() {
     document.getElementById("funnel-window").textContent = `last ${window} days`;
 
     renderTileRow("funnel-tiles", apps.map((a) => ({
-        label: `${a.name}: onboarding → purchase`,
+        label: `${a.name}: ${product().funnel.start} → purchase`,
         value: users(a.id, 1) ? users(a.id, last) / users(a.id, 1) : 0,
         fmt: (v) => pct(v, 2),
         delta: el("span", { class: "muted" }, `${int(users(a.id, last))} of ${int(users(a.id, 1))}`),
@@ -1048,7 +1094,7 @@ function renderFunnel() {
     });
 
     // реальные покупки из отчётов магазинов: Windows = Paddle + Microsoft Store, Android = Play, iOS = App Store
-    const STORES_OF = { windows: ["paddle", "msstore"], android: ["play"], apple: ["appstore"] };
+    const STORES_OF = { windows: ["paddle", "msstore"], android: ["play"], apple: ["appstore"], captions: ["paddle", "msstore"] };
     const storeUnits = (app, key) => sum((state.funnel.storeSales || []).filter((r) => STORES_OF[app]?.includes(r.platform)), (r) => r[key]);
     const rows = steps.map(([s, name]) => el("tr", {},
         td(s === last ? `${name} (new users only)` : name),
@@ -1081,7 +1127,7 @@ function renderFunnel() {
         },
     });
     renderCheckout();
-    appSelect("retention-app", RETENTION_APPS, state.funnelSel.retentionApp, (v) => {
+    appSelect("retention-app", RETENTION_APPS(), state.funnelSel.retentionApp, (v) => {
         state.funnelSel.retentionApp = v;
         renderRetention();
     });
@@ -1248,6 +1294,7 @@ const HEALTH = {
     apple: { base: "sessions", rates: [{ metric: "stt_errors", label: "STT errors", color: "--series-2" }], perSession: [], adoption: "active_users" },
     mac: { base: "sessions", rates: [{ metric: "errors", label: "Errors", color: "--series-2" }], perSession: [], adoption: "sessions" },
 };
+HEALTH.captions = HEALTH.windows;
 state.healthSel = { app: "windows" };
 
 function healthSum(rows, app, metric, days) {
@@ -1256,7 +1303,7 @@ function healthSum(rows, app, metric, days) {
 
 function renderHealth() {
     const rows = state.health.rows;
-    appSelect("health-app", APPS, state.healthSel.app, (v) => {
+    appSelect("health-app", productApps(), state.healthSel.app, (v) => {
         state.healthSel.app = v;
         renderHealth();
     });
@@ -1391,6 +1438,13 @@ function renderRatings() {
 let liveTimer = null;
 
 function renderLive() {
+    const unsupported = !!state.live.unsupported;
+    document.querySelectorAll("#tab-live > :not(#live-note)").forEach((n) => { n.hidden = unsupported; });
+    if (unsupported) {
+        document.getElementById("live-note").textContent =
+            "Not available for Live Captions: it shares the Windows GA4 stream, and GA4 realtime cannot tell the two apps apart.";
+        return;
+    }
     const { byMinute, byCountry, byEvent, byVersion, at } = state.live;
     const apps = APPS.filter((a) => byCountry.some((r) => r.app === a.id));
     const activeNow = (app) => sum(byCountry.filter((r) => r.app === app), (r) => r.value);
@@ -1399,7 +1453,7 @@ function renderLive() {
         ...apps.map((a) => ({ label: a.name, value: activeNow(a.id), fmt: int })),
     ]);
     document.getElementById("live-note").replaceChildren(el("span", { class: "pulse", "aria-hidden": "true" }),
-        `GA4 realtime, updated ${new Date(at).toLocaleTimeString("en-GB")}, refreshes every 30 s while this tab is open. Windows sends events server-side, so GA4 has no country or version for it.`);
+        `GA4 realtime, updated ${new Date(at).toLocaleTimeString("en-GB")}, refreshes every 30 s while this tab is open. Windows sends events server-side, so GA4 has no country or version for it. Windows here also includes Live Captions users (same GA4 stream).`);
 
     const minutes = [...Array(30).keys()].reverse();
     draw("chart-live", {
@@ -1472,7 +1526,7 @@ let summaryLoaded = false;
 async function loadSummary() {
     if (summaryLoaded) return;
     summaryLoaded = true;
-    const s = await api("/api/summary", { quiet: true });
+    const s = await api(`/api/summary?app=${state.product}`, { quiet: true });
     if (!s) return;
     const box = document.getElementById("summary");
     const item = (label, value, sub, warn = false) => el("div", { class: `s-item${warn ? " s-warn" : ""}` },
@@ -1500,9 +1554,9 @@ async function loadSummary() {
         item("Net revenue, 30 days", usd(rev.cur || 0), change === null ? null : `${change >= 0 ? "▲" : "▼"} ${Math.abs(change).toFixed(0)}% vs previous 30`),
         item("MRR", usd(s.mrr?.mrr || 0), `${int(s.mrr?.active || 0)} paid subscriptions`),
         item("Monthly churn", churn === null ? "—" : pct(churn), "monthly plans"),
-        item("Onboarding → purchase", conv === null ? "—" : pct(conv, 2), "all apps, 30 days"),
+        item(`${product().funnel.start.replace(/^./, (c) => c.toUpperCase())} → purchase`, conv === null ? "—" : pct(conv, 2), `${product().name}, 30 days`),
         item("Paddle checkout → paid", checkout === null ? "—" : pct(checkout), `${int(s.checkout?.opened || 0)} checkouts opened`),
-        item("Active right now", s.activeNow === null ? "—" : int(s.activeNow), "last 30 minutes"),
+        item("Active right now", s.activeNow === null ? "—" : int(s.activeNow), s.activeNow === null && state.product === "captions" ? "not in GA4 realtime" : "last 30 minutes"),
         ...warnings.map((w) => item("Needs attention", w.split(":")[0], w.slice(w.indexOf(":") + 2), true)),
     );
     box.hidden = false;
@@ -1546,7 +1600,8 @@ function renderCheckout() {
 state.ga4Sel = { range: "7d", app: "all", country: "all" };
 
 function ga4Path() {
-    const q = new URLSearchParams(state.ga4Sel);
+    const { range, app, country } = state.ga4Sel;
+    const q = new URLSearchParams({ range, stream: app, country, app: state.product });
     return `/api/ga4?${q}`;
 }
 
@@ -1564,8 +1619,12 @@ function renderGa4() {
 
     document.getElementById("ga4-note").textContent =
         `Straight from GA4 (cached 5 min, updated ${new Date(g.at).toLocaleTimeString("en-GB")}). Today's numbers keep filling in for a few hours. ` +
-        "GA4 purchases and revenue are overcounted: Android up to 1.0.37 re-sends purchases on every launch, iOS test (sandbox) renewals are counted, " +
-        "Windows web checkouts are partly lost. Real money is on the Sales tab. Windows has no country in GA4 (shown as Unknown).";
+        (state.product === "captions"
+            ? "Live Captions shares the Windows GA4 stream and is split out by its events, so new users show as 0 here (count them on the Sales tab). " +
+              "No country in GA4 (shown as Unknown). Real money is on the Sales tab."
+            : "GA4 purchases and revenue are overcounted: Android up to 1.0.37 re-sends purchases on every launch, iOS test (sandbox) renewals are counted, " +
+              "Windows web checkouts are partly lost. Real money is on the Sales tab. Windows has no country in GA4 (shown as Unknown). " +
+              "Windows new users here still include Live Captions installs: GA4 can't split first visits (the Sales tab subtracts them).");
 
     const countrySel = document.getElementById("ga4-country");
     const keep = state.ga4Sel.country;
@@ -1681,6 +1740,9 @@ function renderWeekly() {
     const money = (v) => usd(v);
     const count = (v) => int(v);
     const share = (v) => (v === null ? "—" : pct(v, 1));
+    const gaApps = productApps().filter((a) => a.id !== "mac");
+    const marks = product().funnel;
+    const start = marks.start.replace(/^./, (ch) => ch.toUpperCase());
     const ROWS = [
         { group: "Money" },
         { label: "Net revenue, all stores", value: (wk) => at(w.sales, wk, (r) => r.net), fmt: money },
@@ -1701,9 +1763,9 @@ function renderWeekly() {
         { label: "Paid", value: (wk) => at(w.checkouts, wk, (r) => r.paid), fmt: count },
         { label: "Checkout → paid", value: checkoutRate, fmt: share },
         { group: "Users (GA4)" },
-        ...APPS.filter((a) => a.id !== "mac").map((a) => ({ label: `New users, ${a.name}`, value: (wk) => at(w.acquisition, wk, (r) => r.new_users, (r) => r.app === a.id), fmt: count })),
-        ...APPS.filter((a) => a.id !== "mac").map((a) => ({ label: `Onboarding → recording, ${a.name}`, value: (wk) => funnelRate(wk, a.id, 3, 1), fmt: share })),
-        ...APPS.filter((a) => a.id !== "mac").map((a) => ({ label: `Onboarding → purchase, ${a.name}`, value: (wk) => funnelRate(wk, a.id, 7, 1), fmt: (v) => (v === null ? "—" : pct(v, 2)) })),
+        ...gaApps.map((a) => ({ label: `New users, ${a.name}`, value: (wk) => at(w.acquisition, wk, (r) => r.new_users, (r) => r.app === a.id), fmt: count })),
+        ...gaApps.map((a) => ({ label: `${start} → recording, ${a.name}`, value: (wk) => funnelRate(wk, a.id, marks.recording, 1), fmt: share })),
+        ...gaApps.map((a) => ({ label: `${start} → purchase, ${a.name}`, value: (wk) => funnelRate(wk, a.id, marks.purchase, 1), fmt: (v) => (v === null ? "—" : pct(v, 2)) })),
         { group: "Ads" },
         { label: "Ad spend", value: (wk) => at(w.spend, wk, (r) => r.spend), fmt: money, good: "down" },
         { label: "Ad clicks", value: (wk) => at(w.spend, wk, (r) => r.clicks), fmt: count },
@@ -1778,9 +1840,11 @@ function renderCampaigns() {
     canvas.parentElement.hidden = !days.length;
     let empty = document.getElementById("campaign-spend-empty");
     if (!empty) {
-        empty = el("p", { id: "campaign-spend-empty", class: "muted" }, "No ad spend in this period: Google Ads and Meta campaigns are paused.");
+        empty = el("p", { id: "campaign-spend-empty", class: "muted" });
         canvas.parentElement.after(empty);
     }
+    empty.textContent = state.product === "captions" ? "Live Captions has no ad campaigns."
+        : "No ad spend in this period: Google Ads and Meta campaigns are paused.";
     empty.hidden = !!days.length;
     draw("chart-campaign-spend", {
         type: "bar",
@@ -1849,6 +1913,11 @@ function chartDefaults() {
 }
 
 document.querySelectorAll(".tabs button").forEach((b) => b.addEventListener("click", () => switchTab(b.dataset.tab)));
+document.querySelectorAll("#product-toggle button").forEach((b) => b.addEventListener("click", () => {
+    if (b.dataset.product === state.product) return;
+    applyProduct(b.dataset.product);
+    switchTab(state.tab);
+}));
 document.querySelectorAll("#metric-toggle button").forEach((b) => b.addEventListener("click", () => {
     state.salesMetric = b.dataset.metric;
     localStorage.setItem("salesMetric", state.salesMetric);
@@ -1903,10 +1972,13 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () 
 window.addEventListener("hashchange", () => {
     const tab = location.hash.slice(1).split("?")[0];
     const next = location.hash.includes("?") ? readRange() : null;
-    const changed = next && ["preset", "from", "to", "grain", "compare"].some((k) => next[k] !== state.range[k]);
+    const nextProduct = location.hash.includes("?") ? readProduct() : state.product;
+    const changed = (next && ["preset", "from", "to", "grain", "compare"].some((k) => next[k] !== state.range[k]))
+        || nextProduct !== state.product;
     if (changed) {
-        state.range = next;
+        if (next) state.range = next;
         dropRangeData();
+        if (nextProduct !== state.product) applyProduct(nextProduct);
     }
     if (tab !== state.tab) switchTab(tab);
     else if (changed) {
@@ -1917,4 +1989,5 @@ window.addEventListener("hashchange", () => {
 
 chartDefaults();
 state.range = readRange();
+applyProduct(readProduct());
 switchTab(location.hash.slice(1).split("?")[0]);

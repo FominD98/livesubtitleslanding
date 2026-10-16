@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dash-api.live-subtitles.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <title>Dashboard</title>
-<link rel="stylesheet" href="dash.css?v=f2225a4eb6">
+<link rel="stylesheet" href="dash.css?v=2fea44e0f7">
 </head>
 <body>
 <div class="viz-root">
@@ -53,6 +53,10 @@
           <option value="yoy">vs same dates last year</option>
           <option value="none">no comparison</option>
         </select>
+      </div>
+      <div class="filters" id="product-toggle" role="group" aria-label="App">
+        <button data-product="livesubs" aria-pressed="true">Live Subtitles</button>
+        <button data-product="captions" aria-pressed="false">Live Captions</button>
       </div>
       <span id="user" class="muted"></span>
     </header>
@@ -202,7 +206,7 @@
 
       <section class="card">
         <div class="card-head">
-          <h2>Funnel: onboarding to purchase</h2>
+          <h2 id="funnel-title">Funnel: onboarding to purchase</h2>
           <span class="muted" id="funnel-window"></span>
         </div>
         <div class="chart tall"><canvas id="chart-funnel"></canvas></div>
@@ -231,7 +235,7 @@
         <div class="chart"><canvas id="chart-funnel-trend"></canvas></div>
       </section>
 
-      <section class="card">
+      <section class="card" id="retention-card">
         <div class="card-head">
           <h2>Weekly retention</h2>
           <div class="filters"><select id="retention-app" aria-label="App"></select></div>
@@ -293,7 +297,7 @@
         </section>
       </div>
 
-      <div class="grid2">
+      <div class="grid2" id="ratings-block">
         <section class="card">
           <h2>Store rating</h2>
           <div class="chart"><canvas id="chart-ratings"></canvas></div>
@@ -423,6 +427,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=b7afbba68f"></script>
+<script src="app.js?v=d44747f5ea"></script>
 </body>
 </html>
