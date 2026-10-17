@@ -492,9 +492,22 @@ function bucketLabel(label) {
     return bucketPartial(label) ? `${text}*` : text;
 }
 
+// Последний полный день: сегодня ещё идёт, App Store и Play приходят с задержкой. MS Store отстаёт на недели —
+// это подписано над графиком, иначе пунктиром был бы почти весь период
+function dayLagging(day) {
+    const missing = PLATFORMS.filter((p) => p.id !== "msstore").filter((p) => {
+        const src = state.sales.sources.find((s) => s.name === p.id);
+        return src && src.covered_to < day;
+    }).map((p) => p.name);
+    const notes = day >= isoDay(new Date()) ? ["day not over"] : [];
+    if (missing.length) notes.push(`no ${missing.join(", ")} report yet`);
+    return notes;
+}
+
 function renderDaily(cur) {
     const { labels, value } = series(cur, (r) => r.platform, (r) => r[M()]);
     const byDay = grain() === "day";
+    const lagging = (i) => byDay && dayLagging(labels[i]).length > 0;
     const partial = labels.some(bucketPartial);
     document.getElementById("daily-note").textContent =
         `${byDay ? "daily" : grain() === "week" ? "weekly" : "monthly"} · ${state.range.from} — ${state.range.to}` +
@@ -510,7 +523,9 @@ function renderDaily(cur) {
         pointHoverRadius: 5,
         pointHoverBorderColor: css("--surface-1"),
         pointHoverBorderWidth: 2,
-        tension: 0.35,
+        // площади сложены: сглаживание кривыми даёт пики выше суммы и пересечения линий
+        tension: 0,
+        segment: { borderDash: (ctx) => (lagging(ctx.p1DataIndex) ? [5, 4] : undefined) },
     } : {
         label: p.name,
         data: labels.map((l) => value(p.id, l)),
@@ -535,7 +550,11 @@ function renderDaily(cur) {
                 legend,
                 tooltip: {
                     callbacks: {
-                        title: (items) => bucketTitle(items[0].label) + (bucketPartial(items[0].label) ? " (incomplete)" : ""),
+                        title: (items) => {
+                            const lag = byDay ? dayLagging(items[0].label) : [];
+                            return bucketTitle(items[0].label) + (bucketPartial(items[0].label) ? " (incomplete)" : "")
+                                + (lag.length ? ` (incomplete: ${lag.join("; ")})` : "");
+                        },
                         label: (c) => `${c.dataset.label}: ${usd(c.parsed.y)}`,
                         footer: (items) => `Total: ${usd(items.reduce((a, i) => a + i.parsed.y, 0))}`,
                     },
