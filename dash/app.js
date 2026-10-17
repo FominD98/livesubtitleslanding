@@ -523,8 +523,7 @@ function renderDaily(cur) {
         pointHoverRadius: 5,
         pointHoverBorderColor: css("--surface-1"),
         pointHoverBorderWidth: 2,
-        // площади сложены: сглаживание кривыми даёт пики выше суммы и пересечения линий
-        tension: 0,
+        tension: 0.35,
         segment: { borderDash: (ctx) => (lagging(ctx.p1DataIndex) ? [5, 4] : undefined) },
     } : {
         label: p.name,
