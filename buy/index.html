@@ -582,7 +582,13 @@
         }
       }
 
-      if (!/^pri_[a-z0-9]+$/i.test(priceId) || !fp || fp.length > 128) {
+      // Ссылка из письма Paddle о брошенной оплате (?_ptxn=txn_...) приходит без sku и fp:
+      // транзакцию со скидкой восстановления Paddle.js откроет сам при Initialize, а наш
+      // Checkout.open с items её бы перебил и скидка не применилась.
+      var recoveryTxn = params.get('_ptxn') || '';
+      var isRecovery = /^txn_[a-z0-9]+$/i.test(recoveryTxn);
+
+      if (!isRecovery && (!/^pri_[a-z0-9]+$/i.test(priceId) || !fp || fp.length > 128)) {
         show('state-error');
         return;
       }
@@ -733,6 +739,14 @@
         var discount = params.get('discount') || '';
         if (/^[A-Za-z0-9]{3,32}$/.test(discount)) options.discountCode = discount;
         Paddle.Checkout.open(options);
+      }
+
+      if (isRecovery) {
+        document.getElementById('reopen').addEventListener('click', function () {
+          show('state-loading');
+          Paddle.Checkout.open({ transactionId: recoveryTxn, settings: { displayMode: 'overlay', theme: 'light' } });
+        });
+        return;
       }
 
       document.getElementById('reopen').addEventListener('click', openCheckout);
