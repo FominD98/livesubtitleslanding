@@ -545,28 +545,25 @@ p:last-child { margin-bottom: 0; }
  * still sits off to the side and closes with one click. */
 .dlhint {
     position: fixed; z-index: 70; right: 16px; top: 76px; /* below the navbar */
-    display: flex; align-items: flex-start; gap: .85rem;
-    max-width: min(400px, calc(100vw - 32px));
+    display: flex; align-items: center; gap: .85rem;
+    max-width: min(390px, calc(100vw - 32px));
     padding: 1rem 1rem 1rem 1.1rem;
     background: var(--brand); color: #fff;
     border-radius: var(--radius);
     box-shadow: 0 18px 48px rgba(0, 84, 149, .45), 0 0 0 4px rgba(0, 84, 149, .18);
-    font-size: .9375rem; line-height: 1.4;
+    font-size: 1.0625rem; font-weight: 600; line-height: 1.35;
     animation: dlhint-in .35s ease-out;
 }
 .dlhint[hidden] { display: none; }
 .dlhint--bottom { top: auto; right: auto; bottom: 16px; left: 16px; }
-.dlhint__icon {
+.dlhint__arrow {
     flex: none; display: flex; align-items: center; justify-content: center;
     width: 2.4rem; height: 2.4rem; border-radius: 50%;
     background: #fff; color: var(--brand);
     font-size: 1.4rem; font-weight: 800;
     animation: dlhint-up 1s ease-in-out infinite;
 }
-.dlhint--bottom .dlhint__icon { animation-name: dlhint-down; }
-.dlhint__title { display: block; margin-bottom: .3rem; font-size: 1.0625rem; font-weight: 700; }
-.dlhint__steps { margin: 0; padding-inline-start: 1.2em; font-weight: 500; }
-.dlhint__steps li + li { margin-top: .2rem; }
+.dlhint--bottom .dlhint__arrow { animation-name: dlhint-down; }
 .dlhint__close {
     flex: none; margin-left: auto; padding: 0 .2rem;
     background: none; border: 0; cursor: pointer;
@@ -577,7 +574,7 @@ p:last-child { margin-bottom: 0; }
 @keyframes dlhint-up { 50% { transform: translateY(-5px); } }
 @keyframes dlhint-down { 50% { transform: translateY(5px); } }
 @media (prefers-reduced-motion: reduce) {
-    .dlhint, .dlhint__icon { animation: none; }
+    .dlhint, .dlhint__arrow { animation: none; }
 }
 
 /* ── Dialog ────────────────────────────────────────────────────────────── */

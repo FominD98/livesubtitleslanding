@@ -221,11 +221,6 @@ if (/Edg\//.test(ua)) return false;
 const chrome = ua.match(/Chrome\/(\d+)/);
 return !!chrome && parseInt(chrome[1], 10) < 116;
 }
-// The icon is the browser's own downloads button (Chrome and Edge draw the same
-// tray arrow), so the visitor can match it to the toolbar at a glance. Old
-// Chrome has a shelf instead of a button: there the file itself is the target.
-const DL_ICON = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor"'
-    + ' stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>';
 function showInstallerHint() {
 const lang = localStorage.getItem('preferredLanguage') || getUserLanguage();
 const t = (translations[lang] && translations[lang].install) || translations['en-US'].install;
@@ -235,19 +230,15 @@ if (!hint) {
     hint = document.createElement('div');
     hint.id = 'dlHint';
     hint.setAttribute('role', 'status');
-    hint.innerHTML = '<span class="dlhint__icon" aria-hidden="true"></span>'
-        + '<div class="dlhint__body"><strong class="dlhint__title"></strong>'
-        + '<ol class="dlhint__steps"><li></li><li></li></ol></div>'
+    hint.innerHTML = '<span class="dlhint__arrow" aria-hidden="true"></span>'
+        + '<span class="dlhint__text"></span>'
         + '<button type="button" class="dlhint__close">&times;</button>';
     hint.querySelector('.dlhint__close').addEventListener('click', function () { hint.hidden = true; });
     document.body.appendChild(hint);
 }
-const steps = hint.querySelectorAll('.dlhint__steps li');
 hint.className = 'dlhint' + (bottom ? ' dlhint--bottom' : '');
-hint.querySelector('.dlhint__icon').innerHTML = bottom ? '↓' : DL_ICON;
-hint.querySelector('.dlhint__title').textContent = t.hintTitle;
-steps[0].textContent = bottom ? t.hintStep1Bottom : t.hintStep1Top;
-steps[1].textContent = t.hintStep2;
+hint.querySelector('.dlhint__arrow').textContent = bottom ? '↓' : '↑';
+hint.querySelector('.dlhint__text').textContent = bottom ? t.hintBottom : t.hintTop;
 hint.querySelector('.dlhint__close').setAttribute('aria-label', t.close);
 hint.hidden = false;
 }

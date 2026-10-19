@@ -180,10 +180,8 @@ const translations = {
         },
         install: {
             openStore: 'Open in Microsoft Store',
-            hintTitle: 'Live Subtitles is downloading',
-            hintStep1Top: 'Click the downloads icon at the top right and open the Live Subtitles file',
-            hintStep1Bottom: 'Open the Live Subtitles file at the bottom left of your browser',
-            hintStep2: 'Install the app in the Microsoft window that opens',
+            hintTop: 'Open the Live Subtitles Installer file at the top of your browser',
+            hintBottom: 'Open the Live Subtitles Installer file at the bottom of your browser',
             close: 'Close'
         },
         examples: [
@@ -376,10 +374,8 @@ const translations = {
         },
         install: {
             openStore: 'Открыть в Microsoft Store',
-            hintTitle: 'Live Subtitles скачивается',
-            hintStep1Top: 'Нажмите значок загрузок вверху справа и откройте файл Live Subtitles',
-            hintStep1Bottom: 'Откройте файл Live Subtitles внизу слева в браузере',
-            hintStep2: 'Установите программу в открывшемся окне Microsoft',
+            hintTop: 'Откройте файл Live Subtitles Installer вверху браузера',
+            hintBottom: 'Откройте файл Live Subtitles Installer внизу браузера',
             close: 'Закрыть'
         },
         examples: [
@@ -568,10 +564,8 @@ const translations = {
         },
         install: {
             openStore: 'Ouvrir dans le Microsoft Store',
-            hintTitle: 'Téléchargement de Live Subtitles en cours',
-            hintStep1Top: "Cliquez sur l'icône des téléchargements en haut à droite et ouvrez le fichier Live Subtitles",
-            hintStep1Bottom: 'Ouvrez le fichier Live Subtitles en bas à gauche de votre navigateur',
-            hintStep2: "Installez l'application dans la fenêtre Microsoft qui s'ouvre",
+            hintTop: 'Ouvrez le fichier Live Subtitles Installer en haut de votre navigateur',
+            hintBottom: 'Ouvrez le fichier Live Subtitles Installer en bas de votre navigateur',
             close: 'Fermer'
         },
         examples: [
@@ -760,10 +754,8 @@ const translations = {
         },
         install: {
             openStore: 'Abrir en Microsoft Store',
-            hintTitle: 'Live Subtitles se está descargando',
-            hintStep1Top: 'Haz clic en el icono de descargas arriba a la derecha y abre el archivo Live Subtitles',
-            hintStep1Bottom: 'Abre el archivo Live Subtitles abajo a la izquierda del navegador',
-            hintStep2: 'Instala la aplicación en la ventana de Microsoft que se abre',
+            hintTop: 'Abre el archivo Live Subtitles Installer en la parte superior del navegador',
+            hintBottom: 'Abre el archivo Live Subtitles Installer en la parte inferior del navegador',
             close: 'Cerrar'
         },
         examples: [
@@ -952,10 +944,8 @@ const translations = {
         },
         install: {
             openStore: 'Im Microsoft Store öffnen',
-            hintTitle: 'Live Subtitles wird heruntergeladen',
-            hintStep1Top: 'Klicken Sie oben rechts auf das Download-Symbol und öffnen Sie die Datei Live Subtitles',
-            hintStep1Bottom: 'Öffnen Sie die Datei Live Subtitles unten links im Browser',
-            hintStep2: 'Installieren Sie die App im geöffneten Microsoft-Fenster',
+            hintTop: 'Öffnen Sie die Datei Live Subtitles Installer oben im Browser',
+            hintBottom: 'Öffnen Sie die Datei Live Subtitles Installer unten im Browser',
             close: 'Schließen'
         },
         examples: [
@@ -1144,10 +1134,8 @@ const translations = {
         },
         install: {
             openStore: 'Apri nel Microsoft Store',
-            hintTitle: 'Download di Live Subtitles in corso',
-            hintStep1Top: "Fai clic sull'icona dei download in alto a destra e apri il file Live Subtitles",
-            hintStep1Bottom: 'Apri il file Live Subtitles in basso a sinistra nel browser',
-            hintStep2: "Installa l'app nella finestra Microsoft che si apre",
+            hintTop: 'Apri il file Live Subtitles Installer in alto nel browser',
+            hintBottom: 'Apri il file Live Subtitles Installer in basso nel browser',
             close: 'Chiudi'
         },
         examples: [
@@ -1336,10 +1324,8 @@ const translations = {
         },
         install: {
             openStore: 'Microsoft Store で開く',
-            hintTitle: 'Live Subtitles をダウンロードしています',
-            hintStep1Top: '右上のダウンロード アイコンをクリックし、Live Subtitles のファイルを開いてください',
-            hintStep1Bottom: 'ブラウザー左下の Live Subtitles のファイルを開いてください',
-            hintStep2: '開いた Microsoft のウィンドウでアプリをインストールしてください',
+            hintTop: 'ブラウザー上部の Live Subtitles Installer ファイルを開いてください',
+            hintBottom: 'ブラウザー下部の Live Subtitles Installer ファイルを開いてください',
             close: '閉じる'
         },
         examples: [
@@ -1528,10 +1514,8 @@ const translations = {
         },
         install: {
             openStore: 'Microsoft Store에서 열기',
-            hintTitle: 'Live Subtitles 다운로드 중',
-            hintStep1Top: '오른쪽 위의 다운로드 아이콘을 클릭하고 Live Subtitles 파일을 여세요',
-            hintStep1Bottom: '브라우저 왼쪽 아래에서 Live Subtitles 파일을 여세요',
-            hintStep2: '열리는 Microsoft 창에서 앱을 설치하세요',
+            hintTop: '브라우저 상단에서 Live Subtitles Installer 파일을 여세요',
+            hintBottom: '브라우저 하단에서 Live Subtitles Installer 파일을 여세요',
             close: '닫기'
         },
         examples: [
@@ -1720,10 +1704,8 @@ const translations = {
         },
         install: {
             openStore: '在 Microsoft Store 中打开',
-            hintTitle: '正在下载 Live Subtitles',
-            hintStep1Top: '点击右上角的下载图标，打开 Live Subtitles 文件',
-            hintStep1Bottom: '打开浏览器左下角的 Live Subtitles 文件',
-            hintStep2: '在打开的 Microsoft 窗口中安装应用',
+            hintTop: '请打开浏览器顶部的 Live Subtitles Installer 文件',
+            hintBottom: '请打开浏览器底部的 Live Subtitles Installer 文件',
             close: '关闭'
         },
         examples: [
@@ -1912,10 +1894,8 @@ const translations = {
         },
         install: {
             openStore: 'افتح في Microsoft Store',
-            hintTitle: 'جارٍ تنزيل Live Subtitles',
-            hintStep1Top: 'انقر على أيقونة التنزيلات في أعلى المتصفح وافتح ملف Live Subtitles',
-            hintStep1Bottom: 'افتح ملف Live Subtitles في أسفل المتصفح',
-            hintStep2: 'ثبّت التطبيق في نافذة Microsoft التي تفتح',
+            hintTop: 'افتح ملف Live Subtitles Installer في أعلى المتصفح',
+            hintBottom: 'افتح ملف Live Subtitles Installer في أسفل المتصفح',
             close: 'إغلاق'
         },
         examples: [
@@ -2104,10 +2084,8 @@ const translations = {
         },
         install: {
             openStore: 'Microsoft Store में खोलें',
-            hintTitle: 'Live Subtitles डाउनलोड हो रहा है',
-            hintStep1Top: 'ऊपर दाईं ओर डाउनलोड आइकन पर क्लिक करें और Live Subtitles फ़ाइल खोलें',
-            hintStep1Bottom: 'ब्राउज़र में नीचे बाईं ओर Live Subtitles फ़ाइल खोलें',
-            hintStep2: 'खुलने वाली Microsoft विंडो में ऐप इंस्टॉल करें',
+            hintTop: 'ब्राउज़र में ऊपर Live Subtitles Installer फ़ाइल खोलें',
+            hintBottom: 'ब्राउज़र में नीचे Live Subtitles Installer फ़ाइल खोलें',
             close: 'बंद करें'
         },
         examples: [
@@ -2296,10 +2274,8 @@ const translations = {
         },
         install: {
             openStore: 'Abrir na Microsoft Store',
-            hintTitle: 'Baixando o Live Subtitles',
-            hintStep1Top: 'Clique no ícone de downloads no canto superior direito e abra o arquivo Live Subtitles',
-            hintStep1Bottom: 'Abra o arquivo Live Subtitles no canto inferior esquerdo do navegador',
-            hintStep2: 'Instale o app na janela da Microsoft que abrir',
+            hintTop: 'Abra o arquivo Live Subtitles Installer na parte superior do navegador',
+            hintBottom: 'Abra o arquivo Live Subtitles Installer na parte inferior do navegador',
             close: 'Fechar'
         },
         examples: [
@@ -2488,10 +2464,8 @@ const translations = {
         },
         install: {
             openStore: 'Otwórz w Microsoft Store',
-            hintTitle: 'Live Subtitles się pobiera',
-            hintStep1Top: 'Kliknij ikonę pobierania w prawym górnym rogu i otwórz plik Live Subtitles',
-            hintStep1Bottom: 'Otwórz plik Live Subtitles w lewym dolnym rogu przeglądarki',
-            hintStep2: 'Zainstaluj aplikację w otwartym oknie Microsoft',
+            hintTop: 'Otwórz plik Live Subtitles Installer u góry przeglądarki',
+            hintBottom: 'Otwórz plik Live Subtitles Installer u dołu przeglądarki',
             close: 'Zamknij'
         },
         examples: [
@@ -2680,10 +2654,8 @@ const translations = {
         },
         install: {
             openStore: 'Openen in Microsoft Store',
-            hintTitle: 'Live Subtitles wordt gedownload',
-            hintStep1Top: 'Klik rechtsboven op het downloadpictogram en open het bestand Live Subtitles',
-            hintStep1Bottom: 'Open het bestand Live Subtitles linksonder in je browser',
-            hintStep2: 'Installeer de app in het Microsoft-venster dat opent',
+            hintTop: 'Open het bestand Live Subtitles Installer bovenaan in je browser',
+            hintBottom: 'Open het bestand Live Subtitles Installer onderaan in je browser',
             close: 'Sluiten'
         },
         examples: [
@@ -2872,10 +2844,8 @@ const translations = {
         },
         install: {
             openStore: "Microsoft Store'da aç",
-            hintTitle: 'Live Subtitles indiriliyor',
-            hintStep1Top: 'Sağ üstteki indirmeler simgesine tıklayın ve Live Subtitles dosyasını açın',
-            hintStep1Bottom: 'Tarayıcının sol altındaki Live Subtitles dosyasını açın',
-            hintStep2: 'Açılan Microsoft penceresinde uygulamayı yükleyin',
+            hintTop: 'Tarayıcının üst kısmındaki Live Subtitles Installer dosyasını açın',
+            hintBottom: 'Tarayıcının alt kısmındaki Live Subtitles Installer dosyasını açın',
             close: 'Kapat'
         },
         examples: [
@@ -3064,10 +3034,8 @@ const translations = {
         },
         install: {
             openStore: 'Відкрити в Microsoft Store',
-            hintTitle: 'Live Subtitles завантажується',
-            hintStep1Top: 'Натисніть значок завантажень угорі праворуч і відкрийте файл Live Subtitles',
-            hintStep1Bottom: 'Відкрийте файл Live Subtitles унизу ліворуч у браузері',
-            hintStep2: 'Встановіть програму у вікні Microsoft, що відкриється',
+            hintTop: 'Відкрийте файл Live Subtitles Installer угорі браузера',
+            hintBottom: 'Відкрийте файл Live Subtitles Installer унизу браузера',
             close: 'Закрити'
         },
         examples: [
