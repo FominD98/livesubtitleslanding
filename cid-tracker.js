@@ -176,11 +176,15 @@
             link_url: url || ''
         };
         if (abVariant) p.ab_variant = abVariant;
+        // install_campaign is already a registered event dimension (the app
+        // reports the cid under it), and the property is at its 50-dimension
+        // cap — so the label rides there too; its _wi / _st suffix is the arm.
+        p.install_campaign = p.campaign_id;
         try { window.gtag('event', 'store_click', p); } catch (e) { /* gtag not ready */ }
     }
     function ga4InstallerDownload(url) {
         if (typeof window.gtag !== 'function') return;
-        var p = { cid: msCid, page_path: location.pathname, link_url: url || '' };
+        var p = { cid: msCid, install_campaign: msCid, page_path: location.pathname, link_url: url || '' };
         if (abVariant) p.ab_variant = abVariant;
         try { window.gtag('event', 'installer_download', p); } catch (e) { /* gtag not ready */ }
     }
