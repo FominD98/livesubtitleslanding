@@ -1876,8 +1876,11 @@ function renderWeekly() {
 
 const NOT_CAMPAIGN = /^\(.*\)$/;
 
+// The installer A/B (cid-tracker.js) appends _wi / _st to the Microsoft cid, so
+// the app and Paddle report "gads_x_wi" while Google Ads spends on "gads_x".
+// Folding the arm back in keeps revenue on the campaign row its spend is on.
 function campaignKey(name) {
-    return (name || "").trim().toLowerCase();
+    return (name || "").trim().toLowerCase().replace(/_(wi|st)$/, "");
 }
 
 function renderCampaigns() {
