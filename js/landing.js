@@ -226,16 +226,26 @@ const lang = localStorage.getItem('preferredLanguage') || getUserLanguage();
 const t = (translations[lang] && translations[lang].install) || translations['en-US'].install;
 const bottom = downloadsAtBottom();
 let hint = document.getElementById('dlHint');
+let dim = document.getElementById('dlDim');
 if (!hint) {
+    // The page dims so the browser's own downloads UI, outside the page, is
+    // the brightest thing in view. A click anywhere lifts it: a cue, not a wall.
+    dim = document.createElement('div');
+    dim.id = 'dlDim';
+    dim.className = 'dldim';
     hint = document.createElement('div');
     hint.id = 'dlHint';
     hint.setAttribute('role', 'status');
     hint.innerHTML = '<span class="dlhint__arrow" aria-hidden="true"></span>'
         + '<span class="dlhint__text"></span>'
         + '<button type="button" class="dlhint__close">&times;</button>';
-    hint.querySelector('.dlhint__close').addEventListener('click', function () { hint.hidden = true; });
+    const close = function () { hint.hidden = true; dim.hidden = true; };
+    hint.querySelector('.dlhint__close').addEventListener('click', close);
+    dim.addEventListener('click', close);
+    document.body.appendChild(dim);
     document.body.appendChild(hint);
 }
+dim.hidden = false;
 hint.className = 'dlhint' + (bottom ? ' dlhint--bottom' : '');
 hint.querySelector('.dlhint__arrow').textContent = bottom ? '↓' : '↑';
 hint.querySelector('.dlhint__text').textContent = bottom ? t.hintBottom : t.hintTop;
