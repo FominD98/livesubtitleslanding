@@ -178,8 +178,12 @@ if (/Android/.test(ua)) return 'android';
 if (/Mac/.test(p) || /Macintosh/.test(ua)) return 'mac';
 return 'win';
 }
+// Installer A/B: cid-tracker.js draws the arm ('wi' / 'st') for desktop Windows
+// only, so Linux, which detectOS() files under 'win', never gets here with 'wi'.
+const INSTALLER_URL = 'https://get.microsoft.com/installer/download/9PH1R9DJG47S';
 function routeTryFree() {
-const store = TRYFREE_STORES[detectOS()];
+const installer = detectOS() === 'win' && window.lsInstallerVariant === 'wi';
+const store = installer ? INSTALLER_URL : TRYFREE_STORES[detectOS()];
 ['navTryFree', 'heroTryFree', 'stickyTryFree'].forEach(function (id) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -187,6 +191,14 @@ const store = TRYFREE_STORES[detectOS()];
         el.setAttribute('href', '#download');
         el.removeAttribute('target');
         el.removeAttribute('onclick');
+    } else if (installer) {
+        // A file, not a page: the download starts in place, no blank tab. The
+        // Ads conversion still fires, but without the URL — given one,
+        // gtag_report_conversion re-opens it in a new tab and blocks the click.
+        el.setAttribute('href', window.lsStampStoreUrl(INSTALLER_URL));
+        el.removeAttribute('target');
+        el.setAttribute('onclick', "if (typeof gtag_report_conversion === 'function') gtag_report_conversion();");
+        el.addEventListener('click', showInstallerHint);
     } else {
         el.setAttribute('href',
             typeof window.lsStampStoreUrl === 'function' ? window.lsStampStoreUrl(store) : store);
@@ -194,6 +206,41 @@ const store = TRYFREE_STORES[detectOS()];
         el.setAttribute('rel', 'noopener');
     }
 });
+// Its href is already stamped: cid-tracker.js instruments every Store link.
+const storeLink = document.getElementById('heroStoreLink');
+if (storeLink) storeLink.hidden = !installer;
+}
+
+// After the installer click: point at the file the browser has just downloaded.
+// Edge and Chrome 116+ show downloads in a toolbar bubble at the top right;
+// older Chrome still uses the shelf along the bottom. Firefox and the rest open
+// a panel from the toolbar too, so "top" is the default.
+function downloadsAtBottom() {
+const ua = navigator.userAgent || '';
+if (/Edg\//.test(ua)) return false;
+const chrome = ua.match(/Chrome\/(\d+)/);
+return !!chrome && parseInt(chrome[1], 10) < 116;
+}
+function showInstallerHint() {
+const lang = localStorage.getItem('preferredLanguage') || getUserLanguage();
+const t = (translations[lang] && translations[lang].install) || translations['en-US'].install;
+const bottom = downloadsAtBottom();
+let hint = document.getElementById('dlHint');
+if (!hint) {
+    hint = document.createElement('div');
+    hint.id = 'dlHint';
+    hint.setAttribute('role', 'status');
+    hint.innerHTML = '<span class="dlhint__arrow" aria-hidden="true"></span>'
+        + '<span class="dlhint__text"></span>'
+        + '<button type="button" class="dlhint__close">&times;</button>';
+    hint.querySelector('.dlhint__close').addEventListener('click', function () { hint.hidden = true; });
+    document.body.appendChild(hint);
+}
+hint.className = 'dlhint' + (bottom ? ' dlhint--bottom' : '');
+hint.querySelector('.dlhint__arrow').textContent = bottom ? '↓' : '↑';
+hint.querySelector('.dlhint__text').textContent = bottom ? t.hintBottom : t.hintTop;
+hint.querySelector('.dlhint__close').setAttribute('aria-label', t.close);
+hint.hidden = false;
 }
 
 // ── Sticky CTA (phones) ───────────────────────────────────────────

@@ -531,6 +531,35 @@ p:last-child { margin-bottom: 0; }
  * also where it starts existing at all. */
 .stickycta { display: none; }
 
+/* ── Installer A/B ─────────────────────────────────────────────────────── */
+/* The way back to the Store page, under the button that now downloads the
+ * web installer. A full-width row of .hero__cta, so it stays under the button
+ * in every layout. */
+.hero__alt { flex-basis: 100%; margin-top: -.35rem; font-size: .875rem; color: var(--muted); }
+.hero__alt:hover { color: var(--brand); }
+
+/* "Open the installer file" hint, pinned next to where the browser shows its
+ * downloads. Small and off to the side: the page under it stays usable. */
+.dlhint {
+    position: fixed; z-index: 70; right: 16px; top: 76px; /* below the navbar */
+    display: flex; align-items: flex-start; gap: .6rem;
+    max-width: min(340px, calc(100vw - 32px));
+    padding: .8rem .9rem;
+    background: var(--bg); color: var(--ink);
+    border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    font-size: .9375rem; line-height: 1.4;
+}
+.dlhint[hidden] { display: none; }
+.dlhint--bottom { top: auto; right: auto; bottom: 16px; left: 16px; }
+.dlhint__arrow { color: var(--brand); font-weight: 700; }
+.dlhint__close {
+    margin-left: auto; padding: 0 .2rem;
+    background: none; border: 0; cursor: pointer;
+    font-size: 1.25rem; line-height: 1; color: var(--muted);
+}
+.dlhint__close:hover { color: var(--ink); }
+
 /* ── Dialog ────────────────────────────────────────────────────────────── */
 
 dialog {

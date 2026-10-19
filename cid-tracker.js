@@ -11,6 +11,8 @@
 //
 // Per store:
 //   Microsoft Store  ?cid=<id>        -> Partner Center > Acquisitions > Custom campaign
+//   MS web installer ?cid=<id>        -> same report: get.microsoft.com/installer/download
+//                                        hands the cid on to the Store install
 //   App Store        ?ct=<id>         -> App Store Connect > App Analytics > Campaigns
 //                                        (shortened to Apple's 40-char cap, see toAppleCt)
 //   Google Play      ?referrer=utm_source=...&utm_medium=...&utm_campaign=<id>
@@ -19,8 +21,17 @@
 //
 // Metrika goals fired here (create them in the counter or they record nothing):
 //   store_click_any, store_click_windows, store_click_mac, store_click_ios,
-//   store_click_android, tv_interest
+//   store_click_android, tv_interest, installer_download
+//
+// Installer A/B (desktop Windows only): 'wi' = the homepage CTA downloads the
+// Store web installer, 'st' = it opens the Store page as before. The variant is
+// drawn once per session, rides on the MS cid as a _wi / _st suffix and goes
+// into Metrika and GA4 as ab_variant. Mac, iOS, Android and Linux visitors are
+// not in the test and keep their ids unsuffixed.
+//   'split' — 50/50;  'wi' — everyone gets the installer;  'st' — everyone gets
+//   the Store page (the old behaviour). The suffix is added in all three modes.
 (function () {
+    var LS_INSTALLER_AB = 'split';
     var YM_COUNTER = 101009280;
     var APPLE_PT = '128624979';
     var params = new URLSearchParams(location.search);
@@ -95,6 +106,39 @@
     }
     var appleCt = toAppleCt(cidToSet);
 
+    // Only a Windows desktop can run the installer. detectOS() below files
+    // Linux under 'win' (it only has to pick a store), so this checks the UA
+    // directly; Xbox and Windows Phone also carry "Windows NT".
+    function isWindowsDesktop() {
+        var ua = navigator.userAgent || '';
+        return /Windows NT/.test(ua) && !/Xbox|Windows Phone|Mobile/.test(ua);
+    }
+    function pickVariant() {
+        if (!isWindowsDesktop()) return '';
+        if (LS_INSTALLER_AB === 'wi' || LS_INSTALLER_AB === 'st') return LS_INSTALLER_AB;
+        var v = '';
+        try { v = sessionStorage.getItem('lsAbInst') || ''; } catch (e) { /* private mode */ }
+        if (v !== 'wi' && v !== 'st') {
+            v = Math.random() < 0.5 ? 'wi' : 'st';
+            try { sessionStorage.setItem('lsAbInst', v); } catch (e) { /* private mode */ }
+        }
+        return v;
+    }
+    var abVariant = pickVariant();
+
+    // The suffix is what tells the two arms apart in Partner Center, so on
+    // overflow the base gives way, never the suffix.
+    function withVariant(id, v) {
+        if (!v) return id;
+        var suffix = '_' + v;
+        if (id.length + suffix.length > CID_MAX) {
+            id = id.slice(0, CID_MAX - suffix.length).replace(/[._-]+$/, '');
+        }
+        return id + suffix;
+    }
+    // Microsoft links only: Play and Apple keep the plain id.
+    var msCid = withVariant(cidToSet, abVariant);
+
     // Play Console shows source/medium verbatim, so an unsanitised value from
     // the ad link (spaces, cyrillic, an unexpanded {source_type} macro) would
     // land in the report as percent-encoded noise and split one channel across
@@ -111,24 +155,34 @@
     var playSource = toUtmValue(utmSource, 'live-subtitles.com');
     var playMedium = toUtmValue(utmMedium, 'referral');
 
-    function reachGoal(name) {
+    function reachGoal(name, params) {
         if (typeof window.ym === 'function') {
-            try { window.ym(YM_COUNTER, 'reachGoal', name); } catch (e) { /* counter not ready */ }
+            try {
+                if (params) window.ym(YM_COUNTER, 'reachGoal', name, params);
+                else window.ym(YM_COUNTER, 'reachGoal', name);
+            } catch (e) { /* counter not ready */ }
         }
     }
+    var abParams = abVariant ? { ab_variant: abVariant } : null;
 
     // GA4 получает одно событие store_click с параметрами вместо пяти отдельных
     // целей: в отчётах GA4 разрез по параметру удобнее, чем зоопарк имён.
     function ga4StoreClick(store, url) {
         if (typeof window.gtag !== 'function') return;
-        try {
-            window.gtag('event', 'store_click', {
-                store: store,
-                campaign_id: cidToSet,
-                page_path: location.pathname,
-                link_url: url || ''
-            });
-        } catch (e) { /* gtag not ready */ }
+        var p = {
+            store: store,
+            campaign_id: store === 'microsoft' ? msCid : cidToSet,
+            page_path: location.pathname,
+            link_url: url || ''
+        };
+        if (abVariant) p.ab_variant = abVariant;
+        try { window.gtag('event', 'store_click', p); } catch (e) { /* gtag not ready */ }
+    }
+    function ga4InstallerDownload(url) {
+        if (typeof window.gtag !== 'function') return;
+        var p = { cid: msCid, page_path: location.pathname, link_url: url || '' };
+        if (abVariant) p.ab_variant = abVariant;
+        try { window.gtag('event', 'installer_download', p); } catch (e) { /* gtag not ready */ }
     }
 
     var STORES = {
@@ -175,6 +229,7 @@
 
     function storeKind(href) {
         if (href.indexOf('apps.microsoft.com') !== -1) return 'ms';
+        if (href.indexOf('get.microsoft.com/installer/download') !== -1) return 'installer';
         if (href.indexOf('apps.apple.com') !== -1) {
             return href.indexOf('platform=mac') !== -1 ? 'mac' : 'ios';
         }
@@ -191,8 +246,8 @@
         if (!kind) return href;
         try {
             var u = new URL(href, location.origin);
-            if (kind === 'ms') {
-                u.searchParams.set('cid', cidToSet);
+            if (kind === 'ms' || kind === 'installer') {
+                u.searchParams.set('cid', msCid);
             } else if (kind === 'play') {
                 // Play Store install attribution rides on a single `referrer`
                 // param holding a urlencoded utm string. Play Console needs
@@ -229,6 +284,8 @@
         }
     }
     window.lsStampStoreUrl = stampStoreUrl;
+    // js/landing.js reads this to decide what the homepage CTA points at.
+    window.lsInstallerVariant = abVariant;
 
     // The download grid is authored Windows-first — right for the crawler and
     // for most visitors, but it leaves an Android visitor scanning past three
@@ -262,11 +319,18 @@
     };
     // The store is read off the href at click time, not at bind time: a link
     // bound as Microsoft may since have been re-pointed at another store.
+    // The installer is not a store page, so it gets its own goal and event
+    // and leaves store_click_* to the links that really open a store.
     function onStoreClick() {
         var kind = storeKind(this.href || '');
         if (!kind) return;
-        reachGoal('store_click_any');
-        reachGoal(CLICK_GOAL[kind]);
+        if (kind === 'installer') {
+            reachGoal('installer_download', { cid: msCid, ab_variant: abVariant || '' });
+            ga4InstallerDownload(this.href);
+            return;
+        }
+        reachGoal('store_click_any', abParams);
+        reachGoal(CLICK_GOAL[kind], abParams);
         ga4StoreClick(GA4_STORE[kind], this.href);
     }
 
@@ -288,6 +352,7 @@
         routeStoreCta();
 
         instrumentLinks('a[href*="apps.microsoft.com"]');
+        instrumentLinks('a[href*="get.microsoft.com/installer/download"]');
         instrumentLinks('a[href*="apps.apple.com"]');
         instrumentLinks('a[href*="play.google.com/store/apps"]');
 

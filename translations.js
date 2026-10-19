@@ -178,6 +178,12 @@ const translations = {
             guarantee: 'Free to try · No credit card required',
             android: 'Live captions & dual subtitles on Android →'
         },
+        install: {
+            openStore: 'Open in Microsoft Store',
+            hintTop: 'Open the Live Subtitles Installer file at the top of your browser',
+            hintBottom: 'Open the Live Subtitles Installer file at the bottom of your browser',
+            close: 'Close'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ru: "Давайте начнём сегодняшнюю встречу", es: "Empecemos con la reunión de hoy", de: "Lassen Sie uns mit dem heutigen Meeting beginnen", it: "Iniziamo la riunione di oggi", ja: "それでは、本日のミーティングを始めましょう", ko: "오늘 회의를 시작하겠습니다", zh: "那我们开始今天的会议吧", ar: "لنبدأ اجتماع اليوم", hi: "चलिए आज की मीटिंग शुरू करते हैं", pt: "Vamos começar a reunião de hoje", pl: "Zaczynajmy dzisiejsze spotkanie", nl: "Laten we beginnen met de meeting van vandaag", tr: "Hadi bugünkü toplantımıza başlayalım", uk: "Розпочнімо нашу сьогоднішню зустріч" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", ru: "Меня всем хорошо слышно?", es: "¿Me oyen todos con claridad?", de: "Können mich alle gut hören?", it: "Riuscite a sentirmi bene?", ja: "皆さん、声はちゃんと聞こえていますか？", ko: "제 말이 잘 들리시나요?", zh: "大家能听清楚吗？", ar: "هل يسمعني الجميع بوضوح؟", hi: "क्या सभी को मेरी आवाज़ साफ़ सुनाई दे रही है?", pt: "Todos conseguem me ouvir bem?", pl: "Czy wszyscy mnie dobrze słyszą?", nl: "Kan iedereen mij goed verstaan?", tr: "Herkes beni net duyabiliyor mu?", uk: "Усім добре мене чути?" },
@@ -366,6 +372,12 @@ const translations = {
             guarantee: 'Попробовать бесплатно · Без банковской карты',
             android: 'Живые и двойные субтитры на Android →'
         },
+        install: {
+            openStore: 'Открыть в Microsoft Store',
+            hintTop: 'Откройте файл Live Subtitles Installer вверху браузера',
+            hintBottom: 'Откройте файл Live Subtitles Installer внизу браузера',
+            close: 'Закрыть'
+        },
         examples: [
             { en: "Let's get started with today's meeting", ru: "Давайте начнём сегодняшнюю встречу" },
             { en: "Can everyone hear me clearly?", ru: "Меня всем хорошо слышно?" },
@@ -549,6 +561,12 @@ const translations = {
             subtitle: 'Installez-le et choisissez deux langues — il prend le relais.',
             guarantee: 'Essai gratuit · Sans carte bancaire',
             android: 'Sous-titres en direct et doubles sur Android →'
+        },
+        install: {
+            openStore: 'Ouvrir dans le Microsoft Store',
+            hintTop: 'Ouvrez le fichier Live Subtitles Installer en haut de votre navigateur',
+            hintBottom: 'Ouvrez le fichier Live Subtitles Installer en bas de votre navigateur',
+            close: 'Fermer'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", fr: "Commençons la réunion d'aujourd'hui" },
@@ -734,6 +752,12 @@ const translations = {
             guarantee: 'Prueba gratis · Sin tarjeta de crédito',
             android: 'Subtítulos en vivo y duales en Android →'
         },
+        install: {
+            openStore: 'Abrir en Microsoft Store',
+            hintTop: 'Abre el archivo Live Subtitles Installer en la parte superior del navegador',
+            hintBottom: 'Abre el archivo Live Subtitles Installer en la parte inferior del navegador',
+            close: 'Cerrar'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", es: "Empecemos con la reunión de hoy" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", es: "¿Me oyen todos con claridad?" },
@@ -917,6 +941,12 @@ const translations = {
             subtitle: 'Installieren und zwei Sprachen wählen — den Rest macht es selbst.',
             guarantee: 'Kostenlos testen · Ohne Kreditkarte',
             android: 'Live- & duale Untertitel auf Android →'
+        },
+        install: {
+            openStore: 'Im Microsoft Store öffnen',
+            hintTop: 'Öffnen Sie die Datei Live Subtitles Installer oben im Browser',
+            hintBottom: 'Öffnen Sie die Datei Live Subtitles Installer unten im Browser',
+            close: 'Schließen'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", de: "Lassen Sie uns mit dem heutigen Meeting beginnen" },
@@ -1102,6 +1132,12 @@ const translations = {
             guarantee: 'Prova gratis · Senza carta di credito',
             android: 'Sottotitoli live e doppi su Android →'
         },
+        install: {
+            openStore: 'Apri nel Microsoft Store',
+            hintTop: 'Apri il file Live Subtitles Installer in alto nel browser',
+            hintBottom: 'Apri il file Live Subtitles Installer in basso nel browser',
+            close: 'Chiudi'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", it: "Iniziamo la riunione di oggi" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", it: "Riuscite a sentirmi bene?" },
@@ -1285,6 +1321,12 @@ const translations = {
             subtitle: 'インストールして2つの言語を選ぶだけ。あとは自動です。',
             guarantee: '無料でお試し · クレジットカード不要',
             android: 'Androidでリアルタイム字幕・二重字幕 →'
+        },
+        install: {
+            openStore: 'Microsoft Store で開く',
+            hintTop: 'ブラウザー上部の Live Subtitles Installer ファイルを開いてください',
+            hintBottom: 'ブラウザー下部の Live Subtitles Installer ファイルを開いてください',
+            close: '閉じる'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ja: "それでは、本日のミーティングを始めましょう" },
@@ -1470,6 +1512,12 @@ const translations = {
             guarantee: '무료 체험 · 신용카드 불필요',
             android: 'Android에서 실시간 자막 & 이중 자막 →'
         },
+        install: {
+            openStore: 'Microsoft Store에서 열기',
+            hintTop: '브라우저 상단에서 Live Subtitles Installer 파일을 여세요',
+            hintBottom: '브라우저 하단에서 Live Subtitles Installer 파일을 여세요',
+            close: '닫기'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ko: "오늘 회의를 시작하겠습니다" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", ko: "제 말이 잘 들리시나요?" },
@@ -1653,6 +1701,12 @@ const translations = {
             subtitle: '安装后选择两种语言，剩下的它自己来。',
             guarantee: '免费试用 · 无需信用卡',
             android: '在 Android 上使用实时字幕与双语字幕 →'
+        },
+        install: {
+            openStore: '在 Microsoft Store 中打开',
+            hintTop: '请打开浏览器顶部的 Live Subtitles Installer 文件',
+            hintBottom: '请打开浏览器底部的 Live Subtitles Installer 文件',
+            close: '关闭'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", zh: "那我们开始今天的会议吧" },
@@ -1838,6 +1892,12 @@ const translations = {
             guarantee: 'جرّبه مجانًا · بدون بطاقة ائتمان',
             android: 'ترجمة حية ومزدوجة على أندرويد ←'
         },
+        install: {
+            openStore: 'افتح في Microsoft Store',
+            hintTop: 'افتح ملف Live Subtitles Installer في أعلى المتصفح',
+            hintBottom: 'افتح ملف Live Subtitles Installer في أسفل المتصفح',
+            close: 'إغلاق'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", ar: "لنبدأ اجتماع اليوم" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", ar: "هل يسمعني الجميع بوضوح؟" },
@@ -2021,6 +2081,12 @@ const translations = {
             subtitle: 'इंस्टॉल करें और दो भाषाएँ चुनें — आगे यह खुद संभाल लेता है।',
             guarantee: 'मुफ़्त आज़माएँ · क्रेडिट कार्ड की ज़रूरत नहीं',
             android: 'Android पर लाइव कैप्शन और डुअल सबटाइटल →'
+        },
+        install: {
+            openStore: 'Microsoft Store में खोलें',
+            hintTop: 'ब्राउज़र में ऊपर Live Subtitles Installer फ़ाइल खोलें',
+            hintBottom: 'ब्राउज़र में नीचे Live Subtitles Installer फ़ाइल खोलें',
+            close: 'बंद करें'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", hi: "चलिए आज की मीटिंग शुरू करते हैं" },
@@ -2206,6 +2272,12 @@ const translations = {
             guarantee: 'Experimente grátis · Sem cartão de crédito',
             android: 'Legendas ao vivo e duplas no Android →'
         },
+        install: {
+            openStore: 'Abrir na Microsoft Store',
+            hintTop: 'Abra o arquivo Live Subtitles Installer na parte superior do navegador',
+            hintBottom: 'Abra o arquivo Live Subtitles Installer na parte inferior do navegador',
+            close: 'Fechar'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pt: "Vamos começar a reunião de hoje" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", pt: "Todos conseguem me ouvir bem?" },
@@ -2389,6 +2461,12 @@ const translations = {
             subtitle: 'Zainstaluj i wybierz dwa języki — dalej zajmie się tym sam.',
             guarantee: 'Wypróbuj bezpłatnie · Bez karty kredytowej',
             android: 'Napisy na żywo i podwójne na Androidzie →'
+        },
+        install: {
+            openStore: 'Otwórz w Microsoft Store',
+            hintTop: 'Otwórz plik Live Subtitles Installer u góry przeglądarki',
+            hintBottom: 'Otwórz plik Live Subtitles Installer u dołu przeglądarki',
+            close: 'Zamknij'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", pl: "Zaczynajmy dzisiejsze spotkanie" },
@@ -2574,6 +2652,12 @@ const translations = {
             guarantee: 'Gratis uitproberen · Geen creditcard nodig',
             android: 'Live en duale ondertitels op Android →'
         },
+        install: {
+            openStore: 'Openen in Microsoft Store',
+            hintTop: 'Open het bestand Live Subtitles Installer bovenaan in je browser',
+            hintBottom: 'Open het bestand Live Subtitles Installer onderaan in je browser',
+            close: 'Sluiten'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", nl: "Laten we beginnen met de meeting van vandaag" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", nl: "Kan iedereen mij goed verstaan?" },
@@ -2758,6 +2842,12 @@ const translations = {
             guarantee: 'Ücretsiz deneyin · Kredi kartı gerekmez',
             android: 'Android\'de canlı ve çift altyazı →'
         },
+        install: {
+            openStore: "Microsoft Store'da aç",
+            hintTop: 'Tarayıcının üst kısmındaki Live Subtitles Installer dosyasını açın',
+            hintBottom: 'Tarayıcının alt kısmındaki Live Subtitles Installer dosyasını açın',
+            close: 'Kapat'
+        },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", tr: "Hadi bugünkü toplantımıza başlayalım" },
             { en: "Can everyone hear me clearly?", fr: "Est-ce que tout le monde m'entend bien ?", tr: "Herkes beni net duyabiliyor mu?" },
@@ -2941,6 +3031,12 @@ const translations = {
             subtitle: 'Встановіть і виберіть дві мови — далі він сам.',
             guarantee: 'Спробувати безкоштовно · Без банківської картки',
             android: 'Живі та подвійні субтитри на Android →'
+        },
+        install: {
+            openStore: 'Відкрити в Microsoft Store',
+            hintTop: 'Відкрийте файл Live Subtitles Installer угорі браузера',
+            hintBottom: 'Відкрийте файл Live Subtitles Installer унизу браузера',
+            close: 'Закрити'
         },
         examples: [
             { en: "Let's get started with today's meeting", fr: "Commençons la réunion d'aujourd'hui", uk: "Розпочнімо нашу сьогоднішню зустріч" },
