@@ -599,6 +599,33 @@
         return;
       }
 
+      // Сбой загрузки окна оплаты раньше был невиден: Paddle.js не грузился (блокировщик, Китай) —
+      // страница вечно висела на «Preparing…», а в данных это выглядело как «ушёл с первого экрана».
+      function reportCheckoutProblem(reason) {
+        try {
+          if (typeof gtag === 'function') gtag('event', 'checkout_load_failed', { reason: reason, platform: platform });
+        } catch (e) { /* аналитика не должна мешать оплате */ }
+      }
+
+      if (typeof Paddle === 'undefined') {
+        reportCheckoutProblem('script');
+        show('state-error', t.errorUnavailable);
+        return;
+      }
+
+      // Окно Paddle не открылось за это время — кнопка повторного открытия вместо вечной загрузки.
+      var CHECKOUT_LOAD_TIMEOUT_MS = 20000;
+      var loadTimer = null;
+
+      function watchCheckoutLoad() {
+        clearTimeout(loadTimer);
+        loadTimer = setTimeout(function () {
+          if (document.getElementById('state-loading').classList.contains('hidden')) return;
+          reportCheckoutProblem('timeout');
+          show('state-ready');
+        }, CHECKOUT_LOAD_TIMEOUT_MS);
+      }
+
       if (sandbox) {
         Paddle.Environment.set('sandbox');
       }
@@ -607,6 +634,12 @@
         token: token,
         eventCallback: function (event) {
           if (!event || !event.name) return;
+          if (event.name === 'checkout.loaded') {
+            clearTimeout(loadTimer);
+          } else if (event.name === 'checkout.error') {
+            clearTimeout(loadTimer);
+            reportCheckoutProblem('paddle_error');
+          }
           if (event.name === 'checkout.completed') {
             show('state-success');
             if (sendAdEvents && typeof gtag === 'function') {
@@ -738,12 +771,14 @@
         // Промокод ссылкой (?discount=CODE): поле «Add discount» Paddle показывает не всегда.
         var discount = params.get('discount') || '';
         if (/^[A-Za-z0-9]{3,32}$/.test(discount)) options.discountCode = discount;
+        watchCheckoutLoad();
         Paddle.Checkout.open(options);
       }
 
       if (isRecovery) {
         document.getElementById('reopen').addEventListener('click', function () {
           show('state-loading');
+          watchCheckoutLoad();
           Paddle.Checkout.open({ transactionId: recoveryTxn, settings: { displayMode: 'overlay', theme: 'light' } });
         });
         return;
