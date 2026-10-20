@@ -191,7 +191,7 @@
   function formatMoney(amount, currency) {
     var n = parseFloat(amount);
     if (!isFinite(n)) return amount + " " + currency;
-    try { return new Intl.NumberFormat(undefined, { style: "currency", currency: currency }).format(n); }
+    try { return new Intl.NumberFormat("en-US", { style: "currency", currency: currency }).format(n); }
     catch (e) { return n.toFixed(2) + " " + currency; }
   }
 
