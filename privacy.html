@@ -97,7 +97,7 @@
 <body>
 <a class="back-link" href="/">← Back to Home</a>
 <h1>Privacy Policy</h1>
-<p>Effective Date: October 11, 2026</p>
+<p>Effective Date: October 20, 2026</p>
 
 <h2>Overview</h2>
 <p>
@@ -222,7 +222,7 @@
   <li><a href="https://yandex.com/legal/confidential/" target="_blank" rel="noopener">Yandex</a> — speech recognition and translation (desktop engine options)</li>
   <li><a href="https://openai.com/privacy" target="_blank" rel="noopener">OpenAI</a> — translation (desktop engine option)</li>
   <li><a href="https://fish.audio/" target="_blank" rel="noopener">Fish Audio</a> — voice synthesis for the desktop live-voice feature</li>
-  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> — product analytics (mobile apps)</li>
+  <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Analytics for Firebase</a> — product analytics (mobile apps; anonymous usage events from the browser extension)</li>
   <li><a href="https://grafana.com/legal/privacy-policy/" target="_blank" rel="noopener">Grafana Loki</a> — diagnostic logs and crash reports</li>
   <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Billing</a> and <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple App Store</a> — purchases and subscriptions</li>
   <li><a href="https://www.paddle.com/legal/privacy" target="_blank" rel="noopener">Paddle</a> — merchant of record for purchases made on this website (desktop app and browser extension); Paddle collects your email and payment details, we receive only the order and subscription status</li>
@@ -252,6 +252,10 @@
     profiles if Chrome sync is on. Uninstalling the extension removes the local data.</li>
   <li><strong>Diagnostic logs</strong> (extension version, the website's host name where it activated, feature events and errors,
     the random installation id) are sent to Grafana Loki. They never include page paths, page content or what you watch.</li>
+  <li><strong>Product analytics</strong>: anonymous usage events (for example install, first subtitles shown, word saved, paywall shown,
+    purchase, Live started, daily usage totals) with an identifier derived from the random installation id and your country
+    are sent through our API to Google Analytics. They never include page addresses, caption text or what you watch.
+    Setting diagnostics to "off" in the extension settings stops them.</li>
   <li><strong>Payments</strong> are made on live-subtitles.com through Paddle, who processes your email and card details as merchant
     of record. Our API reads the status of your order from Paddle to unlock paid features.</li>
 </ul>
