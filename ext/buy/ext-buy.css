@@ -182,3 +182,5 @@ header { display: flex; align-items: center; gap: 14px; padding: 8px 0 22px; }
 }
 
 #retry-btn, #copy-key-btn { width: auto; display: inline-block; }
+
+.plan-discount { margin-top: 6px; font-size: 13px; color: #8fd3ff; }

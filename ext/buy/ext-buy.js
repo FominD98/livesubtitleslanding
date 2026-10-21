@@ -199,6 +199,11 @@
   }
 
   function updatePlanView() {
+    var disc = $("plan-discount");
+    if (disc) {
+      disc.textContent = discountParam ? "Promo code " + discountParam + " will be applied at checkout." : "";
+      disc.classList.toggle("hidden", !discountParam);
+    }
     var isSub = state.family !== "pack";
     $("cycle-toggle").classList.toggle("hidden", !isSub);
     $("qty-row").classList.toggle("hidden", isSub);
