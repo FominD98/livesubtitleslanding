@@ -96,6 +96,9 @@
   var hasValidInstall = UUID_RE.test(installId);
   var sandbox = params.get("sandbox") === "1";
   var langParam = (params.get("lang") || "").trim();
+  // ?discount=CODE pre-fills a Paddle discount code (tests, support, campaigns).
+  var discountParam = (params.get("discount") || "").trim();
+  if (!/^[A-Za-z0-9_-]{3,40}$/.test(discountParam)) discountParam = "";
   if (!/^[a-z]{2}(-[A-Z]{2})?$/.test(langParam)) langParam = "";
 
   var requestedPlan = params.get("plan") || "";
@@ -377,6 +380,7 @@
       settings: { displayMode: "overlay", theme: "dark" }
     };
     if (langParam) options.settings.locale = langParam;
+    if (discountParam) options.discountCode = discountParam;
     Paddle.Checkout.open(options);
   });
 
