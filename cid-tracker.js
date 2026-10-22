@@ -224,7 +224,7 @@
             var a = ctas[i];
             a.href = href;
             a.setAttribute('rel', 'noopener');
-            // "Start free trial — Microsoft Store" would now be a lie.
+            // "Try it free — Microsoft Store" would now be a lie.
             if (a.textContent && a.textContent.indexOf('Microsoft Store') !== -1) {
                 a.textContent = a.textContent.replace('Microsoft Store', STORE_LABEL[os]);
             }

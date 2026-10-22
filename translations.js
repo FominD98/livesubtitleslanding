@@ -46,7 +46,7 @@ const translations = {
             },
         header: {
             worksOn: 'Works on any app — meetings, movies, games & learning',
-            downloadFree: 'Start Free Trial',
+            downloadFree: 'Try It Free',
             ratingLabel: '4.7/5 · 351 ratings',
             watchDemo: 'Watch Demo',
             title: 'Live Captions & Dual Subtitles for Any App',
@@ -114,10 +114,10 @@ const translations = {
             articles: 'Articles'
         },
         title: 'Live Subtitles — Live Captions & Dual Subtitles for Any App',
-        description: 'Live Subtitles official site: download live captions & dual subtitles for any app on Windows, Mac, iOS & Android. AI translation in 50 languages. Free trial.',
+        description: 'Live Subtitles official site: download live captions & dual subtitles for any app on Windows, Mac, iOS & Android. AI translation in 50 languages. Try it free.',
         download: 'Download Now',
         meta: {
-            description: 'Live Subtitles official site: download live captions & dual subtitles for any app on Windows, Mac, iOS & Android. AI translation in 50 languages. Free trial.',
+            description: 'Live Subtitles official site: download live captions & dual subtitles for any app on Windows, Mac, iOS & Android. AI translation in 50 languages. Try it free.',
             keywords: 'live subtitles app, live captions app, dual subtitles, subtitle translator, real-time subtitles, zoom captions, teams captions, youtube subtitles, netflix subtitles, discord subtitles, twitch subtitles, language learning subtitles'
         },
         downloadModal: {
@@ -308,10 +308,10 @@ const translations = {
             articles: 'Статьи'
         },
         title: 'Live Subtitles — Двойные субтитры для любого приложения',
-        description: 'Живые и двойные субтитры поверх любого приложения: Windows, Mac, iOS, Android. ИИ-перевод на 50 языков для Zoom, Teams, Netflix. Пробный период.',
+        description: 'Живые и двойные субтитры поверх любого приложения: Windows, Mac, iOS, Android. ИИ-перевод на 50 языков для Zoom, Teams, Netflix. Попробуйте бесплатно.',
         download: 'Скачать сейчас',
         meta: {
-            description: 'Живые и двойные субтитры поверх любого приложения: Windows, Mac, iOS, Android. ИИ-перевод на 50 языков для Zoom, Teams, Netflix. Пробный период.',
+            description: 'Живые и двойные субтитры поверх любого приложения: Windows, Mac, iOS, Android. ИИ-перевод на 50 языков для Zoom, Teams, Netflix. Попробуйте бесплатно.',
             keywords: 'двойные субтитры, субтитры для изучения языков, перевод речи, распознавание речи, субтитры онлайн, Live Subtitles, изучение английского, изучение языков, субтитры в реальном времени, понимание речи, переводчик для фильмов'
         },
         downloadModal: {
@@ -389,7 +389,7 @@ const translations = {
     },
     'fr-FR': {
             proof: {
-                trial: 'Essai gratuit, sans carte',
+                trial: 'Essayez gratuitement, sans carte',
                 langs: '50 langues',
                 latency: 'Moins d’une seconde de latence',
                 noMic: 'Aucun robot dans votre appel'
@@ -424,7 +424,7 @@ const translations = {
             },
         navbar: {
             brand: 'Live Subtitles',
-            tryFree: 'Essai gratuit',
+            tryFree: 'Essayer gratuitement',
             features: 'Fonctionnalités',
             comparison: 'Comparaison',
             faq: 'FAQ',
@@ -434,7 +434,7 @@ const translations = {
             },
         header: {
             worksOn: 'Fonctionne dans toute app — réunions, films, jeux, apprentissage',
-            downloadFree: 'Essai gratuit',
+            downloadFree: 'Essayer gratuitement',
             ratingLabel: '4,7/5 · 351 avis',
             watchDemo: 'Voir la démo',
             title: 'Sous-titres en direct et doubles sous-titres pour toute application',
@@ -498,10 +498,10 @@ const translations = {
             articles: 'Articles'
         },
         title: 'Live Subtitles — Sous-titres en direct et doubles, toute app',
-        description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac, iOS et Android. Traduction IA en 50 langues pour Zoom, Teams et Netflix. Essai gratuit.',
+        description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac, iOS et Android. Traduction IA en 50 langues pour Zoom, Teams et Netflix. Essayez gratuitement.',
         download: 'Télécharger maintenant',
         meta: {
-            description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac, iOS et Android. Traduction IA en 50 langues pour Zoom, Teams et Netflix. Essai gratuit.',
+            description: 'Sous-titres en direct et doubles pour toute app sur Windows, Mac, iOS et Android. Traduction IA en 50 langues pour Zoom, Teams et Netflix. Essayez gratuitement.',
             keywords: 'sous-titres doubles, sous-titres pour l\'apprentissage des langues, traduction vocale, reconnaissance vocale, sous-titres en ligne, Live Subtitles, apprentissage de l\'anglais, apprentissage des langues, sous-titres en temps réel, compréhension de la parole, traducteur de films'
         },
         downloadModal: {
@@ -559,7 +559,7 @@ const translations = {
         download: {
             title: 'Essayez gratuitement dès maintenant',
             subtitle: 'Installez-le et choisissez deux langues — il prend le relais.',
-            guarantee: 'Essai gratuit · Sans carte bancaire',
+            guarantee: 'Essayez gratuitement · Sans carte bancaire',
             android: 'Sous-titres en direct et doubles sur Android →'
         },
         install: {
@@ -624,7 +624,7 @@ const translations = {
             },
         header: {
             worksOn: 'Funciona en cualquier app — reuniones, películas, juegos, aprendizaje',
-            downloadFree: 'Prueba gratis',
+            downloadFree: 'Pruébalo gratis',
             ratingLabel: '4,7/5 · 351 valoraciones',
             watchDemo: 'Ver demo',
             title: 'Subtítulos en vivo y subtítulos dobles para cualquier aplicación',
@@ -688,10 +688,10 @@ const translations = {
             articles: 'Artículos'
         },
         title: 'Live Subtitles — Subtítulos en vivo y duales, cualquier app',
-        description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac, iOS y Android. Traducción IA a 50 idiomas en Zoom, Teams y Netflix. Prueba gratis.',
+        description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac, iOS y Android. Traducción IA a 50 idiomas en Zoom, Teams y Netflix. Pruébalo gratis.',
         download: 'Descargar ahora',
         meta: {
-            description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac, iOS y Android. Traducción IA a 50 idiomas en Zoom, Teams y Netflix. Prueba gratis.',
+            description: 'Subtítulos en vivo y duales para cualquier app en Windows, Mac, iOS y Android. Traducción IA a 50 idiomas en Zoom, Teams y Netflix. Pruébalo gratis.',
             keywords: 'subtítulos dobles, subtítulos para aprendizaje de idiomas, traducción de voz, reconocimiento de voz, subtítulos en línea, Live Subtitles, aprender inglés, aprendizaje de idiomas, subtítulos en tiempo real, comprensión del habla, traductor de películas'
         },
         downloadModal: {
@@ -749,7 +749,7 @@ const translations = {
         download: {
             title: 'Pruébalo gratis ahora mismo',
             subtitle: 'Instálalo y elige dos idiomas: el resto lo hace él.',
-            guarantee: 'Prueba gratis · Sin tarjeta de crédito',
+            guarantee: 'Pruébalo gratis · Sin tarjeta de crédito',
             android: 'Subtítulos en vivo y duales en Android →'
         },
         install: {
@@ -1004,7 +1004,7 @@ const translations = {
             },
         header: {
             worksOn: 'Funziona in qualsiasi app — riunioni, film, giochi, apprendimento',
-            downloadFree: 'Inizia la prova gratuita',
+            downloadFree: 'Provalo gratis',
             ratingLabel: '4,7/5 · 351 recensioni',
             watchDemo: 'Guarda la demo',
             title: 'Sottotitoli live e doppi sottotitoli per qualsiasi app',
@@ -1258,10 +1258,10 @@ const translations = {
             articles: '記事'
         },
         title: 'Live Subtitles — あらゆるアプリのリアルタイム字幕・二重字幕',
-        description: 'Windows・Mac・iOS・Androidのあらゆるアプリの画面に、リアルタイム字幕と二重字幕を重ねて表示します。Zoom・Teams・YouTube・Netflix・ゲームに対応し、50以上の言語をAIでリアルタイムに即時翻訳。まずは無料トライアルからお気軽にお試しください。',
+        description: 'Windows・Mac・iOS・Androidのあらゆるアプリの画面に、リアルタイム字幕と二重字幕を重ねて表示します。Zoom・Teams・YouTube・Netflix・ゲームに対応し、50以上の言語をAIでリアルタイムに即時翻訳。まずは無料でお気軽にお試しください。',
         download: '今すぐダウンロード',
         meta: {
-            description: 'Windows・Mac・iOS・Androidのあらゆるアプリの画面に、リアルタイム字幕と二重字幕を重ねて表示します。Zoom・Teams・YouTube・Netflix・ゲームに対応し、50以上の言語をAIでリアルタイムに即時翻訳。まずは無料トライアルからお気軽にお試しください。',
+            description: 'Windows・Mac・iOS・Androidのあらゆるアプリの画面に、リアルタイム字幕と二重字幕を重ねて表示します。Zoom・Teams・YouTube・Netflix・ゲームに対応し、50以上の言語をAIでリアルタイムに即時翻訳。まずは無料でお気軽にお試しください。',
             keywords: '二重字幕, 語学学習字幕, 音声翻訳, 音声認識, オンライン字幕, Live Subtitles, 英語学習, 語学学習, リアルタイム字幕, 音声理解, 映画翻訳者'
         },
         downloadModal: {
@@ -1339,7 +1339,7 @@ const translations = {
     },
     'ko-KR': {
             proof: {
-                trial: '무료로 체험, 카드 불필요',
+                trial: '무료로 사용해 보기, 카드 불필요',
                 langs: '50개 언어',
                 latency: '1초 미만의 지연',
                 noMic: '통화에 봇이 들어오지 않음'
@@ -1374,7 +1374,7 @@ const translations = {
             },
         navbar: {
             brand: 'Live Subtitles',
-            tryFree: '무료 체험',
+            tryFree: '무료로 시작',
             features: '기능',
             comparison: '비교',
             faq: '자주 묻는 질문',
@@ -1448,10 +1448,10 @@ const translations = {
             articles: '기사'
         },
         title: 'Live Subtitles — 모든 앱용 실시간 자막 & 이중 자막',
-        description: 'Windows, Mac, iOS, Android의 모든 앱 위에 실시간 자막과 이중 자막을 표시합니다. Zoom, Teams, Netflix, YouTube, 게임까지 50개 이상 언어로 실시간 AI 번역을 제공합니다. 무료 체험으로 지금 시작하세요.',
+        description: 'Windows, Mac, iOS, Android의 모든 앱 위에 실시간 자막과 이중 자막을 표시합니다. Zoom, Teams, Netflix, YouTube, 게임까지 50개 이상 언어로 실시간 AI 번역을 제공합니다. 지금 무료로 사용해 보세요.',
         download: '지금 다운로드',
         meta: {
-            description: 'Windows, Mac, iOS, Android의 모든 앱 위에 실시간 자막과 이중 자막을 표시합니다. Zoom, Teams, Netflix, YouTube, 게임까지 50개 이상 언어로 실시간 AI 번역을 제공합니다. 무료 체험으로 지금 시작하세요.',
+            description: 'Windows, Mac, iOS, Android의 모든 앱 위에 실시간 자막과 이중 자막을 표시합니다. Zoom, Teams, Netflix, YouTube, 게임까지 50개 이상 언어로 실시간 AI 번역을 제공합니다. 지금 무료로 사용해 보세요.',
             keywords: '이중 자막, 언어 학습 자막, 음성 번역, 음성 인식, 온라인 자막, Live Subtitles, 영어 학습, 언어 학습, 실시간 자막, 음성 이해, 영화 번역기'
         },
         downloadModal: {
@@ -1509,7 +1509,7 @@ const translations = {
         download: {
             title: '지금 무료로 사용해보세요',
             subtitle: '설치하고 두 가지 언어만 고르세요. 나머지는 알아서 합니다.',
-            guarantee: '무료 체험 · 신용카드 불필요',
+            guarantee: '무료로 사용해 보기 · 신용카드 불필요',
             android: 'Android에서 실시간 자막 & 이중 자막 →'
         },
         install: {
@@ -1529,7 +1529,7 @@ const translations = {
     },
     'zh-CN': {
             proof: {
-                trial: '免费试用，无需银行卡',
+                trial: '免费体验，无需银行卡',
                 langs: '50 种语言',
                 latency: '延迟不到一秒',
                 noMic: '通话里不会出现机器人'
@@ -1564,7 +1564,7 @@ const translations = {
             },
         navbar: {
             brand: 'Live Subtitles',
-            tryFree: '免费试用',
+            tryFree: '免费体验',
             features: '功能',
             comparison: '对比',
             faq: '常见问题',
@@ -1574,7 +1574,7 @@ const translations = {
             },
         header: {
             worksOn: '适用于任何应用 — 会议、电影、游戏、学习',
-            downloadFree: '免费试用',
+            downloadFree: '免费体验',
             ratingLabel: '4.7/5 · 351 条评价',
             watchDemo: '观看演示',
             title: '任意应用的实时字幕与双语字幕',
@@ -1638,10 +1638,10 @@ const translations = {
             articles: '文章'
         },
         title: 'Live Subtitles 官网 — 实时字幕与双语字幕，任意应用下载',
-        description: 'Live Subtitles 官网下载：在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube、电影与游戏。免费试用。',
+        description: 'Live Subtitles 官网下载：在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube、电影与游戏。免费体验。',
         download: '立即下载',
         meta: {
-            description: 'Live Subtitles 官网下载：在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube、电影与游戏。免费试用。',
+            description: 'Live Subtitles 官网下载：在 Windows、Mac、iOS 和 Android 上为任意应用叠加实时 AI 字幕与双语对照字幕。支持 50 种语言实时翻译，适用于 Zoom、Teams、Netflix、YouTube、电影与游戏。免费体验。',
             keywords: '双字幕, 语言学习字幕, 语音翻译, 语音识别, 在线字幕, Live Subtitles, 英语学习, 语言学习, 实时字幕, 语音理解, 电影翻译器'
         },
         downloadModal: {
@@ -1669,7 +1669,7 @@ const translations = {
         faq: {
             title: '常见问题',
             q1: '应用程序的费用是多少？',
-            a1: '可以先免费试用，开始时无需绑定银行卡。之后可以在应用内充值分钟数或订阅，当前可选方案会显示在应用内和应用商店中。',
+            a1: '可以先免费体验，开始时无需绑定银行卡。之后可以在应用内充值分钟数或订阅，当前可选方案会显示在应用内和应用商店中。',
             q2: '是否适用于所有应用程序？',
             a2: '是的！Live Subtitles绝对适用于所有应用程序：YouTube、Netflix、Zoom、Teams、Discord、浏览器甚至游戏。应用程序在系统级别捕获音频。',
             q3: '支持哪些语言？',
@@ -1697,9 +1697,9 @@ const translations = {
             review6: '"如果你是个穷得叮当响的 K-pop 粉，看 Weverse 直播我强烈推荐这个。"'
         },
         download: {
-            title: '立即免费试用',
+            title: '立即免费体验',
             subtitle: '安装后选择两种语言，剩下的它自己来。',
-            guarantee: '免费试用 · 无需信用卡',
+            guarantee: '免费体验 · 无需信用卡',
             android: '在 Android 上使用实时字幕与双语字幕 →'
         },
         install: {
@@ -1764,7 +1764,7 @@ const translations = {
             },
         header: {
             worksOn: 'يعمل في أي تطبيق — اجتماعات، أفلام، ألعاب، تعلّم',
-            downloadFree: 'ابدأ النسخة التجريبية المجانية',
+            downloadFree: 'جرّبه مجانًا',
             ratingLabel: '4.7/5 · 351 تقييم',
             watchDemo: 'شاهد العرض',
             title: 'ترجمة فورية وترجمات مزدوجة لأي تطبيق',
@@ -1828,10 +1828,10 @@ const translations = {
             articles: 'مقالات'
         },
         title: 'Live Subtitles — ترجمة حية ومزدوجة لأي تطبيق',
-        description: 'ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS وأندرويد. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية.',
+        description: 'ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS وأندرويد. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. جرّبه مجانًا.',
         download: 'حمل الآن',
         meta: {
-            description: 'ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS وأندرويد. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. تجربة مجانية.',
+            description: 'ترجمة حية وترجمة مزدوجة لأي تطبيق على ويندوز وماك وiOS وأندرويد. ترجمة فورية بالذكاء الاصطناعي بأكثر من 50 لغة لزووم وتيمز ونتفليكس. جرّبه مجانًا.',
             keywords: 'ترجمة مزدوجة, ترجمة لتعلم اللغات, ترجمة الكلام, التعرف على الكلام, ترجمة أونلاين, Live Subtitles, تعلم الإنجليزية, تعلم اللغات, ترجمة فورية, فهم الكلام, مترجم أفلام'
         },
         downloadModal: {
@@ -1954,7 +1954,7 @@ const translations = {
             },
         header: {
             worksOn: 'किसी भी ऐप में काम करता है — मीटिंग, फ़िल्में, गेम, सीखना',
-            downloadFree: 'मुफ़्त ट्रायल शुरू करें',
+            downloadFree: 'मुफ़्त आज़माएँ',
             ratingLabel: '4.7/5 · 351 रेटिंग',
             watchDemo: 'डेमो देखें',
             title: 'किसी भी ऐप के लिए लाइव कैप्शन और डुअल सबटाइटल',
@@ -2018,10 +2018,10 @@ const translations = {
             articles: 'लेख'
         },
         title: 'Live Subtitles — किसी भी ऐप के लिए लाइव कैप्शन और सबटाइटल',
-        description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac, iOS व Android पर। Zoom, Teams, Netflix के लिए 50 भाषाओं में रियल-टाइम AI अनुवाद। फ्री ट्रायल।',
+        description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac, iOS व Android पर। Zoom, Teams, Netflix के लिए 50 भाषाओं में रियल-टाइम AI अनुवाद। मुफ़्त आज़माएँ।',
         download: 'अभी डाउनलोड करें',
         meta: {
-            description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac, iOS व Android पर। Zoom, Teams, Netflix के लिए 50 भाषाओं में रियल-टाइम AI अनुवाद। फ्री ट्रायल।',
+            description: 'किसी भी ऐप पर लाइव कैप्शन और डुअल सबटाइटल — Windows, Mac, iOS व Android पर। Zoom, Teams, Netflix के लिए 50 भाषाओं में रियल-टाइम AI अनुवाद। मुफ़्त आज़माएँ।',
             keywords: 'दोहरे सबटाइटल, भाषा सीखने के लिए सबटाइटल, स्पीच ट्रांसलेशन, स्पीच रिकग्निशन, ऑनलाइन सबटाइटल, Live Subtitles, अंग्रेजी सीखना, भाषा सीखना, रियल-टाइम सबटाइटल, स्पीच समझना, मूवी ट्रांसलेटर'
         },
         downloadModal: {
@@ -2144,7 +2144,7 @@ const translations = {
             },
         header: {
             worksOn: 'Funciona em qualquer app — reuniões, filmes, jogos, aprendizado',
-            downloadFree: 'Comece o teste grátis',
+            downloadFree: 'Experimente grátis',
             ratingLabel: '4,7/5 · 351 avaliações',
             watchDemo: 'Ver demo',
             title: 'Legendas ao vivo e legendas duplas para qualquer app',
@@ -2208,10 +2208,10 @@ const translations = {
             articles: 'Artigos'
         },
         title: 'Live Subtitles — Legendas ao Vivo e Duplas em Qualquer App',
-        description: 'Legendas ao vivo e duplas em qualquer app no Windows, Mac, iOS e Android. Tradução IA em tempo real em 50 idiomas para Zoom, Teams e Netflix. Teste grátis.',
+        description: 'Legendas ao vivo e duplas em qualquer app no Windows, Mac, iOS e Android. Tradução IA em tempo real em 50 idiomas para Zoom, Teams e Netflix. Experimente grátis.',
         download: 'Baixar agora',
         meta: {
-            description: 'Legendas ao vivo e duplas em qualquer app no Windows, Mac, iOS e Android. Tradução IA em tempo real em 50 idiomas para Zoom, Teams e Netflix. Teste grátis.',
+            description: 'Legendas ao vivo e duplas em qualquer app no Windows, Mac, iOS e Android. Tradução IA em tempo real em 50 idiomas para Zoom, Teams e Netflix. Experimente grátis.',
             keywords: 'duplas legendas, legendas para aprendizado de idiomas, tradução de fala, reconhecimento de fala, legendas online, Live Subtitles, aprender inglês, aprendizado de idiomas, legendas em tempo real, compreensão da fala, tradutor de filmes'
         },
         downloadModal: {
@@ -2588,10 +2588,10 @@ const translations = {
             articles: 'Artikelen'
         },
         title: 'Live Subtitles — Live ondertiteling & duale ondertitels',
-        description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac, iOS & Android. AI-vertaling in 50 talen voor Zoom, Teams en Netflix. Gratis proef.',
+        description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac, iOS & Android. AI-vertaling in 50 talen voor Zoom, Teams en Netflix. Gratis uitproberen.',
         download: 'Nu downloaden',
         meta: {
-            description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac, iOS & Android. AI-vertaling in 50 talen voor Zoom, Teams en Netflix. Gratis proef.',
+            description: 'Live ondertiteling & duale ondertitels voor elke app op Windows, Mac, iOS & Android. AI-vertaling in 50 talen voor Zoom, Teams en Netflix. Gratis uitproberen.',
             keywords: 'dubbele ondertitels, ondertitels voor taal leren, spraak vertaling, spraakherkenning, online ondertitels, Live Subtitles, Engels leren, taal leren, realtime ondertitels, spraak begrip, film vertaler'
         },
         downloadModal: {
@@ -2778,10 +2778,10 @@ const translations = {
             articles: 'Makaleler'
         },
         title: 'Live Subtitles — Tüm Uygulamalar İçin Canlı & Çift Altyazı',
-        description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS, Android. Zoom, Teams, Netflix için 50 dilde gerçek zamanlı AI çeviri. Ücretsiz deneme.',
+        description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS, Android. Zoom, Teams, Netflix için 50 dilde gerçek zamanlı AI çeviri. Ücretsiz deneyin.',
         download: 'Şimdi indir',
         meta: {
-            description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS, Android. Zoom, Teams, Netflix için 50 dilde gerçek zamanlı AI çeviri. Ücretsiz deneme.',
+            description: 'Tüm uygulamalar için canlı ve çift altyazı: Windows, Mac, iOS, Android. Zoom, Teams, Netflix için 50 dilde gerçek zamanlı AI çeviri. Ücretsiz deneyin.',
             keywords: 'çift altyazı, dil öğrenme altyazısı, konuşma çevirisi, konuşma tanıma, çevrimiçi altyazı, Live Subtitles, İngilizce öğrenme, dil öğrenimi, gerçek zamanlı altyazı, konuşma anlama, film çevirmen'
         },
         downloadModal: {
@@ -2968,10 +2968,10 @@ const translations = {
             articles: 'Статті'
         },
         title: 'Live Subtitles — живі та подвійні субтитри для додатків',
-        description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac, iOS та Android. AI-переклад 50 мовами для Zoom, Teams і Netflix. Пробний доступ.',
+        description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac, iOS та Android. AI-переклад 50 мовами для Zoom, Teams і Netflix. Спробуйте безкоштовно.',
         download: 'Завантажити зараз',
         meta: {
-            description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac, iOS та Android. AI-переклад 50 мовами для Zoom, Teams і Netflix. Пробний доступ.',
+            description: 'Живі та подвійні субтитри для будь-якого застосунку на Windows, Mac, iOS та Android. AI-переклад 50 мовами для Zoom, Teams і Netflix. Спробуйте безкоштовно.',
             keywords: 'подвійні субтитри, субтитри для вивчення мов, переклад мовлення, розпізнавання мовлення, онлайн субтитри, Live Subtitles, вивчення англійської, вивчення мов, субтитри в реальному часі, розуміння мовлення, перекладач фільмів'
         },
         downloadModal: {
