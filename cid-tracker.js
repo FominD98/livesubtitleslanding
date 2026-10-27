@@ -31,7 +31,7 @@
 //   'split' — 50/50;  'wi' — everyone gets the installer;  'st' — everyone gets
 //   the Store page (the old behaviour). The suffix is added in all three modes.
 (function () {
-    var LS_INSTALLER_AB = 'split';
+    var LS_INSTALLER_AB = 'wi';
     var YM_COUNTER = 101009280;
     var APPLE_PT = '128624979';
     var params = new URLSearchParams(location.search);
