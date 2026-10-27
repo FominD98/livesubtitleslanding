@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Аналитика: те же GA4 / Google tag и Яндекс Метрика, что и на остальном сайте
+         (пиксель Meta на страницах Live Captions не подключается, см. /ru/captions/index.html). -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid на ссылках в Store + событие GA4 store_click (у ссылок на Store свой onclick). -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>Живые субтитры в Windows 10: 3 рабочих способа</title>
+    <meta name="description" content="В Windows 10 нет встроенных живых субтитров. Как получить субтитры для любого звука на компьютере с Live Captions &amp; Transcribe, а также в Chrome и в самих программах.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/ru/captions/windows-10-live-captions.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/windows-10-live-captions.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/windows-10-live-captions.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/windows-10-live-captions.html" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="Живые субтитры в Windows 10: 3 рабочих способа">
+    <meta property="og:description" content="Встроенных живых субтитров в Windows 10 нет. Рассказываем, как всё-таки читать звонки, видео и лекции с субтитрами — по шагам.">
+    <meta property="og:url" content="https://live-subtitles.com/ru/captions/windows-10-live-captions.html">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Значок Live Captions и надпись: живые субтитры для Windows">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Живые субтитры в Windows 10: 3 рабочих способа">
+    <meta name="twitter:description" content="Встроенных живых субтитров в Windows 10 нет. Рассказываем, как всё-таки читать звонки, видео и лекции с субтитрами — по шагам.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Live Captions", "item": "https://live-subtitles.com/ru/captions/" },
+            { "@type": "ListItem", "position": 2, "name": "Живые субтитры в Windows 10", "item": "https://live-subtitles.com/ru/captions/windows-10-live-captions.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Как включить живые субтитры в Windows 10",
+        "description": "Встроенной функции «Живые субтитры» в Windows 10 нет. Варианты для компьютера с Windows 10: приложение, которое делает субтитры для любого звука на компьютере, Chrome Live Caption для звука в браузере и субтитры внутри Zoom, Teams, Google Meet и YouTube.",
+        "url": "https://live-subtitles.com/ru/captions/windows-10-live-captions.html",
+        "mainEntityOfPage": "https://live-subtitles.com/ru/captions/windows-10-live-captions.html",
+        "inLanguage": "ru",
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27",
+        "image": "https://live-subtitles.com/captions/img/og-live-captions-ru.png",
+        "author": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://live-subtitles.com/captions/#app",
+            "name": "Live Captions & Transcribe",
+            "alternateName": "Live Captions",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "url": "https://live-subtitles.com/captions/",
+            "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Есть ли в Windows 10 живые субтитры?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Встроенная функция «Живые субтитры» есть только в Windows 11 версии 22H2 и новее. В Windows 10 нужно отдельное приложение, например Live Captions & Transcribe, или субтитры внутри конкретной программы: Chrome, Zoom, Teams, Google Meet, YouTube." }
+            },
+            {
+                "@type": "Question",
+                "name": "Можно ли включить субтитры для звонков в Zoom или Teams на Windows 10?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да. Можно включить субтитры, встроенные в Zoom или Teams, если они доступны в вашем аккаунте, или запустить Live Captions & Transcribe — приложение делает субтитры для звука, который играет на компьютере. В Zoom и Teams ничего не устанавливается, к встрече никто не подключается, а собеседники ваших субтитров не видят." }
+            },
+            {
+                "@type": "Question",
+                "name": "Есть ли бесплатный способ получить живые субтитры в Windows 10?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Chrome Live Caption бесплатен, но работает только со звуком в Chrome. У YouTube, Zoom, Teams и Google Meet есть свои субтитры внутри программ. Live Captions & Transcribe делает субтитры для любого звука на компьютере; попробовать можно бесплатно, без регистрации и без карты, а дальше — пакеты минут или подписка на месяц или год." }
+            },
+            {
+                "@type": "Question",
+                "name": "Работает ли Live Captions & Transcribe без интернета?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет, нужен интернет. Пока идут субтитры, звук передаётся облачному сервису распознавания речи, который превращает его в текст. Звук не записывается, а расшифровки хранятся только на вашем компьютере." }
+            },
+            {
+                "@type": "Question",
+                "name": "Можно ли сохранить субтитры как расшифровку в Windows 10?",
+                "acceptedAnswer": { "@type": "Answer", "text": "В Live Captions & Transcribe — да. Каждый сеанс остаётся в истории на компьютере: по ней можно искать, переименовывать собеседников, копировать текст или выгружать его в TXT или SRT." }
+            },
+            {
+                "@type": "Question",
+                "name": "Будут ли субтитры переведены на русский?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Live Captions & Transcribe показывает субтитры на том языке, на котором говорят, и не переводит. Для перевода в реальном времени есть соседнее приложение Live Subtitles: оно показывает оригинал и перевод вместе." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">Перейти к содержанию</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/ru/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="Основное меню">
+                <a class="lc-nav__extra" href="/ru/captions/#features">Возможности</a>
+                <a href="/ru/captions/#pricing">Цены</a>
+                <a class="lc-nav__extra" href="/ru/captions/#faq">Вопросы</a>
+                <a class="lc-lang" href="/captions/windows-10-live-captions.html" hreflang="en" lang="en">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="guide">
+        <article class="wrap wrap--narrow">
+            <p class="crumbs"><a href="/ru/captions/">Live Captions</a> / Живые субтитры в Windows 10</p>
+            <h1>Как включить живые субтитры в Windows 10</h1>
+            <p class="updated">Обновлено 27 октября 2026 г.</p>
+
+            <div class="answer">
+                <p>Встроенной функции «Живые субтитры» в Windows 10 нет: Microsoft добавила её только в Windows 11 версии 22H2 и новее. Чтобы видеть субтитры для любого звука на компьютере с Windows 10, установите приложение вроде <a href="/ru/captions/">Live Captions &amp; Transcribe</a> из Microsoft Store. Если нужна только одна программа, подойдут Live Caption в Chrome или субтитры, встроенные в Zoom, Teams, Google Meet и YouTube.</p>
+            </div>
+
+            <p>Что выбрать, зависит от того, что именно вы хотите читать. Если всё происходит в одной вкладке браузера или в одной программе для встреч, её собственных субтитров может хватить. А если вы переключаетесь между звонком в Teams, роликом на YouTube и записью лекции или хотите потом перечитать сказанное, нужно что-то, что слушает весь компьютер.</p>
+
+            <h2>Все варианты для Windows 10 в одной таблице</h2>
+            <div class="table-wrap">
+                <table class="compare">
+                    <thead>
+                        <tr><th scope="col">Вариант</th><th scope="col">Для чего субтитры</th><th scope="col">Сохраняет расшифровку</th><th scope="col">Стоимость</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Live Captions &amp; Transcribe</td><td>Любой звук на компьютере или микрофон</td><td>Да: история на компьютере, выгрузка в TXT/SRT</td><td>Бесплатная проба, дальше пакеты минут или подписка</td></tr>
+                        <tr><td>Chrome Live Caption</td><td>Только звук, который играет в Chrome</td><td>Нет</td><td>Бесплатно</td></tr>
+                        <tr><td>Субтитры в Zoom, Teams или Google Meet</td><td>Только звонки в этой программе</td><td>Зависит от программы и тарифа</td><td>Зависит от программы и тарифа</td></tr>
+                        <tr><td>Субтитры YouTube</td><td>Только ролики YouTube, у которых есть субтитры</td><td>Нет</td><td>Бесплатно</td></tr>
+                        <tr><td>Живые субтитры Windows 11</td><td colspan="3">В Windows 10 недоступны</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Способ 1: Live Captions &amp; Transcribe — субтитры для всего, что звучит на компьютере</h2>
+            <p>Live Captions &amp; Transcribe — приложение для Windows от издателя Live Subtitles. Оно слушает звук компьютера или микрофон и примерно через секунду показывает сказанное текстом в окне поверх остальных программ. Работает в Windows 10 и Windows 11 (x64).</p>
+            <ol class="howto">
+                <li><strong>Установите приложение из Microsoft Store.</strong> Откройте <a href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">страницу Live Captions &amp; Transcribe в Microsoft Store</a> и нажмите «Получить». Чтобы попробовать, не нужны ни регистрация, ни карта.</li>
+                <li><strong>Откройте его.</strong> Окно субтитров появится поверх других окон. Его можно передвинуть и изменить размер — например, поставить под видео или рядом со встречей.</li>
+                <li><strong>Выберите, что слушать.</strong> Звук компьютера — для звонков в Zoom, Teams, Google Meet, WhatsApp или Discord, для YouTube, Netflix, подкастов и онлайн-лекций. Микрофон — для людей, которые говорят рядом с вами.</li>
+                <li><strong>Нажмите «Старт».</strong> Субтитры появляются по ходу речи. Язык определяется сам, из 60 языков, так что перед каждым звонком ничего настраивать не нужно.</li>
+                <li><strong>Сделайте текст удобным.</strong> Выберите размер (до 64 пт) и светлое, тёмное или контрастное оформление. Включите режим «сквозных кликов», чтобы щелчки мыши проходили сквозь окно субтитров к программе под ним.</li>
+                <li><strong>Вернитесь к сказанному.</strong> Каждый сеанс сохраняется в истории на компьютере. Ищите по словам, переименуйте «Говорящий 1» и «Говорящий 2» в настоящие имена, копируйте текст или выгружайте его в TXT или SRT.</li>
+            </ol>
+            <p>У каждого собеседника свой цвет, и каждый начинает с новой строки — так быстрый разговор читать гораздо проще. В Zoom и браузер ничего не устанавливается, к встрече никто не подключается, а собеседники ваших субтитров не видят.</p>
+            <p class="note"><strong>Важно.</strong> Приложению нужен интернет. Пока идут субтитры, звук передаётся облачному сервису распознавания речи; он не записывается, а расшифровки остаются на вашем компьютере. Субтитры показываются только на языке оригинала, без перевода. Если нужен перевод, есть соседнее приложение <a href="/ru/">Live Subtitles</a>.</p>
+
+            <h2>Способ 2: Live Caption в Chrome — только звук в браузере</h2>
+            <p>В Google Chrome есть своя функция Live Caption (в русском интерфейсе она может называться «Автоматические субтитры»), и в Windows 10 она работает.</p>
+            <ol class="howto">
+                <li>Откройте Chrome и перейдите в <strong>Настройки → Специальные возможности</strong> (или введите в адресной строке <code>chrome://settings/accessibility</code>).</li>
+                <li>Включите <strong>Live Caption</strong>.</li>
+                <li>Запустите видео или зайдите на звонок во вкладке Chrome. Субтитры появятся в небольшом окошке внизу.</li>
+            </ol>
+            <p>Ограничение понятно из названия: Live Caption в Chrome работает только со звуком, который играет в Chrome. Приложения Zoom и Teams для компьютера, видеоплеер или запись лекции, открытая не в браузере, остаются без субтитров. И сказанное нигде не сохраняется.</p>
+
+            <h2>Способ 3: субтитры внутри программы</h2>
+            <p>У многих программ есть свои субтитры — обычно за кнопкой <strong>CC</strong> или «Субтитры»:</p>
+            <ul>
+                <li><strong>Zoom, Microsoft Teams, Google Meet:</strong> живые субтитры во время звонка. В зависимости от программы и тарифа их может понадобиться разрешить организатору встречи или администратору, а набор языков различается.</li>
+                <li><strong>YouTube:</strong> субтитры от автора или автоматические — если они у ролика есть.</li>
+            </ul>
+            <p>Это удобно, если вы весь день работаете в одной программе. Минус в том, что везде всё устроено по-разному, субтитры пропадают, как только вы переключаетесь на другое окно, а у многих видео, вебинаров и голосовых звонков субтитров нет вовсе.</p>
+
+            <h2>Какой способ выбрать?</h2>
+            <ul>
+                <li><strong>Только YouTube и видео в браузере:</strong> хватит Live Caption в Chrome или субтитров YouTube.</li>
+                <li><strong>Одна программа для встреч, в которой уже есть субтитры:</strong> начните с них.</li>
+                <li><strong>Звонки, видео и лекции в разных программах, быстрая речь или акцент, записи без субтитров:</strong> Live Captions &amp; Transcribe, потому что он делает субтитры для звука всего компьютера.</li>
+                <li><strong>Нужна расшифровка после звонка:</strong> в Live Captions &amp; Transcribe есть история с поиском и выгрузкой в TXT/SRT.</li>
+            </ul>
+            <p>Крупный текст и цвета собеседников помогают и людям со сниженным слухом следить за семейными видеозвонками. Если позже вы перейдёте на Windows 11, приложение останется с вами; посмотрите, <a href="/ru/captions/windows-11-live-captions-vs-live-captions-transcribe.html">чем оно отличается от встроенных живых субтитров Windows 11</a>.</p>
+
+            <div class="trial">
+                <p><strong>Попробуйте Live Captions &amp; Transcribe бесплатно</strong> в Windows 10 или 11. Без регистрации и без карты.</p>
+                <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Скачать из Microsoft Store</a>
+            </div>
+
+            <h2 id="faq">Вопросы и ответы</h2>
+            <div class="faq">
+                <details>
+                    <summary>Есть ли в Windows 10 живые субтитры?</summary>
+                    <div>Нет. Встроенная функция «Живые субтитры» есть только в Windows 11 версии 22H2 и новее. В Windows 10 нужно отдельное приложение, например Live Captions &amp; Transcribe, или субтитры внутри конкретной программы: Chrome, Zoom, Teams, Google Meet, YouTube.</div>
+                </details>
+                <details>
+                    <summary>Можно ли включить субтитры для звонков в Zoom или Teams на Windows 10?</summary>
+                    <div>Да. Можно включить субтитры, встроенные в Zoom или Teams, если они доступны в вашем аккаунте, или запустить Live Captions &amp; Transcribe — приложение делает субтитры для звука, который играет на компьютере. В Zoom и Teams ничего не устанавливается, к встрече никто не подключается, а собеседники ваших субтитров не видят.</div>
+                </details>
+                <details>
+                    <summary>Есть ли бесплатный способ получить живые субтитры в Windows 10?</summary>
+                    <div>Chrome Live Caption бесплатен, но работает только со звуком в Chrome. У YouTube, Zoom, Teams и Google Meet есть свои субтитры внутри программ. Live Captions &amp; Transcribe делает субтитры для любого звука на компьютере; попробовать можно бесплатно, без регистрации и без карты, а дальше — пакеты минут или подписка на месяц или год (см. <a href="/ru/captions/#pricing">цены</a>).</div>
+                </details>
+                <details>
+                    <summary>Работает ли Live Captions &amp; Transcribe без интернета?</summary>
+                    <div>Нет, нужен интернет. Пока идут субтитры, звук передаётся облачному сервису распознавания речи, который превращает его в текст. Звук не записывается, а расшифровки хранятся только на вашем компьютере. Подробнее — в <a href="/ru/captions/privacy.html">политике конфиденциальности</a>.</div>
+                </details>
+                <details>
+                    <summary>Можно ли сохранить субтитры как расшифровку в Windows 10?</summary>
+                    <div>В Live Captions &amp; Transcribe — да. Каждый сеанс остаётся в истории на компьютере: по ней можно искать, переименовывать собеседников, копировать текст или выгружать его в TXT или SRT.</div>
+                </details>
+                <details>
+                    <summary>Будут ли субтитры переведены на русский?</summary>
+                    <div>Нет. Live Captions &amp; Transcribe показывает субтитры на том языке, на котором говорят, и не переводит. Для перевода в реальном времени есть соседнее приложение <a href="/ru/">Live Subtitles</a>: оно показывает оригинал и перевод вместе.</div>
+                </details>
+            </div>
+
+            <h2>Другие статьи</h2>
+            <ul class="guides-list">
+                <li><a href="/ru/captions/windows-11-live-captions-vs-live-captions-transcribe.html">Живые субтитры Windows 11 или Live Captions &amp; Transcribe</a></li>
+                <li><a href="/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html">Live Caption в Chrome или приложение для всего компьютера</a></li>
+                <li><a href="/ru/captions/whatsapp-teams-call-captions-pc.html">Субтитры для звонков в WhatsApp, Teams и Telegram на компьютере</a></li>
+                <li><a href="/ru/captions/">Live Captions &amp; Transcribe: возможности и цены</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> для Windows 10 и 11
+                <small>© 2026 Live Subtitles. Все права защищены.</small>
+            </div>
+            <nav aria-label="Нижнее меню">
+                <a href="/ru/captions/privacy.html">Конфиденциальность</a>
+                <a href="/ru/captions/terms.html">Условия использования</a>
+                <a href="/ru/captions/refund.html">Возврат</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/ru/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

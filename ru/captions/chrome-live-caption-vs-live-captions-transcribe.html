@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Аналитика: те же GA4 / Google tag и Яндекс Метрика, что и на остальном сайте
+         (пиксель Meta на страницах Live Captions не подключается, см. /ru/captions/index.html). -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid на ссылках в Store + событие GA4 store_click (у ссылок на Store свой onclick). -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>Live Caption в Chrome или приложение субтитров для всего компьютера</title>
+    <meta name="description" content="Live Caption в Chrome бесплатен, но работает только со звуком в браузере. Сравниваем его с Live Captions &amp; Transcribe, который делает субтитры для любого звука в Windows 10 и 11.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="Live Caption в Chrome или приложение субтитров для всего компьютера">
+    <meta property="og:description" content="Live Caption в Chrome бесплатен и хорош для вкладок браузера. Если нужны субтитры для программ на компьютере, расшифровка или выгрузка в SRT, приложение для всей системы умеет больше.">
+    <meta property="og:url" content="https://live-subtitles.com/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Значок Live Captions и надпись: живые субтитры для Windows">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Live Caption в Chrome или приложение субтитров для всего компьютера">
+    <meta name="twitter:description" content="Live Caption в Chrome бесплатен и хорош для вкладок браузера. Если нужны субтитры для программ на компьютере, расшифровка или выгрузка в SRT, приложение для всей системы умеет больше.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Live Captions", "item": "https://live-subtitles.com/ru/captions/" },
+            { "@type": "ListItem", "position": 2, "name": "Live Caption в Chrome или Live Captions & Transcribe", "item": "https://live-subtitles.com/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Live Caption в Chrome или приложение субтитров для всего компьютера",
+        "description": "Сравнение Live Caption в Chrome, который делает субтитры только для звука в браузере, и Live Captions & Transcribe — приложения для Windows 10 и 11, которое делает субтитры для любого звука на компьютере или для микрофона, с цветами собеседников, историей расшифровок и выгрузкой в TXT/SRT.",
+        "url": "https://live-subtitles.com/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html",
+        "mainEntityOfPage": "https://live-subtitles.com/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html",
+        "inLanguage": "ru",
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27",
+        "image": "https://live-subtitles.com/captions/img/og-live-captions-ru.png",
+        "author": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://live-subtitles.com/captions/#app",
+            "name": "Live Captions & Transcribe",
+            "alternateName": "Live Captions",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "url": "https://live-subtitles.com/captions/",
+            "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Работает ли Live Caption в Chrome с приложениями Zoom или Teams для компьютера?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Live Caption в Chrome делает субтитры только для звука, который играет в Chrome. Если вы заходите в Zoom, Teams или Google Meet во вкладке Chrome, звонок он подпишет; приложения для компьютера работают вне браузера, и их он не слышит. Приложение для всей системы, например Live Captions & Transcribe, делает субтитры для звука всего компьютера." }
+            },
+            {
+                "@type": "Question",
+                "name": "Можно ли сохранить расшифровку из Live Caption в Chrome?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Live Caption в Chrome показывает субтитры, пока играет звук, но не хранит историю и не выгружает текст. Live Captions & Transcribe сохраняет каждый сеанс на компьютере: с поиском, переименованием собеседников, копированием и выгрузкой в TXT/SRT." }
+            },
+            {
+                "@type": "Question",
+                "name": "Live Caption в Chrome бесплатный?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да, он входит в Chrome. Live Captions & Transcribe можно попробовать бесплатно, без регистрации и без карты; дальше — пакеты минут или подписка." }
+            },
+            {
+                "@type": "Question",
+                "name": "Работает ли Live Captions & Transcribe в Windows 10?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да. Приложение работает в Windows 10 и Windows 11 (x64) и устанавливается из Microsoft Store." }
+            },
+            {
+                "@type": "Question",
+                "name": "Нужен ли Live Captions & Transcribe интернет?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да. Пока идут субтитры, звук передаётся облачному сервису распознавания речи, который превращает его в текст. Звук не записывается, а расшифровки хранятся только на вашем компьютере." }
+            },
+            {
+                "@type": "Question",
+                "name": "Стоит ли пользоваться обоими?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Можно, но не одновременно для одного и того же звука — иначе придётся читать два ряда субтитров. Разумно разделить так: Live Caption в Chrome — для быстрого ролика в браузере, а Live Captions & Transcribe — для звонков, программ на компьютере и всего, что хочется сохранить в виде расшифровки." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">Перейти к содержанию</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/ru/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="Основное меню">
+                <a class="lc-nav__extra" href="/ru/captions/#features">Возможности</a>
+                <a href="/ru/captions/#pricing">Цены</a>
+                <a class="lc-nav__extra" href="/ru/captions/#faq">Вопросы</a>
+                <a class="lc-lang" href="/captions/chrome-live-caption-vs-live-captions-transcribe.html" hreflang="en" lang="en">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="guide">
+        <article class="wrap wrap--narrow">
+            <p class="crumbs"><a href="/ru/captions/">Live Captions</a> / Live Caption в Chrome или Live Captions &amp; Transcribe</p>
+            <h1>Live Caption в Chrome или приложение субтитров для всего компьютера</h1>
+            <p class="updated">Обновлено 27 октября 2026 г.</p>
+
+            <div class="answer">
+                <p>Live Caption в Chrome бесплатен и хорошо работает, если всё, что вы хотите читать, играет во вкладке Chrome. Звук вне браузера он не слышит и сказанное не сохраняет. Приложение для всей системы, например <a href="/ru/captions/">Live Captions &amp; Transcribe</a>, делает субтитры для любого звука на компьютере с Windows 10 или 11 — в том числе для приложений Zoom, Teams, WhatsApp и Telegram — и сохраняет расшифровку с выгрузкой в TXT или SRT.</p>
+            </div>
+
+            <p>Главный вопрос — откуда идёт звук. Ролик на YouTube или звонок в Google Meet в браузере — одно дело. Звонок в приложении Teams, запись лекции в видеоплеере или звонок из WhatsApp для компьютера — совсем другое.</p>
+
+            <h2>Сравнение по пунктам</h2>
+            <div class="table-wrap">
+                <table class="compare">
+                    <thead>
+                        <tr><th scope="col"></th><th scope="col">Live Caption в Chrome</th><th scope="col">Live Captions &amp; Transcribe</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Для чего субтитры</td><td>Только звук, который играет в Chrome</td><td>Любой звук на компьютере или микрофон</td></tr>
+                        <tr><td>Программы на компьютере (Zoom, Teams, WhatsApp, Telegram, Discord, видеоплееры)</td><td>Нет</td><td>Да</td></tr>
+                        <tr><td>История расшифровок</td><td>Нет</td><td>Хранится на компьютере: поиск, переименование собеседников, копирование</td></tr>
+                        <tr><td>Выгрузка</td><td>Нет</td><td>TXT и SRT</td></tr>
+                        <tr><td>Окно</td><td>Окошко субтитров внутри Chrome</td><td>Плавающее окно поверх всех программ, текст до 64 пт, «сквозные клики»</td></tr>
+                        <tr><td>Версия Windows</td><td>Везде, где работает Chrome, в том числе Windows 10</td><td>Windows 10 и 11 (x64)</td></tr>
+                        <tr><td>Стоимость</td><td>Бесплатно</td><td>Бесплатная проба без регистрации и карты, дальше пакеты минут или подписка</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Когда хватит Live Caption в Chrome</h2>
+            <ul>
+                <li>Вы в основном смотрите YouTube и другие видео в Chrome.</li>
+                <li>В Google Meet, Zoom или Teams вы заходите через вкладку Chrome, а не через приложение.</li>
+                <li>Нужно только читать по ходу дела, текст потом не нужен.</li>
+                <li>Хочется бесплатного решения, которое уже есть на компьютере.</li>
+            </ul>
+            <p>Чтобы включить его, откройте Chrome, перейдите в <strong>Настройки → Специальные возможности</strong> (или введите в адресной строке <code>chrome://settings/accessibility</code>) и включите <strong>Live Caption</strong> (в русском интерфейсе функция может называться «Автоматические субтитры»).</p>
+
+            <h2>Когда нужно приложение для всей системы</h2>
+
+            <h3>Звонки идут в программах на компьютере</h3>
+            <p>Приложения Zoom и Teams, WhatsApp и Telegram для компьютера, Discord — всё это звучит вне Chrome, и Live Caption в Chrome их просто не слышит. Live Captions &amp; Transcribe слушает звук, который выводит компьютер, поэтому ему всё равно, какая программа говорит. В эти программы ничего не устанавливается, к звонку никто не подключается, а собеседники ваших субтитров не видят. По шагам: <a href="/ru/captions/whatsapp-teams-call-captions-pc.html">субтитры для звонков в WhatsApp, Teams и Telegram на компьютере</a>.</p>
+
+            <h3>Текст нужен потом</h3>
+            <p>Каждый сеанс попадает в историю на компьютере. Ищите по словам, переименуйте «Говорящий 1» и «Говорящий 2» в настоящие имена, скопируйте цитату или выгрузите всё в TXT для заметок или в SRT для субтитров. Пригодится для лекций, вебинаров и долгих совещаний.</p>
+
+            <h3>Говорят несколько человек</h3>
+            <p>У каждого собеседника свой цвет, и каждый начинает с новой строки — так за оживлённой встречей следить гораздо проще, чем за сплошным потоком текста.</p>
+
+            <h3>Вы весь день переключаетесь между программами</h3>
+            <p>Одно окно субтитров остаётся поверх всего: утром звонок в Teams, в обед видеокурс в плеере, вечером Netflix. Текст увеличивается до 64 пт, есть светлое, тёмное и контрастное оформление, а «сквозные клики» пропускают щелчки мыши к программе под окном.</p>
+
+            <h2>Как начать с Live Captions &amp; Transcribe</h2>
+            <ol class="howto">
+                <li>Установите <a href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Live Captions &amp; Transcribe из Microsoft Store</a>. Чтобы попробовать, не нужны ни регистрация, ни карта.</li>
+                <li>Выберите звук компьютера — для звонков, видео и лекций, или микрофон — для людей рядом.</li>
+                <li>Нажмите «Старт». Субтитры появляются примерно через секунду после слов, язык определяется сам.</li>
+                <li>После сеанса откройте историю: поиск, переименование собеседников, копирование, выгрузка в TXT или SRT.</li>
+            </ol>
+            <p>Если Live Caption в Chrome у вас включён, выключайте его, пока работает приложение, чтобы не читать одни и те же слова дважды.</p>
+            <p class="note"><strong>Важно.</strong> Live Captions &amp; Transcribe нужен интернет. Пока идут субтитры, звук передаётся облачному сервису распознавания речи; он не записывается, а расшифровки остаются на вашем компьютере. Субтитры идут только на языке оригинала, приложение не переводит. Для перевода есть соседнее приложение <a href="/ru/">Live Subtitles</a>.</p>
+
+            <div class="trial">
+                <p><strong>Попробуйте Live Captions &amp; Transcribe бесплатно</strong> в Windows 10 или 11. Без регистрации и без карты.</p>
+                <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Скачать из Microsoft Store</a>
+            </div>
+
+            <h2 id="faq">Вопросы и ответы</h2>
+            <div class="faq">
+                <details>
+                    <summary>Работает ли Live Caption в Chrome с приложениями Zoom или Teams для компьютера?</summary>
+                    <div>Нет. Live Caption в Chrome делает субтитры только для звука, который играет в Chrome. Если вы заходите в Zoom, Teams или Google Meet во вкладке Chrome, звонок он подпишет; приложения для компьютера работают вне браузера, и их он не слышит. Приложение для всей системы, например Live Captions &amp; Transcribe, делает субтитры для звука всего компьютера.</div>
+                </details>
+                <details>
+                    <summary>Можно ли сохранить расшифровку из Live Caption в Chrome?</summary>
+                    <div>Нет. Live Caption в Chrome показывает субтитры, пока играет звук, но не хранит историю и не выгружает текст. Live Captions &amp; Transcribe сохраняет каждый сеанс на компьютере: с поиском, переименованием собеседников, копированием и выгрузкой в TXT/SRT.</div>
+                </details>
+                <details>
+                    <summary>Live Caption в Chrome бесплатный?</summary>
+                    <div>Да, он входит в Chrome. Live Captions &amp; Transcribe можно попробовать бесплатно, без регистрации и без карты; дальше — пакеты минут или подписка (см. <a href="/ru/captions/#pricing">цены</a>).</div>
+                </details>
+                <details>
+                    <summary>Работает ли Live Captions &amp; Transcribe в Windows 10?</summary>
+                    <div>Да. Приложение работает в Windows 10 и Windows 11 (x64) и устанавливается из Microsoft Store.</div>
+                </details>
+                <details>
+                    <summary>Нужен ли Live Captions &amp; Transcribe интернет?</summary>
+                    <div>Да. Пока идут субтитры, звук передаётся облачному сервису распознавания речи, который превращает его в текст. Звук не записывается, а расшифровки хранятся только на вашем компьютере. Подробнее — в <a href="/ru/captions/privacy.html">политике конфиденциальности</a>.</div>
+                </details>
+                <details>
+                    <summary>Стоит ли пользоваться обоими?</summary>
+                    <div>Можно, но не одновременно для одного и того же звука — иначе придётся читать два ряда субтитров. Разумно разделить так: Live Caption в Chrome — для быстрого ролика в браузере, а Live Captions &amp; Transcribe — для звонков, программ на компьютере и всего, что хочется сохранить в виде расшифровки.</div>
+                </details>
+            </div>
+
+            <h2>Другие статьи</h2>
+            <ul class="guides-list">
+                <li><a href="/ru/captions/windows-11-live-captions-vs-live-captions-transcribe.html">Живые субтитры Windows 11 или Live Captions &amp; Transcribe</a></li>
+                <li><a href="/ru/captions/windows-10-live-captions.html">Как включить живые субтитры в Windows 10</a></li>
+                <li><a href="/ru/captions/whatsapp-teams-call-captions-pc.html">Субтитры для звонков в WhatsApp, Teams и Telegram на компьютере</a></li>
+                <li><a href="/ru/captions/">Live Captions &amp; Transcribe: возможности и цены</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> для Windows 10 и 11
+                <small>© 2026 Live Subtitles. Все права защищены.</small>
+            </div>
+            <nav aria-label="Нижнее меню">
+                <a href="/ru/captions/privacy.html">Конфиденциальность</a>
+                <a href="/ru/captions/terms.html">Условия использования</a>
+                <a href="/ru/captions/refund.html">Возврат</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/ru/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

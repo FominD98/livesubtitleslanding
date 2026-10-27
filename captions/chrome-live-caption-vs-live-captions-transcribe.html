@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Analytics: the same GA4 / Google tag and Yandex Metrica as the rest of the site
+         (the Meta pixel is left out on Live Captions pages, see /captions/index.html). -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough on Store links + GA4 store_click (Store links carry their own onclick). -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>Chrome Live Caption vs a System-Wide Captions App for Windows</title>
+    <meta name="description" content="Chrome Live Caption is free but captions only audio in Chrome. Compare it with Live Captions &amp; Transcribe, which captions any sound on a Windows 10 or 11 PC.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="Chrome Live Caption vs a System-Wide Captions App for Windows">
+    <meta property="og:description" content="Chrome Live Caption is free and fine for browser tabs. When you need captions for desktop apps, a transcript or SRT export, a system-wide app does more.">
+    <meta property="og:url" content="https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Live Captions app icon and the words: real-time captions for Windows">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chrome Live Caption vs a System-Wide Captions App for Windows">
+    <meta name="twitter:description" content="Chrome Live Caption is free and fine for browser tabs. When you need captions for desktop apps, a transcript or SRT export, a system-wide app does more.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Live Captions", "item": "https://live-subtitles.com/captions/" },
+            { "@type": "ListItem", "position": 2, "name": "Chrome Live Caption vs Live Captions & Transcribe", "item": "https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Chrome Live Caption vs a system-wide captions app",
+        "description": "Comparison of Chrome Live Caption, which captions only audio playing in Chrome, and Live Captions & Transcribe, a Windows 10 and 11 app that captions any sound on the PC or the microphone, with speaker colors, transcript history and TXT/SRT export.",
+        "url": "https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html",
+        "mainEntityOfPage": "https://live-subtitles.com/captions/chrome-live-caption-vs-live-captions-transcribe.html",
+        "inLanguage": "en",
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27",
+        "image": "https://live-subtitles.com/captions/img/og-live-captions-en.png",
+        "author": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://live-subtitles.com/captions/#app",
+            "name": "Live Captions & Transcribe",
+            "alternateName": "Live Captions",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "url": "https://live-subtitles.com/captions/",
+            "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Does Chrome Live Caption work with the Zoom or Teams desktop app?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Chrome Live Caption captions only audio that plays in Chrome. If you join Zoom, Teams or Google Meet in a Chrome tab, it can caption the call; the desktop apps are outside the browser, so it does not hear them. A system-wide app such as Live Captions & Transcribe captions the sound of the whole PC." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Chrome Live Caption save a transcript?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. Chrome Live Caption shows captions while audio plays but does not keep a history or export the text. Live Captions & Transcribe saves each session on your PC with search, speaker renaming, copy and TXT/SRT export." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Chrome Live Caption free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, it is part of Chrome. Live Captions & Transcribe is free to try without an account or card; after that you buy minute packs or a subscription." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Live Captions & Transcribe work on Windows 10?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. It runs on Windows 10 and Windows 11 (x64) and is installed from the Microsoft Store." }
+            },
+            {
+                "@type": "Question",
+                "name": "Does Live Captions & Transcribe need the internet?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. While captions are running, the audio is sent to a cloud speech recognition service to turn it into text. The audio is not recorded, and transcripts are saved only on your PC." }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I use both?",
+                "acceptedAnswer": { "@type": "Answer", "text": "You can, but not at the same time for the same audio, or you will read two sets of captions. A sensible split is Chrome Live Caption for a quick browser video and Live Captions & Transcribe for calls, desktop apps and anything you want to keep as a transcript." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="Main">
+                <a class="lc-nav__extra" href="/captions/#features">Features</a>
+                <a href="/captions/#pricing">Pricing</a>
+                <a class="lc-nav__extra" href="/captions/#faq">FAQ</a>
+                <a class="lc-lang" href="/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html" hreflang="ru" lang="ru">Русский</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="guide">
+        <article class="wrap wrap--narrow">
+            <p class="crumbs"><a href="/captions/">Live Captions</a> / Chrome Live Caption vs Live Captions &amp; Transcribe</p>
+            <h1>Chrome Live Caption vs a system-wide captions app</h1>
+            <p class="updated">Updated October 27, 2026</p>
+
+            <div class="answer">
+                <p>Chrome Live Caption is free and works well if everything you want to caption plays in a Chrome tab. It does not hear anything outside the browser and does not save what was said. A system-wide app such as <a href="/captions/">Live Captions &amp; Transcribe</a> captions any sound on a Windows 10 or 11 PC, including the Zoom, Teams, WhatsApp and Telegram desktop apps, and keeps a transcript you can export to TXT or SRT.</p>
+            </div>
+
+            <p>The real question is where your audio comes from. A YouTube video or a Google Meet call in the browser is one thing; a Teams desktop call, a lecture recording in a media player or a WhatsApp call from the desktop app is another.</p>
+
+            <h2>Side-by-side comparison</h2>
+            <div class="table-wrap">
+                <table class="compare">
+                    <thead>
+                        <tr><th scope="col"></th><th scope="col">Chrome Live Caption</th><th scope="col">Live Captions &amp; Transcribe</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>What it captions</td><td>Only audio playing in Chrome</td><td>Any sound on the PC, or the microphone</td></tr>
+                        <tr><td>Desktop apps (Zoom, Teams, WhatsApp, Telegram, Discord, media players)</td><td>No</td><td>Yes</td></tr>
+                        <tr><td>Transcript history</td><td>No</td><td>Saved on your PC: search, rename speakers, copy</td></tr>
+                        <tr><td>Export</td><td>No</td><td>TXT and SRT</td></tr>
+                        <tr><td>Window</td><td>Caption box inside Chrome</td><td>Floating window on top of all apps, text up to 64 pt, click-through</td></tr>
+                        <tr><td>Windows version</td><td>Wherever Chrome runs, including Windows 10</td><td>Windows 10 and 11 (x64)</td></tr>
+                        <tr><td>Price</td><td>Free</td><td>Free to try without account or card, then minute packs or a subscription</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>When Chrome Live Caption is enough</h2>
+            <ul>
+                <li>You mostly watch YouTube or other videos in Chrome.</li>
+                <li>You join Google Meet, Zoom or Teams in a Chrome tab rather than in the desktop app.</li>
+                <li>You only need to read along; you don't need the text afterwards.</li>
+                <li>You want something free that's already on your PC.</li>
+            </ul>
+            <p>To turn it on, open Chrome, go to <strong>Settings → Accessibility</strong> (or type <code>chrome://settings/accessibility</code> in the address bar) and switch on <strong>Live Caption</strong>.</p>
+
+            <h2>When you need a system-wide app</h2>
+
+            <h3>Your calls are in desktop apps</h3>
+            <p>The Zoom and Teams desktop apps, WhatsApp desktop, Telegram desktop and Discord all play sound outside Chrome, so Chrome Live Caption never hears them. Live Captions &amp; Transcribe listens to the PC's sound output, so it doesn't matter which app is talking. Nothing is installed into those apps, no bot joins the call, and the other people don't see your captions. Step by step: <a href="/captions/whatsapp-teams-call-captions-pc.html">captions for WhatsApp, Teams and Telegram calls on a PC</a>.</p>
+
+            <h3>You want the text afterwards</h3>
+            <p>Every session goes into a history on your PC. Search it by word, rename "Speaker 1" and "Speaker 2" to real names, copy a quote, or export it to TXT for notes or SRT for subtitles. Useful for lectures, webinars and long meetings.</p>
+
+            <h3>Several people are talking</h3>
+            <p>Each speaker gets their own color and starts on a new line, which makes a busy meeting much easier to follow than one stream of text.</p>
+
+            <h3>You switch between apps all day</h3>
+            <p>One caption window stays on top of everything: a Teams call in the morning, a course video in a media player at lunch, Netflix in the evening. Text goes up to 64 pt, with light, dark and high-contrast styles, and click-through lets your mouse clicks pass to the app underneath.</p>
+
+            <h2>How to start with Live Captions &amp; Transcribe</h2>
+            <ol class="howto">
+                <li>Install <a href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Live Captions &amp; Transcribe from the Microsoft Store</a>. No account or card is needed to try it.</li>
+                <li>Choose computer sound for calls, videos and lectures, or the microphone for people in the room.</li>
+                <li>Press Start. Captions appear about one second after the words are spoken; the language is detected automatically.</li>
+                <li>After the session, open the history to search, rename speakers, copy or export to TXT or SRT.</li>
+            </ol>
+            <p>If you keep Chrome Live Caption switched on, turn it off while the app is running so you don't read the same words twice.</p>
+            <p class="note"><strong>Good to know.</strong> Live Captions &amp; Transcribe needs an internet connection. While captions are running, the audio is sent to a cloud speech recognition service; it is not recorded, and transcripts stay on your PC. Captions are in the spoken language only; the app does not translate. For translation, use the sister app <a href="/">Live Subtitles</a>.</p>
+
+            <div class="trial">
+                <p><strong>Try Live Captions &amp; Transcribe free</strong> on Windows 10 or 11. No account, no card.</p>
+                <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Get it from Microsoft Store</a>
+            </div>
+
+            <h2 id="faq">Questions and answers</h2>
+            <div class="faq">
+                <details>
+                    <summary>Does Chrome Live Caption work with the Zoom or Teams desktop app?</summary>
+                    <div>No. Chrome Live Caption captions only audio that plays in Chrome. If you join Zoom, Teams or Google Meet in a Chrome tab, it can caption the call; the desktop apps are outside the browser, so it does not hear them. A system-wide app such as Live Captions &amp; Transcribe captions the sound of the whole PC.</div>
+                </details>
+                <details>
+                    <summary>Can Chrome Live Caption save a transcript?</summary>
+                    <div>No. Chrome Live Caption shows captions while audio plays but does not keep a history or export the text. Live Captions &amp; Transcribe saves each session on your PC with search, speaker renaming, copy and TXT/SRT export.</div>
+                </details>
+                <details>
+                    <summary>Is Chrome Live Caption free?</summary>
+                    <div>Yes, it is part of Chrome. Live Captions &amp; Transcribe is free to try without an account or card; after that you buy minute packs or a subscription (see <a href="/captions/#pricing">prices</a>).</div>
+                </details>
+                <details>
+                    <summary>Does Live Captions &amp; Transcribe work on Windows 10?</summary>
+                    <div>Yes. It runs on Windows 10 and Windows 11 (x64) and is installed from the Microsoft Store.</div>
+                </details>
+                <details>
+                    <summary>Does Live Captions &amp; Transcribe need the internet?</summary>
+                    <div>Yes. While captions are running, the audio is sent to a cloud speech recognition service to turn it into text. The audio is not recorded, and transcripts are saved only on your PC. Details are in the <a href="/captions/privacy.html">privacy policy</a>.</div>
+                </details>
+                <details>
+                    <summary>Should I use both?</summary>
+                    <div>You can, but not at the same time for the same audio, or you will read two sets of captions. A sensible split is Chrome Live Caption for a quick browser video and Live Captions &amp; Transcribe for calls, desktop apps and anything you want to keep as a transcript.</div>
+                </details>
+            </div>
+
+            <h2>Related guides</h2>
+            <ul class="guides-list">
+                <li><a href="/captions/windows-11-live-captions-vs-live-captions-transcribe.html">Windows 11 Live Captions vs Live Captions &amp; Transcribe</a></li>
+                <li><a href="/captions/windows-10-live-captions.html">How to get live captions on Windows 10</a></li>
+                <li><a href="/captions/whatsapp-teams-call-captions-pc.html">Live captions for WhatsApp, Teams and Telegram calls on a PC</a></li>
+                <li><a href="/captions/">Live Captions &amp; Transcribe: features and prices</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> for Windows 10 and 11
+                <small>© 2026 Live Subtitles. All rights reserved.</small>
+            </div>
+            <nav aria-label="Footer">
+                <a href="/captions/privacy.html">Privacy</a>
+                <a href="/captions/terms.html">Terms</a>
+                <a href="/captions/refund.html">Refunds</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

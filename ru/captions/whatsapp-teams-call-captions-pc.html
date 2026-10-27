@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Аналитика: те же GA4 / Google tag и Яндекс Метрика, что и на остальном сайте
+         (пиксель Meta на страницах Live Captions не подключается, см. /ru/captions/index.html). -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid на ссылках в Store + событие GA4 store_click (у ссылок на Store свой onclick). -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>Субтитры для звонков в WhatsApp, Teams и Telegram на компьютере</title>
+    <meta name="description" content="В WhatsApp и Telegram для компьютера нет субтитров к звонкам, а субтитры Teams работают только в Teams. Как получить живые субтитры для всех звонков в Windows 10 и 11.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/ru/captions/whatsapp-teams-call-captions-pc.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/whatsapp-teams-call-captions-pc.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/whatsapp-teams-call-captions-pc.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/whatsapp-teams-call-captions-pc.html" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="Субтитры для звонков в WhatsApp, Teams и Telegram на компьютере">
+    <meta property="og:description" content="В Teams есть свои субтитры, в WhatsApp и Telegram для компьютера — нет. Одно приложение подписывает все звонки в Windows 10 и 11. Пошагово.">
+    <meta property="og:url" content="https://live-subtitles.com/ru/captions/whatsapp-teams-call-captions-pc.html">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Значок Live Captions и надпись: живые субтитры для Windows">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Субтитры для звонков в WhatsApp, Teams и Telegram на компьютере">
+    <meta name="twitter:description" content="В Teams есть свои субтитры, в WhatsApp и Telegram для компьютера — нет. Одно приложение подписывает все звонки в Windows 10 и 11. Пошагово.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-ru.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Live Captions", "item": "https://live-subtitles.com/ru/captions/" },
+            { "@type": "ListItem", "position": 2, "name": "Субтитры для звонков в WhatsApp, Teams и Telegram", "item": "https://live-subtitles.com/ru/captions/whatsapp-teams-call-captions-pc.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Как включить живые субтитры для звонков в WhatsApp, Teams и Telegram на компьютере",
+        "description": "В Microsoft Teams есть встроенные живые субтитры для встреч; в WhatsApp и Telegram для компьютера субтитров к звонкам нет. Live Captions & Transcribe подписывает их все через звук компьютера в Windows 10 и 11. Настройка по шагам.",
+        "url": "https://live-subtitles.com/ru/captions/whatsapp-teams-call-captions-pc.html",
+        "mainEntityOfPage": "https://live-subtitles.com/ru/captions/whatsapp-teams-call-captions-pc.html",
+        "inLanguage": "ru",
+        "datePublished": "2026-10-27",
+        "dateModified": "2026-10-27",
+        "image": "https://live-subtitles.com/captions/img/og-live-captions-ru.png",
+        "author": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" },
+        "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://live-subtitles.com/captions/#app",
+            "name": "Live Captions & Transcribe",
+            "alternateName": "Live Captions",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "url": "https://live-subtitles.com/captions/",
+            "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "publisher": { "@type": "Organization", "name": "Live Subtitles", "url": "https://live-subtitles.com" }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Есть ли в WhatsApp для компьютера субтитры к звонкам?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. В WhatsApp для компьютера нет живых субтитров ни для голосовых, ни для видеозвонков. Чтобы читать звонок в WhatsApp на компьютере с Windows, запустите приложение, которое делает субтитры для звука компьютера, например Live Captions & Transcribe." }
+            },
+            {
+                "@type": "Question",
+                "name": "Есть ли в Telegram для компьютера субтитры к звонкам?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. В Telegram для компьютера нет живых субтитров к звонкам. Live Captions & Transcribe подписывает звонки в Telegram в Windows 10 и 11, слушая звук, который играет на компьютере." }
+            },
+            {
+                "@type": "Question",
+                "name": "Есть ли в Microsoft Teams встроенные субтитры?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да, на встречах Teams есть встроенные живые субтитры, их включают в панели управления встречей. Работают они только внутри Teams. Если вы созваниваетесь ещё и в WhatsApp, Telegram или Zoom, приложение для всей системы, например Live Captions & Transcribe, подпишет все эти звонки в одном окне." }
+            },
+            {
+                "@type": "Question",
+                "name": "Узнают ли собеседники, что я включил субтитры?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Live Captions & Transcribe ничего не устанавливает в WhatsApp, Teams или Telegram, к звонку никто не подключается, а субтитры видны только на вашем экране." }
+            },
+            {
+                "@type": "Question",
+                "name": "Можно ли сохранить, что говорили на звонке?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Да. Live Captions & Transcribe сохраняет каждый сеанс в истории на компьютере: по ней можно искать, переименовывать собеседников, копировать текст или выгружать его в TXT или SRT. Сам звук не записывается." }
+            },
+            {
+                "@type": "Question",
+                "name": "Будут ли субтитры переведены?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Нет. Live Captions & Transcribe показывает субтитры на том языке, на котором говорят; язык определяется автоматически из 60. Для перевода звонков в реальном времени есть соседнее приложение Live Subtitles: оно показывает оригинал и перевод вместе." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">Перейти к содержанию</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/ru/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="Основное меню">
+                <a class="lc-nav__extra" href="/ru/captions/#features">Возможности</a>
+                <a href="/ru/captions/#pricing">Цены</a>
+                <a class="lc-nav__extra" href="/ru/captions/#faq">Вопросы</a>
+                <a class="lc-lang" href="/captions/whatsapp-teams-call-captions-pc.html" hreflang="en" lang="en">English</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="guide">
+        <article class="wrap wrap--narrow">
+            <p class="crumbs"><a href="/ru/captions/">Live Captions</a> / Субтитры для звонков в WhatsApp, Teams и Telegram</p>
+            <h1>Как включить живые субтитры для звонков в WhatsApp, Teams и Telegram на компьютере</h1>
+            <p class="updated">Обновлено 27 октября 2026 г.</p>
+
+            <div class="answer">
+                <p>В Microsoft Teams есть встроенные живые субтитры для встреч Teams, а в WhatsApp и Telegram для компьютера субтитров к звонкам нет совсем. Чтобы читать любой звонок на компьютере с Windows 10 или 11, в какой бы программе он ни шёл, запустите <a href="/ru/captions/">Live Captions &amp; Transcribe</a>: приложение делает субтитры для звука, который играет на компьютере, примерно через секунду после слов, в окне поверх звонка.</p>
+            </div>
+
+            <p>Мало кто созванивается только в одной программе. Работа — в Teams, семья — в WhatsApp, друзья или клуб по интересам — в Telegram. Субтитры везде устроены по-своему или их нет вовсе, поэтому удобно, когда есть одно место, где любой звонок превращается в текст.</p>
+
+            <h2>Что есть в самих программах</h2>
+            <div class="table-wrap">
+                <table class="compare">
+                    <thead>
+                        <tr><th scope="col">Программа на компьютере</th><th scope="col">Свои субтитры к звонкам</th><th scope="col">С Live Captions &amp; Transcribe</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Microsoft Teams</td><td>Да, на встречах Teams и только внутри Teams</td><td>Субтитры, цвета собеседников, история, выгрузка в TXT/SRT</td></tr>
+                        <tr><td>WhatsApp для компьютера</td><td>Нет</td><td>Субтитры, цвета собеседников, история, выгрузка в TXT/SRT</td></tr>
+                        <tr><td>Telegram для компьютера</td><td>Нет</td><td>Субтитры, цвета собеседников, история, выгрузка в TXT/SRT</td></tr>
+                        <tr><td>Zoom, Google Meet, Discord</td><td>Зависит от программы и тарифа</td><td>Субтитры, цвета собеседников, история, выгрузка в TXT/SRT</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Способ 1: собственные субтитры Teams (только встречи Teams)</h2>
+            <p>Если нужна только встреча в Teams, начните со встроенных субтитров. Во время встречи откройте меню <strong>«Ещё»</strong> (…) на панели управления и включите живые субтитры. Названия пунктов меню меняются от версии к версии Teams, а что именно доступно, может зависеть от настроек вашей организации.</p>
+            <p>Но как только вы выходите из Teams, субтитры заканчиваются: звонок родным в WhatsApp или групповой звонок в Telegram после этого пройдёт без них.</p>
+
+            <h2>Способ 2: одно приложение для всех звонков</h2>
+            <p>Live Captions &amp; Transcribe не встраивается ни в одну программу для звонков. Оно слушает то, что компьютер выводит в колонки или наушники, и превращает это в текст. Поэтому одинаково работает с WhatsApp, Telegram, Teams, Zoom, Google Meet и Discord — и заодно с YouTube, подкастами и лекциями между звонками.</p>
+            <ol class="howto">
+                <li><strong>Установите приложение из Microsoft Store.</strong> Откройте <a href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">страницу Live Captions &amp; Transcribe в Microsoft Store</a> и нажмите «Получить». Работает в Windows 10 и 11 (x64). Чтобы попробовать, не нужны ни регистрация, ни карта.</li>
+                <li><strong>Откройте приложение и выберите звук компьютера.</strong> Это режим для звонков: приложение слышит собеседников ровно так же, как вы.</li>
+                <li><strong>Поставьте окно на место.</strong> Разместите окно субтитров под окном звонка или рядом с ним. Оно остаётся поверх остальных и не спрячется за WhatsApp или Teams. Включите «сквозные клики», если хотите нажимать кнопки звонка прямо под ним.</li>
+                <li><strong>Нажмите «Старт» и отвечайте на звонок.</strong> Субтитры появляются по ходу речи. Язык определяется сам, из 60 языков, так что звонок на другом языке не требует никакой настройки.</li>
+                <li><strong>Сделайте текст удобным.</strong> Размер — до 64 пт, оформление — светлое, тёмное или контрастное. У каждого собеседника свой цвет, и каждый начинает с новой строки.</li>
+                <li><strong>Вернитесь к разговору после звонка.</strong> Сеанс сохраняется в истории на компьютере. Ищите по словам, переименуйте «Говорящий 1» в настоящее имя, скопируйте цитату или выгрузите текст в TXT или SRT.</li>
+            </ol>
+
+            <h3>Советы для звонков в WhatsApp и Telegram</h3>
+            <ul>
+                <li>Подойдут и приложения для компьютера, и веб-версии в браузере: в обоих случаях звук играет на компьютере, значит, субтитры будут.</li>
+                <li>Звонки на телефоне — это другое устройство: приложение подписывает только то, что звучит на компьютере.</li>
+                <li>Если в расшифровке нужны и ваши собственные слова, переключите источник на микрофон. Приложение слушает один источник за раз.</li>
+            </ul>
+
+            <h3>Советы для Teams</h3>
+            <ul>
+                <li>Если включить ещё и субтитры самого Teams, одни и те же слова придётся читать дважды. Выберите что-то одно.</li>
+                <li>Встречи, звонки и вебинары в Teams звучат через компьютер одинаково, поэтому Live Captions &amp; Transcribe справляется с ними одинаково.</li>
+            </ul>
+
+            <h2>Конфиденциальность на звонках</h2>
+            <p>В WhatsApp, Teams и Telegram ничего не устанавливается, к звонку никто не подключается, а собеседники не видят ваших субтитров и не получают никаких уведомлений. Приложению нужен интернет: пока идут субтитры, звук передаётся облачному сервису распознавания речи, чтобы превратить его в текст. Звук не записывается, а расшифровки хранятся только на вашем компьютере, и их можно удалить. Подробнее — в <a href="/ru/captions/privacy.html">политике конфиденциальности</a>.</p>
+            <p>Субтитры идут только на языке разговора, приложение не переводит. Если звонок нужно переводить в реальном времени, есть соседнее приложение <a href="/ru/">Live Subtitles</a>. Крупный текст и цвета собеседников заодно облегчают семейные звонки родственникам со сниженным слухом.</p>
+
+            <div class="trial">
+                <p><strong>Попробуйте Live Captions &amp; Transcribe бесплатно</strong> в Windows 10 или 11. Без регистрации и без карты.</p>
+                <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Скачать из Microsoft Store</a>
+            </div>
+
+            <h2 id="faq">Вопросы и ответы</h2>
+            <div class="faq">
+                <details>
+                    <summary>Есть ли в WhatsApp для компьютера субтитры к звонкам?</summary>
+                    <div>Нет. В WhatsApp для компьютера нет живых субтитров ни для голосовых, ни для видеозвонков. Чтобы читать звонок в WhatsApp на компьютере с Windows, запустите приложение, которое делает субтитры для звука компьютера, например Live Captions &amp; Transcribe.</div>
+                </details>
+                <details>
+                    <summary>Есть ли в Telegram для компьютера субтитры к звонкам?</summary>
+                    <div>Нет. В Telegram для компьютера нет живых субтитров к звонкам. Live Captions &amp; Transcribe подписывает звонки в Telegram в Windows 10 и 11, слушая звук, который играет на компьютере.</div>
+                </details>
+                <details>
+                    <summary>Есть ли в Microsoft Teams встроенные субтитры?</summary>
+                    <div>Да, на встречах Teams есть встроенные живые субтитры, их включают в панели управления встречей. Работают они только внутри Teams. Если вы созваниваетесь ещё и в WhatsApp, Telegram или Zoom, приложение для всей системы, например Live Captions &amp; Transcribe, подпишет все эти звонки в одном окне.</div>
+                </details>
+                <details>
+                    <summary>Узнают ли собеседники, что я включил субтитры?</summary>
+                    <div>Нет. Live Captions &amp; Transcribe ничего не устанавливает в WhatsApp, Teams или Telegram, к звонку никто не подключается, а субтитры видны только на вашем экране.</div>
+                </details>
+                <details>
+                    <summary>Можно ли сохранить, что говорили на звонке?</summary>
+                    <div>Да. Live Captions &amp; Transcribe сохраняет каждый сеанс в истории на компьютере: по ней можно искать, переименовывать собеседников, копировать текст или выгружать его в TXT или SRT. Сам звук не записывается.</div>
+                </details>
+                <details>
+                    <summary>Будут ли субтитры переведены?</summary>
+                    <div>Нет. Live Captions &amp; Transcribe показывает субтитры на том языке, на котором говорят; язык определяется автоматически из 60. Для перевода звонков в реальном времени есть соседнее приложение <a href="/ru/">Live Subtitles</a>: оно показывает оригинал и перевод вместе.</div>
+                </details>
+            </div>
+
+            <h2>Другие статьи</h2>
+            <ul class="guides-list">
+                <li><a href="/ru/captions/windows-10-live-captions.html">Как включить живые субтитры в Windows 10</a></li>
+                <li><a href="/ru/captions/chrome-live-caption-vs-live-captions-transcribe.html">Live Caption в Chrome или приложение для всего компьютера</a></li>
+                <li><a href="/ru/captions/ava-alternative-windows.html">Альтернатива Ava для Windows</a></li>
+                <li><a href="/ru/captions/">Live Captions &amp; Transcribe: возможности и цены</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> для Windows 10 и 11
+                <small>© 2026 Live Subtitles. Все права защищены.</small>
+            </div>
+            <nav aria-label="Нижнее меню">
+                <a href="/ru/captions/privacy.html">Конфиденциальность</a>
+                <a href="/ru/captions/terms.html">Условия использования</a>
+                <a href="/ru/captions/refund.html">Возврат</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/ru/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
