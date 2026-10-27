@@ -180,9 +180,9 @@ a:hover { color: var(--accent-dark); }
 .plan__per { margin: 0; color: var(--muted); font-size: .95rem; }
 
 .table-wrap { overflow-x: auto; margin-top: 1rem; }
-table.prices { border-collapse: collapse; width: 100%; background: var(--card); font-size: 1rem; }
-table.prices th, table.prices td { border: 1px solid var(--line); padding: .75rem .9rem; text-align: left; }
-table.prices th { background: var(--accent-soft); }
+table.prices, table.compare { border-collapse: collapse; width: 100%; background: var(--card); font-size: 1rem; }
+table.prices th, table.prices td, table.compare th, table.compare td { border: 1px solid var(--line); padding: .75rem .9rem; text-align: left; }
+table.prices th, table.compare th { background: var(--accent-soft); }
 
 .trial {
     display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between;
@@ -225,13 +225,37 @@ table.prices th { background: var(--accent-soft); }
 .legal table { border-collapse: collapse; width: 100%; margin: 1rem 0; display: block; overflow-x: auto; background: var(--card); }
 .legal th, .legal td { border: 1px solid var(--line); padding: .6rem .7rem; text-align: left; vertical-align: top; }
 .legal th { background: var(--accent-soft); }
-.legal code { background: #EFEBE5; padding: .1em .3em; border-radius: 4px; }
+.legal code, .guide code { background: #EFEBE5; padding: .1em .3em; border-radius: 4px; }
+
+/* Справочные страницы (/captions/*.html): прямой ответ, шаги, таблица, FAQ */
+.guide { padding: 2rem 0 3.5rem; }
+.crumbs { font-size: .95rem; color: var(--muted); margin: 0 0 1rem; }
+.crumbs a { color: var(--muted); }
+.guide h1 { font-size: 2.3rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -.01em; }
+.guide h2 { font-size: 1.6rem; line-height: 1.25; margin: 2.6rem 0 .6rem; }
+.guide h3 { font-size: 1.2rem; line-height: 1.3; margin: 1.6rem 0 .4rem; }
+.guide p, .guide li { color: var(--ink-2); }
+.guide .updated { color: var(--muted); font-size: .95rem; margin: 0 0 1.4rem; }
+.answer {
+    font-size: 1.2rem; color: var(--ink); background: var(--card);
+    border: 2px solid var(--accent); border-radius: var(--radius); padding: 1.2rem 1.4rem; margin: 0 0 1.5rem;
+}
+.answer p { color: var(--ink); margin: 0; }
+.answer p + p { margin-top: .6rem; }
+.guide ol.howto { padding-left: 1.4rem; }
+.guide ol.howto > li { margin-bottom: .7rem; padding-left: .3rem; }
+.guide table.compare td:first-child { font-weight: 600; color: var(--ink); }
+.guide .faq { margin-top: 1rem; }
+.guide .trial { margin-top: 2rem; }
+.guides-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; }
+.guides-list a { font-weight: 700; }
 
 @media (max-width: 900px) {
     .hero__grid, .grid--2, .grid--3, .plans { grid-template-columns: minmax(0, 1fr); }
     .hero { padding-top: 2.2rem; }
     .hero h1 { font-size: 2.1rem; }
     .section h2 { font-size: 1.7rem; }
+    .guide h1 { font-size: 1.9rem; }
 }
 
 @media (max-width: 560px) {
