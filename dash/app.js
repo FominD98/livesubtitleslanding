@@ -2051,8 +2051,8 @@ function renderAbMoney(t, s) {
     if (empty) {
         // Деньги сравниваются в каждом тесте; нет покупок с плечом — так и пишем, а не прячем блок
         document.getElementById("ab-money-verdict").replaceChildren(el("span", { class: "muted" },
-            `No purchases tied to an arm yet (${int(s.x.A + s.x.B)} buyers in the test), so money can't be compared.`));
-        document.getElementById("ab-money-note").textContent = m.lost ? `${usd(m.lost)} of purchases on these platforms have no arm.` : "";
+            "No purchases tied to an arm yet, so money can't be compared."));
+        document.getElementById("ab-money-note").textContent = "";
         return;
     }
     const per = stepLabel(t, t.base).toLowerCase();
