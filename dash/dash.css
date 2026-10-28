@@ -252,3 +252,5 @@ code { font-size: 12px; background: var(--page); padding: 1px 4px; border-radius
 @media (max-width: 600px) { .tiles.compact .tile { padding-bottom: 10px; } }
 /* Сводка тестов: название и метрика переносятся, чтобы деньги справа помещались без прокрутки */
 .tbl.ab-tests td:first-child, .tbl.ab-tests td:nth-child(4) { white-space: normal; min-width: 150px; }
+/* Реальные деньги: значения «A → B» длинные — мельче, чтобы не переносились */
+#ab-real-tiles .tile .value { font-size: 20px; white-space: nowrap; }
