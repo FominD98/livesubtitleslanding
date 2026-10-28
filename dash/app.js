@@ -1918,19 +1918,20 @@ function renderAb() {
         ? `from GA4, cached 5 min, updated ${new Date(d.at).toLocaleTimeString("en-GB")}` : "";
     if (!tests.some((t) => t.id === state.abSel.test)) state.abSel.test = (tests.find((t) => t.status === "running") || tests[0])?.id;
 
-    table("tbl-ab-tests", [["Test"], ["App"], ["Status"], ["Days", 1], ["In test A / B", 1], ["Main metric"], ["A", 1], ["B", 1], ["Lift", 1], ["p", 1], ["P(B better)", 1], ["$ / user A · B", 1], ["$ lift", 1], ["$ p", 1]],
+    // Сводка в ширину экрана: по каждому тесту конверсия и деньги рядом, A → B и прирост с p в одной ячейке
+    const liftCell = (lift, p, show = true) => td(show ? `${signedPct(lift)} · p ${Number.isFinite(p) ? p.toFixed(2) : "—"}` : "—", true,
+        show && p < 0.05 ? (lift > 0 ? "up" : "down") : "");
+    table("tbl-ab-tests", [["Test"], ["App"], ["Status"], ["In test A / B", 1], ["Main metric"], ["A → B", 1], ["B vs A", 1], ["$ / user A → B", 1], ["$ B vs A", 1]],
         tests.map((t) => {
             const s = abStats(t, "all");
-            const sig = s.cmp.p < 0.05;
-            const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : "Running";
+            const hasMoney = !!(s.money.A.rev || s.money.B.rev);
+            const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : `Running · ${s.days} d`;
             return el("tr", { class: `clickable${t.id === state.abSel.test ? " active" : ""}`, onclick: () => setAb({ test: t.id, app: "all" }) },
-                td(t.name), td(t.app), td(status), td(int(s.days), true), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
-                td(`${stepLabel(t, t.goal)} / ${stepLabel(t, t.base)}`), td(abPct(s.cmp.pa), true), td(abPct(s.cmp.pb), true),
-                td(signedPct(s.cmp.lift), true, sig ? (s.cmp.lift > 0 ? "up" : "down") : ""),
-                td(Number.isFinite(s.cmp.p) ? s.cmp.p.toFixed(3) : "—", true), td(abPct(s.cmp.probB), true),
-                td(s.money.A.rev || s.money.B.rev ? `${money(s.money.A.mean)} · ${money(s.money.B.mean)}` : "—", true),
-                td(s.money.A.rev || s.money.B.rev ? signedPct(s.money.lift) : "—", true, s.money.p < 0.05 ? (s.money.lift > 0 ? "up" : "down") : ""),
-                td((s.money.A.rev || s.money.B.rev) && Number.isFinite(s.money.p) ? s.money.p.toFixed(3) : "—", true));
+                td(t.name), td(t.app), td(status), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
+                td(`${stepLabel(t, t.goal)} / ${stepLabel(t, t.base).toLowerCase()}`), td(`${abPct(s.cmp.pa)} → ${abPct(s.cmp.pb)}`, true),
+                liftCell(s.cmp.lift, s.cmp.p),
+                td(hasMoney ? `${money(s.money.A.mean)} → ${money(s.money.B.mean)}` : "no purchases", true),
+                liftCell(s.money.lift, s.money.noTxn ? NaN : s.money.p, hasMoney));
         }), state.product === "captions" ? "No A/B tests in Live Captions" : "No tests");
     table("tbl-ab-archive", [["Test"], ["App"], ["Ran"], ["Result"]],
         d.archive.map((a) => el("tr", {}, td(a.name), td(a.app), td(`${a.start} — ${a.end}`), td(a.result))), "—");
