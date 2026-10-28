@@ -250,3 +250,5 @@ code { font-size: 12px; background: var(--page); padding: 1px 4px; border-radius
 .verdict h2 { margin: 0 0 6px; }
 .verdict p { margin: 4px 0 0; }
 @media (max-width: 600px) { .tiles.compact .tile { padding-bottom: 10px; } }
+/* Сводка тестов: название и метрика переносятся, чтобы деньги справа помещались без прокрутки */
+.tbl.ab-tests td:first-child, .tbl.ab-tests td:nth-child(4) { white-space: normal; min-width: 150px; }
