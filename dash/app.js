@@ -1869,7 +1869,7 @@ function abMoney(t, app, n, pace) {
         // если оставить B всем: разница на пользователя × сколько людей за 30 дней доходит до знаменателя (оба плеча)
         monthly: diff * pace * 2 * 30,
         lost: sum(t.purchases.filter((p) => !p.arm && (app === "all" || p.app === app)), (p) => p.value * p.n),
-        noTxn: t.purchases.some((p) => p.n > 1 && (app === "all" || p.app === app)),
+        noTxn: t.purchases.some((p) => p.tx === false && (app === "all" || p.app === app)),
     };
 }
 
@@ -1917,6 +1917,15 @@ function abMoneyNeed(A, B) {
     const sd2 = ((A.v * A.n) + (B.v * B.n)) / 2;
     const delta = 0.2 * A.mean;
     return delta > 0 && sd2 > 0 ? Math.ceil(2 * (1.96 + 0.8416) ** 2 * sd2 / (delta * delta)) : NaN;
+}
+
+// Окно теста задаётся в двух местах (AB_TESTS Worker'а и TESTS сборщика) — расхождение видно сразу
+function winMismatch(t) {
+    const key = t.server?.find((r) => r.metric === "window")?.key;
+    if (!key) return "";
+    const [from, to] = key.split("..");
+    const expectTo = t.end || isoDay(new Date());
+    return from !== t.start || (t.end && to !== expectTo) ? key : "";
 }
 
 function renderAbReal(t) {
@@ -1989,7 +1998,8 @@ function renderAbReal(t) {
         "Who is in the test: every new install of the platform in the test window (backend trial records), split by the same fingerprint hash as the app — " +
         "whether or not they reached the paywall, so nothing can be cherry-picked. Money: Paddle payouts after fees and tax, minus refunds, " +
         "from the test start to today (renewals included). Microsoft Store purchases aren't in the backend and are not counted — on Windows almost all payments go through Paddle. " +
-        `Payments from people who installed before the test: ${usd(r.outside)} (not in either arm). Updated daily with the dashboard collection.`;
+        `Payments from people who are not new installs of the test window: ${usd(r.outside)} (not in either arm). Updated daily with the dashboard collection.` +
+        (winMismatch(t) ? ` ⚠ The collector's window (${winMismatch(t)}) differs from this test's dates — update TESTS in tools/dash/sources/abserver.py.` : "");
 }
 
 function stepLabel(t, event) {
@@ -2004,10 +2014,13 @@ function abVerdict(t, s) {
     const what = `${stepLabel(t, t.goal)} / ${stepLabel(t, t.base).toLowerCase()}`;
     const lines = [`${what}: A ${abPct(cmp.pa)} vs B ${abPct(cmp.pb)}, ${signedPct(cmp.lift)} (p = ${Number.isFinite(cmp.p) ? cmp.p.toFixed(3) : "—"}, P(B better) ${abPct(cmp.probB)}).`];
     const m = s.money;
-    if (m.A.rev || m.B.rev) {
+    const real = abServer(t);
+    if (real) {
+        lines.push(`Real money per new install (backend + Paddle): A ${money(real.A.mean)} vs B ${money(real.B.mean)}, ${signedPct(real.lift)} ` +
+            `(p = ${Number.isFinite(real.p) ? real.p.toFixed(3) : "—"}, P(B earns more) ${abPct(real.probB)}).`);
+    } else if (m.A.rev || m.B.rev) {
         const diverge = Number.isFinite(cmp.lift) && Number.isFinite(m.lift) && Math.sign(cmp.lift) !== Math.sign(m.lift) && Math.abs(m.lift) >= 0.05;
-        lines.push(`Money per ${stepLabel(t, t.base).toLowerCase()} user: A ${money(m.A.mean)} vs B ${money(m.B.mean)}, ${signedPct(m.lift)} ` +
-            `(p = ${Number.isFinite(m.p) ? m.p.toFixed(3) : "—"}, P(B earns more) ${abPct(m.probB)}).` +
+        lines.push(`Money per ${stepLabel(t, t.base).toLowerCase()} user in GA4 (rough): A ${money(m.A.mean)} vs B ${money(m.B.mean)}, ${signedPct(m.lift)}.` +
             (diverge ? ` Conversion and money point in opposite directions — ${cmp.lift > 0 ? "more people buy in B, but cheaper plans" : "fewer people buy in B, but bigger plans"}.` : ""));
     }
     if (t.status === "ended") {
@@ -2045,7 +2058,7 @@ function renderAb() {
             const s = abStats(t, "all");
             const real = abServer(t);
             const hasMoney = !!(real || s.money.A.rev || s.money.B.rev);
-            const m = real ? { a: real.A.mean, b: real.B.mean, lift: real.lift, p: real.p } : { a: s.money.A.mean, b: s.money.B.mean, lift: s.money.lift, p: s.money.noTxn ? NaN : s.money.p };
+            const m = real ? { a: real.A.mean, b: real.B.mean, lift: real.lift, p: real.p } : { a: s.money.A.mean, b: s.money.B.mean, lift: s.money.lift, p: NaN };
             const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : `Running · ${s.days} d`;
             return el("tr", { class: `clickable${t.id === state.abSel.test ? " active" : ""}`, onclick: () => setAb({ test: t.id, app: "all" }) },
                 td([t.name, el("span", { class: "muted small" }, ` · ${t.app}`)]), td(status), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
@@ -2061,6 +2074,7 @@ function renderAb() {
     const t = tests.find((x) => x.id === state.abSel.test);
     for (const node of detail) node.hidden = !t;
     for (const id of ["tbl-ab-funnel", "chart-ab-conv", "chart-ab-base"]) document.getElementById(id).closest(".card").hidden = !t;
+    for (const id of ["ab-real", "ab-money", "ab-app"]) if (!t) document.getElementById(id).hidden = true;
     if (!t) return;
 
     const testSel = document.getElementById("ab-test");
@@ -2076,7 +2090,8 @@ function renderAb() {
     const s = abStats(t, state.abSel.app);
     renderAbReal(t);
     document.getElementById("ab-about").textContent =
-        `${t.about} A: ${t.arms.A}. B: ${t.arms.B}. Since ${t.start}${t.end ? ` to ${t.end}` : ""} (${s.days} days).`;
+        `${t.about} A: ${t.arms.A}. B: ${t.arms.B}. Since ${t.start}${t.end ? ` to ${t.end}` : ""} (${s.days} days).` +
+        (t.error ? ` ⚠ ${t.error} — funnel and GA4 money are empty.` : "");
 
     const srmBad = t.srm !== false && s.srmP < 0.001;
     const convLabel = `${stepLabel(t, t.goal).toLowerCase()} / ${stepLabel(t, t.base).toLowerCase()}`;
@@ -2179,8 +2194,9 @@ function renderAbMoney(t, s) {
         return;
     }
     const per = stepLabel(t, t.base).toLowerCase();
-    // Без transaction_id (Android) переотправленная покупка считается дважды — «доказано» по таким данным не пишем
-    const sig = m.p < 0.05 && !m.noTxn;
+    // GA4 не отдаёт деньги по людям: несколько покупок одного человека считаются как разные люди, разброс занижен,
+    // p слишком оптимистичен. Поэтому по GA4 «доказано» не пишем никогда — для этого блок реальных денег
+    const sig = false;
     const tone = sig ? (m.diff > 0 ? "up" : "down") : "muted";
     renderTileRow("ab-money-tiles", [
         { label: "A · revenue", value: m.A.rev, fmt: usd, delta: el("span", { class: "muted" }, `${int(m.A.count)} purchases · avg ${money(m.A.avg)}`) },
@@ -2194,7 +2210,7 @@ function renderAbMoney(t, s) {
     ]);
     document.getElementById("ab-money-verdict").replaceChildren(el("span", { class: tone },
         sig ? `B ${m.diff > 0 ? "earns more" : "earns less"}: ${signedPct(m.lift)} per user, the difference is real (p = ${m.p.toFixed(3)}).`
-            : m.p < 0.05 ? `B looks like it earns ${m.diff > 0 ? "more" : "less"} (${signedPct(m.lift)}, p = ${m.p.toFixed(3)}), but Android double-counts re-sent purchases — check the store console before acting.`
+            : m.p < 0.05 ? `B looks like it earns ${m.diff > 0 ? "more" : "less"} (${signedPct(m.lift)}), but GA4 can't prove it: repeat purchases of one buyer count as separate people, so its p (${m.p.toFixed(3)}) is too optimistic${m.noTxn ? ", and Android re-sent purchases count twice" : ""}. Check real money or the store console.`
             : `No proven difference in money yet: B − A is somewhere between ${money(m.lo)} and ${money(m.hi)} per ${per} user, so either arm can still win.`));
 
     // Что покупают: планы по плечам — видно, перетягивает ли B покупателей на дешёвый или дорогой план
