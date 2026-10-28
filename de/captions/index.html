@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Analytics: the same GA4 / Google tag and Yandex Metrica as the rest of the site.
+         The Meta pixel (LiveSubtitles Web dataset) is left out on purpose: it would add
+         Live Captions visitors to the Live Subtitles audiences. -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough on Store links + GA4 store_click. The Store links below carry their own
+         onclick, so cid-tracker does not attach the Live Subtitles download conversion to them. -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>Live Captions für Windows: Echtzeit-Untertitel für jeden Ton</title>
+    <meta name="description" content="Große, klare Live-Untertitel für Anrufe, Videos, Filme und Vorträge am PC: 60 Sprachen, Sprecherfarben, TXT/SRT-Export. Windows 10 und 11. Kostenlos testen.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/de/captions/" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/captions/" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/captions/" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/captions/" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/captions/" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/captions/" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/captions/" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/captions/" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/captions/" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/captions/" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/captions/" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/captions/" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/captions/" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/captions/" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/captions/" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <meta name="application-name" content="Live Captions">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="Live Captions für Windows: Echtzeit-Untertitel für jeden Ton">
+    <meta property="og:description" content="Große, klare Live-Untertitel für Anrufe, Videos, Filme und Vorträge am PC. 60 Sprachen, Sprecherfarben, Verlauf und Export. Kostenlos testen.">
+    <meta property="og:url" content="https://live-subtitles.com/de/captions/">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Live-Captions-App-Symbol und der Schriftzug: Echtzeit-Untertitel für Windows">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="pl_PL">
+    <meta property="og:locale:alternate" content="tr_TR">
+    <meta property="og:locale:alternate" content="uk_UA">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ar_AR">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Live Captions für Windows: Echtzeit-Untertitel für jeden Ton">
+    <meta name="twitter:description" content="Große, klare Live-Untertitel für Anrufe, Videos, Filme und Vorträge am PC. 60 Sprachen, Sprecherfarben, Verlauf und Export.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Live Captions & Transcribe",
+        "alternateName": "Live Captions",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Live-Untertitel und Sprache-zu-Text",
+        "operatingSystem": "Windows 10, Windows 11",
+        "url": "https://live-subtitles.com/de/captions/",
+        "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+        "installUrl": "https://get.microsoft.com/installer/download/9NJHDV2W6999",
+        "sameAs": [
+            "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "https://www.producthunt.com/posts/live-captions-transcribe"
+        ],
+        "image": "https://live-subtitles.com/captions/img/livecaptions-512.png",
+        "inLanguage": "de",
+        "description": "Echtzeit-Untertitel für jeden Ton auf einem Windows-PC oder für das Mikrofon: Anrufe, Videos, Filme, Vorträge und TV-Streams. 60 Sprachen mit automatischer Erkennung, eine eigene Farbe für jeden Sprecher, ein durchsuchbarer Transkriptverlauf mit TXT/SRT-Export und großer Text bis zu 64 pt. Nur Untertitel, keine Übersetzung.",
+        "featureList": [
+            "Echtzeit-Untertitel für jeden Ton auf dem PC oder für das Mikrofon",
+            "60 Sprachen mit automatischer Spracherkennung",
+            "Sprecherkennzeichnung in verschiedenen Farben, jeder Sprecher in einer neuen Zeile",
+            "Transkriptverlauf mit Suche, Sprecher umbenennen, Kopieren und TXT/SRT-Export",
+            "Großer Text bis zu 64 pt, helles, dunkles und kontrastreiches Design",
+            "Klickdurchlässiges Untertitelfenster, das immer im Vordergrund bleibt"
+        ],
+        "offers": [
+            { "@type": "Offer", "name": "Kostenlose Minuten zum Start", "price": "0", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "300 Minuten (einmaliges Paket)", "price": "6.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "1.000 Minuten (einmaliges Paket)", "price": "14.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "10.000 Minuten (einmaliges Paket)", "price": "119.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Basic: 400 Minuten im Monat, monatlich", "price": "4.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Basic: 400 Minuten im Monat, jährlich", "price": "49.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro: 1.200 Minuten im Monat, monatlich", "price": "11.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro: 1.200 Minuten im Monat, jährlich", "price": "99.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Max: 3.000 Minuten im Monat, monatlich", "price": "21.99", "priceCurrency": "USD" }
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com",
+            "email": "captions@live-subtitles.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Wie unterscheidet sich das von den in Windows 11 eingebauten Live-Untertiteln?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Die integrierte Funktion ist kostenlos und funktioniert nur unter Windows 11, mit einer begrenzten Sprachauswahl, die von Ihrer Windows-Version abhängt. Live Captions funktioniert auch unter Windows 10, erkennt 60 Sprachen und bestimmt die Sprache selbstständig, zeigt jeden Sprecher in einer anderen Farbe in einer neuen Zeile, führt einen durchsuchbaren Verlauf, den Sie als TXT oder SRT exportieren können, und lässt Sie den Text sehr groß machen, bis zu 64 pt." }
+            },
+            {
+                "@type": "Question",
+                "name": "Funktioniert es mit Zoom, Teams, WhatsApp und YouTube?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ja. Live Captions hört den Ton ab, den Ihr Computer wiedergibt, und funktioniert daher mit jeder App: Zoom-, Microsoft-Teams-, Google-Meet-, WhatsApp- und Telegram-Anrufe, YouTube, Filme, TV-Streams und Online-Vorträge. In diesen Apps muss nichts installiert werden, und nichts nimmt an Ihrem Anruf teil." }
+            },
+            {
+                "@type": "Question",
+                "name": "Sehen die anderen Personen im Anruf die Untertitel?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Die Untertitel erscheinen nur auf Ihrem Bildschirm. Andere Personen werden nicht benachrichtigt und sehen nichts." }
+            },
+            {
+                "@type": "Question",
+                "name": "Übersetzt Live Captions?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Nein. Live Captions schreibt mit, was gesagt wird, in derselben Sprache, in der gesprochen wird. Es ist dafür gemacht, Sprache zu lesen, nicht sie zu übersetzen." }
+            },
+            {
+                "@type": "Question",
+                "name": "Was kostet es?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sie starten mit kostenlosen Minuten, keine Kreditkarte nötig. Danach können Sie ein Minutenpaket kaufen (300 Minuten für $6.99, 1.000 für $14.99, 10.000 für $119.99) oder ein Abonnement: Basic 400 Minuten im Monat für $4.99 ($49.99 im Jahr), Pro 1.200 Minuten im Monat für $11.99 ($99.99 im Jahr) oder Max 3.000 Minuten im Monat für $21.99. Die Preise enthalten die Steuer. Minuten werden nur verbraucht, während Untertitel laufen." }
+            },
+            {
+                "@type": "Question",
+                "name": "Wird mein Ton aufgezeichnet?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Wir zeichnen Ihren Ton nicht auf und speichern ihn nicht. Während Untertitel laufen, wird der Ton an unseren Spracherkennungsanbieter gestreamt, um ihn in Text umzuwandeln. Der Textverlauf wird nur auf Ihrem Computer gespeichert, und Sie können ihn löschen." }
+            },
+            {
+                "@type": "Question",
+                "name": "Was brauche ich, um es zu nutzen?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Einen PC mit Windows 10 oder Windows 11 und eine Internetverbindung. Ein Mikrofon ist nur nötig, wenn Sie Untertitel für Personen möchten, die im Raum sprechen." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">Zum Inhalt springen</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/de/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="Hauptnavigation">
+                <a class="lc-nav__extra" href="#how">So funktioniert's</a>
+                <a class="lc-nav__extra" href="#features">Funktionen</a>
+                <a href="#pricing">Preise</a>
+                <a class="lc-nav__extra" href="#faq">FAQ</a>
+                <details class="lc-lang">
+                    <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="de">Deutsch</span></summary>
+                    <ul class="lc-lang__menu">
+                        <li><a href="/captions/" hreflang="en" lang="en">English</a></li>
+                        <li><a href="/es/captions/" hreflang="es" lang="es">Español</a></li>
+                        <li><a href="/pt/captions/" hreflang="pt" lang="pt">Português</a></li>
+                        <li><a href="/fr/captions/" hreflang="fr" lang="fr">Français</a></li>
+                        <li><a href="/de/captions/" hreflang="de" lang="de" aria-current="page">Deutsch</a></li>
+                        <li><a href="/it/captions/" hreflang="it" lang="it">Italiano</a></li>
+                        <li><a href="/nl/captions/" hreflang="nl" lang="nl">Nederlands</a></li>
+                        <li><a href="/pl/captions/" hreflang="pl" lang="pl">Polski</a></li>
+                        <li><a href="/tr/captions/" hreflang="tr" lang="tr">Türkçe</a></li>
+                        <li><a href="/uk/captions/" hreflang="uk" lang="uk">Українська</a></li>
+                        <li><a href="/ru/captions/" hreflang="ru" lang="ru">Русский</a></li>
+                        <li><a href="/ar/captions/" hreflang="ar" lang="ar">العربية</a></li>
+                        <li><a href="/hi/captions/" hreflang="hi" lang="hi">हिन्दी</a></li>
+                        <li><a href="/ja/captions/" hreflang="ja" lang="ja">日本語</a></li>
+                        <li><a href="/ko/captions/" hreflang="ko" lang="ko">한국어</a></li>
+                        <li><a href="/zh/captions/" hreflang="zh" lang="zh">简体中文</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="wrap hero__grid">
+                <div>
+                    <h1>Live Captions: Lesen Sie jedes Wort, das Sie an Ihrem PC hören</h1>
+                    <p class="hero__lead">Echtzeit-Untertitel für Videoanrufe, YouTube, Filme, Vorträge und TV. Großer, klarer Text über jeder App, eine eigene Farbe für jeden Sprecher und ein durchsuchbarer Verlauf. Für Windows 10 und 11.</p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
+                            Für Windows herunterladen
+                        </a>
+                        <a class="btn btn--ghost" href="#pricing">Preise ansehen</a>
+                    </div>
+                    <p class="hero__note">Kostenlose Minuten zum Einstieg. Keine Kreditkarte nötig.</p>
+                    <ul class="checks">
+                        <li>Anrufe in Zoom, Teams, Meet, WhatsApp und Telegram</li>
+                        <li>60 Sprachen, automatisch erkannt</li>
+                        <li>Textgröße bis zu 64 pt</li>
+                    </ul>
+                </div>
+                <div class="mock" role="img" aria-label="Das Live-Captions-Fenster: zwei Sprecher in zwei Farben dargestellt, jeweils in einer neuen Zeile">
+                    <div class="mock__bar">
+                        <span class="mock__dot"></span>
+                        <span class="mock__state">Hört zu</span>
+                        <span>· Computerton</span>
+                        <span class="mock__pill">Pause</span>
+                    </div>
+                    <div class="mock__body">
+                        <span class="mock__who mock__who--1">Sprecher 1</span>
+                        <p class="mock__line mock__line--old">Guten Abend. Heute sprechen wir darüber, wie man den Garten winterfest macht.</p>
+                        <span class="mock__who mock__who--2">Sprecher 2</span>
+                        <p class="mock__line">Das Wichtigste zuerst: die Rosen abdecken, bevor der erste Frost kommt</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="what">
+            <div class="wrap">
+                <h2>Was Live Captions kann</h2>
+                <p class="section__lead">Die App hört den Ton Ihres Computers oder Ihr Mikrofon ab und zeigt das Gesagte innerhalb von etwa einer Sekunde als großen Text an. Untertitel für den ganzen PC, nicht nur für eine einzelne App.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <h3>Videoanrufe</h3>
+                        <p>Folgen Sie einem Zoom-, Microsoft-Teams-, Google-Meet-, WhatsApp- oder Telegram-Anruf, ohne andere um Wiederholung zu bitten. Niemand nimmt am Anruf teil, und niemand sonst sieht Ihre Untertitel.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Videos, Filme und TV</h3>
+                        <p>Untertitel für YouTube, Filme, TV-Streams, Podcasts, Webinare und Online-Vorträge – auch wenn ein Video keine eigenen Untertitel hat.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Menschen im Raum</h3>
+                        <p>Schalten Sie auf das Mikrofon um und lesen Sie, was die Person neben Ihnen sagt: beim Arzt, im Unterricht oder am Familientisch.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>Für wen es gedacht ist</h2>
+                <div class="grid grid--2">
+                    <div class="card">
+                        <h3>Menschen mit Hörbeeinträchtigung</h3>
+                        <p>Lesen Sie Anrufe und Videos mit, statt sich beim Hören anzustrengen. Großer Text und kontrastreiche Darstellung helfen auch, wenn die Augen nicht mehr so mitspielen.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Familien</h3>
+                        <p>Richten Sie die App auf dem Computer der Eltern oder Großeltern ein, damit sie wieder an Familienvideoanrufen teilnehmen können.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Alle, denen Sprache schwerfällt</h3>
+                        <p>Leise Stimmen, schnelles Sprechen, starker Akzent oder schlechter Ton: Mit Sprache-zu-Text auf dem Bildschirm verpassen Sie kein Wort.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Studierende und Büroangestellte</h3>
+                        <p>Transkribieren Sie Vorlesungen und lange Meetings live, durchsuchen Sie anschließend das Transkript und speichern Sie es als Datei.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="how">
+            <div class="wrap">
+                <h2>So funktioniert's</h2>
+                <p class="section__lead">Keine Einrichtung, kein zweites Gerät, nichts, was in Zoom oder Ihrem Browser installiert werden muss.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>Live Captions öffnen</h3>
+                        <p>Installieren Sie die App aus dem Microsoft Store und öffnen Sie sie. Das Untertitelfenster erscheint über Ihren anderen Apps.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>Wählen Sie, was abgehört wird</h3>
+                        <p>Computerton für Anrufe und Videos oder das Mikrofon für Menschen im Raum.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>Start drücken und lesen</h3>
+                        <p>Die Echtzeit-Untertitel erscheinen, während gesprochen wird. Pausieren Sie jederzeit; Minuten werden nur verbraucht, während Untertitel laufen.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="wrap">
+                <h2>Funktionen</h2>
+                <p class="section__lead">So gemacht, dass es leicht zu lesen und leicht zu bedienen ist, mit großen Schaltflächen und einfachen Worten.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <h3>Wer was gesagt hat</h3>
+                        <p>Jeder Sprecher wird mit einer eigenen Farbe als Sprecher 1, Sprecher 2 usw. gekennzeichnet, und jeder neue Sprecher beginnt in einer neuen Zeile.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Großer, klarer Text</h3>
+                        <p>Machen Sie den Text so groß, wie Sie brauchen, bis zu 64 pt. Verschieben und vergrößern Sie das Fenster, zum Beispiel unter einem Video.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Hell, dunkel oder hoher Kontrast</h3>
+                        <p>Wählen Sie ein Design und eine Textfarbe, die für Ihre Augen angenehm ist.</p>
+                    </div>
+                    <div class="card">
+                        <h3>60 Sprachen</h3>
+                        <p>Deutsch, Englisch, Spanisch, Französisch, Italienisch, Portugiesisch, Russisch, Ukrainisch, Polnisch, Chinesisch, Japanisch, Koreanisch, Arabisch, Hindi und viele weitere. Die Sprache wird automatisch erkannt.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Transkriptverlauf</h3>
+                        <p>Jede Sitzung wird auf Ihrem Computer gespeichert. Blättern Sie zurück, suchen Sie nach Wörtern, benennen Sie Sprecher um, kopieren Sie den Text oder exportieren Sie ihn als TXT oder SRT.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Bleibt Ihnen nicht im Weg</h3>
+                        <p>Das Fenster bleibt im Vordergrund. Im Klickdurchlass-Modus gehen Ihre Mausklicks durch das Fenster zur darunterliegenden App.</p>
+                    </div>
+                </div>
+                <p class="note"><strong>Nur Untertitel.</strong> Live Captions schreibt mit, was gesagt wird, in der gesprochenen Sprache. Es übersetzt nicht.</p>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="pricing">
+            <div class="wrap">
+                <h2>Preise</h2>
+                <p class="section__lead">Starten Sie mit kostenlosen Minuten. Kaufen Sie dann Minuten einmalig oder abonnieren Sie ein monatliches Kontingent. Die Preise sind in US-Dollar und enthalten die Steuer; Ihr lokaler Preis wird vor der Zahlung angezeigt.</p>
+
+                <div class="trial">
+                    <p><strong>Kostenloser Start:</strong> kostenlose Minuten für Untertitel, keine Kreditkarte nötig.</p>
+                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Kostenlos testen</a>
+                </div>
+
+                <div class="price-block">
+                    <h3>Minutenpakete</h3>
+                    <p>Einmal zahlen. Die Minuten nutzen, wann immer Sie möchten.</p>
+                    <div class="plans">
+                        <div class="plan">
+                            <p class="plan__name">300 Minuten</p>
+                            <p class="plan__mins">5 Stunden Untertitel</p>
+                            <p class="plan__price">$6.99</p>
+                            <p class="plan__per">ca. 2,3 US-Cent pro Minute</p>
+                        </div>
+                        <div class="plan plan--best">
+                            <span class="plan__tag">Beliebt</span>
+                            <p class="plan__name">1.000 Minuten</p>
+                            <p class="plan__mins">ca. 16,5 Stunden</p>
+                            <p class="plan__price">$14.99</p>
+                            <p class="plan__per">ca. 1,5 US-Cent pro Minute</p>
+                        </div>
+                        <div class="plan">
+                            <p class="plan__name">10.000 Minuten</p>
+                            <p class="plan__mins">ca. 166 Stunden</p>
+                            <p class="plan__price">$119.99</p>
+                            <p class="plan__per">ca. 1,2 US-Cent pro Minute</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-block">
+                    <h3>Abonnements</h3>
+                    <p>Jeden Monat ein frisches Minutenkontingent. Jederzeit kündbar.</p>
+                    <div class="plans">
+                        <div class="plan">
+                            <p class="plan__name">Basic</p>
+                            <p class="plan__mins">400 Minuten im Monat</p>
+                            <p class="plan__price">$4.99 <small>/ Monat</small></p>
+                            <p class="plan__alt">oder $49.99 im Jahr</p>
+                        </div>
+                        <div class="plan plan--best">
+                            <span class="plan__tag">Am besten für tägliche Anrufe</span>
+                            <p class="plan__name">Pro</p>
+                            <p class="plan__mins">1.200 Minuten im Monat</p>
+                            <p class="plan__price">$11.99 <small>/ Monat</small></p>
+                            <p class="plan__alt">oder $99.99 im Jahr</p>
+                        </div>
+                        <div class="plan">
+                            <p class="plan__name">Max</p>
+                            <p class="plan__mins">3.000 Minuten im Monat</p>
+                            <p class="plan__price">$21.99 <small>/ Monat</small></p>
+                            <p class="plan__alt">nur monatlich</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="note">Minuten werden nur gezählt, während Untertitel laufen. Die Zahlungen werden von <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, unserem Merchant of Record, abgewickelt. Siehe die <a href="/captions/refund.html">Rückerstattungsrichtlinie</a>.</p>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="wrap wrap--narrow">
+                <h2>Fragen und Antworten</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Wie unterscheidet sich das von den in Windows 11 eingebauten Live-Untertiteln?</summary>
+                        <div>Die integrierte Funktion ist kostenlos und funktioniert nur unter Windows 11, mit einer begrenzten Sprachauswahl, die von Ihrer Windows-Version abhängt. Live Captions funktioniert auch unter Windows 10, erkennt 60 Sprachen und bestimmt die Sprache selbstständig, zeigt jeden Sprecher in einer anderen Farbe in einer neuen Zeile, führt einen durchsuchbaren Verlauf, den Sie als TXT oder SRT exportieren können, und lässt Sie den Text sehr groß machen, bis zu 64 pt.</div>
+                    </details>
+                    <details>
+                        <summary>Funktioniert es mit Zoom, Teams, WhatsApp und YouTube?</summary>
+                        <div>Ja. Live Captions hört den Ton ab, den Ihr Computer wiedergibt, und funktioniert daher mit jeder App: Zoom-, Microsoft-Teams-, Google-Meet-, WhatsApp- und Telegram-Anrufe, YouTube, Filme, TV-Streams und Online-Vorträge. In diesen Apps muss nichts installiert werden, und nichts nimmt an Ihrem Anruf teil.</div>
+                    </details>
+                    <details>
+                        <summary>Sehen die anderen Personen im Anruf die Untertitel?</summary>
+                        <div>Nein. Die Untertitel erscheinen nur auf Ihrem Bildschirm. Andere Personen werden nicht benachrichtigt und sehen nichts.</div>
+                    </details>
+                    <details>
+                        <summary>Übersetzt Live Captions?</summary>
+                        <div>Nein. Live Captions schreibt mit, was gesagt wird, in derselben Sprache, in der gesprochen wird. Es ist dafür gemacht, Sprache zu lesen, nicht sie zu übersetzen.</div>
+                    </details>
+                    <details>
+                        <summary>Was kostet es?</summary>
+                        <div>Sie starten mit kostenlosen Minuten, keine Kreditkarte nötig. Danach können Sie ein Minutenpaket kaufen (300 Minuten für $6.99, 1.000 für $14.99, 10.000 für $119.99) oder ein Abonnement: Basic 400 Minuten im Monat für $4.99 ($49.99 im Jahr), Pro 1.200 Minuten im Monat für $11.99 ($99.99 im Jahr) oder Max 3.000 Minuten im Monat für $21.99. Die Preise enthalten die Steuer. Minuten werden nur verbraucht, während Untertitel laufen.</div>
+                    </details>
+                    <details>
+                        <summary>Wird mein Ton aufgezeichnet?</summary>
+                        <div>Wir zeichnen Ihren Ton nicht auf und speichern ihn nicht. Während Untertitel laufen, wird der Ton an unseren Spracherkennungsanbieter gestreamt, um ihn in Text umzuwandeln. Der Textverlauf wird nur auf Ihrem Computer gespeichert, und Sie können ihn löschen. Details finden Sie in der <a href="/captions/privacy.html">Datenschutzerklärung</a>.</div>
+                    </details>
+                    <details>
+                        <summary>Was brauche ich, um es zu nutzen?</summary>
+                        <div>Einen PC mit Windows 10 oder Windows 11 und eine Internetverbindung. Ein Mikrofon ist nur nötig, wenn Sie Untertitel für Personen möchten, die im Raum sprechen.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt cta-final" id="download">
+            <div class="wrap wrap--narrow">
+                <h2>Live Captions kostenlos testen</h2>
+                <p class="section__lead" style="margin-left:auto;margin-right:auto">Kostenlose Minuten für Echtzeit-Untertitel, keine Kreditkarte nötig. Fragen? Schreiben Sie an <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>, wir beantworten jede Nachricht.</p>
+                <div class="hero__cta">
+                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
+                        Für Windows herunterladen
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> für Windows 10 und 11
+                <small>© 2026 Live Subtitles. Alle Rechte vorbehalten.</small>
+            </div>
+            <nav aria-label="Fußzeile">
+                <a href="/captions/privacy.html">Datenschutz</a>
+                <a href="/captions/terms.html">Nutzungsbedingungen</a>
+                <a href="/captions/refund.html">Rückerstattungen</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/de/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

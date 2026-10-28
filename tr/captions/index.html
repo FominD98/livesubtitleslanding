@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Analytics: the same GA4 / Google tag and Yandex Metrica as the rest of the site.
+         The Meta pixel (LiveSubtitles Web dataset) is left out on purpose: it would add
+         Live Captions visitors to the Live Subtitles audiences. -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough on Store links + GA4 store_click. The Store links below carry their own
+         onclick, so cid-tracker does not attach the Live Subtitles download conversion to them. -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>Windows için Canlı Altyazı: Her Sesin Anlık Yazıya Dökümü</title>
+    <meta name="description" content="Bilgisayardaki her ses için büyük, net canlı altyazı: görüşmeler, videolar ve dersler. 60 dil, konuşmacı renkleri, TXT/SRT. Windows 10 ve 11. Ücretsiz deneyin.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/tr/captions/" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/captions/" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/captions/" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/captions/" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/captions/" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/captions/" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/captions/" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/captions/" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/captions/" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/captions/" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/captions/" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/captions/" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/captions/" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/captions/" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/captions/" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <meta name="application-name" content="Live Captions">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="Windows için Canlı Altyazı: Her Sesin Anlık Yazıya Dökümü">
+    <meta property="og:description" content="Bilgisayarınızdaki her ses için büyük, net canlı altyazı: görüşmeler, videolar, filmler ve dersler. 60 dil, konuşmacı renkleri, geçmiş ve dışa aktarma. Ücretsiz deneyin.">
+    <meta property="og:url" content="https://live-subtitles.com/tr/captions/">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Live Captions uygulama simgesi ve yazı: Windows için gerçek zamanlı altyazı">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:locale:alternate" content="pt_BR">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="og:locale:alternate" content="de_DE">
+    <meta property="og:locale:alternate" content="it_IT">
+    <meta property="og:locale:alternate" content="nl_NL">
+    <meta property="og:locale:alternate" content="pl_PL">
+    <meta property="og:locale:alternate" content="uk_UA">
+    <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ar_AR">
+    <meta property="og:locale:alternate" content="hi_IN">
+    <meta property="og:locale:alternate" content="ja_JP">
+    <meta property="og:locale:alternate" content="ko_KR">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Windows için Canlı Altyazı: Her Sesin Anlık Yazıya Dökümü">
+    <meta name="twitter:description" content="Bilgisayarınızdaki her ses için büyük, net canlı altyazı: görüşmeler, videolar, filmler ve dersler. 60 dil, konuşmacı renkleri, geçmiş ve dışa aktarma.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Live Captions & Transcribe",
+        "alternateName": "Live Captions",
+        "applicationCategory": "UtilitiesApplication",
+        "applicationSubCategory": "Canlı altyazı ve konuşmadan metne dönüştürme",
+        "operatingSystem": "Windows 10, Windows 11",
+        "url": "https://live-subtitles.com/tr/captions/",
+        "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+        "installUrl": "https://get.microsoft.com/installer/download/9NJHDV2W6999",
+        "sameAs": [
+            "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "https://www.producthunt.com/posts/live-captions-transcribe"
+        ],
+        "image": "https://live-subtitles.com/captions/img/livecaptions-512.png",
+        "inLanguage": "tr",
+        "description": "Windows bilgisayarda veya mikrofonda herhangi bir ses için gerçek zamanlı altyazı: görüşmeler, videolar, filmler, dersler ve TV yayınları. Otomatik algılama ile 60 konuşma dili, her konuşmacı için farklı bir renk, aranabilir ve TXT/SRT olarak dışa aktarılabilir konuşma geçmişi, 64 pt'ye kadar büyük metin. Sadece altyazı, çeviri yok.",
+        "featureList": [
+            "Bilgisayardaki veya mikrofondaki herhangi bir ses için gerçek zamanlı altyazı",
+            "Otomatik dil algılamalı 60 konuşma dili",
+            "Farklı renklerde konuşmacı etiketleri, her konuşmacı yeni bir satırda",
+            "Arama, konuşmacı yeniden adlandırma, kopyalama ve TXT/SRT dışa aktarma özellikli konuşma geçmişi",
+            "64 pt'ye kadar büyük metin, açık, koyu ve yüksek kontrastlı stiller",
+            "Her zaman üstte kalan, tıkla-geç altyazı penceresi"
+        ],
+        "offers": [
+            { "@type": "Offer", "name": "Başlamak için ücretsiz dakikalar", "price": "0", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "300 dakika (tek seferlik paket)", "price": "6.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "1.000 dakika (tek seferlik paket)", "price": "14.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "10.000 dakika (tek seferlik paket)", "price": "119.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Basic: ayda 400 dakika, aylık", "price": "4.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Basic: ayda 400 dakika, yıllık", "price": "49.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro: ayda 1.200 dakika, aylık", "price": "11.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Pro: ayda 1.200 dakika, yıllık", "price": "99.99", "priceCurrency": "USD" },
+            { "@type": "Offer", "name": "Max: ayda 3.000 dakika, aylık", "price": "21.99", "priceCurrency": "USD" }
+        ],
+        "publisher": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com",
+            "email": "captions@live-subtitles.com"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Bu, Windows 11'e yerleşik canlı altyazılardan farkı nedir?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yerleşik özellik ücretsizdir ve yalnızca Windows 11'de, Windows sürümünüze bağlı sınırlı bir dil setiyle çalışır. Live Captions, Windows 10'da da çalışır, 60 dili tanır ve dili kendisi algılar, her konuşmacıyı yeni bir satırda farklı bir renkle gösterir, TXT veya SRT olarak dışa aktarabileceğiniz aranabilir bir geçmiş tutar ve metni 64 pt'ye kadar çok büyük yapmanıza olanak tanır." }
+            },
+            {
+                "@type": "Question",
+                "name": "Zoom, Teams, WhatsApp ve YouTube ile çalışır mı?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Evet. Live Captions, bilgisayarınızın çaldığı sesi dinler, bu yüzden her uygulamayla çalışır: Zoom, Microsoft Teams, Google Meet, WhatsApp ve Telegram görüşmeleri, YouTube, filmler, TV yayınları ve online dersler. Bu uygulamalara hiçbir şey yüklenmesi gerekmez ve görüşmenize hiçbir şey katılmaz." }
+            },
+            {
+                "@type": "Question",
+                "name": "Görüşmedeki diğer kişiler altyazıları görecek mi?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Altyazılar yalnızca sizin ekranınızda görünür. Diğer kişilere herhangi bir bildirim gitmez ve hiçbir şey görmezler." }
+            },
+            {
+                "@type": "Question",
+                "name": "Live Captions çeviri yapar mı?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Live Captions, söylenenleri konuşulduğu dilde yazıya döker. Konuşmayı okumak için tasarlanmıştır, çevirmek için değil." }
+            },
+            {
+                "@type": "Question",
+                "name": "Fiyatı ne kadar?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Ücretsiz dakikalarla başlarsınız, kredi kartı gerekmez. Sonrasında bir dakika paketi (300 dakika için $6.99, 1.000 dakika için $14.99, 10.000 dakika için $119.99) veya bir abonelik satın alabilirsiniz: Basic ayda 400 dakika için $4.99 (yılda $49.99), Pro ayda 1.200 dakika için $11.99 (yılda $99.99) veya Max ayda 3.000 dakika için $21.99. Fiyatlara vergi dahildir. Dakikalar yalnızca altyazılar çalışırken kullanılır." }
+            },
+            {
+                "@type": "Question",
+                "name": "Sesim kaydediliyor mu?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Sesinizi kaydetmiyor veya saklamıyoruz. Altyazılar çalışırken ses, metne dönüştürülmek üzere konuşma tanıma sağlayıcımıza aktarılır. Metin geçmişi yalnızca bilgisayarınızda saklanır ve istediğiniz zaman silebilirsiniz." }
+            },
+            {
+                "@type": "Question",
+                "name": "Kullanmak için neye ihtiyacım var?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Windows 10 veya Windows 11 yüklü bir bilgisayar ve internet bağlantısı. Mikrofon yalnızca odadaki insanlar için altyazı istiyorsanız gereklidir." }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">İçeriğe geç</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/tr/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="Ana menü">
+                <a class="lc-nav__extra" href="#how">Nasıl çalışır</a>
+                <a class="lc-nav__extra" href="#features">Özellikler</a>
+                <a href="#pricing">Fiyatlar</a>
+                <a class="lc-nav__extra" href="#faq">SSS</a>
+                <details class="lc-lang">
+                    <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="tr">Türkçe</span></summary>
+                    <ul class="lc-lang__menu">
+                        <li><a href="/captions/" hreflang="en" lang="en">English</a></li>
+                        <li><a href="/es/captions/" hreflang="es" lang="es">Español</a></li>
+                        <li><a href="/pt/captions/" hreflang="pt" lang="pt">Português</a></li>
+                        <li><a href="/fr/captions/" hreflang="fr" lang="fr">Français</a></li>
+                        <li><a href="/de/captions/" hreflang="de" lang="de">Deutsch</a></li>
+                        <li><a href="/it/captions/" hreflang="it" lang="it">Italiano</a></li>
+                        <li><a href="/nl/captions/" hreflang="nl" lang="nl">Nederlands</a></li>
+                        <li><a href="/pl/captions/" hreflang="pl" lang="pl">Polski</a></li>
+                        <li><a href="/tr/captions/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></li>
+                        <li><a href="/uk/captions/" hreflang="uk" lang="uk">Українська</a></li>
+                        <li><a href="/ru/captions/" hreflang="ru" lang="ru">Русский</a></li>
+                        <li><a href="/ar/captions/" hreflang="ar" lang="ar">العربية</a></li>
+                        <li><a href="/hi/captions/" hreflang="hi" lang="hi">हिन्दी</a></li>
+                        <li><a href="/ja/captions/" hreflang="ja" lang="ja">日本語</a></li>
+                        <li><a href="/ko/captions/" hreflang="ko" lang="ko">한국어</a></li>
+                        <li><a href="/zh/captions/" hreflang="zh" lang="zh">简体中文</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <section class="hero">
+            <div class="wrap hero__grid">
+                <div>
+                    <h1>Live Captions: Bilgisayarınızda duyduğunuz her kelimeyi okuyun</h1>
+                    <p class="hero__lead">Video görüşmeleri, YouTube, filmler, dersler ve TV için gerçek zamanlı altyazı. Her uygulamanın üzerinde büyük, net metin, her konuşmacı için ayrı bir renk ve aranabilir bir geçmiş. Windows 10 ve 11 için.</p>
+                    <div class="hero__cta">
+                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
+                            Windows için indir
+                        </a>
+                        <a class="btn btn--ghost" href="#pricing">Fiyatlara bakın</a>
+                    </div>
+                    <p class="hero__note">Başlamak için ücretsiz dakikalar. Kredi kartı gerekmez.</p>
+                    <ul class="checks">
+                        <li>Zoom, Teams, Meet, WhatsApp ve Telegram'da görüşmeler</li>
+                        <li>Otomatik algılanan 60 konuşma dili</li>
+                        <li>64 pt'ye kadar metin boyutu</li>
+                    </ul>
+                </div>
+                <div class="mock" role="img" aria-label="Live Captions penceresi: iki konuşmacı iki farklı renkte, her biri yeni bir satırda gösterilir">
+                    <div class="mock__bar">
+                        <span class="mock__dot"></span>
+                        <span class="mock__state">Dinliyor</span>
+                        <span>· bilgisayar sesi</span>
+                        <span class="mock__pill">Duraklat</span>
+                    </div>
+                    <div class="mock__body">
+                        <span class="mock__who mock__who--1">Konuşmacı 1</span>
+                        <p class="mock__line mock__line--old">İyi akşamlar. Bugün bahçeyi kışa hazırlamaktan bahsedeceğiz.</p>
+                        <span class="mock__who mock__who--2">Konuşmacı 2</span>
+                        <p class="mock__line">Yapılacak ilk şey, ilk don gelmeden gülleri örtmek</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="what">
+            <div class="wrap">
+                <h2>Live Captions ne yapar</h2>
+                <p class="section__lead">Bilgisayarınızdaki sesi veya mikrofonunuzu dinler ve söylenenleri yaklaşık bir saniye içinde büyük metin olarak gösterir. Tek bir uygulama için değil, tüm bilgisayarınız için altyazı.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <h3>Video görüşmeleri</h3>
+                        <p>İnsanlardan tekrar etmelerini istemeden Zoom, Microsoft Teams, Google Meet, WhatsApp veya Telegram görüşmelerini takip edin. Görüşmeye hiçbir şey katılmaz ve altyazılarınızı başka kimse görmez.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Videolar, filmler ve TV</h3>
+                        <p>Kendi altyazısı olmayan videolar dahil, YouTube, filmler, TV yayınları, podcast'ler, webinarlar ve online dersler için altyazı.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Yanınızdaki insanlar</h3>
+                        <p>Mikrofona geçin ve yanınızdaki kişinin söylediklerini okuyun: doktorda, derste veya aile sofrasında.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>Kimler için</h2>
+                <div class="grid grid--2">
+                    <div class="card">
+                        <h3>İşitme güçlüğü çeken kişiler için</h3>
+                        <p>Görüşmeleri ve videoları duymak için zorlanmak yerine okuyun. Büyük metin ve yüksek kontrastlı görünümler, görme keskinliğiniz eskisi gibi değilse de yardımcı olur.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Aileler için</h3>
+                        <p>Bir ebeveynin veya büyükanne/büyükbabanın bilgisayarına kurun, böylece aile video görüşmelerine yeniden katılabilsinler.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Konuşmayı takip etmekte zorlanan herkes için</h3>
+                        <p>Kısık sesler, hızlı konuşanlar, güçlü aksanlar veya kötü ses kalitesi: ekranda yazıya dökülen konuşmayla tek kelime kaçırmazsınız.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Öğrenciler ve ofis çalışanları için</h3>
+                        <p>Dersleri ve uzun toplantıları canlı olarak yazıya dökün, ardından metinde arama yapın ve dosya olarak kaydedin.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="how">
+            <div class="wrap">
+                <h2>Nasıl çalışır</h2>
+                <p class="section__lead">Kurulum yok, ikinci bir cihaz yok, Zoom'a veya tarayıcınıza yüklenecek hiçbir şey yok.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>Live Captions'ı açın</h3>
+                        <p>Microsoft Store'dan yükleyin ve açın. Altyazı penceresi diğer uygulamalarınızın üzerinde görünür.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>Neyi dinleyeceğinizi seçin</h3>
+                        <p>Görüşmeler ve videolar için bilgisayar sesi, yanınızdaki insanlar için mikrofon.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>Başlat'a basın ve okuyun</h3>
+                        <p>İnsanlar konuştukça gerçek zamanlı altyazılar görünür. İstediğiniz zaman duraklatın; dakikalar yalnızca altyazılar çalışırken kullanılır.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="features">
+            <div class="wrap">
+                <h2>Özellikler</h2>
+                <p class="section__lead">Büyük düğmeler ve sade kelimelerle okuması ve kullanması kolay olacak şekilde tasarlandı.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <h3>Kim ne dedi</h3>
+                        <p>Her konuşmacı kendi renginde "Konuşmacı 1", "Konuşmacı 2" olarak etiketlenir ve her yeni konuşmacı yeni bir satırda başlar.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Büyük, net metin</h3>
+                        <p>Metni 64 pt'ye kadar ihtiyacınız olduğu kadar büyütün. Pencereyi taşıyın ve yeniden boyutlandırın, örneğin bir videonun altına yerleştirin.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Açık, koyu veya yüksek kontrast</h3>
+                        <p>Gözlerinize rahat gelen bir görünüm ve metin rengi seçin.</p>
+                    </div>
+                    <div class="card">
+                        <h3>60 dil</h3>
+                        <p>Türkçe, İngilizce, İspanyolca, Almanca, Fransızca, İtalyanca, Portekizce, Rusça, Lehçe, Çince, Japonca, Korece, Arapça, Hintçe ve daha birçok dil. Dil otomatik olarak algılanır.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Konuşma geçmişi</h3>
+                        <p>Her oturum bilgisayarınıza kaydedilir. Geriye gidin, kelimeyle arama yapın, konuşmacıları yeniden adlandırın, metni kopyalayın veya TXT ya da SRT olarak dışa aktarın.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Yolunuza çıkmaz</h3>
+                        <p>Pencere her zaman üstte kalır. Tıkla-geç modunda fare tıklamalarınız altındaki uygulamaya geçer.</p>
+                    </div>
+                </div>
+                <p class="note"><strong>Sadece altyazı.</strong> Live Captions, söylenenleri konuşulduğu dilde yazıya döker. Çeviri yapmaz.</p>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="pricing">
+            <div class="wrap">
+                <h2>Fiyatlar</h2>
+                <p class="section__lead">Ücretsiz dakikalarla başlayın. Ardından bir kerelik dakika satın alın veya aylık bir pakete abone olun. Fiyatlar ABD doları cinsindendir ve vergi dahildir; ödeme yapmadan önce yerel fiyatınız gösterilir.</p>
+
+                <div class="trial">
+                    <p><strong>Başlamak ücretsiz:</strong> ücretsiz altyazı dakikaları, kredi kartı gerekmez.</p>
+                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Ücretsiz deneyin</a>
+                </div>
+
+                <div class="price-block">
+                    <h3>Dakika paketleri</h3>
+                    <p>Bir kez ödeyin. Dakikaları istediğiniz zaman kullanın.</p>
+                    <div class="plans">
+                        <div class="plan">
+                            <p class="plan__name">300 dakika</p>
+                            <p class="plan__mins">5 saat altyazı</p>
+                            <p class="plan__price">$6.99</p>
+                            <p class="plan__per">dakika başına yaklaşık 2,3 sent</p>
+                        </div>
+                        <div class="plan plan--best">
+                            <span class="plan__tag">Popüler</span>
+                            <p class="plan__name">1.000 dakika</p>
+                            <p class="plan__mins">yaklaşık 16,5 saat</p>
+                            <p class="plan__price">$14.99</p>
+                            <p class="plan__per">dakika başına yaklaşık 1,5 sent</p>
+                        </div>
+                        <div class="plan">
+                            <p class="plan__name">10.000 dakika</p>
+                            <p class="plan__mins">yaklaşık 166 saat</p>
+                            <p class="plan__price">$119.99</p>
+                            <p class="plan__per">dakika başına yaklaşık 1,2 sent</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="price-block">
+                    <h3>Abonelikler</h3>
+                    <p>Her ay yeni bir dakika kotası. İstediğiniz zaman iptal edin.</p>
+                    <div class="plans">
+                        <div class="plan">
+                            <p class="plan__name">Basic</p>
+                            <p class="plan__mins">ayda 400 dakika</p>
+                            <p class="plan__price">$4.99 <small>/ ay</small></p>
+                            <p class="plan__alt">veya yılda $49.99</p>
+                        </div>
+                        <div class="plan plan--best">
+                            <span class="plan__tag">Günlük görüşmeler için en iyisi</span>
+                            <p class="plan__name">Pro</p>
+                            <p class="plan__mins">ayda 1.200 dakika</p>
+                            <p class="plan__price">$11.99 <small>/ ay</small></p>
+                            <p class="plan__alt">veya yılda $99.99</p>
+                        </div>
+                        <div class="plan">
+                            <p class="plan__name">Max</p>
+                            <p class="plan__mins">ayda 3.000 dakika</p>
+                            <p class="plan__price">$21.99 <small>/ ay</small></p>
+                            <p class="plan__alt">yalnızca aylık</p>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="note">Dakikalar yalnızca altyazılar çalışırken sayılır. Ödemeler, yetkili satıcımız <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a> tarafından işlenir. <a href="/captions/refund.html">İade politikasına</a> bakın.</p>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="wrap wrap--narrow">
+                <h2>Sorular ve cevaplar</h2>
+                <div class="faq">
+                    <details>
+                        <summary>Bu, Windows 11'e yerleşik canlı altyazılardan farkı nedir?</summary>
+                        <div>Yerleşik özellik ücretsizdir ve yalnızca Windows 11'de, Windows sürümünüze bağlı sınırlı bir dil setiyle çalışır. Live Captions, Windows 10'da da çalışır, 60 dili tanır ve dili kendisi algılar, her konuşmacıyı yeni bir satırda farklı bir renkle gösterir, TXT veya SRT olarak dışa aktarabileceğiniz aranabilir bir geçmiş tutar ve metni 64 pt'ye kadar çok büyük yapmanıza olanak tanır.</div>
+                    </details>
+                    <details>
+                        <summary>Zoom, Teams, WhatsApp ve YouTube ile çalışır mı?</summary>
+                        <div>Evet. Live Captions, bilgisayarınızın çaldığı sesi dinler, bu yüzden her uygulamayla çalışır: Zoom, Microsoft Teams, Google Meet, WhatsApp ve Telegram görüşmeleri, YouTube, filmler, TV yayınları ve online dersler. Bu uygulamalara hiçbir şey yüklenmesi gerekmez ve görüşmenize hiçbir şey katılmaz.</div>
+                    </details>
+                    <details>
+                        <summary>Görüşmedeki diğer kişiler altyazıları görecek mi?</summary>
+                        <div>Hayır. Altyazılar yalnızca sizin ekranınızda görünür. Diğer kişilere herhangi bir bildirim gitmez ve hiçbir şey görmezler.</div>
+                    </details>
+                    <details>
+                        <summary>Live Captions çeviri yapar mı?</summary>
+                        <div>Hayır. Live Captions, söylenenleri konuşulduğu dilde yazıya döker. Konuşmayı okumak için tasarlanmıştır, çevirmek için değil.</div>
+                    </details>
+                    <details>
+                        <summary>Fiyatı ne kadar?</summary>
+                        <div>Ücretsiz dakikalarla başlarsınız, kredi kartı gerekmez. Sonrasında bir dakika paketi (300 dakika için $6.99, 1.000 dakika için $14.99, 10.000 dakika için $119.99) veya bir abonelik satın alabilirsiniz: Basic ayda 400 dakika için $4.99 (yılda $49.99), Pro ayda 1.200 dakika için $11.99 (yılda $99.99) veya Max ayda 3.000 dakika için $21.99. Fiyatlara vergi dahildir. Dakikalar yalnızca altyazılar çalışırken kullanılır.</div>
+                    </details>
+                    <details>
+                        <summary>Sesim kaydediliyor mu?</summary>
+                        <div>Sesinizi kaydetmiyor veya saklamıyoruz. Altyazılar çalışırken ses, metne dönüştürülmek üzere konuşma tanıma sağlayıcımıza aktarılır. Metin geçmişi yalnızca bilgisayarınızda saklanır ve istediğiniz zaman silebilirsiniz. Ayrıntılar <a href="/captions/privacy.html">gizlilik politikasında</a>.</div>
+                    </details>
+                    <details>
+                        <summary>Kullanmak için neye ihtiyacım var?</summary>
+                        <div>Windows 10 veya Windows 11 yüklü bir bilgisayar ve internet bağlantısı. Mikrofon yalnızca odadaki insanlar için altyazı istiyorsanız gereklidir.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt cta-final" id="download">
+            <div class="wrap wrap--narrow">
+                <h2>Live Captions'ı ücretsiz deneyin</h2>
+                <p class="section__lead" style="margin-left:auto;margin-right:auto">Kredi kartı gerekmeden ücretsiz gerçek zamanlı altyazı dakikaları. Sorularınız mı var? <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a> adresine yazın, her mesajı yanıtlıyoruz.</p>
+                <div class="hero__cta">
+                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
+                        Windows için indir
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> Windows 10 ve 11 için
+                <small>© 2026 Live Subtitles. Tüm hakları saklıdır.</small>
+            </div>
+            <nav aria-label="Alt bilgi">
+                <a href="/captions/privacy.html">Gizlilik</a>
+                <a href="/captions/terms.html">Koşullar</a>
+                <a href="/captions/refund.html">İadeler</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/tr/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

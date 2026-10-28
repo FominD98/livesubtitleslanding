@@ -1,6 +1,6 @@
-/* Live Captions — стили раздела /captions/ и /ru/captions/.
-   Отдельно от css/landing.css: у продукта свой вид, как у приложения — тёплый светлый фон,
-   белые карточки, бирюзовый акцент, крупный шрифт и высокий контраст для аудитории 45–75. */
+/* Live Captions — styles for /captions/ and its localized copies (/<lang>/captions/).
+   Separate from css/landing.css: the product has its own look, like the app — warm light background,
+   white cards, teal accent, large type and high contrast for a 45–75 audience. */
 
 :root {
     --bg: #FAF8F5;
@@ -39,7 +39,7 @@ a:hover { color: var(--accent-dark); }
 :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
 .skip {
-    position: absolute; left: -9999px; top: 0;
+    position: absolute; left: 1rem; top: -200px;
     background: var(--accent); color: #fff; padding: .6rem 1rem; z-index: 10;
 }
 .skip:focus { left: 1rem; top: 1rem; }
@@ -47,7 +47,7 @@ a:hover { color: var(--accent-dark); }
 .wrap { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem; }
 .wrap--narrow { max-width: 820px; }
 
-/* Шапка */
+/* Header */
 .lc-header { background: var(--card); border-bottom: 1px solid var(--line); }
 .lc-header .wrap {
     display: flex; align-items: center; justify-content: space-between;
@@ -61,11 +61,29 @@ a:hover { color: var(--accent-dark); }
 .lc-nav { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; }
 .lc-nav a { color: var(--ink-2); text-decoration: none; font-weight: 600; }
 .lc-nav a:hover { color: var(--accent); text-decoration: underline; }
-.lc-lang {
+a.lc-lang, .lc-lang > summary {
     border: 2px solid var(--line); border-radius: 10px; padding: .25rem .7rem;
 }
+/* Language picker: a CSS-only <details> dropdown */
+details.lc-lang { position: relative; }
+.lc-lang > summary {
+    list-style: none; cursor: pointer; font-weight: 600; color: var(--ink-2);
+    display: inline-flex; align-items: center; gap: .4rem;
+}
+.lc-lang > summary::-webkit-details-marker { display: none; }
+.lc-lang > summary::after { content: "▾"; font-size: .8em; }
+.lc-lang > summary:hover { color: var(--accent); }
+.lc-lang__menu {
+    position: absolute; right: 0; top: calc(100% + .4rem); z-index: 20;
+    display: grid; grid-template-columns: 1fr 1fr; gap: .1rem .4rem;
+    min-width: 18rem; padding: .5rem; margin: 0; list-style: none;
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 8px 24px rgba(40, 30, 20, .14);
+}
+.lc-lang__menu a { display: block; padding: .35rem .6rem; border-radius: 8px; font-weight: 600; }
+.lc-lang__menu a[aria-current="page"] { background: var(--accent-soft); color: var(--accent-dark); }
+[dir="rtl"] .lc-lang__menu { right: auto; left: 0; }
 
-/* Кнопки */
+/* Buttons */
 .btn {
     display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
     min-height: 56px; padding: .8rem 1.6rem;
@@ -79,7 +97,7 @@ a:hover { color: var(--accent-dark); }
 .btn--sm { min-height: 44px; padding: .45rem 1.1rem; font-size: 1rem; }
 .btn svg { width: 22px; height: 22px; flex: none; }
 
-/* Первый экран */
+/* Hero */
 .hero { padding: 3.5rem 0 3rem; }
 .hero__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 2.5rem; align-items: center; }
 .hero h1 { font-size: 2.6rem; line-height: 1.2; margin: 0 0 1rem; letter-spacing: -.01em; }
@@ -98,7 +116,7 @@ a:hover { color: var(--accent-dark); }
     border: solid var(--accent); border-width: 0 3px 3px 0; transform: rotate(45deg);
 }
 
-/* Макет окна субтитров (HTML, а не картинка: текст на языке страницы и чёткий на любом экране) */
+/* Caption window mock-up (HTML, not an image: text in the page language and sharp on any screen) */
 .mock {
     background: var(--card); border: 1px solid var(--line); border-radius: 16px;
     box-shadow: 0 10px 30px rgba(40, 30, 20, .12); overflow: hidden;
@@ -123,7 +141,7 @@ a:hover { color: var(--accent-dark); }
 .mock__line { margin: .15rem 0 .2rem; font-size: 1.45rem; line-height: 1.35; color: var(--ink); }
 .mock__line--old { color: #5A5A5A; }
 
-/* Секции */
+/* Sections */
 .section { padding: 3.5rem 0; }
 .section--alt { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .section h2 { font-size: 2rem; line-height: 1.25; margin: 0 0 .6rem; }
@@ -158,7 +176,7 @@ a:hover { color: var(--accent-dark); }
     padding: 1rem 1.2rem; border-radius: 0 12px 12px 0; margin: 2rem 0 0;
 }
 
-/* Цены */
+/* Pricing */
 .price-block { margin-top: 2rem; }
 .price-block h3 { font-size: 1.4rem; margin: 0 0 .3rem; }
 .price-block > p { margin: 0 0 1rem; color: var(--ink-2); }
@@ -205,18 +223,18 @@ table.prices th, table.compare th { background: var(--accent-soft); }
 .faq details[open] summary::after { content: "−"; }
 .faq details > div { padding: 0 0 1.2rem; color: var(--ink-2); }
 
-/* Финальный призыв */
+/* Final call to action */
 .cta-final { text-align: center; }
 .cta-final .hero__cta { justify-content: center; }
 
-/* Подвал */
+/* Footer */
 .lc-footer { background: #F1EDE7; border-top: 1px solid var(--line); padding: 2rem 0; color: var(--ink-2); }
 .lc-footer .wrap { display: flex; flex-wrap: wrap; gap: 1rem 2rem; justify-content: space-between; }
 .lc-footer nav { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; }
 .lc-footer a { color: var(--ink); }
 .lc-footer small { display: block; color: var(--muted); font-size: .9rem; margin-top: .3rem; }
 
-/* Юридические страницы */
+/* Legal pages */
 .legal { padding: 2.5rem 0 3.5rem; }
 .legal h1 { font-size: 2.2rem; line-height: 1.2; margin: 0 0 .4rem; }
 .legal h2 { font-size: 1.45rem; margin: 2rem 0 .5rem; }
@@ -227,7 +245,7 @@ table.prices th, table.compare th { background: var(--accent-soft); }
 .legal th { background: var(--accent-soft); }
 .legal code, .guide code { background: #EFEBE5; padding: .1em .3em; border-radius: 4px; }
 
-/* Справочные страницы (/captions/*.html): прямой ответ, шаги, таблица, FAQ */
+/* Guide pages (/captions/*.html): direct answer, steps, table, FAQ */
 .guide { padding: 2rem 0 3.5rem; }
 .crumbs { font-size: .95rem; color: var(--muted); margin: 0 0 1rem; }
 .crumbs a { color: var(--muted); }
@@ -271,3 +289,13 @@ table.prices th, table.compare th { background: var(--accent-soft); }
 @media (forced-colors: active) {
     .btn, .card, .plan, .mock { border: 2px solid CanvasText; }
 }
+
+/* Right-to-left pages (Arabic) */
+[dir="rtl"] .checks li { padding-left: 0; padding-right: 2rem; }
+[dir="rtl"] .checks li::before { left: auto; right: 0; }
+[dir="rtl"] .checks li::after { left: auto; right: .42rem; }
+[dir="rtl"] .mock__pill { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .mock__who { padding-left: 0; padding-right: .5rem; border-left: 0; border-right: 4px solid currentColor; }
+[dir="rtl"] .card ul { padding-left: 0; padding-right: 1.2rem; }
+[dir="rtl"] .note { border-left: 0; border-right: 5px solid var(--accent); }
+[dir="rtl"] table.prices th, [dir="rtl"] table.prices td, [dir="rtl"] table.compare th, [dir="rtl"] table.compare td { text-align: right; }
