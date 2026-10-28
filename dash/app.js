@@ -1875,8 +1875,21 @@ function abMoney(t, app, n, pace) {
 
 // Реальные деньги: установки из бэкенда, выплаты Paddle (tools/dash/sources/abserver.py). Знаменатель — все новые
 // установки плеча за окно теста, у не купивших $0. Сравнение средних — z-тест Уэлча по сумме и сумме квадратов
+const abServerCache = new WeakMap();
+
 function abServer(t) {
     if (!t.server) return null;
+    if (abServerCache.has(t)) return abServerCache.get(t);
+    const out = abServerCalc(t);
+    abServerCache.set(t, out);
+    return out;
+}
+
+// Нормальное приближение к среднему «$ на человека» при почти одних нулях врёт, когда покупателей единицы:
+// 5 покупателей против 0 дают p ≈ 0.03, точный тест — 0.06. Значимость объявляем только от MIN_BUYERS в каждом плече
+const MIN_BUYERS = 10;
+
+function abServerCalc(t) {
     const get = (arm, metric, key = "") => t.server.find((r) => r.arm === arm && r.metric === metric && r.key === key)?.value || 0;
     const arm = (a) => {
         const n = get(a, "users");
@@ -1907,7 +1920,12 @@ function abServer(t) {
         // если раскатить B: разница на установку × новые установки за 30 дней в темпе окна теста
         monthly: diff * ((A.n + B.n) / days) * 30,
         outside: get("", "outside_net"),
+        // Android Pro Weekly (abplay.py): знаменатель — видевшие пейволл, деньги — заказы Play, сшитые с событиями GA4
+        play: t.server.some((x) => x.metric === "unit" && x.key === "paywall_android"),
+        fake: { A: get("A", "fake_purchases"), B: get("B", "fake_purchases") },
         need: abMoneyNeed(A, B),
+        computed: t.server.find((x) => x.metric === "computed")?.key || "",
+        fewBuyers: Math.min(A.buyers, B.buyers) < MIN_BUYERS,
         series: ["A", "B"].map((a) => t.server.filter((r) => r.arm === a && (r.metric === "day_users" || r.metric === "day_net"))),
     };
 }
@@ -1933,31 +1951,33 @@ function renderAbReal(t) {
     const r = abServer(t);
     card.hidden = !r;
     if (!r) return;
-    const sig = r.p < 0.05;
+    const sig = r.p < 0.05 && !r.fewBuyers;
     const tone = sig ? (r.diff > 0 ? "up" : "down") : "muted";
     const enough = Math.min(r.A.n, r.B.n) >= r.need;
     const pace = (r.A.n + r.B.n) / 2 / r.days;
     const eta = pace > 0 ? Math.ceil(Math.max(0, r.need - Math.min(r.A.n, r.B.n)) / pace) : Infinity;
-    const head = sig && enough ? `B ${r.diff > 0 ? "earns more" : "earns less"}: ${signedPct(r.lift)} per install — proven.`
+    const per = r.play ? "paywall viewer" : "install";
+    const head = sig && enough ? `B ${r.diff > 0 ? "earns more" : "earns less"}: ${signedPct(r.lift)} per ${per} — proven.`
         : sig ? `B ${r.diff > 0 ? "earns more" : "earns less"} (${signedPct(r.lift)}), significant but below the planned sample.`
+        : r.fewBuyers ? `Too few buyers to judge yet (${int(r.A.buyers)} / ${int(r.B.buyers)}, need ${MIN_BUYERS}+ in each arm).`
         : "No proven difference in real money.";
     document.getElementById("ab-real-head").replaceChildren(el("span", { class: sig ? tone : "" }, head));
     renderTileRow("ab-real-tiles", [
-        { label: "New installs · A / B", value: r.A.n + r.B.n, fmt: int, delta: el("span", { class: "muted" }, `${int(r.A.n)} / ${int(r.B.n)}`) },
+        { label: r.play ? "Saw paywall (Android) · A / B" : "New installs · A / B", value: r.A.n + r.B.n, fmt: int, delta: el("span", { class: "muted" }, `${int(r.A.n)} / ${int(r.B.n)}`) },
         { label: "Net revenue · A / B", value: r.B.net, fmt: (v) => `${usd(r.A.net)} / ${usd(v)}`,
           delta: el("span", { class: "muted" }, `${int(r.A.purchases)} / ${int(r.B.purchases)} payments`) },
-        { label: "Per install · A → B", value: r.B.mean || 0, fmt: (v) => `${money(r.A.mean)} → ${money(v)}`,
-          delta: el("span", { class: tone }, `${signedPct(r.lift)} · p = ${Number.isFinite(r.p) ? r.p.toFixed(3) : "—"}`) },
+        { label: `Per ${per} · A → B`, value: r.B.mean || 0, fmt: (v) => `${money(r.A.mean)} → ${money(v)}`,
+          delta: el("span", { class: tone }, `${signedPct(r.lift)} · ${r.fewBuyers ? "too few buyers" : `p = ${Number.isFinite(r.p) ? r.p.toFixed(3) : "—"}`}`) },
         { label: "Buyers · A → B", value: (r.conv.pb || 0) * 100, fmt: (v) => `${abPct(r.conv.pa)} → ${v.toFixed(2)}%`,
           delta: el("span", { class: r.conv.p < 0.05 ? (r.conv.lift > 0 ? "up" : "down") : "muted" },
               `${int(r.A.buyers)} / ${int(r.B.buyers)} people · p = ${Number.isFinite(r.conv.p) ? r.conv.p.toFixed(3) : "—"}`) },
         { label: "Chance B earns more", value: (r.probB || 0) * 100, fmt: (v) => `${v.toFixed(0)}%`,
-          delta: el("span", { class: "muted" }, `B − A, 95%: ${money(r.lo)} … ${money(r.hi)} per install`) },
+          delta: el("span", { class: "muted" }, `B − A, 95%: ${money(r.lo)} … ${money(r.hi)} per ${per}`) },
         { label: "If B for everyone", value: r.monthly || 0, fmt: (v) => `${signedUsd(v)}/mo`,
-          delta: el("span", { class: "muted" }, sig ? "net, at the current installs" : "net, at the current installs · not proven") },
+          delta: el("span", { class: "muted" }, sig ? `net, at the current ${per}s` : `net, at the current ${per}s · not proven`) },
     ]);
     document.getElementById("ab-real-plan").textContent = Number.isFinite(r.need)
-        ? `To tell a ±20% difference in money per install: ~${int(r.need)} installs per arm, now ${int(Math.min(r.A.n, r.B.n))}` +
+        ? `To tell a ±20% difference in money per ${per}: ~${int(r.need)} ${per}s per arm, now ${int(Math.min(r.A.n, r.B.n))}` +
           (enough ? " — reached." : t.status === "ended" ? " — the test ended before that." : ` — about ${Number.isFinite(eta) ? eta : "∞"} more days at the current pace.`)
         : "";
 
@@ -1991,13 +2011,25 @@ function renderAbReal(t) {
             maintainAspectRatio: false,
             interaction: { mode: "index", intersect: false },
             scales: { x: timeX, y: { beginAtZero: true, ticks: { callback: (v) => `$${v.toFixed(2)}` } } },
-            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: $${c.parsed.y?.toFixed(3)} per install` } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: $${c.parsed.y?.toFixed(3)} per ${per}` } } },
         },
     });
-    document.getElementById("ab-real-note").textContent =
-        "Who is in the test: every new install of the platform in the test window (backend trial records), split by the same fingerprint hash as the app — " +
+    document.getElementById("ab-real-title").textContent = r.play ? "Real money · Google Play orders" : "Real money · backend + Paddle";
+    const ageH = r.computed ? (Date.now() - Date.parse(r.computed.replace("Z", ":00Z"))) / 3600000 : Infinity;
+    const fresh = document.getElementById("ab-real-fresh");
+    fresh.className = ageH > 36 ? "down" : "muted";
+    fresh.textContent = r.computed
+        ? `computed ${r.computed.slice(0, 10)} ${r.computed.slice(11, 16)} UTC${ageH > 36 ? " — stale, the daily collection isn't updating it" : ""}`
+        : "computed: unknown";
+    document.getElementById("ab-real-chart-title").textContent = `Net $ per ${per}, cumulative`;
+    document.getElementById("ab-real-note").textContent = r.play
+        ? "Android only. Who is in the test: people who saw the paywall in each arm (GA4). Money: Google Play sales report, net estimated as 85% of the price, " +
+          "renewals and refunds follow the first order. A GA4 purchase counts only if Play has an order for the same product from the same country within 10 minutes — " +
+          `the rest are fake purchases from cracked apps or billing spoofers (A ${int(r.fake.A)}, B ${int(r.fake.B)}), not counted. One buyer = one first order. iOS isn't included. Updated daily.`
+        : "Who is in the test: every new install of the platform in the test window (backend trial records), split by the same fingerprint hash as the app — " +
         "whether or not they reached the paywall, so nothing can be cherry-picked. Money: Paddle payouts after fees and tax, minus refunds, " +
-        "from the test start to today (renewals included). Microsoft Store purchases aren't in the backend and are not counted — on Windows almost all payments go through Paddle. " +
+        "from the test start to today (renewals included). Microsoft Store purchases aren't in the backend and are not counted — on Windows almost all payments go through Paddle, " +
+        "except RU and BY, where the Store is the main button (both arms alike, but a plan that sells better through the Store is undercounted there). " +
         `Payments from people who are not new installs of the test window: ${usd(r.outside)} (not in either arm). Updated daily with the dashboard collection.` +
         (winMismatch(t) ? ` ⚠ The collector's window (${winMismatch(t)}) differs from this test's dates — update TESTS in tools/dash/sources/abserver.py.` : "");
 }
@@ -2016,8 +2048,9 @@ function abVerdict(t, s) {
     const m = s.money;
     const real = abServer(t);
     if (real) {
-        lines.push(`Real money per new install (backend + Paddle): A ${money(real.A.mean)} vs B ${money(real.B.mean)}, ${signedPct(real.lift)} ` +
-            `(p = ${Number.isFinite(real.p) ? real.p.toFixed(3) : "—"}, P(B earns more) ${abPct(real.probB)}).`);
+        lines.push(`Real money per ${real.play ? "paywall viewer (Play orders)" : "new install (backend + Paddle)"}: A ${money(real.A.mean)} vs B ${money(real.B.mean)}, ${signedPct(real.lift)} ` +
+            (real.fewBuyers ? `(too few buyers to judge: ${int(real.A.buyers)} / ${int(real.B.buyers)}).`
+                : `(p = ${Number.isFinite(real.p) ? real.p.toFixed(3) : "—"}, P(B earns more) ${abPct(real.probB)}).`));
     } else if (m.A.rev || m.B.rev) {
         const diverge = Number.isFinite(cmp.lift) && Number.isFinite(m.lift) && Math.sign(cmp.lift) !== Math.sign(m.lift) && Math.abs(m.lift) >= 0.05;
         lines.push(`Money per ${stepLabel(t, t.base).toLowerCase()} user in GA4 (rough): A ${money(m.A.mean)} vs B ${money(m.B.mean)}, ${signedPct(m.lift)}.` +
@@ -2026,7 +2059,7 @@ function abVerdict(t, s) {
     if (t.status === "ended") {
         return { cls: "", head: `Ended ${t.end}. ${t.winner ? `Rolled out ${t.winner}: ${t.arms[t.winner]}.` : "No winner rolled out."}`, lines };
     }
-    if (!n.A || !n.B) return { cls: "", head: "No users in the test yet.", lines: [] };
+    if (!n.A || !n.B) return { cls: "", head: real ? "No GA4 data for this test — see real money below." : "No users in the test yet.", lines };
     const enough = Math.min(n.A, n.B) >= need;
     const left = Math.max(0, need - Math.min(n.A, n.B));
     const eta = s.pace > 0 ? Math.ceil(left / s.pace) : Infinity;
@@ -2058,7 +2091,7 @@ function renderAb() {
             const s = abStats(t, "all");
             const real = abServer(t);
             const hasMoney = !!(real || s.money.A.rev || s.money.B.rev);
-            const m = real ? { a: real.A.mean, b: real.B.mean, lift: real.lift, p: real.p } : { a: s.money.A.mean, b: s.money.B.mean, lift: s.money.lift, p: NaN };
+            const m = real ? { a: real.A.mean, b: real.B.mean, lift: real.lift, p: real.fewBuyers ? NaN : real.p } : { a: s.money.A.mean, b: s.money.B.mean, lift: s.money.lift, p: NaN };
             const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : `Running · ${s.days} d`;
             return el("tr", { class: `clickable${t.id === state.abSel.test ? " active" : ""}`, onclick: () => setAb({ test: t.id, app: "all" }) },
                 td([t.name, el("span", { class: "muted small" }, ` · ${t.app}`)]), td(status), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
