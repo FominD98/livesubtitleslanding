@@ -1921,13 +1921,13 @@ function renderAb() {
     // Сводка в ширину экрана: по каждому тесту конверсия и деньги рядом, A → B и прирост с p в одной ячейке
     const liftCell = (lift, p, show = true) => td(show ? `${signedPct(lift)} · p ${Number.isFinite(p) ? p.toFixed(2) : "—"}` : "—", true,
         show && p < 0.05 ? (lift > 0 ? "up" : "down") : "");
-    table("tbl-ab-tests", [["Test"], ["App"], ["Status"], ["In test A / B", 1], ["Main metric"], ["A → B", 1], ["B vs A", 1], ["$ / user A → B", 1], ["$ B vs A", 1]],
+    table("tbl-ab-tests", [["Test"], ["Status"], ["In test A / B", 1], ["Main metric"], ["A → B", 1], ["B vs A", 1], ["$ / user A → B", 1], ["$ B vs A", 1]],
         tests.map((t) => {
             const s = abStats(t, "all");
             const hasMoney = !!(s.money.A.rev || s.money.B.rev);
             const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : `Running · ${s.days} d`;
             return el("tr", { class: `clickable${t.id === state.abSel.test ? " active" : ""}`, onclick: () => setAb({ test: t.id, app: "all" }) },
-                td(t.name), td(t.app), td(status), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
+                td([t.name, el("span", { class: "muted small" }, ` · ${t.app}`)]), td(status), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
                 td(`${stepLabel(t, t.goal)} / ${stepLabel(t, t.base).toLowerCase()}`), td(`${abPct(s.cmp.pa)} → ${abPct(s.cmp.pb)}`, true),
                 liftCell(s.cmp.lift, s.cmp.p),
                 td(hasMoney ? `${money(s.money.A.mean)} → ${money(s.money.B.mean)}` : "no purchases", true),
