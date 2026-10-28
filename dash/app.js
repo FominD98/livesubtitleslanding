@@ -1789,6 +1789,8 @@ state.abSel = { test: null, app: "all" };
 const ARM_COLOR = { A: "--series-1", B: "--series-3" };
 const AB_APP_NAMES = { all: "All platforms", android: "Android", apple: "iOS", windows: "Windows" };
 const abPct = (v) => (Number.isFinite(v) ? `${(v * 100).toFixed(v < 0.1 ? 2 : 1)}%` : "—");
+const money = (v) => (Number.isFinite(v) ? `${v < 0 ? "−" : ""}$${Math.abs(v).toFixed(2)}` : "—");
+const signedUsd = (v) => (Number.isFinite(v) ? `${v > 0 ? "+" : v < 0 ? "−" : ""}$${Math.abs(v).toLocaleString("en-US", { maximumFractionDigits: 0 })}` : "—");
 const signedPct = (v) => (Number.isFinite(v) ? `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v * 100).toFixed(1)}%` : "—");
 
 // Φ(z), Абрамовиц–Стиган 7.1.26: точности 1e-7 для p-value хватает
@@ -1839,11 +1841,36 @@ function abStats(t, app) {
     const need = abSampleNeeded(cmp.pa);
     const days = abDays(t);
     const srmZ = (entered.A - entered.B) / Math.sqrt(entered.A + entered.B || 1);
-    // Выручка на пользователя знаменателя: GA4 отдаёт только суммы, без разброса по людям — значимость не считается
-    const rev = { A: abUsers(t, "A", "purchase", app, "revenue"), B: abUsers(t, "B", "purchase", app, "revenue") };
-    const arpu = { A: n.A ? rev.A / n.A : NaN, B: n.B ? rev.B / n.B : NaN };
-    return { n, x, entered, cmp, need, days, rev, arpu, arpuLift: arpu.A ? arpu.B / arpu.A - 1 : NaN,
-        pace: (n.A + n.B) / 2 / days, srmP: 2 * (1 - normCdf(Math.abs(srmZ))) };
+    const pace = (n.A + n.B) / 2 / days;
+    return { n, x, entered, cmp, need, days, pace, money: abMoney(t, app, n, pace), srmP: 2 * (1 - normCdf(Math.abs(srmZ))) };
+}
+
+// Деньги на пользователя знаменателя. Покупка — транзакция (у Android без transaction_id — n покупок по средней цене),
+// у не купивших 0. Сравнение средних — z-тест Уэлча по этим значениям; ДИ 95% — для разницы $ на пользователя
+function abMoney(t, app, n, pace) {
+    const arm = (a) => {
+        const list = t.purchases.filter((p) => p.arm === a && (app === "all" || p.app === app));
+        const rev = sum(list, (p) => p.value * p.n);
+        const sq = sum(list, (p) => p.value * p.value * p.n);
+        const count = sum(list, (p) => p.n);
+        const mean = n[a] ? rev / n[a] : NaN;
+        const v = n[a] ? Math.max(sq / n[a] - mean * mean, 0) / n[a] : NaN;
+        return { rev, count, mean, v, avg: count ? rev / count : NaN };
+    };
+    const A = arm("A");
+    const B = arm("B");
+    const diff = B.mean - A.mean;
+    const se = Math.sqrt(A.v + B.v);
+    return {
+        A, B, diff, lift: A.mean ? B.mean / A.mean - 1 : NaN,
+        p: se ? 2 * (1 - normCdf(Math.abs(diff / se))) : NaN,
+        probB: se ? normCdf(diff / se) : NaN,
+        lo: diff - 1.96 * se, hi: diff + 1.96 * se,
+        // если оставить B всем: разница на пользователя × сколько людей за 30 дней доходит до знаменателя (оба плеча)
+        monthly: diff * pace * 2 * 30,
+        lost: sum(t.purchases.filter((p) => !p.arm && (app === "all" || p.app === app)), (p) => p.value * p.n),
+        noTxn: t.purchases.some((p) => p.n > 1 && (app === "all" || p.app === app)),
+    };
 }
 
 function stepLabel(t, event) {
@@ -1857,10 +1884,12 @@ function abVerdict(t, s) {
     const better = cmp.pb > cmp.pa ? "B" : "A";
     const what = `${stepLabel(t, t.goal)} / ${stepLabel(t, t.base).toLowerCase()}`;
     const lines = [`${what}: A ${abPct(cmp.pa)} vs B ${abPct(cmp.pb)}, ${signedPct(cmp.lift)} (p = ${Number.isFinite(cmp.p) ? cmp.p.toFixed(3) : "—"}, P(B better) ${abPct(cmp.probB)}).`];
-    if (s.rev.A || s.rev.B) {
-        const diverge = Number.isFinite(cmp.lift) && Number.isFinite(s.arpuLift) && Math.sign(cmp.lift) !== Math.sign(s.arpuLift) && Math.abs(s.arpuLift) >= 0.05;
-        lines.push(`GA4 revenue per ${stepLabel(t, t.base).toLowerCase()} user: A $${s.arpu.A.toFixed(2)} vs B $${s.arpu.B.toFixed(2)}, ${signedPct(s.arpuLift)} (not tested for significance).` +
-            (diverge ? ` Conversion and revenue point in opposite directions — ${cmp.lift > 0 ? "more people buy in B, but cheaper plans" : "fewer people buy in B, but bigger plans"}.` : ""));
+    const m = s.money;
+    if (m.A.rev || m.B.rev) {
+        const diverge = Number.isFinite(cmp.lift) && Number.isFinite(m.lift) && Math.sign(cmp.lift) !== Math.sign(m.lift) && Math.abs(m.lift) >= 0.05;
+        lines.push(`Money per ${stepLabel(t, t.base).toLowerCase()} user: A ${money(m.A.mean)} vs B ${money(m.B.mean)}, ${signedPct(m.lift)} ` +
+            `(p = ${Number.isFinite(m.p) ? m.p.toFixed(3) : "—"}, P(B earns more) ${abPct(m.probB)}).` +
+            (diverge ? ` Conversion and money point in opposite directions — ${cmp.lift > 0 ? "more people buy in B, but cheaper plans" : "fewer people buy in B, but bigger plans"}.` : ""));
     }
     if (t.status === "ended") {
         return { cls: "", head: `Ended ${t.end}. ${t.winner ? `Rolled out ${t.winner}: ${t.arms[t.winner]}.` : "No winner rolled out."}`, lines };
@@ -1889,7 +1918,7 @@ function renderAb() {
         ? `from GA4, cached 5 min, updated ${new Date(d.at).toLocaleTimeString("en-GB")}` : "";
     if (!tests.some((t) => t.id === state.abSel.test)) state.abSel.test = (tests.find((t) => t.status === "running") || tests[0])?.id;
 
-    table("tbl-ab-tests", [["Test"], ["App"], ["Status"], ["Days", 1], ["In test A / B", 1], ["Main metric"], ["A", 1], ["B", 1], ["Lift", 1], ["p", 1], ["P(B better)", 1], ["Rev/user A · B", 1], ["Rev lift", 1]],
+    table("tbl-ab-tests", [["Test"], ["App"], ["Status"], ["Days", 1], ["In test A / B", 1], ["Main metric"], ["A", 1], ["B", 1], ["Lift", 1], ["p", 1], ["P(B better)", 1], ["$ / user A · B", 1], ["$ lift", 1], ["$ p", 1]],
         tests.map((t) => {
             const s = abStats(t, "all");
             const sig = s.cmp.p < 0.05;
@@ -1899,8 +1928,9 @@ function renderAb() {
                 td(`${stepLabel(t, t.goal)} / ${stepLabel(t, t.base)}`), td(abPct(s.cmp.pa), true), td(abPct(s.cmp.pb), true),
                 td(signedPct(s.cmp.lift), true, sig ? (s.cmp.lift > 0 ? "up" : "down") : ""),
                 td(Number.isFinite(s.cmp.p) ? s.cmp.p.toFixed(3) : "—", true), td(abPct(s.cmp.probB), true),
-                td(s.rev.A || s.rev.B ? `$${s.arpu.A.toFixed(2)} · $${s.arpu.B.toFixed(2)}` : "—", true),
-                td(s.rev.A || s.rev.B ? signedPct(s.arpuLift) : "—", true));
+                td(s.money.A.rev || s.money.B.rev ? `${money(s.money.A.mean)} · ${money(s.money.B.mean)}` : "—", true),
+                td(s.money.A.rev || s.money.B.rev ? signedPct(s.money.lift) : "—", true, s.money.p < 0.05 ? (s.money.lift > 0 ? "up" : "down") : ""),
+                td((s.money.A.rev || s.money.B.rev) && Number.isFinite(s.money.p) ? s.money.p.toFixed(3) : "—", true));
         }), state.product === "captions" ? "No A/B tests in Live Captions" : "No tests");
     table("tbl-ab-archive", [["Test"], ["App"], ["Ran"], ["Result"]],
         d.archive.map((a) => el("tr", {}, td(a.name), td(a.app), td(`${a.start} — ${a.end}`), td(a.result))), "—");
@@ -1938,9 +1968,6 @@ function renderAb() {
         { label: "Conversion, B vs A", value: (s.cmp.lift || 0) * 100, fmt: (v) => signedPct(v / 100),
           delta: el("span", { class: sig ? (s.cmp.lift > 0 ? "up" : "down") : "muted" },
               `p = ${Number.isFinite(s.cmp.p) ? s.cmp.p.toFixed(3) : "—"} · P(B better) ${abPct(s.cmp.probB)}`) },
-        ...(s.rev.A || s.rev.B ? [{ label: `GA4 revenue per ${stepLabel(t, t.base).toLowerCase()} user, B vs A`, value: (s.arpuLift || 0) * 100,
-            fmt: (v) => signedPct(v / 100),
-            delta: el("span", { class: "muted" }, `$${s.arpu.A.toFixed(2)} → $${s.arpu.B.toFixed(2)} · not tested`) }] : []),
     ]);
 
     const v = abVerdict(t, s);
@@ -1956,6 +1983,8 @@ function renderAb() {
             "(older app versions, or purchases GA4 didn't tie to the user's arm).") : "");
 
     const first = { A: s.entered.A, B: s.entered.B };
+    renderAbMoney(t, s);
+
     const ofFirst = `% of ${t.steps[0][1].toLowerCase()}`;
     table("tbl-ab-funnel", [["Step"], ["A users", 1], [`A ${ofFirst}`, 1], ["B users", 1], [`B ${ofFirst}`, 1], ["B vs A", 1], ["p", 1]],
         t.steps.map(([event, label], i) => {
@@ -2011,6 +2040,51 @@ function renderAb() {
             plugins: { legend },
         },
     });
+}
+
+function renderAbMoney(t, s) {
+    const m = s.money;
+    const card = document.getElementById("ab-money");
+    card.hidden = !(m.A.rev || m.B.rev);
+    if (card.hidden) return;
+    const per = stepLabel(t, t.base).toLowerCase();
+    // Без transaction_id (Android) переотправленная покупка считается дважды — «доказано» по таким данным не пишем
+    const sig = m.p < 0.05 && !m.noTxn;
+    const tone = sig ? (m.diff > 0 ? "up" : "down") : "muted";
+    renderTileRow("ab-money-tiles", [
+        { label: "A · revenue", value: m.A.rev, fmt: usd, delta: el("span", { class: "muted" }, `${int(m.A.count)} purchases · avg ${money(m.A.avg)}`) },
+        { label: "B · revenue", value: m.B.rev, fmt: usd, delta: el("span", { class: "muted" }, `${int(m.B.count)} purchases · avg ${money(m.B.avg)}`) },
+        { label: `Per ${per} user · A → B`, value: m.B.mean || 0, fmt: (v) => `${money(m.A.mean)} → ${money(v)}`,
+          delta: el("span", { class: tone }, `${signedPct(m.lift)} · p = ${Number.isFinite(m.p) ? m.p.toFixed(3) : "—"}`) },
+        { label: "Chance B earns more", value: (m.probB || 0) * 100, fmt: (v) => `${v.toFixed(0)}%`,
+          delta: el("span", { class: "muted" }, `B − A, 95%: ${money(m.lo)} … ${money(m.hi)} per user`) },
+        { label: "If B for everyone", value: m.monthly || 0, fmt: (v) => `${signedUsd(v)}/mo`,
+          delta: el("span", { class: "muted" }, sig ? "at the current traffic" : "at the current traffic · not proven yet") },
+    ]);
+    document.getElementById("ab-money-verdict").replaceChildren(el("span", { class: tone },
+        sig ? `B ${m.diff > 0 ? "earns more" : "earns less"}: ${signedPct(m.lift)} per user, the difference is real (p = ${m.p.toFixed(3)}).`
+            : m.p < 0.05 ? `B looks like it earns ${m.diff > 0 ? "more" : "less"} (${signedPct(m.lift)}, p = ${m.p.toFixed(3)}), but Android double-counts re-sent purchases — check the store console before acting.`
+            : `No proven difference in money yet: B − A is somewhere between ${money(m.lo)} and ${money(m.hi)} per ${per} user, so either arm can still win.`));
+
+    // Что покупают: планы по плечам — видно, перетягивает ли B покупателей на дешёвый или дорогой план
+    const inApp = (p) => state.abSel.app === "all" || p.app === state.abSel.app;
+    const plans = new Map();
+    for (const p of t.purchases.filter((x) => x.arm && inApp(x))) {
+        const row = plans.get(p.product) || { A: { n: 0, rev: 0 }, B: { n: 0, rev: 0 } };
+        row[p.arm].n += p.n;
+        row[p.arm].rev += p.value * p.n;
+        plans.set(p.product, row);
+    }
+    const share = (v, total) => (total ? `${Math.round((v / total) * 100)}%` : "—");
+    table("tbl-ab-products", [["Plan"], ["A buys", 1], ["A $", 1], ["A share of $", 1], ["B buys", 1], ["B $", 1], ["B share of $", 1]],
+        [...plans].sort((a, b) => (b[1].A.rev + b[1].B.rev) - (a[1].A.rev + a[1].B.rev)).map(([name, r]) => el("tr", {},
+            td(name || "(no product id)"), td(int(r.A.n), true), td(usd(r.A.rev), true), td(share(r.A.rev, m.A.rev), true),
+            td(int(r.B.n), true), td(usd(r.B.rev), true), td(share(r.B.rev, m.B.rev), true))), "No purchases yet");
+    document.getElementById("ab-money-note").textContent =
+        "GA4 purchase events, one per transaction (re-sent duplicates dropped); everyone in the arm who didn't buy counts as $0. " +
+        "Includes web checkouts (Paddle) that GA4 tied to the arm. " +
+        (m.noTxn ? "Android sends no transaction id, so a re-sent purchase there counts twice, and iOS sandbox purchases are included — treat mobile money as rough. " : "") +
+        (m.lost ? `${usd(m.lost)} of purchases on these platforms have no arm and are in neither column.` : "");
 }
 
 function setAb(change) {
