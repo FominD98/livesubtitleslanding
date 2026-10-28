@@ -1919,7 +1919,7 @@ function renderAb() {
     if (!tests.some((t) => t.id === state.abSel.test)) state.abSel.test = (tests.find((t) => t.status === "running") || tests[0])?.id;
 
     // Сводка в ширину экрана: по каждому тесту конверсия и деньги рядом, A → B и прирост с p в одной ячейке
-    const liftCell = (lift, p, show = true) => td(show ? `${signedPct(lift)} · p ${Number.isFinite(p) ? p.toFixed(2) : "—"}` : "—", true,
+    const liftCell = (lift, p, show = true) => td(show ? `${signedPct(lift)} · ${Number.isFinite(p) ? `p ${p.toFixed(2)}` : "rough"}` : "—", true,
         show && p < 0.05 ? (lift > 0 ? "up" : "down") : "");
     table("tbl-ab-tests", [["Test"], ["Status"], ["In test A / B", 1], ["Main metric"], ["A → B", 1], ["B vs A", 1], ["$ / user A → B", 1], ["$ B vs A", 1]],
         tests.map((t) => {
