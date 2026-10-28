@@ -164,7 +164,7 @@ async function load() {
     const tab = state.tab;
     const panel = document.getElementById(`tab-${tab}`);
     panel.classList.add("loading");
-    const query = tab === "ga4" ? ga4Path() : `/api/${tab}?${rangeQuery()}${tab === "sales" ? salesQuery() : ""}`;
+    const query = tab === "ga4" ? ga4Path() : tab === "ab" ? `/api/ab?app=${state.product}` : `/api/${tab}?${rangeQuery()}${tab === "sales" ? salesQuery() : ""}`;
     state.pending = query;
     const data = await api(query);
     if (state.pending !== query) return;
@@ -1782,6 +1782,229 @@ for (const key of ["range", "app", "country"]) {
     document.getElementById(`ga4-${key}`).addEventListener("change", (e) => setGa4({ [key]: e.target.value }));
 }
 
+/* ---------- A/B tests ---------- */
+
+// Тесты и их описание приходят из Worker'а (AB_TESTS в cloudflare/dash-api) — здесь только счёт и отрисовка
+state.abSel = { test: null, app: "all" };
+const ARM_COLOR = { A: "--series-1", B: "--series-3" };
+const AB_APP_NAMES = { all: "All platforms", android: "Android", apple: "iOS", windows: "Windows" };
+const abPct = (v) => (Number.isFinite(v) ? `${(v * 100).toFixed(v < 0.1 ? 2 : 1)}%` : "—");
+const signedPct = (v) => (Number.isFinite(v) ? `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v * 100).toFixed(1)}%` : "—");
+
+// Φ(z), Абрамовиц–Стиган 7.1.26: точности 1e-7 для p-value хватает
+function normCdf(z) {
+    const t = 1 / (1 + 0.3275911 * Math.abs(z) / Math.SQRT2);
+    const y = 1 - ((((1.061405429 * t - 1.453152027) * t + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-z * z / 2);
+    return z >= 0 ? (1 + y) / 2 : (1 - y) / 2;
+}
+
+// Две доли: z-тест с общей долей (p-value), P(B > A) — нормальное приближение апостериорной разницы
+function abCompare(xa, na, xb, nb) {
+    const pa = na ? xa / na : NaN;
+    const pb = nb ? xb / nb : NaN;
+    const pool = (xa + xb) / (na + nb);
+    const se = Math.sqrt(pool * (1 - pool) * (1 / na + 1 / nb));
+    const z = se ? (pb - pa) / se : 0;
+    const seU = Math.sqrt(pa * (1 - pa) / na + pb * (1 - pb) / nb);
+    return {
+        pa, pb, lift: pa ? pb / pa - 1 : NaN,
+        p: na && nb && se ? 2 * (1 - normCdf(Math.abs(z))) : NaN,
+        probB: na && nb ? (seU ? normCdf((pb - pa) / seU) : pb > pa ? 1 : pb < pa ? 0 : 0.5) : NaN,
+    };
+}
+
+// Пользователей на плечо, чтобы поймать изменение конверсии на rel (α = 0.05 двусторонний, мощность 80%)
+function abSampleNeeded(p, rel = 0.2) {
+    if (!(p > 0 && p < 1)) return NaN;
+    const p2 = Math.min(p * (1 + rel), 0.999);
+    return Math.ceil((1.96 + 0.8416) ** 2 * (p * (1 - p) + p2 * (1 - p2)) / (p2 - p) ** 2);
+}
+
+function abDays(t) {
+    return dayDiff(t.start, t.end || isoDay(new Date())) + 1;
+}
+
+// Пользователи шага по плечу; шаг "a|b" — сумма событий (у теста установщика клик — это одно из двух)
+function abUsers(t, arm, step, app = state.abSel.app, key = "users") {
+    const events = step.split("|");
+    return sum(t.rows.filter((r) => r.arm === arm && events.includes(r.event) && (app === "all" || r.app === app)), (r) => r[key]);
+}
+
+function abStats(t, app) {
+    const first = t.steps[0][0];
+    const n = { A: abUsers(t, "A", t.base, app), B: abUsers(t, "B", t.base, app) };
+    const x = { A: abUsers(t, "A", t.goal, app), B: abUsers(t, "B", t.goal, app) };
+    const entered = { A: abUsers(t, "A", first, app), B: abUsers(t, "B", first, app) };
+    const cmp = abCompare(x.A, n.A, x.B, n.B);
+    const need = abSampleNeeded(cmp.pa);
+    const days = abDays(t);
+    const srmZ = (entered.A - entered.B) / Math.sqrt(entered.A + entered.B || 1);
+    return { n, x, entered, cmp, need, days, pace: (n.A + n.B) / 2 / days, srmP: 2 * (1 - normCdf(Math.abs(srmZ))) };
+}
+
+function stepLabel(t, event) {
+    return t.steps.find(([e]) => e === event)?.[1] || event;
+}
+
+function abVerdict(t, s) {
+    const { cmp, n, need } = s;
+    const better = cmp.pb > cmp.pa ? "B" : "A";
+    const what = `${stepLabel(t, t.goal).toLowerCase()} / ${stepLabel(t, t.base).toLowerCase()}`;
+    const stat = `${what}: A ${abPct(cmp.pa)} vs B ${abPct(cmp.pb)} (${signedPct(cmp.lift)}, p = ${cmp.p.toFixed(3)}, P(B better) ${abPct(cmp.probB)}).`;
+    if (t.status === "ended") {
+        return { cls: "", text: `Ended ${t.end}, ${t.winner ? `rolled out ${t.winner} — ${t.arms[t.winner]}` : "no winner rolled out"}. ${stat}` };
+    }
+    if (!n.A || !n.B) return { cls: "", text: "No users in the test yet." };
+    const enough = Math.min(n.A, n.B) >= need;
+    const left = Math.max(0, need - Math.min(n.A, n.B));
+    const eta = s.pace > 0 ? Math.ceil(left / s.pace) : Infinity;
+    const plan = Number.isFinite(need)
+        ? `Detecting a ±20% change at this conversion needs ~${int(need)} users per arm, there are ${int(Math.min(n.A, n.B))}` +
+          (enough ? "." : ` — about ${Number.isFinite(eta) ? `${eta} more days` : "too long"} at the current pace.`)
+        : "No conversions yet, so the required sample can't be estimated.";
+    if (cmp.p < 0.05 && enough) {
+        return { cls: better === "B" ? "up" : "down", text: `${better} wins: ${t.arms[better]}. ${stat} ${plan}` };
+    }
+    if (cmp.p < 0.05) {
+        return { cls: "", text: `Leaning ${better}, but the planned sample isn't reached — keep it running. ${stat} ${plan}` };
+    }
+    return { cls: "", text: `No significant difference yet. ${stat} ${plan}` };
+}
+
+function abTestApps(t) {
+    return [...new Set(t.rows.map((r) => r.app))].filter(Boolean);
+}
+
+function renderAb() {
+    const d = state.ab;
+    const tests = d.tests;
+    document.getElementById("ab-note").textContent = tests.length
+        ? `from GA4, cached 5 min, updated ${new Date(d.at).toLocaleTimeString("en-GB")}` : "";
+    if (!tests.some((t) => t.id === state.abSel.test)) state.abSel.test = (tests.find((t) => t.status === "running") || tests[0])?.id;
+
+    table("tbl-ab-tests", [["Test"], ["App"], ["Status"], ["Days", 1], ["In test A / B", 1], ["Main metric"], ["A", 1], ["B", 1], ["Lift", 1], ["p", 1], ["P(B better)", 1]],
+        tests.map((t) => {
+            const s = abStats(t, "all");
+            const sig = s.cmp.p < 0.05;
+            const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : "Running";
+            return el("tr", { class: `clickable${t.id === state.abSel.test ? " active" : ""}`, onclick: () => setAb({ test: t.id, app: "all" }) },
+                td(t.name), td(t.app), td(status), td(int(s.days), true), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
+                td(`${stepLabel(t, t.goal)} / ${stepLabel(t, t.base)}`), td(abPct(s.cmp.pa), true), td(abPct(s.cmp.pb), true),
+                td(signedPct(s.cmp.lift), true, sig ? (s.cmp.lift > 0 ? "up" : "down") : ""),
+                td(Number.isFinite(s.cmp.p) ? s.cmp.p.toFixed(3) : "—", true), td(abPct(s.cmp.probB), true));
+        }), state.product === "captions" ? "No A/B tests in Live Captions" : "No tests");
+    table("tbl-ab-archive", [["Test"], ["App"], ["Ran"], ["Result"]],
+        d.archive.map((a) => el("tr", {}, td(a.name), td(a.app), td(`${a.start} — ${a.end}`), td(a.result))), "—");
+
+    const detail = ["ab-test", "ab-about", "ab-tiles", "ab-verdict"].map((id) => document.getElementById(id));
+    const t = tests.find((x) => x.id === state.abSel.test);
+    for (const node of detail) node.hidden = !t;
+    for (const id of ["tbl-ab-funnel", "chart-ab-conv", "chart-ab-base"]) document.getElementById(id).closest(".card").hidden = !t;
+    if (!t) return;
+
+    const testSel = document.getElementById("ab-test");
+    testSel.replaceChildren(...tests.map((x) => el("option", { value: x.id }, `${x.name}${x.status === "ended" ? " (ended)" : ""}`)));
+    testSel.value = t.id;
+    const apps = abTestApps(t);
+    const appSel = document.getElementById("ab-app");
+    appSel.hidden = apps.length < 2;
+    appSel.replaceChildren(...["all", ...apps].map((a) => el("option", { value: a }, AB_APP_NAMES[a] || a)));
+    if (state.abSel.app !== "all" && !apps.includes(state.abSel.app)) state.abSel.app = "all";
+    appSel.value = state.abSel.app;
+
+    const s = abStats(t, state.abSel.app);
+    document.getElementById("ab-about").textContent =
+        `${t.about} A: ${t.arms.A}. B: ${t.arms.B}. Since ${t.start}${t.end ? ` to ${t.end}` : ""} (${s.days} days).`;
+
+    const revA = abUsers(t, "A", "purchase", state.abSel.app, "revenue");
+    const revB = abUsers(t, "B", "purchase", state.abSel.app, "revenue");
+    const srmBad = t.srm !== false && s.srmP < 0.001;
+    renderTileRow("ab-tiles", [
+        { label: `In test · A / B`, value: s.entered.A + s.entered.B, fmt: int,
+          delta: el("span", { class: srmBad ? "down" : "muted" }, `${int(s.entered.A)} / ${int(s.entered.B)}${srmBad ? " · split is off 50/50, check the assignment" : ""}`) },
+        { label: `A · ${stepLabel(t, t.goal).toLowerCase()} / ${stepLabel(t, t.base).toLowerCase()}`, value: s.cmp.pa * 100 || 0, fmt: (v) => `${v.toFixed(2)}%`,
+          delta: el("span", { class: "muted" }, `${int(s.x.A)} of ${int(s.n.A)}`) },
+        { label: `B · ${stepLabel(t, t.goal).toLowerCase()} / ${stepLabel(t, t.base).toLowerCase()}`, value: s.cmp.pb * 100 || 0, fmt: (v) => `${v.toFixed(2)}%`,
+          delta: el("span", { class: "muted" }, `${int(s.x.B)} of ${int(s.n.B)}`) },
+        { label: "B vs A", value: (s.cmp.lift || 0) * 100, fmt: (v) => signedPct(v / 100),
+          delta: el("span", { class: s.cmp.p < 0.05 ? (s.cmp.lift > 0 ? "up" : "down") : "muted" }, `p = ${Number.isFinite(s.cmp.p) ? s.cmp.p.toFixed(3) : "—"}`) },
+        { label: "P(B better)", value: (s.cmp.probB || 0) * 100, fmt: (v) => `${v.toFixed(0)}%` },
+        ...(revA || revB ? [{ label: `GA4 revenue per ${stepLabel(t, t.base).toLowerCase()} user · A / B`, value: s.n.B ? revB / s.n.B : 0,
+            fmt: (v) => `$${(s.n.A ? revA / s.n.A : 0).toFixed(2)} / $${v.toFixed(2)}`,
+            delta: el("span", { class: "muted" }, `${usd(revA)} / ${usd(revB)} total`) }] : []),
+    ]);
+
+    const v = abVerdict(t, s);
+    const verdict = document.getElementById("ab-verdict");
+    verdict.className = `card ${v.cls}`;
+    const lost = t.dim.startsWith("customUser:")
+        ? sum(t.unassigned.filter((r) => r.event === t.goal && (state.abSel.app === "all" || r.app === state.abSel.app)), (r) => r.users) : 0;
+    verdict.textContent = v.text + (lost ? ` ${int(lost)} users with “${stepLabel(t, t.goal).toLowerCase()}” on these platforms have no arm (older app versions, or web checkouts GA4 didn't link) and are left out.` : "");
+
+    const first = { A: s.entered.A, B: s.entered.B };
+    table("tbl-ab-funnel", [["Step"], ["A users", 1], ["A %", 1], ["B users", 1], ["B %", 1], ["B vs A", 1], ["p", 1]],
+        t.steps.map(([event, label], i) => {
+            const a = abUsers(t, "A", event);
+            const b = abUsers(t, "B", event);
+            const c = abCompare(a, first.A, b, first.B);
+            const sig = i > 0 && c.p < 0.05;
+            return el("tr", {}, td(label), td(int(a), true), td(i ? abPct(c.pa) : "100%", true), td(int(b), true), td(i ? abPct(c.pb) : "100%", true),
+                td(i ? signedPct(c.lift) : "", true, sig ? (c.lift > 0 ? "up" : "down") : ""), td(i && Number.isFinite(c.p) ? c.p.toFixed(3) : "", true));
+        }));
+
+    // Накопленная конверсия по дням: дневные уникальные пользователи суммируются, повторы между днями считаются дважды
+    const inApp = (r) => state.abSel.app === "all" || r.app === state.abSel.app;
+    const baseEvents = t.base.split("|");
+    const dates = [];
+    for (let day = t.start; day <= (t.end || isoDay(new Date())); day = shiftDay(day, 1)) dates.push(day.replaceAll("-", ""));
+    const perDay = (arm, events) => dates.map((dt) => sum(t.daily.filter((r) => r.date === dt && r.arm === arm && events.includes(r.event) && inApp(r)), (r) => r.users));
+    const running = (arr) => arr.reduce((acc, x, i) => (acc.push((acc[i - 1] || 0) + x), acc), []);
+    const labels = dates.map((dt) => `${dt.slice(4, 6)}-${dt.slice(6)}`);
+    const series = Object.fromEntries(["A", "B"].map((arm) => [arm, { base: perDay(arm, baseEvents), goal: perDay(arm, [t.goal]) }]));
+    document.getElementById("ab-conv-title").textContent = `${stepLabel(t, t.goal)} / ${stepLabel(t, t.base).toLowerCase()}, cumulative`;
+    document.getElementById("ab-base-title").textContent = `${stepLabel(t, t.base)} per day`;
+    draw("chart-ab-conv", {
+        type: "line",
+        data: {
+            labels,
+            datasets: ["A", "B"].map((arm) => {
+                const cb = running(series[arm].base);
+                const cg = running(series[arm].goal);
+                return lineDataset(`${arm} · ${t.arms[arm]}`, cb.map((n, i) => (n ? (cg[i] / n) * 100 : null)), css(ARM_COLOR[arm]));
+            }),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { beginAtZero: true, ticks: { callback: (x) => `${x}%` } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: ${c.parsed.y?.toFixed(2)}%` } } },
+        },
+    });
+    draw("chart-ab-base", {
+        type: "bar",
+        data: {
+            labels,
+            datasets: ["A", "B"].map((arm) => ({
+                label: arm, data: series[arm].base, backgroundColor: css(ARM_COLOR[arm]), borderRadius: 4, maxBarThickness: 18,
+            })),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { beginAtZero: true, ticks: { precision: 0 } } },
+            plugins: { legend },
+        },
+    });
+}
+
+function setAb(change) {
+    Object.assign(state.abSel, change);
+    renderAb();
+}
+
+document.getElementById("ab-test").addEventListener("change", (e) => setAb({ test: e.target.value, app: "all" }));
+document.getElementById("ab-app").addEventListener("change", (e) => setAb({ app: e.target.value }));
+
 /* ---------- Weekly ---------- */
 
 function renderWeekly() {
@@ -2019,13 +2242,13 @@ document.getElementById("refresh-btn").addEventListener("click", async () => {
 /* ---------- wiring ---------- */
 
 const RENDER = { sales: renderSales, aso: renderAso, search: renderSearch, weekly: renderWeekly, funnel: renderFunnel, subs: renderSubs, health: renderHealth,
-    campaigns: renderCampaigns, live: renderLive, ga4: renderGa4 };
+    campaigns: renderCampaigns, live: renderLive, ga4: renderGa4, ab: renderAb };
 
 function switchTab(tab) {
     state.tab = RENDER[tab] ? tab : "sales";
     document.querySelectorAll(".tabs button").forEach((b) => b.setAttribute("aria-selected", String(b.dataset.tab === state.tab)));
     for (const name of Object.keys(RENDER)) document.getElementById(`tab-${name}`).hidden = name !== state.tab;
-    document.getElementById("range-bar").hidden = ["live", "ga4", "weekly"].includes(state.tab);
+    document.getElementById("range-bar").hidden = ["live", "ga4", "weekly", "ab"].includes(state.tab);
     writeRange();
     if (state.tab === "live" || !state[state.tab]) {
         load();
@@ -2072,7 +2295,7 @@ function applyRange(change) {
 }
 
 function dropRangeData() {
-    for (const name of Object.keys(RENDER)) if (name !== "weekly" && name !== "live" && name !== "ga4") state[name] = null;
+    for (const name of Object.keys(RENDER)) if (!["weekly", "live", "ga4", "ab"].includes(name)) state[name] = null;
 }
 
 document.getElementById("range-preset").addEventListener("change", (e) => applyRange({ preset: e.target.value }));

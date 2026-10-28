@@ -28,6 +28,7 @@
         <button role="tab" data-tab="campaigns" aria-selected="false">Campaigns</button>
         <button role="tab" data-tab="live" aria-selected="false">Live</button>
         <button role="tab" data-tab="ga4" aria-selected="false">GA4</button>
+        <button role="tab" data-tab="ab" aria-selected="false">A/B tests</button>
       </nav>
       <div class="filters range" id="range-bar" role="group" aria-label="Period">
         <select id="range-preset" aria-label="Period">
@@ -416,6 +417,51 @@
         </section>
       </div>
     </main>
+    <main id="tab-ab" class="tab-panel" hidden>
+      <section class="card">
+        <div class="card-head">
+          <h2>Tests</h2>
+          <span class="muted" id="ab-note"></span>
+        </div>
+        <div class="scroll"><table class="tbl" id="tbl-ab-tests"></table></div>
+      </section>
+
+      <div class="filters">
+        <select id="ab-test" aria-label="Test"></select>
+        <select id="ab-app" aria-label="Platform" hidden></select>
+      </div>
+      <p class="muted small" id="ab-about"></p>
+      <section class="tiles" id="ab-tiles"></section>
+      <p class="card" id="ab-verdict"></p>
+
+      <section class="card">
+        <div class="card-head">
+          <h2>Funnel by arm</h2>
+          <span class="muted">unique users from the test start · step % of the first step</span>
+        </div>
+        <div class="scroll"><table class="tbl" id="tbl-ab-funnel"></table></div>
+      </section>
+
+      <div class="grid2">
+        <section class="card">
+          <div class="card-head">
+            <h2 id="ab-conv-title">Conversion, cumulative</h2>
+            <span class="muted">approx.: daily users summed</span>
+          </div>
+          <div class="chart"><canvas id="chart-ab-conv"></canvas></div>
+        </section>
+        <section class="card">
+          <h2 id="ab-base-title">Users entering the test per day</h2>
+          <div class="chart"><canvas id="chart-ab-base"></canvas></div>
+        </section>
+      </div>
+
+      <section class="card">
+        <h2>Earlier tests (no arm in GA4)</h2>
+        <table class="tbl" id="tbl-ab-archive"></table>
+        <p class="muted small">How to read: p-value is a two-sided two-proportion z-test; P(B better) is the normal approximation of the posterior. Call a winner only when p &lt; 0.05 and the planned sample is reached — peeking every day inflates false wins. GA4 revenue is overcounted (see the GA4 tab); compare it between arms, not with Sales. Arms come from GA4 user properties set by the app (ab_paywall_main_card, ab_first_recording_offer, exp_weekly_plan); the installer test reads the _wi/_st suffix of install_campaign. A new test needs an entry in AB_TESTS in cloudflare/dash-api.</p>
+      </section>
+    </main>
     <main id="tab-weekly" class="tab-panel" hidden>
       <section class="card">
         <div class="card-head">
@@ -454,6 +500,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=41030530a0"></script>
+<script src="app.js?v=bbba52760f"></script>
 </body>
 </html>
