@@ -431,13 +431,31 @@
         <select id="ab-app" aria-label="Platform" hidden></select>
       </div>
       <p class="muted small" id="ab-about"></p>
+
+      <section class="card verdict" id="ab-real" hidden>
+        <div class="card-head">
+          <h2>Real money · backend + Paddle</h2>
+          <span class="muted">what payouts are based on</span>
+        </div>
+        <h2 id="ab-real-head"></h2>
+        <section class="tiles compact" id="ab-real-tiles"></section>
+        <p id="ab-real-plan"></p>
+        <div class="grid2">
+          <div class="scroll"><table class="tbl" id="tbl-ab-real-products"></table></div>
+          <div>
+            <h3 class="muted">Net $ per install, cumulative</h3>
+            <div class="chart"><canvas id="chart-ab-real"></canvas></div>
+          </div>
+        </div>
+        <p class="muted small" id="ab-real-note"></p>
+      </section>
       <section class="tiles compact" id="ab-tiles"></section>
       <section class="card verdict" id="ab-verdict"></section>
 
       <section class="card" id="ab-money">
         <div class="card-head">
-          <h2>Money</h2>
-          <span class="muted">per user who reached the main step, from the test start</span>
+          <h2>Money in GA4 · rough</h2>
+          <span class="muted">per user who reached the main step · for mobile tests the only source</span>
         </div>
         <section class="tiles compact" id="ab-money-tiles"></section>
         <p id="ab-money-verdict"></p>
@@ -447,7 +465,7 @@
 
       <section class="card">
         <div class="card-head">
-          <h2>Funnel by arm</h2>
+          <h2>Funnel by arm · GA4</h2>
           <span class="muted">unique users from the test start · step % of the first step</span>
         </div>
         <div class="scroll"><table class="tbl" id="tbl-ab-funnel"></table></div>
@@ -511,6 +529,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=a6cd7dee31"></script>
+<script src="app.js?v=740b88d3fa"></script>
 </body>
 </html>

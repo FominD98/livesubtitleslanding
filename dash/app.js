@@ -1873,6 +1873,125 @@ function abMoney(t, app, n, pace) {
     };
 }
 
+// Реальные деньги: установки из бэкенда, выплаты Paddle (tools/dash/sources/abserver.py). Знаменатель — все новые
+// установки плеча за окно теста, у не купивших $0. Сравнение средних — z-тест Уэлча по сумме и сумме квадратов
+function abServer(t) {
+    if (!t.server) return null;
+    const get = (arm, metric, key = "") => t.server.find((r) => r.arm === arm && r.metric === metric && r.key === key)?.value || 0;
+    const arm = (a) => {
+        const n = get(a, "users");
+        const net = get(a, "net");
+        const mean = n ? net / n : NaN;
+        const v = n ? Math.max(get(a, "net_sq") / n - mean * mean, 0) / n : NaN;
+        return { n, net, mean, v, buyers: get(a, "buyers"), purchases: get(a, "purchases"), avg: get(a, "purchases") ? net / get(a, "purchases") : NaN };
+    };
+    const A = arm("A");
+    const B = arm("B");
+    const diff = B.mean - A.mean;
+    const se = Math.sqrt(A.v + B.v);
+    const win = t.server.find((r) => r.metric === "window")?.key.split("..") || [t.start, t.end || isoDay(new Date())];
+    const days = dayDiff(win[0], win[1]) + 1;
+    const products = new Map();
+    for (const r of t.server.filter((x) => x.metric === "product_net" || x.metric === "product_n")) {
+        const row = products.get(r.key) || { A: { n: 0, net: 0 }, B: { n: 0, net: 0 } };
+        row[r.arm][r.metric === "product_n" ? "n" : "net"] = r.value;
+        products.set(r.key, row);
+    }
+    return {
+        A, B, diff, days, products,
+        lift: A.mean ? B.mean / A.mean - 1 : NaN,
+        p: se ? 2 * (1 - normCdf(Math.abs(diff / se))) : NaN,
+        probB: se ? normCdf(diff / se) : NaN,
+        lo: diff - 1.96 * se, hi: diff + 1.96 * se,
+        conv: abCompare(A.buyers, A.n, B.buyers, B.n),
+        // если раскатить B: разница на установку × новые установки за 30 дней в темпе окна теста
+        monthly: diff * ((A.n + B.n) / days) * 30,
+        outside: get("", "outside_net"),
+        need: abMoneyNeed(A, B),
+        series: ["A", "B"].map((a) => t.server.filter((r) => r.arm === a && (r.metric === "day_users" || r.metric === "day_net"))),
+    };
+}
+
+// Сколько установок на плечо нужно, чтобы различить ±20% денег на установку (α 0.05, мощность 80%)
+function abMoneyNeed(A, B) {
+    const sd2 = ((A.v * A.n) + (B.v * B.n)) / 2;
+    const delta = 0.2 * A.mean;
+    return delta > 0 && sd2 > 0 ? Math.ceil(2 * (1.96 + 0.8416) ** 2 * sd2 / (delta * delta)) : NaN;
+}
+
+function renderAbReal(t) {
+    const card = document.getElementById("ab-real");
+    const r = abServer(t);
+    card.hidden = !r;
+    if (!r) return;
+    const sig = r.p < 0.05;
+    const tone = sig ? (r.diff > 0 ? "up" : "down") : "muted";
+    const enough = Math.min(r.A.n, r.B.n) >= r.need;
+    const pace = (r.A.n + r.B.n) / 2 / r.days;
+    const eta = pace > 0 ? Math.ceil(Math.max(0, r.need - Math.min(r.A.n, r.B.n)) / pace) : Infinity;
+    const head = sig && enough ? `B ${r.diff > 0 ? "earns more" : "earns less"}: ${signedPct(r.lift)} per install — proven.`
+        : sig ? `B ${r.diff > 0 ? "earns more" : "earns less"} (${signedPct(r.lift)}), significant but below the planned sample.`
+        : "No proven difference in real money.";
+    document.getElementById("ab-real-head").replaceChildren(el("span", { class: sig ? tone : "" }, head));
+    renderTileRow("ab-real-tiles", [
+        { label: "New installs · A / B", value: r.A.n + r.B.n, fmt: int, delta: el("span", { class: "muted" }, `${int(r.A.n)} / ${int(r.B.n)}`) },
+        { label: "Net revenue · A / B", value: r.B.net, fmt: (v) => `${usd(r.A.net)} / ${usd(v)}`,
+          delta: el("span", { class: "muted" }, `${int(r.A.purchases)} / ${int(r.B.purchases)} payments`) },
+        { label: "Per install · A → B", value: r.B.mean || 0, fmt: (v) => `${money(r.A.mean)} → ${money(v)}`,
+          delta: el("span", { class: tone }, `${signedPct(r.lift)} · p = ${Number.isFinite(r.p) ? r.p.toFixed(3) : "—"}`) },
+        { label: "Buyers · A → B", value: (r.conv.pb || 0) * 100, fmt: (v) => `${abPct(r.conv.pa)} → ${v.toFixed(2)}%`,
+          delta: el("span", { class: r.conv.p < 0.05 ? (r.conv.lift > 0 ? "up" : "down") : "muted" },
+              `${int(r.A.buyers)} / ${int(r.B.buyers)} people · p = ${Number.isFinite(r.conv.p) ? r.conv.p.toFixed(3) : "—"}`) },
+        { label: "Chance B earns more", value: (r.probB || 0) * 100, fmt: (v) => `${v.toFixed(0)}%`,
+          delta: el("span", { class: "muted" }, `B − A, 95%: ${money(r.lo)} … ${money(r.hi)} per install`) },
+        { label: "If B for everyone", value: r.monthly || 0, fmt: (v) => `${signedUsd(v)}/mo`,
+          delta: el("span", { class: "muted" }, sig ? "net, at the current installs" : "net, at the current installs · not proven") },
+    ]);
+    document.getElementById("ab-real-plan").textContent = Number.isFinite(r.need)
+        ? `To tell a ±20% difference in money per install: ~${int(r.need)} installs per arm, now ${int(Math.min(r.A.n, r.B.n))}` +
+          (enough ? " — reached." : t.status === "ended" ? " — the test ended before that." : ` — about ${Number.isFinite(eta) ? eta : "∞"} more days at the current pace.`)
+        : "";
+
+    const share = (v, total) => (total ? `${Math.round((v / total) * 100)}%` : "—");
+    table("tbl-ab-real-products", [["Plan"], ["A payments", 1], ["A net", 1], ["A share", 1], ["B payments", 1], ["B net", 1], ["B share", 1]],
+        [...r.products].sort((a, b) => (b[1].A.net + b[1].B.net) - (a[1].A.net + a[1].B.net)).map(([name, x]) => el("tr", {},
+            td(name), td(int(x.A.n), true), td(usd(x.A.net), true), td(share(x.A.net, r.A.net), true),
+            td(int(x.B.n), true), td(usd(x.B.net), true), td(share(x.B.net, r.B.net), true))), "No payments yet");
+
+    // Накопленные $ на установку по дням
+    const days = [];
+    const win = t.server.find((x) => x.metric === "window")?.key.split("..") || [t.start, isoDay(new Date())];
+    for (let d = win[0]; d <= isoDay(new Date()); d = shiftDay(d, 1)) days.push(d);
+    draw("chart-ab-real", {
+        type: "line",
+        data: {
+            labels: days.map((d) => d.slice(5)),
+            datasets: ["A", "B"].map((a, i) => {
+                const rows = r.series[i];
+                let users = 0;
+                let net = 0;
+                const data = days.map((d) => {
+                    users += rows.find((x) => x.metric === "day_users" && x.key === d)?.value || 0;
+                    net += rows.find((x) => x.metric === "day_net" && x.key === d)?.value || 0;
+                    return users ? net / users : null;
+                });
+                return { ...lineDataset(`${a} · ${t.arms[a]}`, data, css(ARM_COLOR[a])), tension: 0 };
+            }),
+        },
+        options: {
+            maintainAspectRatio: false,
+            interaction: { mode: "index", intersect: false },
+            scales: { x: timeX, y: { beginAtZero: true, ticks: { callback: (v) => `$${v.toFixed(2)}` } } },
+            plugins: { legend, tooltip: { callbacks: { label: (c) => `${c.dataset.label}: $${c.parsed.y?.toFixed(3)} per install` } } },
+        },
+    });
+    document.getElementById("ab-real-note").textContent =
+        "Who is in the test: every new install of the platform in the test window (backend trial records), split by the same fingerprint hash as the app — " +
+        "whether or not they reached the paywall, so nothing can be cherry-picked. Money: Paddle payouts after fees and tax, minus refunds, " +
+        "from the test start to today (renewals included). Microsoft Store purchases aren't in the backend and are not counted — on Windows almost all payments go through Paddle. " +
+        `Payments from people who installed before the test: ${usd(r.outside)} (not in either arm). Updated daily with the dashboard collection.`;
+}
+
 function stepLabel(t, event) {
     return t.steps.find(([e]) => e === event)?.[1] || event;
 }
@@ -1921,17 +2040,19 @@ function renderAb() {
     // Сводка в ширину экрана: по каждому тесту конверсия и деньги рядом, A → B и прирост с p в одной ячейке
     const liftCell = (lift, p, show = true) => td(show ? `${signedPct(lift)} · ${Number.isFinite(p) ? `p ${p.toFixed(2)}` : "rough"}` : "—", true,
         show && p < 0.05 ? (lift > 0 ? "up" : "down") : "");
-    table("tbl-ab-tests", [["Test"], ["Status"], ["In test A / B", 1], ["Main metric"], ["A → B", 1], ["B vs A", 1], ["$ / user A → B", 1], ["$ B vs A", 1]],
+    table("tbl-ab-tests", [["Test"], ["Status"], ["In test A / B", 1], ["Main metric"], ["A → B", 1], ["B vs A", 1], ["$ per user A → B", 1], ["$ B vs A", 1]],
         tests.map((t) => {
             const s = abStats(t, "all");
-            const hasMoney = !!(s.money.A.rev || s.money.B.rev);
+            const real = abServer(t);
+            const hasMoney = !!(real || s.money.A.rev || s.money.B.rev);
+            const m = real ? { a: real.A.mean, b: real.B.mean, lift: real.lift, p: real.p } : { a: s.money.A.mean, b: s.money.B.mean, lift: s.money.lift, p: s.money.noTxn ? NaN : s.money.p };
             const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : `Running · ${s.days} d`;
             return el("tr", { class: `clickable${t.id === state.abSel.test ? " active" : ""}`, onclick: () => setAb({ test: t.id, app: "all" }) },
                 td([t.name, el("span", { class: "muted small" }, ` · ${t.app}`)]), td(status), td(`${int(s.entered.A)} / ${int(s.entered.B)}`, true),
                 td(`${stepLabel(t, t.goal)} / ${stepLabel(t, t.base).toLowerCase()}`), td(`${abPct(s.cmp.pa)} → ${abPct(s.cmp.pb)}`, true),
                 liftCell(s.cmp.lift, s.cmp.p),
-                td(hasMoney ? `${money(s.money.A.mean)} → ${money(s.money.B.mean)}` : "no purchases", true),
-                liftCell(s.money.lift, s.money.noTxn ? NaN : s.money.p, hasMoney));
+                td(hasMoney ? [`${money(m.a)} → ${money(m.b)}`, el("span", { class: "muted small" }, real ? " real" : " GA4")] : "no purchases", true),
+                liftCell(m.lift, m.p, hasMoney));
         }), state.product === "captions" ? "No A/B tests in Live Captions" : "No tests");
     table("tbl-ab-archive", [["Test"], ["App"], ["Ran"], ["Result"]],
         d.archive.map((a) => el("tr", {}, td(a.name), td(a.app), td(`${a.start} — ${a.end}`), td(a.result))), "—");
@@ -1953,6 +2074,7 @@ function renderAb() {
     appSel.value = state.abSel.app;
 
     const s = abStats(t, state.abSel.app);
+    renderAbReal(t);
     document.getElementById("ab-about").textContent =
         `${t.about} A: ${t.arms.A}. B: ${t.arms.B}. Since ${t.start}${t.end ? ` to ${t.end}` : ""} (${s.days} days).`;
 
