@@ -103,15 +103,7 @@
             "Klickdurchlässiges Untertitelfenster, das immer im Vordergrund bleibt"
         ],
         "offers": [
-            { "@type": "Offer", "name": "Kostenlose Minuten zum Start", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300 Minuten (einmaliges Paket)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1.000 Minuten (einmaliges Paket)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10.000 Minuten (einmaliges Paket)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 Minuten im Monat, monatlich", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 Minuten im Monat, jährlich", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1.200 Minuten im Monat, monatlich", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1.200 Minuten im Monat, jährlich", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max: 3.000 Minuten im Monat, monatlich", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Kostenlose Minuten zum Start", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "Was kostet es?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sie starten mit kostenlosen Minuten, keine Kreditkarte nötig. Danach können Sie ein Minutenpaket kaufen (300 Minuten für $6.99, 1.000 für $14.99, 10.000 für $119.99) oder ein Abonnement: Basic 400 Minuten im Monat für $4.99 ($49.99 im Jahr), Pro 1.200 Minuten im Monat für $11.99 ($99.99 im Jahr) oder Max 3.000 Minuten im Monat für $21.99. Die Preise enthalten die Steuer. Minuten werden nur verbraucht, während Untertitel laufen." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Sie starten mit kostenlosen Minuten, eine Kreditkarte ist nicht nötig. Danach können Sie ein einmaliges Minutenpaket kaufen oder ein Monats- oder Jahresabo wählen. Minuten werden nur verbraucht, solange Untertitel laufen." }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="Hauptnavigation">
                 <a class="lc-nav__extra" href="#how">So funktioniert's</a>
                 <a class="lc-nav__extra" href="#features">Funktionen</a>
-                <a href="#pricing">Preise</a>
+                <a href="/de/captions/pricing.html">Preise</a>
                 <a class="lc-nav__extra" href="#faq">FAQ</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="de">Deutsch</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             Für Windows herunterladen
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">Preise ansehen</a>
+                        <a class="btn btn--ghost" href="/de/captions/pricing.html">Preise ansehen</a>
                     </div>
                     <p class="hero__note">Kostenlose Minuten zum Einstieg. Keine Kreditkarte nötig.</p>
                     <ul class="checks">
@@ -346,71 +338,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>Preise</h2>
-                <p class="section__lead">Starten Sie mit kostenlosen Minuten. Kaufen Sie dann Minuten einmalig oder abonnieren Sie ein monatliches Kontingent. Die Preise sind in US-Dollar und enthalten die Steuer; Ihr lokaler Preis wird vor der Zahlung angezeigt.</p>
-
-                <div class="trial">
-                    <p><strong>Kostenloser Start:</strong> kostenlose Minuten für Untertitel, keine Kreditkarte nötig.</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Kostenlos testen</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>Minutenpakete</h3>
-                    <p>Einmal zahlen. Die Minuten nutzen, wann immer Sie möchten.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300 Minuten</p>
-                            <p class="plan__mins">5 Stunden Untertitel</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">ca. 2,3 US-Cent pro Minute</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Beliebt</span>
-                            <p class="plan__name">1.000 Minuten</p>
-                            <p class="plan__mins">ca. 16,5 Stunden</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">ca. 1,5 US-Cent pro Minute</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10.000 Minuten</p>
-                            <p class="plan__mins">ca. 166 Stunden</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">ca. 1,2 US-Cent pro Minute</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>Abonnements</h3>
-                    <p>Jeden Monat ein frisches Minutenkontingent. Jederzeit kündbar.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">400 Minuten im Monat</p>
-                            <p class="plan__price">$4.99 <small>/ Monat</small></p>
-                            <p class="plan__alt">oder $49.99 im Jahr</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Am besten für tägliche Anrufe</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">1.200 Minuten im Monat</p>
-                            <p class="plan__price">$11.99 <small>/ Monat</small></p>
-                            <p class="plan__alt">oder $99.99 im Jahr</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">3.000 Minuten im Monat</p>
-                            <p class="plan__price">$21.99 <small>/ Monat</small></p>
-                            <p class="plan__alt">nur monatlich</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">Minuten werden nur gezählt, während Untertitel laufen. Die Zahlungen werden von <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, unserem Merchant of Record, abgewickelt. Siehe die <a href="/captions/refund.html">Rückerstattungsrichtlinie</a>.</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -434,7 +361,7 @@
                     </details>
                     <details>
                         <summary>Was kostet es?</summary>
-                        <div>Sie starten mit kostenlosen Minuten, keine Kreditkarte nötig. Danach können Sie ein Minutenpaket kaufen (300 Minuten für $6.99, 1.000 für $14.99, 10.000 für $119.99) oder ein Abonnement: Basic 400 Minuten im Monat für $4.99 ($49.99 im Jahr), Pro 1.200 Minuten im Monat für $11.99 ($99.99 im Jahr) oder Max 3.000 Minuten im Monat für $21.99. Die Preise enthalten die Steuer. Minuten werden nur verbraucht, während Untertitel laufen.</div>
+                        <div>Sie starten mit kostenlosen Minuten, eine Kreditkarte ist nicht nötig. Danach können Sie ein einmaliges Minutenpaket kaufen oder ein Monats- oder Jahresabo wählen. Minuten werden nur verbraucht, solange Untertitel laufen. <a href="/de/captions/pricing.html">Alle Preise ansehen</a>.</div>
                     </details>
                     <details>
                         <summary>Wird mein Ton aufgezeichnet?</summary>

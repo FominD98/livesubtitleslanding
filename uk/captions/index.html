@@ -103,15 +103,7 @@
             "Вікно субтитрів завжди зверху, з режимом проходження кліків"
         ],
         "offers": [
-            { "@type": "Offer", "name": "Безкоштовні хвилини на старт", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300 хвилин (разовий пакет)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1000 хвилин (разовий пакет)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10 000 хвилин (разовий пакет)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 хвилин на місяць, помісячна оплата", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 хвилин на місяць, річна оплата", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1200 хвилин на місяць, помісячна оплата", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1200 хвилин на місяць, річна оплата", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max: 3000 хвилин на місяць, помісячна оплата", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Безкоштовні хвилини на старт", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "Скільки це коштує?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Ви починаєте з безкоштовних хвилин, картка не потрібна. Потім можна купити пакет хвилин (300 хвилин за $6.99, 1000 за $14.99, 10 000 за $119.99) або підписку: Basic — 400 хвилин на місяць за $4.99 ($49.99 на рік), Pro — 1200 хвилин на місяць за $11.99 ($99.99 на рік) або Max — 3000 хвилин на місяць за $21.99. Ціни включають податок. Хвилини рахуються, тільки поки працюють субтитри." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Ви починаєте з безкоштовних хвилин, картка не потрібна. Далі можна купити разовий пакет хвилин або оформити підписку на місяць чи рік. Хвилини витрачаються лише тоді, коли працюють субтитри." }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="Основна">
                 <a class="lc-nav__extra" href="#how">Як це працює</a>
                 <a class="lc-nav__extra" href="#features">Можливості</a>
-                <a href="#pricing">Ціни</a>
+                <a href="/uk/captions/pricing.html">Ціни</a>
                 <a class="lc-nav__extra" href="#faq">Питання</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="uk">Українська</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             Завантажити для Windows
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">Переглянути ціни</a>
+                        <a class="btn btn--ghost" href="/uk/captions/pricing.html">Переглянути ціни</a>
                     </div>
                     <p class="hero__note">Безкоштовні хвилини на старт. Картка не потрібна.</p>
                     <ul class="checks">
@@ -346,71 +338,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>Ціни</h2>
-                <p class="section__lead">Почніть з безкоштовних хвилин. Потім купіть хвилини один раз або оформіть підписку з місячним лімітом. Ціни вказані в доларах США і включають податок; ваша місцева ціна зʼявиться перед оплатою.</p>
-
-                <div class="trial">
-                    <p><strong>Безкоштовний старт:</strong> безкоштовні хвилини субтитрів, картка не потрібна.</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Спробувати безкоштовно</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>Пакети хвилин</h3>
-                    <p>Заплатіть один раз. Використовуйте хвилини, коли захочете.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300 хвилин</p>
-                            <p class="plan__mins">5 годин субтитрів</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">прибл. 2,3 цента за хвилину</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Популярний</span>
-                            <p class="plan__name">1000 хвилин</p>
-                            <p class="plan__mins">прибл. 16,5 години</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">прибл. 1,5 цента за хвилину</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10 000 хвилин</p>
-                            <p class="plan__mins">прибл. 166 годин</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">прибл. 1,2 цента за хвилину</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>Підписки</h3>
-                    <p>Нова порція хвилин щомісяця. Скасувати можна будь-коли.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">400 хвилин на місяць</p>
-                            <p class="plan__price">$4.99 <small>/ місяць</small></p>
-                            <p class="plan__alt">або $49.99 на рік</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Найкраще для щоденних дзвінків</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">1200 хвилин на місяць</p>
-                            <p class="plan__price">$11.99 <small>/ місяць</small></p>
-                            <p class="plan__alt">або $99.99 на рік</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">3000 хвилин на місяць</p>
-                            <p class="plan__price">$21.99 <small>/ місяць</small></p>
-                            <p class="plan__alt">тільки помісячно</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">Хвилини рахуються, тільки поки працюють субтитри. Платежі обробляє <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, наш офіційний продавець (merchant of record). Див. <a href="/captions/refund.html">політику повернення коштів</a>.</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -434,7 +361,7 @@
                     </details>
                     <details>
                         <summary>Скільки це коштує?</summary>
-                        <div>Ви починаєте з безкоштовних хвилин, картка не потрібна. Потім можна купити пакет хвилин (300 хвилин за $6.99, 1000 за $14.99, 10 000 за $119.99) або підписку: Basic — 400 хвилин на місяць за $4.99 ($49.99 на рік), Pro — 1200 хвилин на місяць за $11.99 ($99.99 на рік) або Max — 3000 хвилин на місяць за $21.99. Ціни включають податок. Хвилини рахуються, тільки поки працюють субтитри.</div>
+                        <div>Ви починаєте з безкоштовних хвилин, картка не потрібна. Далі можна купити разовий пакет хвилин або оформити підписку на місяць чи рік. Хвилини витрачаються лише тоді, коли працюють субтитри. <a href="/uk/captions/pricing.html">Усі ціни</a>.</div>
                     </details>
                     <details>
                         <summary>Чи записується мій звук?</summary>

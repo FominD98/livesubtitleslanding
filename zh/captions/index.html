@@ -103,15 +103,7 @@
             "窗口始终置顶,支持点击穿透"
         ],
         "offers": [
-            { "@type": "Offer", "name": "免费试用时长", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300分钟(一次性套餐)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1,000分钟(一次性套餐)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10,000分钟(一次性套餐)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic:每月400分钟,按月付费", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic:每月400分钟,按年付费", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro:每月1,200分钟,按月付费", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro:每月1,200分钟,按年付费", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max:每月3,000分钟,按月付费", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "免费试用时长", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "费用是多少?",
-                "acceptedAnswer": { "@type": "Answer", "text": "你可以先用免费时长开始使用,无需绑定银行卡。之后可以购买分钟数套餐(300分钟6.99美元、1,000分钟14.99美元、10,000分钟119.99美元),或选择订阅:Basic每月400分钟4.99美元(按年49.99美元)、Pro每月1,200分钟11.99美元(按年99.99美元)、Max每月3,000分钟21.99美元。价格已含税。分钟数只在字幕运行时才会消耗。" }
+                "acceptedAnswer": { "@type": "Answer", "text": "无需绑卡，先用免费时长开始。之后可以购买一次性时长包，或选择按月或按年订阅。仅在字幕运行时扣除时长。" }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="主导航">
                 <a class="lc-nav__extra" href="#how">工作原理</a>
                 <a class="lc-nav__extra" href="#features">功能</a>
-                <a href="#pricing">价格</a>
+                <a href="/zh/captions/pricing.html">价格</a>
                 <a class="lc-nav__extra" href="#faq">常见问题</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="zh">简体中文</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             下载Windows版
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">查看价格</a>
+                        <a class="btn btn--ghost" href="/zh/captions/pricing.html">查看价格</a>
                     </div>
                     <p class="hero__note">赠送免费时长,无需绑定银行卡即可开始使用。</p>
                     <ul class="checks">
@@ -346,71 +338,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>价格</h2>
-                <p class="section__lead">先用免费时长试用,之后可以一次性购买分钟套餐,也可以按月订阅,每月获得固定分钟数。价格以美元计且已含税,实际支付金额会在付款前显示。</p>
-
-                <div class="trial">
-                    <p><strong>免费开始:</strong>无需绑定银行卡即可获得免费字幕时长。</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">免费试用</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>分钟套餐</h3>
-                    <p>一次性付费,分钟数可随时使用。</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300分钟</p>
-                            <p class="plan__mins">5小时字幕</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">每分钟约2.3美分</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">热门</span>
-                            <p class="plan__name">1,000分钟</p>
-                            <p class="plan__mins">约16.5小时</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">每分钟约1.5美分</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10,000分钟</p>
-                            <p class="plan__mins">约166小时</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">每分钟约1.2美分</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>订阅</h3>
-                    <p>每月自动发放新的分钟数,可随时取消。</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">每月400分钟</p>
-                            <p class="plan__price">$4.99 <small>/ 月</small></p>
-                            <p class="plan__alt">或按年支付$49.99</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">适合每天通话使用</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">每月1,200分钟</p>
-                            <p class="plan__price">$11.99 <small>/ 月</small></p>
-                            <p class="plan__alt">或按年支付$99.99</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">每月3,000分钟</p>
-                            <p class="plan__price">$21.99 <small>/ 月</small></p>
-                            <p class="plan__alt">仅支持按月付费</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">分钟数只在字幕运行期间计费。付款由我们的经销商<a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>处理。查看<a href="/captions/refund.html">退款政策</a>。</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -434,7 +361,7 @@
                     </details>
                     <details>
                         <summary>费用是多少?</summary>
-                        <div>你可以先用免费时长开始使用,无需绑定银行卡。之后可以购买分钟数套餐(300分钟6.99美元、1,000分钟14.99美元、10,000分钟119.99美元),或选择订阅:Basic每月400分钟4.99美元(按年49.99美元)、Pro每月1,200分钟11.99美元(按年99.99美元)、Max每月3,000分钟21.99美元。价格已含税。分钟数只在字幕运行时才会消耗。</div>
+                        <div>无需绑卡，先用免费时长开始。之后可以购买一次性时长包，或选择按月或按年订阅。仅在字幕运行时扣除时长。 <a href="/zh/captions/pricing.html">查看全部价格</a>.</div>
                     </details>
                     <details>
                         <summary>我的音频会被录下来吗?</summary>

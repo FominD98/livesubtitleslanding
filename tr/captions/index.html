@@ -103,15 +103,7 @@
             "Her zaman üstte kalan, tıklamaları alttaki uygulamaya geçiren altyazı penceresi"
         ],
         "offers": [
-            { "@type": "Offer", "name": "Başlamak için ücretsiz dakikalar", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300 dakika (tek seferlik paket)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1.000 dakika (tek seferlik paket)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10.000 dakika (tek seferlik paket)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: ayda 400 dakika, aylık", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: ayda 400 dakika, yıllık", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: ayda 1.200 dakika, aylık", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: ayda 1.200 dakika, yıllık", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max: ayda 3.000 dakika, aylık", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Başlamak için ücretsiz dakikalar", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "Fiyatı ne kadar?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Ücretsiz dakikalarla başlarsınız, kredi kartı gerekmez. Sonrasında bir dakika paketi (300 dakika için $6.99, 1.000 dakika için $14.99, 10.000 dakika için $119.99) veya bir abonelik satın alabilirsiniz: Basic ayda 400 dakika için $4.99 (yılda $49.99), Pro ayda 1.200 dakika için $11.99 (yılda $99.99) veya Max ayda 3.000 dakika için $21.99. Fiyatlara vergi dahildir. Dakikalar yalnızca altyazılar çalışırken kullanılır." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Kart gerekmeden ücretsiz dakikalarla başlarsınız. Ardından tek seferlik bir dakika paketi satın alabilir veya aylık ya da yıllık abonelik seçebilirsiniz. Dakikalar yalnızca altyazı açıkken kullanılır." }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="Ana menü">
                 <a class="lc-nav__extra" href="#how">Nasıl çalışır</a>
                 <a class="lc-nav__extra" href="#features">Özellikler</a>
-                <a href="#pricing">Fiyatlar</a>
+                <a href="/tr/captions/pricing.html">Fiyatlar</a>
                 <a class="lc-nav__extra" href="#faq">SSS</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="tr">Türkçe</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             Windows için indir
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">Fiyatlara bakın</a>
+                        <a class="btn btn--ghost" href="/tr/captions/pricing.html">Fiyatlara bakın</a>
                     </div>
                     <p class="hero__note">Başlamak için ücretsiz dakikalar. Kredi kartı gerekmez.</p>
                     <ul class="checks">
@@ -346,71 +338,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>Fiyatlar</h2>
-                <p class="section__lead">Ücretsiz dakikalarla başlayın. Ardından tek seferlik dakika paketi alın ya da her ay dakika yenilenen bir aboneliğe geçin. Fiyatlar ABD doları cinsindendir ve vergi dahildir; ödeme yapmadan önce yerel fiyatınız gösterilir.</p>
-
-                <div class="trial">
-                    <p><strong>Başlamak ücretsiz:</strong> ücretsiz altyazı dakikaları, kredi kartı gerekmez.</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Ücretsiz deneyin</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>Dakika paketleri</h3>
-                    <p>Bir kez ödeyin. Dakikaları istediğiniz zaman kullanın.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300 dakika</p>
-                            <p class="plan__mins">5 saat altyazı</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">dakika başına yaklaşık 2,3 sent</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Popüler</span>
-                            <p class="plan__name">1.000 dakika</p>
-                            <p class="plan__mins">yaklaşık 16,5 saat</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">dakika başına yaklaşık 1,5 sent</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10.000 dakika</p>
-                            <p class="plan__mins">yaklaşık 166 saat</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">dakika başına yaklaşık 1,2 sent</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>Abonelikler</h3>
-                    <p>Her ay yeni bir dakika kotası. İstediğiniz zaman iptal edin.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">ayda 400 dakika</p>
-                            <p class="plan__price">$4.99 <small>/ ay</small></p>
-                            <p class="plan__alt">veya yılda $49.99</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Günlük görüşmeler için en iyisi</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">ayda 1.200 dakika</p>
-                            <p class="plan__price">$11.99 <small>/ ay</small></p>
-                            <p class="plan__alt">veya yılda $99.99</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">ayda 3.000 dakika</p>
-                            <p class="plan__price">$21.99 <small>/ ay</small></p>
-                            <p class="plan__alt">yalnızca aylık</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">Dakikalar yalnızca altyazılar çalışırken sayılır. Ödemeler, yetkili satıcımız <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a> tarafından işlenir. <a href="/captions/refund.html">İade politikasına</a> bakın.</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -434,7 +361,7 @@
                     </details>
                     <details>
                         <summary>Fiyatı ne kadar?</summary>
-                        <div>Ücretsiz dakikalarla başlarsınız, kredi kartı gerekmez. Sonrasında bir dakika paketi (300 dakika için $6.99, 1.000 dakika için $14.99, 10.000 dakika için $119.99) veya bir abonelik satın alabilirsiniz: Basic ayda 400 dakika için $4.99 (yılda $49.99), Pro ayda 1.200 dakika için $11.99 (yılda $99.99) veya Max ayda 3.000 dakika için $21.99. Fiyatlara vergi dahildir. Dakikalar yalnızca altyazılar çalışırken kullanılır.</div>
+                        <div>Kart gerekmeden ücretsiz dakikalarla başlarsınız. Ardından tek seferlik bir dakika paketi satın alabilir veya aylık ya da yıllık abonelik seçebilirsiniz. Dakikalar yalnızca altyazı açıkken kullanılır. <a href="/tr/captions/pricing.html">Tüm fiyatları görün</a>.</div>
                     </details>
                     <details>
                         <summary>Sesim kaydediliyor mu?</summary>

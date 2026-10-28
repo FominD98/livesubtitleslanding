@@ -103,15 +103,7 @@
             "Окно поверх всех программ, режим «клики сквозь окно»"
         ],
         "offers": [
-            { "@type": "Offer", "name": "Бесплатные минуты для старта", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300 минут (разовый пакет)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1000 минут (разовый пакет)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10 000 минут (разовый пакет)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 минут в месяц, помесячно", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 минут в месяц, на год", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1200 минут в месяц, помесячно", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1200 минут в месяц, на год", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max: 3000 минут в месяц, помесячно", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Бесплатные минуты для старта", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "Сколько это стоит?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Для начала — бесплатные минуты, карта не нужна. Дальше можно купить пакет минут (300 минут за $6.99, 1000 за $14.99, 10 000 за $119.99) или подписку: Basic — 400 минут в месяц за $4.99 ($49.99 в год), Pro — 1200 минут в месяц за $11.99 ($99.99 в год), Max — 3000 минут в месяц за $21.99. Налоги включены в цену. Минуты расходуются только пока идут субтитры." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Вы начинаете с бесплатных минут, карта не нужна. Дальше можно купить разовый пакет минут или оформить подписку на месяц или год. Минуты расходуются, только пока идут субтитры." }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="Основное меню">
                 <a class="lc-nav__extra" href="#how">Как работает</a>
                 <a class="lc-nav__extra" href="#features">Возможности</a>
-                <a href="#pricing">Цены</a>
+                <a href="/ru/captions/pricing.html">Цены</a>
                 <a class="lc-nav__extra" href="#faq">Вопросы</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="ru">Русский</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             Скачать для Windows
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">Посмотреть цены</a>
+                        <a class="btn btn--ghost" href="/ru/captions/pricing.html">Посмотреть цены</a>
                     </div>
                     <p class="hero__note">Бесплатные минуты для старта. Карта не нужна.</p>
                     <ul class="checks">
@@ -354,71 +346,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>Цены</h2>
-                <p class="section__lead">Начните с 20 бесплатных минут. Потом купите минуты один раз или оформите подписку с запасом минут на месяц. Цены в долларах США, налоги включены; в вашей валюте цена показывается перед оплатой.</p>
-
-                <div class="trial">
-                    <p><strong>Бесплатно:</strong> минуты субтитров для старта, карта не нужна.</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Попробовать бесплатно</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>Пакеты минут</h3>
-                    <p>Платите один раз и тратите минуты, когда удобно.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300 минут</p>
-                            <p class="plan__mins">5 часов субтитров</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">около 2,3 цента за минуту</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Чаще выбирают</span>
-                            <p class="plan__name">1000 минут</p>
-                            <p class="plan__mins">около 16,5 часа</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">около 1,5 цента за минуту</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10 000 минут</p>
-                            <p class="plan__mins">около 166 часов</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">около 1,2 цента за минуту</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>Подписки</h3>
-                    <p>Каждый месяц — новый запас минут. Отменить можно в любой момент.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">400 минут в месяц</p>
-                            <p class="plan__price">$4.99 <small>/ месяц</small></p>
-                            <p class="plan__alt">или $49.99 в год</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Для ежедневных звонков</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">1200 минут в месяц</p>
-                            <p class="plan__price">$11.99 <small>/ месяц</small></p>
-                            <p class="plan__alt">или $99.99 в год</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">3000 минут в месяц</p>
-                            <p class="plan__price">$21.99 <small>/ месяц</small></p>
-                            <p class="plan__alt">только помесячно</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">Минуты считаются, только пока идут субтитры. Платежи принимает <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a> — наш официальный продавец (merchant of record). Условия возврата — в <a href="/ru/captions/refund.html">политике возврата</a>.</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -442,7 +369,7 @@
                     </details>
                     <details>
                         <summary>Сколько это стоит?</summary>
-                        <div>Для начала — бесплатные минуты, карта не нужна. Дальше можно купить пакет минут (300 минут за $6.99, 1000 за $14.99, 10 000 за $119.99) или подписку: Basic — 400 минут в месяц за $4.99 ($49.99 в год), Pro — 1200 минут в месяц за $11.99 ($99.99 в год), Max — 3000 минут в месяц за $21.99. Налоги включены в цену. Минуты расходуются только пока идут субтитры.</div>
+                        <div>Вы начинаете с бесплатных минут, карта не нужна. Дальше можно купить разовый пакет минут или оформить подписку на месяц или год. Минуты расходуются, только пока идут субтитры. <a href="/ru/captions/pricing.html">Все цены</a>.</div>
                     </details>
                     <details>
                         <summary>Записывается ли мой звук?</summary>

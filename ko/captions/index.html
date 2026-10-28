@@ -103,15 +103,7 @@
             "클릭이 그대로 통과되는, 항상 위에 표시되는 자막 창"
         ],
         "offers": [
-            { "@type": "Offer", "name": "시작용 무료 이용 시간", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300분 (일회성 패키지)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1,000분 (일회성 패키지)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10,000분 (일회성 패키지)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 월 400분, 매월 결제", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 월 400분, 연간 결제", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 월 1,200분, 매월 결제", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 월 1,200분, 연간 결제", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max: 월 3,000분, 매월 결제", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "시작용 무료 이용 시간", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "가격은 얼마인가요?",
-                "acceptedAnswer": { "@type": "Answer", "text": "처음에는 무료 이용 시간으로 카드 등록 없이 시작할 수 있습니다. 이후에는 분 단위 패키지(300분 $6.99, 1,000분 $14.99, 10,000분 $119.99)를 구매하거나 구독 요금제(Basic 월 400분 $4.99, 연간 $49.99 / Pro 월 1,200분 $11.99, 연간 $99.99 / Max 월 3,000분 $21.99)를 이용할 수 있습니다. 가격에는 세금이 포함되어 있습니다. 이용 시간은 자막이 켜져 있는 동안에만 차감됩니다." }
+                "acceptedAnswer": { "@type": "Answer", "text": "카드 없이 무료 이용 시간으로 시작합니다. 이후에는 한 번 구매하는 이용 시간 패키지를 사거나 월간 또는 연간 구독을 선택할 수 있습니다. 이용 시간은 자막이 켜져 있는 동안에만 차감됩니다." }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="메인">
                 <a class="lc-nav__extra" href="#how">작동 방식</a>
                 <a class="lc-nav__extra" href="#features">기능</a>
-                <a href="#pricing">요금제</a>
+                <a href="/ko/captions/pricing.html">요금제</a>
                 <a class="lc-nav__extra" href="#faq">자주 묻는 질문</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="ko">한국어</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             윈도우용 다운로드
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">요금 보기</a>
+                        <a class="btn btn--ghost" href="/ko/captions/pricing.html">요금 보기</a>
                     </div>
                     <p class="hero__note">무료 이용 시간으로 바로 시작하세요. 카드 등록이 필요 없습니다.</p>
                     <ul class="checks">
@@ -346,71 +338,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>요금</h2>
-                <p class="section__lead">무료 이용 시간으로 시작하세요. 이후에는 필요한 만큼 분을 한 번에 구매하거나, 매달 분이 충전되는 구독 요금제를 이용할 수 있습니다. 가격은 미국 달러 기준이며 세금이 포함되어 있고, 결제 전 실제 결제 금액이 표시됩니다.</p>
-
-                <div class="trial">
-                    <p><strong>무료로 시작하세요:</strong> 자막 무료 이용 시간을 카드 등록 없이 받을 수 있습니다.</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">무료로 체험하기</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>분 단위 패키지</h3>
-                    <p>한 번만 결제하세요. 원할 때 언제든 분을 사용할 수 있습니다.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300분</p>
-                            <p class="plan__mins">자막 5시간</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">분당 약 2.3센트</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">인기</span>
-                            <p class="plan__name">1,000분</p>
-                            <p class="plan__mins">약 16.5시간</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">분당 약 1.5센트</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10,000분</p>
-                            <p class="plan__mins">약 166시간</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">분당 약 1.2센트</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>구독</h3>
-                    <p>매달 새로운 분이 제공됩니다. 언제든 해지할 수 있습니다.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">월 400분</p>
-                            <p class="plan__price">$4.99 <small>/ 월</small></p>
-                            <p class="plan__alt">또는 연간 $49.99</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">매일 통화하는 분께 추천</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">월 1,200분</p>
-                            <p class="plan__price">$11.99 <small>/ 월</small></p>
-                            <p class="plan__alt">또는 연간 $99.99</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">월 3,000분</p>
-                            <p class="plan__price">$21.99 <small>/ 월</small></p>
-                            <p class="plan__alt">월간 결제만 가능</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">이용 시간은 자막이 켜져 있는 동안에만 차감됩니다. 결제는 공식 판매자인 <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>이 처리합니다. <a href="/captions/refund.html">환불 정책</a>을 확인하세요.</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -434,7 +361,7 @@
                     </details>
                     <details>
                         <summary>가격은 얼마인가요?</summary>
-                        <div>처음에는 무료 이용 시간으로 카드 등록 없이 시작할 수 있습니다. 이후에는 분 단위 패키지(300분 $6.99, 1,000분 $14.99, 10,000분 $119.99)를 구매하거나 구독 요금제(Basic 월 400분 $4.99, 연간 $49.99 / Pro 월 1,200분 $11.99, 연간 $99.99 / Max 월 3,000분 $21.99)를 이용할 수 있습니다. 가격에는 세금이 포함되어 있습니다. 이용 시간은 자막이 켜져 있는 동안에만 차감됩니다.</div>
+                        <div>카드 없이 무료 이용 시간으로 시작합니다. 이후에는 한 번 구매하는 이용 시간 패키지를 사거나 월간 또는 연간 구독을 선택할 수 있습니다. 이용 시간은 자막이 켜져 있는 동안에만 차감됩니다. <a href="/ko/captions/pricing.html">전체 요금 보기</a>.</div>
                     </details>
                     <details>
                         <summary>소리가 녹음되나요?</summary>

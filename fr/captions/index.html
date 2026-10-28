@@ -103,15 +103,7 @@
             "Fenêtre de sous-titres en mode clic-traversant qui reste au premier plan"
         ],
         "offers": [
-            { "@type": "Offer", "name": "Minutes gratuites pour commencer", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300 minutes (forfait ponctuel)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1 000 minutes (forfait ponctuel)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10 000 minutes (forfait ponctuel)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic : 400 minutes par mois, mensuel", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic : 400 minutes par mois, annuel", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro : 1 200 minutes par mois, mensuel", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro : 1 200 minutes par mois, annuel", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max : 3 000 minutes par mois, mensuel", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Minutes gratuites pour commencer", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "Combien ça coûte ?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Vous commencez avec des minutes gratuites, sans carte bancaire. Ensuite, vous pouvez acheter un forfait de minutes (300 minutes pour $6.99, 1 000 pour $14.99, 10 000 pour $119.99) ou un abonnement : Basic 400 minutes par mois pour $4.99 ($49.99 par an), Pro 1 200 minutes par mois pour $11.99 ($99.99 par an) ou Max 3 000 minutes par mois pour $21.99. Les prix incluent les taxes. Les minutes ne sont utilisées que lorsque les sous-titres sont actifs." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Vous commencez avec des minutes offertes, sans carte bancaire. Ensuite, vous pouvez acheter un pack de minutes sans engagement ou choisir un abonnement mensuel ou annuel. Les minutes ne sont décomptées que pendant l'affichage des sous-titres." }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="Navigation principale">
                 <a class="lc-nav__extra" href="#how">Comment ça marche</a>
                 <a class="lc-nav__extra" href="#features">Fonctionnalités</a>
-                <a href="#pricing">Tarifs</a>
+                <a href="/fr/captions/pricing.html">Tarifs</a>
                 <a class="lc-nav__extra" href="#faq">FAQ</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="fr">Français</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             Télécharger pour Windows
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">Voir les tarifs</a>
+                        <a class="btn btn--ghost" href="/fr/captions/pricing.html">Voir les tarifs</a>
                     </div>
                     <p class="hero__note">Minutes gratuites pour commencer. Aucune carte requise.</p>
                     <ul class="checks">
@@ -346,71 +338,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>Tarifs</h2>
-                <p class="section__lead">Commencez avec des minutes gratuites. Achetez ensuite des minutes une fois, ou abonnez-vous pour un quota mensuel. Les prix sont en dollars américains et incluent les taxes ; votre prix local s'affiche avant le paiement.</p>
-
-                <div class="trial">
-                    <p><strong>Gratuit pour commencer :</strong> des minutes gratuites de sous-titres, sans carte requise.</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Essayer gratuitement</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>Forfaits de minutes</h3>
-                    <p>Payez une fois. Utilisez les minutes quand vous voulez.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300 minutes</p>
-                            <p class="plan__mins">5 heures de sous-titres</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">environ 2,3 ¢ la minute</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Populaire</span>
-                            <p class="plan__name">1 000 minutes</p>
-                            <p class="plan__mins">environ 16,5 heures</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">environ 1,5 ¢ la minute</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10 000 minutes</p>
-                            <p class="plan__mins">environ 166 heures</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">environ 1,2 ¢ la minute</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>Abonnements</h3>
-                    <p>Un nouveau quota de minutes chaque mois. Annulez à tout moment.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">400 minutes par mois</p>
-                            <p class="plan__price">$4.99 <small>/ mois</small></p>
-                            <p class="plan__alt">ou $49.99 par an</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Idéal pour les appels quotidiens</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">1 200 minutes par mois</p>
-                            <p class="plan__price">$11.99 <small>/ mois</small></p>
-                            <p class="plan__alt">ou $99.99 par an</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">3 000 minutes par mois</p>
-                            <p class="plan__price">$21.99 <small>/ mois</small></p>
-                            <p class="plan__alt">mensuel uniquement</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">Les minutes ne sont comptées que lorsque les sous-titres sont actifs. Les paiements sont traités par <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, notre revendeur officiel (merchant of record). Consultez la <a href="/captions/refund.html">politique de remboursement</a>.</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -434,7 +361,7 @@
                     </details>
                     <details>
                         <summary>Combien ça coûte ?</summary>
-                        <div>Vous commencez avec des minutes gratuites, sans carte bancaire. Ensuite, vous pouvez acheter un forfait de minutes (300 minutes pour $6.99, 1 000 pour $14.99, 10 000 pour $119.99) ou un abonnement : Basic 400 minutes par mois pour $4.99 ($49.99 par an), Pro 1 200 minutes par mois pour $11.99 ($99.99 par an) ou Max 3 000 minutes par mois pour $21.99. Les prix incluent les taxes. Les minutes ne sont utilisées que lorsque les sous-titres sont actifs.</div>
+                        <div>Vous commencez avec des minutes offertes, sans carte bancaire. Ensuite, vous pouvez acheter un pack de minutes sans engagement ou choisir un abonnement mensuel ou annuel. Les minutes ne sont décomptées que pendant l'affichage des sous-titres. <a href="/fr/captions/pricing.html">Voir tous les tarifs</a>.</div>
                     </details>
                     <details>
                         <summary>Mon audio est-il enregistré ?</summary>

@@ -103,15 +103,7 @@
             "Okno napisów zawsze na wierzchu, z trybem przezroczystym na kliknięcia"
         ],
         "offers": [
-            { "@type": "Offer", "name": "Darmowe minuty na start", "price": "0", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "300 minut (pakiet jednorazowy)", "price": "6.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "1000 minut (pakiet jednorazowy)", "price": "14.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "10 000 minut (pakiet jednorazowy)", "price": "119.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 minut miesięcznie, płatność miesięczna", "price": "4.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Basic: 400 minut miesięcznie, płatność roczna", "price": "49.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1200 minut miesięcznie, płatność miesięczna", "price": "11.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Pro: 1200 minut miesięcznie, płatność roczna", "price": "99.99", "priceCurrency": "USD" },
-            { "@type": "Offer", "name": "Max: 3000 minut miesięcznie, płatność miesięczna", "price": "21.99", "priceCurrency": "USD" }
+            { "@type": "Offer", "name": "Darmowe minuty na start", "price": "0", "priceCurrency": "USD" }
         ],
         "publisher": {
             "@type": "Organization",
@@ -149,7 +141,7 @@
             {
                 "@type": "Question",
                 "name": "Ile to kosztuje?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Zaczynasz od darmowych minut, karta nie jest potrzebna. Potem możesz kupić pakiet minut (300 minut za $6.99, 1000 za $14.99, 10 000 za $119.99) albo subskrypcję: Basic — 400 minut miesięcznie za $4.99 ($49.99 rocznie), Pro — 1200 minut miesięcznie za $11.99 ($99.99 rocznie) lub Max — 3000 minut miesięcznie za $21.99. Ceny zawierają podatek. Minuty są liczone tylko wtedy, gdy napisy działają." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Zaczynasz od darmowych minut, bez karty. Potem możesz kupić jednorazowy pakiet minut albo wybrać abonament miesięczny lub roczny. Minuty są liczone tylko wtedy, gdy napisy są włączone." }
             },
             {
                 "@type": "Question",
@@ -179,7 +171,7 @@
             <nav class="lc-nav" aria-label="Główna">
                 <a class="lc-nav__extra" href="#how">Jak to działa</a>
                 <a class="lc-nav__extra" href="#features">Funkcje</a>
-                <a href="#pricing">Cennik</a>
+                <a href="/pl/captions/pricing.html">Cennik</a>
                 <a class="lc-nav__extra" href="#faq">FAQ</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="pl">Polski</span></summary>
@@ -217,7 +209,7 @@
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
                             Pobierz na Windows
                         </a>
-                        <a class="btn btn--ghost" href="#pricing">Zobacz ceny</a>
+                        <a class="btn btn--ghost" href="/pl/captions/pricing.html">Zobacz ceny</a>
                     </div>
                     <p class="hero__note">Darmowe minuty na start. Karta nie jest potrzebna.</p>
                     <ul class="checks">
@@ -346,71 +338,6 @@
             </div>
         </section>
 
-        <section class="section section--alt" id="pricing">
-            <div class="wrap">
-                <h2>Ceny</h2>
-                <p class="section__lead">Zacznij od darmowych minut. Potem kup minuty jednorazowo albo wykup subskrypcję z miesięcznym limitem. Ceny podane są w dolarach amerykańskich i zawierają podatek; twoja lokalna cena pojawi się przed płatnością.</p>
-
-                <div class="trial">
-                    <p><strong>Bezpłatny start:</strong> darmowe minuty napisów, karta nie jest potrzebna.</p>
-                    <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Wypróbuj za darmo</a>
-                </div>
-
-                <div class="price-block">
-                    <h3>Pakiety minut</h3>
-                    <p>Zapłać raz. Korzystaj z minut, kiedy chcesz.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">300 minut</p>
-                            <p class="plan__mins">5 godzin napisów</p>
-                            <p class="plan__price">$6.99</p>
-                            <p class="plan__per">ok. 2,3 centa za minutę</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Popularne</span>
-                            <p class="plan__name">1000 minut</p>
-                            <p class="plan__mins">ok. 16,5 godziny</p>
-                            <p class="plan__price">$14.99</p>
-                            <p class="plan__per">ok. 1,5 centa za minutę</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">10 000 minut</p>
-                            <p class="plan__mins">ok. 166 godzin</p>
-                            <p class="plan__price">$119.99</p>
-                            <p class="plan__per">ok. 1,2 centa za minutę</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="price-block">
-                    <h3>Subskrypcje</h3>
-                    <p>Nowa pula minut co miesiąc. Anuluj w dowolnym momencie.</p>
-                    <div class="plans">
-                        <div class="plan">
-                            <p class="plan__name">Basic</p>
-                            <p class="plan__mins">400 minut miesięcznie</p>
-                            <p class="plan__price">$4.99 <small>/ miesiąc</small></p>
-                            <p class="plan__alt">lub $49.99 rocznie</p>
-                        </div>
-                        <div class="plan plan--best">
-                            <span class="plan__tag">Najlepsze do codziennych rozmów</span>
-                            <p class="plan__name">Pro</p>
-                            <p class="plan__mins">1200 minut miesięcznie</p>
-                            <p class="plan__price">$11.99 <small>/ miesiąc</small></p>
-                            <p class="plan__alt">lub $99.99 rocznie</p>
-                        </div>
-                        <div class="plan">
-                            <p class="plan__name">Max</p>
-                            <p class="plan__mins">3000 minut miesięcznie</p>
-                            <p class="plan__price">$21.99 <small>/ miesiąc</small></p>
-                            <p class="plan__alt">tylko miesięcznie</p>
-                        </div>
-                    </div>
-                </div>
-
-                <p class="note">Minuty liczone są tylko wtedy, gdy napisy działają. Płatności obsługuje <a href="https://www.paddle.com" target="_blank" rel="noopener">Paddle</a>, nasz autoryzowany sprzedawca (merchant of record). Zobacz <a href="/captions/refund.html">politykę zwrotów</a>.</p>
-            </div>
-        </section>
 
         <section class="section" id="faq">
             <div class="wrap wrap--narrow">
@@ -434,7 +361,7 @@
                     </details>
                     <details>
                         <summary>Ile to kosztuje?</summary>
-                        <div>Zaczynasz od darmowych minut, karta nie jest potrzebna. Potem możesz kupić pakiet minut (300 minut za $6.99, 1000 za $14.99, 10 000 za $119.99) albo subskrypcję: Basic — 400 minut miesięcznie za $4.99 ($49.99 rocznie), Pro — 1200 minut miesięcznie za $11.99 ($99.99 rocznie) lub Max — 3000 minut miesięcznie za $21.99. Ceny zawierają podatek. Minuty są liczone tylko wtedy, gdy napisy działają.</div>
+                        <div>Zaczynasz od darmowych minut, bez karty. Potem możesz kupić jednorazowy pakiet minut albo wybrać abonament miesięczny lub roczny. Minuty są liczone tylko wtedy, gdy napisy są włączone. <a href="/pl/captions/pricing.html">Zobacz pełny cennik</a>.</div>
                     </details>
                     <details>
                         <summary>Czy mój dźwięk jest nagrywany?</summary>
