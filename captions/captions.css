@@ -280,6 +280,10 @@ table.prices th, table.compare th { background: var(--accent-soft); }
     .lc-nav .lc-nav__extra { display: none; }
     .hero__cta .btn { width: 100%; }
     .mock__line { font-size: 1.2rem; }
+    /* Language menu spans the header width instead of hanging off the picker */
+    .lc-header .wrap { position: relative; }
+    details.lc-lang { position: static; }
+    .lc-lang__menu, [dir="rtl"] .lc-lang__menu { left: 1.25rem; right: 1.25rem; top: calc(100% - .4rem); min-width: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
