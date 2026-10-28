@@ -244,3 +244,9 @@ code { font-size: 12px; background: var(--page); padding: 1px 4px; border-radius
     .filters.range input[type="date"] { flex: 1; min-width: 0; }
     .filters.range > span { display: none; }
 }
+
+/* A/B: плитки без спарклайнов не держат место под них; вывод — заголовок и строки */
+.tiles.compact .tile { padding-bottom: 14px; }
+.verdict h2 { margin: 0 0 6px; }
+.verdict p { margin: 4px 0 0; }
+@media (max-width: 600px) { .tiles.compact .tile { padding-bottom: 10px; } }
