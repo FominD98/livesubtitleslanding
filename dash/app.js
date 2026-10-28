@@ -2045,8 +2045,16 @@ function renderAb() {
 function renderAbMoney(t, s) {
     const m = s.money;
     const card = document.getElementById("ab-money");
-    card.hidden = !(m.A.rev || m.B.rev);
-    if (card.hidden) return;
+    card.hidden = false;
+    const empty = !(m.A.rev || m.B.rev);
+    for (const id of ["ab-money-tiles", "tbl-ab-products"]) document.getElementById(id).hidden = empty;
+    if (empty) {
+        // Деньги сравниваются в каждом тесте; нет покупок с плечом — так и пишем, а не прячем блок
+        document.getElementById("ab-money-verdict").replaceChildren(el("span", { class: "muted" },
+            `No purchases tied to an arm yet (${int(s.x.A + s.x.B)} buyers in the test), so money can't be compared.`));
+        document.getElementById("ab-money-note").textContent = m.lost ? `${usd(m.lost)} of purchases on these platforms have no arm.` : "";
+        return;
+    }
     const per = stepLabel(t, t.base).toLowerCase();
     // Без transaction_id (Android) переотправленная покупка считается дважды — «доказано» по таким данным не пишем
     const sig = m.p < 0.05 && !m.noTxn;
