@@ -1060,7 +1060,7 @@ function renderSearch() {
     ]);
     const src = sources[0];
     document.getElementById("search-note").textContent = src
-        ? `Google via Bright Data, checked ${new Date(src.updated_at).toLocaleString("en-GB")} (${src.note}). Daily, 5,000 free queries a month.`
+        ? `Google via Bright Data, checked ${new Date(src.updated_at).toLocaleString("en-GB")} (${src.note}). Main keywords daily, the rest weekly.`
         : "No checks yet.";
     document.getElementById("search-trend-note").textContent =
         trend.length < 7 ? `History started ${trend[0]?.day ?? "today"}, one point per day` : "keywords per day";
