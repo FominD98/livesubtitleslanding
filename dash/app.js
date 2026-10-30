@@ -1874,22 +1874,21 @@ function abMoney(t, app, n, pace) {
 }
 
 // Реальные деньги: установки из бэкенда, выплаты Paddle (tools/dash/sources/abserver.py). Знаменатель — все новые
-// установки плеча за окно теста, у не купивших $0. Сравнение средних — z-тест Уэлча по сумме и сумме квадратов
+// установки плеча за окно теста, у не купивших $0. Уверенность (p, интервалы, SRM, победа по договору) считает
+// Worker — abConfidence в cloudflare/dash-api, поле stats; здесь только суммы для показа
 const abServerCache = new WeakMap();
 
 function abServer(t) {
-    if (!t.server) return null;
+    if (!t.server || !t.stats) return null;
     if (abServerCache.has(t)) return abServerCache.get(t);
     const out = abServerCalc(t);
     abServerCache.set(t, out);
     return out;
 }
 
-// Нормальное приближение к среднему «$ на человека» при почти одних нулях врёт, когда покупателей единицы:
-// 5 покупателей против 0 дают p ≈ 0.03, точный тест — 0.06. Значимость объявляем только от MIN_BUYERS в каждом плече
-const MIN_BUYERS = 10;
-
 function abServerCalc(t) {
+    const st = t.stats;
+    const num = (v) => v ?? NaN;
     const get = (arm, metric, key = "") => t.server.find((r) => r.arm === arm && r.metric === metric && r.key === key)?.value || 0;
     const arm = (a) => {
         const n = get(a, "users");
@@ -1900,23 +1899,22 @@ function abServerCalc(t) {
     };
     const A = arm("A");
     const B = arm("B");
-    const diff = B.mean - A.mean;
-    const se = Math.sqrt(A.v + B.v);
-    const win = t.server.find((r) => r.metric === "window")?.key.split("..") || [t.start, t.end || isoDay(new Date())];
-    const days = dayDiff(win[0], win[1]) + 1;
+    const days = st.contract.days;
     const products = new Map();
     for (const r of t.server.filter((x) => x.metric === "product_net" || x.metric === "product_n")) {
         const row = products.get(r.key) || { A: { n: 0, net: 0 }, B: { n: 0, net: 0 } };
         row[r.arm][r.metric === "product_n" ? "n" : "net"] = r.value;
         products.set(r.key, row);
     }
+    const diff = num(st.diff);
     return {
         A, B, diff, days, products,
-        lift: A.mean ? B.mean / A.mean - 1 : NaN,
-        p: se ? 2 * (1 - normCdf(Math.abs(diff / se))) : NaN,
-        probB: se ? normCdf(diff / se) : NaN,
-        lo: diff - 1.96 * se, hi: diff + 1.96 * se,
-        conv: abCompare(A.buyers, A.n, B.buyers, B.n),
+        lift: num(st.delta), liftLo: num(st.ci_low), liftHi: num(st.ci_high),
+        p: num(st.p_revenue),
+        probB: num(st.prob_b_better),
+        lo: num(st.diff_low), hi: num(st.diff_high),
+        conv: { ...abCompare(A.buyers, A.n, B.buyers, B.n), p: num(st.p_conv) },
+        contract: st.contract, contractWin: st.contract_win, daysLeft: num(st.days_left), srm: st.srm,
         // если раскатить B: разница на установку × новые установки за 30 дней в темпе окна теста
         monthly: diff * ((A.n + B.n) / days) * 30,
         outside: get("", "outside_net"),
@@ -1925,7 +1923,7 @@ function abServerCalc(t) {
         fake: { A: get("A", "fake_purchases"), B: get("B", "fake_purchases") },
         need: abMoneyNeed(A, B),
         computed: t.server.find((x) => x.metric === "computed")?.key || "",
-        fewBuyers: Math.min(A.buyers, B.buyers) < MIN_BUYERS,
+        fewBuyers: Math.min(A.buyers, B.buyers) < st.contract.min_buyers,
         series: ["A", "B"].map((a) => t.server.filter((r) => r.arm === a && (r.metric === "day_users" || r.metric === "day_net"))),
     };
 }
@@ -1946,6 +1944,24 @@ function winMismatch(t) {
     return from !== t.start || (t.end && to !== expectTo) ? key : "";
 }
 
+// Победа по договору LS-01 (п. 3.2): условия и что из них ещё не выполнено — Worker отдаёт список в contract.missing
+function abContractLine(t, r) {
+    const c = r.contract;
+    if (r.contractWin) {
+        return { cls: "up", text: `Contract LS-01: B wins — ${signedPct(r.lift)} net per install (95%: ${signedPct(r.liftLo)} … ${signedPct(r.liftHi)}), p = ${r.p.toFixed(3)}, ${c.days} days.` };
+    }
+    const pLeft = r.daysLeft > 0 ? `, ~${int(r.daysLeft)} more days at the current difference` : "";
+    const needs = {
+        exact_money: "exact store money (Play numbers here are an estimate)",
+        delta: `net per user B vs A ≥ ${signedPct(c.min_delta)} (now ${signedPct(r.lift)})`,
+        p_value: `p < ${c.alpha} (now ${Number.isFinite(r.p) ? r.p.toFixed(3) : "—"}${pLeft})`,
+        days: `${c.min_days}+ days (now ${c.days})`,
+        buyers: `${c.min_buyers}+ buyers per arm (now ${int(r.A.buyers)} / ${int(r.B.buyers)})`,
+    };
+    const list = c.missing.map((k) => needs[k]).join("; ");
+    return { cls: "muted", text: `Contract LS-01: ${t.status === "ended" ? "no win" : "not a win yet"} — needs ${list}.` };
+}
+
 function renderAbReal(t) {
     const card = document.getElementById("ab-real");
     const r = abServer(t);
@@ -1959,15 +1975,19 @@ function renderAbReal(t) {
     const per = r.play ? "paywall viewer" : "install";
     const head = sig && enough ? `B ${r.diff > 0 ? "earns more" : "earns less"}: ${signedPct(r.lift)} per ${per} — proven.`
         : sig ? `B ${r.diff > 0 ? "earns more" : "earns less"} (${signedPct(r.lift)}), significant but below the planned sample.`
-        : r.fewBuyers ? `Too few buyers to judge yet (${int(r.A.buyers)} / ${int(r.B.buyers)}, need ${MIN_BUYERS}+ in each arm).`
+        : r.fewBuyers ? `Too few buyers to judge yet (${int(r.A.buyers)} / ${int(r.B.buyers)}, need ${r.contract.min_buyers}+ in each arm).`
         : "No proven difference in real money.";
     document.getElementById("ab-real-head").replaceChildren(el("span", { class: sig ? tone : "" }, head));
+    const contract = abContractLine(t, r);
+    document.getElementById("ab-real-contract").replaceChildren(el("span", { class: contract.cls }, contract.text));
     renderTileRow("ab-real-tiles", [
-        { label: r.play ? "Saw paywall (Android) · A / B" : "New installs · A / B", value: r.A.n + r.B.n, fmt: int, delta: el("span", { class: "muted" }, `${int(r.A.n)} / ${int(r.B.n)}`) },
+        { label: r.play ? "Saw paywall (Android) · A / B" : "New installs · A / B", value: r.A.n + r.B.n, fmt: int,
+          delta: el("span", { class: r.srm.alarm ? "down" : "muted" }, `${int(r.A.n)} / ${int(r.B.n)}${r.srm.alarm ? " · split is off 50/50, check the assignment" : ""}`) },
         { label: "Net revenue · A / B", value: r.B.net, fmt: (v) => `${usd(r.A.net)} / ${usd(v)}`,
           delta: el("span", { class: "muted" }, `${int(r.A.purchases)} / ${int(r.B.purchases)} payments`) },
         { label: `Per ${per} · A → B`, value: r.B.mean || 0, fmt: (v) => `${money(r.A.mean)} → ${money(v)}`,
-          delta: el("span", { class: tone }, `${signedPct(r.lift)} · ${r.fewBuyers ? "too few buyers" : `p = ${Number.isFinite(r.p) ? r.p.toFixed(3) : "—"}`}`) },
+          delta: el("span", { class: tone }, `${signedPct(r.lift)} (95%: ${signedPct(r.liftLo)} … ${signedPct(r.liftHi)}) · ` +
+              (r.fewBuyers ? "too few buyers" : `p = ${Number.isFinite(r.p) ? r.p.toFixed(3) : "—"}`)) },
         { label: "Buyers · A → B", value: (r.conv.pb || 0) * 100, fmt: (v) => `${abPct(r.conv.pa)} → ${v.toFixed(2)}%`,
           delta: el("span", { class: r.conv.p < 0.05 ? (r.conv.lift > 0 ? "up" : "down") : "muted" },
               `${int(r.A.buyers)} / ${int(r.B.buyers)} people · p = ${Number.isFinite(r.conv.p) ? r.conv.p.toFixed(3) : "—"}`) },
