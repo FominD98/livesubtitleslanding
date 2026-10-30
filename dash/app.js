@@ -1787,6 +1787,7 @@ for (const key of ["range", "app", "country"]) {
 // Тесты и их описание приходят из Worker'а (AB_TESTS в cloudflare/dash-api) — здесь только счёт и отрисовка
 state.abSel = { test: null, app: "all" };
 const ARM_COLOR = { A: "--series-1", B: "--series-3" };
+const STORE_NAMES = { "android-host": "Google Play", "ios-host": "App Store" };
 const AB_APP_NAMES = { all: "All platforms", android: "Android", apple: "iOS", windows: "Windows" };
 const abPct = (v) => (Number.isFinite(v) ? `${(v * 100).toFixed(v < 0.1 ? 2 : 1)}%` : "—");
 const money = (v) => (Number.isFinite(v) ? `${v < 0 ? "−" : ""}$${Math.abs(v).toFixed(2)}` : "—");
@@ -1920,9 +1921,9 @@ function abServerCalc(t) {
         outside: get("", "outside_net"),
         // Android Pro Weekly (abplay.py): знаменатель — видевшие пейволл, деньги — заказы Play, сшитые с событиями GA4
         play: t.server.some((x) => x.metric === "unit" && x.key === "paywall_android"),
-        // Android с отпечатком в заказе (abmobile.py): установки из бэкенда, деньги — Orders API Google Play
-        playOrders: t.server.some((x) => x.metric === "source" && x.key === "play_orders"),
-        unattributed: get("", "unattributed_net"),
+        // Мобильные покупки, привязанные к установке (abmobile.py): платформы из строк source, деньги из сторов
+        stores: t.server.filter((x) => x.metric === "source" && x.key.startsWith("store_orders:")).map((x) => x.key.split(":")[1]),
+        unattributed: sum(t.server.filter((x) => x.metric === "unattributed_net"), (x) => x.value),
         fake: { A: get("A", "fake_purchases"), B: get("B", "fake_purchases") },
         need: abMoneyNeed(A, B),
         computed: t.server.find((x) => x.metric === "computed")?.key || "",
@@ -2038,7 +2039,7 @@ function renderAbReal(t) {
         },
     });
     document.getElementById("ab-real-title").textContent = r.play ? "Real money · Google Play orders (estimate)"
-        : r.playOrders ? "Real money · backend + Google Play" : "Real money · backend + Paddle";
+        : r.stores.length ? `Real money · backend + ${r.stores.map((p) => STORE_NAMES[p] || p).join(" + ")}` : "Real money · backend + Paddle";
     const ageH = r.computed ? (Date.now() - Date.parse(r.computed.replace("Z", ":00Z"))) / 3600000 : Infinity;
     const fresh = document.getElementById("ab-real-fresh");
     fresh.className = ageH > 36 ? "down" : "muted";
@@ -2050,11 +2051,12 @@ function renderAbReal(t) {
         ? "Android only. Who is in the test: people who saw the paywall in each arm (GA4). Money: Google Play sales report, net estimated as 85% of the price, " +
           "renewals and refunds follow the first order. A GA4 purchase counts only if Play has an order for the same product from the same country within 10 minutes — " +
           `the rest are fake purchases from cracked apps or billing spoofers (A ${int(r.fake.A)}, B ${int(r.fake.B)}), not counted. One buyer = one first order. iOS isn't included. Updated daily.`
-        : r.playOrders
-        ? "Android only. Who is in the test: every new Android install in the test window (backend trial records), split by the same fingerprint hash as the app. " +
-          "Money: Google Play orders that carry the buyer's fingerprint (app 1.0.61+), developer payout after Google's fee from the Orders API; " +
-          "renewals follow the first purchase, refunded orders count as $0. Only real Play orders — fake purchases from cracked apps never get here. " +
-          `Play orders without a fingerprint (older app versions): ${usd(r.unattributed)}; from people who are not new installs of the window: ${usd(r.outside)} — in neither arm. iOS isn't included. Updated daily.`
+        : r.stores.length
+        ? `${r.stores.map((p) => STORE_NAMES[p] || p).join(" and ")}. Who is in the test: every new install of these platforms since the app version that ties a purchase to the install ` +
+          "(Android 1.0.61, iOS 1.6.10), from backend trial records, split by the same fingerprint hash as the app. " +
+          "Money: Google Play — developer payout after Google's fee from the Orders API; App Store — price from App Store server notifications × the payout share for that currency in the App Store sales report. " +
+          "Renewals follow the first purchase, refunds count as $0. Only real store orders — fake purchases from cracked apps never get here. " +
+          `Store purchases not tied to an install (older app versions): ${usd(r.unattributed)}; from people who are not new installs of the window: ${usd(r.outside)} — in neither arm. Updated daily.`
         : "Who is in the test: every new install of the platform in the test window (backend trial records), split by the same fingerprint hash as the app — " +
         "whether or not they reached the paywall, so nothing can be cherry-picked. Money: Paddle payouts after fees and tax, minus refunds, " +
         "from the test start to today (renewals included). Microsoft Store purchases aren't in the backend and are not counted — on Windows almost all payments go through Paddle, " +
