@@ -2376,17 +2376,35 @@ function campaignKey(name) {
     return (name || "").trim().toLowerCase().replace(/_(wi|st)$/, "");
 }
 
+// Meta app-install ads open Google Play with Meta's own referrer: utm_source=apps.facebook.com
+// (apps.instagram.com), utm_campaign=fb4a / ig4a. The real campaign is in the encrypted part GA4
+// doesn't decode, so these users can only be credited to Meta as a whole.
+const META_INSTALL_REFERRER = /^apps\.(facebook|instagram)\.com\b/i;
+
 function renderCampaigns() {
     const c = state.campaigns;
     const rows = {};
-    const row = (key, label) => (rows[key] ??= { label, network: new Set(), spend: 0, clicks: 0, newUsers: 0, buyers: 0, ga4Revenue: 0, paddleNet: 0, paddleUnits: 0 });
+    const row = (key, label) => (rows[key] ??= { label, network: new Set(), spend: 0, clicks: 0, impressions: 0, conversions: 0, newUsers: 0, buyers: 0, ga4Revenue: 0, paddleNet: 0, paddleUnits: 0, approx: false });
     for (const s of c.spend) {
         const r = row(campaignKey(s.campaign), s.campaign);
         r.network.add(s.network === "google-ads" ? "Google Ads" : "Meta");
         r.spend += s.spend;
         r.clicks += s.clicks;
+        r.impressions += s.impressions || 0;
+        r.conversions += s.conversions || 0;
     }
+    // одна кампания Meta с расходом — её пользователи из Play-реферера Meta; несколько — общая строка Meta
+    const metaSpend = [...new Set(c.spend.filter((s) => s.network === "meta").map((s) => campaignKey(s.campaign)))];
     for (const a of c.acquisition) {
+        if (a.app === "android" && META_INSTALL_REFERRER.test(a.source)) {
+            const r = metaSpend.length === 1 ? rows[metaSpend[0]] : row("meta-app-installs", "Meta app installs (all campaigns)");
+            r.network.add(`${a.source.replace(/\s*\/\s*$/, "")} / ${a.campaign}`);
+            r.approx = true;
+            r.newUsers += a.new_users;
+            r.buyers += a.purchasers;
+            r.ga4Revenue += a.revenue;
+            continue;
+        }
         const paid = /cpc|paid|ads/i.test(a.source);
         if (NOT_CAMPAIGN.test(a.campaign) && !paid) continue;
         const name = NOT_CAMPAIGN.test(a.campaign) ? `${a.source} (no campaign name)` : a.campaign;
@@ -2445,14 +2463,17 @@ function renderCampaigns() {
             plugins: { legend },
         },
     });
-    table("tbl-campaigns-all", [["Campaign"], ["Source"], ["Spend", 1], ["Clicks", 1], ["New users", 1], ["Buyers", 1],
-        ["GA4 mobile revenue ≈", 1], ["Paddle net", 1], ["Cost / buyer", 1], ["ROAS", 1]],
+    table("tbl-campaigns-all", [["Campaign"], ["Source"], ["Spend", 1], ["Impressions", 1], ["Clicks", 1], ["Conversions (ad network)", 1],
+        ["New users", 1], ["Buyers", 1], ["GA4 mobile revenue ≈", 1], ["Paddle net", 1], ["Cost / buyer", 1], ["ROAS", 1]],
         list.map((r) => {
             const revenue = r.paddleNet + r.ga4Revenue;
+            const approx = (v) => (r.approx ? `≈ ${v}` : v);
             return el("tr", {},
                 td(r.label), td([...r.network].join(", "), false, "muted"),
-                td(r.spend ? usd(r.spend) : "", true), td(r.clicks ? int(r.clicks) : "", true),
-                td(r.newUsers ? int(r.newUsers) : "", true), td(r.buyers ? int(r.buyers) : "", true),
+                td(r.spend ? usd(r.spend) : "", true), td(r.impressions ? int(r.impressions) : "", true),
+                td(r.clicks ? int(r.clicks) : "", true),
+                td(r.spend ? int(r.conversions) : "", true, r.spend && !r.conversions ? "down" : ""),
+                td(r.newUsers ? approx(int(r.newUsers)) : "", true), td(r.buyers ? approx(int(r.buyers)) : "", true),
                 td(r.ga4Revenue ? usd(r.ga4Revenue) : "", true), td(r.paddleNet ? usd(r.paddleNet) : "", true),
                 td(r.spend && r.buyers ? usd(r.spend / r.buyers) : "", true),
                 td(r.spend ? `${(revenue / r.spend).toFixed(2)}×` : "", true, r.spend && revenue < r.spend ? "down" : r.spend ? "up" : ""));
