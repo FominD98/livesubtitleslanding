@@ -517,7 +517,7 @@
         </div>
         <div class="scroll wide"><table class="tbl" id="tbl-campaigns-all"></table></div>
         <p class="muted small">Spend: Google Ads and Meta APIs. New users and buyers: GA4, by the user's first campaign (first touch).
-          GA4 revenue is an estimate. Conversions are what the ad network itself counted (Meta: app installs it saw; 0 on a running install campaign means Meta doesn't see installs).
+          GA4 revenue is an estimate. Conversions are what the ad network itself counted for the campaign's goal (Meta: installs for app-install campaigns, purchases otherwise).
           Android users from Meta app-install ads arrive in GA4 as apps.facebook.com / fb4a (Instagram: ig4a) without the campaign name; they are added to the Meta campaign marked ≈ (to a shared Meta row if several Meta campaigns spent).
           Paddle revenue is exact: utm_campaign passed by the site or the app, or the click id (gclid = Google Ads, fbc = Meta).
           To get campaigns here: keep Google Ads auto-tagging on, add <code>utm_source=meta&amp;utm_medium=paid&amp;utm_campaign={{campaign.name}}</code> to Meta ads,
