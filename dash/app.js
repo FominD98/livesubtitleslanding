@@ -1942,7 +1942,8 @@ function abMoneyNeed(A, B) {
 // Окно теста задаётся в двух местах (AB_TESTS Worker'а и TESTS сборщика) — расхождение видно сразу
 function winMismatch(t) {
     const key = t.server?.find((r) => r.metric === "window")?.key;
-    if (!key) return "";
+    // У мобильных денег окно начинается с выхода версии, привязывающей покупку к установке, — позже начала теста
+    if (!key || t.server.some((r) => r.metric === "source")) return "";
     const [from, to] = key.split("..");
     const expectTo = t.end || isoDay(new Date());
     return from !== t.start || (t.end && to !== expectTo) ? key : "";
