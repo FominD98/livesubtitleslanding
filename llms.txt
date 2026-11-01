@@ -44,6 +44,8 @@ Key facts:
 - [Web Captioner alternatives 2026](https://live-subtitles.com/articles/en/article-29.html)
 - [Twitch closed captions 2026, every option compared](https://live-subtitles.com/articles/en/article-28.html)
 - [Live stream subtitles (Twitch, YouTube Live, Kick, TikTok Live)](https://live-subtitles.com/live-stream-subtitles.html)
+- [Live translated subtitles on Windows 10](https://live-subtitles.com/live-subtitles-windows-10.html): Windows 10 has no built-in live captions or translation; how to get original + translated subtitles for any app on Windows 10 with Live Subtitles, compared with captions-only and per-app options
+- [How to translate any audio on your PC in real time](https://live-subtitles.com/translate-any-audio-in-real-time-pc.html): system-wide translation of calls, videos, streams and podcasts on Windows 10/11 (50 languages, any pair, Live Voice reads the translation aloud), compared with meeting-app, browser and phone approaches
 - [Zoom live captions](https://live-subtitles.com/zoom-live-captions.html)
 - [Microsoft Teams live captions](https://live-subtitles.com/teams-live-captions.html)
 - [YouTube dual subtitles](https://live-subtitles.com/youtube-dual-subtitles.html)

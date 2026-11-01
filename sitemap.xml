@@ -3017,7 +3017,7 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/discord-live-captions.html" />
     </url>    <url>
         <loc>https://live-subtitles.com/any-app-live-captions.html</loc>
-        <lastmod>2026-10-09</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/any-app-live-captions.html" />
@@ -3370,14 +3370,14 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/english-to-chinese-live-captions.html" />
     </url>    <url>
         <loc>https://live-subtitles.com/best-live-caption-apps-windows.html</loc>
-        <lastmod>2026-10-27</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/best-live-caption-apps-windows.html" />
         <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/best-live-caption-apps-windows.html" />
     </url>    <url>
         <loc>https://live-subtitles.com/windows-live-captions-alternative.html</loc>
-        <lastmod>2026-10-27</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/windows-live-captions-alternative.html" />
@@ -3412,7 +3412,7 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/real-time-transcription-software.html" />
     </url>    <url>
         <loc>https://live-subtitles.com/live-translation-software-comparison.html</loc>
-        <lastmod>2026-08-07</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.85</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/live-translation-software-comparison.html" />
@@ -3847,7 +3847,7 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/refund.html" />
     </url>    <url>
         <loc>https://live-subtitles.com/captions/windows-10-live-captions.html</loc>
-        <lastmod>2026-10-27</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/windows-10-live-captions.html" />
@@ -3855,7 +3855,7 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/windows-10-live-captions.html" />
     </url>    <url>
         <loc>https://live-subtitles.com/ru/captions/windows-10-live-captions.html</loc>
-        <lastmod>2026-10-27</lastmod>
+        <lastmod>2026-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/windows-10-live-captions.html" />
@@ -5857,5 +5857,21 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/captions/pricing.html" />
         <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/captions/pricing.html" />
         <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/captions/pricing.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/live-subtitles-windows-10.html</loc>
+        <lastmod>2026-11-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/live-subtitles-windows-10.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/live-subtitles-windows-10.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/translate-any-audio-in-real-time-pc.html</loc>
+        <lastmod>2026-11-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/translate-any-audio-in-real-time-pc.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/translate-any-audio-in-real-time-pc.html" />
     </url>
 </urlset>
