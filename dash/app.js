@@ -1869,6 +1869,8 @@ function abMoney(t, app, n, pace) {
         lo: diff - 1.96 * se, hi: diff + 1.96 * se,
         // если оставить B всем: разница на пользователя × сколько людей за 30 дней доходит до знаменателя (оба плеча)
         monthly: diff * pace * 2 * 30,
+        monthlyLo: (diff - 1.96 * se) * pace * 2 * 30,
+        monthlyHi: (diff + 1.96 * se) * pace * 2 * 30,
         lost: sum(t.purchases.filter((p) => !p.arm && (app === "all" || p.app === app)), (p) => p.value * p.n),
         noTxn: t.purchases.some((p) => p.tx === false && (app === "all" || p.app === app)),
     };
@@ -1918,6 +1920,8 @@ function abServerCalc(t) {
         contract: st.contract, contractWin: st.contract_win, daysLeft: num(st.days_left), srm: st.srm,
         // если раскатить B: разница на установку × новые установки за 30 дней в темпе окна теста
         monthly: diff * ((A.n + B.n) / days) * 30,
+        monthlyLo: num(st.diff_low) * ((A.n + B.n) / days) * 30,
+        monthlyHi: num(st.diff_high) * ((A.n + B.n) / days) * 30,
         outside: get("", "outside_net"),
         // Android Pro Weekly (abplay.py): знаменатель — видевшие пейволл, деньги — заказы Play, сшитые с событиями GA4
         play: t.server.some((x) => x.metric === "unit" && x.key === "paywall_android"),
@@ -1953,19 +1957,22 @@ function winMismatch(t) {
 function abContractLine(t, r) {
     const c = r.contract;
     if (r.contractWin) {
-        return { cls: "up", text: `Contract LS-01: B wins — ${signedPct(r.lift)} net per install (95%: ${signedPct(r.liftLo)} … ${signedPct(r.liftHi)}), p = ${r.p.toFixed(3)}, ${c.days} days.` };
+        return { cls: "up", text: `Contract LS-01: B wins — ${signedPct(r.lift)} net per install (95%: ${signedPct(r.liftLo)} … ${signedPct(r.liftHi)}), p = ${r.p.toFixed(3)}, ${c.days.toFixed(1)} days.` };
     }
     const pLeft = r.daysLeft > 0 ? `, ~${int(r.daysLeft)} more days at the current difference` : "";
     const needs = {
         exact_money: "exact store money (Play numbers here are an estimate)",
         delta: `net per user B vs A ≥ ${signedPct(c.min_delta)} (now ${signedPct(r.lift)})`,
         p_value: `p < ${c.alpha} (now ${Number.isFinite(r.p) ? r.p.toFixed(3) : "—"}${pLeft})`,
-        days: `${c.min_days}+ days (now ${c.days})`,
+        days: `${c.min_days}+ days (now ${c.days.toFixed(1)})`,
         buyers: `${c.min_buyers}+ buyers per arm (now ${int(r.A.buyers)} / ${int(r.B.buyers)})`,
     };
     const list = c.missing.map((k) => needs[k]).join("; ");
     return { cls: "muted", text: `Contract LS-01: ${t.status === "ended" ? "no win" : "not a win yet"} — needs ${list}.` };
 }
+
+// Пока разница не доказана, прогноз на месяц — только диапазоном: одно число из пары дней читается как факт
+const abMonthlyRange = (m) => `${signedUsd(m.monthlyLo)} … ${signedUsd(m.monthlyHi)}/mo`;
 
 function renderAbReal(t) {
     const card = document.getElementById("ab-real");
@@ -1998,8 +2005,8 @@ function renderAbReal(t) {
               `${int(r.A.buyers)} / ${int(r.B.buyers)} people · p = ${Number.isFinite(r.conv.p) ? r.conv.p.toFixed(3) : "—"}`) },
         { label: "Chance B earns more", value: (r.probB || 0) * 100, fmt: (v) => `${v.toFixed(0)}%`,
           delta: el("span", { class: "muted" }, `B − A, 95%: ${money(r.lo)} … ${money(r.hi)} per ${per}`) },
-        { label: "If B for everyone", value: r.monthly || 0, fmt: (v) => `${signedUsd(v)}/mo`,
-          delta: el("span", { class: "muted" }, sig ? `net, at the current ${per}s` : `net, at the current ${per}s · not proven`) },
+        { label: "If B for everyone", value: r.monthly || 0, fmt: (v) => (sig ? `${signedUsd(v)}/mo` : abMonthlyRange(r)),
+          delta: el("span", { class: "muted" }, sig ? `net, at the current ${per}s` : `net, 95% range at the current ${per}s · not proven`) },
     ]);
     document.getElementById("ab-real-plan").textContent = Number.isFinite(r.need)
         ? `To tell a ±20% difference in money per ${per}: ~${int(r.need)} ${per}s per arm, now ${int(Math.min(r.A.n, r.B.n))}` +
@@ -2270,8 +2277,8 @@ function renderAbMoney(t, s) {
           delta: el("span", { class: tone }, `${signedPct(m.lift)} · p = ${Number.isFinite(m.p) ? m.p.toFixed(3) : "—"}`) },
         { label: "Chance B earns more", value: (m.probB || 0) * 100, fmt: (v) => `${v.toFixed(0)}%`,
           delta: el("span", { class: "muted" }, `B − A, 95%: ${money(m.lo)} … ${money(m.hi)} per user`) },
-        { label: "If B for everyone", value: m.monthly || 0, fmt: (v) => `${signedUsd(v)}/mo`,
-          delta: el("span", { class: "muted" }, sig ? "at the current traffic" : "at the current traffic · not proven yet") },
+        { label: "If B for everyone", value: m.monthly || 0, fmt: (v) => (sig ? `${signedUsd(v)}/mo` : abMonthlyRange(m)),
+          delta: el("span", { class: "muted" }, sig ? "at the current traffic" : "95% range at the current traffic · not proven yet") },
     ]);
     document.getElementById("ab-money-verdict").replaceChildren(el("span", { class: tone },
         sig ? `B ${m.diff > 0 ? "earns more" : "earns less"}: ${signedPct(m.lift)} per user, the difference is real (p = ${m.p.toFixed(3)}).`
