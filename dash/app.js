@@ -164,7 +164,7 @@ async function load() {
     const tab = state.tab;
     const panel = document.getElementById(`tab-${tab}`);
     panel.classList.add("loading");
-    const query = tab === "ga4" ? ga4Path() : tab === "ab" ? `/api/ab?app=${state.product}` : `/api/${tab}?${rangeQuery()}${tab === "sales" ? salesQuery() : ""}`;
+    const query = tab === "ga4" ? ga4Path() : tab === "ab" ? `/api/ab?app=${state.product}${state.abSel.country ? `&country=${state.abSel.country}` : ""}` : `/api/${tab}?${rangeQuery()}${tab === "sales" ? salesQuery() : ""}`;
     state.pending = query;
     const data = await api(query);
     if (state.pending !== query) return;
@@ -1143,6 +1143,7 @@ function renderFunnel() {
         fmt: (v) => pct(v, 2),
         delta: el("span", { class: "muted" }, `${int(users(a.id, last))} of ${int(users(a.id, 1))}`),
     })));
+    renderFunnelSplit(apps, steps, users);
 
     draw("chart-funnel", {
         type: "bar",
@@ -1218,6 +1219,73 @@ function renderFunnel() {
         renderRetention();
     });
     renderRetention();
+}
+
+// Подписи у конца полосы: «пользователи · % от старта»; не влезает справа — внутри полосы
+const barValueLabels = {
+    id: "barValueLabels",
+    afterDatasetsDraw(chart, _args, opts) {
+        const { ctx, chartArea } = chart;
+        ctx.save();
+        ctx.font = `600 ${Chart.defaults.font.size}px ${Chart.defaults.font.family}`;
+        ctx.textBaseline = "middle";
+        chart.getDatasetMeta(0).data.forEach((bar, i) => {
+            const text = opts.text(i);
+            const w = ctx.measureText(text).width;
+            const inside = bar.x + 6 + w > chartArea.right;
+            ctx.fillStyle = inside ? "#fff" : css("--text-primary");
+            ctx.textAlign = inside ? "right" : "left";
+            ctx.fillText(text, inside ? bar.x - 6 : bar.x + 6, bar.y);
+        });
+        ctx.restore();
+    },
+};
+
+// Отдельная воронка на платформу: своя шкала шагов, переход с прошлого шага — в подсказке
+function renderFunnelSplit(apps, steps, users) {
+    const box = document.getElementById("funnel-split");
+    for (const id of Object.keys(state.charts).filter((k) => k.startsWith("chart-funnel-one-"))) {
+        state.charts[id].destroy();
+        delete state.charts[id];
+    }
+    box.replaceChildren(...apps.map((a) => {
+        const start = users(a.id, 1);
+        const conv = start ? users(a.id, steps[steps.length - 1]?.[0]) / start : 0;
+        return el("section", { class: "card" },
+            el("div", { class: "card-head" }, el("h2", {}, a.name), el("span", { class: "muted" }, `${pct(conv, 2)} to purchase`)),
+            el("div", { class: "chart funnel-one" }, el("canvas", { id: `chart-funnel-one-${a.id}` })));
+    }));
+    for (const a of apps) {
+        const start = users(a.id, 1);
+        const share = (s) => (start ? users(a.id, s) / start * 100 : 0);
+        draw(`chart-funnel-one-${a.id}`, {
+            type: "bar",
+            plugins: [barValueLabels],
+            data: {
+                labels: steps.map(([, name]) => name),
+                datasets: [{ data: steps.map(([s]) => share(s)), backgroundColor: appColor(a.id), borderRadius: 4, borderSkipped: "left", maxBarThickness: 26 }],
+            },
+            options: {
+                indexAxis: "y",
+                maintainAspectRatio: false,
+                layout: { padding: { right: 8 } },
+                scales: { x: { max: 100, ticks: { callback: (v) => `${v}%` } }, y: { grid: { display: false } } },
+                plugins: {
+                    legend: { display: false },
+                    barValueLabels: { text: (i) => `${int(users(a.id, steps[i][0]))} · ${share(steps[i][0]).toFixed(share(steps[i][0]) < 10 ? 1 : 0)}%` },
+                    tooltip: {
+                        callbacks: {
+                            label: (c) => {
+                                const s = steps[c.dataIndex][0];
+                                const prev = s > 1 ? users(a.id, s - 1) : 0;
+                                return `${int(users(a.id, s))} (${c.parsed.x.toFixed(1)}% of start)${prev ? ` · ${pct(users(a.id, s) / prev)} of previous step` : ""}`;
+                            },
+                        },
+                    },
+                },
+            },
+        });
+    }
 }
 
 function renderRetention() {
@@ -1785,7 +1853,7 @@ for (const key of ["range", "app", "country"]) {
 /* ---------- A/B tests ---------- */
 
 // Тесты и их описание приходят из Worker'а (AB_TESTS в cloudflare/dash-api) — здесь только счёт и отрисовка
-state.abSel = { test: null, app: "all" };
+state.abSel = { test: null, app: "all", country: "" };
 const ARM_COLOR = { A: "--series-1", B: "--series-3" };
 const STORE_NAMES = { "android-host": "Google Play", "ios-host": "App Store" };
 const AB_APP_NAMES = { all: "All platforms", android: "Android", apple: "iOS", windows: "Windows" };
@@ -1881,8 +1949,9 @@ function abMoney(t, app, n, pace) {
 // Worker — abConfidence в cloudflare/dash-api, поле stats; здесь только суммы для показа
 const abServerCache = new WeakMap();
 
+// Реальные деньги считаются по всем странам: страны установки бэкенд не хранит, поэтому при фильтре по стране их нет
 function abServer(t) {
-    if (!t.server || !t.stats) return null;
+    if (!t.server || !t.stats || state.abSel.country) return null;
     if (abServerCache.has(t)) return abServerCache.get(t);
     const out = abServerCalc(t);
     abServerCache.set(t, out);
@@ -2154,16 +2223,27 @@ function renderAb() {
     testSel.value = t.id;
     const apps = abTestApps(t);
     const appSel = document.getElementById("ab-app");
-    appSel.hidden = apps.length < 2;
-    appSel.replaceChildren(...["all", ...apps].map((a) => el("option", { value: a }, AB_APP_NAMES[a] || a)));
+    // У теста одной платформы выбор не нужен, но видно, на чём он идёт
+    appSel.hidden = false;
+    appSel.disabled = apps.length < 2;
+    appSel.replaceChildren(...(apps.length < 2 ? apps : ["all", ...apps]).map((a) => el("option", { value: a }, AB_APP_NAMES[a] || a)));
     if (state.abSel.app !== "all" && !apps.includes(state.abSel.app)) state.abSel.app = "all";
-    appSel.value = state.abSel.app;
+    appSel.value = apps.length < 2 ? apps[0] ?? "" : state.abSel.app;
+    const countrySel = document.getElementById("ab-country");
+    const countries = [...(t.countries || [])];
+    const codes = countries.map((c) => c.code);
+    if (state.abSel.country && !codes.includes(state.abSel.country)) countries.unshift({ code: state.abSel.country, users: 0 });
+    countrySel.replaceChildren(el("option", { value: "" }, "All countries"),
+        ...countries.map((c) => el("option", { value: c.code }, `${countryName(c.code)} (${c.code})${c.users ? ` · ${int(c.users)}` : ""}`)));
+    countrySel.value = state.abSel.country;
 
     const s = abStats(t, state.abSel.app);
     renderAbReal(t);
     document.getElementById("ab-about").textContent =
         `${t.about} A: ${t.arms.A}. B: ${t.arms.B}. Since ${t.start}${t.end ? ` to ${t.end}` : ""} (${s.days} days).` +
-        (t.error ? ` ⚠ ${t.error} — funnel and GA4 money are empty.` : "");
+        (t.error ? ` ⚠ ${t.error} — funnel and GA4 money are empty.` : "") +
+        (state.abSel.country ? ` Country ${countryName(state.abSel.country)}: GA4 numbers only — the backend doesn't store the install country, so real money is for all countries only.` +
+            (abTestApps(t).includes("windows") ? " Windows country is the Windows region setting; a Paddle purchase counts if the same machine (fp) sent app events from that country." : "") : "");
 
     const srmBad = t.srm !== false && s.srmP < 0.001;
     const convLabel = `${stepLabel(t, t.goal).toLowerCase()} / ${stepLabel(t, t.base).toLowerCase()}`;
@@ -2313,6 +2393,11 @@ function setAb(change) {
 
 document.getElementById("ab-test").addEventListener("change", (e) => setAb({ test: e.target.value, app: "all" }));
 document.getElementById("ab-app").addEventListener("change", (e) => setAb({ app: e.target.value }));
+// Страну GA4 считает Worker — другой запрос, а не фильтр по уже загруженному
+document.getElementById("ab-country").addEventListener("change", (e) => {
+    state.abSel.country = e.target.value;
+    load();
+});
 
 /* ---------- Weekly ---------- */
 

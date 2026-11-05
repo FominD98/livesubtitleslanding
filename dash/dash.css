@@ -110,6 +110,10 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
 .grid2 > * { min-width: 0; }
 .grid2 > .card { margin-bottom: 0; }
 .grid2 + .card, .card + .grid2 { margin-top: 16px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 16px; }
+.grid3 > * { min-width: 0; }
+.grid3 > .card { margin-bottom: 0; }
+.chart.funnel-one { height: 300px; }
 
 .chart { position: relative; height: 280px; }
 .chart.tall { height: 420px; }
@@ -203,6 +207,7 @@ h3 { font-size: 13px; margin: 0 0 8px; font-weight: 500; }
     .card-head { margin-bottom: 8px; }
     .grid2, .split-1-2 { grid-template-columns: 1fr; gap: 10px; }
     .grid2 + .card, .card + .grid2 { margin-top: 10px; }
+    .grid3 { grid-template-columns: 1fr; gap: 10px; margin-bottom: 10px; }
     .chart { height: 230px; }
     .chart.tall { height: 340px; }
     .chart.donut { height: 260px; }

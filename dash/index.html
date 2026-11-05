@@ -7,7 +7,7 @@
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src https://dash-api.live-subtitles.com; img-src 'self' data:; base-uri 'none'; form-action 'none'">
 <title>Dashboard</title>
-<link rel="stylesheet" href="dash.css?v=555b1f1585">
+<link rel="stylesheet" href="dash.css?v=07a83bf116">
 </head>
 <body>
 <div class="viz-root">
@@ -231,6 +231,7 @@
     </main>
     <main id="tab-funnel" class="tab-panel" hidden>
       <section class="tiles" id="funnel-tiles"></section>
+      <section class="grid3" id="funnel-split"></section>
 
       <section class="card">
         <div class="card-head">
@@ -428,7 +429,8 @@
 
       <div class="filters">
         <select id="ab-test" aria-label="Test"></select>
-        <select id="ab-app" aria-label="Platform" hidden></select>
+        <select id="ab-app" aria-label="Platform"></select>
+        <select id="ab-country" aria-label="Country"><option value="">All countries</option></select>
       </div>
       <p class="muted small" id="ab-about"></p>
 
@@ -528,6 +530,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=f24bb41457"></script>
+<script src="app.js?v=ff4f8c5ba7"></script>
 </body>
 </html>
