@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Analytics: the same GA4 / Google tag and Yandex Metrica as the rest of the site
+         (the Meta pixel is left out on Live Captions pages, see /captions/index.html). -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough on Store links + GA4 store_click (Store links carry their own onclick). -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>CART(문자통역)와 자동 실시간 자막의 차이 | PC 자막</title>
+    <meta name="description" content="CART(Communication Access Realtime Translation)는 사람이 하는 실시간 문자통역입니다. 문자통역사가 필요한 경우와 PC 자동 자막으로 충분한 경우를 정리했습니다.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/ko/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/cart-captioning.html" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="CART(문자통역)와 자동 실시간 자막의 차이 | PC 자막">
+    <meta property="og:description" content="CART는 훈련받은 사람이 만드는 실시간 자막입니다. 문자통역사가 꼭 필요한 경우와 내 컴퓨터의 자동 자막으로 충분한 경우를 알려 드립니다.">
+    <meta property="og:url" content="https://live-subtitles.com/ko/captions/cart-captioning.html">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Live Captions 앱 아이콘과 문구: 윈도우용 실시간 자막">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CART(문자통역)와 자동 실시간 자막의 차이 | PC 자막">
+    <meta name="twitter:description" content="CART는 훈련받은 사람이 만드는 실시간 자막입니다. 문자통역사가 꼭 필요한 경우와 내 컴퓨터의 자동 자막으로 충분한 경우를 알려 드립니다.">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Live Captions",
+                "item": "https://live-subtitles.com/ko/captions/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "CART(문자통역)와 자동 실시간 자막 비교",
+                "item": "https://live-subtitles.com/ko/captions/cart-captioning.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "CART(문자통역)와 자동 실시간 자막: 사람 문자통역사가 필요한 때",
+        "description": "CART(Communication Access Realtime Translation)가 무엇인지, 사람 문자통역사를 요청해야 하는 경우와 내 PC의 자동 실시간 자막으로 충분한 경우를 설정 방법과 함께 설명합니다.",
+        "url": "https://live-subtitles.com/ko/captions/cart-captioning.html",
+        "mainEntityOfPage": "https://live-subtitles.com/ko/captions/cart-captioning.html",
+        "inLanguage": "ko",
+        "datePublished": "2026-11-13",
+        "dateModified": "2026-11-13",
+        "image": "https://live-subtitles.com/captions/img/og-live-captions-en.png",
+        "author": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://live-subtitles.com/captions/#app",
+            "name": "Live Captions & Transcribe",
+            "alternateName": "Live Captions",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "url": "https://live-subtitles.com/captions/",
+            "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Live Subtitles",
+                "url": "https://live-subtitles.com"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "CART는 무엇의 약자인가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CART는 Communication Access Realtime Translation의 약자입니다. 훈련받은 문자통역사가 보통 속기 키보드로, 말하는 내용을 그 자리에서 글자로 옮기는 실시간 자막이며, 현장이나 원격으로 진행됩니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "자동 실시간 자막은 CART와 같은가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "아닙니다. CART는 사람이 하며, 이름과 용어를 미리 준비하고 그 자리에서 실수를 고칠 수 있습니다. 자동 실시간 자막은 음성 인식 소프트웨어가 만들며, 언제든 훨씬 적은 비용으로 쓸 수 있지만 이름, 전문 용어, 억양, 겹치는 말에서 더 많이 틀립니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "자동 자막이 편의 제공으로서 CART를 대신할 수 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "정당한 편의를 받을 권리가 있거나 정확성이 법적으로 중요한 경우, 예를 들어 재판, 시험, 징계 관련 면담, 진료에서는 대신할 수 없습니다. 학교, 직장, 법원, 행사 주최 측에 CART 제공자를 요청하세요. 자동 자막은 일상에 유용한 도구이지 인증된 서비스가 아닙니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "주최자가 아무것도 켜지 않아도 Zoom이나 Teams에서 자동 자막을 쓸 수 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네. Live Captions & Transcribe는 Windows PC에서 재생되는 소리에 자막을 붙이므로 Zoom, Teams, Google Meet, WhatsApp, Telegram 등 어떤 앱에서도 주최자, 봇, 회의 설정 없이 작동합니다. 자막은 나에게만 보입니다."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "세션 후 CART 기록처럼 대본을 남길 수 있나요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Live Captions & Transcribe는 자막으로 만든 내용의 기록을 PC에 저장해 검색할 수 있고 TXT나 SRT로 내보낼 수 있습니다. 편집되지 않은 자동 기록이므로 이름과 중요한 숫자는 확인한 뒤 사용하세요."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "인터넷 연결이 필요한가요?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "네. 자막이 작동하는 동안 소리를 클라우드 음성 인식 서비스로 보내 글자로 바꿉니다. 소리 자체는 녹음되지 않으며, 텍스트 기록은 PC에만 저장됩니다."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">본문 바로가기</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/ko/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="메인">
+                <a class="lc-nav__extra" href="/ko/captions/#features">기능</a>
+                <a href="/ko/captions/pricing.html">요금제</a>
+                <a class="lc-nav__extra" href="/ko/captions/#faq">자주 묻는 질문</a>
+                <details class="lc-lang">
+                    <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="ko">한국어</span></summary>
+                    <ul class="lc-lang__menu">
+                        <li><a href="/captions/cart-captioning.html" hreflang="en" lang="en">English</a></li>
+                        <li><a href="/es/captions/cart-captioning.html" hreflang="es" lang="es">Español</a></li>
+                        <li><a href="/pt/captions/cart-captioning.html" hreflang="pt" lang="pt">Português</a></li>
+                        <li><a href="/fr/captions/cart-captioning.html" hreflang="fr" lang="fr">Français</a></li>
+                        <li><a href="/de/captions/cart-captioning.html" hreflang="de" lang="de">Deutsch</a></li>
+                        <li><a href="/it/captions/cart-captioning.html" hreflang="it" lang="it">Italiano</a></li>
+                        <li><a href="/nl/captions/cart-captioning.html" hreflang="nl" lang="nl">Nederlands</a></li>
+                        <li><a href="/pl/captions/cart-captioning.html" hreflang="pl" lang="pl">Polski</a></li>
+                        <li><a href="/tr/captions/cart-captioning.html" hreflang="tr" lang="tr">Türkçe</a></li>
+                        <li><a href="/uk/captions/cart-captioning.html" hreflang="uk" lang="uk">Українська</a></li>
+                        <li><a href="/ru/captions/cart-captioning.html" hreflang="ru" lang="ru">Русский</a></li>
+                        <li><a href="/ar/captions/cart-captioning.html" hreflang="ar" lang="ar">العربية</a></li>
+                        <li><a href="/hi/captions/cart-captioning.html" hreflang="hi" lang="hi">हिन्दी</a></li>
+                        <li><a href="/ja/captions/cart-captioning.html" hreflang="ja" lang="ja">日本語</a></li>
+                        <li><a href="/ko/captions/cart-captioning.html" hreflang="ko" lang="ko" aria-current="page">한국어</a></li>
+                        <li><a href="/zh/captions/cart-captioning.html" hreflang="zh" lang="zh">简体中文</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="guide">
+        <article class="wrap wrap--narrow">
+            <p class="crumbs"><a href="/ko/captions/">Live Captions</a> / CART(문자통역)와 자동 실시간 자막 비교</p>
+            <h1>CART(문자통역)와 자동 실시간 자막: 사람 문자통역사가 필요한 때</h1>
+            <p class="updated">2026년 11월 13일 업데이트</p>
+
+            <div class="answer">
+                <p><strong>CART</strong>(Communication Access Realtime Translation)는 훈련받은 문자통역사가 말하는 내용을 실시간으로 받아 적는 자막입니다. 정당한 편의를 받을 권리가 있거나 모든 말이 중요한 자리, 예를 들어 재판, 시험, 징계 관련 면담, 진료, 큰 학회에서는 CART 제공자를 요청하세요. 일상적인 통화, 동영상, 온라인 수업, 대화에는 내 컴퓨터의 자동 실시간 자막을 언제든 쓸 수 있고, 비용도 훨씬 적으며 예약도 필요 없습니다. Windows에서는 <a href="/ko/captions/">Live Captions &amp; Transcribe</a>가 PC에서 나오는 모든 소리나 마이크 소리에 자막을 붙여 줍니다.</p>
+            </div>
+
+            <p>농인이나 난청인은 학교, 직장, 행사에 접근성 지원을 요청하면서 CART나 문자통역이라는 말을 처음 접하는 경우가 많습니다. 그것이 무엇이고 무엇이 아닌지, 그리고 소프트웨어 자막이 어디에 맞는지 알아 두면, 모든 상황에 한 가지 도구를 고집하지 않고 상황마다 알맞은 것을 요청할 수 있습니다.</p>
+
+            <h2>CART란</h2>
+            <p>CART 제공자(CART 속기사, 실시간 문자통역사라고도 합니다)는 말하는 사람의 말을 들으며 모든 내용을 실시간으로 입력합니다. 보통 여러 키를 한 번에 눌러 단어 전체를 입력하는 속기 키보드를 사용합니다. 글자는 1~2초 안에 스크린, 노트북, 태블릿 또는 웹 링크에 나타납니다. 문자통역사는 현장에 있을 수도 있고, 통화나 행사에 원격으로 연결할 수도 있습니다.</p>
+            <ul>
+                <li><strong>거의 말 그대로의 텍스트</strong>. 누가 말하는지, 웃음이나 박수 같은 소리도 포함합니다.</li>
+                <li><strong>사전 준비</strong>: 이름, 수업 용어, 약어를 미리 등록할 수 있어 소프트웨어가 가장 약한 부분을 보완합니다.</li>
+                <li>특정 세션을 위해 <strong>미리 예약</strong>하며, 보통 시간 단위로 비용을 냅니다.</li>
+                <li>세션이 끝난 뒤 <strong>정리된 기록</strong>을 받을 수 있는 경우가 많습니다.</li>
+            </ul>
+            <p>미국에서 CART는 ADA(미국 장애인법) 같은 장애 관련 법에 따른 편의 제공으로 흔히 제공되는 서비스 중 하나입니다. 영국에서는 비슷한 서비스를 보통 speech-to-text reporting이라고 부릅니다. 한국에서는 청각장애인을 위한 실시간 자막 지원을 흔히 문자통역이라고 합니다.</p>
+
+            <h2>사람 CART 제공자를 요청해야 할 때</h2>
+            <ul>
+                <li><strong>정당한 편의를 받을 권리가 있을 때</strong>: 학교, 직장, 공공 서비스 등. CART를 마련하는 것은 해당 기관의 책임이며, 여러분이 앱으로 대신할 일이 아닙니다.</li>
+                <li><strong>정확성에 법적·의료적 무게가 있을 때</strong>: 재판, 증언 녹취, 시험, 직장 징계 관련 심의, 진단이나 치료 계획 설명.</li>
+                <li><strong>전문 용어가 많을 때</strong>: 대학 강의, 기술 교육, 학술 대회 등.</li>
+                <li><strong>말하는 사람이 많거나 소리가 나쁘거나 억양이 강할 때</strong>. 자동 인식이 가장 많이 틀리는 상황입니다.</li>
+            </ul>
+
+            <h2>자동 실시간 자막으로 충분할 때</h2>
+            <p>자막이 도움이 되는 순간 대부분은 예약된 행사가 아닙니다. 가족 영상 통화, 웨비나, 유튜브 동영상, 팟캐스트, 동료와의 짧은 통화, 방에서 이야기하는 손님에게는 문자통역사가 따라오지 않고, 매번 마련하는 것도 현실적이지 않습니다. 이럴 때 내 컴퓨터의 자동 자막이 도움이 됩니다.</p>
+            <ul>
+                <li><strong>언제든 사용</strong>: 예약 없이 소리가 나면 바로 자막을 시작합니다.</li>
+                <li><strong>모든 앱에서</strong>: 특정 회의 서비스가 아니라 PC의 소리를 따라 자막을 붙입니다.</li>
+                <li><strong>사생활 보호</strong>: 통화에 아무것도 참여하지 않고, 다른 사람에게는 내 자막이 보이지 않습니다.</li>
+                <li><strong>낮은 비용</strong>: 무료로 써 본 뒤 시간당 요금 대신 분 단위 패키지나 구독을 선택합니다.</li>
+                <li>예약한 문자통역사가 늦거나 연결이 끊겼을 때의 <strong>예비 수단</strong>으로도 쓸 수 있습니다.</li>
+            </ul>
+
+            <h2>CART와 자동 자막 한눈에 비교</h2>
+            <div class="table-wrap">
+                <table class="compare">
+                    <thead>
+                        <tr><th scope="col"></th><th scope="col">사람 CART 제공자</th><th scope="col">PC의 자동 자막</th><th scope="col">회의 앱 안의 자막</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">텍스트를 쓰는 주체</th><td>훈련받은 문자통역사</td><td>음성 인식 소프트웨어</td><td>회의 앱의 음성 인식</td></tr>
+                        <tr><th scope="row">정확도</th><td>가장 높음. 이름과 용어를 미리 준비</td><td>소리가 깨끗하면 좋음. 이름, 전문 용어, 겹치는 말에는 약함</td><td>다른 자동 자막과 비슷함</td></tr>
+                        <tr><th scope="row">이용 가능 시점</th><td>세션마다 미리 예약</td><td>언제든지. PC의 모든 소리나 마이크</td><td>그 앱 안에서만, 주최자나 요금제가 허용할 때</td></tr>
+                        <tr><th scope="row">비용</th><td>보통 시간 단위</td><td>무료 체험 후 분 단위 패키지나 구독</td><td>앱과 요금제에 따라 다름</td></tr>
+                        <tr><th scope="row">알맞은 경우</th><td>편의 제공, 법률·의료·시험 상황, 큰 행사</td><td>일상적인 통화, 동영상, 수업, 대화</td><td>그 앱 하나만 쓰는 사람</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Windows PC에서 자동 실시간 자막을 설정하는 방법</h2>
+            <ol class="howto">
+                <li><strong>Live Captions &amp; Transcribe 설치</strong>: <a href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Microsoft Store</a>에서 받으세요. Windows 10과 11에서 작동하며, 체험에 계정이나 카드가 필요 없습니다.</li>
+                <li><strong>소리 출처 선택</strong>: 통화, 동영상, 온라인 수업은 컴퓨터 소리, 방에서 말하는 사람은 마이크.</li>
+                <li><strong>읽기 쉽게 설정</strong>: 글자 크기를 최대 64pt까지 키우고 밝은, 어두운, 고대비 스타일 중에서 고르세요.</li>
+                <li><strong>시작을 누르세요.</strong> 자막은 말보다 약 1초 늦게 나타나며, 말하는 사람마다 색을 다르게 표시할 수 있습니다.</li>
+                <li><strong>필요한 것은 저장</strong>: 기록은 PC에 저장되어 검색할 수 있고 TXT나 SRT로 내보낼 수 있습니다.</li>
+            </ol>
+            <p>가족 통화, TV, 집에서의 대화에 대해서는 <a href="/captions/live-captions-for-hard-of-hearing-windows.html">Windows에서 난청인을 위한 실시간 자막 가이드</a>(영어)를 참고하세요.</p>
+
+            <h2>함께 쓰기</h2>
+            <p>CART와 자동 자막은 경쟁 관계가 아닙니다. 흔한 방법은 매주 강의, 중요한 회의, 학회 기조연설처럼 가장 중요한 세션에는 CART 제공자를 요청하고, 그 사이의 모든 것에는 자동 자막을 쓰는 것입니다. 나중에 다시 보는 녹화 강의, 예정에 없던 팀 통화, 누군가 보내 준 동영상 같은 것들입니다. 원격 CART를 이용한다면 자동 자막도 준비해 두세요. 문자통역사의 연결이 몇 분 끊겨도 읽을 것이 남습니다.</p>
+
+            <h2>솔직하게 말씀드리는 한계</h2>
+            <ul>
+                <li>자동 자막은 틀립니다. 특히 이름, 숫자, 전문 용어, 강한 억양, 여러 사람이 동시에 말할 때 그렇습니다. 중요한 내용은 꼭 확인하세요.</li>
+                <li>작동하는 동안 인터넷 연결이 필요합니다.</li>
+                <li>말소리를 자막으로 옮길 뿐, 문자통역사처럼 음악이나 소리를 설명하지는 않습니다.</li>
+                <li>인증받은 접근성 서비스가 아니며, 누구의 CART 요청 권리도 없애지 않습니다.</li>
+            </ul>
+
+            <h2>자막을 다른 언어로 번역해야 하나요?</h2>
+            <p>말하는 사람이 잘 모르는 언어를 쓴다면, 메인 앱 <a href="/ko/">Live Subtitles</a>가 원래 말과 번역을 50개 언어로 함께 보여 줍니다. Windows, Mac, iPhone, Android에서 사용할 수 있습니다.</p>
+
+            <div class="trial">
+                <p><strong>Live Captions &amp; Transcribe 무료 체험</strong> Windows 10 또는 11. 계정도 카드도 필요 없습니다.</p>
+                <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Microsoft Store에서 받기</a>
+            </div>
+
+            <h2 id="faq">자주 묻는 질문</h2>
+            <div class="faq">
+                <details>
+                    <summary>CART는 무엇의 약자인가요?</summary>
+                    <div>CART는 Communication Access Realtime Translation의 약자입니다. 훈련받은 문자통역사가 보통 속기 키보드로, 말하는 내용을 그 자리에서 글자로 옮기는 실시간 자막이며, 현장이나 원격으로 진행됩니다.</div>
+                </details>
+                <details>
+                    <summary>자동 실시간 자막은 CART와 같은가요?</summary>
+                    <div>아닙니다. CART는 사람이 하며, 이름과 용어를 미리 준비하고 그 자리에서 실수를 고칠 수 있습니다. 자동 실시간 자막은 음성 인식 소프트웨어가 만들며, 언제든 훨씬 적은 비용으로 쓸 수 있지만 이름, 전문 용어, 억양, 겹치는 말에서 더 많이 틀립니다.</div>
+                </details>
+                <details>
+                    <summary>자동 자막이 편의 제공으로서 CART를 대신할 수 있나요?</summary>
+                    <div>정당한 편의를 받을 권리가 있거나 정확성이 법적으로 중요한 경우, 예를 들어 재판, 시험, 징계 관련 면담, 진료에서는 대신할 수 없습니다. 학교, 직장, 법원, 행사 주최 측에 CART 제공자를 요청하세요. 자동 자막은 일상에 유용한 도구이지 인증된 서비스가 아닙니다.</div>
+                </details>
+                <details>
+                    <summary>주최자가 아무것도 켜지 않아도 Zoom이나 Teams에서 자동 자막을 쓸 수 있나요?</summary>
+                    <div>네. Live Captions &amp; Transcribe는 Windows PC에서 재생되는 소리에 자막을 붙이므로 Zoom, Teams, Google Meet, WhatsApp, Telegram 등 어떤 앱에서도 주최자, 봇, 회의 설정 없이 작동합니다. 자막은 나에게만 보입니다.</div>
+                </details>
+                <details>
+                    <summary>세션 후 CART 기록처럼 대본을 남길 수 있나요?</summary>
+                    <div>Live Captions &amp; Transcribe는 자막으로 만든 내용의 기록을 PC에 저장해 검색할 수 있고 TXT나 SRT로 내보낼 수 있습니다. 편집되지 않은 자동 기록이므로 이름과 중요한 숫자는 확인한 뒤 사용하세요.</div>
+                </details>
+                <details>
+                    <summary>인터넷 연결이 필요한가요?</summary>
+                    <div>네. 자막이 작동하는 동안 소리를 클라우드 음성 인식 서비스로 보내 글자로 바꿉니다. 소리 자체는 녹음되지 않으며, 텍스트 기록은 PC에만 저장됩니다. 자세한 내용은 <a href="/captions/privacy.html">개인정보처리방침</a>을 참고하세요.</div>
+                </details>
+            </div>
+
+            <h2>관련 가이드</h2>
+            <ul class="guides-list">
+                <li><a href="/captions/live-captions-for-hard-of-hearing-windows.html">Windows에서 난청인을 위한 실시간 자막 (영어)</a></li>
+                <li><a href="/captions/transcribe-lecture-meeting-to-text-windows.html">Windows에서 강의나 회의를 텍스트로 옮기기 (영어)</a></li>
+                <li><a href="/captions/whatsapp-teams-call-captions-pc.html">PC에서 WhatsApp, Teams, Telegram 통화에 실시간 자막 (영어)</a></li>
+                <li><a href="/ko/captions/">Live Captions &amp; Transcribe: 기능과 요금</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> 윈도우 10·11용
+                <small>© 2026 Live Subtitles. 모든 권리 보유.</small>
+            </div>
+            <nav aria-label="바닥글">
+                <a href="/captions/privacy.html">개인정보처리방침</a>
+                <a href="/captions/terms.html">이용약관</a>
+                <a href="/captions/refund.html">환불</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/ko/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

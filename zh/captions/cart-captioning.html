@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Analytics: the same GA4 / Google tag and Yandex Metrica as the rest of the site
+         (the Meta pixel is left out on Live Captions pages, see /captions/index.html). -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough on Store links + GA4 store_click (Store links carry their own onclick). -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>CART实时字幕速记与电脑自动字幕：何时需要人工速记</title>
+    <meta name="description" content="CART（Communication Access Realtime Translation）是由人工速记员完成的实时字幕。本文说明何时需要人工字幕服务，何时电脑上的自动实时字幕就够用。">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/zh/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/cart-captioning.html" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="CART实时字幕速记与电脑自动字幕：何时需要人工速记">
+    <meta property="og:description" content="CART是由受过训练的人工完成的实时字幕。这里说明何时需要人工速记，何时自己电脑上的自动字幕就足够。">
+    <meta property="og:url" content="https://live-subtitles.com/zh/captions/cart-captioning.html">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Live Captions应用图标及文字:适用于Windows的实时字幕">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CART实时字幕速记与电脑自动字幕：何时需要人工速记">
+    <meta name="twitter:description" content="CART是由受过训练的人工完成的实时字幕。这里说明何时需要人工速记，何时自己电脑上的自动字幕就足够。">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Live Captions",
+                "item": "https://live-subtitles.com/zh/captions/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "CART实时字幕速记与自动字幕对比",
+                "item": "https://live-subtitles.com/zh/captions/cart-captioning.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "CART实时字幕速记与自动实时字幕：什么时候需要人工速记员",
+        "description": "介绍什么是CART（Communication Access Realtime Translation），什么情况下应请人工速记员，什么情况下自己电脑上的自动实时字幕就够用，并附设置步骤。",
+        "url": "https://live-subtitles.com/zh/captions/cart-captioning.html",
+        "mainEntityOfPage": "https://live-subtitles.com/zh/captions/cart-captioning.html",
+        "inLanguage": "zh",
+        "datePublished": "2026-11-13",
+        "dateModified": "2026-11-13",
+        "image": "https://live-subtitles.com/captions/img/og-live-captions-en.png",
+        "author": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://live-subtitles.com/captions/#app",
+            "name": "Live Captions & Transcribe",
+            "alternateName": "Live Captions",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "url": "https://live-subtitles.com/captions/",
+            "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Live Subtitles",
+                "url": "https://live-subtitles.com"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "CART是什么的缩写？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CART是Communication Access Realtime Translation的缩写，指由受过训练的人工速记员（通常使用速记键盘）在说话的同时写出文字的实时字幕，可以在现场进行，也可以远程进行。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "自动实时字幕和CART一样吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不一样。CART由人完成，速记员可以提前准备人名和术语，并当场纠正错误。自动实时字幕由语音识别软件生成，随时可用、费用低得多，但在人名、术语、口音和多人同时说话时更容易出错。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "自动字幕能代替CART作为无障碍便利吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "当你有权获得无障碍便利，或准确性在法律上很重要时，例如庭审、考试、纪律谈话或就医，不能代替。请向学校、单位、法院或活动主办方申请CART服务。自动字幕是好用的日常工具，而不是经过认证的服务。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "主持人不开启任何功能，我也能在Zoom或Teams里使用自动字幕吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以。Live Captions & Transcribe为Windows电脑播放的声音加字幕，所以在Zoom、Teams、Google Meet、WhatsApp、Telegram等任何应用中都能用，不需要主持人、机器人或会议设置。只有你能看到字幕。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "能像CART那样在结束后保留文字记录吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Live Captions & Transcribe会把字幕内容的历史记录保存在电脑上，可以搜索，也可以导出为TXT或SRT。这是未经编辑的自动记录，使用前请核对人名和重要数字。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "需要联网吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "需要。字幕运行时，音频会发送到云端语音识别服务转成文字。音频本身不会被录制，文字记录只保存在电脑上。"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">跳至内容</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/zh/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="主导航">
+                <a class="lc-nav__extra" href="/zh/captions/#features">功能</a>
+                <a href="/zh/captions/pricing.html">价格</a>
+                <a class="lc-nav__extra" href="/zh/captions/#faq">常见问题</a>
+                <details class="lc-lang">
+                    <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="zh">简体中文</span></summary>
+                    <ul class="lc-lang__menu">
+                        <li><a href="/captions/cart-captioning.html" hreflang="en" lang="en">English</a></li>
+                        <li><a href="/es/captions/cart-captioning.html" hreflang="es" lang="es">Español</a></li>
+                        <li><a href="/pt/captions/cart-captioning.html" hreflang="pt" lang="pt">Português</a></li>
+                        <li><a href="/fr/captions/cart-captioning.html" hreflang="fr" lang="fr">Français</a></li>
+                        <li><a href="/de/captions/cart-captioning.html" hreflang="de" lang="de">Deutsch</a></li>
+                        <li><a href="/it/captions/cart-captioning.html" hreflang="it" lang="it">Italiano</a></li>
+                        <li><a href="/nl/captions/cart-captioning.html" hreflang="nl" lang="nl">Nederlands</a></li>
+                        <li><a href="/pl/captions/cart-captioning.html" hreflang="pl" lang="pl">Polski</a></li>
+                        <li><a href="/tr/captions/cart-captioning.html" hreflang="tr" lang="tr">Türkçe</a></li>
+                        <li><a href="/uk/captions/cart-captioning.html" hreflang="uk" lang="uk">Українська</a></li>
+                        <li><a href="/ru/captions/cart-captioning.html" hreflang="ru" lang="ru">Русский</a></li>
+                        <li><a href="/ar/captions/cart-captioning.html" hreflang="ar" lang="ar">العربية</a></li>
+                        <li><a href="/hi/captions/cart-captioning.html" hreflang="hi" lang="hi">हिन्दी</a></li>
+                        <li><a href="/ja/captions/cart-captioning.html" hreflang="ja" lang="ja">日本語</a></li>
+                        <li><a href="/ko/captions/cart-captioning.html" hreflang="ko" lang="ko">한국어</a></li>
+                        <li><a href="/zh/captions/cart-captioning.html" hreflang="zh" lang="zh" aria-current="page">简体中文</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="guide">
+        <article class="wrap wrap--narrow">
+            <p class="crumbs"><a href="/zh/captions/">Live Captions</a> / CART实时字幕速记与自动字幕对比</p>
+            <h1>CART实时字幕速记与自动实时字幕：什么时候需要人工速记员</h1>
+            <p class="updated">更新于2026年11月13日</p>
+
+            <div class="answer">
+                <p><strong>CART</strong>（Communication Access Realtime Translation，实时字幕速记）是由受过训练的人工速记员在说话的同时写出的实时字幕。如果你有权获得无障碍便利，或者每个字都很重要，例如庭审、考试、纪律谈话、就医、大型会议，请预约CART服务。日常通话、视频、网课和交谈，则可以随时使用自己电脑上的自动实时字幕，费用低得多，也无需预约。在Windows上，<a href="/zh/captions/">Live Captions &amp; Transcribe</a>可以为电脑播放的任何声音或麦克风里的说话声加上字幕。</p>
+            </div>
+
+            <p>很多聋人和听障人士第一次听说CART，是在向学校、单位或活动方申请无障碍支持的时候。了解它是什么、不是什么，以及软件字幕适合用在哪里，就能在不同场合提出合适的要求，而不是用一种工具应付所有情况。</p>
+
+            <h2>什么是CART</h2>
+            <p>CART服务人员（也称CART速记员或实时字幕员）一边听讲话，一边把所有内容实时录入，通常使用速记键盘，同时按下几个键就能打出整个词。文字会在一两秒内出现在屏幕、笔记本电脑、平板或网页链接上。速记员可以在现场，也可以远程接入通话或直播活动。</p>
+            <ul>
+                <li><strong>几乎逐字的文字</strong>，包括谁在说话，以及笑声、掌声等声音。</li>
+                <li><strong>事先准备</strong>：速记员可以提前录入人名、课程术语和缩写，这正是软件最容易出错的地方。</li>
+                <li>针对具体场次<strong>提前预约</strong>，通常按小时收费。</li>
+                <li>活动结束后常常可以拿到<strong>整理过的文字记录</strong>。</li>
+            </ul>
+            <p>在美国，CART是依据ADA（美国残疾人法）等残疾人相关法律常见的便利服务之一。在英国，类似的服务通常叫作speech-to-text reporting。在中文环境中，这类服务常被称为实时字幕速记或人工实时字幕。</p>
+
+            <h2>什么时候应该请人工CART速记员</h2>
+            <ul>
+                <li><strong>你有权获得无障碍便利</strong>，例如在学校、单位或公共服务中。安排CART是这些机构的责任，而不是由你用一个应用来代替。</li>
+                <li><strong>准确性涉及法律或医疗后果</strong>：庭审、取证、考试、与工作相关的听证、诊断或治疗方案说明。</li>
+                <li><strong>专业术语很多</strong>，例如大学课程、技术培训或学术会议。</li>
+                <li><strong>说话人多、音质差或口音重</strong>，这正是自动识别最容易出错的情况。</li>
+            </ul>
+
+            <h2>什么时候自动实时字幕就够用</h2>
+            <p>一天中需要字幕的时刻，大多不是提前预约的活动。家人视频通话、网络研讨会、YouTube视频、播客、和同事的临时通话、来访者在屋里说话，这些场合不会有速记员陪着，每次都去安排也不现实。这时，自己电脑上的自动字幕就派上用场：</p>
+            <ul>
+                <li><strong>随时可用</strong>：无需预约，一有声音就能开始字幕。</li>
+                <li><strong>任何应用</strong>：字幕跟着电脑的声音走，而不是只限于某一个会议服务。</li>
+                <li><strong>私密</strong>：不会有任何东西加入通话，别人看不到你的字幕。</li>
+                <li><strong>费用低</strong>：可以免费试用，之后选择分钟包或订阅，而不是按小时付费。</li>
+                <li>预约的速记员迟到或连接中断时，可以作为<strong>备用</strong>。</li>
+            </ul>
+
+            <h2>CART与自动字幕一览</h2>
+            <div class="table-wrap">
+                <table class="compare">
+                    <thead>
+                        <tr><th scope="col"></th><th scope="col">人工CART速记员</th><th scope="col">电脑上的自动字幕</th><th scope="col">会议应用内的字幕</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">谁来写文字</th><td>受过训练的速记员</td><td>语音识别软件</td><td>会议应用的语音识别</td></tr>
+                        <tr><th scope="row">准确度</th><td>最高；人名和术语可提前准备</td><td>声音清晰时不错；人名、术语和多人同时说话时较弱</td><td>与其他自动字幕相近</td></tr>
+                        <tr><th scope="row">可用时间</th><td>需针对场次提前预约</td><td>随时可用，适用于电脑上的任何声音或麦克风</td><td>仅限该应用，且需主持人或套餐允许</td></tr>
+                        <tr><th scope="row">费用</th><td>通常按小时收费</td><td>免费试用，之后选择分钟包或订阅</td><td>取决于应用和套餐</td></tr>
+                        <tr><th scope="row">适合场景</th><td>无障碍便利、法律、医疗和考试场合、大型活动</td><td>日常通话、视频、课程和交谈</td><td>只使用这一个应用的人</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>如何在Windows电脑上设置自动实时字幕</h2>
+            <ol class="howto">
+                <li><strong>安装Live Captions &amp; Transcribe</strong>：从<a href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Microsoft Store</a>下载。支持Windows 10和11，试用无需账号或银行卡。</li>
+                <li><strong>选择声音来源</strong>：通话、视频和网课选择电脑声音，屋里有人说话时选择麦克风。</li>
+                <li><strong>让文字更易读</strong>：把字号调大，最大64磅，并选择浅色、深色或高对比度样式。</li>
+                <li><strong>点击开始。</strong>字幕大约比说话慢一秒出现，不同说话人可以用不同颜色显示。</li>
+                <li><strong>保留需要的内容</strong>：历史记录保存在电脑上，可以搜索，也可以导出为TXT或SRT。</li>
+            </ol>
+            <p>关于家人通话、电视和在家中的交谈，请参阅<a href="/captions/live-captions-for-hard-of-hearing-windows.html">Windows上为听障人士设置实时字幕的详细指南</a>（英文）。</p>
+
+            <h2>两者结合使用</h2>
+            <p>CART和自动字幕并不是对立的。常见做法是：为最重要的场次申请CART，例如每周的课程、重要会议或大会主题演讲；其余时间都用自动字幕，比如之后回看的课程录像、临时召开的团队通话、别人发来的视频。如果你依赖远程CART，同时准备好自动字幕，在速记员的连接中断几分钟时也有字幕可看。</p>
+
+            <h2>需要坦白说明的局限</h2>
+            <ul>
+                <li>自动字幕会出错，最常见于人名、数字、专业术语、浓重口音以及多人同时说话时。重要内容请务必核对。</li>
+                <li>运行时需要联网。</li>
+                <li>它只把说话内容转成字幕，不会像速记员那样描述音乐或其他声音。</li>
+                <li>它不是经过认证的无障碍服务，也不会取消任何人申请CART的权利。</li>
+            </ul>
+
+            <h2>需要把字幕翻译成其他语言？</h2>
+            <p>如果说话人使用的语言你不太懂，我们的主应用<a href="/zh/">Live Subtitles</a>会同时显示原话和译文，支持50种语言，适用于Windows、Mac、iPhone和Android。</p>
+
+            <div class="trial">
+                <p><strong>免费试用Live Captions &amp; Transcribe</strong>，支持Windows 10和11。无需账号，无需银行卡。</p>
+                <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">从Microsoft Store获取</a>
+            </div>
+
+            <h2 id="faq">常见问题</h2>
+            <div class="faq">
+                <details>
+                    <summary>CART是什么的缩写？</summary>
+                    <div>CART是Communication Access Realtime Translation的缩写，指由受过训练的人工速记员（通常使用速记键盘）在说话的同时写出文字的实时字幕，可以在现场进行，也可以远程进行。</div>
+                </details>
+                <details>
+                    <summary>自动实时字幕和CART一样吗？</summary>
+                    <div>不一样。CART由人完成，速记员可以提前准备人名和术语，并当场纠正错误。自动实时字幕由语音识别软件生成，随时可用、费用低得多，但在人名、术语、口音和多人同时说话时更容易出错。</div>
+                </details>
+                <details>
+                    <summary>自动字幕能代替CART作为无障碍便利吗？</summary>
+                    <div>当你有权获得无障碍便利，或准确性在法律上很重要时，例如庭审、考试、纪律谈话或就医，不能代替。请向学校、单位、法院或活动主办方申请CART服务。自动字幕是好用的日常工具，而不是经过认证的服务。</div>
+                </details>
+                <details>
+                    <summary>主持人不开启任何功能，我也能在Zoom或Teams里使用自动字幕吗？</summary>
+                    <div>可以。Live Captions &amp; Transcribe为Windows电脑播放的声音加字幕，所以在Zoom、Teams、Google Meet、WhatsApp、Telegram等任何应用中都能用，不需要主持人、机器人或会议设置。只有你能看到字幕。</div>
+                </details>
+                <details>
+                    <summary>能像CART那样在结束后保留文字记录吗？</summary>
+                    <div>Live Captions &amp; Transcribe会把字幕内容的历史记录保存在电脑上，可以搜索，也可以导出为TXT或SRT。这是未经编辑的自动记录，使用前请核对人名和重要数字。</div>
+                </details>
+                <details>
+                    <summary>需要联网吗？</summary>
+                    <div>需要。字幕运行时，音频会发送到云端语音识别服务转成文字。音频本身不会被录制，文字记录只保存在电脑上。详情请见<a href="/captions/privacy.html">隐私政策</a>。</div>
+                </details>
+            </div>
+
+            <h2>相关指南</h2>
+            <ul class="guides-list">
+                <li><a href="/captions/live-captions-for-hard-of-hearing-windows.html">Windows上为听障人士设置实时字幕（英文）</a></li>
+                <li><a href="/captions/transcribe-lecture-meeting-to-text-windows.html">在Windows上把课程或会议转成文字（英文）</a></li>
+                <li><a href="/captions/whatsapp-teams-call-captions-pc.html">在电脑上为WhatsApp、Teams和Telegram通话加实时字幕（英文）</a></li>
+                <li><a href="/zh/captions/">Live Captions &amp; Transcribe：功能与价格</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> 适用于Windows 10和11
+                <small>© 2026 Live Subtitles. 保留所有权利。</small>
+            </div>
+            <nav aria-label="页脚">
+                <a href="/captions/privacy.html">隐私政策</a>
+                <a href="/captions/terms.html">服务条款</a>
+                <a href="/captions/refund.html">退款</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/zh/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

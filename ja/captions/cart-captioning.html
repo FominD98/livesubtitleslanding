@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Analytics: the same GA4 / Google tag and Yandex Metrica as the rest of the site
+         (the Meta pixel is left out on Live Captions pages, see /captions/index.html). -->
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough on Store links + GA4 store_click (Store links carry their own onclick). -->
+    <script src="/cid-tracker.js" defer></script>
+
+    <title>CART（文字通訳）と自動字幕の違い｜PCのリアルタイム字幕</title>
+    <meta name="description" content="CART（Communication Access Realtime Translation）は人による文字通訳。人の文字通訳者が必要な場面と、PCの自動リアルタイム字幕で足りる場面を解説します。">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+    <link rel="canonical" href="https://live-subtitles.com/ja/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/captions/cart-captioning.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/captions/cart-captioning.html" />
+
+    <meta name="theme-color" content="#0F6E6E">
+    <link rel="icon" type="image/x-icon" href="/captions/img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/captions/img/livecaptions-32.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="/captions/img/livecaptions-192.png">
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Live Captions">
+    <meta property="og:title" content="CART（文字通訳）と自動字幕の違い｜PCのリアルタイム字幕">
+    <meta property="og:description" content="CARTは訓練を受けた人が行うリアルタイム字幕。人の文字通訳が必要な場面と、自分のPCの自動字幕で十分な場面をまとめました。">
+    <meta property="og:url" content="https://live-subtitles.com/ja/captions/cart-captioning.html">
+    <meta property="og:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Live Captionsアプリのアイコンと「Windows向けリアルタイム字幕」という文字">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CART（文字通訳）と自動字幕の違い｜PCのリアルタイム字幕">
+    <meta name="twitter:description" content="CARTは訓練を受けた人が行うリアルタイム字幕。人の文字通訳が必要な場面と、自分のPCの自動字幕で十分な場面をまとめました。">
+    <meta name="twitter:image" content="https://live-subtitles.com/captions/img/og-live-captions-en.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Live Captions",
+                "item": "https://live-subtitles.com/ja/captions/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "CART（文字通訳）と自動字幕の違い",
+                "item": "https://live-subtitles.com/ja/captions/cart-captioning.html"
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "CART（文字通訳）と自動ライブ字幕の違い：人の通訳者が必要なとき",
+        "description": "CART（Communication Access Realtime Translation）とは何か、人の文字通訳者を頼むべき場面と、自分のPCの自動ライブ字幕で十分な場面を、設定手順とともに解説します。",
+        "url": "https://live-subtitles.com/ja/captions/cart-captioning.html",
+        "mainEntityOfPage": "https://live-subtitles.com/ja/captions/cart-captioning.html",
+        "inLanguage": "ja",
+        "datePublished": "2026-11-13",
+        "dateModified": "2026-11-13",
+        "image": "https://live-subtitles.com/captions/img/og-live-captions-en.png",
+        "author": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Live Subtitles",
+            "url": "https://live-subtitles.com"
+        },
+        "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://live-subtitles.com/captions/#app",
+            "name": "Live Captions & Transcribe",
+            "alternateName": "Live Captions",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Windows 10, Windows 11",
+            "url": "https://live-subtitles.com/captions/",
+            "downloadUrl": "https://apps.microsoft.com/detail/9NJHDV2W6999",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Live Subtitles",
+                "url": "https://live-subtitles.com"
+            }
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "CARTは何の略ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CARTはCommunication Access Realtime Translationの略です。訓練を受けた人の通訳者が、多くの場合は速記用キーボードを使い、話されている内容をその場で文字にするリアルタイム字幕です。会場でもリモートでも行われます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "自動ライブ字幕はCARTと同じですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "いいえ。CARTは人が行うもので、人名や用語を事前に準備し、その場で誤りを直せます。自動ライブ字幕は音声認識ソフトが作るもので、いつでもずっと安く使えますが、人名、専門用語、なまり、話の重なりではより多く間違えます。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "自動字幕は配慮としてCARTの代わりになりますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "合理的配慮を受ける権利がある場合や、正確さが法的に重要な場合（裁判、試験、懲戒に関する面談、診察など）は代わりになりません。学校、職場、裁判所、イベントの主催者にCARTの提供者を依頼してください。自動字幕は日常のための便利な道具であって、認定されたサービスではありません。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "主催者が何も設定しなくても、ZoomやTeamsで自動字幕を使えますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい。Live Captions & TranscribeはWindows PCが再生する音声に字幕を付けるので、Zoom、Teams、Google Meet、WhatsApp、Telegramなど、どのアプリでも、主催者やボット、会議の設定なしで使えます。字幕が見えるのはあなただけです。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "セッション後のCARTの記録のように、文字起こしを残せますか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Live Captions & Transcribeは字幕にした内容の履歴をPCに保存して検索でき、TXTやSRTに書き出せます。編集されていない自動の文字起こしなので、人名や重要な数字は確認してから使ってください。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "インターネット接続は必要ですか？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "はい。字幕の動作中は、音声をクラウドの音声認識サービスに送って文字にします。音声そのものは録音されず、文字の履歴はPCにのみ保存されます。"
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="stylesheet" href="/captions/captions.css">
+</head>
+<body>
+    <a class="skip" href="#main">本文へスキップ</a>
+
+    <header class="lc-header">
+        <div class="wrap">
+            <a class="lc-brand" href="/ja/captions/">
+                <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
+                <span>Live Captions</span>
+            </a>
+            <nav class="lc-nav" aria-label="メインナビゲーション">
+                <a class="lc-nav__extra" href="/ja/captions/#features">機能</a>
+                <a href="/ja/captions/pricing.html">料金</a>
+                <a class="lc-nav__extra" href="/ja/captions/#faq">よくある質問</a>
+                <details class="lc-lang">
+                    <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="ja">日本語</span></summary>
+                    <ul class="lc-lang__menu">
+                        <li><a href="/captions/cart-captioning.html" hreflang="en" lang="en">English</a></li>
+                        <li><a href="/es/captions/cart-captioning.html" hreflang="es" lang="es">Español</a></li>
+                        <li><a href="/pt/captions/cart-captioning.html" hreflang="pt" lang="pt">Português</a></li>
+                        <li><a href="/fr/captions/cart-captioning.html" hreflang="fr" lang="fr">Français</a></li>
+                        <li><a href="/de/captions/cart-captioning.html" hreflang="de" lang="de">Deutsch</a></li>
+                        <li><a href="/it/captions/cart-captioning.html" hreflang="it" lang="it">Italiano</a></li>
+                        <li><a href="/nl/captions/cart-captioning.html" hreflang="nl" lang="nl">Nederlands</a></li>
+                        <li><a href="/pl/captions/cart-captioning.html" hreflang="pl" lang="pl">Polski</a></li>
+                        <li><a href="/tr/captions/cart-captioning.html" hreflang="tr" lang="tr">Türkçe</a></li>
+                        <li><a href="/uk/captions/cart-captioning.html" hreflang="uk" lang="uk">Українська</a></li>
+                        <li><a href="/ru/captions/cart-captioning.html" hreflang="ru" lang="ru">Русский</a></li>
+                        <li><a href="/ar/captions/cart-captioning.html" hreflang="ar" lang="ar">العربية</a></li>
+                        <li><a href="/hi/captions/cart-captioning.html" hreflang="hi" lang="hi">हिन्दी</a></li>
+                        <li><a href="/ja/captions/cart-captioning.html" hreflang="ja" lang="ja" aria-current="page">日本語</a></li>
+                        <li><a href="/ko/captions/cart-captioning.html" hreflang="ko" lang="ko">한국어</a></li>
+                        <li><a href="/zh/captions/cart-captioning.html" hreflang="zh" lang="zh">简体中文</a></li>
+                    </ul>
+                </details>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="guide">
+        <article class="wrap wrap--narrow">
+            <p class="crumbs"><a href="/ja/captions/">Live Captions</a> / CART（文字通訳）と自動字幕の違い</p>
+            <h1>CART（文字通訳）と自動ライブ字幕の違い：人の通訳者が必要なとき</h1>
+            <p class="updated">2026年11月13日更新</p>
+
+            <div class="answer">
+                <p><strong>CART</strong>（Communication Access Realtime Translation）は、訓練を受けた人の文字通訳者が、話されている内容をその場で文字にするリアルタイム字幕です。合理的配慮を受ける権利がある場合や、一言一句が重要な場面（裁判、試験、懲戒に関する面談、診察、大きな会議など）では、CARTの提供者を依頼してください。日常の通話、動画、オンライン授業、会話なら、自分のパソコンの自動ライブ字幕をいつでも使え、費用もずっと安く、予約もいりません。Windowsでは<a href="/ja/captions/">Live Captions &amp; Transcribe</a>が、PCで再生されるあらゆる音声やマイクの音声に字幕を付けます。</p>
+            </div>
+
+            <p>ろう者や難聴者の多くは、学校や職場、イベントに情報保障を求めたときに、はじめてCARTや文字通訳という言葉に出会います。それが何で、何ではないのか、そしてソフトウェアの字幕がどこで役立つのかを知っておくと、すべてを一つの手段で済ませるのではなく、場面ごとに適切なものを求められます。</p>
+
+            <h2>CARTとは</h2>
+            <p>CARTの提供者（CART字幕担当者、リアルタイム文字通訳者とも呼ばれます）は、話者の言葉を聞きながら、すべてをリアルタイムで入力します。多くの場合、いくつかのキーを同時に押して単語ごと入力できる速記用キーボードを使います。文字は1〜2秒以内に、スクリーン、ノートPC、タブレット、またはWebリンクに表示されます。通訳者は会場にいることもあれば、通話やライブイベントにリモートで参加することもあります。</p>
+            <ul>
+                <li><strong>ほぼ一字一句の文字</strong>。誰が話しているかや、笑い声・拍手などの音も含みます。</li>
+                <li><strong>事前準備</strong>：人名、授業の用語、略語を前もって登録でき、ソフトウェアが最も苦手とする部分を補えます。</li>
+                <li>特定のセッションのために<strong>事前に予約</strong>し、通常は時間単位で料金がかかります。</li>
+                <li>セッション後に<strong>整えられた記録</strong>が提供されることもよくあります。</li>
+            </ul>
+            <p>米国では、CARTはADA（障害を持つアメリカ人法）などの障害者関連法に基づく配慮として一般的に提供されるサービスの一つです。英国では、同様のサービスは一般に「speech-to-text reporting」と呼ばれます。日本では、聴覚障害者への情報保障として「要約筆記」（手書き・パソコン）が広く使われていますが、要約筆記は話の要点をまとめて書くもので、ほぼ一字一句を書き起こすCARTとは異なります。発言をほぼそのまま文字にするサービスは「文字通訳」と呼ばれることもあります。</p>
+
+            <h2>人のCART提供者を依頼すべきとき</h2>
+            <ul>
+                <li><strong>合理的配慮を受ける権利がある場合</strong>（学校、職場、公共サービスなど）。CARTの手配は組織の責任であり、あなたがアプリで代わりを用意するものではありません。</li>
+                <li><strong>正確さに法的・医療的な重みがある場合</strong>：裁判、証言録取、試験、仕事に関する聴聞、診断や治療方針の説明。</li>
+                <li><strong>専門用語が多い場合</strong>：大学の講義、技術研修、学会など。</li>
+                <li><strong>話者が多い、音質が悪い、なまりが強い場合</strong>。自動認識が最も間違えやすい状況です。</li>
+            </ul>
+
+            <h2>自動ライブ字幕で十分なとき</h2>
+            <p>字幕があると助かる場面の多くは、予約されたイベントではありません。家族とのビデオ通話、ウェビナー、YouTubeの動画、ポッドキャスト、同僚とのちょっとした通話、部屋で話す来客。こうした場面に文字通訳者はいませんし、毎回手配するのも現実的ではありません。そこで役立つのが、自分のパソコンの自動字幕です。</p>
+            <ul>
+                <li><strong>いつでも使える</strong>：予約不要。音が鳴ったらすぐ字幕を開始できます。</li>
+                <li><strong>どのアプリでも</strong>：特定の会議サービスではなく、PCの音声に字幕を付けます。</li>
+                <li><strong>プライバシー</strong>：通話には何も参加せず、ほかの人にあなたの字幕は見えません。</li>
+                <li><strong>低コスト</strong>：無料で試せて、その後は時間単位の料金ではなく、分数パックまたはサブスクリプションです。</li>
+                <li>予約した通訳者が遅れたり、接続が切れたりしたときの<strong>予備</strong>としても使えます。</li>
+            </ul>
+
+            <h2>CARTと自動字幕の比較</h2>
+            <div class="table-wrap">
+                <table class="compare">
+                    <thead>
+                        <tr><th scope="col"></th><th scope="col">人のCART提供者</th><th scope="col">PCの自動字幕</th><th scope="col">会議アプリ内の字幕</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><th scope="row">文字を書くのは</th><td>訓練を受けた通訳者</td><td>音声認識ソフト</td><td>会議アプリの音声認識</td></tr>
+                        <tr><th scope="row">正確さ</th><td>最も高い。人名や用語を事前に準備</td><td>音声がクリアなら良好。人名・専門用語・話の重なりには弱い</td><td>ほかの自動字幕と同程度</td></tr>
+                        <tr><th scope="row">使えるタイミング</th><td>セッションごとに事前予約</td><td>いつでも。PCのあらゆる音声やマイクに対応</td><td>そのアプリ内のみ（主催者やプランが許可した場合）</td></tr>
+                        <tr><th scope="row">費用</th><td>通常は時間単位</td><td>無料で試せて、その後は分数パックまたはサブスクリプション</td><td>アプリやプランによる</td></tr>
+                        <tr><th scope="row">向いている場面</th><td>合理的配慮、法的・医療・試験の場面、大きなイベント</td><td>日常の通話、動画、授業、会話</td><td>そのアプリしか使わない人</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>WindowsのPCで自動ライブ字幕を設定する方法</h2>
+            <ol class="howto">
+                <li><strong>Live Captions &amp; Transcribeをインストール</strong>します（<a href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Microsoft Store</a>から）。Windows 10と11で動作し、試すのにアカウントやカードは不要です。</li>
+                <li><strong>音源を選びます</strong>：通話、動画、オンライン授業ならPCの音声、部屋で話している人ならマイク。</li>
+                <li><strong>読みやすくします</strong>：文字サイズを最大64ptまで大きくし、ライト・ダーク・ハイコントラストから選びます。</li>
+                <li><strong>開始を押します。</strong>字幕は話から約1秒遅れて表示され、話者ごとに色を分けて表示することもできます。</li>
+                <li><strong>必要なものを残します</strong>：履歴はPCに保存され、検索でき、TXTやSRTに書き出せます。</li>
+            </ol>
+            <p>家族との通話、テレビ、自宅での会話については、<a href="/captions/live-captions-for-hard-of-hearing-windows.html">Windowsで難聴の方向けにライブ字幕を使うガイド</a>（英語）で詳しく説明しています。</p>
+
+            <h2>両方を組み合わせる</h2>
+            <p>CARTと自動字幕は競合するものではありません。よくある使い方は、毎週の講義、大事な会議、学会の基調講演など、最も重要なセッションにはCARTを依頼し、その間のすべてには自動字幕を使うことです。あとで見返す録画講義、予定外のチームの通話、送られてきた動画などです。リモートのCARTを利用している場合も、自動字幕を用意しておけば、通訳者の接続が数分切れたときに読むものがあります。</p>
+
+            <h2>正直にお伝えしておく限界</h2>
+            <ul>
+                <li>自動字幕は間違えます。特に人名、数字、専門用語、強いなまり、何人もが同時に話すときです。重要なことは必ず確認してください。</li>
+                <li>動作中はインターネット接続が必要です。</li>
+                <li>字幕にするのは話し言葉です。通訳者のように音楽や効果音を説明することはありません。</li>
+                <li>認定を受けた情報保障サービスではなく、誰かがCARTを求める権利を奪うものでもありません。</li>
+            </ul>
+
+            <h2>字幕を別の言語に翻訳したい場合は</h2>
+            <p>話者があまり分からない言語を話している場合は、メインアプリの<a href="/ja/">Live Subtitles</a>が、元の発言と翻訳を50言語で並べて表示します。Windows、Mac、iPhone、Androidに対応しています。</p>
+
+            <div class="trial">
+                <p><strong>Live Captions &amp; Transcribeを無料で試す</strong>（Windows 10・11）。アカウントもカードも不要です。</p>
+                <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Microsoft Storeで入手</a>
+            </div>
+
+            <h2 id="faq">よくある質問</h2>
+            <div class="faq">
+                <details>
+                    <summary>CARTは何の略ですか？</summary>
+                    <div>CARTはCommunication Access Realtime Translationの略です。訓練を受けた人の通訳者が、多くの場合は速記用キーボードを使い、話されている内容をその場で文字にするリアルタイム字幕です。会場でもリモートでも行われます。</div>
+                </details>
+                <details>
+                    <summary>自動ライブ字幕はCARTと同じですか？</summary>
+                    <div>いいえ。CARTは人が行うもので、人名や用語を事前に準備し、その場で誤りを直せます。自動ライブ字幕は音声認識ソフトが作るもので、いつでもずっと安く使えますが、人名、専門用語、なまり、話の重なりではより多く間違えます。</div>
+                </details>
+                <details>
+                    <summary>自動字幕は配慮としてCARTの代わりになりますか？</summary>
+                    <div>合理的配慮を受ける権利がある場合や、正確さが法的に重要な場合（裁判、試験、懲戒に関する面談、診察など）は代わりになりません。学校、職場、裁判所、イベントの主催者にCARTの提供者を依頼してください。自動字幕は日常のための便利な道具であって、認定されたサービスではありません。</div>
+                </details>
+                <details>
+                    <summary>主催者が何も設定しなくても、ZoomやTeamsで自動字幕を使えますか？</summary>
+                    <div>はい。Live Captions &amp; TranscribeはWindows PCが再生する音声に字幕を付けるので、Zoom、Teams、Google Meet、WhatsApp、Telegramなど、どのアプリでも、主催者やボット、会議の設定なしで使えます。字幕が見えるのはあなただけです。</div>
+                </details>
+                <details>
+                    <summary>セッション後のCARTの記録のように、文字起こしを残せますか？</summary>
+                    <div>Live Captions &amp; Transcribeは字幕にした内容の履歴をPCに保存して検索でき、TXTやSRTに書き出せます。編集されていない自動の文字起こしなので、人名や重要な数字は確認してから使ってください。</div>
+                </details>
+                <details>
+                    <summary>インターネット接続は必要ですか？</summary>
+                    <div>はい。字幕の動作中は、音声をクラウドの音声認識サービスに送って文字にします。音声そのものは録音されず、文字の履歴はPCにのみ保存されます。詳しくは<a href="/captions/privacy.html">プライバシーポリシー</a>をご覧ください。</div>
+                </details>
+            </div>
+
+            <h2>関連ガイド</h2>
+            <ul class="guides-list">
+                <li><a href="/captions/live-captions-for-hard-of-hearing-windows.html">Windowsで難聴の方向けのライブ字幕（英語）</a></li>
+                <li><a href="/captions/transcribe-lecture-meeting-to-text-windows.html">Windowsで講義や会議を文字起こしする（英語）</a></li>
+                <li><a href="/captions/whatsapp-teams-call-captions-pc.html">PCでWhatsApp、Teams、Telegramの通話にライブ字幕を付ける（英語）</a></li>
+                <li><a href="/ja/captions/">Live Captions &amp; Transcribe：機能と料金</a></li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="lc-footer">
+        <div class="wrap">
+            <div>
+                <strong>Live Captions</strong> — Windows 10・11対応
+                <small>© 2026 Live Subtitles. 無断転載を禁じます。</small>
+            </div>
+            <nav aria-label="フッター">
+                <a href="/captions/privacy.html">プライバシー</a>
+                <a href="/captions/terms.html">利用規約</a>
+                <a href="/captions/refund.html">返金</a>
+                <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>
+                <a href="/ja/">Live Subtitles</a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
