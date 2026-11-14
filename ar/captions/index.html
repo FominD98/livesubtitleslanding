@@ -163,7 +163,7 @@
 <body>
     <a class="skip" href="#main">تخطي إلى المحتوى</a>
 
-    <header class="lc-header">
+    <header class="lc-header lc-header--sticky">
         <div class="wrap">
             <a class="lc-brand" href="/ar/captions/">
                 <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
@@ -174,6 +174,7 @@
                 <a class="lc-nav__extra" href="#features">الميزات</a>
                 <a href="/ar/captions/pricing.html">الأسعار</a>
                 <a class="lc-nav__extra" href="#faq">الأسئلة الشائعة</a>
+                <a class="btn btn--primary btn--sm lc-nav__cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">تنزيل</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="ar">العربية</span></summary>
                     <ul class="lc-lang__menu">
@@ -199,33 +200,30 @@
         </div>
     </header>
 
-    <main id="main">
+    <main id="main" class="lc-home">
         <section class="hero">
             <div class="wrap hero__grid">
                 <div>
+                    <span class="eyebrow">تسميات توضيحية لويندوز 10 و11</span>
                     <h1>تسميات توضيحية مباشرة: اقرأ كل كلمة تسمعها على جهاز الكمبيوتر</h1>
-                    <p class="hero__lead">تسميات توضيحية فورية للمكالمات المرئية ويوتيوب والأفلام والمحاضرات والتلفاز. نص كبير وواضح فوق أي تطبيق، ولون مختلف لكل متحدث، وسجلّ يمكنك البحث فيه. لنظامي ويندوز 10 و11.</p>
+                    <p class="hero__lead">مكالمة فيديو، فيلم، محاضرة، أو شخص بجانبك: يعرض Live Captions خلال نحو ثانية واحدة ما يُقال بخط كبير. لكل متحدث لونه الخاص.</p>
                     <div class="hero__cta">
-                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                        <a class="btn btn--primary" id="hero-cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                            تنزيل لويندوز
+                            تنزيل مجانًا
                         </a>
                     </div>
-                    <p class="hero__note">دقائق مجانية للبدء. لا حاجة لبطاقة ائتمان.</p>
-                    <ul class="checks">
-                        <li>مكالمات في Zoom وTeams وMeet وWhatsApp وTelegram</li>
-                        <li>60 لغة منطوقة، تُكتشف تلقائيًا</li>
-                        <li>حجم نص يصل إلى 64 نقطة</li>
-                    </ul>
+                    <p class="hero__note"><b>دقائق مجانية</b> للبدء · دون حاجة لبطاقة · Microsoft Store</p>
                 </div>
-                <div class="mock" role="img" aria-label="نافذة Live Captions: متحدثان بلونين مختلفين، كل واحد في سطر جديد">
+                <div class="mock mock--live" role="img" aria-label="نافذة Live Captions: متحدثان بلونين مختلفين، كل واحد في سطر جديد">
+                    <img class="mock__scene" src="/captions/img/store/en/scene.webp" width="1280" height="427" alt="" fetchpriority="high" decoding="async">
                     <div class="mock__bar">
                         <span class="mock__dot"></span>
                         <span class="mock__state">جارٍ الاستماع</span>
                         <span>· صوت الحاسوب</span>
                         <span class="mock__pill">إيقاف مؤقت</span>
                     </div>
-                    <div class="mock__body">
+                    <div class="mock__body" data-lines="[&quot;مرحبًا، هل تسمعني؟&quot;, &quot;نعم، أسمعك جيدًا.&quot;, &quot;صباح الخير. هل أتيحت لك فرصة للاطلاع على التقرير؟&quot;, &quot;نعم، قرأته مساء أمس.&quot;, &quot;ما رأيك في أرقام شهر مارس؟&quot;, &quot;تبدو أفضل بكثير مما توقعنا.&quot;, &quot;رائع. إذن لننقل الاجتماع إلى يوم الخميس.&quot;, &quot;يناسبني. سأرسل الدعوة.&quot;, &quot;ممتاز. لنلتقِ في الساعة الثانية.&quot;]">
                         <span class="mock__who mock__who--1">المتحدث 1</span>
                         <p class="mock__line mock__line--old">مساء الخير. سنتحدث اليوم عن تجهيز الحديقة لفصل الشتاء.</p>
                         <span class="mock__who mock__who--2">المتحدث 2</span>
@@ -235,9 +233,46 @@
             </div>
         </section>
 
+        <div class="apps">
+            <div class="wrap">
+                <strong>يعمل مع أي شيء يُصدر صوتًا:</strong>
+                <span><img src="/captions/img/apps/zoom.webp" width="24" height="24" alt="">Zoom</span>
+                <span><img src="/captions/img/apps/teams.webp" width="24" height="24" alt="">Microsoft Teams</span>
+                <span><img src="/captions/img/apps/meet.webp" width="24" height="24" alt="">Google Meet</span>
+                <span><img src="/captions/img/apps/whatsapp.webp" width="24" height="24" alt="">WhatsApp</span>
+                <span><img src="/captions/img/apps/telegram.webp" width="24" height="24" alt="">Telegram</span>
+                <span><img src="/captions/img/apps/youtube.webp" width="24" height="24" alt="">YouTube</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>الأفلام والمحاضرات</span>
+            </div>
+        </div>
+
+        <section class="section" id="how">
+            <div class="wrap">
+                <h2>ثلاث خطوات وتبدأ القراءة</h2>
+                <p class="section__lead">دون إعدادات معقدة، ودون جهاز ثانٍ، ودون تثبيت أي إضافة في Zoom أو في متصفحك.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>افتح Live Captions</h3>
+                        <p>ثبّته من متجر Microsoft وافتحه. تظهر نافذة التسميات التوضيحية فوق تطبيقاتك الأخرى.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>اختر ما تريد الاستماع إليه</h3>
+                        <p>صوت الحاسوب للمكالمات والفيديوهات، أو الميكروفون للأشخاص الموجودين في الغرفة.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>اضغط «ابدأ» واقرأ</h3>
+                        <p>تظهر التسميات التوضيحية الفورية أثناء حديث الناس. أوقفها مؤقتًا في أي وقت؛ تُستهلك الدقائق فقط أثناء تشغيل التسميات التوضيحية.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section section--alt" id="what">
             <div class="wrap">
-                <h2>ماذا يفعل Live Captions</h2>
+                <h2>أين يفيدك</h2>
                 <p class="section__lead">يستمع إلى صوت جهازك أو إلى الميكروفون، ويعرض ما يُقال كنص كبير خلال نحو ثانية واحدة. تسميات توضيحية لكل جهاز الكمبيوتر، وليس لتطبيق واحد فقط.</p>
                 <div class="rows">
                     <div class="row">
@@ -265,73 +300,11 @@
             </div>
         </section>
 
-        <section class="section" id="who">
-            <div class="wrap">
-                <h2>لمن هذا التطبيق</h2>
-                <div class="grid grid--2">
-                    <div class="card">
-                        <h3>لضعاف السمع</h3>
-                        <p>اقرأ المكالمات والفيديوهات بدلًا من إجهاد نفسك في محاولة سماعها. النص الكبير والأنماط عالية التباين تساعد أيضًا إن لم تعد حدّة بصرك كما كانت.</p>
-                    </div>
-                    <div class="card">
-                        <h3>للعائلات</h3>
-                        <p>ثبّته على جهاز أحد الوالدين أو الأجداد ليتمكنوا من المشاركة في مكالمات الفيديو العائلية مجددًا.</p>
-                    </div>
-                    <div class="card">
-                        <h3>لكل من يجد صعوبة في متابعة الكلام</h3>
-                        <p>أصوات خافتة، أو كلام سريع، أو لهجات ثقيلة، أو صوت رديء: مع تحويل الكلام إلى نص على الشاشة لن تفوتك كلمة.</p>
-                    </div>
-                    <div class="card">
-                        <h3>للطلاب وموظفي المكاتب</h3>
-                        <p>فرّغ المحاضرات والاجتماعات الطويلة بالزمن الفعلي، ثم ابحث في النص واحفظه كملف.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="how">
-            <div class="wrap">
-                <h2>كيف يعمل</h2>
-                <p class="section__lead">دون إعدادات معقدة، ودون جهاز ثانٍ، ودون تثبيت أي إضافة في Zoom أو في متصفحك.</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <span class="step__num">1</span>
-                        <h3>افتح Live Captions</h3>
-                        <p>ثبّته من متجر Microsoft وافتحه. تظهر نافذة التسميات التوضيحية فوق تطبيقاتك الأخرى.</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">2</span>
-                        <h3>اختر ما تريد الاستماع إليه</h3>
-                        <p>صوت الحاسوب للمكالمات والفيديوهات، أو الميكروفون للأشخاص الموجودين في الغرفة.</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">3</span>
-                        <h3>اضغط «ابدأ» واقرأ</h3>
-                        <p>تظهر التسميات التوضيحية الفورية أثناء حديث الناس. أوقفها مؤقتًا في أي وقت؛ تُستهلك الدقائق فقط أثناء تشغيل التسميات التوضيحية.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="features">
             <div class="wrap">
-                <h2>الميزات</h2>
-                <p class="section__lead">صُمم ليكون سهل القراءة وسهل الاستخدام، بأزرار كبيرة وكلمات بسيطة.</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <h3>من قال ماذا</h3>
-                        <p>يُعرض كل متحدث باسم «المتحدث 1»، «المتحدث 2» بلونه الخاص، ويبدأ كل متحدث جديد في سطر جديد.</p>
-                    </div>
-                    <div class="card">
-                        <h3>60 لغة</h3>
-                        <p>العربية، الإنجليزية، الإسبانية، الألمانية، الفرنسية، الإيطالية، البرتغالية، الروسية، الأوكرانية، البولندية، الصينية، اليابانية، الكورية، الهندية والعديد غيرها. تُكتشف اللغة تلقائيًا.</p>
-                    </div>
-                    <div class="card">
-                        <h3>لا يعيق عملك</h3>
-                        <p>تبقى النافذة فوق كل شيء. في وضع «النقر عبر النافذة» تمر نقرات الفأرة إلى التطبيق الذي تحتها.</p>
-                    </div>
-                </div>
-                <div class="rows rows--features">
+                <h2>صُمم ليكون سهل القراءة</h2>
+                <p class="section__lead">أزرار كبيرة، كلمات بسيطة، ونص لا تحتاج إلى التحديق فيه.</p>
+                <div class="rows">
                     <div class="row">
                         <img class="row__shot" src="/captions/img/store/en/readable.webp" width="1280" height="606" alt="نص كبير وواضح" loading="lazy" decoding="async">
                         <div class="row__text">
@@ -345,15 +318,80 @@
                         <div class="row__text">
                         <h3>سجلّ النصوص</h3>
                         <p>تُحفظ كل جلسة على جهازك. مرّر للخلف، ابحث بكلمة، أعد تسمية المتحدثين، انسخ النص، أو صدّره بصيغة TXT أو SRT.</p>
+                        <ul>
+                            <li>كل متحدث بلونه الخاص، في سطر جديد</li>
+                            <li>60 لغة، تُكتشف تلقائيًا</li>
+                            <li>تبقى النافذة في الأعلى، وتمر النقرات من خلالها</li>
+                        </ul>
                         </div>
                     </div>
                 </div>
-                <p class="note"><strong>تسميات توضيحية فقط.</strong> يكتب Live Captions ما يُقال باللغة التي يُقال بها، ولا يترجمه.</p>
             </div>
         </section>
 
+        <section class="section section--alt" id="facts">
+            <div class="wrap">
+                <h2>إجابات واضحة</h2>
+                <p class="section__lead">ما يسأل عنه الناس عادةً قبل التثبيت.</p>
+                <div class="facts">
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M4 4l16 16"/></svg>
+                        <h3>جرّبه مجانًا</h3>
+                        <p>تبدأ بدقائق مجانية، دون حاجة لبطاقة. بعد ذلك، باقة دقائق أو اشتراك.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.3-3 8.2-7.5 9.3C7.5 20.2 4.5 16.3 4.5 12V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+                        <h3>صوتك لا يُسجَّل</h3>
+                        <p>أثناء تشغيل التسميات التوضيحية، يذهب الصوت إلى خدمة التعرف على الكلام. يُحفظ السجلّ فقط على جهازك.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/></svg>
+                        <h3>يحتاج إلى إنترنت</h3>
+                        <p>يعمل التعرف على الكلام عبر الإنترنت. الميكروفون مطلوب فقط للأشخاص بجانبك.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                        <h3>تسميات توضيحية فقط</h3>
+                        <p>يكتب Live Captions الكلام باللغة التي يُقال بها. لا يترجمه.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="section" id="faq">
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>لمن هذا التطبيق</h2>
+                <p class="section__lead">التسميات التوضيحية ليست فقط لضعاف السمع. النص على الشاشة يساعد أي شخص عندما يكون الصوت غير واضح، أو الكلام سريعًا، أو عندما لا يمكنك تحمّل فوات كلمة.</p>
+                <div class="who">
+                    <div>
+                        <h3>في العمل</h3>
+                        <p>الاجتماعات ومكالمات العملاء: دون أن تطلب من أحد التكرار، وبعدها تجد العبارة بكلمة وتحفظ النص.</p>
+                    </div>
+                    <div>
+                        <h3>في المدرسة والجامعة</h3>
+                        <p>المحاضرات والندوات والدورات عبر الإنترنت: تابع الفكرة بدل تدوين الملاحظات، واحفظ النص بصيغة TXT.</p>
+                    </div>
+                    <div>
+                        <h3>متعلمو اللغات</h3>
+                        <p>الفيديوهات والبودكاست والمكالمات بالإنجليزية أو الألمانية أو أي لغة أخرى أسهل في المتابعة مع تسميات توضيحية باللغة الأصلية.</p>
+                    </div>
+                    <div>
+                        <h3>عندما لا يمكنك رفع الصوت</h3>
+                        <p>طفل نائم، أنت في مكتب مفتوح، لا سماعات بجانبك: اخفض الصوت واقرأ.</p>
+                    </div>
+                    <div>
+                        <h3>عندما يصعب تمييز الكلام</h3>
+                        <p>صوت خافت، كلام سريع، لهجة ثقيلة أو اتصال سيئ: عندما يتحول الكلام إلى نص، لا تفوتك كلمة.</p>
+                    </div>
+                    <div>
+                        <h3>لضعاف السمع وعائلاتهم</h3>
+                        <p>اقرأ المكالمات والفيديوهات بدلًا من إجهاد سمعك. ثبّته لوالديك، وسيتمكنان من المشاركة في مكالمات الفيديو العائلية مجددًا.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="faq">
             <div class="wrap wrap--narrow">
                 <h2>الأسئلة الشائعة</h2>
                 <div class="faq">
@@ -389,15 +427,16 @@
             </div>
         </section>
 
-        <section class="section section--alt cta-final" id="download">
-            <div class="wrap wrap--narrow">
-                <h2>جرّب Live Captions مجانًا</h2>
-                <p class="section__lead" style="margin-left:auto;margin-right:auto">دقائق مجانية من التسميات التوضيحية الفورية، دون حاجة لبطاقة. لديك أسئلة؟ راسلنا على <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>، نرد على كل رسالة.</p>
-                <div class="hero__cta">
+        <section class="section" id="download">
+            <div class="wrap">
+                <div class="final">
+                    <h2>جرّبه في مكالمتك القادمة</h2>
+                    <p>التثبيت من متجر Microsoft يستغرق دقيقة. الدقائق المجانية كافية لتجربته في مكالمتك أو فيديوهاتك الخاصة.</p>
                     <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                        تنزيل لويندوز
+                        تنزيل مجاني لويندوز
                     </a>
+                    <p class="final__note"><b>دون حاجة لبطاقة</b> · ويندوز 10 و11 · الأسئلة: captions@live-subtitles.com</p>
                 </div>
             </div>
         </section>
@@ -418,5 +457,10 @@
             </nav>
         </div>
     </footer>
+    <div class="stickybar">
+        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">تنزيل مجانًا · دون حاجة لبطاقة</a>
+    </div>
+    <script src="/captions/live-demo.js" defer></script>
+    <script src="/captions/stickybar.js" defer></script>
 </body>
 </html>

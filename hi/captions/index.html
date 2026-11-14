@@ -163,7 +163,7 @@
 <body>
     <a class="skip" href="#main">मुख्य सामग्री पर जाएं</a>
 
-    <header class="lc-header">
+    <header class="lc-header lc-header--sticky">
         <div class="wrap">
             <a class="lc-brand" href="/hi/captions/">
                 <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
@@ -174,6 +174,7 @@
                 <a class="lc-nav__extra" href="#features">सुविधाएं</a>
                 <a href="/hi/captions/pricing.html">कीमतें</a>
                 <a class="lc-nav__extra" href="#faq">सामान्य प्रश्न</a>
+                <a class="btn btn--primary btn--sm lc-nav__cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">डाउनलोड करें</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="hi">हिन्दी</span></summary>
                     <ul class="lc-lang__menu">
@@ -199,33 +200,30 @@
         </div>
     </header>
 
-    <main id="main">
+    <main id="main" class="lc-home">
         <section class="hero">
             <div class="wrap hero__grid">
                 <div>
+                    <span class="eyebrow">Windows 10 और 11 के लिए कैप्शन</span>
                     <h1>लाइव कैप्शन: अपने कंप्यूटर पर सुनाई देने वाला हर शब्द पढ़ें</h1>
-                    <p class="hero__lead">वीडियो कॉल, YouTube, फ़िल्मों, लेक्चर और टीवी के लिए रियल-टाइम कैप्शन। किसी भी ऐप के ऊपर बड़ा, साफ़ टेक्स्ट, हर बोलने वाले के लिए अलग रंग, और खोजने लायक इतिहास। Windows 10 और 11 के लिए।</p>
+                    <p class="hero__lead">वीडियो कॉल, फ़िल्म, लेक्चर या बगल में बैठा कोई व्यक्ति — Live Captions लगभग एक सेकंड में कही गई बात बड़े टेक्स्ट में दिखाता है। हर बोलने वाले का अपना रंग होता है।</p>
                     <div class="hero__cta">
-                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                        <a class="btn btn--primary" id="hero-cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                            Windows के लिए डाउनलोड करें
+                            मुफ़्त में डाउनलोड करें
                         </a>
                     </div>
-                    <p class="hero__note">शुरुआत के लिए मुफ़्त मिनट। कार्ड की ज़रूरत नहीं।</p>
-                    <ul class="checks">
-                        <li>Zoom, Teams, Meet, WhatsApp और Telegram पर कॉल</li>
-                        <li>60 भाषाएं, अपने आप पहचानी जाती हैं</li>
-                        <li>टेक्स्ट का आकार 64 pt तक</li>
-                    </ul>
+                    <p class="hero__note"><b>शुरुआत के लिए मुफ़्त मिनट</b> · कार्ड की ज़रूरत नहीं · Microsoft Store</p>
                 </div>
-                <div class="mock" role="img" aria-label="Live Captions विंडो: दो बोलने वाले दो अलग रंगों में, हर एक नई लाइन में">
+                <div class="mock mock--live" role="img" aria-label="Live Captions विंडो: दो बोलने वाले दो अलग रंगों में, हर एक नई लाइन में">
+                    <img class="mock__scene" src="/captions/img/store/en/scene.webp" width="1280" height="427" alt="" fetchpriority="high" decoding="async">
                     <div class="mock__bar">
                         <span class="mock__dot"></span>
                         <span class="mock__state">सुन रहा है</span>
                         <span>· कंप्यूटर की आवाज़</span>
                         <span class="mock__pill">रोकें</span>
                     </div>
-                    <div class="mock__body">
+                    <div class="mock__body" data-lines="[&quot;नमस्ते, क्या आप मुझे सुन पा रहे हैं?&quot;, &quot;हाँ, मैं आपको अच्छी तरह सुन पा रहा हूँ।&quot;, &quot;सुप्रभात। क्या आपने रिपोर्ट देख ली?&quot;, &quot;हाँ, मैंने कल रात पढ़ ली थी।&quot;, &quot;मार्च के आंकड़ों के बारे में आपकी क्या राय है?&quot;, &quot;वे हमारी उम्मीद से काफ़ी बेहतर दिख रहे हैं।&quot;, &quot;बढ़िया। तो मीटिंग गुरुवार को कर लेते हैं।&quot;, &quot;ठीक है। मैं इनविटेशन भेज दूँगा।&quot;, &quot;बहुत बढ़िया। दो बजे मिलते हैं।&quot;]">
                         <span class="mock__who mock__who--1">बोलने वाला 1</span>
                         <p class="mock__line mock__line--old">शुभ संध्या। आज हम बात करेंगे कि सर्दियों के लिए बगीचे को कैसे तैयार करें।</p>
                         <span class="mock__who mock__who--2">बोलने वाला 2</span>
@@ -235,9 +233,46 @@
             </div>
         </section>
 
+        <div class="apps">
+            <div class="wrap">
+                <strong>हर उस ऐप के साथ काम करता है जिसमें आवाज़ चलती है:</strong>
+                <span><img src="/captions/img/apps/zoom.webp" width="24" height="24" alt="">Zoom</span>
+                <span><img src="/captions/img/apps/teams.webp" width="24" height="24" alt="">Microsoft Teams</span>
+                <span><img src="/captions/img/apps/meet.webp" width="24" height="24" alt="">Google Meet</span>
+                <span><img src="/captions/img/apps/whatsapp.webp" width="24" height="24" alt="">WhatsApp</span>
+                <span><img src="/captions/img/apps/telegram.webp" width="24" height="24" alt="">Telegram</span>
+                <span><img src="/captions/img/apps/youtube.webp" width="24" height="24" alt="">YouTube</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>फ़िल्में और लेक्चर</span>
+            </div>
+        </div>
+
+        <section class="section" id="how">
+            <div class="wrap">
+                <h2>तीन चरण, और आप पढ़ रहे होंगे</h2>
+                <p class="section__lead">कोई झंझट वाली सेटिंग नहीं, कोई दूसरा डिवाइस नहीं, Zoom या ब्राउज़र में कुछ भी इंस्टॉल करने की ज़रूरत नहीं।</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>Live Captions खोलें</h3>
+                        <p>इसे Microsoft Store से इंस्टॉल करें और खोलें। कैप्शन विंडो आपके बाकी ऐप के ऊपर दिखाई देती है।</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>चुनें कि क्या सुनना है</h3>
+                        <p>कॉल और वीडियो के लिए कंप्यूटर की आवाज़, या कमरे में मौजूद लोगों के लिए माइक्रोफ़ोन।</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>Start दबाएं और पढ़ें</h3>
+                        <p>लोगों के बोलते ही रियल-टाइम कैप्शन दिखाई देते हैं। कभी भी रोकें — मिनट तभी खर्च होते हैं जब कैप्शन चल रहे हों।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section section--alt" id="what">
             <div class="wrap">
-                <h2>Live Captions क्या करता है</h2>
+                <h2>यह कहाँ मदद करता है</h2>
                 <p class="section__lead">यह आपके कंप्यूटर की आवाज़ या आपके माइक्रोफ़ोन को सुनता है, और लगभग एक सेकंड में जो कहा गया है उसे बड़े टेक्स्ट में दिखाता है। यह पूरे पीसी के लिए कैप्शन है, सिर्फ़ एक ऐप के लिए नहीं।</p>
                 <div class="rows">
                     <div class="row">
@@ -265,73 +300,11 @@
             </div>
         </section>
 
-        <section class="section" id="who">
-            <div class="wrap">
-                <h2>यह किनके लिए है</h2>
-                <div class="grid grid--2">
-                    <div class="card">
-                        <h3>कम सुनने वाले लोग</h3>
-                        <p>सुनने में ज़ोर लगाने के बजाय कॉल और वीडियो को पढ़ें। बड़ा टेक्स्ट और हाई-कॉन्ट्रास्ट स्टाइल तब भी मदद करते हैं जब आपकी नज़र पहले जैसी न रही हो।</p>
-                    </div>
-                    <div class="card">
-                        <h3>परिवार</h3>
-                        <p>इसे माता-पिता या दादा-दादी के कंप्यूटर पर सेट करें ताकि वे फिर से परिवार की वीडियो कॉल में शामिल हो सकें।</p>
-                    </div>
-                    <div class="card">
-                        <h3>जिन्हें बोली समझने में दिक्कत होती है</h3>
-                        <p>धीमी आवाज़, तेज़ बोलने वाले, भारी लहजा या खराब आवाज़ — जब बोली स्क्रीन पर टेक्स्ट बन जाए, तो एक भी शब्द नहीं छूटता।</p>
-                    </div>
-                    <div class="card">
-                        <h3>छात्र और दफ़्तर में काम करने वाले</h3>
-                        <p>लेक्चर और लंबी मीटिंग को लाइव ट्रांसक्राइब करें, फिर ट्रांसक्रिप्ट में खोजें और उसे फ़ाइल के रूप में सेव करें।</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="how">
-            <div class="wrap">
-                <h2>यह कैसे काम करता है</h2>
-                <p class="section__lead">कोई झंझट वाली सेटिंग नहीं, कोई दूसरा डिवाइस नहीं, Zoom या ब्राउज़र में कुछ भी इंस्टॉल करने की ज़रूरत नहीं।</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <span class="step__num">1</span>
-                        <h3>Live Captions खोलें</h3>
-                        <p>इसे Microsoft Store से इंस्टॉल करें और खोलें। कैप्शन विंडो आपके बाकी ऐप के ऊपर दिखाई देती है।</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">2</span>
-                        <h3>चुनें कि क्या सुनना है</h3>
-                        <p>कॉल और वीडियो के लिए कंप्यूटर की आवाज़, या कमरे में मौजूद लोगों के लिए माइक्रोफ़ोन।</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">3</span>
-                        <h3>Start दबाएं और पढ़ें</h3>
-                        <p>लोगों के बोलते ही रियल-टाइम कैप्शन दिखाई देते हैं। कभी भी रोकें — मिनट तभी खर्च होते हैं जब कैप्शन चल रहे हों।</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="features">
             <div class="wrap">
-                <h2>सुविधाएं</h2>
-                <p class="section__lead">पढ़ने और इस्तेमाल करने में आसान बनाया गया है — बड़े बटन और सीधी-सरल भाषा के साथ।</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <h3>किसने क्या कहा</h3>
-                        <p>हर बोलने वाले को उसके अपने रंग में "बोलने वाला 1", "बोलने वाला 2" लेबल किया जाता है, और हर नया बोलने वाला नई लाइन से शुरू होता है।</p>
-                    </div>
-                    <div class="card">
-                        <h3>60 भाषाएं</h3>
-                        <p>हिन्दी, अंग्रेज़ी, स्पेनिश, जर्मन, फ़्रेंच, इतालवी, पुर्तगाली, रूसी, चीनी, जापानी, कोरियाई, अरबी और कई और भाषाएं। भाषा अपने आप पहचानी जाती है।</p>
-                    </div>
-                    <div class="card">
-                        <h3>आपके काम में आड़े नहीं आता</h3>
-                        <p>विंडो हमेशा ऊपर रहती है। क्लिक-थ्रू मोड में आपके माउस क्लिक इसके नीचे वाले ऐप तक पहुंच जाते हैं।</p>
-                    </div>
-                </div>
-                <div class="rows rows--features">
+                <h2>पढ़ने में आसान बनाया गया है</h2>
+                <p class="section__lead">बड़े बटन, सीधी-सरल भाषा और टेक्स्ट जिसे देखने के लिए आंखें सिकोड़नी नहीं पड़तीं।</p>
+                <div class="rows">
                     <div class="row">
                         <img class="row__shot" src="/captions/img/store/en/readable.webp" width="1280" height="606" alt="बड़ा, साफ़ टेक्स्ट" loading="lazy" decoding="async">
                         <div class="row__text">
@@ -345,15 +318,80 @@
                         <div class="row__text">
                         <h3>ट्रांसक्रिप्ट इतिहास</h3>
                         <p>हर सेशन आपके कंप्यूटर पर सेव होता है। पीछे स्क्रॉल करें, शब्द से खोजें, बोलने वालों के नाम बदलें, टेक्स्ट कॉपी करें, या उसे TXT या SRT में एक्सपोर्ट करें।</p>
+                        <ul>
+                            <li>हर बोलने वाला अपने रंग में, नई लाइन से</li>
+                            <li>60 भाषाएं, अपने आप पहचानी जाती हैं</li>
+                            <li>विंडो हमेशा ऊपर रहती है, क्लिक इसके आर-पार चले जाते हैं</li>
+                        </ul>
                         </div>
                     </div>
                 </div>
-                <p class="note"><strong>सिर्फ़ कैप्शन।</strong> Live Captions वही लिखता है जो बोला गया है, उसी भाषा में जिसमें बोला गया है। यह अनुवाद नहीं करता।</p>
             </div>
         </section>
 
+        <section class="section section--alt" id="facts">
+            <div class="wrap">
+                <h2>सीधे जवाब</h2>
+                <p class="section__lead">जो लोग इंस्टॉल करने से पहले अक्सर पूछते हैं।</p>
+                <div class="facts">
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M4 4l16 16"/></svg>
+                        <h3>मुफ़्त में आज़माएं</h3>
+                        <p>आप मुफ़्त मिनटों से शुरू करते हैं, कार्ड की ज़रूरत नहीं। इसके बाद — मिनट पैक या सब्सक्रिप्शन।</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.3-3 8.2-7.5 9.3C7.5 20.2 4.5 16.3 4.5 12V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+                        <h3>आपका ऑडियो रिकॉर्ड नहीं होता</h3>
+                        <p>जब कैप्शन चल रहे होते हैं, आवाज़ स्पीच रिकग्निशन सेवा को भेजी जाती है। इतिहास सिर्फ़ आपके कंप्यूटर पर रहता है।</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/></svg>
+                        <h3>इंटरनेट की ज़रूरत है</h3>
+                        <p>स्पीच रिकग्निशन ऑनलाइन काम करता है। माइक्रोफ़ोन सिर्फ़ बगल में बैठे लोगों के लिए चाहिए।</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                        <h3>सिर्फ़ कैप्शन</h3>
+                        <p>Live Captions जो कहा गया है उसे उसी भाषा में लिखता है जिसमें वह बोला गया है। यह अनुवाद नहीं करता।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="section" id="faq">
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>यह किनके लिए है</h2>
+                <p class="section__lead">कैप्शन सिर्फ़ उनके लिए नहीं हैं जिन्हें सुनने में दिक्कत होती है। जब आवाज़ साफ़ न हो, लोग तेज़ बोलें या एक शब्द भी छूटना न हो, तब स्क्रीन पर टेक्स्ट किसी के भी काम आता है।</p>
+                <div class="who">
+                    <div>
+                        <h3>दफ़्तर में</h3>
+                        <p>मीटिंग और क्लाइंट कॉल: किसी से दोबारा पूछने की ज़रूरत नहीं, और बाद में किसी फ़्रेज़ को शब्द से खोजकर टेक्स्ट सेव कर सकते हैं।</p>
+                    </div>
+                    <div>
+                        <h3>स्कूल और यूनिवर्सिटी में</h3>
+                        <p>लेक्चर, वेबिनार और ऑनलाइन कोर्स: नोट्स लिखने के बजाय बात को समझें, और ट्रांसक्रिप्ट को TXT में सेव करें।</p>
+                    </div>
+                    <div>
+                        <h3>भाषा सीखने वाले</h3>
+                        <p>अंग्रेज़ी, जर्मन या किसी और भाषा में वीडियो, पॉडकास्ट और कॉल को समझना आसान होता है जब कैप्शन उसी भाषा में हों।</p>
+                    </div>
+                    <div>
+                        <h3>जब आवाज़ तेज़ नहीं कर सकते</h3>
+                        <p>बच्चा सो रहा हो, आप ओपन-स्पेस ऑफ़िस में हों, हेडफ़ोन पास न हों — आवाज़ धीमी करें और पढ़ें।</p>
+                    </div>
+                    <div>
+                        <h3>जब बोली समझ न आए</h3>
+                        <p>धीमी आवाज़, तेज़ बोलने वाला, लहजा या खराब कनेक्शन — जब बोली टेक्स्ट बन जाए, कुछ नहीं छूटता।</p>
+                    </div>
+                    <div>
+                        <h3>कम सुनने वाले लोग और उनका परिवार</h3>
+                        <p>सुनने में ज़ोर लगाने के बजाय कॉल और वीडियो पढ़ें। माता-पिता के लिए सेट करें, और वे फिर से परिवार की वीडियो कॉल में शामिल हो सकते हैं।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="faq">
             <div class="wrap wrap--narrow">
                 <h2>अक्सर पूछे जाने वाले सवाल</h2>
                 <div class="faq">
@@ -389,15 +427,16 @@
             </div>
         </section>
 
-        <section class="section section--alt cta-final" id="download">
-            <div class="wrap wrap--narrow">
-                <h2>Live Captions मुफ़्त में आज़माएं</h2>
-                <p class="section__lead" style="margin-left:auto;margin-right:auto">रियल-टाइम कैप्शन के मुफ़्त मिनट, कार्ड की ज़रूरत नहीं। कोई सवाल है? <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a> पर लिखें, हम हर संदेश का जवाब देते हैं।</p>
-                <div class="hero__cta">
+        <section class="section" id="download">
+            <div class="wrap">
+                <div class="final">
+                    <h2>इसे अपनी अगली कॉल पर आज़माएं</h2>
+                    <p>Microsoft Store से इंस्टॉल करने में एक मिनट लगता है। मुफ़्त मिनट अपनी कॉल या वीडियो पर आज़माने के लिए काफ़ी हैं।</p>
                     <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                        Windows के लिए डाउनलोड करें
+                        Windows के लिए मुफ़्त डाउनलोड करें
                     </a>
+                    <p class="final__note"><b>कार्ड की ज़रूरत नहीं</b> · Windows 10 और 11 · सवाल: captions@live-subtitles.com</p>
                 </div>
             </div>
         </section>
@@ -418,5 +457,10 @@
             </nav>
         </div>
     </footer>
+    <div class="stickybar">
+        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">मुफ़्त डाउनलोड करें · कार्ड की ज़रूरत नहीं</a>
+    </div>
+    <script src="/captions/live-demo.js" defer></script>
+    <script src="/captions/stickybar.js" defer></script>
 </body>
 </html>

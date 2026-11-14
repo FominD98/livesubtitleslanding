@@ -163,7 +163,7 @@
 <body>
     <a class="skip" href="#main">跳至内容</a>
 
-    <header class="lc-header">
+    <header class="lc-header lc-header--sticky">
         <div class="wrap">
             <a class="lc-brand" href="/zh/captions/">
                 <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
@@ -174,6 +174,7 @@
                 <a class="lc-nav__extra" href="#features">功能</a>
                 <a href="/zh/captions/pricing.html">价格</a>
                 <a class="lc-nav__extra" href="#faq">常见问题</a>
+                <a class="btn btn--primary btn--sm lc-nav__cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">下载</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="zh">简体中文</span></summary>
                     <ul class="lc-lang__menu">
@@ -199,33 +200,30 @@
         </div>
     </header>
 
-    <main id="main">
+    <main id="main" class="lc-home">
         <section class="hero">
             <div class="wrap hero__grid">
                 <div>
+                    <span class="eyebrow">适用于Windows 10和11的字幕</span>
                     <h1>实时字幕:把电脑里听到的每一句话都变成文字</h1>
-                    <p class="hero__lead">为视频通话、YouTube、电影、讲座和电视节目提供实时字幕。字幕清晰醒目,悬浮在任何应用之上,每位说话人用不同颜色区分,记录还可以搜索。适用于Windows 10和11。</p>
+                    <p class="hero__lead">视频通话、电影、讲座,或是身边的人说话——Live Captions能在大约一秒内把说的话变成大号文字。每位说话人都有自己的颜色。</p>
                     <div class="hero__cta">
-                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                        <a class="btn btn--primary" id="hero-cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                            下载Windows版
+                            免费下载
                         </a>
                     </div>
-                    <p class="hero__note">赠送免费时长,无需绑定银行卡即可开始使用。</p>
-                    <ul class="checks">
-                        <li>支持Zoom、Teams、Meet、WhatsApp和Telegram通话</li>
-                        <li>60种语音语言,自动识别</li>
-                        <li>字号最大可达64pt</li>
-                    </ul>
+                    <p class="hero__note"><b>免费时长</b>助你开始 · 无需绑卡 · Microsoft Store</p>
                 </div>
-                <div class="mock" role="img" aria-label="Live Captions窗口:两位说话人分别用两种颜色显示,各自另起一行">
+                <div class="mock mock--live" role="img" aria-label="Live Captions窗口:两位说话人分别用两种颜色显示,各自另起一行">
+                    <img class="mock__scene" src="/captions/img/store/zh/scene.webp" width="1280" height="427" alt="" fetchpriority="high" decoding="async">
                     <div class="mock__bar">
                         <span class="mock__dot"></span>
                         <span class="mock__state">正在聆听</span>
                         <span>· 电脑声音</span>
                         <span class="mock__pill">暂停</span>
                     </div>
-                    <div class="mock__body">
+                    <div class="mock__body" data-lines="[&quot;我们开始吧。&quot;, &quot;好的，开始吧。&quot;, &quot;喂，听得到吗？&quot;, &quot;听得到，很清楚。&quot;, &quot;早上好。报告你看了吗？&quot;, &quot;看了，昨晚看的。&quot;, &quot;你觉得三月的数据怎么样？&quot;, &quot;比我们预想的好很多。&quot;, &quot;太好了。那我们把会议改到周四。&quot;, &quot;可以，我来发邀请。&quot;, &quot;好的，两点见。&quot;]">
                         <span class="mock__who mock__who--1">说话人1</span>
                         <p class="mock__line mock__line--old">晚上好,今天我们来聊聊如何为过冬做好花园准备。</p>
                         <span class="mock__who mock__who--2">说话人2</span>
@@ -235,9 +233,46 @@
             </div>
         </section>
 
+        <div class="apps">
+            <div class="wrap">
+                <strong>只要能发出声音,它都能用:</strong>
+                <span><img src="/captions/img/apps/zoom.webp" width="24" height="24" alt="">Zoom</span>
+                <span><img src="/captions/img/apps/teams.webp" width="24" height="24" alt="">Microsoft Teams</span>
+                <span><img src="/captions/img/apps/meet.webp" width="24" height="24" alt="">Google Meet</span>
+                <span><img src="/captions/img/apps/whatsapp.webp" width="24" height="24" alt="">WhatsApp</span>
+                <span><img src="/captions/img/apps/telegram.webp" width="24" height="24" alt="">Telegram</span>
+                <span><img src="/captions/img/apps/youtube.webp" width="24" height="24" alt="">YouTube</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>电影和讲座</span>
+            </div>
+        </div>
+
+        <section class="section" id="how">
+            <div class="wrap">
+                <h2>三步就能开始阅读字幕</h2>
+                <p class="section__lead">无需复杂设置,不用额外的设备,也不用在Zoom或浏览器里安装任何插件。</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>打开Live Captions</h3>
+                        <p>从Microsoft Store安装后打开它,字幕窗口会悬浮在其他应用之上。</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>选择要听取的声音</h3>
+                        <p>通话和视频选电脑声音,身边人说话就选麦克风。</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>点击“开始”,即可阅读</h3>
+                        <p>随着对方说话,实时字幕会显示出来。你可以随时暂停,分钟数只在字幕运行时才会消耗。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section section--alt" id="what">
             <div class="wrap">
-                <h2>Live Captions能做什么</h2>
+                <h2>它能帮上忙的地方</h2>
                 <p class="section__lead">它会读取电脑播放的声音或麦克风接收的声音,在大约一秒内显示成大号文字。字幕覆盖整台电脑,而不只是某一个应用。</p>
                 <div class="rows">
                     <div class="row">
@@ -265,73 +300,11 @@
             </div>
         </section>
 
-        <section class="section" id="who">
-            <div class="wrap">
-                <h2>适合哪些人使用</h2>
-                <div class="grid grid--2">
-                    <div class="card">
-                        <h3>听力不好的人</h3>
-                        <p>不用费力去听通话和视频内容,直接阅读文字就好。大号字体和高对比度样式在视力不如从前时也很有帮助。</p>
-                    </div>
-                    <div class="card">
-                        <h3>家人</h3>
-                        <p>帮父母或祖父母的电脑装上它,让他们能重新参与家庭视频通话。</p>
-                    </div>
-                    <div class="card">
-                        <h3>觉得听清说话很吃力的人</h3>
-                        <p>声音小、语速快、口音重或音质差都不是问题:屏幕上的文字能让你一字不漏。</p>
-                    </div>
-                    <div class="card">
-                        <h3>学生和上班族</h3>
-                        <p>实时记录讲座和长时间会议内容,之后可以搜索记录并保存为文件。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="how">
-            <div class="wrap">
-                <h2>使用方法</h2>
-                <p class="section__lead">无需复杂设置,不用额外的设备,也不用在Zoom或浏览器里安装任何插件。</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <span class="step__num">1</span>
-                        <h3>打开Live Captions</h3>
-                        <p>从Microsoft Store安装后打开它,字幕窗口会悬浮在其他应用之上。</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">2</span>
-                        <h3>选择要听取的声音</h3>
-                        <p>通话和视频选电脑声音,身边人说话就选麦克风。</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">3</span>
-                        <h3>点击“开始”,即可阅读</h3>
-                        <p>随着对方说话,实时字幕会显示出来。你可以随时暂停,分钟数只在字幕运行时才会消耗。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="features">
             <div class="wrap">
-                <h2>功能</h2>
-                <p class="section__lead">按钮大、用词简单,力求好读好用。</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <h3>谁在说话一目了然</h3>
-                        <p>每位说话人会标注为"说话人1""说话人2"并配有专属颜色,一旦换人发言就会自动换行。</p>
-                    </div>
-                    <div class="card">
-                        <h3>60种语言</h3>
-                        <p>中文、英语、西班牙语、德语、法语、意大利语、葡萄牙语、俄语、乌克兰语、波兰语、日语、韩语、阿拉伯语、印地语等多种语言,语言会自动识别。</p>
-                    </div>
-                    <div class="card">
-                        <h3>不会挡住你的操作</h3>
-                        <p>窗口始终置顶。开启点击穿透后,鼠标点击会穿过窗口直接作用到下面的应用。</p>
-                    </div>
-                </div>
-                <div class="rows rows--features">
+                <h2>力求好读</h2>
+                <p class="section__lead">按钮大、用词简单,文字不用眯眼看。</p>
+                <div class="rows">
                     <div class="row">
                         <img class="row__shot" src="/captions/img/store/zh/readable.webp" width="1280" height="606" alt="大号清晰文字" loading="lazy" decoding="async">
                         <div class="row__text">
@@ -345,15 +318,80 @@
                         <div class="row__text">
                         <h3>记录历史</h3>
                         <p>每次使用都会保存在你的电脑上。可以向上翻看、按关键词搜索、重命名说话人、复制文字,或导出为TXT或SRT。</p>
+                        <ul>
+                            <li>每位说话人一种颜色,自动换行</li>
+                            <li>60种语音语言,自动识别</li>
+                            <li>窗口始终置顶,点击可以穿透</li>
+                        </ul>
                         </div>
                     </div>
                 </div>
-                <p class="note"><strong>仅提供字幕。</strong>Live Captions只会用原来的语言把说话内容写下来,不会翻译。</p>
             </div>
         </section>
 
+        <section class="section section--alt" id="facts">
+            <div class="wrap">
+                <h2>坦诚回答</h2>
+                <p class="section__lead">安装前大家常问的问题。</p>
+                <div class="facts">
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M4 4l16 16"/></svg>
+                        <h3>免费试用</h3>
+                        <p>先用免费时长开始,无需绑卡。之后可以购买时长包或订阅。</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.3-3 8.2-7.5 9.3C7.5 20.2 4.5 16.3 4.5 12V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+                        <h3>不会录制你的音频</h3>
+                        <p>字幕运行期间,声音会发送给语音识别服务。记录只保存在你的电脑上。</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/></svg>
+                        <h3>需要联网</h3>
+                        <p>语音识别需要联网运行。只有为身边的人显示字幕时才需要麦克风。</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                        <h3>仅提供字幕</h3>
+                        <p>Live Captions只会用原来的语言把说话内容写下来,不会翻译。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="section" id="faq">
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>适合哪些人使用</h2>
+                <p class="section__lead">字幕不只是为听力不好的人准备的。声音不清楚、语速太快,或是一个字都不想错过时,屏幕上的文字能帮到任何人。</p>
+                <div class="who">
+                    <div>
+                        <h3>在工作中</h3>
+                        <p>开会和客户通话时,不用再请人重复一遍,事后还能按关键词查找内容并保存文字。</p>
+                    </div>
+                    <div>
+                        <h3>在学校和大学</h3>
+                        <p>讲座、网络研讨会和在线课程:不用记笔记就能跟上思路,还能把记录保存为TXT。</p>
+                    </div>
+                    <div>
+                        <h3>语言学习者</h3>
+                        <p>看英语、德语或其他正在学习的语言的视频、播客和通话时,配上原语言字幕会更容易听懂。</p>
+                    </div>
+                    <div>
+                        <h3>没法开大音量时</h3>
+                        <p>孩子在睡觉、你在开放式办公室、手边没有耳机——把音量调小,直接看字幕。</p>
+                    </div>
+                    <div>
+                        <h3>听不清的时候</h3>
+                        <p>声音小、语速快、口音重或信号不好都没关系,话一变成文字,就不会错过。</p>
+                    </div>
+                    <div>
+                        <h3>听力不好的人和他们的家人</h3>
+                        <p>不用费力去听,直接阅读通话和视频。帮父母设置好,他们就能重新加入家庭视频通话。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="faq">
             <div class="wrap wrap--narrow">
                 <h2>常见问题</h2>
                 <div class="faq">
@@ -389,15 +427,16 @@
             </div>
         </section>
 
-        <section class="section section--alt cta-final" id="download">
-            <div class="wrap wrap--narrow">
-                <h2>免费试用Live Captions</h2>
-                <p class="section__lead" style="margin-left:auto;margin-right:auto">免费获得实时字幕使用时长,无需绑定银行卡。有疑问?写信至<a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>,我们会回复每一条消息。</p>
-                <div class="hero__cta">
+        <section class="section" id="download">
+            <div class="wrap">
+                <div class="final">
+                    <h2>在下一次通话中试试看</h2>
+                    <p>从Microsoft Store安装只需一分钟。免费时长足够你在自己的通话或视频中试用。</p>
                     <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                        下载Windows版
+                        免费下载Windows版
                     </a>
+                    <p class="final__note"><b>无需绑卡</b> · Windows 10和11 · 问题:captions@live-subtitles.com</p>
                 </div>
             </div>
         </section>
@@ -418,5 +457,10 @@
             </nav>
         </div>
     </footer>
+    <div class="stickybar">
+        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">免费下载 · 无需绑卡</a>
+    </div>
+    <script src="/captions/live-demo.js" defer></script>
+    <script src="/captions/stickybar.js" defer></script>
 </body>
 </html>

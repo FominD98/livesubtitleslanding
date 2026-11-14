@@ -163,7 +163,7 @@
 <body>
     <a class="skip" href="#main">Naar de inhoud</a>
 
-    <header class="lc-header">
+    <header class="lc-header lc-header--sticky">
         <div class="wrap">
             <a class="lc-brand" href="/nl/captions/">
                 <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
@@ -174,6 +174,7 @@
                 <a class="lc-nav__extra" href="#features">Functies</a>
                 <a href="/nl/captions/pricing.html">Prijzen</a>
                 <a class="lc-nav__extra" href="#faq">FAQ</a>
+                <a class="btn btn--primary btn--sm lc-nav__cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Downloaden</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="nl">Nederlands</span></summary>
                     <ul class="lc-lang__menu">
@@ -199,33 +200,30 @@
         </div>
     </header>
 
-    <main id="main">
+    <main id="main" class="lc-home">
         <section class="hero">
             <div class="wrap hero__grid">
                 <div>
+                    <span class="eyebrow">Ondertitels voor Windows 10 en 11</span>
                     <h1>Live ondertiteling: lees elk woord dat je op je pc hoort</h1>
-                    <p class="hero__lead">Realtime ondertitels voor videogesprekken, YouTube, films, colleges en tv. Grote, duidelijke tekst boven op elke app, een eigen kleur per spreker en een doorzoekbare geschiedenis. Voor Windows 10 en 11.</p>
+                    <p class="hero__lead">Een videogesprek, een film, een college of iemand naast je: Live Captions toont binnen ongeveer een seconde wat er gezegd wordt, in grote tekst. Elke spreker krijgt zijn eigen kleur.</p>
                     <div class="hero__cta">
-                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                        <a class="btn btn--primary" id="hero-cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                            Downloaden voor Windows
+                            Gratis downloaden
                         </a>
                     </div>
-                    <p class="hero__note">Gratis minuten om te beginnen. Geen creditcard nodig.</p>
-                    <ul class="checks">
-                        <li>Gesprekken in Zoom, Teams, Meet, WhatsApp en Telegram</li>
-                        <li>60 talen, automatisch herkend</li>
-                        <li>Tekstgrootte tot 64 pt</li>
-                    </ul>
+                    <p class="hero__note"><b>Gratis minuten</b> om te beginnen · geen creditcard nodig · Microsoft Store</p>
                 </div>
-                <div class="mock" role="img" aria-label="Het Live Captions-venster: twee sprekers weergegeven in twee kleuren, elk op een nieuwe regel">
+                <div class="mock mock--live" role="img" aria-label="Het Live Captions-venster: twee sprekers weergegeven in twee kleuren, elk op een nieuwe regel">
+                    <img class="mock__scene" src="/captions/img/store/en/scene.webp" width="1280" height="427" alt="" fetchpriority="high" decoding="async">
                     <div class="mock__bar">
                         <span class="mock__dot"></span>
                         <span class="mock__state">Luistert</span>
                         <span>· computergeluid</span>
                         <span class="mock__pill">Pauze</span>
                     </div>
-                    <div class="mock__body">
+                    <div class="mock__body" data-lines="[&quot;Hoi, kun je me horen?&quot;, &quot;Ja, ik hoor je goed.&quot;, &quot;Goedemorgen. Heb je het rapport al kunnen bekijken?&quot;, &quot;Ja, ik heb het gisteravond gelezen.&quot;, &quot;Wat vond je van de cijfers van maart?&quot;, &quot;Ze zien er veel beter uit dan we hadden verwacht.&quot;, &quot;Mooi. Dan verplaatsen we de vergadering naar donderdag.&quot;, &quot;Prima. Ik stuur de uitnodiging.&quot;, &quot;Perfect. Dan zien we elkaar om twee uur.&quot;]">
                         <span class="mock__who mock__who--1">Spreker 1</span>
                         <p class="mock__line mock__line--old">Goedenavond. Vandaag hebben we het over het winterklaar maken van de tuin.</p>
                         <span class="mock__who mock__who--2">Spreker 2</span>
@@ -235,9 +233,46 @@
             </div>
         </section>
 
+        <div class="apps">
+            <div class="wrap">
+                <strong>Werkt met alles dat geluid afspeelt:</strong>
+                <span><img src="/captions/img/apps/zoom.webp" width="24" height="24" alt="">Zoom</span>
+                <span><img src="/captions/img/apps/teams.webp" width="24" height="24" alt="">Microsoft Teams</span>
+                <span><img src="/captions/img/apps/meet.webp" width="24" height="24" alt="">Google Meet</span>
+                <span><img src="/captions/img/apps/whatsapp.webp" width="24" height="24" alt="">WhatsApp</span>
+                <span><img src="/captions/img/apps/telegram.webp" width="24" height="24" alt="">Telegram</span>
+                <span><img src="/captions/img/apps/youtube.webp" width="24" height="24" alt="">YouTube</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>films en colleges</span>
+            </div>
+        </div>
+
+        <section class="section" id="how">
+            <div class="wrap">
+                <h2>Drie stappen en je leest mee</h2>
+                <p class="section__lead">Geen installatie-gedoe, geen tweede apparaat, niets om te installeren in Zoom of je browser.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>Open Live Captions</h3>
+                        <p>Installeer de app vanuit de Microsoft Store en open hem. Het ondertitelvenster verschijnt boven op je andere apps.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>Kies waar je naar wilt luisteren</h3>
+                        <p>Computergeluid voor gesprekken en video's, of de microfoon voor mensen in de ruimte.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>Druk op Start en lees mee</h3>
+                        <p>De realtime ondertitels verschijnen terwijl er gesproken wordt. Pauzeer op elk moment; minuten worden alleen verbruikt terwijl de ondertiteling loopt.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section section--alt" id="what">
             <div class="wrap">
-                <h2>Wat Live Captions doet</h2>
+                <h2>Waar het helpt</h2>
                 <p class="section__lead">De app luistert naar het geluid van je computer of naar je microfoon en toont binnen ongeveer een seconde als grote tekst wat er gezegd wordt. Ondertiteling voor je hele pc, niet alleen voor één app.</p>
                 <div class="rows">
                     <div class="row">
@@ -265,73 +300,11 @@
             </div>
         </section>
 
-        <section class="section" id="who">
-            <div class="wrap">
-                <h2>Voor wie het is</h2>
-                <div class="grid grid--2">
-                    <div class="card">
-                        <h3>Mensen met een gehoorbeperking</h3>
-                        <p>Lees gesprekken en video's mee in plaats van je in te spannen om alles te horen. Grote tekst en hoogcontrastweergave helpen ook als je ogen niet meer zijn wat ze waren.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Families</h3>
-                        <p>Zet het op de computer van een ouder of grootouder, zodat ze weer kunnen meedoen aan videogesprekken met de familie.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Iedereen die spraak moeilijk kan volgen</h3>
-                        <p>Zachte stemmen, snelle sprekers, een sterk accent of slecht geluid: met spraak-naar-tekst op het scherm mis je geen woord.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Studenten en kantoormedewerkers</h3>
-                        <p>Transcribeer colleges en lange vergaderingen live, doorzoek daarna het transcript en sla het op als bestand.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="how">
-            <div class="wrap">
-                <h2>Hoe het werkt</h2>
-                <p class="section__lead">Geen installatie-gedoe, geen tweede apparaat, niets om te installeren in Zoom of je browser.</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <span class="step__num">1</span>
-                        <h3>Open Live Captions</h3>
-                        <p>Installeer de app vanuit de Microsoft Store en open hem. Het ondertitelvenster verschijnt boven op je andere apps.</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">2</span>
-                        <h3>Kies waar je naar wilt luisteren</h3>
-                        <p>Computergeluid voor gesprekken en video's, of de microfoon voor mensen in de ruimte.</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">3</span>
-                        <h3>Druk op Start en lees mee</h3>
-                        <p>De realtime ondertitels verschijnen terwijl er gesproken wordt. Pauzeer op elk moment; minuten worden alleen verbruikt terwijl de ondertiteling loopt.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="features">
             <div class="wrap">
-                <h2>Functies</h2>
-                <p class="section__lead">Gemaakt om makkelijk te lezen en makkelijk te gebruiken te zijn, met grote knoppen en eenvoudige woorden.</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <h3>Wie wat zei</h3>
-                        <p>Elke spreker krijgt een eigen kleur en wordt aangeduid als Spreker 1, Spreker 2 enzovoort, en elke nieuwe spreker begint op een nieuwe regel.</p>
-                    </div>
-                    <div class="card">
-                        <h3>60 talen</h3>
-                        <p>Nederlands, Engels, Spaans, Duits, Frans, Italiaans, Portugees, Russisch, Oekraïens, Pools, Chinees, Japans, Koreaans, Arabisch, Hindi en nog veel meer. De taal wordt automatisch herkend.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Staat je niet in de weg</h3>
-                        <p>Het venster blijft op de voorgrond. In klikdoorlaat-modus gaan je muisklikken door het venster heen naar de app eronder.</p>
-                    </div>
-                </div>
-                <div class="rows rows--features">
+                <h2>Gemaakt om makkelijk te lezen</h2>
+                <p class="section__lead">Grote knoppen, duidelijke taal en tekst waar je niet naar hoeft te turen.</p>
+                <div class="rows">
                     <div class="row">
                         <img class="row__shot" src="/captions/img/store/en/readable.webp" width="1280" height="606" alt="Grote, duidelijke tekst" loading="lazy" decoding="async">
                         <div class="row__text">
@@ -345,15 +318,80 @@
                         <div class="row__text">
                         <h3>Transcriptgeschiedenis</h3>
                         <p>Elke sessie wordt op je computer opgeslagen. Blader terug, zoek op woord, hernoem sprekers, kopieer de tekst of exporteer hem naar TXT of SRT.</p>
+                        <ul>
+                            <li>Elke spreker in zijn eigen kleur, op een nieuwe regel</li>
+                            <li>60 talen, automatisch herkend</li>
+                            <li>Het venster blijft op de voorgrond, en klikken gaan er dwars doorheen</li>
+                        </ul>
                         </div>
                     </div>
                 </div>
-                <p class="note"><strong>Alleen ondertiteling.</strong> Live Captions schrijft op wat er gezegd wordt, in de taal waarin het gesproken wordt. Het vertaalt niet.</p>
             </div>
         </section>
 
+        <section class="section section--alt" id="facts">
+            <div class="wrap">
+                <h2>Eerlijke antwoorden</h2>
+                <p class="section__lead">Wat mensen meestal vragen voor ze het installeren.</p>
+                <div class="facts">
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M4 4l16 16"/></svg>
+                        <h3>Probeer het gratis</h3>
+                        <p>Je begint met gratis minuten, geen creditcard nodig. Daarna een pakket minuten of een abonnement.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.3-3 8.2-7.5 9.3C7.5 20.2 4.5 16.3 4.5 12V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+                        <h3>Je geluid wordt niet opgenomen</h3>
+                        <p>Terwijl de ondertiteling loopt, gaat het geluid naar een spraakherkenningsdienst. De geschiedenis wordt alleen op je computer bewaard.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/></svg>
+                        <h3>Internet nodig</h3>
+                        <p>Spraakherkenning werkt online. Een microfoon is alleen nodig voor mensen naast je.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                        <h3>Alleen ondertiteling</h3>
+                        <p>Live Captions schrijft op wat er gezegd wordt, in de taal waarin het gesproken wordt. Het vertaalt niet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="section" id="faq">
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>Voor wie het is</h2>
+                <p class="section__lead">Ondertitels zijn niet alleen voor mensen die slechthorend zijn. Tekst op het scherm helpt iedereen als het geluid onhandig is, mensen snel praten of je geen woord wilt missen.</p>
+                <div class="who">
+                    <div>
+                        <h3>Op het werk</h3>
+                        <p>Vergaderingen en klantgesprekken: niemand hoeft zich te herhalen, en achteraf vind je een zin terug op woord en bewaar je de tekst.</p>
+                    </div>
+                    <div>
+                        <h3>Op school en universiteit</h3>
+                        <p>Colleges, webinars en online cursussen: volg de uitleg in plaats van aantekeningen te maken, en bewaar het transcript als TXT.</p>
+                    </div>
+                    <div>
+                        <h3>Taalstudenten</h3>
+                        <p>Video's, podcasts en gesprekken in het Engels, Duits of een andere taal zijn makkelijker te volgen met ondertitels in de oorspronkelijke taal.</p>
+                    </div>
+                    <div>
+                        <h3>Als het geluid niet hard mag</h3>
+                        <p>Een kind slaapt, je zit in een open kantoortuin, geen koptelefoon bij de hand: zet het geluid zachter en lees mee.</p>
+                    </div>
+                    <div>
+                        <h3>Als spraak moeilijk te verstaan is</h3>
+                        <p>Een zachte stem, snel gepraat, een accent of een slechte verbinding: als spraak tekst wordt, mis je niets.</p>
+                    </div>
+                    <div>
+                        <h3>Mensen met gehoorverlies en hun familie</h3>
+                        <p>Lees gesprekken en video's mee in plaats van je in te spannen om te horen. Zet het op bij je ouders, en ze doen weer mee aan familievideogesprekken.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="faq">
             <div class="wrap wrap--narrow">
                 <h2>Vragen en antwoorden</h2>
                 <div class="faq">
@@ -389,15 +427,16 @@
             </div>
         </section>
 
-        <section class="section section--alt cta-final" id="download">
-            <div class="wrap wrap--narrow">
-                <h2>Probeer Live Captions gratis</h2>
-                <p class="section__lead" style="margin-left:auto;margin-right:auto">Gratis minuten realtime ondertiteling, geen creditcard nodig. Vragen? Mail naar <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>, we beantwoorden elk bericht.</p>
-                <div class="hero__cta">
+        <section class="section" id="download">
+            <div class="wrap">
+                <div class="final">
+                    <h2>Probeer het bij je volgende gesprek</h2>
+                    <p>Installeren vanuit de Microsoft Store duurt een minuut. De gratis minuten zijn genoeg om het te proberen bij je eigen gesprek of video.</p>
                     <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                        Downloaden voor Windows
+                        Gratis downloaden voor Windows
                     </a>
+                    <p class="final__note"><b>Geen creditcard nodig</b> · Windows 10 en 11 · vragen: captions@live-subtitles.com</p>
                 </div>
             </div>
         </section>
@@ -418,5 +457,10 @@
             </nav>
         </div>
     </footer>
+    <div class="stickybar">
+        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Gratis downloaden · geen creditcard nodig</a>
+    </div>
+    <script src="/captions/live-demo.js" defer></script>
+    <script src="/captions/stickybar.js" defer></script>
 </body>
 </html>

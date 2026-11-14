@@ -141,6 +141,23 @@ details.lc-lang { position: relative; }
 .mock__line { margin: .15rem 0 .2rem; font-size: 1.45rem; line-height: 1.35; color: var(--ink); }
 .mock__line--old { color: #5A5A5A; }
 
+/* Live variant: a call screenshot above the caption window, which live-demo.js fills
+ * line by line. Fixed height so the hero never jumps; new lines sit at the bottom and
+ * push the previous one up and out, like the app. */
+.mock__scene { display: block; width: 100%; height: auto; }
+.mock--live .mock__body {
+    position: relative; height: 12rem; overflow: hidden;
+    display: flex; flex-direction: column; justify-content: flex-end;
+}
+/* Text leaving through the top fades out instead of being cut at the edge. */
+.mock--live .mock__body::before {
+    content: ""; position: absolute; z-index: 1; left: 0; right: 0; top: 0; height: 3rem;
+    background: linear-gradient(#F8F6F2, rgba(248, 246, 242, 0)); pointer-events: none;
+}
+.mock--live .mock__who, .mock--live .mock__line, .mock__feed { flex: none; }
+.mock__feed { will-change: transform; }
+.mock--live .mock__line { transition: color .5s ease; }
+
 /* Sections */
 .section { padding: 3.5rem 0; }
 .section--alt { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -290,6 +307,73 @@ table.prices th, table.compare th { background: var(--accent-soft); }
 .guides-list { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; }
 .guides-list a { font-weight: 700; }
 
+/* Home page (/captions/ and /<lang>/captions/): one action always in reach, the product working
+ * in the hero, plain answers to the usual doubts before the FAQ. */
+.lc-header--sticky { position: sticky; top: 0; z-index: 20; background: rgba(255, 255, 255, .95); backdrop-filter: blur(8px); }
+.lc-nav a.lc-nav__cta, .lc-nav a.lc-nav__cta:hover { color: #fff; text-decoration: none; }
+.lc-home section[id] { scroll-margin-top: 76px; }
+.lc-home .btn--primary { box-shadow: 0 6px 18px rgba(15, 110, 110, .25); }
+.lc-home .hero h1 { font-size: 2.7rem; line-height: 1.12; letter-spacing: -.02em; }
+.lc-home .hero__note b { color: var(--ink-2); }
+.eyebrow {
+    display: inline-block; margin-bottom: 1rem; padding: .25rem .8rem; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent); font-size: .85rem; font-weight: 700;
+}
+
+/* Works-with strip: facts, not invented proof */
+.apps { background: var(--card); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.apps .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem 1.2rem; padding-top: 1.1rem; padding-bottom: 1.1rem; font-size: .92rem; color: var(--muted); }
+.apps strong { color: var(--ink-2); font-weight: 600; }
+.apps span { display: inline-flex; align-items: center; gap: .45rem; font-weight: 600; color: var(--ink); }
+.apps img, .apps svg { width: 24px; height: 24px; flex: none; }
+.apps svg { color: var(--accent); }
+
+.row__text ul { margin: .4rem 0 0; padding-left: 1.2rem; color: var(--ink-2); }
+
+.facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.1rem; }
+.fact { background: var(--bg); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.3rem; }
+.fact svg { display: block; width: 30px; height: 30px; color: var(--accent); margin-bottom: .6rem; }
+.fact h3 { margin: 0 0 .3rem; font-size: 1.08rem; line-height: 1.3; }
+.fact p { margin: 0; color: var(--ink-2); font-size: .95rem; }
+
+.who { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.6rem 1.4rem; }
+.who > div { border-top: 3px solid var(--accent); padding-top: .9rem; }
+.who h3 { margin: 0 0 .3rem; font-size: 1.08rem; line-height: 1.3; }
+.who p { margin: 0; color: var(--ink-2); font-size: .95rem; }
+
+.final { text-align: center; background: linear-gradient(160deg, #0F6E6E, #0A4F4F); color: #fff; border-radius: 24px; padding: 3.2rem 1.5rem; }
+.final h2 { color: #fff; }
+.final p { color: #D7ECEA; margin: 0 auto 1.6rem; max-width: 36rem; font-size: 1.1rem; }
+.lc-home .final .btn--primary { background: #fff; color: var(--accent-dark); box-shadow: 0 8px 24px rgba(0, 0, 0, .2); }
+.lc-home .final .btn--primary:hover { background: #F0FAF9; }
+.final .final__note { margin: .9rem auto 0; font-size: .95rem; color: #CBE6E3; }
+.final__note b { color: #fff; }
+
+/* Phone: download bar pinned to the bottom after the hero button scrolls away (stickybar.js) */
+.stickybar { display: none; }
+
+@media (max-width: 900px) {
+    .facts, .who { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .lc-home .hero h1 { font-size: 2.2rem; }
+}
+
+@media (max-width: 560px) {
+    .lc-header--sticky { position: static; }
+    .lc-nav .lc-nav__cta { display: none; }
+    .facts, .who { grid-template-columns: minmax(0, 1fr); }
+    .lc-home .hero h1 { font-size: 2rem; }
+    .final .btn { width: 100%; }
+    .lc-footer { padding-bottom: 5.5rem; }
+    .stickybar {
+        display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+        padding: .7rem 1rem calc(.7rem + env(safe-area-inset-bottom));
+        background: rgba(255, 255, 255, .96); border-top: 1px solid var(--line); box-shadow: 0 -6px 20px rgba(0, 0, 0, .06);
+        transform: translateY(110%); transition: transform .25s ease;
+    }
+    .stickybar.is-shown { transform: none; }
+    .stickybar .btn { width: 100%; min-height: 48px; text-align: center; word-break: keep-all; padding: .6rem 1rem; font-size: 1rem; }
+}
+
 @media (max-width: 900px) {
     .hero__grid, .grid--2, .grid--3, .plans { grid-template-columns: minmax(0, 1fr); }
     .hero { padding-top: 2.2rem; }
@@ -303,6 +387,7 @@ table.prices th, table.compare th { background: var(--accent-soft); }
     .lc-nav .lc-nav__extra { display: none; }
     .hero__cta .btn { width: 100%; }
     .mock__line { font-size: 1.2rem; }
+    .mock--live .mock__body { height: 11rem; }
     /* Language menu spans the header width instead of hanging off the picker */
     .lc-header .wrap { position: relative; }
     details.lc-lang { position: static; }
@@ -323,6 +408,6 @@ table.prices th, table.compare th { background: var(--accent-soft); }
 [dir="rtl"] .checks li::after { left: auto; right: .42rem; }
 [dir="rtl"] .mock__pill { margin-left: 0; margin-right: auto; }
 [dir="rtl"] .mock__who { padding-left: 0; padding-right: .5rem; border-left: 0; border-right: 4px solid currentColor; }
-[dir="rtl"] .card ul { padding-left: 0; padding-right: 1.2rem; }
+[dir="rtl"] .card ul, [dir="rtl"] .row__text ul { padding-left: 0; padding-right: 1.2rem; }
 [dir="rtl"] .note { border-left: 0; border-right: 5px solid var(--accent); }
 [dir="rtl"] table.prices th, [dir="rtl"] table.prices td, [dir="rtl"] table.compare th, [dir="rtl"] table.compare td { text-align: right; }

@@ -163,7 +163,7 @@
 <body>
     <a class="skip" href="#main">Pular para o conteúdo</a>
 
-    <header class="lc-header">
+    <header class="lc-header lc-header--sticky">
         <div class="wrap">
             <a class="lc-brand" href="/pt/captions/">
                 <img src="/captions/img/livecaptions-96.png" width="40" height="40" alt="">
@@ -174,6 +174,7 @@
                 <a class="lc-nav__extra" href="#features">Recursos</a>
                 <a href="/pt/captions/pricing.html">Preços</a>
                 <a class="lc-nav__extra" href="#faq">Perguntas frequentes</a>
+                <a class="btn btn--primary btn--sm lc-nav__cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Baixar</a>
                 <details class="lc-lang">
                     <summary><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span lang="pt">Português</span></summary>
                     <ul class="lc-lang__menu">
@@ -199,33 +200,30 @@
         </div>
     </header>
 
-    <main id="main">
+    <main id="main" class="lc-home">
         <section class="hero">
             <div class="wrap hero__grid">
                 <div>
+                    <span class="eyebrow">Legendas para Windows 10 e 11</span>
                     <h1>Legendas em tempo real: leia cada palavra que você ouve no seu PC</h1>
-                    <p class="hero__lead">Legendas em tempo real para chamadas de vídeo, YouTube, filmes, aulas e TV. Texto grande e nítido sobre qualquer programa, uma cor diferente para cada pessoa e um histórico com busca. Para Windows 10 e 11.</p>
+                    <p class="hero__lead">Uma chamada de vídeo, um filme, uma aula ou alguém ao seu lado: o Live Captions mostra o que é dito em texto grande em cerca de um segundo. Cada pessoa tem sua própria cor.</p>
                     <div class="hero__cta">
-                        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
+                        <a class="btn btn--primary" id="hero-cta" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                            Baixar para Windows
+                            Baixar grátis
                         </a>
                     </div>
-                    <p class="hero__note">Minutos grátis para começar. Sem cartão.</p>
-                    <ul class="checks">
-                        <li>Chamadas de Zoom, Teams, Meet, WhatsApp e Telegram</li>
-                        <li>60 idiomas, detectados automaticamente</li>
-                        <li>Texto de até 64 pt</li>
-                    </ul>
+                    <p class="hero__note"><b>Minutos grátis</b> para começar · sem cartão · Microsoft Store</p>
                 </div>
-                <div class="mock" role="img" aria-label="A janela do Live Captions: duas pessoas falando, cada uma em uma cor e em uma linha nova">
+                <div class="mock mock--live" role="img" aria-label="A janela do Live Captions: duas pessoas falando, cada uma em uma cor e em uma linha nova">
+                    <img class="mock__scene" src="/captions/img/store/pt/scene.webp" width="1280" height="427" alt="" fetchpriority="high" decoding="async">
                     <div class="mock__bar">
                         <span class="mock__dot"></span>
                         <span class="mock__state">Ouvindo</span>
                         <span>· som do computador</span>
                         <span class="mock__pill">Pausar</span>
                     </div>
-                    <div class="mock__body">
+                    <div class="mock__body" data-lines="[&quot;Oi, você me ouve?&quot;, &quot;Sim, estou ouvindo bem.&quot;, &quot;Bom dia. Você conseguiu ver o relatório?&quot;, &quot;Sim, li ontem à noite.&quot;, &quot;O que achou dos números de março?&quot;, &quot;Estão bem melhores do que esperávamos.&quot;, &quot;Então vamos passar a reunião para quinta.&quot;, &quot;Para mim funciona. Vou enviar o convite.&quot;, &quot;Perfeito. Nos vemos às duas.&quot;]">
                         <span class="mock__who mock__who--1">Pessoa 1</span>
                         <p class="mock__line mock__line--old">Boa noite. Hoje vamos falar sobre como preparar o jardim para o inverno.</p>
                         <span class="mock__who mock__who--2">Pessoa 2</span>
@@ -235,9 +233,46 @@
             </div>
         </section>
 
+        <div class="apps">
+            <div class="wrap">
+                <strong>Funciona com tudo que reproduz som:</strong>
+                <span><img src="/captions/img/apps/zoom.webp" width="24" height="24" alt="">Zoom</span>
+                <span><img src="/captions/img/apps/teams.webp" width="24" height="24" alt="">Microsoft Teams</span>
+                <span><img src="/captions/img/apps/meet.webp" width="24" height="24" alt="">Google Meet</span>
+                <span><img src="/captions/img/apps/whatsapp.webp" width="24" height="24" alt="">WhatsApp</span>
+                <span><img src="/captions/img/apps/telegram.webp" width="24" height="24" alt="">Telegram</span>
+                <span><img src="/captions/img/apps/youtube.webp" width="24" height="24" alt="">YouTube</span>
+                <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 4v16M17 4v16M3 9h4M3 15h4M17 9h4M17 15h4"/></svg>filmes e aulas</span>
+            </div>
+        </div>
+
+        <section class="section" id="how">
+            <div class="wrap">
+                <h2>Três passos e você já está lendo</h2>
+                <p class="section__lead">Sem configuração, sem um segundo aparelho, sem nada para instalar no Zoom ou no navegador.</p>
+                <div class="grid grid--3">
+                    <div class="card">
+                        <span class="step__num">1</span>
+                        <h3>Abra o Live Captions</h3>
+                        <p>Instale pela Microsoft Store e abra o programa. A janela de legendas aparece sobre os outros aplicativos.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">2</span>
+                        <h3>Escolha o que ouvir</h3>
+                        <p>Som do computador para chamadas e vídeos, ou o microfone para pessoas por perto.</p>
+                    </div>
+                    <div class="card">
+                        <span class="step__num">3</span>
+                        <h3>Aperte Iniciar e leia</h3>
+                        <p>As legendas em tempo real aparecem conforme as pessoas falam. Pause quando quiser: os minutos são usados só enquanto as legendas estão ativas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="section section--alt" id="what">
             <div class="wrap">
-                <h2>O que o Live Captions faz</h2>
+                <h2>Onde ajuda</h2>
                 <p class="section__lead">Ele escuta o som do seu computador, ou o microfone, e mostra o que é dito em texto grande em cerca de um segundo. Legendas para o computador inteiro, não só para um programa.</p>
                 <div class="rows">
                     <div class="row">
@@ -265,73 +300,11 @@
             </div>
         </section>
 
-        <section class="section" id="who">
-            <div class="wrap">
-                <h2>Para quem é</h2>
-                <div class="grid grid--2">
-                    <div class="card">
-                        <h3>Pessoas com dificuldade auditiva</h3>
-                        <p>Leia chamadas e vídeos em vez de se esforçar para ouvi-los. O texto grande e os estilos de alto contraste também ajudam se a sua visão já não é a mesma de antes.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Famílias</h3>
-                        <p>Instale no computador dos seus pais ou avós para que eles voltem a participar das videochamadas em família.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Quem tem dificuldade para acompanhar uma conversa</h3>
-                        <p>Voz baixa, gente que fala rápido, sotaque forte ou som ruim: com o texto na tela, você não perde nenhuma palavra.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Estudantes e profissionais de escritório</h3>
-                        <p>Transcreva aulas e reuniões longas em tempo real, depois busque no texto e salve como arquivo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section section--alt" id="how">
-            <div class="wrap">
-                <h2>Como funciona</h2>
-                <p class="section__lead">Sem configuração, sem um segundo aparelho, sem nada para instalar no Zoom ou no navegador.</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <span class="step__num">1</span>
-                        <h3>Abra o Live Captions</h3>
-                        <p>Instale pela Microsoft Store e abra o programa. A janela de legendas aparece sobre os outros aplicativos.</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">2</span>
-                        <h3>Escolha o que ouvir</h3>
-                        <p>Som do computador para chamadas e vídeos, ou o microfone para pessoas por perto.</p>
-                    </div>
-                    <div class="card">
-                        <span class="step__num">3</span>
-                        <h3>Aperte Iniciar e leia</h3>
-                        <p>As legendas em tempo real aparecem conforme as pessoas falam. Pause quando quiser: os minutos são usados só enquanto as legendas estão ativas.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="section" id="features">
             <div class="wrap">
-                <h2>Recursos</h2>
-                <p class="section__lead">Feito para ser fácil de ler e de usar, com botões grandes e palavras simples.</p>
-                <div class="grid grid--3">
-                    <div class="card">
-                        <h3>Quem disse o quê</h3>
-                        <p>Cada pessoa aparece como “Pessoa 1”, “Pessoa 2” na sua própria cor, e cada nova pessoa que fala começa em uma linha nova.</p>
-                    </div>
-                    <div class="card">
-                        <h3>60 idiomas</h3>
-                        <p>Português, inglês, espanhol, alemão, francês, italiano, russo, ucraniano, polonês, chinês, japonês, coreano, árabe, hindi e muitos outros. O idioma é detectado automaticamente.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Não atrapalha</h3>
-                        <p>A janela fica sempre visível. No modo de cliques transparentes, os cliques do mouse passam direto para o programa que está embaixo.</p>
-                    </div>
-                </div>
-                <div class="rows rows--features">
+                <h2>Feito para ser fácil de ler</h2>
+                <p class="section__lead">Botões grandes, palavras simples e um texto que você não precisa forçar a vista para ver.</p>
+                <div class="rows">
                     <div class="row">
                         <img class="row__shot" src="/captions/img/store/pt/readable.webp" width="1280" height="606" alt="Texto grande e nítido" loading="lazy" decoding="async">
                         <div class="row__text">
@@ -345,15 +318,80 @@
                         <div class="row__text">
                         <h3>Histórico de transcrições</h3>
                         <p>Cada sessão fica salva no seu computador. Role para trás, busque por palavra, renomeie as pessoas, copie o texto ou exporte em TXT ou SRT.</p>
+                        <ul>
+                            <li>Cada pessoa com sua cor, em uma linha nova</li>
+                            <li>60 idiomas, detectados automaticamente</li>
+                            <li>A janela fica sempre em cima, e os cliques passam direto por ela</li>
+                        </ul>
                         </div>
                     </div>
                 </div>
-                <p class="note"><strong>Só legendas.</strong> O Live Captions escreve o que é dito, no idioma em que é falado. Ele não traduz.</p>
             </div>
         </section>
 
+        <section class="section section--alt" id="facts">
+            <div class="wrap">
+                <h2>Respostas diretas</h2>
+                <p class="section__lead">O que costumam perguntar antes de instalar.</p>
+                <div class="facts">
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><path d="M4 4l16 16"/></svg>
+                        <h3>Experimente grátis</h3>
+                        <p>Você começa com minutos grátis, sem cartão. Depois, um pacote de minutos ou uma assinatura.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7.5 3v6c0 4.3-3 8.2-7.5 9.3C7.5 20.2 4.5 16.3 4.5 12V6z"/><path d="M9 12l2.2 2.2L15.5 10"/></svg>
+                        <h3>Seu áudio não é gravado</h3>
+                        <p>Enquanto as legendas estão ativas, o som vai para um serviço de reconhecimento de voz. O histórico fica salvo só no seu computador.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0"/><path d="M5.5 12.5a10 10 0 0 1 13 0"/><path d="M9 16a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1"/></svg>
+                        <h3>Precisa de internet</h3>
+                        <p>O reconhecimento de voz funciona online. O microfone só é necessário para pessoas por perto.</p>
+                    </div>
+                    <div class="fact">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+                        <h3>Só legendas</h3>
+                        <p>O Live Captions escreve o que é dito no idioma em que é falado. Ele não traduz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <section class="section" id="faq">
+        <section class="section" id="who">
+            <div class="wrap">
+                <h2>Para quem é</h2>
+                <p class="section__lead">Legendas não são só para quem tem dificuldade auditiva. O texto na tela ajuda qualquer pessoa quando o som está ruim, a fala é rápida ou você não pode perder nenhuma palavra.</p>
+                <div class="who">
+                    <div>
+                        <h3>No trabalho</h3>
+                        <p>Reuniões e chamadas com clientes: sem pedir para repetirem, e depois você pode encontrar uma frase pela palavra e salvar o texto.</p>
+                    </div>
+                    <div>
+                        <h3>Na escola e na faculdade</h3>
+                        <p>Aulas, webinars e cursos online: acompanhe o raciocínio em vez de anotar, e salve a transcrição em TXT.</p>
+                    </div>
+                    <div>
+                        <h3>Quem está aprendendo um idioma</h3>
+                        <p>Vídeos, podcasts e chamadas em inglês, alemão ou outro idioma ficam mais fáceis de acompanhar com legendas no idioma original.</p>
+                    </div>
+                    <div>
+                        <h3>Quando você não pode aumentar o som</h3>
+                        <p>Uma criança dormindo, você em um escritório aberto, sem fone à mão: baixe o som e leia.</p>
+                    </div>
+                    <div>
+                        <h3>Quando é difícil entender a fala</h3>
+                        <p>Uma voz baixa, fala rápida, sotaque forte ou conexão ruim: quando a fala vira texto, você não perde nada.</p>
+                    </div>
+                    <div>
+                        <h3>Pessoas com perda auditiva e suas famílias</h3>
+                        <p>Leia chamadas e vídeos em vez de forçar para ouvir. Instale para seus pais, e eles podem voltar às videochamadas em família.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--alt" id="faq">
             <div class="wrap wrap--narrow">
                 <h2>Perguntas e respostas</h2>
                 <div class="faq">
@@ -389,15 +427,16 @@
             </div>
         </section>
 
-        <section class="section section--alt cta-final" id="download">
-            <div class="wrap wrap--narrow">
-                <h2>Experimente o Live Captions grátis</h2>
-                <p class="section__lead" style="margin-left:auto;margin-right:auto">Minutos grátis de legendas em tempo real, sem cartão. Tem dúvidas? Escreva para <a href="mailto:captions@live-subtitles.com">captions@live-subtitles.com</a>, respondemos todas as mensagens.</p>
-                <div class="hero__cta">
+        <section class="section" id="download">
+            <div class="wrap">
+                <div class="final">
+                    <h2>Experimente na sua próxima chamada</h2>
+                    <p>Instalar pela Microsoft Store leva um minuto. Os minutos grátis são suficientes para testar na sua própria chamada ou vídeo.</p>
                     <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">
                         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 5.5 10.5 4.4v7.1H3V5.5Zm0 13 7.5 1.1v-7H3v5.9Zm8.4 1.2L21 21v-8.4h-9.6v7.1Zm0-15.4v7.2H21V3l-9.6 1.3Z"/></svg>
-                        Baixar para Windows
+                        Baixar grátis para Windows
                     </a>
+                    <p class="final__note"><b>Sem cartão</b> · Windows 10 e 11 · dúvidas: captions@live-subtitles.com</p>
                 </div>
             </div>
         </section>
@@ -418,5 +457,10 @@
             </nav>
         </div>
     </footer>
+    <div class="stickybar">
+        <a class="btn btn--primary" href="https://apps.microsoft.com/detail/9NJHDV2W6999" target="_blank" rel="noopener" onclick="return true;">Baixar grátis · sem cartão</a>
+    </div>
+    <script src="/captions/live-demo.js" defer></script>
+    <script src="/captions/stickybar.js" defer></script>
 </body>
 </html>
