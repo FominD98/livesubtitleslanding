@@ -2508,57 +2508,77 @@ const META_INSTALL_REFERRER = /^apps\.(facebook|instagram)\.com\b/i;
 function renderCampaigns() {
     const c = state.campaigns;
     const rows = {};
-    const row = (key, label) => (rows[key] ??= { label, network: new Set(), spend: 0, clicks: 0, impressions: 0, conversions: 0, newUsers: 0, buyers: 0, ga4Revenue: 0, paddleNet: 0, paddleUnits: 0, approx: false });
+    const row = (key, label) => (rows[key] ??= { label, network: new Set(), spend: 0, clicks: 0, conversions: 0, appNetwork: false,
+        downloads: 0, installs: 0, subtitles: 0, buyers: 0, ga4Revenue: 0, paddleNet: 0, paddleUnits: 0, approx: false });
+    // метка установки/оплаты (g, gads_<id>, без суффикса _wi/_st) → кампания; сборщик раскладывает её по активным кампаниям
+    const labelOf = Object.fromEntries((c.labels || []).map((l) => [l.label.toLowerCase(), l.campaign]));
+    const keyOf = (name) => {
+        const k = campaignKey(name);
+        return labelOf[k] ? campaignKey(labelOf[k]) : k;
+    };
+    const labelName = (name) => labelOf[campaignKey(name)] || name;
     for (const s of c.spend) {
-        const r = row(campaignKey(s.campaign), s.campaign);
+        const r = row(keyOf(s.campaign), s.campaign);
         r.network.add(s.network === "google-ads" ? "Google Ads" : "Meta");
         r.spend += s.spend;
         r.clicks += s.clicks;
-        r.impressions += s.impressions || 0;
         r.conversions += s.conversions || 0;
     }
     // одна кампания Meta с расходом — её пользователи из Play-реферера Meta; несколько — общая строка Meta
     const metaSpend = [...new Set(c.spend.filter((s) => s.network === "meta").map((s) => campaignKey(s.campaign)))];
+    const metaRow = (source, campaign) => {
+        const r = metaSpend.length === 1 ? rows[metaSpend[0]] : row("meta-app-installs", "Meta app installs (all campaigns)");
+        r.network.add(`GA4 ${/instagram/i.test(source) ? "ig4a" : "fb4a"}`);
+        r.approx = true;
+        return r;
+    };
+    for (const f of c.funnel || []) {
+        const r = f.app === "android" && META_INSTALL_REFERRER.test(f.source) ? metaRow(f.source, f.campaign)
+            : row(keyOf(f.campaign), labelName(f.campaign));
+        if (f.source !== "install label" && !META_INSTALL_REFERRER.test(f.source)) r.network.add(f.source);
+        if (f.app !== "windows") r.appNetwork = true;
+        if (f.step === "download") r.downloads += f.users;
+        else if (f.step === "install") r.installs += f.users;
+        else if (f.step === "subtitles") r.subtitles += f.users;
+    }
     for (const a of c.acquisition) {
         if (a.app === "android" && META_INSTALL_REFERRER.test(a.source)) {
-            const r = metaSpend.length === 1 ? rows[metaSpend[0]] : row("meta-app-installs", "Meta app installs (all campaigns)");
-            r.network.add(`${a.source.replace(/\s*\/\s*$/, "")} / ${a.campaign}`);
-            r.approx = true;
-            r.newUsers += a.new_users;
+            const r = metaRow(a.source, a.campaign);
             r.buyers += a.purchasers;
             r.ga4Revenue += a.revenue;
             continue;
         }
-        const paid = /cpc|paid|ads/i.test(a.source);
-        if (NOT_CAMPAIGN.test(a.campaign) && !paid) continue;
-        const name = NOT_CAMPAIGN.test(a.campaign) ? `${a.source} (no campaign name)` : a.campaign;
-        const r = row(campaignKey(name), name);
+        if (NOT_CAMPAIGN.test(a.campaign) || !a.purchasers) continue;
+        const r = row(keyOf(a.campaign), labelName(a.campaign));
         r.network.add(a.source);
-        r.newUsers += a.new_users;
-        r.buyers += a.purchasers;
-        // Windows-покупки в GA4 — те же оплаты Paddle (их досылает вебхук): с Paddle net они бы задвоились
-        if (a.app !== "windows") r.ga4Revenue += a.revenue;
+        // Windows-покупки в GA4 — те же оплаты Paddle (их досылает вебхук): с Paddle они бы задвоились
+        if (a.app !== "windows") {
+            r.buyers += a.purchasers;
+            r.ga4Revenue += a.revenue;
+        }
     }
     for (const p of c.paddle) {
         const name = p.campaign.includes(" / ") ? p.campaign.split(" / ").slice(1).join(" / ") : p.campaign;
-        const r = row(campaignKey(name), name);
+        const r = row(keyOf(name), labelName(name));
         r.network.add(p.campaign.includes(" / ") ? p.campaign.split(" / ")[0] : "site / app");
         r.paddleNet += p.net;
         r.paddleUnits += p.units;
+        r.buyers += p.units;
     }
-    const list = Object.values(rows).sort((a, b) => b.spend - a.spend || b.paddleNet - a.paddleNet || b.newUsers - a.newUsers);
-    // ROAS — только по кампаниям с расходом: выручка органики и рассылок к рекламному бюджету отношения не имеет
+    const list = Object.values(rows).sort((a, b) => b.spend - a.spend || b.installs - a.installs || b.paddleNet - a.paddleNet);
+    // ROAS и цены — только по кампаниям с расходом: выручка органики и рассылок к рекламному бюджету отношения не имеет
     const paid = list.filter((r) => r.spend > 0);
     const spend = sum(paid, (r) => r.spend);
-    const paddle = sum(list, (r) => r.paddleNet);
-    const ga4Rev = sum(paid, (r) => r.ga4Revenue);
+    const installs = sum(paid, (r) => r.installs);
     const paidRevenue = sum(paid, (r) => r.paddleNet + r.ga4Revenue);
     renderTileRow("campaign-tiles", [
         { label: "Ad spend", value: spend, fmt: usd },
-        { label: "Paddle revenue from campaigns (exact)", value: paddle, fmt: usd },
-        { label: "Buyers from campaigns (GA4)", value: sum(list, (r) => r.buyers), fmt: int },
-        { label: "ROAS, estimate", value: spend ? paidRevenue / spend : 0, fmt: (v) => (spend ? `${v.toFixed(2)}×` : "no spend"),
-          delta: el("span", { class: "muted" }, "(Paddle + GA4 mobile revenue of paid campaigns) ÷ spend; GA4 part is approximate") },
+        { label: "Installs from paid campaigns", value: installs, fmt: int,
+          delta: el("span", { class: "muted" }, installs ? `${money(spend / installs)} per install` : "") },
+        { label: "Buyers from paid campaigns", value: sum(paid, (r) => r.buyers), fmt: int },
+        { label: "Spend ÷ revenue", value: paidRevenue ? spend / paidRevenue : 0,
+          fmt: (v) => (!spend ? "no spend" : paidRevenue ? `${(v * 100).toFixed(0)}%` : "no revenue"),
+          delta: el("span", { class: "muted" }, "below 100% = ads pay back; revenue = Paddle + GA4 mobile (approximate)") },
     ]);
     const days = [...new Set(c.daily.map((r) => r.day))].sort();
     const canvas = document.getElementById("chart-campaign-spend");
@@ -2587,20 +2607,26 @@ function renderCampaigns() {
             plugins: { legend },
         },
     });
-    table("tbl-campaigns-all", [["Campaign"], ["Source"], ["Spend", 1], ["Impressions", 1], ["Clicks", 1], ["Conversions (ad network)", 1],
-        ["New users", 1], ["Buyers", 1], ["GA4 mobile revenue ≈", 1], ["Paddle net", 1], ["Cost / buyer", 1], ["ROAS", 1]],
+    const per = (r, n) => (r.spend && n ? money(r.spend / n) : "");
+    table("tbl-campaigns-all", [["Campaign"], ["Source"], ["Spend", 1], ["CPC", 1], ["Clicks", 1], ["Pressed Download", 1],
+        ["Installs", 1], ["Cost / install", 1], ["First subtitles", 1], ["Buyers", 1], ["Cost / buyer", 1], ["Revenue", 1],
+        ["Spend ÷ revenue", 1]],
         list.map((r) => {
             const revenue = r.paddleNet + r.ga4Revenue;
             const approx = (v) => (r.approx ? `≈ ${v}` : v);
+            // у кампаний приложений «Скачать» — загрузки из стора по данным рекламной сети (у сайта — нажатия кнопки)
+            const downloads = r.downloads || (r.appNetwork && r.conversions ? `≈ ${int(r.conversions)}` : "");
             return el("tr", {},
                 td(r.label), td([...r.network].join(", "), false, "muted"),
-                td(r.spend ? usd(r.spend) : "", true), td(r.impressions ? int(r.impressions) : "", true),
+                td(r.spend ? usd(r.spend) : "", true), td(per(r, r.clicks), true),
                 td(r.clicks ? int(r.clicks) : "", true),
-                td(r.spend ? int(r.conversions) : "", true, r.spend && !r.conversions ? "down" : ""),
-                td(r.newUsers ? approx(int(r.newUsers)) : "", true), td(r.buyers ? approx(int(r.buyers)) : "", true),
-                td(r.ga4Revenue ? usd(r.ga4Revenue) : "", true), td(r.paddleNet ? usd(r.paddleNet) : "", true),
-                td(r.spend && r.buyers ? usd(r.spend / r.buyers) : "", true),
-                td(r.spend ? `${(revenue / r.spend).toFixed(2)}×` : "", true, r.spend && revenue < r.spend ? "down" : r.spend ? "up" : ""));
+                td(typeof downloads === "number" ? int(downloads) : downloads, true),
+                td(r.installs ? approx(int(r.installs)) : "", true), td(per(r, r.installs), true),
+                td(r.subtitles ? approx(int(r.subtitles)) : "", true),
+                td(r.buyers ? approx(int(r.buyers)) : "", true), td(per(r, r.buyers), true),
+                td(revenue ? usd(revenue) : "", true),
+                td(r.spend ? (revenue ? `${((r.spend / revenue) * 100).toFixed(0)}%` : "no revenue") : "", true,
+                    r.spend && revenue < r.spend ? "down" : r.spend ? "up" : ""));
         }),
         "No campaign traffic, tagged purchases or ad spend in this period");
 }
