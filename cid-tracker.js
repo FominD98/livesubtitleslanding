@@ -18,10 +18,14 @@
 //   Google Play      ?referrer=utm_source=...&utm_medium=...&utm_campaign=<id>
 //                                     -> Play Console > Acquisition reports > User acquisition,
 //                                        and the app can read it via the Install Referrer API
+//   Chrome Web Store ?utm_source=...&utm_medium=...&utm_campaign=<id>
+//                                     -> CWS Developer Dashboard > Analytics > Acquisition.
+//                                        The extension is a separate product: no Google Ads
+//                                        conversion, so it doesn't train the app's bidding.
 //
 // Metrika goals fired here (create them in the counter or they record nothing):
 //   store_click_any, store_click_windows, store_click_mac, store_click_ios,
-//   store_click_android, tv_interest, installer_download
+//   store_click_android, store_click_chrome, tv_interest, installer_download
 //
 // Installer A/B (desktop Windows only): 'wi' = the homepage CTA downloads the
 // Store web installer, 'st' = it opens the Store page as before. The variant is
@@ -238,6 +242,7 @@
             return href.indexOf('platform=mac') !== -1 ? 'mac' : 'ios';
         }
         if (href.indexOf('play.google.com/store/apps') !== -1) return 'play';
+        if (href.indexOf('chromewebstore.google.com/detail/') !== -1) return 'cws';
         return '';
     }
 
@@ -252,6 +257,12 @@
             var u = new URL(href, location.origin);
             if (kind === 'ms' || kind === 'installer') {
                 u.searchParams.set('cid', msCid);
+            } else if (kind === 'cws') {
+                if (!u.searchParams.has('utm_campaign')) {
+                    u.searchParams.set('utm_source', playSource);
+                    u.searchParams.set('utm_medium', playMedium);
+                    u.searchParams.set('utm_campaign', cidToSet);
+                }
             } else if (kind === 'play') {
                 // Play Store install attribution rides on a single `referrer`
                 // param holding a urlencoded utm string. Play Console needs
@@ -316,10 +327,11 @@
 
     var CLICK_GOAL = {
         ms: 'store_click_windows', mac: 'store_click_mac',
-        ios: 'store_click_ios', play: 'store_click_android'
+        ios: 'store_click_ios', play: 'store_click_android', cws: 'store_click_chrome'
     };
     var GA4_STORE = {
-        ms: 'microsoft', mac: 'mac_app_store', ios: 'app_store', play: 'google_play'
+        ms: 'microsoft', mac: 'mac_app_store', ios: 'app_store', play: 'google_play',
+        cws: 'chrome_web_store'
     };
     // The store is read off the href at click time, not at bind time: a link
     // bound as Microsoft may since have been re-pointed at another store.
@@ -333,17 +345,18 @@
             ga4InstallerDownload(this.href);
             return;
         }
-        reachGoal('store_click_any', abParams);
+        // The extension is a separate product: keep it out of the app's "any store" goal.
+        if (kind !== 'cws') reachGoal('store_click_any', abParams);
         reachGoal(CLICK_GOAL[kind], abParams);
         ga4StoreClick(GA4_STORE[kind], this.href);
     }
 
-    function instrumentLinks(selector) {
+    function instrumentLinks(selector, noAdsConversion) {
         var links = document.querySelectorAll(selector);
         for (var i = 0; i < links.length; i++) {
             var a = links[i];
             a.href = stampStoreUrl(a.href);
-            if (typeof gtag_report_conversion === 'function' && !a.getAttribute('onclick')) {
+            if (!noAdsConversion && typeof gtag_report_conversion === 'function' && !a.getAttribute('onclick')) {
                 a.setAttribute('onclick', 'return gtag_report_conversion(this.href);');
             }
             a.addEventListener('click', onStoreClick);
@@ -359,6 +372,7 @@
         instrumentLinks('a[href*="get.microsoft.com/installer/download"]');
         instrumentLinks('a[href*="apps.apple.com"]');
         instrumentLinks('a[href*="play.google.com/store/apps"]');
+        instrumentLinks('a[href*="chromewebstore.google.com/detail/"]', true);
 
         orderStoreCards();
 

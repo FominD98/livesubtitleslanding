@@ -256,6 +256,9 @@ p:last-child { margin-bottom: 0; }
 }
 .subs .orig { color: #fff; }
 .subs .trans { color: var(--sub-orange); margin-top: 6px; }
+/* Each line takes its direction from its own text: on the Arabic page an English
+   original otherwise gets its "?" moved to the front. */
+.subs .orig, .subs .trans { unicode-bidi: plaintext; }
 .subs .typing::after {
     content: ''; display: inline-block; width: 2px; height: 1em;
     margin-left: 2px; background: currentColor; vertical-align: -.12em;

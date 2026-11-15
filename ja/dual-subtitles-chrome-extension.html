@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta pixel (LiveSubtitles Web) -->
+    <script src="/meta-pixel.js" defer></script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough + click tracking on store links -->
+    <script src="/cid-tracker.js" defer></script>
+    <title>二重字幕Chrome拡張機能 — YouTube・Netflix対応 | Live Subtitles</title>
+    <meta name="description" content="二重字幕Chrome拡張機能で、YouTubeやNetflixなど動画に原文と翻訳を同時表示。単語をクリックして意味を確認し、Ankiへエクスポート。無料・アカウント不要。">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+    <link rel="preload" as="image" href="/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="二重字幕Chrome拡張機能 — YouTube・Netflix対応 | Live Subtitles">
+    <meta property="og:description" content="ブラウザ内のあらゆる動画に原文と翻訳を表示。単語をクリックして意味を確認し、字幕のない動画は音声をライブで翻訳します。">
+    <meta property="og:url" content="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html">
+    <meta property="og:image" content="https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="二重字幕Chrome拡張機能 — YouTube・Netflix対応">
+    <meta name="twitter:description" content="ブラウザ内のあらゆる動画に原文と翻訳を表示。二重字幕と単語検索は無料、アカウント不要です。">
+    <meta name="twitter:image" content="https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LiveSubtitles: AI Dual Subtitles & Video Translator",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome, Microsoft Edge",
+  "url": "https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html",
+  "installUrl": "https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja",
+  "image": "https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp",
+  "description": "YouTube、Netflixなどほとんどのウェブ動画に二重字幕（原文＋翻訳）を表示するブラウザ拡張機能。単語をクリックして翻訳、インタラクティブな文字起こし、Ankiエクスポート、タブ音声のライブ翻訳に対応。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@id": "https://live-subtitles.com/#organization"
+  }
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "ChromeでYouTubeとNetflixを二重字幕で見る方法",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "拡張機能を追加",
+      "text": "Chrome Web StoreのLiveSubtitlesのページを開き、「Chromeに追加」を押します。Microsoft Edgeでは他のストアからの拡張機能を許可し、同じページからインストールします。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "言語を選択",
+      "text": "ウェルカムページでは、ブラウザの言語が翻訳先の言語として提案されます。必要に応じて変更し、アイコンをツールバーに固定してください。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "動画を開く",
+      "text": "YouTube、Netflixなどのサイトで動画を再生します。原文とその翻訳が動画の下に自動的に表示されます。字幕のない動画ではLiveを押すと音声が翻訳されます。"
+    }
+  ]
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "ホーム",
+      "item": "https://live-subtitles.com/ja/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "二重字幕Chrome拡張機能",
+      "item": "https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html"
+    }
+  ]
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "拡張機能は無料ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。二重字幕、字幕翻訳、単語検索は1日の制限なし・アカウント不要で無料です。Proでは無制限のAI解説、無制限の単語保存、Ankiエクスポートが使えます。Liveプランではライブ音声翻訳の時間が追加されます。最初の7日間はすべての機能が使えます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Netflixで使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "はい。Netflix、Prime Video、Disney+、Maxでは、拡張機能がサービス側で表示される字幕を読み取り、その下に翻訳行を追加します。プレーヤーで原語の字幕をオンにすれば、あとは拡張機能が処理します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "動画に字幕がない場合は？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Liveを押してください。拡張機能が現在のタブの音声を聞き取り、発話を認識してリアルタイムで翻訳します。ライブ配信や、ブラウザでのGoogle Meet、Zoom、Teamsの通話でも使えます。Liveは無料で10分間お試しでき、その後はLiveプランの対象になります。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Microsoft Edge、Brave、Firefoxで使えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Google Chromeと、Chrome Web Storeからインストールできるchromium系ブラウザ（Microsoft EdgeやBraveなど）で使えます。FirefoxやSafari版はありません。これらのブラウザではLive Subtitlesデスクトップアプリをご利用ください。パソコン上のあらゆる音声に対応しています。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "アカウントは必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ。設定と保存した単語はブラウザ内に残ります。字幕テキストは翻訳のためだけにサーバーへ送信され、タブの音声はLiveがオンの間だけ使用されます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Live Subtitlesアプリのサブスクリプションに拡張機能は含まれますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "いいえ、拡張機能には独自の無料プランと、独自のProおよびLiveプランがあります。多くの方は支払いが不要です。二重字幕と単語検索は無料だからです。"
+      }
+    }
+  ]
+}
+    </script>
+
+    <style>
+        :root { --bg: #0a0a0a; --card: rgba(255,255,255,0.04); --text: #f2f2f2; --muted: #bbbbbb; --a: #00ff9d; --b: #00b8ff; --accent: #ff006e; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, Arial, sans-serif; }
+        .wrap { max-width: 940px; margin: 0 auto; padding: 48px 20px; }
+        .card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 30px; }
+        h1 { margin-top: 0; color: var(--a); font-size: 2rem; line-height: 1.2; }
+        h2 { color: var(--a); margin-top: 2.2rem; font-size: 1.5rem; }
+        h3 { color: var(--b); margin-top: 1.4rem; font-size: 1.15rem; }
+        p, li { line-height: 1.65; }
+        .lead { font-size: 1.1rem; color: #e8e8e8; }
+        .muted { color: var(--muted); }
+        .links a { color: var(--b); text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        .cta { display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; color: #08120f; background: linear-gradient(135deg, var(--a), var(--b)); }
+        .faq { background: rgba(0,184,255,0.08); border-left: 4px solid var(--b); border-radius: 0 10px 10px 0; padding: 16px 18px; margin-top: 24px; }
+        table.cmp { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+        table.cmp th, table.cmp td { border: 1px solid rgba(255,255,255,0.1); padding: 10px 12px; text-align: left; vertical-align: top; }
+        table.cmp th { background: rgba(0,255,157,0.08); color: var(--a); font-weight: 600; }
+        .steps { counter-reset: step; padding-left: 0; list-style: none; }
+        .steps li { counter-increment: step; margin: 14px 0; padding-left: 44px; position: relative; }
+        .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--a), var(--b)); color: #08120f; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+        .callout { background: rgba(255,0,110,0.08); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 18px 0; }
+        .shot { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid #e6e8eb; margin: 14px 0 6px; }
+        .cta-note { font-size: 0.92rem; margin-top: 8px; }
+
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .lead { color:#2d333b !important; }
+        table.cmp th, table.cmp td { border:none; border-bottom:1px solid #e6e8eb; }
+        .callout { line-height:1.6; }
+        @media (max-width: 600px) { .card { padding: 20px; } h1 { font-size: 1.6rem; } table.cmp { font-size: 0.85rem; } table.cmp th, table.cmp td { padding: 7px 8px; } }
+        table.cmp th, table.cmp td { hyphens:auto; }
+        @media (max-width: 600px) { table.cmp { display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; } }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <div class="card">
+            <p class="muted"><a href="/ja/" style="color:#0b6ad1; text-decoration:none;">ホーム</a> / 二重字幕Chrome拡張機能</p>
+            <h1>二重字幕Chrome拡張機能 — YouTube・Netflix対応</h1>
+            <p class="lead">Chrome版のLiveSubtitlesは、ブラウザ内のあらゆる動画の下に2行の字幕——原文とあなたの言語への翻訳——を表示します。単語をクリックすれば意味がわかり、Anki用に保存でき、字幕が一切ない動画では音声をライブで翻訳します。二重字幕と単語検索は無料で、1日の制限もアカウントも不要です。</p>
+
+            <a class="cta" href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">Chromeに追加 — 無料</a>
+            <p class="muted cta-note">Google Chrome、Microsoft Edge、Braveで利用できます。Windows、Mac、iPhone、Android向けLive Subtitlesアプリの開発チームによる提供です。</p>
+
+            <img class="shot" src="/img/extension/dual-subtitles-chrome-extension.webp" width="1120" height="624" alt="Chromeの二重字幕：動画の下にフランス語の原文と英語の翻訳が表示されている">
+
+            <h2>拡張機能の機能</h2>
+
+            <h3>すべての動画に2行の字幕</h3>
+            <p>原文の行が上、翻訳がその下に表示されます。フォント、サイズ、色、位置はお好みで設定可能です。拡張機能はサイトにすでにある字幕——YouTubeのアップロード字幕や自動生成字幕、NetflixやPrime Videoの字幕、オンライン講座プレーヤーのトラック、ほとんどのHTML5動画——を読み取り、表示されるたびに各行を翻訳します。動画の言語は自動検出され、39言語に翻訳できます。自分のファイルを使いたい場合は、.srtや.vttの字幕ファイルをどの動画にも読み込めます。</p>
+
+            <h3>単語をクリックして学習</h3>
+            <img class="shot" src="/img/extension/click-word-translation-extension.webp" width="1120" height="624" loading="lazy" alt="拡張機能の単語カード：字幕中のスペイン語の単語とその翻訳、発音、「AIで解説」ボタン">
+            <p>字幕中の単語にカーソルを合わせるかクリックすると、文脈に沿った翻訳、辞書の意味、発音、例文を示すカードが開きます。複数の単語をドラッグすれば、フレーズやイディオム全体を翻訳できます。それでも意味がわからないときは、<em>AIで解説</em>が文法やイディオム、スラングをあなたの言語で説明します。聞いている間は話されている単語がハイライトされるので、耳と目が同じ場所を追えます。</p>
+
+            <h3>動画の横にインタラクティブな文字起こし</h3>
+            <img class="shot" src="/img/extension/interactive-transcript-extension.webp" width="1120" height="624" loading="lazy" alt="日本語の動画の横に表示されるインタラクティブな文字起こしパネル。各行に英語の翻訳付き">
+            <p>文字起こしを開くと、動画全体をテキストとして、翻訳付きで行ごとに確認できます。検索したり、行をクリックしてその場面に戻ったりでき、学習用キーも使えます：<strong>A</strong>前の行、<strong>S</strong>繰り返し、<strong>D</strong>次の行、<strong>Q</strong>各行の後で一時停止。内容の濃い講義や、半分しか理解できなかったシーンを読み解く一番速い方法です。</p>
+
+            <h3>字幕がないときのライブ翻訳</h3>
+            <img class="shot" src="/img/extension/live-tab-audio-translation-extension.webp" width="1120" height="624" loading="lazy" alt="字幕のないゲーム配信をLiveモードで翻訳：英語の発話とスペイン語の翻訳">
+            <p>ライブ配信、小規模チャンネル、ニュースサイトの録画、ウェブ通話など、字幕が一切ない動画はたくさんあります。<strong>Live</strong>を押すと、拡張機能が現在のタブの音声を聞き取り、発話を認識して原文と翻訳をリアルタイムで表示します。Google Meet、Zoom、Teamsなどブラウザでの通話では、空の字幕ボックスを出す代わりに自動でLiveを提案します。Liveは無料で10分間お試しできます。</p>
+
+            <h3>単語帳とAnkiエクスポート</h3>
+            <img class="shot" src="/img/extension/my-words-anki-export-extension.webp" width="1120" height="654" loading="lazy" alt="拡張機能の設定にある単語帳：保存した単語とその翻訳、「Ankiへエクスポート」「CSVでエクスポート」ボタン">
+            <p>保存した単語には、その単語が出てきた文がそのまま残ります。保存した単語は次に字幕に現れたとき金色の下線で表示され、習得済みにすることもでき、リスト全体をワンクリックでAnkiやCSV形式のスプレッドシートに書き出せます——教科書の単語リストではなく、実際の動画から得た本物のフレーズです。</p>
+
+            <h2>対応先</h2>
+            <ul>
+                <li><strong>YouTube</strong>——アップロード字幕や自動生成字幕のある通常の動画、動画全体の文字起こしにも対応。詳しくは<a href="/ja/youtube-dual-subtitles.html">YouTube二重字幕</a>をご覧ください。</li>
+                <li><strong>Netflix、Prime Video、Disney+、Max</strong>——プレーヤーで原語の字幕をオンにすると、その下に翻訳が表示されます。詳しくは<a href="/ja/netflix-subtitles.html">Netflix二重字幕</a>をご覧ください。</li>
+                <li><strong>オンライン講座や講演</strong>——講座プレーヤー、TED、Vimeo、そして字幕トラックを持つ標準的なHTML5動画のほとんどのサイト。</li>
+                <li><strong>自分のファイル</strong>——ブラウザ内のどの動画にも.srtや.vttファイルを読み込めます。</li>
+                <li><strong>字幕のない動画、ライブ配信、ウェブ通話</strong>——タブの音声を翻訳するLiveで対応。</li>
+            </ul>
+            <p>不要なサイトがあれば、ツールバーのポップアップからそのサイトだけ拡張機能をオフにできます。他のサイトではそのままオンの状態が続きます。</p>
+
+            <h2>インストール方法：3ステップ、1分</h2>
+            <ol class="steps">
+                <li><strong>拡張機能を追加します。</strong><a href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">Chrome Web StoreのLiveSubtitles</a>を開き、<em>Chromeに追加</em>を押します。Microsoft Edgeでは、確認を求められたら他のストアからの拡張機能を許可し、同じページからインストールします。</li>
+                <li><strong>言語を選びます。</strong>ウェルカムページでは、ブラウザの言語が翻訳先の言語として提案されます。必要に応じて変更し、アイコンをツールバーに固定してください。</li>
+                <li><strong>動画を開きます。</strong>原文と翻訳が自動的にその下に表示されます。この動画に字幕がない場合は、Liveを押してください。</li>
+            </ol>
+
+            <div class="callout">
+                <strong>語学学習者へのヒント：</strong>最初の数本の動画では<em>Q — 各行の後で自動一時停止</em>をオンにしてみましょう。行を読み、知らない単語をクリックし、<strong>S</strong>を押してもう一度聞き、次へ進みます。ほとんどの行が聞き取れるようになったらオフにして、普通に視聴しましょう。
+            </div>
+
+            <h2>無料版とPro</h2>
+            <table class="cmp">
+                <thead>
+                    <tr><th>機能</th><th>無料</th><th>Pro / Live</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>YouTube、Netflixなどの二重字幕</td><td>はい、1日の制限なし</td><td>はい</td></tr>
+                    <tr><td>39言語への字幕翻訳</td><td>はい</td><td>はい</td></tr>
+                    <tr><td>単語クリック翻訳、フレーズ、発音</td><td>はい、1日の制限なし</td><td>はい</td></tr>
+                    <tr><td>インタラクティブな文字起こしと学習用キー</td><td>はい</td><td>はい</td></tr>
+                    <tr><td>自分の.srt / .vttファイル、字幕スタイル</td><td>はい</td><td>はい</td></tr>
+                    <tr><td>文法やイディオムのAI解説</td><td>1日3回</td><td>無制限（Pro）</td></tr>
+                    <tr><td>単語帳とAnki / CSVエクスポート</td><td>最大50語まで、エクスポートなし</td><td>無制限、エクスポート可（Pro）</td></tr>
+                    <tr><td>タブ音声のライブ翻訳</td><td>お試しで10分間</td><td>月20時間（Liveプラン）</td></tr>
+                </tbody>
+            </table>
+            <p>最初の7日間はすべての機能が使え、カード登録も不要です。Liveを使わず、Ankiも必要なければ、支払いが一切不要な場合もあります。</p>
+
+            <h2>拡張機能とデスクトップアプリ、どちら？</h2>
+            <p>Live SubtitlesはWindowsとMac向けのアプリとして始まり、用途によってはいまもアプリが最適な選択です。要約すると、拡張機能はブラウザ内の動画視聴と単語学習向け、アプリはパソコン上のあらゆる音声向けです。</p>
+            <table class="cmp">
+                <thead>
+                    <tr><th></th><th>Chrome拡張機能</th><th>Live Subtitlesアプリ</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>動作環境</td><td>Chrome、Edge、Braveでの動画</td><td>あらゆるプログラム：ブラウザ、NetflixやYouTubeのアプリ、VLC、ゲーム、Zoom・Teamsのデスクトップアプリ</td></tr>
+                    <tr><td>字幕の取得元</td><td>サイト本来の字幕、それ以外はLive</td><td>常に音声から、AI音声認識で生成</td></tr>
+                    <tr><td>学習ツール</td><td>単語カード、AI解説、文字起こし、Anki</td><td>文字起こしのエクスポート</td></tr>
+                    <tr><td>マイク</td><td>いいえ</td><td>はい——自分の発話にも字幕</td></tr>
+                    <tr><td>対応プラットフォーム</td><td>デスクトップブラウザ（LinuxやChromeOSを含む）</td><td>Windows、macOS、iPhone、Android</td></tr>
+                    <tr><td>無料で使える範囲</td><td>二重字幕と単語検索は制限なし</td><td>無料分のあとはサブスクリプション</td></tr>
+                </tbody>
+            </table>
+            <p>両方を使い分ける人も多く、夜にNetflixのドラマを見たり単語を学んだりするときは拡張機能、デスクトップ版Zoomの通話やゲームにはアプリを使います。アプリの詳細は<a href="/translate-any-audio-in-real-time-pc.html">PC上のあらゆる音声のリアルタイム翻訳</a>をご覧ください。</p>
+
+            <h2>他の二重字幕拡張機能との違い</h2>
+            <p>ブラウザでの二重字幕はよく知られた方法で、Language Reactor、Trancy、Immersive Translateもそれぞれの形で対応しています。すでにそのどれかで満足しているなら、乗り換える理由はありません。LiveSubtitlesならではの違いは次のとおりです。</p>
+            <ul>
+                <li><strong>アカウント不要、サインイン不要。</strong>インストールすればすぐ使えます。</li>
+                <li><strong>無料は本当に無料。</strong>二重字幕と単語検索には1日の制限がなく、お試し期間が終わっても止まりません。</li>
+                <li><strong>字幕のない動画にも対応。</strong>Liveがタブの音声を翻訳するので、配信や通話で何も表示されないということがありません。</li>
+                <li><strong>対応は2サイトだけではありません。</strong>YouTubeとNetflixに加え、Prime Video、Disney+、Max、講座プレーヤー、一般的なHTML5動画でも使えます。</li>
+            </ul>
+            <p>デスクトップツールを含めたより広い比較は、<a href="/language-reactor-alternative.html">Language Reactorの代替</a>と<a href="/best-dual-subtitle-app.html">おすすめの二重字幕アプリ</a>をご覧ください。</p>
+
+            <h2>プライバシー</h2>
+            <p>アカウントはありません。設定と保存した単語はブラウザ内に保存されます。字幕テキストは翻訳のためだけにサーバーへ送信され、あなた個人とは紐づけられません。タブの音声はLiveがオンの間、そのタブについてのみ使用されます。拡張機能は訪問サイトの記録を取りません。匿名の利用統計は設定でオフにできます。ご質問は<a href="mailto:ext@live-subtitles.com">ext@live-subtitles.com</a>まで。</p>
+
+            <a class="cta" href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">Chromeに追加 — 無料</a>
+
+            <div class="faq">
+                <h2 style="margin-top:0;">よくある質問</h2>
+                <p><strong>拡張機能は無料ですか？</strong><br>はい。二重字幕、字幕翻訳、単語検索は1日の制限なし・アカウント不要で無料です。Proでは無制限のAI解説、無制限の単語保存、Ankiエクスポートが使えます。Liveプランではライブ音声翻訳の時間が追加されます。最初の7日間はすべての機能が使えます。</p>
+                <p><strong>Netflixで使えますか？</strong><br>はい。Netflix、Prime Video、Disney+、Maxでは、拡張機能がサービス側で表示される字幕を読み取り、その下に翻訳行を追加します。プレーヤーで原語の字幕をオンにすれば、あとは拡張機能が処理します。</p>
+                <p><strong>動画に字幕がない場合は？</strong><br>Liveを押してください。拡張機能が現在のタブの音声を聞き取り、発話を認識してリアルタイムで翻訳します。ライブ配信や、ブラウザでのGoogle Meet、Zoom、Teamsの通話でも使えます。Liveは無料で10分間お試しでき、その後はLiveプランの対象になります。</p>
+                <p><strong>Microsoft Edge、Brave、Firefoxで使えますか？</strong><br>Google Chromeと、Chrome Web Storeからインストールできるchromium系ブラウザ（Microsoft EdgeやBraveなど）で使えます。FirefoxやSafari版はありません。これらのブラウザではLive Subtitlesデスクトップアプリをご利用ください。パソコン上のあらゆる音声に対応しています。</p>
+                <p><strong>アカウントは必要ですか？</strong><br>いいえ。設定と保存した単語はブラウザ内に残ります。字幕テキストは翻訳のためだけにサーバーへ送信され、タブの音声はLiveがオンの間だけ使用されます。</p>
+                <p><strong>Live Subtitlesアプリのサブスクリプションに拡張機能は含まれますか？</strong><br>いいえ、拡張機能には独自の無料プランと、独自のProおよびLiveプランがあります。多くの方は支払いが不要です。二重字幕と単語検索は無料だからです。</p>
+            </div>
+
+            <h2>関連リンク</h2>
+            <div class="links">
+                <p><a href="/ja/youtube-dual-subtitles.html">YouTube二重字幕</a></p>
+                <p><a href="/ja/netflix-subtitles.html">語学学習者向けNetflix二重字幕</a></p>
+                <p><a href="/ja/microsoft-edge-subtitles.html">Microsoft Edgeであらゆる動画に字幕を</a></p>
+                <p><a href="/language-reactor-alternative.html">Language Reactorの代替</a></p>
+                <p><a href="/best-dual-subtitle-app.html">おすすめの二重字幕アプリ</a></p>
+                <p><a href="/articles/ja/article-17.html">NetflixとYouTube向けLanguage Reactorの代替</a></p>
+                <p><a href="/translate-any-audio-in-real-time-pc.html">PC上のあらゆる音声をリアルタイム翻訳</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

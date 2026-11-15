@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta pixel (LiveSubtitles Web) -->
+    <script src="/meta-pixel.js" defer></script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough + click tracking on store links -->
+    <script src="/cid-tracker.js" defer></script>
+    <title>双语字幕 Chrome 扩展，支持 YouTube、Netflix | Live Subtitles</title>
+    <meta name="description" content="双语字幕 Chrome 扩展：YouTube、Netflix 及任意视频同时显示原文和译文。点击单词查词义，支持导出 Anki，完全免费，无需注册。">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+    <link rel="preload" as="image" href="/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="双语字幕 Chrome 扩展，支持 YouTube、Netflix | Live Subtitles">
+    <meta property="og:description" content="在浏览器中为任意视频同时显示原文和译文。点击单词即可查词，视频没有字幕时还能实时翻译音频。">
+    <meta property="og:url" content="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html">
+    <meta property="og:image" content="https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="双语字幕 Chrome 扩展，支持 YouTube、Netflix">
+    <meta name="twitter:description" content="在浏览器中为任意视频同时显示原文和译文。双语字幕和查词完全免费，无需注册。">
+    <meta name="twitter:image" content="https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LiveSubtitles: AI Dual Subtitles & Video Translator",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome, Microsoft Edge",
+  "url": "https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html",
+  "installUrl": "https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja",
+  "image": "https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp",
+  "description": "浏览器扩展，在 YouTube、Netflix 及大多数网页视频上显示双语字幕（原文+译文），支持点击查词、互动文稿、导出 Anki，以及标签页音频的实时翻译。",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@id": "https://live-subtitles.com/#organization"
+  }
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "如何在 Chrome 中为 YouTube 和 Netflix 开启双语字幕",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "安装扩展",
+      "text": "在 Chrome 网上应用店打开 LiveSubtitles 页面，点击「添加至 Chrome」。在 Microsoft Edge 中，需先允许来自其他应用商店的扩展，再在同一页面安装。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "选择语言",
+      "text": "欢迎页会把浏览器的语言设为默认翻译语言，可按需修改，并将图标固定到工具栏。"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "打开视频",
+      "text": "在 YouTube、Netflix 或其他网站播放视频，原文和译文会自动显示在视频下方。如果视频没有字幕，按下 Live 即可翻译音频。"
+    }
+  ]
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "https://live-subtitles.com/zh/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "双语字幕 Chrome 扩展",
+      "item": "https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html"
+    }
+  ]
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "这个扩展免费吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "免费。双语字幕、字幕翻译和查词都不限次数，也无需账号。Pro 版提供无限 AI 讲解、无限保存单词和导出 Anki；Live 套餐则提供更多小时的实时音频翻译。前 7 天可使用全部功能。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "能在 Netflix 上使用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。在 Netflix、Prime Video、Disney+ 和 Max 上，扩展会读取平台显示的字幕，并在每一行下面加上译文。只需在播放器中开启原始语言字幕，接下来的工作交给扩展。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "如果视频没有字幕怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "按下 Live。扩展会收听当前标签页的音频，识别语音并实时翻译，同样适用于直播，以及浏览器中 Google Meet、Zoom 或 Teams 的网页通话。Live 提供 10 分钟免费体验，之后属于 Live 套餐的一部分。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "在 Microsoft Edge、Brave 或 Firefox 中能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以在 Google Chrome，以及能从 Chrome 网上应用店安装扩展的 Chromium 浏览器（如 Microsoft Edge 和 Brave）中使用。没有 Firefox 或 Safari 版本；在这些浏览器中，可改用 Live Subtitles 桌面应用，它能翻译电脑上的任意声音。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "需要注册账号吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要。设置和保存的单词都留在你的浏览器中。字幕文本仅在翻译时发送到服务器，标签页音频也只在 Live 开启时才会被使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Live Subtitles 应用的订阅包含这个扩展吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不包含，扩展有自己独立的免费版本，以及独立的 Pro 和 Live 套餐。大多数人其实不需要付费：双语字幕和查词本身就是免费的。"
+      }
+    }
+  ]
+}
+    </script>
+
+    <style>
+        :root { --bg: #0a0a0a; --card: rgba(255,255,255,0.04); --text: #f2f2f2; --muted: #bbbbbb; --a: #00ff9d; --b: #00b8ff; --accent: #ff006e; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, Arial, sans-serif; }
+        .wrap { max-width: 940px; margin: 0 auto; padding: 48px 20px; }
+        .card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 30px; }
+        h1 { margin-top: 0; color: var(--a); font-size: 2rem; line-height: 1.2; }
+        h2 { color: var(--a); margin-top: 2.2rem; font-size: 1.5rem; }
+        h3 { color: var(--b); margin-top: 1.4rem; font-size: 1.15rem; }
+        p, li { line-height: 1.65; }
+        .lead { font-size: 1.1rem; color: #e8e8e8; }
+        .muted { color: var(--muted); }
+        .links a { color: var(--b); text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        .cta { display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; color: #08120f; background: linear-gradient(135deg, var(--a), var(--b)); }
+        .faq { background: rgba(0,184,255,0.08); border-left: 4px solid var(--b); border-radius: 0 10px 10px 0; padding: 16px 18px; margin-top: 24px; }
+        table.cmp { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+        table.cmp th, table.cmp td { border: 1px solid rgba(255,255,255,0.1); padding: 10px 12px; text-align: left; vertical-align: top; }
+        table.cmp th { background: rgba(0,255,157,0.08); color: var(--a); font-weight: 600; }
+        .steps { counter-reset: step; padding-left: 0; list-style: none; }
+        .steps li { counter-increment: step; margin: 14px 0; padding-left: 44px; position: relative; }
+        .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--a), var(--b)); color: #08120f; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+        .callout { background: rgba(255,0,110,0.08); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 18px 0; }
+        .shot { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid #e6e8eb; margin: 14px 0 6px; }
+        .cta-note { font-size: 0.92rem; margin-top: 8px; }
+
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .lead { color:#2d333b !important; }
+        table.cmp th, table.cmp td { border:none; border-bottom:1px solid #e6e8eb; }
+        .callout { line-height:1.6; }
+        @media (max-width: 600px) { .card { padding: 20px; } h1 { font-size: 1.6rem; } table.cmp { font-size: 0.85rem; } table.cmp th, table.cmp td { padding: 7px 8px; } }
+        table.cmp th, table.cmp td { hyphens:auto; }
+        @media (max-width: 600px) { table.cmp { display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; } }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <div class="card">
+            <p class="muted"><a href="/zh/" style="color:#0b6ad1; text-decoration:none;">首页</a> / 双语字幕 Chrome 扩展</p>
+            <h1>双语字幕 Chrome 扩展，支持 YouTube、Netflix</h1>
+            <p class="lead">LiveSubtitles for Chrome 会在浏览器里任意视频的下方显示两行字幕——原文和译成你的语言的译文。点击单词即可查看含义并保存到 Anki，如果视频完全没有字幕，还能实时翻译音频。双语字幕和查词完全免费，不限次数，也无需账号。</p>
+
+            <a class="cta" href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">添加至 Chrome · 免费</a>
+            <p class="muted cta-note">适用于 Google Chrome、Microsoft Edge 和 Brave。来自 Live Subtitles 团队，该团队同时开发 Windows、Mac、iPhone 和 Android 版应用。</p>
+
+            <img class="shot" src="/img/extension/dual-subtitles-chrome-extension.webp" width="1120" height="624" alt="Chrome 中的双语字幕：视频下方一行法语原文和对应的英语译文">
+
+            <h2>扩展能做什么</h2>
+
+            <h3>每个视频都有两行字幕</h3>
+            <p>原文始终在上面，译文紧跟在下面，字体、大小、颜色和位置都可以自己设置。扩展会读取网站本身已有的字幕——YouTube 上传或自动生成的字幕、Netflix 和 Prime Video 的字幕、在线课程播放器的字幕轨，以及大多数 HTML5 视频——并实时翻译每一行。视频语言会自动识别，译文支持 39 种语言。想用自己的字幕文件？也可以把 .srt 或 .vtt 字幕文件加载到任意视频上。</p>
+
+            <h3>点击单词即可学习</h3>
+            <img class="shot" src="/img/extension/click-word-translation-extension.webp" width="1120" height="624" loading="lazy" alt="扩展中的单词卡片：字幕中的一个西班牙语单词，附带译文、发音和「AI 讲解」按钮">
+            <p>把鼠标悬停或点击字幕中的任意单词，就会打开一张卡片，显示这个词在当前语境中的译文、词典释义、发音和例句。划选多个单词可以翻译整个短语或习语。如果还是看不懂，<em>AI 讲解</em>会用你的语言拆解语法、习语或俚语。听的同时，正在说的单词会高亮显示，让耳朵和眼睛始终对上同一个地方。</p>
+
+            <h3>视频旁的互动文稿</h3>
+            <img class="shot" src="/img/extension/interactive-transcript-extension.webp" width="1120" height="624" loading="lazy" alt="日语视频旁的互动文稿面板，每一行都附有英语译文">
+            <p>打开文稿即可看到整段视频的文字版，逐行配有译文。可以搜索内容，点击某一行跳回对应时刻，还能用学习快捷键：<strong>A</strong> 上一行，<strong>S</strong> 重复，<strong>D</strong> 下一行，<strong>Q</strong> 每行结束后暂停。这是啃一节信息密集的讲座，或者一段只听懂一半的情节时最快的方法。</p>
+
+            <h3>没有字幕时的实时翻译</h3>
+            <img class="shot" src="/img/extension/live-tab-audio-translation-extension.webp" width="1120" height="624" loading="lazy" alt="Live 模式翻译一场没有字幕的游戏直播：英语语音配上西班牙语译文">
+            <p>很多视频根本没有字幕：直播、小众频道、新闻网站的录像、网页通话。按下 <strong>Live</strong>，扩展就会收听当前标签页的音频，识别语音，实时显示原文和译文。在 Google Meet、Zoom、Teams 等浏览器通话中，它会主动提供 Live，而不是显示一个空字幕框。Live 提供 10 分钟免费体验。</p>
+
+            <h3>我的生词和 Anki 导出</h3>
+            <img class="shot" src="/img/extension/my-words-anki-export-extension.webp" width="1120" height="654" loading="lazy" alt="扩展设置中的「我的生词」列表，显示保存的单词和译文，以及「导出到 Anki」和「导出 CSV」按钮">
+            <p>每个保存的单词都会连同它出现的那句话一起留存。保存的单词下次出现在字幕中时会显示金色下划线，可以把它们标记为已掌握，整份单词表也能一键导出到 Anki 或 CSV 表格——都是来自真实视频的真实用法，而不是教科书式的单词表。</p>
+
+            <h2>适用范围</h2>
+            <ul>
+                <li><strong>YouTube</strong>——带有上传字幕或自动生成字幕的普通视频，以及视频的完整文稿。另见 <a href="/zh/youtube-dual-subtitles.html">YouTube 双语字幕</a>。</li>
+                <li><strong>Netflix、Prime Video、Disney+、Max</strong>——在播放器中开启原始语言字幕，译文就会显示在下方。详见 <a href="/zh/netflix-subtitles.html">Netflix 双语字幕</a>。</li>
+                <li><strong>在线课程和演讲</strong>——课程播放器、TED、Vimeo，以及大多数基于标准 HTML5 视频并带有字幕轨的网站。</li>
+                <li><strong>你自己的字幕文件</strong>——把 .srt 或 .vtt 文件加载到浏览器中的任意视频上。</li>
+                <li><strong>没有字幕的视频、直播和网页通话</strong>——用 Live 翻译标签页的音频。</li>
+            </ul>
+            <p>如果某个网站不需要这个功能，可以在工具栏弹窗中单独关闭该网站，其他网站不受影响。</p>
+
+            <h2>安装方法：3 步，一分钟搞定</h2>
+            <ol class="steps">
+                <li><strong>安装扩展。</strong>打开 <a href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">Chrome 网上应用店中的 LiveSubtitles</a>，点击 <em>添加至 Chrome</em>。在 Microsoft Edge 中，出现提示时允许来自其他应用商店的扩展，再在同一页面安装。</li>
+                <li><strong>选择语言。</strong>欢迎页会把浏览器的语言设为默认翻译语言，可按需修改，并将图标固定到工具栏。</li>
+                <li><strong>打开视频。</strong>原文和译文会自动显示在视频下方。这个视频没有字幕？按下 Live 即可。</li>
+            </ol>
+
+            <div class="callout">
+                <strong>给语言学习者的小提示：</strong>刚开始看的几个视频，可以打开 <em>Q——每行结束后暂停</em>。读完这一行，点击不认识的单词，按 <strong>S</strong> 再听一遍，然后继续。等大部分内容都能听懂了，再关掉它，正常观看就好。
+            </div>
+
+            <h2>免费版和 Pro</h2>
+            <table class="cmp">
+                <thead>
+                    <tr><th>功能</th><th>免费版</th><th>Pro / Live</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>YouTube、Netflix 等网站的双语字幕</td><td>支持，不限次数</td><td>支持</td></tr>
+                    <tr><td>字幕翻译支持 39 种语言</td><td>支持</td><td>支持</td></tr>
+                    <tr><td>点击查词、短语翻译、发音</td><td>支持，不限次数</td><td>支持</td></tr>
+                    <tr><td>互动文稿和学习快捷键</td><td>支持</td><td>支持</td></tr>
+                    <tr><td>自定义 .srt / .vtt 文件和字幕样式</td><td>支持</td><td>支持</td></tr>
+                    <tr><td>AI 讲解语法和习语</td><td>每天 3 次</td><td>无限次（Pro）</td></tr>
+                    <tr><td>我的生词及 Anki / CSV 导出</td><td>最多 50 个单词，不支持导出</td><td>无限制，支持导出（Pro）</td></tr>
+                    <tr><td>标签页音频的实时翻译</td><td>10 分钟免费体验</td><td>每月 20 小时（Live 套餐）</td></tr>
+                </tbody>
+            </table>
+            <p>前 7 天可使用全部功能，无需绑卡。如果你从不使用 Live，也不需要导出 Anki，也许永远都不用付费。</p>
+
+            <h2>选扩展还是桌面应用？</h2>
+            <p>Live Subtitles 最初是一款 Windows 和 Mac 应用，在某些场景下，应用仍然是更合适的工具。简单来说：扩展适合浏览器中的视频和学习单词；应用适合电脑上的任何声音。</p>
+            <table class="cmp">
+                <thead>
+                    <tr><th></th><th>Chrome 扩展</th><th>Live Subtitles 应用</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>适用范围</td><td>Chrome、Edge、Brave 中的视频</td><td>任何程序：浏览器、Netflix 和 YouTube 应用、VLC、游戏、Zoom 和 Teams 桌面客户端</td></tr>
+                    <tr><td>字幕来源</td><td>网站自带字幕，其余用 Live</td><td>始终来自音频，使用 AI 语音识别</td></tr>
+                    <tr><td>学习工具</td><td>单词卡片、AI 讲解、文稿、Anki</td><td>文稿导出</td></tr>
+                    <tr><td>你的麦克风</td><td>不支持</td><td>支持——也能为你自己说的话生成字幕</td></tr>
+                    <tr><td>支持平台</td><td>桌面浏览器，包括 Linux 和 ChromeOS</td><td>Windows、macOS、iPhone、Android</td></tr>
+                    <tr><td>免费使用</td><td>双语字幕和查词不受限制</td><td>免费分钟用完后需要订阅</td></tr>
+                </tbody>
+            </table>
+            <p>很多人两者都在用：扩展用来晚上追 Netflix 剧集和积累单词，应用用来处理桌面版 Zoom 通话和游戏。应用的具体功能见 <a href="/translate-any-audio-in-real-time-pc.html">PC 端任意音频的实时翻译</a>。</p>
+
+            <h2>和其他双语字幕扩展相比</h2>
+            <p>浏览器里的双语字幕并不是什么新鲜概念：Language Reactor、Trancy 和 Immersive Translate 都有各自的实现，如果其中某一个已经满足你的需求，完全没必要换。LiveSubtitles 的不同之处在于：</p>
+            <ul>
+                <li><strong>无需账号，无需登录。</strong>安装好即可使用。</li>
+                <li><strong>免费就是真的免费。</strong>双语字幕和查词不限次数，也不会在试用期结束后停止。</li>
+                <li><strong>没有字幕的视频也能用。</strong>Live 会翻译标签页的音频，直播或通话也不会让你两手空空。</li>
+                <li><strong>不止两个网站。</strong>除了 YouTube 和 Netflix，还支持 Prime Video、Disney+、Max、课程播放器和通用的 HTML5 视频。</li>
+            </ul>
+            <p>更全面的对比（包括桌面工具）参见 <a href="/language-reactor-alternative.html">Language Reactor 替代品</a>和<a href="/best-dual-subtitle-app.html">最佳双语字幕应用</a>。</p>
+
+            <h2>隐私</h2>
+            <p>没有账号体系。设置和保存的单词都存储在你的浏览器中。字幕文本只在翻译时发送到服务器，且不与你本人关联；标签页音频只在 Live 开启期间、只针对当前标签页使用。扩展不会记录你访问过哪些网站。匿名使用统计可以在设置中关闭。问题反馈：<a href="mailto:ext@live-subtitles.com">ext@live-subtitles.com</a>。</p>
+
+            <a class="cta" href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">添加至 Chrome · 免费</a>
+
+            <div class="faq">
+                <h2 style="margin-top:0;">常见问题</h2>
+                <p><strong>这个扩展免费吗？</strong><br>免费。双语字幕、字幕翻译和查词都不限次数，也无需账号。Pro 版提供无限 AI 讲解、无限保存单词和导出 Anki；Live 套餐则提供更多小时的实时音频翻译。前 7 天可使用全部功能。</p>
+                <p><strong>能在 Netflix 上使用吗？</strong><br>可以。在 Netflix、Prime Video、Disney+ 和 Max 上，扩展会读取平台显示的字幕，并在每一行下面加上译文。只需在播放器中开启原始语言字幕，接下来的工作交给扩展。</p>
+                <p><strong>如果视频没有字幕怎么办？</strong><br>按下 Live。扩展会收听当前标签页的音频，识别语音并实时翻译，同样适用于直播，以及浏览器中 Google Meet、Zoom 或 Teams 的网页通话。Live 提供 10 分钟免费体验，之后属于 Live 套餐的一部分。</p>
+                <p><strong>在 Microsoft Edge、Brave 或 Firefox 中能用吗？</strong><br>可以在 Google Chrome，以及能从 Chrome 网上应用店安装扩展的 Chromium 浏览器（如 Microsoft Edge 和 Brave）中使用。没有 Firefox 或 Safari 版本；在这些浏览器中，可改用 Live Subtitles 桌面应用，它能翻译电脑上的任意声音。</p>
+                <p><strong>需要注册账号吗？</strong><br>不需要。设置和保存的单词都留在你的浏览器中。字幕文本仅在翻译时发送到服务器，标签页音频也只在 Live 开启时才会被使用。</p>
+                <p><strong>Live Subtitles 应用的订阅包含这个扩展吗？</strong><br>不包含，扩展有自己独立的免费版本，以及独立的 Pro 和 Live 套餐。大多数人其实不需要付费：双语字幕和查词本身就是免费的。</p>
+            </div>
+
+            <h2>相关资源</h2>
+            <div class="links">
+                <p><a href="/zh/youtube-dual-subtitles.html">YouTube 双语字幕</a></p>
+                <p><a href="/zh/netflix-subtitles.html">面向语言学习者的 Netflix 双语字幕</a></p>
+                <p><a href="/zh/microsoft-edge-subtitles.html">Microsoft Edge 中任意视频的字幕</a></p>
+                <p><a href="/language-reactor-alternative.html">Language Reactor 替代品</a></p>
+                <p><a href="/best-dual-subtitle-app.html">最佳双语字幕应用</a></p>
+                <p><a href="/articles/zh/article-17.html">适用于 Netflix 和 YouTube 的 Language Reactor 替代品</a></p>
+                <p><a href="/translate-any-audio-in-real-time-pc.html">PC 端任意音频的实时翻译</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

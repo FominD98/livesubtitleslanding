@@ -77,7 +77,7 @@
         {
           "@type": "Question",
           "name": "Are there dual subtitle apps that work on live streams?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Live streams (YouTube Live, Twitch, Kick) usually have no pre-made subtitle file, so DOM-based extensions cannot show dual subtitles. Live Subtitles generates captions from audio in real time, so it works on live streams and live meetings." }
+          "acceptedAnswer": { "@type": "Answer", "text": "Live streams (YouTube Live, Twitch, Kick) usually have no pre-made subtitle file, so extensions that only read subtitle tracks cannot show dual subtitles. Live Subtitles generates captions from audio in real time, so it works on live streams and live meetings." }
         },
         {
           "@type": "Question",
@@ -139,7 +139,7 @@
             <p><strong>Dual subtitles</strong> are two subtitle tracks on screen at the same time — one in the language you are learning, one in a language you already know. Instead of pausing to look a phrase up, you read the meaning on the line below while you hear it spoken. They are also called bilingual or two-language subtitles.</p>
             <p>Three things separate a setup that works from one that constantly gets in the way:</p>
             <ul>
-                <li><strong>Where they work.</strong> A browser extension covers one streaming service inside Chrome. A desktop app that reads system audio covers anything that makes sound — desktop players, calls, live streams, games.</li>
+                <li><strong>Where they work.</strong> A browser extension covers the video sites it supports inside the browser. A desktop app that reads system audio covers anything that makes sound — desktop players, calls, live streams, games.</li>
                 <li><strong>Where the second line comes from.</strong> Some tools only pair up subtitle files that already exist, so they fail on anything that ships without them. Others transcribe the audio and translate it as it plays.</li>
                 <li><strong>Which language pairs you get.</strong> Official subtitle tracks limit you to what the platform published. Live transcription does not.</li>
             </ul>
@@ -148,7 +148,10 @@
             <div class="pick">Best for: people who want one app for Netflix, YouTube, Disney+, VLC, live streams and calls.</div>
             <p>Live Subtitles is a Windows and Mac desktop app that captures system audio and overlays dual subtitles on top of any application. Unlike browser extensions, it does not depend on existing platform subtitle tracks — captions are generated from audio in real time, so it works on services and content that have no subtitles at all. 50+ recognition and translation languages let you build language pairs other tools simply do not offer (e.g. Korean → Polish, Arabic → Spanish).</p>
             <p><strong>Pros:</strong> works on any Windows app; AI captions, no dependency on subtitle files; 50+ languages; floating overlay; Game Mode for fullscreen.</p>
-            <p><strong>Cons:</strong> Windows, Mac, and iOS; no built-in click-to-translate dictionary or flashcard export.</p>
+            <p><strong>Cons:</strong> no click-to-translate dictionary or flashcard export in the app itself — those live in the Chrome extension below.</p>
+
+            <h3>Also from us: the LiveSubtitles Chrome extension</h3>
+            <p>For learners who watch in the browser, our free <a href="/dual-subtitles-chrome-extension.html">dual subtitles Chrome extension</a> covers the other half: original + translation on YouTube, Netflix, Prime Video, Disney+ and Max, click-a-word cards, AI grammar explanations, an interactive transcript and Anki export. Dual subtitles and word lookups are free with no daily limit and no account; a Live mode translates the tab's audio when a video has no subtitles.</p>
 
             <h2>2. Language Reactor — Best for Netflix and YouTube in Chrome</h2>
             <div class="pick">Best for: learners who watch Netflix and YouTube in Chrome and want dictionary lookup.</div>
@@ -184,6 +187,7 @@
             </ul>
 
             <h2>Detailed feature comparison</h2>
+            <div style="overflow-x:auto; -webkit-overflow-scrolling:touch;">
             <table style="width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.92rem;">
                 <thead>
                     <tr style="background: rgba(0,255,157,0.08);"><th style="border: 1px solid rgba(255,255,255,0.1); padding: 10px;">Feature</th><th style="border: 1px solid rgba(255,255,255,0.1); padding: 10px;">Live Subtitles</th><th style="border: 1px solid rgba(255,255,255,0.1); padding: 10px;">Lang. Reactor</th><th style="border: 1px solid rgba(255,255,255,0.1); padding: 10px;">eJOY</th><th style="border: 1px solid rgba(255,255,255,0.1); padding: 10px;">Trancy</th><th style="border: 1px solid rgba(255,255,255,0.1); padding: 10px;">Substital</th></tr>
@@ -200,10 +204,11 @@
                     <tr><td style="border: 1px solid rgba(255,255,255,0.1); padding: 8px;">Free tier</td><td style="border: 1px solid rgba(255,255,255,0.1); padding: 8px; text-align: center;">Free to try</td><td style="border: 1px solid rgba(255,255,255,0.1); padding: 8px; text-align: center;">Yes</td><td style="border: 1px solid rgba(255,255,255,0.1); padding: 8px; text-align: center;">Limited</td><td style="border: 1px solid rgba(255,255,255,0.1); padding: 8px; text-align: center;">Quota</td><td style="border: 1px solid rgba(255,255,255,0.1); padding: 8px; text-align: center;">Yes</td></tr>
                 </tbody>
             </table>
+            </div>
 
             <h2>Use cases by content type</h2>
             <h3>Streaming services beyond Netflix</h3>
-            <p>Disney+, Prime Video, HBO Max (Max), Apple TV+, and Mubi all have growing foreign-language catalogs that no Chrome extension reaches. The biggest gap is Disney+ Star content (Korean, French, Spanish originals not on Netflix) and Mubi's curated foreign cinema. Live Subtitles is the only tool here that overlays dual subtitles on these.</p>
+            <p>Disney+, Prime Video, HBO Max (Max), Apple TV+, and Mubi all have growing foreign-language catalogs that most dual-subtitle extensions skip. The biggest gap is Disney+ Star content (Korean, French, Spanish originals not on Netflix) and Mubi's curated foreign cinema. The LiveSubtitles Chrome extension covers Disney+, Prime Video and Max in the browser; the Live Subtitles app covers all of them, in any browser or desktop app.</p>
 
             <h3>Anime — Crunchyroll, Funimation, HiDive</h3>
             <p>The anime-specific streamers don't have Chrome-extension support. Crunchyroll has the largest catalog and ships subtitles for most simulcast episodes — but for sub-only content, very recent releases, and bonus material, captions aren't always available. Live Subtitles generates Japanese (kanji + kana) plus English from audio for any episode.</p>
@@ -228,7 +233,7 @@
             <p>Chrome extensions are convenient but locked into Chrome and the websites they support. System-wide tools like Live Subtitles work in any browser, in desktop apps, on local files, and during calls. The system-wide model is the only one that handles the full range of where modern foreign-language content lives.</p>
 
             <h3>Click-to-translate and study integrations</h3>
-            <p>If your study workflow involves clicking individual words to see definitions, Language Reactor and eJOY have the strongest in-page dictionary integrations. Live Subtitles' workflow is closer to traditional immersive viewing (read both lines, look up unknown words separately). Some learners run both: Language Reactor for structured Netflix study sessions, Live Subtitles for everything else.</p>
+            <p>If your study workflow involves clicking individual words to see definitions, Language Reactor, eJOY and the <a href="/dual-subtitles-chrome-extension.html">LiveSubtitles Chrome extension</a> have in-page dictionary integrations. Live Subtitles' workflow is closer to traditional immersive viewing (read both lines, look up unknown words separately). Some learners run both: Language Reactor for structured Netflix study sessions, Live Subtitles for everything else.</p>
 
             <h3>Pricing</h3>
             <p>Free tools (Substital, Language Reactor's basic tier) are great starting points but cover narrow surface area. Live Subtitles' $7/mo flat plan is reasonable given its coverage; Language Reactor Premium ($6/mo) adds features within its scope. Trancy and eJOY have quota-based free tiers that are usable but ramp into paid quickly.</p>

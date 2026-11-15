@@ -3073,6 +3073,38 @@
         <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/android-live-captions.html" />
         <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/android-live-captions.html" />
     </url>    <url>
+        <loc>https://live-subtitles.com/android-youtube-subtitles.html</loc>
+        <lastmod>2026-11-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-youtube-subtitles.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-youtube-subtitles.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/android-tiktok-reels-captions.html</loc>
+        <lastmod>2026-11-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-tiktok-reels-captions.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-tiktok-reels-captions.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/android-video-translator.html</loc>
+        <lastmod>2026-11-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-video-translator.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-video-translator.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/android-voice-message-translator.html</loc>
+        <lastmod>2026-11-03</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/android-voice-message-translator.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/android-voice-message-translator.html" />
+    </url>
+    <url>
         <loc>https://live-subtitles.com/android-live-captions.html</loc>
         <lastmod>2026-10-09</lastmod>
         <changefreq>weekly</changefreq>
@@ -6241,5 +6273,373 @@
         <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/captions/cart-captioning.html" />
         <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/captions/cart-captioning.html" />
         <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/captions/cart-captioning.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/es/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/de/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/it/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    </url>
+    <url>
+        <loc>https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html</loc>
+        <lastmod>2026-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.75</priority>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+        <xhtml:link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
     </url>
 </urlset>

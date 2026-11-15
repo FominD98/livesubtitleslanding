@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta pixel (LiveSubtitles Web) -->
+    <script src="/meta-pixel.js" defer></script>
+    <!-- Yandex.Metrika counter -->
+    <script src="/yandex-metrika.js"></script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/101009280" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17344614830"></script>
+    <script src="/gtag-init.js"></script>
+    <!-- cid passthrough + click tracking on store links -->
+    <script src="/cid-tracker.js" defer></script>
+    <title>Розширення подвійних субтитрів у Chrome для YouTube та Netflix | Live Subtitles</title>
+    <meta name="description" content="Подвійні субтитри в Chrome: оригінал і переклад на YouTube, Netflix і будь-якому відео. Клік на слово — переклад, експорт в Anki. Безкоштовно, без акаунта.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="x-default" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="en" href="https://live-subtitles.com/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ru" href="https://live-subtitles.com/ru/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="fr" href="https://live-subtitles.com/fr/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="es" href="https://live-subtitles.com/es/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="de" href="https://live-subtitles.com/de/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="it" href="https://live-subtitles.com/it/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ja" href="https://live-subtitles.com/ja/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ko" href="https://live-subtitles.com/ko/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="zh" href="https://live-subtitles.com/zh/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="pt" href="https://live-subtitles.com/pt/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="pl" href="https://live-subtitles.com/pl/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="nl" href="https://live-subtitles.com/nl/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="tr" href="https://live-subtitles.com/tr/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="uk" href="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="ar" href="https://live-subtitles.com/ar/dual-subtitles-chrome-extension.html" />
+    <link rel="alternate" hreflang="hi" href="https://live-subtitles.com/hi/dual-subtitles-chrome-extension.html" />
+    <link rel="preload" as="image" href="/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Розширення подвійних субтитрів у Chrome для YouTube та Netflix | Live Subtitles">
+    <meta property="og:description" content="Оригінал і переклад на будь-якому відео у браузері. Клацніть на слово, щоб вивчити його, перекладайте звук наживо, якщо у відео немає субтитрів.">
+    <meta property="og:url" content="https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html">
+    <meta property="og:image" content="https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Розширення подвійних субтитрів у Chrome для YouTube та Netflix">
+    <meta name="twitter:description" content="Оригінал і переклад на будь-якому відео у браузері. Безкоштовні подвійні субтитри й переклад слів, без акаунта.">
+    <meta name="twitter:image" content="https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp">
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LiveSubtitles: AI Dual Subtitles & Video Translator",
+  "applicationCategory": "BrowserApplication",
+  "operatingSystem": "Chrome, Microsoft Edge",
+  "url": "https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html",
+  "installUrl": "https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja",
+  "image": "https://live-subtitles.com/img/extension/dual-subtitles-chrome-extension.webp",
+  "description": "Розширення для браузера, яке показує подвійні субтитри (оригінал і переклад) на YouTube, Netflix і більшості відео в інтернеті, з перекладом слова по кліку, інтерактивною розшифровкою, експортом в Anki і живим перекладом звуку вкладки.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@id": "https://live-subtitles.com/#organization"
+  }
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Як дивитися YouTube і Netflix із подвійними субтитрами в Chrome",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Встановіть розширення",
+      "text": "Відкрийте сторінку LiveSubtitles у Chrome Web Store і натисніть «Додати в Chrome». У Microsoft Edge дозвольте розширення з інших магазинів і встановіть із тієї самої сторінки."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Виберіть мову",
+      "text": "Сторінка привітання пропонує мову вашого браузера як мову перекладу. За бажання змініть її та закріпіть значок на панелі інструментів."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Відкрийте відео",
+      "text": "Увімкніть відео на YouTube, Netflix чи іншому сайті. Оригінальний рядок і його переклад з'являться під відео самі. Якщо у відео немає субтитрів, натисніть Live, щоб перекласти звук."
+    }
+  ]
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Головна",
+      "item": "https://live-subtitles.com/uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Розширення подвійних субтитрів для Chrome",
+      "item": "https://live-subtitles.com/uk/dual-subtitles-chrome-extension.html"
+    }
+  ]
+}
+    </script>
+
+    <script type="application/ld+json">
+    {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Чи безкоштовне розширення?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Так. Подвійні субтитри, переклад субтитрів і переклад слів безкоштовні, без денного ліміту і без акаунта. Pro додає необмежені пояснення від ШІ, необмежену кількість збережених слів і експорт в Anki; тариф Live додає години синхронного перекладу звуку. Перші 7 днів доступно все."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чи працює воно на Netflix?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Так. На Netflix, Prime Video, Disney+ і Max розширення зчитує субтитри, які показує сервіс, і додає перекладений рядок під кожним із них. Увімкніть субтитри мовою оригіналу в плеєрі — далі розширення зробить усе само."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Що робити, якщо у відео немає субтитрів?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Натисніть Live. Розширення слухає звук поточної вкладки, розпізнає мовлення і перекладає його в реальному часі. Це також працює для прямих трансляцій і дзвінків у браузері в Google Meet, Zoom чи Teams. Live дає 10 безкоштовних хвилин; далі це частина тарифу Live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чи працює воно в Microsoft Edge, Brave чи Firefox?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Працює в Google Chrome і в браузерах на Chromium, які встановлюють розширення з Chrome Web Store, таких як Microsoft Edge і Brave. Версії для Firefox чи Safari немає; у цих браузерах використовуйте застосунок Live Subtitles для комп'ютера, який працює з будь-яким звуком на пристрої."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чи потрібен акаунт?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ні. Налаштування та збережені слова залишаються у вашому браузері. Текст субтитрів надсилається на наш сервер лише для перекладу, а звук вкладки використовується, тільки поки увімкнено Live."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Чи підписка на застосунок Live Subtitles включає розширення?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ні, розширення має власний безкоштовний тариф і власні плани Pro та Live. Більшості людей платити за нього взагалі не доведеться: подвійні субтитри й переклад слів безкоштовні."
+      }
+    }
+  ]
+}
+    </script>
+
+    <style>
+        :root { --bg: #0a0a0a; --card: rgba(255,255,255,0.04); --text: #f2f2f2; --muted: #bbbbbb; --a: #00ff9d; --b: #00b8ff; --accent: #ff006e; }
+        body { margin: 0; background: var(--bg); color: var(--text); font-family: Inter, Arial, sans-serif; }
+        .wrap { max-width: 940px; margin: 0 auto; padding: 48px 20px; }
+        .card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 30px; }
+        h1 { margin-top: 0; color: var(--a); font-size: 2rem; line-height: 1.2; }
+        h2 { color: var(--a); margin-top: 2.2rem; font-size: 1.5rem; }
+        h3 { color: var(--b); margin-top: 1.4rem; font-size: 1.15rem; }
+        p, li { line-height: 1.65; }
+        .lead { font-size: 1.1rem; color: #e8e8e8; }
+        .muted { color: var(--muted); }
+        .links a { color: var(--b); text-decoration: none; }
+        .links a:hover { text-decoration: underline; }
+        .cta { display: inline-block; margin-top: 16px; padding: 12px 22px; border-radius: 10px; text-decoration: none; font-weight: 700; color: #08120f; background: linear-gradient(135deg, var(--a), var(--b)); }
+        .faq { background: rgba(0,184,255,0.08); border-left: 4px solid var(--b); border-radius: 0 10px 10px 0; padding: 16px 18px; margin-top: 24px; }
+        table.cmp { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.95rem; }
+        table.cmp th, table.cmp td { border: 1px solid rgba(255,255,255,0.1); padding: 10px 12px; text-align: left; vertical-align: top; }
+        table.cmp th { background: rgba(0,255,157,0.08); color: var(--a); font-weight: 600; }
+        .steps { counter-reset: step; padding-left: 0; list-style: none; }
+        .steps li { counter-increment: step; margin: 14px 0; padding-left: 44px; position: relative; }
+        .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 30px; height: 30px; border-radius: 50%; background: linear-gradient(135deg, var(--a), var(--b)); color: #08120f; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+        .callout { background: rgba(255,0,110,0.08); border-left: 4px solid var(--accent); border-radius: 0 10px 10px 0; padding: 14px 18px; margin: 18px 0; }
+        .shot { display: block; width: 100%; height: auto; border-radius: 10px; border: 1px solid #e6e8eb; margin: 14px 0 6px; }
+        .cta-note { font-size: 0.92rem; margin-top: 8px; }
+
+        /* light theme override (generated) */
+        *, *::before, *::after { box-sizing: border-box; }
+        :root { --bg:#f5f6f8; --card:#ffffff; --text:#2d333b; --muted:#5b6470; --a:#0b6ad1; --b:#0b6ad1; }
+        body { background:#f5f6f8 !important; color:#2d333b !important; font-size:17px; }
+        .wrap { max-width: 860px; }
+        .card { background:#ffffff !important; border:1px solid #e6e8eb !important; box-shadow:0 2px 16px rgba(0,0,0,0.06); }
+        h1, h2, h3 { color:#16181d !important; }
+        a, .links a { color:#0b6ad1; }
+        .muted { color:#5b6470 !important; }
+        p, li { color:#2d333b; }
+        .cta { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .faq { background:rgba(0,184,255,0.08) !important; border-left-color:#0b6ad1 !important; }
+        .steps li::before { background:linear-gradient(135deg,#00ff9d,#00b8ff) !important; color:#08120f !important; }
+        .lead { color:#2d333b !important; }
+        table.cmp th, table.cmp td { border:none; border-bottom:1px solid #e6e8eb; }
+        .callout { line-height:1.6; }
+        @media (max-width: 600px) { .card { padding: 20px; } h1 { font-size: 1.6rem; } table.cmp { font-size: 0.85rem; } table.cmp th, table.cmp td { padding: 7px 8px; } }
+        table.cmp th, table.cmp td { hyphens:auto; }
+        @media (max-width: 600px) { table.cmp { display:block; overflow-x:auto; -webkit-overflow-scrolling:touch; } }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <div class="card">
+            <p class="muted"><a href="/uk/" style="color:#0b6ad1; text-decoration:none;">Головна</a> / Розширення подвійних субтитрів для Chrome</p>
+            <h1>Розширення подвійних субтитрів у Chrome для YouTube та Netflix</h1>
+            <p class="lead">LiveSubtitles для Chrome показує два рядки субтитрів під будь-яким відео у браузері — оригінал і переклад вашою мовою. Клікніть на слово, щоб дізнатися значення, збережіть його для Anki, а коли у відео взагалі немає субтитрів — перекладайте звук наживо. Подвійні субтитри й переклад слів безкоштовні, без денного ліміту і без акаунта.</p>
+
+            <a class="cta" href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">Додати в Chrome — безкоштовно</a>
+            <p class="muted cta-note">Працює в Google Chrome, Microsoft Edge і Brave. Від розробників застосунку Live Subtitles для Windows, Mac, iPhone та Android.</p>
+
+            <img class="shot" src="/img/extension/dual-subtitles-chrome-extension.webp" width="1120" height="624" alt="Подвійні субтитри в Chrome: французький рядок із перекладом англійською під відео">
+
+            <h2>Що вміє розширення</h2>
+
+            <h3>Два рядки субтитрів на кожному відео</h3>
+            <p>Оригінальний рядок залишається зверху, переклад — одразу під ним, у стилі, який ви оберете: шрифт, розмір, кольори та положення. Розширення зчитує субтитри, які вже є на сайті, — завантажені та автоматично згенеровані титри YouTube, субтитри Netflix і Prime Video, доріжки плеєрів онлайн-курсів і більшість HTML5-відео — і перекладає кожен рядок одразу, як він з'являється. Мова відео визначається автоматично; переклад доступний на 39 мов. Маєте власний файл? Завантажте файл субтитрів .srt або .vtt на будь-яке відео.</p>
+
+            <h3>Клацніть на слово, щоб вивчити його</h3>
+            <img class="shot" src="/img/extension/click-word-translation-extension.webp" width="1120" height="624" loading="lazy" alt="Картка слова в розширенні: іспанське слово із субтитрів із перекладом, вимовою та кнопкою «Пояснити (ШІ)»">
+            <p>Наведіть курсор або клацніть на будь-яке слово в субтитрах — відкриється картка з перекладом у цьому контексті, словниковими значеннями, вимовою і прикладом. Виділіть кілька слів, щоб перекласти цілу фразу чи ідіому. Якщо щось усе одно незрозуміло, <em>«Пояснити (ШІ)»</em> розбере граматику, ідіому чи сленг вашою мовою. Поки ви слухаєте, вимовлене слово підсвічується, тож слух і погляд залишаються в одній точці.</p>
+
+            <h3>Інтерактивна розшифровка поруч із відео</h3>
+            <img class="shot" src="/img/extension/interactive-transcript-extension.webp" width="1120" height="624" loading="lazy" alt="Панель інтерактивної розшифровки поруч із японським відео, кожен рядок із перекладом англійською">
+            <p>Відкрийте розшифровку, щоб побачити все відео текстом, рядок за рядком, з перекладами. Шукайте в ній, клацніть на рядок, щоб перейти до цього моменту, і користуйтеся клавішами для навчання: <strong>A</strong> — попередній рядок, <strong>S</strong> — повтор, <strong>D</strong> — наступний рядок, <strong>Q</strong> — пауза після кожного рядка. Це найшвидший спосіб розібрати насичену лекцію чи сцену, яку ви зрозуміли лише наполовину.</p>
+
+            <h3>Live-переклад, коли субтитрів немає</h3>
+            <img class="shot" src="/img/extension/live-tab-audio-translation-extension.webp" width="1120" height="624" loading="lazy" alt="Режим Live перекладає ігровий стрім без субтитрів: англійське мовлення з перекладом іспанською">
+            <p>У багатьох відео субтитрів немає зовсім: прямі трансляції, невеликі канали, записи на новинних сайтах, дзвінки в браузері. Натисніть <strong>Live</strong> — розширення слухає звук поточної вкладки, розпізнає мовлення і показує оригінал із перекладом у реальному часі. У Google Meet, Zoom, Teams та інших дзвінках у браузері воно саме пропонує Live замість порожнього вікна субтитрів. Live дає 10 безкоштовних хвилин на пробу.</p>
+
+            <h3>«Мої слова» та експорт в Anki</h3>
+            <img class="shot" src="/img/extension/my-words-anki-export-extension.webp" width="1120" height="654" loading="lazy" alt="Список «Мої слова» в налаштуваннях розширення: збережені слова, їхні переклади та кнопки «Експорт в Anki» і «Експорт у CSV»">
+            <p>Кожне збережене слово зберігає й речення, з якого воно взяте. Збережені слова підкреслюються золотим, коли з'являються в субтитрах наступного разу, їх можна позначити як «Знаю», а весь список експортується в Anki або таблицю CSV одним кліком — реальні фрази з реальних відео замість підручникового списку.</p>
+
+            <h2>Де це працює</h2>
+            <ul>
+                <li><strong>YouTube</strong> — звичайні відео із завантаженими чи автоматично згенерованими титрами, а також повна розшифровка відео. Див. також <a href="/uk/youtube-dual-subtitles.html">подвійні субтитри YouTube</a>.</li>
+                <li><strong>Netflix, Prime Video, Disney+, Max</strong> — увімкніть субтитри мовою оригіналу в плеєрі, і під ними з'явиться переклад. Докладніше в статті <a href="/uk/netflix-subtitles.html">подвійні субтитри Netflix</a>.</li>
+                <li><strong>Онлайн-курси та виступи</strong> — плеєри курсів, TED, Vimeo і більшість сайтів на стандартному HTML5-відео з доріжкою субтитрів.</li>
+                <li><strong>Власні файли</strong> — завантажте файл .srt чи .vtt на будь-яке відео в браузері.</li>
+                <li><strong>Відео без субтитрів, прямі трансляції та дзвінки в браузері</strong> — за допомогою Live, який перекладає звук вкладки.</li>
+            </ul>
+            <p>Якщо на якомусь сайті розширення не потрібне, вимкніть його лише для цього сайту у спливному вікні на панелі інструментів — усюди інде воно залишиться увімкненим.</p>
+
+            <h2>Як встановити: 3 кроки, одна хвилина</h2>
+            <ol class="steps">
+                <li><strong>Встановіть розширення.</strong> Відкрийте <a href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">LiveSubtitles у Chrome Web Store</a> і натисніть <em>«Додати в Chrome»</em>. У Microsoft Edge дозвольте розширення з інших магазинів, коли з'явиться запит, і встановіть із тієї самої сторінки.</li>
+                <li><strong>Виберіть мову.</strong> Сторінка привітання пропонує мову вашого браузера як мову перекладу. За бажання змініть її та закріпіть значок на панелі інструментів.</li>
+                <li><strong>Відкрийте відео.</strong> Оригінал і переклад з'являться під ним самі. У цьому відео немає субтитрів? Натисніть Live.</li>
+            </ol>
+
+            <div class="callout">
+                <strong>Порада для тих, хто вивчає мову:</strong> увімкніть <em>Q — пауза після кожного рядка</em> на перші кілька відео. Прочитайте рядок, клікніть незнайоме слово, натисніть <strong>S</strong>, щоб почути ще раз, і рухайтеся далі. Коли розумітимете більшість рядків, вимкніть паузу і просто дивіться.
+            </div>
+
+            <h2>Безкоштовний і Pro</h2>
+            <table class="cmp">
+                <thead>
+                    <tr><th>Функція</th><th>Безкоштовний</th><th>Pro / Live</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Подвійні субтитри на YouTube, Netflix та інших сайтах</td><td>Так, без денного ліміту</td><td>Так</td></tr>
+                    <tr><td>Переклад субтитрів на 39 мов</td><td>Так</td><td>Так</td></tr>
+                    <tr><td>Переклад слова по кліку, фрази, вимова</td><td>Так, без денного ліміту</td><td>Так</td></tr>
+                    <tr><td>Інтерактивна розшифровка та клавіші для навчання</td><td>Так</td><td>Так</td></tr>
+                    <tr><td>Власні файли .srt / .vtt, стиль субтитрів</td><td>Так</td><td>Так</td></tr>
+                    <tr><td>Пояснення ШІ граматики та ідіом</td><td>3 на день</td><td>Без обмежень (Pro)</td></tr>
+                    <tr><td>«Мої слова» та експорт в Anki / CSV</td><td>До 50 слів, без експорту</td><td>Без обмежень, з експортом (Pro)</td></tr>
+                    <tr><td>Live-переклад звуку вкладки</td><td>10 хвилин на пробу</td><td>20 годин на місяць (тариф Live)</td></tr>
+                </tbody>
+            </table>
+            <p>Перші 7 днів доступно все, картка не потрібна. Якщо ви ніколи не натискаєте Live і не потребуєте Anki, платити може не знадобитися взагалі.</p>
+
+            <h2>Розширення чи застосунок для комп'ютера?</h2>
+            <p>Live Subtitles починався як застосунок для Windows і Mac, і для деяких завдань застосунок досі залишається правильним вибором. Коротко: розширення — для відео в браузері і для вивчення слів; застосунок — для будь-якого звуку на комп'ютері.</p>
+            <table class="cmp">
+                <thead>
+                    <tr><th></th><th>Розширення для Chrome</th><th>Застосунок Live Subtitles</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Де це працює</td><td>Відео в Chrome, Edge, Brave</td><td>Будь-яка програма: браузери, застосунки Netflix і YouTube, VLC, ігри, десктопні застосунки Zoom і Teams</td></tr>
+                    <tr><td>Звідки беруться субтитри</td><td>Власні субтитри сайту; Live — для всього іншого</td><td>Завжди зі звуку, за допомогою розпізнавання мовлення ШІ</td></tr>
+                    <tr><td>Інструменти для навчання</td><td>Картки слів, пояснення ШІ, розшифровка, Anki</td><td>Експорт розшифровки</td></tr>
+                    <tr><td>Ваш мікрофон</td><td>Ні</td><td>Так — субтитри і для вашого власного мовлення теж</td></tr>
+                    <tr><td>Платформи</td><td>Браузери для комп'ютера, зокрема Linux і ChromeOS</td><td>Windows, macOS, iPhone, Android</td></tr>
+                    <tr><td>Безкоштовне використання</td><td>Подвійні субтитри та переклад слів без обмежень</td><td>Безкоштовні хвилини, потім підписка</td></tr>
+                </tbody>
+            </table>
+            <p>Багато хто користується обома: розширенням — для вечірніх серіалів на Netflix і для словникового запасу, застосунком — для дзвінків у десктопному Zoom і для ігор. Що вміє застосунок, дивіться в статті <a href="/translate-any-audio-in-real-time-pc.html">переклад будь-якого звуку на ПК у реальному часі</a>.</p>
+
+            <h2>Чим це відрізняється від інших розширень із подвійними субтитрами</h2>
+            <p>Подвійні субтитри в браузері — відома ідея: Language Reactor, Trancy та Immersive Translate теж роблять щось подібне, і якщо один із них уже вам підходить, немає причин переходити. Чим LiveSubtitles відрізняється:</p>
+            <ul>
+                <li><strong>Без акаунта, без входу.</strong> Встановіть — і воно працює.</li>
+                <li><strong>Безкоштовно — означає безкоштовно.</strong> У подвійних субтитрів і перекладу слів немає денного ліміту, і вони не зникають після пробного періоду.</li>
+                <li><strong>Відео без субтитрів теж охоплено.</strong> Live перекладає звук вкладки, тож стрім чи дзвінок не залишать вас без нічого.</li>
+                <li><strong>Не лише два сайти.</strong> Крім YouTube і Netflix це працює на Prime Video, Disney+, Max, у плеєрах курсів і на звичайному HTML5-відео.</li>
+            </ul>
+            <p>Ширше порівняння, зокрема із застосунками для комп'ютера, — у статтях <a href="/language-reactor-alternative.html">альтернативи Language Reactor</a> і <a href="/best-dual-subtitle-app.html">найкращі застосунки з подвійними субтитрами</a>.</p>
+
+            <h2>Конфіденційність</h2>
+            <p>Акаунт не потрібен. Налаштування та збережені слова зберігаються у вашому браузері. Текст субтитрів надсилається на наш сервер лише для перекладу і не прив'язується до вас; звук вкладки використовується, тільки поки увімкнено Live, і лише для цієї вкладки. Розширення не фіксує, які сайти ви відвідуєте. Анонімну статистику використання можна вимкнути в налаштуваннях. Питання: <a href="mailto:ext@live-subtitles.com">ext@live-subtitles.com</a>.</p>
+
+            <a class="cta" href="https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja" target="_blank" rel="noopener">Додати в Chrome — безкоштовно</a>
+
+            <div class="faq">
+                <h2 style="margin-top:0;">Поширені запитання</h2>
+                <p><strong>Чи безкоштовне розширення?</strong><br>Так. Подвійні субтитри, переклад субтитрів і переклад слів безкоштовні, без денного ліміту і без акаунта. Pro додає необмежені пояснення від ШІ, необмежену кількість збережених слів і експорт в Anki; тариф Live додає години синхронного перекладу звуку. Перші 7 днів доступно все.</p>
+                <p><strong>Чи працює воно на Netflix?</strong><br>Так. На Netflix, Prime Video, Disney+ і Max розширення зчитує субтитри, які показує сервіс, і додає перекладений рядок під кожним із них. Увімкніть субтитри мовою оригіналу в плеєрі — далі розширення зробить усе само.</p>
+                <p><strong>Що робити, якщо у відео немає субтитрів?</strong><br>Натисніть Live. Розширення слухає звук поточної вкладки, розпізнає мовлення і перекладає його в реальному часі. Це також працює для прямих трансляцій і дзвінків у браузері в Google Meet, Zoom чи Teams. Live дає 10 безкоштовних хвилин; далі це частина тарифу Live.</p>
+                <p><strong>Чи працює воно в Microsoft Edge, Brave чи Firefox?</strong><br>Працює в Google Chrome і в браузерах на Chromium, які встановлюють розширення з Chrome Web Store, таких як Microsoft Edge і Brave. Версії для Firefox чи Safari немає; у цих браузерах використовуйте застосунок Live Subtitles для комп'ютера, який працює з будь-яким звуком на пристрої.</p>
+                <p><strong>Чи потрібен акаунт?</strong><br>Ні. Налаштування та збережені слова залишаються у вашому браузері. Текст субтитрів надсилається на наш сервер лише для перекладу, а звук вкладки використовується, тільки поки увімкнено Live.</p>
+                <p><strong>Чи підписка на застосунок Live Subtitles включає розширення?</strong><br>Ні, розширення має власний безкоштовний тариф і власні плани Pro та Live. Більшості людей платити за нього взагалі не доведеться: подвійні субтитри й переклад слів безкоштовні.</p>
+            </div>
+
+            <h2>Пов'язані ресурси</h2>
+            <div class="links">
+                <p><a href="/uk/youtube-dual-subtitles.html">Подвійні субтитри YouTube</a></p>
+                <p><a href="/uk/netflix-subtitles.html">Подвійні субтитри Netflix для вивчення мов</a></p>
+                <p><a href="/uk/microsoft-edge-subtitles.html">Субтитри для будь-якого відео в Microsoft Edge</a></p>
+                <p><a href="/language-reactor-alternative.html">Альтернативи Language Reactor</a></p>
+                <p><a href="/best-dual-subtitle-app.html">Найкращі застосунки з подвійними субтитрами</a></p>
+                <p><a href="/articles/uk/article-17.html">Альтернативи Language Reactor для Netflix і YouTube</a></p>
+                <p><a href="/translate-any-audio-in-real-time-pc.html">Переклад будь-якого звуку на ПК у реальному часі</a></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
