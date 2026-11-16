@@ -1710,7 +1710,7 @@ async function loadSummary() {
         item("MRR", usd(s.mrr?.mrr || 0), `${int(s.mrr?.active || 0)} paid subscriptions`),
         item("Monthly churn", churn === null ? "—" : pct(churn), "monthly plans"),
         item(`${product().funnel.start.replace(/^./, (c) => c.toUpperCase())} → purchase`, conv === null ? "—" : pct(conv, 2), `${product().name}, 30 days`),
-        item("Paddle checkout → paid", checkout === null ? "—" : pct(checkout), `${int(s.checkout?.opened || 0)} checkouts opened`),
+        item("Paddle checkout → paid", checkout === null ? "—" : pct(checkout), `${int(s.checkout?.opened || 0)} people opened checkout`),
         item("Active right now", s.activeNow === null ? "—" : int(s.activeNow), s.activeNow === null && state.product === "captions" ? "not in GA4 realtime" : "last 30 minutes"),
         ...warnings.map((w) => item("Needs attention", w.split(":")[0], w.slice(w.indexOf(":") + 2), true)),
     );
