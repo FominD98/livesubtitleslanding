@@ -2680,10 +2680,65 @@ document.getElementById("refresh-btn").addEventListener("click", async () => {
     showRefresh(st);
 });
 
+/* ---------- Site: страницы входа сайта (GA4, platform=web) ---------- */
+
+const SITE_LANGS = ["ru", "fr", "es", "de", "it", "ja", "ko", "zh", "zh-tw", "pt", "pl", "nl", "tr", "uk", "ar", "hi"];
+// Эти страницы открывает само приложение (покупка, условия) — это не посадочные страницы сайта
+const SITE_APP_PAGES = /^\/(buy|terms|privacy|i|captions\/terms\.html|captions\/privacy\.html)\/?$/;
+
+function sitePath(path, merge) {
+    let p = path.length > 1 ? path.replace(/\/$/, "") : path;
+    if (merge) {
+        const m = p.match(/^\/([a-z]{2}(?:-[a-z]{2})?)(\/.*)?$/);
+        if (m && SITE_LANGS.includes(m[1])) p = m[2] || "/";
+    }
+    return p;
+}
+
+function renderSite() {
+    const s = state.site;
+    const merge = document.getElementById("site-merge").checked;
+    const hideApp = document.getElementById("site-hide-app").checked;
+    const agg = new Map();
+    for (const r of s.pages) {
+        const key = sitePath(r.key, merge);
+        if (hideApp && SITE_APP_PAGES.test(sitePath(r.key, true))) continue;
+        const a = agg.get(key) || { key, sessions: 0, engaged: 0, store: 0, installer: 0, downloads: 0 };
+        for (const k of ["sessions", "engaged", "store", "installer", "downloads"]) a[k] += r[k];
+        agg.set(key, a);
+    }
+    const pages = [...agg.values()].sort((a, b) => b.sessions - a.sessions);
+    const total = (k) => sum(pages, (r) => r[k]);
+    const rate = (r) => r.sessions ? r.downloads / r.sessions : 0;
+
+    document.getElementById("site-note").textContent =
+        `Straight from GA4 (cached 5 min, updated ${new Date(s.at).toLocaleTimeString("en-GB")}), website hits only: the Windows app shares the GA4 stream ` +
+        "and its sessions have no landing page, so they are left out. Stores are not split: GA4 has no free slot for the store parameter " +
+        "(Metrika goals store_click_* have the split). Chrome extension clicks count as store clicks.";
+    renderTileRow("site-tiles", [
+        { label: "Site sessions", value: total("sessions"), fmt: int },
+        { label: "Sessions that downloaded", value: total("downloads"), fmt: int },
+        { label: "Download rate", value: total("sessions") ? total("downloads") / total("sessions") : 0, fmt: (v) => pct(v) },
+        { label: "Engaged sessions", value: total("sessions") ? total("engaged") / total("sessions") : 0, fmt: (v) => pct(v, 0) },
+    ]);
+    const rowOf = (r, label) => el("tr", {},
+        td(label ?? r.key), td(int(r.sessions), true), td(r.sessions ? pct(r.engaged / r.sessions, 0) : "—", true),
+        td(int(r.store), true), td(int(r.installer), true), td(int(r.downloads), true),
+        td(r.sessions ? pct(rate(r)) : "—", true, r.sessions >= 30 && rate(r) < 0.05 ? "down" : ""));
+    const head = [["Page"], ["Sessions", 1], ["Engaged", 1], ["Store click", 1], ["Installer", 1], ["Downloaded", 1], ["Rate", 1]];
+    table("tbl-site-pages", head, pages.slice(0, 150).map((r) => rowOf(r)));
+    table("tbl-site-channels", [["Channel"], ...head.slice(1)],
+        [...s.channels].sort((a, b) => b.sessions - a.sessions).map((r) => rowOf(r)));
+}
+
+for (const id of ["site-merge", "site-hide-app"]) {
+    document.getElementById(id).addEventListener("change", () => state.site && renderSite());
+}
+
 /* ---------- wiring ---------- */
 
 const RENDER = { sales: renderSales, aso: renderAso, search: renderSearch, weekly: renderWeekly, funnel: renderFunnel, subs: renderSubs, health: renderHealth,
-    campaigns: renderCampaigns, live: renderLive, ga4: renderGa4, ab: renderAb };
+    campaigns: renderCampaigns, live: renderLive, ga4: renderGa4, site: renderSite, ab: renderAb };
 
 function switchTab(tab) {
     state.tab = RENDER[tab] ? tab : "sales";
