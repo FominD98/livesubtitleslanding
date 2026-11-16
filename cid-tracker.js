@@ -220,21 +220,32 @@
     // install from. Point it at their own store instead. Windows is left alone,
     // which keeps the pre-JS href correct for the majority and for crawlers.
     // index.html and the articles route their own CTAs inline; this only touches
-    // `a.cta`, never the store names mentioned in body copy.
+    // `a.cta` and `a.btn` (pricing.html: "Choose Pro", "Buy 300 minutes"…),
+    // never the store names mentioned in body copy.
+    // Linux and ChromeOS have no app: a Chromium browser there gets the Chrome
+    // extension, others keep the link (detectOS() files them under 'win').
+    var EXTENSION_URL = 'https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja';
+    function noAppDesktop() {
+        var ua = navigator.userAgent || '';
+        if (/Android/.test(ua) || !/CrOS|Linux/.test(ua)) return '';
+        return /Chrome\//.test(ua) ? 'extension' : 'none';
+    }
     function routeStoreCta() {
         var os = detectOS();
-        if (os === 'win') return;
-        var href = STORES[os];
+        var noApp = noAppDesktop();
+        var href = noApp === 'extension' ? EXTENSION_URL : (os === 'win' ? '' : STORES[os]);
         if (!href) return;
-        var ctas = document.querySelectorAll('a.cta[href*="apps.microsoft.com"]');
+        var ctas = document.querySelectorAll('a.cta[href*="apps.microsoft.com"], a.btn[href*="apps.microsoft.com"]');
         for (var i = 0; i < ctas.length; i++) {
             var a = ctas[i];
             a.href = href;
             a.setAttribute('rel', 'noopener');
             // "Try it free — Microsoft Store" would now be a lie.
             if (a.textContent && a.textContent.indexOf('Microsoft Store') !== -1) {
-                a.textContent = a.textContent.replace('Microsoft Store', STORE_LABEL[os]);
+                a.textContent = a.textContent.replace('Microsoft Store', noApp ? 'Chrome Web Store' : STORE_LABEL[os]);
             }
+            // The extension is a separate product: not a Google Ads conversion
+            if (noApp) a.removeAttribute('onclick');
         }
     }
 

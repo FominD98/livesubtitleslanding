@@ -2722,18 +2722,22 @@ function renderSite() {
     document.getElementById("site-note").textContent =
         `Straight from GA4 (cached 5 min, updated ${new Date(s.at).toLocaleTimeString("en-GB")}), website hits only: the Windows app shares the GA4 stream ` +
         "and its sessions have no landing page, so they are left out. Stores are not split: GA4 has no free slot for the store parameter " +
-        "(Metrika goals store_click_* have the split). Chrome extension clicks are a separate event (extension_click) and are not counted here.";
+        "(Metrika goals store_click_* have the split). Chrome extension clicks are a separate event (extension_click) and are not counted here. " +
+        "Direct visits of 0–2 s (crawlers, link previews) pull the plain rate down — compare pages by the rate of engaged sessions.";
     renderTileRow("site-tiles", [
         { label: "Site sessions", value: total("sessions"), fmt: int },
         { label: "Sessions that downloaded", value: total("downloads"), fmt: int },
         { label: "Download rate", value: total("sessions") ? total("downloads") / total("sessions") : 0, fmt: (v) => pct(v) },
         { label: "Engaged sessions", value: total("sessions") ? total("engaged") / total("sessions") : 0, fmt: (v) => pct(v, 0) },
+        { label: "Download rate of engaged", value: total("engaged") ? total("downloads") / total("engaged") : 0, fmt: (v) => pct(v) },
     ]);
     const rowOf = (r, label) => el("tr", {},
         td(label ?? r.key), td(int(r.sessions), true), td(r.sessions ? pct(r.engaged / r.sessions, 0) : "—", true),
         td(int(r.store), true), td(int(r.installer), true), td(int(r.downloads), true),
-        td(r.sessions ? pct(rate(r)) : "—", true, r.sessions >= 30 && rate(r) < 0.05 ? "down" : ""));
-    const head = [["Page"], ["Sessions", 1], ["Engaged", 1], ["Store click", 1], ["Installer", 1], ["Downloaded", 1], ["Rate", 1]];
+        td(r.sessions ? pct(rate(r)) : "—", true),
+        // Боты и превью ссылок (прямые заходы по 0–2 с) почти не бывают вовлечёнными: доля среди вовлечённых — честнее
+        td(r.engaged ? pct(r.downloads / r.engaged) : "—", true, r.engaged >= 20 && r.downloads / r.engaged < 0.05 ? "down" : ""));
+    const head = [["Page"], ["Sessions", 1], ["Engaged", 1], ["Store click", 1], ["Installer", 1], ["Downloaded", 1], ["Rate", 1], ["Rate of engaged", 1]];
     table("tbl-site-pages", head, pages.slice(0, 150).map((r) => rowOf(r)));
     table("tbl-site-channels", [["Channel"], ...head.slice(1)],
         [...s.channels].sort((a, b) => b.sessions - a.sessions).map((r) => rowOf(r)));
