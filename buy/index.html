@@ -757,8 +757,8 @@
       // Только Live Subtitles на Windows; без отпечатка, Live Captions и Android — как было.
       var CHECKOUT_TEST = 'checkout_one_page';
       var checkoutArm = null;
-      var checkoutArmReady = Promise.resolve();
-      if (fp && platform === 'windows-wpf' && window.crypto && crypto.subtle && window.TextEncoder) {
+      var checkoutArmReady = null;
+      if (fp && platform === 'windows-wpf' && window.Promise && window.crypto && crypto.subtle && window.TextEncoder) {
         checkoutArmReady = crypto.subtle.digest('SHA-256', new TextEncoder().encode(CHECKOUT_TEST + ':' + fp))
           .then(function (buf) {
             var h = new Uint8Array(buf);
@@ -787,7 +787,7 @@
         // Промокод ссылкой (?discount=CODE): поле «Add discount» Paddle показывает не всегда.
         var discount = params.get('discount') || '';
         if (/^[A-Za-z0-9]{3,32}$/.test(discount)) options.discountCode = discount;
-        checkoutArmReady.then(function () {
+        function open() {
           if (checkoutArm) {
             // A задан явно: контроль не должен поменяться, если Paddle сменит вариант по умолчанию
             options.settings.variant = checkoutArm === 'B' ? 'one-page' : 'multi-page';
@@ -795,7 +795,9 @@
           }
           watchCheckoutLoad();
           Paddle.Checkout.open(options);
-        });
+        }
+        // Без ветки (нет отпечатка, не Windows, старый браузер) — сразу, как было до теста
+        if (checkoutArmReady) checkoutArmReady.then(open); else open();
       }
 
       if (isRecovery) {
