@@ -28,6 +28,7 @@
         <button role="tab" data-tab="campaigns" aria-selected="false">Campaigns</button>
         <button role="tab" data-tab="live" aria-selected="false">Live</button>
         <button role="tab" data-tab="ga4" aria-selected="false">GA4</button>
+        <button role="tab" data-tab="site" aria-selected="false">Site</button>
         <button role="tab" data-tab="ab" aria-selected="false">A/B tests</button>
       </nav>
       <div class="filters range" id="range-bar" role="group" aria-label="Period">
@@ -418,6 +419,28 @@
         </section>
       </div>
     </main>
+    <main id="tab-site" class="tab-panel" hidden>
+      <div class="filters">
+        <label class="small"><input type="checkbox" id="site-merge" checked> Combine languages (/ru/x = /x)</label>
+        <label class="small"><input type="checkbox" id="site-hide-app" checked> Hide pages opened from the app (/buy, /terms, /privacy, /i, /captions/terms)</label>
+      </div>
+      <p class="muted small" id="site-note"></p>
+      <section class="tiles" id="site-tiles"></section>
+      <section class="card">
+        <div class="card-head">
+          <h2>Landing pages</h2>
+          <span class="muted">session = one visit; downloaded = the visit clicked a store button or the Windows installer</span>
+        </div>
+        <div class="scroll"><table class="tbl" id="tbl-site-pages"></table></div>
+      </section>
+      <section class="card">
+        <div class="card-head">
+          <h2>Channels</h2>
+          <span class="muted">all pages, including the ones the app opens (that is most of Direct)</span>
+        </div>
+        <div class="scroll"><table class="tbl" id="tbl-site-channels"></table></div>
+      </section>
+    </main>
     <main id="tab-ab" class="tab-panel" hidden>
       <section class="card">
         <div class="card-head">
@@ -530,6 +553,6 @@
   </div>
 </div>
 <script src="chart.umd.min.js?v=9653a0813d"></script>
-<script src="app.js?v=6af069d6d5"></script>
+<script src="app.js?v=59604b47e2"></script>
 </body>
 </html>

@@ -181,15 +181,34 @@ return 'win';
 // Installer A/B: cid-tracker.js draws the arm ('wi' / 'st') for desktop Windows
 // only, so Linux, which detectOS() files under 'win', never gets here with 'wi'.
 const INSTALLER_URL = 'https://get.microsoft.com/installer/download/9PH1R9DJG47S';
+// Linux and ChromeOS desktops have no app to install; detectOS() files them under
+// 'win', which used to send them to the Microsoft Store. A Chromium browser there
+// can take the Chrome extension; anything else (Firefox) gets the download block.
+const EXTENSION_URL = 'https://chromewebstore.google.com/detail/jhelhgbpeofamhdcgmclkmnfjbimjdja';
+function noAppDesktop() {
+const ua = navigator.userAgent || '';
+if (/Android/.test(ua) || !/CrOS|Linux/.test(ua)) return null;
+return /Chrome\//.test(ua) ? 'extension' : 'none';
+}
 function routeTryFree() {
-const installer = detectOS() === 'win' && window.lsInstallerVariant === 'wi';
-const store = installer ? INSTALLER_URL : TRYFREE_STORES[detectOS()];
+const desktopKind = noAppDesktop();
+const installer = !desktopKind && detectOS() === 'win' && window.lsInstallerVariant === 'wi';
+const store = desktopKind === 'extension' ? EXTENSION_URL
+    : desktopKind === 'none' ? null
+    : installer ? INSTALLER_URL : TRYFREE_STORES[detectOS()];
 ['navTryFree', 'heroTryFree', 'stickyTryFree'].forEach(function (id) {
     const el = document.getElementById(id);
     if (!el) return;
     if (!store) {
         el.setAttribute('href', '#download');
         el.removeAttribute('target');
+        el.removeAttribute('onclick');
+    } else if (store === EXTENSION_URL) {
+        // A separate product: no Google Ads conversion (cid-tracker.js files the
+        // click under store_click_chrome when it happens).
+        el.setAttribute('href', typeof window.lsStampStoreUrl === 'function' ? window.lsStampStoreUrl(store) : store);
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener');
         el.removeAttribute('onclick');
     } else if (installer) {
         // A file, not a page: the download starts in place, no blank tab. The

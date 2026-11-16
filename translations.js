@@ -176,7 +176,11 @@ const translations = {
             title: 'Try it free right now',
             subtitle: 'Install it and choose two languages — it takes it from there.',
             guarantee: 'Free to try · No credit card required',
-            android: 'Live captions & dual subtitles on Android →'
+            android: 'Live captions & dual subtitles on Android →',
+            more: "Learn more →",
+            extTitle: "Watching in a browser? Try our Chrome extension",
+            extDesc: "Dual subtitles on YouTube, Netflix and other sites, click a word to translate it. Free, no account.",
+            extMore: "About the extension →"
         },
         install: {
             openStore: 'Open in Microsoft Store',
@@ -370,7 +374,11 @@ const translations = {
             title: 'Попробуйте бесплатно прямо сейчас',
             subtitle: 'Установите и выберите два языка — дальше он сам.',
             guarantee: 'Попробовать бесплатно · Без банковской карты',
-            android: 'Живые и двойные субтитры на Android →'
+            android: 'Живые и двойные субтитры на Android →',
+            more: "Подробнее →",
+            extTitle: "Смотрите в браузере? Есть расширение для Chrome",
+            extDesc: "Двойные субтитры на YouTube, Netflix и других сайтах, перевод слова по клику. Бесплатно, без аккаунта.",
+            extMore: "Подробнее о расширении →"
         },
         install: {
             openStore: 'Открыть в Microsoft Store',
@@ -560,7 +568,11 @@ const translations = {
             title: 'Essayez gratuitement dès maintenant',
             subtitle: 'Installez-le et choisissez deux langues — il prend le relais.',
             guarantee: 'Essayez gratuitement · Sans carte bancaire',
-            android: 'Sous-titres en direct et doubles sur Android →'
+            android: 'Sous-titres en direct et doubles sur Android →',
+            more: "En savoir plus →",
+            extTitle: "Vous regardez dans le navigateur ? Essayez notre extension Chrome",
+            extDesc: "Sous-titres bilingues sur YouTube, Netflix et d’autres sites, traduction d’un mot en un clic. Gratuit, sans compte.",
+            extMore: "Découvrir l’extension →"
         },
         install: {
             openStore: 'Ouvrir dans le Microsoft Store',
@@ -750,7 +762,11 @@ const translations = {
             title: 'Pruébalo gratis ahora mismo',
             subtitle: 'Instálalo y elige dos idiomas: el resto lo hace él.',
             guarantee: 'Pruébalo gratis · Sin tarjeta de crédito',
-            android: 'Subtítulos en vivo y duales en Android →'
+            android: 'Subtítulos en vivo y duales en Android →',
+            more: "Más información →",
+            extTitle: "¿Ves vídeos en el navegador? Prueba nuestra extensión para Chrome",
+            extDesc: "Subtítulos duales en YouTube, Netflix y otros sitios, traduce una palabra con un clic. Gratis, sin cuenta.",
+            extMore: "Ver la extensión →"
         },
         install: {
             openStore: 'Abrir en Microsoft Store',
@@ -940,7 +956,11 @@ const translations = {
             title: 'Probieren Sie es jetzt kostenlos aus',
             subtitle: 'Installieren und zwei Sprachen wählen — den Rest macht es selbst.',
             guarantee: 'Kostenlos testen · Ohne Kreditkarte',
-            android: 'Live- & duale Untertitel auf Android →'
+            android: 'Live- & duale Untertitel auf Android →',
+            more: "Mehr erfahren →",
+            extTitle: "Sie schauen im Browser? Testen Sie unsere Chrome-Erweiterung",
+            extDesc: "Doppelte Untertitel auf YouTube, Netflix und anderen Seiten, Wörter per Klick übersetzen. Kostenlos, ohne Konto.",
+            extMore: "Zur Erweiterung →"
         },
         install: {
             openStore: 'Im Microsoft Store öffnen',
@@ -1130,7 +1150,11 @@ const translations = {
             title: 'Provalo gratis ora',
             subtitle: 'Installalo e scegli due lingue: al resto pensa lui.',
             guarantee: 'Prova gratis · Senza carta di credito',
-            android: 'Sottotitoli live e doppi su Android →'
+            android: 'Sottotitoli live e doppi su Android →',
+            more: "Scopri di più →",
+            extTitle: "Guardi nel browser? Prova la nostra estensione per Chrome",
+            extDesc: "Doppi sottotitoli su YouTube, Netflix e altri siti, traduzione di una parola con un clic. Gratis, senza account.",
+            extMore: "Scopri l’estensione →"
         },
         install: {
             openStore: 'Apri nel Microsoft Store',
@@ -1320,7 +1344,11 @@ const translations = {
             title: '今すぐ無料でお試し',
             subtitle: 'インストールして2つの言語を選ぶだけ。あとは自動です。',
             guarantee: '無料でお試し · クレジットカード不要',
-            android: 'Androidでリアルタイム字幕・二重字幕 →'
+            android: 'Androidでリアルタイム字幕・二重字幕 →',
+            more: "詳しく見る →",
+            extTitle: "ブラウザで見るならChrome拡張機能も",
+            extDesc: "YouTube・Netflixなどで二重字幕、単語をクリックして翻訳。無料、アカウント不要。",
+            extMore: "拡張機能について →"
         },
         install: {
             openStore: 'Microsoft Store で開く',
@@ -1510,7 +1538,11 @@ const translations = {
             title: '지금 무료로 사용해보세요',
             subtitle: '설치하고 두 가지 언어만 고르세요. 나머지는 알아서 합니다.',
             guarantee: '무료로 사용해 보기 · 신용카드 불필요',
-            android: 'Android에서 실시간 자막 & 이중 자막 →'
+            android: 'Android에서 실시간 자막 & 이중 자막 →',
+            more: "자세히 보기 →",
+            extTitle: "브라우저에서 보시나요? 크롬 확장 프로그램도 있어요",
+            extDesc: "YouTube, Netflix 등에서 이중 자막, 단어를 클릭해 바로 번역. 무료, 계정 불필요.",
+            extMore: "확장 프로그램 보기 →"
         },
         install: {
             openStore: 'Microsoft Store에서 열기',
@@ -1700,7 +1732,11 @@ const translations = {
             title: '立即免费体验',
             subtitle: '安装后选择两种语言，剩下的它自己来。',
             guarantee: '免费体验 · 无需信用卡',
-            android: '在 Android 上使用实时字幕与双语字幕 →'
+            android: '在 Android 上使用实时字幕与双语字幕 →',
+            more: "了解更多 →",
+            extTitle: "在浏览器里看视频？试试我们的 Chrome 扩展",
+            extDesc: "在 YouTube、Netflix 等网站显示双语字幕，点击单词即可翻译。免费，无需账号。",
+            extMore: "了解扩展 →"
         },
         install: {
             openStore: '在 Microsoft Store 中打开',
@@ -1890,7 +1926,11 @@ const translations = {
             title: 'جرب مجاناً الآن',
             subtitle: 'ثبّته واختر لغتين — والباقي يتولاه بنفسه.',
             guarantee: 'جرّبه مجانًا · بدون بطاقة ائتمان',
-            android: 'ترجمة حية ومزدوجة على أندرويد ←'
+            android: 'ترجمة حية ومزدوجة على أندرويد ←',
+            more: "اعرف المزيد ←",
+            extTitle: "تشاهد في المتصفح؟ جرّب إضافتنا لـ Chrome",
+            extDesc: "ترجمة مزدوجة على YouTube وNetflix ومواقع أخرى، وترجمة الكلمة بنقرة. مجانًا وبلا حساب.",
+            extMore: "تعرّف على الإضافة ←"
         },
         install: {
             openStore: 'افتح في Microsoft Store',
@@ -2080,7 +2120,11 @@ const translations = {
             title: 'अभी मुफ्त में आज़माएं',
             subtitle: 'इंस्टॉल करें और दो भाषाएँ चुनें — आगे यह खुद संभाल लेता है।',
             guarantee: 'मुफ़्त आज़माएँ · क्रेडिट कार्ड की ज़रूरत नहीं',
-            android: 'Android पर लाइव कैप्शन और डुअल सबटाइटल →'
+            android: 'Android पर लाइव कैप्शन और डुअल सबटाइटल →',
+            more: "और जानें →",
+            extTitle: "ब्राउज़र में देखते हैं? हमारा Chrome एक्सटेंशन आज़माएँ",
+            extDesc: "YouTube, Netflix और दूसरी साइटों पर डुअल सबटाइटल, शब्द पर क्लिक करके अनुवाद। मुफ़्त, बिना अकाउंट।",
+            extMore: "एक्सटेंशन के बारे में →"
         },
         install: {
             openStore: 'Microsoft Store में खोलें',
@@ -2270,7 +2314,11 @@ const translations = {
             title: 'Experimente grátis agora',
             subtitle: 'Instale e escolha dois idiomas — o resto ele faz sozinho.',
             guarantee: 'Experimente grátis · Sem cartão de crédito',
-            android: 'Legendas ao vivo e duplas no Android →'
+            android: 'Legendas ao vivo e duplas no Android →',
+            more: "Saiba mais →",
+            extTitle: "Assiste no navegador? Experimente nossa extensão para Chrome",
+            extDesc: "Legendas duplas no YouTube, Netflix e outros sites, tradução de palavras com um clique. Grátis, sem conta.",
+            extMore: "Conheça a extensão →"
         },
         install: {
             openStore: 'Abrir na Microsoft Store',
@@ -2460,7 +2508,11 @@ const translations = {
             title: 'Wypróbuj za darmo teraz',
             subtitle: 'Zainstaluj i wybierz dwa języki — dalej zajmie się tym sam.',
             guarantee: 'Wypróbuj bezpłatnie · Bez karty kredytowej',
-            android: 'Napisy na żywo i podwójne na Androidzie →'
+            android: 'Napisy na żywo i podwójne na Androidzie →',
+            more: "Więcej →",
+            extTitle: "Oglądasz w przeglądarce? Wypróbuj nasze rozszerzenie do Chrome",
+            extDesc: "Podwójne napisy na YouTube, Netflix i innych stronach, tłumaczenie słowa jednym kliknięciem. Za darmo, bez konta.",
+            extMore: "O rozszerzeniu →"
         },
         install: {
             openStore: 'Otwórz w Microsoft Store',
@@ -2650,7 +2702,11 @@ const translations = {
             title: 'Probeer nu gratis',
             subtitle: 'Installeer en kies twee talen — de rest doet het zelf.',
             guarantee: 'Gratis uitproberen · Geen creditcard nodig',
-            android: 'Live en duale ondertitels op Android →'
+            android: 'Live en duale ondertitels op Android →',
+            more: "Meer info →",
+            extTitle: "Kijk je in de browser? Probeer onze Chrome-extensie",
+            extDesc: "Dubbele ondertitels op YouTube, Netflix en andere sites, vertaal een woord met één klik. Gratis, zonder account.",
+            extMore: "Over de extensie →"
         },
         install: {
             openStore: 'Openen in Microsoft Store',
@@ -2840,7 +2896,11 @@ const translations = {
             title: 'Şimdi ücretsiz dene',
             subtitle: 'Kurun ve iki dil seçin — gerisini kendi yapar.',
             guarantee: 'Ücretsiz deneyin · Kredi kartı gerekmez',
-            android: 'Android\'de canlı ve çift altyazı →'
+            android: 'Android\'de canlı ve çift altyazı →',
+            more: "Daha fazla →",
+            extTitle: "Tarayıcıda mı izliyorsunuz? Chrome uzantımızı deneyin",
+            extDesc: "YouTube, Netflix ve diğer sitelerde çift altyazı, tek tıkla kelime çevirisi. Ücretsiz, hesap gerekmez.",
+            extMore: "Uzantıyı inceleyin →"
         },
         install: {
             openStore: "Microsoft Store'da aç",
@@ -3030,7 +3090,11 @@ const translations = {
             title: 'Спробуйте безкоштовно зараз',
             subtitle: 'Встановіть і виберіть дві мови — далі він сам.',
             guarantee: 'Спробувати безкоштовно · Без банківської картки',
-            android: 'Живі та подвійні субтитри на Android →'
+            android: 'Живі та подвійні субтитри на Android →',
+            more: "Докладніше →",
+            extTitle: "Дивитеся в браузері? Є розширення для Chrome",
+            extDesc: "Подвійні субтитри на YouTube, Netflix та інших сайтах, переклад слова одним клацанням. Безкоштовно, без акаунта.",
+            extMore: "Докладніше про розширення →"
         },
         install: {
             openStore: 'Відкрити в Microsoft Store',

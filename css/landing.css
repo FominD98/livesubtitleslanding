@@ -507,7 +507,7 @@ p:last-child { margin-bottom: 0; }
 .stores { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; max-width: 900px; margin-inline: auto; }
 @media (max-width: 860px) { .stores { grid-template-columns: repeat(2, 1fr); } }
 .store {
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .85rem;
+    display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: .85rem;
     padding: 1.25rem .9rem;
     background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
 }
@@ -520,10 +520,23 @@ p:last-child { margin-bottom: 0; }
  * So a single CSS height renders Google's badge a third smaller. Scale it by 1/0.672 to
  * make the visible badges optically equal. */
 .store img { height: 48px; width: auto; }
-.store img[src*="play.google"] { height: 71px; }
+.store img[src*="play.google"] { height: 71px; margin: -11px 0; } /* the PNG carries ~11px transparent padding top and bottom */
+.store a.store__more { min-height: 0; }
+.store__more { font-size: .8125rem; color: var(--brand); text-decoration: none; }
+.store__more:hover { text-decoration: underline; }
+/* The Chrome extension is a separate product, so it gets its own row under the app stores. */
+.store-ext { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: 900px; margin: 18px auto 0;
+    padding: 20px 24px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); text-align: start; }
+.store-ext__text strong { display: block; font-size: 1rem; color: var(--ink); }
+.store-ext__text p { margin: 4px 0 6px; font-size: .9rem; color: var(--ink-soft); }
+.cws-badge { display: inline-flex; align-items: center; gap: 10px; flex: none; height: 48px; padding: 0 16px 0 12px; border-radius: 8px;
+    background: #000; border: 1px solid #a6a6a6; color: #fff; text-decoration: none; font: 600 17px/1.05 system-ui, -apple-system, "Segoe UI", sans-serif; direction: ltr; }
+.cws-badge small { display: block; font-size: 10.5px; font-weight: 400; letter-spacing: .02em; }
+.cws-badge span { text-align: left; }
+@media (max-width: 720px) { .store-ext { flex-direction: column; align-items: stretch; text-align: center; } .cws-badge { align-self: center; } }
 @media (max-width: 620px) {
     .store img { height: 44px; }
-    .store img[src*="play.google"] { height: 65px; }
+    .store img[src*="play.google"] { height: 65px; margin: -10px 0; }
 }
 .tv { max-width: 900px; margin: 18px auto 0; text-align: center; }
 
