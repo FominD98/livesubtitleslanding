@@ -2024,11 +2024,12 @@ function winMismatch(t) {
     return from !== t.start || (t.end && to !== expectTo) ? key : "";
 }
 
-// Победа по договору LS-01 (п. 3.2): условия и что из них ещё не выполнено — Worker отдаёт список в contract.missing
+// Правило решения по тесту (рост от +5% при p < 0.05, минимум дней и покупателей): условия и что из них ещё не
+// выполнено — Worker отдаёт список в contract.missing. Договора нет, тесты свои — имя поля историческое
 function abContractLine(t, r) {
     const c = r.contract;
     if (r.contractWin) {
-        return { cls: "up", text: `Contract LS-01: B wins — ${signedPct(r.lift)} net per install (95%: ${signedPct(r.liftLo)} … ${signedPct(r.liftHi)}), p = ${r.p.toFixed(3)}, ${c.days.toFixed(1)} days.` };
+        return { cls: "up", text: `Decision rule: B wins — ${signedPct(r.lift)} net per ${r.play ? "paywall viewer" : r.checkout ? "checkout opener" : "install"} (95%: ${signedPct(r.liftLo)} … ${signedPct(r.liftHi)}), p = ${r.p.toFixed(3)}, ${c.days.toFixed(1)} days.` };
     }
     const pLeft = r.daysLeft > 0 ? `, ~${int(r.daysLeft)} more days at the current difference` : "";
     const needs = {
@@ -2039,7 +2040,7 @@ function abContractLine(t, r) {
         buyers: `${c.min_buyers}+ buyers per arm (now ${int(r.A.buyers)} / ${int(r.B.buyers)})`,
     };
     const list = c.missing.map((k) => needs[k]).join("; ");
-    return { cls: "muted", text: `Contract LS-01: ${t.status === "ended" ? "no win" : "not a win yet"} — needs ${list}.` };
+    return { cls: "muted", text: `Decision rule: ${t.status === "ended" ? "no win" : "not a win yet"} — needs ${list}.` };
 }
 
 // Пока разница не доказана, прогноз на месяц — только диапазоном: одно число из пары дней читается как факт
