@@ -235,7 +235,9 @@
         var noApp = noAppDesktop();
         var href = noApp === 'extension' ? EXTENSION_URL : (os === 'win' ? '' : STORES[os]);
         if (!href) return;
-        var ctas = document.querySelectorAll('a.cta[href*="apps.microsoft.com"], a.btn[href*="apps.microsoft.com"]');
+        // Only Live Subtitles (9ph1r9djg47s): the /captions/ pages sell Live Captions, a Windows-only app
+        // with its own Store id — its buttons must not be re-pointed at Live Subtitles stores.
+        var ctas = document.querySelectorAll('a.cta[href*="9ph1r9djg47s" i], a.btn[href*="9ph1r9djg47s" i]');
         for (var i = 0; i < ctas.length; i++) {
             var a = ctas[i];
             a.href = href;
