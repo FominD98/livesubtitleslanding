@@ -2267,7 +2267,7 @@ function renderAb() {
 
     const v = abVerdict(t, s);
     // Покупатели без плеча: если их заметная доля, сравнение плеч опирается на неполные данные — показываем красным
-    const lost = t.dim.startsWith("customUser:")
+    const lost = (t.dim || "").startsWith("customUser:")
         ? sum(t.unassigned.filter((r) => r.event === t.goal && (state.abSel.app === "all" || r.app === state.abSel.app)), (r) => r.users) : 0;
     const lostShare = lost / (lost + s.x.A + s.x.B || 1);
     const verdict = document.getElementById("ab-verdict");
@@ -2340,7 +2340,9 @@ function renderAb() {
 function renderAbMoney(t, s) {
     const m = s.money;
     const card = document.getElementById("ab-money");
-    card.hidden = false;
+    // Тест без ветки в GA4: денег GA4 по плечам нет, есть только блок реальных денег
+    card.hidden = !!t.noGa4;
+    if (t.noGa4) return;
     const empty = !(m.A.rev || m.B.rev);
     for (const id of ["ab-money-tiles", "tbl-ab-products"]) document.getElementById(id).hidden = empty;
     if (empty) {
