@@ -184,7 +184,10 @@
         // reports the cid under it), and the property is at its 50-dimension
         // cap — so the label rides there too; its _wi / _st suffix is the arm.
         p.install_campaign = p.campaign_id;
-        try { window.gtag('event', 'store_click', p); } catch (e) { /* gtag not ready */ }
+        // The extension is a separate product: its own event, so app funnels that count
+        // store_click as a download (dash Campaigns, Site) don't pick it up.
+        var name = store === 'chrome_web_store' ? 'extension_click' : 'store_click';
+        try { window.gtag('event', name, p); } catch (e) { /* gtag not ready */ }
     }
     function ga4InstallerDownload(url) {
         if (typeof window.gtag !== 'function') return;

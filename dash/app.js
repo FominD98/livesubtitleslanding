@@ -2721,7 +2721,7 @@ function renderSite() {
     document.getElementById("site-note").textContent =
         `Straight from GA4 (cached 5 min, updated ${new Date(s.at).toLocaleTimeString("en-GB")}), website hits only: the Windows app shares the GA4 stream ` +
         "and its sessions have no landing page, so they are left out. Stores are not split: GA4 has no free slot for the store parameter " +
-        "(Metrika goals store_click_* have the split). Chrome extension clicks count as store clicks.";
+        "(Metrika goals store_click_* have the split). Chrome extension clicks are a separate event (extension_click) and are not counted here.";
     renderTileRow("site-tiles", [
         { label: "Site sessions", value: total("sessions"), fmt: int },
         { label: "Sessions that downloaded", value: total("downloads"), fmt: int },
