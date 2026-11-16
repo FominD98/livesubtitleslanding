@@ -751,6 +751,22 @@
 
       var initiateSent = false;
 
+      // A/B checkout_one_page (с 17.11.2026): A — оплата в два шага (email и страна, потом карта),
+      // B — одностраничный вариант Paddle. Ветка из отпечатка той же формулой, что ExperimentBucket.cs
+      // и tools/dash/sources/abserver.py: SHA-256("checkout_one_page:<fp>"), (h0<<8|h1) % 100 < 50 → A.
+      // Только Live Subtitles на Windows; без отпечатка, Live Captions и Android — как было.
+      var CHECKOUT_TEST = 'checkout_one_page';
+      var checkoutArm = null;
+      var checkoutArmReady = Promise.resolve();
+      if (fp && platform === 'windows-wpf' && window.crypto && crypto.subtle && window.TextEncoder) {
+        checkoutArmReady = crypto.subtle.digest('SHA-256', new TextEncoder().encode(CHECKOUT_TEST + ':' + fp))
+          .then(function (buf) {
+            var h = new Uint8Array(buf);
+            checkoutArm = ((h[0] << 8) | h[1]) % 100 < 50 ? 'A' : 'B';
+          })
+          .catch(function () { /* без ветки — оплата как была */ });
+      }
+
       function openCheckout() {
         show('state-loading');
         // Середина воронки для Meta, один раз на загрузку страницы: повторное открытие по
@@ -771,8 +787,15 @@
         // Промокод ссылкой (?discount=CODE): поле «Add discount» Paddle показывает не всегда.
         var discount = params.get('discount') || '';
         if (/^[A-Za-z0-9]{3,32}$/.test(discount)) options.discountCode = discount;
-        watchCheckoutLoad();
-        Paddle.Checkout.open(options);
+        checkoutArmReady.then(function () {
+          if (checkoutArm) {
+            // A задан явно: контроль не должен поменяться, если Paddle сменит вариант по умолчанию
+            options.settings.variant = checkoutArm === 'B' ? 'one-page' : 'multi-page';
+            options.customData[CHECKOUT_TEST] = checkoutArm;
+          }
+          watchCheckoutLoad();
+          Paddle.Checkout.open(options);
+        });
       }
 
       if (isRecovery) {

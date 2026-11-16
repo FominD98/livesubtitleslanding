@@ -1994,6 +1994,8 @@ function abServerCalc(t) {
         outside: get("", "outside_net"),
         // Android Pro Weekly (abplay.py): знаменатель — видевшие пейволл, деньги — заказы Play, сшитые с событиями GA4
         play: t.server.some((x) => x.metric === "unit" && x.key === "paywall_android"),
+        // Тест страницы оплаты (abserver.py, unit=checkout): в тесте открывшие оплату Paddle, а не все установки
+        checkout: t.server.some((x) => x.metric === "unit" && x.key === "checkout"),
         // Мобильные покупки, привязанные к установке (abmobile.py): платформы из строк source, деньги из сторов
         stores: t.server.filter((x) => x.metric === "source" && x.key.startsWith("store_orders:")).map((x) => x.key.split(":")[1]),
         unattributed: sum(t.server.filter((x) => x.metric === "unattributed_net"), (x) => x.value),
@@ -2053,7 +2055,7 @@ function renderAbReal(t) {
     const enough = Math.min(r.A.n, r.B.n) >= r.need;
     const pace = (r.A.n + r.B.n) / 2 / r.days;
     const eta = pace > 0 ? Math.ceil(Math.max(0, r.need - Math.min(r.A.n, r.B.n)) / pace) : Infinity;
-    const per = r.play ? "paywall viewer" : "install";
+    const per = r.play ? "paywall viewer" : r.checkout ? "checkout opener" : "install";
     const head = sig && enough ? `B ${r.diff > 0 ? "earns more" : "earns less"}: ${signedPct(r.lift)} per ${per} — proven.`
         : sig ? `B ${r.diff > 0 ? "earns more" : "earns less"} (${signedPct(r.lift)}), significant but below the planned sample.`
         : r.fewBuyers ? `Too few buyers to judge yet (${int(r.A.buyers)} / ${int(r.B.buyers)}, need ${r.contract.min_buyers}+ in each arm).`
@@ -2062,7 +2064,7 @@ function renderAbReal(t) {
     const contract = abContractLine(t, r);
     document.getElementById("ab-real-contract").replaceChildren(el("span", { class: contract.cls }, contract.text));
     renderTileRow("ab-real-tiles", [
-        { label: r.play ? "Saw paywall (Android) · A / B" : "New installs · A / B", value: r.A.n + r.B.n, fmt: int,
+        { label: r.play ? "Saw paywall (Android) · A / B" : r.checkout ? "Opened checkout · A / B" : "New installs · A / B", value: r.A.n + r.B.n, fmt: int,
           delta: el("span", { class: r.srm.alarm ? "down" : "muted" }, `${int(r.A.n)} / ${int(r.B.n)}${r.srm.alarm ? " · split is off 50/50, check the assignment" : ""}`) },
         { label: "Net revenue · A / B", value: r.B.net, fmt: (v) => `${usd(r.A.net)} / ${usd(v)}`,
           delta: el("span", { class: "muted" }, `${int(r.A.purchases)} / ${int(r.B.purchases)} payments`) },
@@ -2196,8 +2198,9 @@ function renderAb() {
         show && p < 0.05 ? (lift > 0 ? "up" : "down") : "");
     table("tbl-ab-tests", [["Test"], ["Status"], ["In test A / B", 1], ["Main metric"], ["A → B", 1], ["B vs A", 1], ["$ per user A → B", 1], ["$ B vs A", 1]],
         tests.map((t) => {
-            const s = abStats(t, "all");
             const real = abServer(t);
+            // У теста без ветки в GA4 (noGa4) воронки GA4 нет — в сводку идут реальные открывшие и оплатившие
+            const s = t.noGa4 && real ? { ...abStats(t, "all"), entered: { A: real.A.n, B: real.B.n }, cmp: real.conv } : abStats(t, "all");
             const hasMoney = !!(real || s.money.A.rev || s.money.B.rev);
             const m = real ? { a: real.A.mean, b: real.B.mean, lift: real.lift, p: real.fewBuyers ? NaN : real.p } : { a: s.money.A.mean, b: s.money.B.mean, lift: s.money.lift, p: NaN };
             const status = t.status === "ended" ? `Ended · ${t.winner || "—"} rolled out` : `Running · ${s.days} d`;
@@ -2214,7 +2217,9 @@ function renderAb() {
     const detail = ["ab-test", "ab-about", "ab-tiles", "ab-verdict"].map((id) => document.getElementById(id));
     const t = tests.find((x) => x.id === state.abSel.test);
     for (const node of detail) node.hidden = !t;
-    for (const id of ["tbl-ab-funnel", "chart-ab-conv", "chart-ab-base"]) document.getElementById(id).closest(".card").hidden = !t;
+    // Плитки и вердикт сверху считаются по GA4 — у теста без ветки в GA4 их нечем заполнить
+    if (t?.noGa4) for (const id of ["ab-tiles", "ab-verdict"]) document.getElementById(id).hidden = true;
+    for (const id of ["tbl-ab-funnel", "chart-ab-conv", "chart-ab-base"]) document.getElementById(id).closest(".card").hidden = !t || !!t?.noGa4;
     for (const id of ["ab-real", "ab-money", "ab-app"]) if (!t) document.getElementById(id).hidden = true;
     if (!t) return;
 
