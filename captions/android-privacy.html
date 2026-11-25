@@ -86,8 +86,8 @@
 <h2>Overview</h2>
 <p>
   Live Captions ("the App", "we") turns speech into real-time captions in the language being spoken. On Android
-  it can caption the people talking near you (microphone) or the sound your phone itself plays — videos, calls
-  and podcasts (phone audio). This policy covers the Live Captions app for Android
+  it can caption the people talking near you (microphone) or the sound your phone itself plays — videos,
+  podcasts and other media (phone audio). This policy covers the Live Captions app for Android
   (<code>com.livecaptions.android</code>). The App does not require an account. The Windows app has its own
   <a href="/captions/privacy.html">Privacy Policy</a>.
 </p>
@@ -167,7 +167,7 @@
   notification with a Stop button. Android requires the same permission for captioning phone audio.
 </p>
 
-<h2>Phone Audio (Videos, Calls and Podcasts)</h2>
+<h2>Phone Audio (Videos and Podcasts)</h2>
 <p>
   When you choose "Phone audio", the App captions the sound your phone plays. For this it uses Android's
   playback capture (MediaProjection), which starts only after you confirm the system dialog — Android shows it
@@ -177,7 +177,7 @@
 </p>
 <ul>
   <li>The sound is used only to produce captions: in Premium mode it is streamed to our speech recognition provider, in Offline mode it never leaves the phone. We do not record it.</li>
-  <li>Apps can forbid capturing their sound (protected video, some calling apps); Android then gives the App silence.</li>
+  <li>Android does not let apps capture phone calls or the sound of most calling apps, and any app can forbid capturing its sound (protected video, for example); the App then gets silence. To caption a call, turn on the speaker and use the microphone.</li>
   <li>Capture stops when you pause captions, tap the cross on the captions window, tap Stop in the notification or close the App.</li>
 </ul>
 <p>
@@ -188,8 +188,8 @@
 
 <h2>Captions Window Over Other Apps</h2>
 <p>
-  If you allow "Display over other apps", the App shows a small window with captions on top of the video or the
-  call. This permission is used only to draw that window. The App does not read the content of other apps and
+  If you allow "Display over other apps", the App shows a small window with captions on top of the video or
+  another app. This permission is used only to draw that window. The App does not read the content of other apps and
   does not see what you type or tap in them. You can turn the permission off in Android settings at any time;
   captions are then shown only inside the App.
 </p>
